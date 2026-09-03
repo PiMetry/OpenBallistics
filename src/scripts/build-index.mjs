@@ -8,7 +8,7 @@
 // Everything else is fetched per cartridge, from <family>/<key>.json, only when one
 // is opened. 532 records is 3.4 MB whole and about 100 KB as this index.
 
-import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readdir, readFile, writeFile, mkdir, cp } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { EXCLUDE, FAMILIES, ROOT } from './records.mjs';
@@ -16,17 +16,18 @@ import { EXCLUDE, FAMILIES, ROOT } from './records.mjs';
 const here = dirname(fileURLToPath(import.meta.url));
 // The dataset at the repository root: the one copy of the records.
 const RECORDS = ROOT;
+const SVG = join(ROOT, 'svg');
 const OUTLINES = join(here, '..', 'public', 'outlines');
 const OUT = join(here, '..', 'src', 'lib', 'index.generated.json');
 
 /**
  * The size, in millimetres, of the drawing shipped for each cartridge.
  *
- * The drawings are rendered upstream by BallisticViz and vendored into `public/outlines/`. Each
- * one carries its own extent on its root element -- `width` and `height` in millimetres, with the
- * viewBox in the renderer's own units -- so a page laying several out at one scale can size them
- * without loading them first. Reading it here rather than shipping a separate manifest means the
- * number cannot disagree with the drawing it describes.
+ * The drawings are rendered upstream by BallisticViz and vendored into the repository's `svg/`
+ * directory. Each one carries its own extent on its root element -- `width` and `height` in
+ * millimetres, with the viewBox in the renderer's own units -- so a page laying several out at one
+ * scale can size them without loading them first. The build copies them to `public/outlines/` for
+ * the deployed app and reads the same source files for the index.
  *
  * A cartridge with no drawing is simply absent: 6 records publish too little to draw, and the
  * card falls back to the outline it can build from the dimensions themselves.
@@ -36,16 +37,21 @@ async function drawings() {
   for (const family of FAMILIES) {
     let files;
     try {
-      files = await readdir(join(OUTLINES, family));
+      files = await readdir(join(SVG, family));
     } catch {
       continue;
     }
     for (const file of files) {
       if (!file.endsWith('.svg')) continue;
-      const head = (await readFile(join(OUTLINES, family, file), 'utf8')).slice(0, 400);
+      const source = join(SVG, family, file);
+      const head = (await readFile(source, 'utf8')).slice(0, 400);
       const w = /width="([\d.]+)"/.exec(head);
       const h = /height="([\d.]+)"/.exec(head);
-      if (w && h) sizes.set(`${family}/${file.slice(0, -4)}`, [Number(w[1]), Number(h[1])]);
+      if (w && h) {
+        await mkdir(join(OUTLINES, family), { recursive: true });
+        await cp(source, join(OUTLINES, family, file));
+        sizes.set(`${family}/${file.slice(0, -4)}`, [Number(w[1]), Number(h[1])]);
+      }
     }
   }
   return sizes;

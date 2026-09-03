@@ -1,0 +1,47 @@
+name: Verify a cartridge or bullet
+description: Confirm the dimensions or bullet drawing against a published source.
+title: "Verify: "
+labels: [verification]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for checking a record against its source. A verification report should say what
+        you checked, which source you used, and whether it agrees.
+
+        If you arrived here from the site, the cartridge and page link are already filled in.
+  - type: input
+    id: cartridge
+    attributes:
+      label: Cartridge
+      description: Its name and key, e.g. `308 Win. (308_win)`.
+    validations:
+      required: true
+  - type: dropdown
+    id: target
+    attributes:
+      label: What did you verify?
+      options:
+        - cartridge
+        - bullet
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Verification result
+      description: Say what you checked and whether the record or drawing agrees with the source.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: The C.I.P. sheet, revision date, or other source used for the check.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The page you were looking at.

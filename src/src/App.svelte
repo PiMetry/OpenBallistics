@@ -4,6 +4,7 @@
   import { href, route } from './lib/router';
 
   const current = $derived($route);
+  const repository = import.meta.env.VITE_REPO ?? 'PiMetry/OpenBallistics';
 
   /**
    * Light or dark, chosen by the reader and kept per browser. `app.css` defines the palette
@@ -54,6 +55,9 @@
   </a>
   <nav class="tools" aria-label="Site">
     <a class="tool" href={href.list()} aria-current={current.view === 'list' ? 'page' : undefined}>Home</a>
+    <a class="tool" href={`https://github.com/${repository}`} target="_blank" rel="noopener noreferrer">
+      GitHub
+    </a>
     <button
       type="button"
       class="tool"

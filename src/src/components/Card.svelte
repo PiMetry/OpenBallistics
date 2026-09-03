@@ -10,6 +10,52 @@
     height?: number;
   }
   let { entry, scale, height = 78 }: Props = $props();
+  let drawing: HTMLSpanElement;
+  let dragging = $state(false);
+  let dragged = $state(false);
+  let startX = 0;
+  let startY = 0;
+  let startScrollLeft = 0;
+  let startScrollTop = 0;
+  let pointerId: number | null = null;
+
+  function startDrag(event: PointerEvent) {
+    drawing.setPointerCapture(event.pointerId);
+    pointerId = event.pointerId;
+    dragging = true;
+    dragged = false;
+    startX = event.clientX;
+    startY = event.clientY;
+    startScrollLeft = drawing.scrollLeft;
+    startScrollTop = drawing.scrollTop;
+  }
+
+  function drag(event: PointerEvent) {
+    if (!dragging) return;
+    const deltaX = event.clientX - startX;
+    const deltaY = event.clientY - startY;
+    if (Math.abs(deltaX) > 3 || Math.abs(deltaY) > 3) dragged = true;
+    if (dragged) {
+      event.preventDefault();
+      drawing.scrollLeft = startScrollLeft - deltaX;
+      drawing.scrollTop = startScrollTop - deltaY;
+    }
+  }
+
+  function endDrag() {
+    dragging = false;
+    if (pointerId !== null && drawing.hasPointerCapture(pointerId)) {
+      drawing.releasePointerCapture(pointerId);
+    }
+    pointerId = null;
+  }
+
+  function openCard(event: MouseEvent) {
+    if (dragged) {
+      event.preventDefault();
+      dragged = false;
+    }
+  }
 </script>
 
 <!--
@@ -18,10 +64,22 @@
   gets clicked twice. As a single anchor it is also one tab stop with one accessible name, which is
   what a keyboard reader wants from a grid of 532.
 -->
-<a class="card" href={href.cartridge(entry.key)}>
-  <span class="drawing">
+<a class="card" href={href.cartridge(entry.key)} onclick={openCard} draggable="false">
+  <div
+    class="drawing"
+    bind:this={drawing}
+    onpointerdown={startDrag}
+    onpointermove={drag}
+    onpointerup={endDrag}
+    onpointercancel={endDrag}
+    onlostpointercapture={endDrag}
+    class:dragging
+    role="region"
+    aria-label={`${entry.name} preview`}
+    title="Drag to inspect an oversized preview"
+  >
     <Drawing {entry} {scale} {height} />
-  </span>
+  </div>
 
   <span class="titles">
     <span class="name">{entry.name}</span>
@@ -40,16 +98,16 @@
       count. The cartridge page lists what the finding is.
     -->
     <span
-      class="chip confidence {entry.confidence}"
-      title={entry.confidence === 'implausible'
-        ? `${entry.warnings} value${entry.warnings === 1 ? '' : 's'} look wrong; see the cartridge page`
+      class="chip confidence {entry.checks ? 'implausible' : entry.confidence}"
+      title={entry.checks
+        ? `${entry.checks} check${entry.checks === 1 ? '' : 's'} found; see the cartridge page`
         : entry.confidence === 'verified'
           ? 'Confirmed by a person'
           : 'Not yet confirmed by a person'}
     >
-      {#if entry.confidence === 'implausible'}⚠ {CONFIDENCE_LABELS.implausible} ({entry.warnings})
-      {:else if entry.confidence === 'verified'}✓ {CONFIDENCE_LABELS.verified}
-      {:else}{CONFIDENCE_LABELS.unverified}{/if}
+      {#if entry.checks}⚠ Cartridge {CONFIDENCE_LABELS.implausible} ({entry.checks})
+      {:else if entry.confidence === 'verified'}✓ Cartridge {CONFIDENCE_LABELS.verified}
+      {:else}Cartridge {CONFIDENCE_LABELS.unverified}{/if}
     </span>
     <!-- The second verification, for the drawn bullet's nose form rather than the numbers. -->
     {#if entry.svg}
@@ -59,7 +117,7 @@
           ? 'The bullet type has been confirmed against the drawing by a person'
           : 'The bullet type is a default, not yet confirmed by a person'}
       >
-        {#if entry.bulletVerified}✓ Bullet{:else}Bullet unverified{/if}
+        {#if entry.bulletVerified}✓ Bullet verified{:else}Bullet unverified{/if}
       </span>
     {/if}
   </span>
@@ -89,13 +147,29 @@
     outline-offset: 2px;
   }
 
-  /* The drawing is at a shared scale, so it is allowed to be wider than the card and clip rather
-     than shrink -- a card that rescaled its own drawing would break the comparison between them. */
+  /* The drawing keeps the shared comparison scale. At high zoom it becomes a small viewport that
+     can be inspected by dragging instead of shrinking or making every grid row enormous. */
   .drawing {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     min-height: 78px;
-    overflow: hidden;
+    max-height: 14rem;
+    overflow: auto;
+    cursor: grab;
+    scrollbar-width: thin;
+    touch-action: none;
+    overscroll-behavior: contain;
+    user-select: none;
+  }
+  .drawing.dragging {
+    cursor: grabbing;
+  }
+  .drawing :global(img),
+  .drawing :global(svg) {
+    flex: 0 0 auto;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 
   .titles {
@@ -139,11 +213,11 @@
   .confidence.verified {
     color: var(--ok, #2f7a3f);
     border-color: currentColor;
-    background: transparent;
+    background: var(--ok-soft);
   }
   .confidence.unverified {
     color: var(--ink-3);
-    background: transparent;
+    background: var(--surface-2);
     border-color: var(--rule);
   }
   .confidence.implausible {

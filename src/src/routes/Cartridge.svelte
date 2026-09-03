@@ -2,7 +2,7 @@
   import Drawing from '../components/Drawing.svelte';
   import GroupTable from '../components/GroupTable.svelte';
   import { byKey, load } from '../lib/data';
-  import { issueUrl } from '../lib/issue';
+  import { issueUrl, verifyUrl } from '../lib/issue';
   import { href } from '../lib/router';
   import { FAMILY_LABELS, type Finding } from '../lib/types';
 
@@ -14,6 +14,8 @@
   const entry = $derived(byKey(key));
   const record = $derived(load(key));
   const report = $derived(entry ? issueUrl(entry) : null);
+  const verifyCartridge = $derived(entry ? verifyUrl(entry, 'cartridge') : null);
+  const verifyBullet = $derived(entry ? verifyUrl(entry, 'bullet') : null);
 
   /**
    * Millimetres per pixel for the drawing at the head of the page.
@@ -50,6 +52,43 @@
     }
   }
   let zoom = $state(storedZoom());
+  let drawing = $state<HTMLElement>(undefined!);
+  let dragging = $state(false);
+  let startX = 0;
+  let startY = 0;
+  let startScrollLeft = 0;
+  let startScrollTop = 0;
+  let pointerId: number | null = null;
+
+  function startDrag(event: PointerEvent) {
+    if ((event.target as HTMLElement).closest('button')) return;
+    drawing.setPointerCapture(event.pointerId);
+    pointerId = event.pointerId;
+    dragging = true;
+    startX = event.clientX;
+    startY = event.clientY;
+    startScrollLeft = drawing.scrollLeft;
+    startScrollTop = drawing.scrollTop;
+  }
+
+  function drag(event: PointerEvent) {
+    if (!dragging) return;
+    const deltaX = event.clientX - startX;
+    const deltaY = event.clientY - startY;
+    if (Math.abs(deltaX) <= 3 && Math.abs(deltaY) <= 3) return;
+    event.preventDefault();
+    drawing.scrollLeft = startScrollLeft - deltaX;
+    drawing.scrollTop = startScrollTop - deltaY;
+  }
+
+  function endDrag() {
+    dragging = false;
+    if (pointerId !== null && drawing.hasPointerCapture(pointerId)) {
+      drawing.releasePointerCapture(pointerId);
+    }
+    pointerId = null;
+  }
+
   function setZoom(value: number) {
     zoom = value;
     try {
@@ -99,7 +138,19 @@
   </header>
 
   {#if entry}
-    <figure class="drawing">
+    <figure
+      class="drawing"
+      bind:this={drawing}
+      onpointerdown={startDrag}
+      onpointermove={drag}
+      onpointerup={endDrag}
+      onpointercancel={endDrag}
+      onlostpointercapture={endDrag}
+      class:dragging
+      role="region"
+      aria-label={`${data.name} drawing`}
+      title="Drag to inspect an oversized drawing"
+    >
       <Drawing {entry} {scale} height={Math.round(120 * zoom)} />
       <div class="zoom" role="group" aria-label="Drawing size">
         <button type="button" onclick={() => zoomBy(-1)} disabled={zoom === ZOOM_STEPS[0]} aria-label="Smaller">−</button>
@@ -121,27 +172,48 @@
   {@const unexplained = findings.filter((f) => !f.known)}
   {@const explained = findings.filter((f) => f.known)}
   {@const state = data.annotations?.confidence ?? 'unverified'}
-  <section class="confidence {state}" aria-label="Confidence">
-    <p class="confidence-title">
-      {#if state === 'verified'}✓ Verified{:else if state === 'implausible'}⚠ Implausible{:else}Unverified{/if}
-    </p>
-    {#if data.annotations?.defaultBullet}
-      <!-- The second verification: the drawn bullet's nose form, apart from the numbers. -->
-      <p class="confidence-bullet {data.annotations.defaultBullet.verified ? 'verified' : 'unverified'}">
-        {#if data.annotations.defaultBullet.verified}✓ Bullet type verified{:else}Bullet type unverified{/if}
-      </p>
-    {/if}
-    {#if findings.length}
-      <p class="confidence-sub">Plausibility check</p>
-      <ul>
-        {#each unexplained as f (f.rule + f.fields.join())}
-          <li class="flag">{f.message}</li>
-        {/each}
-        {#each explained as f (f.rule + f.fields.join())}
-          <li>{f.message}. <em>{f.why}</em></li>
-        {/each}
-      </ul>
-    {/if}
+  {@const checkCount = findings.length}
+  {@const displayState = checkCount ? 'implausible' : state}
+  <section class="confidence {displayState}" aria-label="Verification status">
+    <div class="confidence-pills">
+      <div class="confidence-pill {checkCount ? 'implausible' : state}">
+        <p>
+          {#if checkCount}⚠ Cartridge check ({checkCount}){:else if state === 'verified'}✓ Cartridge verified{:else}Cartridge unverified{/if}
+        </p>
+        {#if findings.length}
+          <p class="confidence-sub">Plausibility check</p>
+          <ul>
+            {#each unexplained as f (f.rule + f.fields.join())}
+              <li class="flag">{f.message}</li>
+            {/each}
+            {#each explained as f (f.rule + f.fields.join())}
+              <li>{f.message}. <em>{f.why}</em></li>
+            {/each}
+          </ul>
+        {/if}
+      </div>
+      {#if data.annotations?.defaultBullet}
+        <div class="confidence-pill {data.annotations.defaultBullet.verified ? 'verified' : 'unverified'}">
+          <p>
+            {#if data.annotations.defaultBullet.verified}✓ Bullet verified{:else}Bullet unverified{/if}
+          </p>
+          <dl class="bullet-data">
+            {#if data.annotations.defaultBulletShape}
+              <dt>Shape</dt>
+              <dd>{data.annotations.defaultBulletShape}</dd>
+            {/if}
+            <dt>Category</dt>
+            <dd>{data.annotations.defaultBullet.category}</dd>
+            <dt>Ogive</dt>
+            <dd>{data.annotations.defaultBullet.ogive}</dd>
+            <dt>Base</dt>
+            <dd>{data.annotations.defaultBullet.base}</dd>
+            <dt>Tip</dt>
+            <dd>{data.annotations.defaultBullet.tip}</dd>
+          </dl>
+        </div>
+      {/if}
+    </div>
   </section>
 
   <div class="tables">
@@ -153,6 +225,12 @@
     <a href={href.list()}>Back to all cartridges</a>
     {#if report}
       · <a href={report} target="_blank" rel="noopener noreferrer">Something look wrong?</a>
+    {/if}
+    {#if verifyCartridge}
+      · <a href={verifyCartridge} target="_blank" rel="noopener noreferrer">Verify cartridge</a>
+    {/if}
+    {#if verifyBullet && entry?.svg}
+      · <a href={verifyBullet} target="_blank" rel="noopener noreferrer">Verify bullet</a>
     {/if}
   </p>
 {:catch error}
@@ -229,8 +307,24 @@
     border-radius: var(--radius);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     overflow-x: auto;
+    overflow-y: auto;
+    cursor: grab;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+    touch-action: none;
+    user-select: none;
+  }
+  .drawing.dragging {
+    cursor: grabbing;
+  }
+  .drawing :global(img),
+  .drawing :global(svg) {
+    flex: 0 0 auto;
+    margin-inline: auto;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 
   .tables {
@@ -253,11 +347,8 @@
   }
   .confidence {
     margin: 0 0 2rem;
-    padding: 0.7rem 1rem;
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
     font-size: 0.85rem;
-    max-width: 70ch;
+    width: 100%;
   }
   .confidence.verified {
     color: var(--ok);
@@ -268,24 +359,57 @@
   }
   .confidence.implausible {
     color: var(--warn);
-    background: var(--warn-soft);
-    border-color: currentColor;
   }
   .confidence p {
     margin: 0;
   }
-  .confidence-title {
+  .confidence-pills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+  .confidence-pill {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: var(--radius);
     font-weight: 600;
   }
-  .confidence-bullet {
-    margin-top: 0.25rem !important;
-    font-weight: 500;
-  }
-  .confidence-bullet.verified {
+  .confidence-pill.verified {
     color: var(--ok);
+    background: var(--ok-soft);
   }
-  .confidence-bullet.unverified {
+  .confidence-pill.unverified {
     color: var(--ink-3);
+    border-color: var(--rule-strong);
+    background: var(--surface-2);
+  }
+  .confidence-pill.implausible {
+    color: var(--warn);
+    background: var(--warn-soft);
+    border-color: currentColor;
+  }
+  .bullet-data {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.1rem 0.75rem;
+    margin: 0.65rem 0 0;
+    padding-top: 0.65rem;
+    border-top: 1px solid currentColor;
+    font-size: 0.78rem;
+    font-weight: 400;
+  }
+  .bullet-data dt {
+    color: var(--ink-3);
+  }
+  .bullet-data dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  @media (max-width: 38rem) {
+    .confidence-pills {
+      grid-template-columns: 1fr;
+    }
   }
   .confidence-sub {
     margin-top: 0.6rem !important;
@@ -307,5 +431,87 @@
   }
   .confidence em {
     color: var(--ink-3);
+  }
+
+  @media print {
+    @page {
+      size: A4 portrait;
+      margin: 1.5cm;
+    }
+    :global(body) {
+      background: #ffffff;
+      color: #000000;
+      font-size: 8pt;
+      line-height: 1.25;
+    }
+    :global(.bar),
+    :global(.alert),
+    :global(footer),
+    .zoom,
+    .foot {
+      display: none !important;
+    }
+    :global(main) {
+      max-width: none;
+      padding: 0;
+    }
+    .drawing {
+      display: block;
+      min-height: 0;
+      max-height: 42mm;
+      margin: 0.5rem 0;
+      padding: 0;
+      overflow: visible;
+      border: 0;
+      background: transparent;
+    }
+    .drawing :global(img),
+    .drawing :global(svg) {
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+      max-width: 100%;
+      margin: 0;
+    }
+    .confidence {
+      display: none !important;
+    }
+    .tables {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+    :global(.tables h2) {
+      font-size: 0.8rem;
+      padding-bottom: 0.2rem;
+      margin-bottom: 0.4rem;
+    }
+    :global(.tables .group + .group) {
+      margin-top: 0.45rem;
+    }
+    :global(.tables h3) {
+      font-size: 0.7rem;
+      margin-bottom: 0.15rem;
+    }
+    :global(.tables dl) {
+      grid-template-columns: 4rem 1fr;
+      gap: 0.03rem 0.4rem;
+    }
+    :global(.tables dt),
+    :global(.tables table) {
+      font-size: 0.65rem;
+    }
+    :global(.tables th),
+    :global(.tables td) {
+      padding: 0.1rem 0.25rem 0.1rem 0;
+    }
+    :global(.tables .side),
+    :global(.tables .group) {
+      break-inside: avoid;
+    }
+    h1,
+    :global(h2),
+    :global(h3) {
+      break-after: avoid;
+    }
   }
 </style>
