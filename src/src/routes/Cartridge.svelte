@@ -487,7 +487,11 @@
          inline SVG and needs the ratio spelled out to resolve an automatic height. */
       aspect-ratio: var(--mm-w) / var(--mm-h);
       max-width: 100%;
-      margin: 0;
+      /* Centred on the page. At its real size a short cartridge is a small drawing on a wide
+         sheet -- a 9 x 19 is 29 mm of a 180 mm page -- and left-aligning it hung the whole
+         thing off one corner. The screen centres it the same way, through the auto margins on
+         the rule above this block. */
+      margin: 0 auto;
     }
     .confidence {
       display: none !important;
