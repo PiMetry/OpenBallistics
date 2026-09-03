@@ -11,7 +11,7 @@
       "category": "pistol_round_nose",
       "ogive": "elliptical",
       "tip": "open_meplat",
-      "verified": true
+      "verified": false
     },
     "defaultBulletShape": "rounded",
     "implausible": [],

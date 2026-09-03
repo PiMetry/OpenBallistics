@@ -7,7 +7,7 @@
       "category": "rifle_spitzer",
       "ogive": "tangent",
       "tip": "open_meplat",
-      "verified": true
+      "verified": false
     },
     "defaultBulletShape": "pointy",
     "implausible": [],

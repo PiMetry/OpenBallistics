@@ -7,7 +7,7 @@
       "category": "rifle_flat_nose",
       "ogive": "conical",
       "tip": "flat",
-      "verified": true
+      "verified": false
     },
     "defaultBulletShape": "flat",
     "implausible": [],

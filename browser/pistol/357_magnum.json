@@ -7,7 +7,7 @@
       "category": "pistol_semi_wadcutter",
       "ogive": "conical",
       "tip": "flat",
-      "verified": true
+      "verified": false
     },
     "defaultBulletShape": "semi_wadcutter",
     "implausible": [],
