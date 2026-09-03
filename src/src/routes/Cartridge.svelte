@@ -450,23 +450,48 @@
       max-width: none;
       padding: 0;
     }
+    /* On paper the drawing is printed at its real size.
+
+       It used to be stretched to the width of the page, which is what a photograph wants and
+       the wrong thing entirely for a scale drawing: it made every cartridge come out the same
+       length, and a short one came out enormous. A 6mm Flobert court is 10 mm long and 8 mm
+       tall, so filling 180 mm of page width made it 145 mm tall -- and since the box was
+       capped at 42 mm and overflowed visibly, the drawing was painted straight over the
+       tables below it. 150 of the 524 drawings overlapped that way.
+
+       So it is sized from the millimetres the drawing carries, in `mm`. Print is the one
+       medium where that unit is a physical millimetre rather than the CSS convention the
+       screen settles for, so the printed sheet holds up against a ruler where the screen can
+       only approximate it. The set's widest drawing is 147.8 mm and its tallest 32.1 mm,
+       inside both the 180 mm of an A4 portrait page at these margins and the cap below;
+       anything wider would be held to the page by `max-width` and shrink in proportion. */
     .drawing {
       display: block;
       min-height: 0;
       max-height: 42mm;
       margin: 0.5rem 0;
       padding: 0;
-      overflow: visible;
+      /* Clipped rather than visible: a drawing that somehow outgrew the cap should lose its
+         edge, not print on top of the values. */
+      overflow: hidden;
       border: 0;
       background: transparent;
     }
     .drawing :global(img),
     .drawing :global(svg) {
       display: block;
-      width: 100% !important;
+      width: calc(var(--mm-w) * 1mm) !important;
       height: auto !important;
+      /* The height follows the width rather than being stated, so that the `max-width` below
+         shrinks a too-wide drawing in proportion instead of squashing it. The silhouette is an
+         inline SVG and needs the ratio spelled out to resolve an automatic height. */
+      aspect-ratio: var(--mm-w) / var(--mm-h);
       max-width: 100%;
-      margin: 0;
+      /* Centred on the page. At its real size a short cartridge is a small drawing on a wide
+         sheet -- a 9 x 19 is 29 mm of a 180 mm page -- and left-aligning it hung the whole
+         thing off one corner. The screen centres it the same way, through the auto margins on
+         the rule above this block. */
+      margin: 0 auto;
     }
     .confidence {
       display: none !important;

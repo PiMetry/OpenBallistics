@@ -16,6 +16,11 @@
    * Six records publish too little to draw. Those fall back to `Silhouette`, which builds an
    * outline from the dimensions in the index, a skeleton, and honest about being one.
    *
+   * The drawing also carries its own extent in millimetres, as `--mm-w` and `--mm-h`, which is
+   * what the cartridge page's print rules size it by. On screen a millimetre is a convention;
+   * on paper it is a millimetre, so the printed sheet is the one place the drawing is life size
+   * for certain -- and it is sized there in `mm` rather than stretched to the column width.
+   *
    * Both are sized from the same millimetres-per-pixel, which is what makes a grid of them
    * comparable. The drawing carries its own extent in millimetres on its root element, so the width
    * is that extent times the scale and the height follows the aspect ratio.
@@ -40,7 +45,7 @@
     draggable="false"
     width={entry.svg[0] * scale}
     height={entry.svg[1] * scale}
-    style={`width:${(entry.svg[0] * scale).toFixed(1)}px`}
+    style={`width:${(entry.svg[0] * scale).toFixed(1)}px;--mm-w:${entry.svg[0]};--mm-h:${entry.svg[1]}`}
   />
 {:else}
   <Silhouette shape={entry.shape} {scale} {height} label={`${entry.name} case outline`} />
