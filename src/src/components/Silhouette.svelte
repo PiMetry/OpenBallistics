@@ -39,6 +39,10 @@
     return {
       path: `M${top.join(' L')} L${bottom.join(' L')} Z`,
       width: maxZ * scale,
+      // The same extent in millimetres, for print, where a millimetre is a real one. The
+      // canvas height is the caller's choice rather than a dimension of the cartridge, so it
+      // converts back through the scale it was drawn at.
+      millimetres: [maxZ, height / scale],
       maxR
     };
   });
@@ -53,6 +57,7 @@
     role="img"
     aria-label={label}
     preserveAspectRatio="xMinYMid meet"
+    style={`--mm-w:${geometry.millimetres[0]};--mm-h:${geometry.millimetres[1]}`}
   >
     <path d={geometry.path} />
   </svg>
