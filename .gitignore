@@ -1,0 +1,4 @@
+# Generated at build time by src/scripts/build-index.mjs, which copies the drawings from the
+# svg/<family> sources at the repository root. The sources are the one copy; a committed copy here
+# would be a second able to go stale against it.
+src/public/outlines/

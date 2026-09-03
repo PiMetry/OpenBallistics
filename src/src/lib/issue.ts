@@ -39,12 +39,29 @@ const REPO: string = import.meta.env.VITE_REPO ?? 'PiMetry/OpenBallistics';
  * field there without renaming it here loses the prefill silently.
  */
 export function issueUrl(entry: Entry): string {
-  const params = new URLSearchParams({
-    template: 'data.yml',
-    labels: 'data',
-    title: `${entry.name} (${entry.key}): `,
+  return formUrl('data.yml', 'data', `${entry.name} (${entry.key}): `, {
     cartridge: `${entry.name} (${entry.key})`,
-    page: `${location.origin}${location.pathname}#/c/${encodeURIComponent(entry.key)}`
+    page: pageUrl(entry)
   });
+}
+
+export function addCartridgeUrl(): string {
+  return `https://github.com/${REPO}/issues/new?template=add-cartridge.yml&labels=data%2Cnew-cartridge&title=Add%3A+`;
+}
+
+export function verifyUrl(entry: Entry, target: 'cartridge' | 'bullet'): string {
+  return formUrl('verify.yml', 'verification', `Verify ${target}: ${entry.name} (${entry.key})`, {
+    cartridge: `${entry.name} (${entry.key})`,
+    target,
+    page: pageUrl(entry)
+  });
+}
+
+function pageUrl(entry: Entry): string {
+  return `${location.origin}${location.pathname}#/c/${encodeURIComponent(entry.key)}`;
+}
+
+function formUrl(template: string, labels: string, title: string, fields: Record<string, string>): string {
+  const params = new URLSearchParams({ template, labels, title, ...fields });
   return `https://github.com/${REPO}/issues/new?${params}`;
 }

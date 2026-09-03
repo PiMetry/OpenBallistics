@@ -27,7 +27,7 @@
   }
   let { entry, scale, height }: Props = $props();
 
-  const url = $derived(`${import.meta.env.BASE_URL}outlines/${entry.key}.svg`);
+  const url = $derived(`${import.meta.env.BASE_URL}outlines/${entry.family}/${entry.key}.svg`);
 </script>
 
 {#if entry.svg}
@@ -37,6 +37,7 @@
     alt={`${entry.name}, drawn to scale`}
     loading="lazy"
     decoding="async"
+    draggable="false"
     width={entry.svg[0] * scale}
     height={entry.svg[1] * scale}
     style={`width:${(entry.svg[0] * scale).toFixed(1)}px`}

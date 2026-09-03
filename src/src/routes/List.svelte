@@ -1,13 +1,17 @@
 <script lang="ts">
   import Card from '../components/Card.svelte';
+  import { addCartridgeUrl } from '../lib/issue';
   import { countries, entries, families, search } from '../lib/data';
   import { href } from '../lib/router';
-  import { FAMILY_LABELS } from '../lib/types';
+  import { PX_PER_MM } from '../lib/scale';
+  import { CONFIDENCE_LABELS, FAMILY_LABELS } from '../lib/types';
 
   let query = $state('');
   let family = $state('');
   let country = $state('');
-  let sort = $state<'name' | 'L3' | 'G1'>('name');
+  let cartridgeVerification = $state<'' | 'verified' | 'unverified' | 'implausible'>('');
+  let bulletVerification = $state<'' | 'verified' | 'unverified'>('');
+  let sort = $state<'name' | 'family' | 'L3' | 'L6' | 'G1'>('name');
 
   /**
    * Two ways of looking at the same 532 records, because they answer different questions.
@@ -43,11 +47,28 @@
     let list = entries;
     if (family) list = list.filter((entry) => entry.family === family);
     if (country) list = list.filter((entry) => entry.country === country);
+    if (cartridgeVerification) {
+      list = list.filter((entry) =>
+        cartridgeVerification === 'implausible'
+          ? entry.checks > 0
+          : entry.checks === 0 && entry.confidence === cartridgeVerification
+      );
+    }
+    if (bulletVerification) {
+      list = list.filter((entry) =>
+        entry.svg && (bulletVerification === 'verified' ? entry.bulletVerified : !entry.bulletVerified)
+      );
+    }
     list = search(query, list);
 
     const sorted = [...list];
     if (sort === 'name') {
       sorted.sort((a, b) => a.name.localeCompare(b.name, 'en'));
+    } else if (sort === 'family') {
+      sorted.sort((a, b) =>
+        (FAMILY_LABELS[a.family] ?? a.family).localeCompare(FAMILY_LABELS[b.family] ?? b.family, 'en') ||
+        a.name.localeCompare(b.name, 'en')
+      );
     } else {
       // A record with no published value for the sort column goes last rather than reading as
       // zero: the sheet being silent is not the same as the dimension measuring nothing.
@@ -65,38 +86,25 @@
   });
 
   /**
-   * Millimetres per pixel for the grid, from the longest cartridge currently shown.
+   * Pixels per millimetre for the grid: the CSS reference, so 100% is life size.
    *
-   * One scale for every card is the whole point of the grid: it is what makes a .22 Long Rifle
-   * beside a .378 Weatherby read as the size difference it is. Deriving it from the *filtered* set
-   * rather than from all 532 means filtering to pistol cartridges fills the cards instead of
-   * leaving them nearly empty.
+   * One scale for every card is the whole point of the grid -- it is what makes a .22 Long Rifle
+   * beside a .378 Weatherby read as the size difference it is -- and the strongest version of that
+   * is a scale tied to nothing on the page at all. Fitting the longest cartridge currently shown
+   * into the card, as this did, made the grid comparable *within* one filter and quietly re-scaled
+   * the whole page the moment the filter changed. `PX_PER_MM` does not move: a case that measured
+   * 30 mm across the card under Pistol still measures 30 mm under everything, and measures it
+   * against a ruler.
    *
-   * `DRAWING_WIDTH_PX` is the drawing room inside the narrowest card the grid will lay out -- a
-   * 21rem column less its padding -- so the longest cartridge on screen just fits and nothing is
-   * clipped. The cap stops a grid of small pistol cases from being drawn at a scale where the
-   * outline's own stroke is a visible fraction of the case.
+   * A drawing wider than its card is then the ordinary case rather than the exception, which is
+   * what the card's drag-to-pan viewport is for.
    */
-  const DRAWING_WIDTH_PX = 300;
-  const MAX_SCALE_PX_PER_MM = 5.2;
-
-  const fitted = $derived.by(() => {
-    // The drawing's own extent where there is one: it carries the projectile to L6, which the
-    // four-point skeleton does not. Sizing from L3 alone clipped every loaded drawing at the
-    // mouth.
-    const longest = Math.max(
-      ...shown.map((entry) =>
-        entry.svg ? entry.svg[0] : entry.shape ? Math.max(...entry.shape.map(([, z]) => z)) : 0
-      ),
-      1
-    );
-    return Math.min(MAX_SCALE_PX_PER_MM, DRAWING_WIDTH_PX / longest);
-  });
 
   /**
-   * A zoom on top of the fitted scale, chosen from the Size dropdown. Every card still shares
-   * one scale -- the zoom multiplies all of them -- so the comparison between cards holds at any
-   * size; a drawing larger than its card clips rather than shrinks. Kept per browser.
+   * A zoom on top of life size, chosen from the Size dropdown. Every card still shares one scale
+   * -- the zoom multiplies all of them -- so the comparison between cards holds at any size, and
+   * 100% is the cartridge itself; a drawing larger than its card pans rather than shrinks. Kept
+   * per browser.
    */
   const ZOOMS = [50, 75, 100, 125, 150, 200];
   const ZOOM_KEY = 'grid-zoom';
@@ -116,13 +124,15 @@
       // Storage may be unavailable; the choice still applies for this visit.
     }
   });
-  const scale = $derived((fitted * zoomPercent) / 100);
+  const scale = $derived((PX_PER_MM * zoomPercent) / 100);
   const cardHeight = $derived(Math.round((78 * zoomPercent) / 100));
 
   function reset() {
     query = '';
     family = '';
     country = '';
+    cartridgeVerification = '';
+    bulletVerification = '';
   }
 </script>
 
@@ -158,10 +168,31 @@
   </label>
 
   <label>
+    <span class="eyebrow">Cartridge</span>
+    <select bind:value={cartridgeVerification}>
+      <option value="">Any verification</option>
+      <option value="verified">Verified</option>
+      <option value="unverified">Unverified</option>
+      <option value="implausible">Check</option>
+    </select>
+  </label>
+
+  <label>
+    <span class="eyebrow">Bullet</span>
+    <select bind:value={bulletVerification}>
+      <option value="">Any verification</option>
+      <option value="verified">Verified</option>
+      <option value="unverified">Unverified</option>
+    </select>
+  </label>
+
+  <label>
     <span class="eyebrow">Sort</span>
     <select bind:value={sort}>
       <option value="name">Name</option>
+      <option value="family">Family</option>
       <option value="L3">Case length</option>
+      <option value="L6">Overall length</option>
       <option value="G1">Bullet diameter</option>
     </select>
   </label>
@@ -175,31 +206,41 @@
     </select>
   </label>
 
+</div>
+
+<div class="summary">
+  <div>
+    <p class="count">
+      <strong class="num">{shown.length}</strong> of {entries.length} cartridges
+      {#if shown.length !== entries.length}
+        <button class="link" onclick={reset}>clear filters</button>
+      {/if}
+    </p>
+    <p class="actions">
+      <a href={addCartridgeUrl()} target="_blank" rel="noopener noreferrer">Add a cartridge</a>
+    </p>
+  </div>
   <div class="views" role="group" aria-label="View">
-    <span class="eyebrow">View</span>
     <div class="segmented">
       <button
         type="button"
         class:on={view === 'grid'}
         aria-pressed={view === 'grid'}
-        onclick={() => (view = 'grid')}>Grid</button
+        aria-label="Grid view"
+        title="Grid view"
+        onclick={() => (view = 'grid')}><span aria-hidden="true">▦</span></button
       >
       <button
         type="button"
         class:on={view === 'list'}
         aria-pressed={view === 'list'}
-        onclick={() => (view = 'list')}>List</button
+        aria-label="List view"
+        title="List view"
+        onclick={() => (view = 'list')}><span aria-hidden="true">☷</span></button
       >
     </div>
   </div>
 </div>
-
-<p class="count">
-  <strong class="num">{shown.length}</strong> of {entries.length} cartridges
-  {#if shown.length !== entries.length}
-    <button class="link" onclick={reset}>clear filters</button>
-  {/if}
-</p>
 
 {#if shown.length === 0}
   <p class="empty">
@@ -221,6 +262,7 @@
           <th>Name</th>
           <th>Family</th>
           <th>Origin</th>
+          <th>Verification</th>
         </tr>
       </thead>
       <tbody>
@@ -241,6 +283,31 @@
             </td>
             <td class="muted">{FAMILY_LABELS[entry.family] ?? entry.family}</td>
             <td class="num muted">{entry.country ?? '-'}</td>
+            <td>
+              <span class="verifications">
+                <span
+                  class="verification {entry.checks ? 'implausible' : entry.confidence}"
+                  title={entry.checks
+                    ? `${entry.checks} check${entry.checks === 1 ? '' : 's'} found; see the cartridge page`
+                    : entry.confidence === 'verified'
+                      ? 'Confirmed by a person'
+                      : 'Not yet confirmed by a person'}
+                >
+                  {#if entry.checks}Cartridge {CONFIDENCE_LABELS.implausible} ({entry.checks})
+                  {:else}Cartridge {CONFIDENCE_LABELS[entry.confidence]}{/if}
+                </span>
+                {#if entry.svg}
+                  <span
+                    class="verification {entry.bulletVerified ? 'verified' : 'unverified'}"
+                    title={entry.bulletVerified
+                      ? 'The bullet type has been confirmed against the drawing by a person'
+                      : 'The bullet type is a default, not yet confirmed by a person'}
+                  >
+                    Bullet {entry.bulletVerified ? 'verified' : 'unverified'}
+                  </span>
+                {/if}
+              </span>
+            </td>
           </tr>
         {/each}
       </tbody>
@@ -250,8 +317,8 @@
 
 <style>
   .controls {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
     gap: 0.75rem;
     align-items: end;
     margin-bottom: 1.1rem;
@@ -262,15 +329,18 @@
     gap: 0.2rem;
   }
   .search {
-    flex: 1 1 18rem;
+    grid-column: 1 / -1;
+    justify-self: stretch;
   }
   .search input {
     width: 100%;
   }
+  .controls > label:not(.search) select {
+    width: 100%;
+  }
   .views {
     display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+    justify-content: flex-end;
   }
   .segmented {
     display: inline-flex;
@@ -279,11 +349,13 @@
     overflow: hidden;
   }
   .segmented button {
+    flex: 1;
     background: var(--surface);
     border: 0;
     padding: 0.4rem 0.8rem;
     font-size: var(--step-0);
     color: var(--ink-2);
+    line-height: 1;
   }
   .segmented button + button {
     border-left: 1px solid var(--rule-strong);
@@ -296,7 +368,18 @@
   .count {
     color: var(--ink-2);
     font-size: var(--step-0);
+    margin: 0 0 0.25rem;
+  }
+  .actions {
     margin: 0 0 1rem;
+    font-size: var(--step-0);
+  }
+  .summary {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
   }
   .link {
     background: none;
@@ -356,6 +439,34 @@
   }
   .muted {
     color: var(--ink-2);
+  }
+  .verifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+  .verification {
+    display: inline-block;
+    padding: 0.1rem 0.45rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    font-size: 0.68rem;
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+  .verification.verified {
+    color: var(--ok);
+    border-color: currentColor;
+    background: var(--ok-soft);
+  }
+  .verification.unverified {
+    color: var(--ink-3);
+    background: var(--surface-2);
+  }
+  .verification.implausible {
+    color: var(--warn);
+    background: var(--warn-soft);
+    border-color: currentColor;
   }
   .alt {
     display: block;

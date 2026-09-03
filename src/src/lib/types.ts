@@ -74,6 +74,7 @@ export interface Entry {
   country: string | null;
   alt: string[];
   L3: number | null;
+  L6: number | null;
   G1: number | null;
   /**
    * The size in millimetres of the rendered drawing shipped for this cartridge, `[width, height]`,
@@ -89,6 +90,8 @@ export interface Entry {
   shape: [number, number][] | null;
   /** From the record's annotations; see `Confidence`. */
   confidence: Confidence;
+  /** Total plausibility checks that fired, including known exceptions. */
+  checks: number;
   /** Findings on the record that no listed exception explains. */
   warnings: number;
   /** The second verification: the drawn bullet's nose form, confirmed by a person or not. */
