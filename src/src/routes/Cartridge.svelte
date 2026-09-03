@@ -4,6 +4,7 @@
   import { byKey, load } from '../lib/data';
   import { issueUrl, verifyUrl } from '../lib/issue';
   import { href } from '../lib/router';
+  import { PX_PER_MM } from '../lib/scale';
   import { FAMILY_LABELS, type Finding } from '../lib/types';
 
   interface Props {
@@ -18,27 +19,21 @@
   const verifyBullet = $derived(entry ? verifyUrl(entry, 'bullet') : null);
 
   /**
-   * Millimetres per pixel for the drawing at the head of the page.
+   * Pixels per millimetre for the drawing at the head of the page: the CSS reference, so 100% is
+   * life size.
    *
-   * Fitted to the cartridge rather than shared with anything, because there is only one of it: a
-   * page showing a single cartridge has nothing to compare it against, so the scale that serves the
-   * reader is the one that makes it as large as the column allows. The grid does the opposite for
-   * the opposite reason.
+   * The page used to fit the drawing to its column, which made every cartridge arrive the same
+   * width on screen and told the reader nothing about how big it is -- a .22 Long Rifle and a
+   * 12.7x108 both filled the column. At `PX_PER_MM` the drawing opens as the object: a 9x19 is a
+   * couple of inches of screen and a .50 BMG is most of a column, and the two pages compare with
+   * each other as directly as two cards in the grid do. Anything longer than the column pans; see
+   * `PX_PER_MM` for what a monitor can and cannot promise about "life size".
    */
-  const DRAWING_WIDTH_PX = 620;
-  const MAX_SCALE_PX_PER_MM = 9;
-
-  const fitted = $derived.by(() => {
-    const shape = entry?.shape;
-    if (!shape) return 6;
-    const length = Math.max(...shape.map(([, z]) => z), 1);
-    return Math.min(MAX_SCALE_PX_PER_MM, DRAWING_WIDTH_PX / length);
-  });
 
   /**
-   * A zoom on top of the fitted scale, in steps, from the +/- buttons beside the drawing. Kept
-   * per browser so the reader who likes it larger finds it larger next time; the fitted scale is
-   * still the one the drawing opens at when nothing is stored.
+   * A zoom on top of life size, in steps, from the +/- buttons beside the drawing. Kept per
+   * browser so the reader who likes it larger finds it larger next time; 100% -- the cartridge at
+   * its own size -- is where it opens when nothing is stored.
    */
   const ZOOM_STEPS = [0.5, 0.75, 1, 1.25, 1.5, 2, 3];
   const ZOOM_KEY = 'drawing-zoom';
@@ -102,7 +97,7 @@
     const next = ZOOM_STEPS[Math.min(ZOOM_STEPS.length - 1, Math.max(0, index + direction))];
     setZoom(next ?? 1);
   }
-  const scale = $derived(fitted * zoom);
+  const scale = $derived(PX_PER_MM * zoom);
 </script>
 
 {#await record}
@@ -154,7 +149,7 @@
       <Drawing {entry} {scale} height={Math.round(120 * zoom)} />
       <div class="zoom" role="group" aria-label="Drawing size">
         <button type="button" onclick={() => zoomBy(-1)} disabled={zoom === ZOOM_STEPS[0]} aria-label="Smaller">−</button>
-        <button type="button" class="reset" onclick={() => setZoom(1)} title="Reset to fit">{Math.round(zoom * 100)}%</button>
+        <button type="button" class="reset" onclick={() => setZoom(1)} title="Reset to life size">{Math.round(zoom * 100)}%</button>
         <button type="button" onclick={() => zoomBy(1)} disabled={zoom === ZOOM_STEPS[ZOOM_STEPS.length - 1]} aria-label="Larger">+</button>
       </div>
     </figure>

@@ -3,6 +3,7 @@
   import { addCartridgeUrl } from '../lib/issue';
   import { countries, entries, families, search } from '../lib/data';
   import { href } from '../lib/router';
+  import { PX_PER_MM } from '../lib/scale';
   import { CONFIDENCE_LABELS, FAMILY_LABELS } from '../lib/types';
 
   let query = $state('');
@@ -85,38 +86,25 @@
   });
 
   /**
-   * Millimetres per pixel for the grid, from the longest cartridge currently shown.
+   * Pixels per millimetre for the grid: the CSS reference, so 100% is life size.
    *
-   * One scale for every card is the whole point of the grid: it is what makes a .22 Long Rifle
-   * beside a .378 Weatherby read as the size difference it is. Deriving it from the *filtered* set
-   * rather than from all 532 means filtering to pistol cartridges fills the cards instead of
-   * leaving them nearly empty.
+   * One scale for every card is the whole point of the grid -- it is what makes a .22 Long Rifle
+   * beside a .378 Weatherby read as the size difference it is -- and the strongest version of that
+   * is a scale tied to nothing on the page at all. Fitting the longest cartridge currently shown
+   * into the card, as this did, made the grid comparable *within* one filter and quietly re-scaled
+   * the whole page the moment the filter changed. `PX_PER_MM` does not move: a case that measured
+   * 30 mm across the card under Pistol still measures 30 mm under everything, and measures it
+   * against a ruler.
    *
-   * `DRAWING_WIDTH_PX` is the drawing room inside the narrowest card the grid will lay out -- a
-   * 21rem column less its padding -- so the longest cartridge on screen just fits and nothing is
-   * clipped. The cap stops a grid of small pistol cases from being drawn at a scale where the
-   * outline's own stroke is a visible fraction of the case.
+   * A drawing wider than its card is then the ordinary case rather than the exception, which is
+   * what the card's drag-to-pan viewport is for.
    */
-  const DRAWING_WIDTH_PX = 300;
-  const MAX_SCALE_PX_PER_MM = 5.2;
-
-  const fitted = $derived.by(() => {
-    // The drawing's own extent where there is one: it carries the projectile to L6, which the
-    // four-point skeleton does not. Sizing from L3 alone clipped every loaded drawing at the
-    // mouth.
-    const longest = Math.max(
-      ...shown.map((entry) =>
-        entry.svg ? entry.svg[0] : entry.shape ? Math.max(...entry.shape.map(([, z]) => z)) : 0
-      ),
-      1
-    );
-    return Math.min(MAX_SCALE_PX_PER_MM, DRAWING_WIDTH_PX / longest);
-  });
 
   /**
-   * A zoom on top of the fitted scale, chosen from the Size dropdown. Every card still shares
-   * one scale -- the zoom multiplies all of them -- so the comparison between cards holds at any
-   * size; a drawing larger than its card clips rather than shrinks. Kept per browser.
+   * A zoom on top of life size, chosen from the Size dropdown. Every card still shares one scale
+   * -- the zoom multiplies all of them -- so the comparison between cards holds at any size, and
+   * 100% is the cartridge itself; a drawing larger than its card pans rather than shrinks. Kept
+   * per browser.
    */
   const ZOOMS = [50, 75, 100, 125, 150, 200];
   const ZOOM_KEY = 'grid-zoom';
@@ -136,7 +124,7 @@
       // Storage may be unavailable; the choice still applies for this visit.
     }
   });
-  const scale = $derived((fitted * zoomPercent) / 100);
+  const scale = $derived((PX_PER_MM * zoomPercent) / 100);
   const cardHeight = $derived(Math.round((78 * zoomPercent) / 100));
 
   function reset() {

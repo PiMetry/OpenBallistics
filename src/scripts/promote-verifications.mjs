@@ -9,9 +9,20 @@ const issuesPath = process.argv[2] ?? join(root, 'verification-issues.json');
 const summaryPath = process.argv[3] ?? join(root, 'verification-pr.md');
 const threshold = 3;
 
+// A field's value from a GitHub issue-form body: the block under its `### <label>` heading, read
+// up to the next heading.
+//
+// Matched as text rather than as a pattern. One of the labels is `What did you verify?`, and
+// dropped into a regular expression unescaped its `?` made the preceding `y` optional -- so the
+// heading never matched, every issue parsed as having no target, and nothing was ever promoted.
 function field(body, label) {
-  const match = new RegExp(`### ${label}\\r?\\n\\r?\\n([\\s\\S]*?)(?=\\r?\\n### |$)`).exec(body ?? '');
-  return match?.[1].trim() ?? '';
+  const text = (body ?? '').split('\r\n').join('\n');
+  const heading = `### ${label}\n`;
+  const start = text.indexOf(heading);
+  if (start === -1) return '';
+  const rest = text.slice(start + heading.length);
+  const end = rest.indexOf('\n### ');
+  return (end === -1 ? rest : rest.slice(0, end)).trim();
 }
 
 async function recordPath(key) {
@@ -27,7 +38,7 @@ async function recordPath(key) {
   return null;
 }
 
-const issues = JSON.parse(await readJsonFile(issuesPath, 'utf8'));
+const issues = JSON.parse(await readFile(issuesPath, 'utf8'));
 const confirmations = new Map();
 
 for (const issue of issues) {
