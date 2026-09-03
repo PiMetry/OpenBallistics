@@ -19,8 +19,8 @@
       "E1": 17.27,
       "R": 2.26,
       "R1": 20.42,
-      "beta": 45,
-      "delta": 36,
+      "beta": 45.0,
+      "delta": 36.0,
       "eMin": 1.8,
       "f": 0.84
     },
@@ -31,20 +31,20 @@
     "junctionCone": {
       "S": 88.33,
       "alpha": {
-        "degrees": 56,
-        "minutes": 38,
-        "seconds": 53
+        "degrees": 56.0,
+        "minutes": 38.0,
+        "seconds": 53.0
       },
-      "r1Min": 1,
-      "r2": 3
+      "r1Min": 1.0,
+      "r2": 3.0
     },
     "lengths": {
       "L1": 71.4,
       "L1Tol": -0.2,
       "L2": 76.53,
       "L2Tol": -0.2,
-      "L3": 90,
-      "L6": 140
+      "L3": 90.0,
+      "L6": 140.0
     },
     "misc": {
       "Fe": 0.15
@@ -55,11 +55,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 15000,
-      "M": 40,
-      "PE": 4625,
-      "PK": 4255,
-      "Pmax": 3700
+      "EE": 15000.0,
+      "M": 40.0,
+      "PE": 4625.0,
+      "PK": 4255.0,
+      "Pmax": 3700.0
     },
     "projectile": {
       "F": 11.43,
@@ -80,25 +80,25 @@
       "H2": 12.75
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 104.94,
       "b": 3.81,
-      "u": 356
+      "u": 356.0
     },
     "junctionCone": {
       "S": 88.66,
       "alpha": {
-        "degrees": 55,
-        "minutes": 57,
-        "seconds": 13
+        "degrees": 55.0,
+        "minutes": 57.0,
+        "seconds": 13.0
       },
-      "r1Max": 1,
-      "r2": 3
+      "r1Max": 1.0,
+      "r2": 3.0
     },
     "lengths": {
       "L1": 71.43,
       "L2": 76.56,
-      "L3": 91
+      "L3": 91.0
     },
     "powderChamber": {
       "E": 6.23,
@@ -108,12 +108,12 @@
     "rifling": {
       "G": 15.3,
       "G1": 11.65,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.55,
       "i": {
-        "degrees": 0,
-        "minutes": 42,
-        "seconds": 58
+        "degrees": 0.0,
+        "minutes": 42.0,
+        "seconds": 58.0
       },
       "s": 6.5
     }
@@ -123,5 +123,6 @@
   "key": "460_steyr",
   "name": "460 Steyr",
   "pressureMethod": "Transducer",
-  "published": "2006-05-16"
+  "published": "2006-05-16",
+  "tab": "I"
 }

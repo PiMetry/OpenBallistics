@@ -49,9 +49,9 @@
       "P1": 8.8
     },
     "pressures": {
-      "EE": 110,
-      "EK": 107,
-      "Emax": 100
+      "EE": 110.0,
+      "EK": 107.0,
+      "Emax": 100.0
     },
     "projectile": {
       "G1": 8.8,
@@ -83,9 +83,9 @@
       "G": 2.52,
       "G1": 8.8,
       "i": {
-        "degrees": 4,
-        "minutes": 45,
-        "seconds": 49
+        "degrees": 4.0,
+        "minutes": 45.0,
+        "seconds": 49.0
       }
     }
   },
@@ -95,5 +95,6 @@
   "name": "9mm Flobert à balle",
   "pressureMethod": "Energy",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "V"
 }

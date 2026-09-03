@@ -20,9 +20,9 @@
       "R": 1.09,
       "R1": 12.06,
       "delta": {
-        "degrees": 35,
-        "minutes": 1,
-        "seconds": 48
+        "degrees": 35.0,
+        "minutes": 1.0,
+        "seconds": 48.0
       },
       "eMin": 0.81
     },
@@ -33,9 +33,9 @@
     "junctionCone": {
       "S": 58.45,
       "alpha": {
-        "degrees": 40,
-        "minutes": 41,
-        "seconds": 17
+        "degrees": 40.0,
+        "minutes": 41.0,
+        "seconds": 17.0
       }
     },
     "lengths": {
@@ -55,11 +55,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2720,
-      "M": 25,
-      "PE": 4000,
-      "PK": 3680,
-      "Pmax": 3200
+      "EE": 2720.0,
+      "M": 25.0,
+      "PE": 4000.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
     },
     "projectile": {
       "G1": 7.21,
@@ -80,17 +80,17 @@
       "H2": 8.26
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 40.28,
       "b": 3.62,
-      "u": 203
+      "u": 203.0
     },
     "junctionCone": {
       "S": 58.4,
       "alpha": {
-        "degrees": 40,
-        "minutes": 47,
-        "seconds": 34
+        "degrees": 40.0,
+        "minutes": 47.0,
+        "seconds": 34.0
       }
     },
     "lengths": {
@@ -106,12 +106,12 @@
     "rifling": {
       "G": 5.65,
       "G1": 7.26,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.5,
       "i": {
-        "degrees": 1,
-        "minutes": 36,
-        "seconds": 46
+        "degrees": 1.0,
+        "minutes": 36.0,
+        "seconds": 46.0
       }
     }
   },
@@ -121,5 +121,6 @@
   "name": "275 H. V. Rigby",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

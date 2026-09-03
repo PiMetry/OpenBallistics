@@ -18,8 +18,8 @@
       "R": 1.6,
       "R1": 12.85,
       "RTol": -0.25,
-      "beta": 35,
-      "delta": 0,
+      "beta": 35.0,
+      "delta": 0.0,
       "f": 0.38
     },
     "collar": {
@@ -29,9 +29,9 @@
     "junctionCone": {
       "S": 56.42,
       "alpha": {
-        "degrees": 29,
-        "minutes": 2,
-        "seconds": 0
+        "degrees": 29.0,
+        "minutes": 2.0,
+        "seconds": 0.0
       },
       "r1Min": 3.81,
       "r2": 7.62
@@ -50,11 +50,11 @@
       "P2": 10.2
     },
     "pressures": {
-      "EE": 2370,
-      "M": 25,
-      "PE": 3810,
-      "PK": 3508,
-      "Pmax": 3050
+      "EE": 2370.0,
+      "M": 25.0,
+      "PE": 3810.0,
+      "PK": 3508.0,
+      "Pmax": 3050.0
     },
     "projectile": {
       "G1": 8.18,
@@ -63,7 +63,7 @@
   },
   "chamber": {
     "barrel": {
-      "F": 8,
+      "F": 8.0,
       "Z": 8.13
     },
     "breech": {
@@ -75,17 +75,17 @@
       "H2": 8.72
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 51.34,
       "b": 2.69,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {
       "S": 56.29,
       "alpha": {
-        "degrees": 29,
-        "minutes": 28,
-        "seconds": 0
+        "degrees": 29.0,
+        "minutes": 28.0,
+        "seconds": 0.0
       },
       "r1Max": 3.81,
       "r2": 7.62
@@ -102,7 +102,7 @@
     "rifling": {
       "G": 1.34,
       "G1": 8.72,
-      "i": 15
+      "i": 15.0
     }
   },
   "country": "US",
@@ -111,5 +111,6 @@
   "name": "32 Win. Spec.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2022-04-26"
+  "revised": "2022-04-26",
+  "tab": "II"
 }

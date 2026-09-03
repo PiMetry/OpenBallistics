@@ -16,14 +16,14 @@
   "cartridge": {
     "caseHead": {
       "E": 6.3,
-      "E1": 18,
-      "R": 2,
+      "E1": 18.0,
+      "R": 2.0,
       "R1": 21.8,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 38,
-        "minutes": 44,
-        "seconds": 0
+        "degrees": 38.0,
+        "minutes": 44.0,
+        "seconds": 0.0
       },
       "eMin": 1.9,
       "f": 0.8
@@ -35,9 +35,9 @@
     "junctionCone": {
       "S": 114.52,
       "alpha": {
-        "degrees": 35,
-        "minutes": 32,
-        "seconds": 34
+        "degrees": 35.0,
+        "minutes": 32.0,
+        "seconds": 34.0
       }
     },
     "lengths": {
@@ -45,8 +45,8 @@
       "L1Tol": -0.2,
       "L2": 92.6,
       "L2Tol": -0.2,
-      "L3": 108,
-      "L6": 147
+      "L3": 108.0,
+      "L6": 147.0
     },
     "misc": {
       "Fe": 0.15,
@@ -58,41 +58,41 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 19200,
-      "M": 25,
-      "PE": 3813,
-      "PK": 3508,
-      "Pmax": 3050
+      "EE": 19200.0,
+      "M": 25.0,
+      "PE": 3813.0,
+      "PK": 3508.0,
+      "Pmax": 3050.0
     },
     "projectile": {
       "G1": 13.01,
-      "L3PlusG": 138
+      "L3PlusG": 138.0
     }
   },
   "chamber": {
     "barrel": {
       "F": 12.66,
-      "Z": 13
+      "Z": 13.0
     },
     "breech": {
-      "R1": 22
+      "R1": 22.0
     },
     "collar": {
       "H1": 14.14,
       "H2": 13.91
     },
     "grooves": {
-      "N": 8,
+      "N": 8.0,
       "Q": 129.72,
       "b": 2.8,
-      "u": 380
+      "u": 380.0
     },
     "junctionCone": {
       "S": 114.17,
       "alpha": {
-        "degrees": 35,
-        "minutes": 17,
-        "seconds": 40
+        "degrees": 35.0,
+        "minutes": 17.0,
+        "seconds": 40.0
       }
     },
     "lengths": {
@@ -106,18 +106,18 @@
       "P2": 19.23
     },
     "rifling": {
-      "G": 30,
-      "G1": 13,
+      "G": 30.0,
+      "G1": 13.0,
       "alpha1": {
-        "degrees": 5,
-        "minutes": 12,
-        "seconds": 37
+        "degrees": 5.0,
+        "minutes": 12.0,
+        "seconds": 37.0
       },
-      "h": 10,
+      "h": 10.0,
       "i": {
-        "degrees": 0,
-        "minutes": 29,
-        "seconds": 13
+        "degrees": 0.0,
+        "minutes": 29.0,
+        "seconds": 13.0
       }
     }
   },
@@ -126,5 +126,6 @@
   "key": "12_7_x_108",
   "name": "12,7 x 108",
   "pressureMethod": "Transducer",
-  "published": "2017-05-17"
+  "published": "2017-05-17",
+  "tab": "I"
 }

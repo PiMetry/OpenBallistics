@@ -7,7 +7,7 @@
       "category": "rifle_spitzer",
       "ogive": "tangent",
       "tip": "open_meplat",
-      "verified": true
+      "verified": false
     },
     "defaultBulletShape": "pointy",
     "implausible": [],
@@ -19,7 +19,7 @@
       "E1": 12.7,
       "R": 1.65,
       "R1": 14.99,
-      "beta": 0,
+      "beta": 0.0,
       "delta": 39.93,
       "eMin": 0.81
     },
@@ -30,9 +30,9 @@
     "junctionCone": {
       "S": 66.66,
       "alpha": {
-        "degrees": 89,
-        "minutes": 45,
-        "seconds": 32
+        "degrees": 89.0,
+        "minutes": 45.0,
+        "seconds": 32.0
       },
       "r1Min": 1.5,
       "r2": 1.5
@@ -54,11 +54,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 7270,
-      "M": 25,
-      "PE": 4060,
-      "PK": 3738,
-      "Pmax": 3250
+      "EE": 7270.0,
+      "M": 25.0,
+      "PE": 4060.0,
+      "PK": 3738.0,
+      "Pmax": 3250.0
     },
     "projectile": {
       "G1": 10.57,
@@ -79,17 +79,17 @@
       "H2": 11.35
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 86.61,
       "b": 3.6,
-      "u": 420
+      "u": 420.0
     },
     "junctionCone": {
       "S": 66.65,
       "alpha": {
-        "degrees": 89,
-        "minutes": 30,
-        "seconds": 59
+        "degrees": 89.0,
+        "minutes": 30.0,
+        "seconds": 59.0
       },
       "r1Max": 1.5,
       "r2": 1.5
@@ -109,9 +109,9 @@
       "G1": 10.59,
       "h": 0.38,
       "i": {
-        "degrees": 0,
-        "minutes": 54,
-        "seconds": 36
+        "degrees": 0.0,
+        "minutes": 54.0,
+        "seconds": 36.0
       }
     }
   },
@@ -121,5 +121,6 @@
   "name": "416 Rigby",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2021-04-07"
+  "revised": "2021-04-07",
+  "tab": "I"
 }

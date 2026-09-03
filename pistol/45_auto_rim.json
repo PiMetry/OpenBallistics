@@ -18,7 +18,7 @@
       "R": 2.26,
       "R1": 13.11,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -36,9 +36,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 1560,
-      "PK": 1380,
-      "Pmax": 1200
+      "PE": 1560.0,
+      "PK": 1380.0,
+      "Pmax": 1200.0
     },
     "projectile": {
       "G1": 11.48,
@@ -58,10 +58,10 @@
       "H2": 12.01
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 102.12,
       "b": 3.96,
-      "u": 406
+      "u": 406.0
     },
     "lengths": {
       "L3": 22.86
@@ -72,11 +72,11 @@
     "rifling": {
       "G": 21.96,
       "G1": 11.57,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 4,
-        "minutes": 34,
-        "seconds": 59
+        "degrees": 4.0,
+        "minutes": 34.0,
+        "seconds": 59.0
       },
       "s": 20.15
     }
@@ -87,5 +87,6 @@
   "name": "45 Auto Rim",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

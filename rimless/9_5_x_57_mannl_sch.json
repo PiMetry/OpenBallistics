@@ -19,13 +19,13 @@
       "E1": 10.3,
       "R": 1.2,
       "R1": 11.9,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 38,
-        "minutes": 39,
-        "seconds": 35
+        "degrees": 38.0,
+        "minutes": 39.0,
+        "seconds": 35.0
       },
-      "eMin": 1,
+      "eMin": 1.0,
       "f": 0.3
     },
     "collar": {
@@ -35,9 +35,9 @@
     "junctionCone": {
       "S": 61.31,
       "alpha": {
-        "degrees": 42,
-        "minutes": 6,
-        "seconds": 1
+        "degrees": 42.0,
+        "minutes": 6.0,
+        "seconds": 1.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -47,8 +47,8 @@
       "L1Tol": -0.2,
       "L2": 48.02,
       "L2Tol": -0.2,
-      "L3": 57,
-      "L6": 75
+      "L3": 57.0,
+      "L6": 75.0
     },
     "misc": {
       "Fe": 0.15
@@ -59,11 +59,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 6065,
-      "M": 25,
-      "PE": 3810,
-      "PK": 3508,
-      "Pmax": 3050
+      "EE": 6065.0,
+      "M": 25.0,
+      "PE": 3810.0,
+      "PK": 3508.0,
+      "Pmax": 3050.0
     },
     "projectile": {
       "G1": 9.55,
@@ -84,17 +84,17 @@
       "H2": 10.22
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 70.85,
       "b": 4.6,
-      "u": 300
+      "u": 300.0
     },
     "junctionCone": {
       "S": 61.37,
       "alpha": {
-        "degrees": 41,
-        "minutes": 56,
-        "seconds": 49
+        "degrees": 41.0,
+        "minutes": 56.0,
+        "seconds": 49.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -112,11 +112,11 @@
     "rifling": {
       "G": 11.4,
       "G1": 9.65,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 57,
-        "seconds": 17
+        "degrees": 0.0,
+        "minutes": 57.0,
+        "seconds": 17.0
       }
     }
   },
@@ -126,5 +126,6 @@
   "name": "9,5 x 57 Mannl. Sch.",
   "pressureMethod": "Transducer",
   "published": "1995-06-28",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

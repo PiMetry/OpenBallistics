@@ -7,7 +7,7 @@
       "category": "rifle_spitzer",
       "ogive": "tangent",
       "tip": "open_meplat",
-      "verified": true
+      "verified": false
     },
     "defaultBulletShape": "pointy",
     "implausible": [],
@@ -19,8 +19,8 @@
       "E1": 10.5,
       "R": 1.5,
       "R1": 12.2,
-      "beta": 45,
-      "delta": 45,
+      "beta": 45.0,
+      "delta": 45.0,
       "eMin": 0.9,
       "f": 0.5
     },
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 55.17,
       "alpha": {
-        "degrees": 50,
-        "minutes": 35,
-        "seconds": 2
+        "degrees": 50.0,
+        "minutes": 35.0,
+        "seconds": 2.0
       },
       "r1Min": 3.5,
       "r2": 3.7
@@ -43,8 +43,8 @@
       "L1Tol": -0.2,
       "L2": 47.13,
       "L2Tol": -0.2,
-      "L3": 55,
-      "L6": 80
+      "L3": 55.0,
+      "L6": 80.0
     },
     "misc": {
       "Fe": 0.15,
@@ -56,11 +56,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 3395,
-      "M": 25,
-      "PE": 4750,
-      "PK": 4370,
-      "Pmax": 3800
+      "EE": 3395.0,
+      "M": 25.0,
+      "PE": 4750.0,
+      "PK": 4370.0,
+      "Pmax": 3800.0
     },
     "projectile": {
       "G1": 6.71,
@@ -82,14 +82,14 @@
       "H2": 7.55
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 34.36,
       "b": 2.5,
-      "u": 220
+      "u": 220.0
     },
     "junctionCone": {
       "S": 55.24,
-      "alpha": 50,
+      "alpha": 50.0,
       "r1Max": 2.6,
       "r2": 3.1
     },
@@ -106,12 +106,12 @@
     "rifling": {
       "G": 14.1,
       "G1": 6.84,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.35,
       "i": {
-        "degrees": 0,
-        "minutes": 42,
-        "seconds": 29
+        "degrees": 0.0,
+        "minutes": 42.0,
+        "seconds": 29.0
       }
     }
   },
@@ -121,5 +121,6 @@
   "name": "6,5 x 55 SE",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2013-05-22"
+  "revised": "2013-05-22",
+  "tab": "I"
 }

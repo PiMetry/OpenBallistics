@@ -19,8 +19,8 @@
       "E1": 10.39,
       "R": 1.37,
       "R1": 12.01,
-      "beta": 45,
-      "delta": 36,
+      "beta": 45.0,
+      "delta": 36.0,
       "eMin": 1.4,
       "f": 0.38
     },
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 46.29,
       "alpha": {
-        "degrees": 40,
-        "minutes": 0,
-        "seconds": 6
+        "degrees": 40.0,
+        "minutes": 0.0,
+        "seconds": 6.0
       },
       "r1Min": 0.76,
       "r2": 3.18
@@ -43,7 +43,7 @@
       "L1Tol": -0.2,
       "L2": 34.31,
       "L2Tol": -0.2,
-      "L3": 41,
+      "L3": 41.0,
       "L6": 57.5
     },
     "misc": {
@@ -56,11 +56,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 3920,
-      "M": 25,
-      "PE": 4750,
-      "PK": 4370,
-      "Pmax": 3800
+      "EE": 3920.0,
+      "M": 25.0,
+      "PE": 4750.0,
+      "PK": 4370.0,
+      "Pmax": 3800.0
     },
     "projectile": {
       "G1": 7.85,
@@ -80,17 +80,17 @@
       "H2": 8.74
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 47.51,
       "b": 4.47,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 46.17,
       "alpha": {
-        "degrees": 40,
-        "minutes": 3,
-        "seconds": 3
+        "degrees": 40.0,
+        "minutes": 3.0,
+        "seconds": 3.0
       },
       "r1Max": 0.76,
       "r2": 3.76
@@ -109,15 +109,15 @@
       "G": 7.04,
       "G1": 7.87,
       "alpha1": {
-        "degrees": 71,
-        "minutes": 52,
-        "seconds": 48
+        "degrees": 71.0,
+        "minutes": 52.0,
+        "seconds": 48.0
       },
       "h": 0.6,
       "i": {
-        "degrees": 1,
-        "minutes": 43,
-        "seconds": 31
+        "degrees": 1.0,
+        "minutes": 43.0,
+        "seconds": 31.0
       },
       "s": 2.89
     }
@@ -128,5 +128,6 @@
   "name": "308 EH",
   "pressureMethod": "Transducer",
   "published": "1989-09-20",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

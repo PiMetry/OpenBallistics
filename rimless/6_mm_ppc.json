@@ -19,11 +19,11 @@
       "E1": 9.6,
       "R": 1.5,
       "R1": 11.18,
-      "beta": 35,
+      "beta": 35.0,
       "delta": {
-        "degrees": 43,
-        "minutes": 43,
-        "seconds": 12
+        "degrees": 43.0,
+        "minutes": 43.0,
+        "seconds": 12.0
       },
       "eMin": 1.2,
       "f": 0.4
@@ -34,12 +34,12 @@
     },
     "junctionCone": {
       "S": 36.76,
-      "alpha": 60
+      "alpha": 60.0
     },
     "lengths": {
       "L1": 27.3,
       "L1Tol": -0.2,
-      "L2": 31,
+      "L2": 31.0,
       "L2Tol": -0.2,
       "L3": 38.18,
       "L6": 55.7
@@ -53,11 +53,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2250,
+      "EE": 2250.0,
       "M": 17.5,
-      "PE": 5060,
-      "PK": 4658,
-      "Pmax": 4050
+      "PE": 5060.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 6.17,
@@ -77,14 +77,14 @@
       "H2": 6.65
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 29.52,
       "b": 2.29,
-      "u": 551
+      "u": 551.0
     },
     "junctionCone": {
       "S": 36.78,
-      "alpha": 60,
+      "alpha": 60.0,
       "r1Max": 1.52,
       "r2": 1.52
     },
@@ -101,12 +101,12 @@
     "rifling": {
       "G": 5.58,
       "G1": 6.18,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.24,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 2.52
     }
@@ -117,5 +117,6 @@
   "name": "6 mm PPC",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

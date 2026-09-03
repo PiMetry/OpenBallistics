@@ -9,9 +9,9 @@
   "cartridge": {
     "dimensions": {
       "alpha": {
-        "degrees": 15,
-        "minutes": 11,
-        "seconds": 24
+        "degrees": 15.0,
+        "minutes": 11.0,
+        "seconds": 24.0
       },
       "d": 8.8,
       "d2": 8.4,
@@ -21,13 +21,13 @@
       "h": 8.35,
       "hTol": -0.35,
       "l1": 10.5,
-      "l2": 12,
+      "l2": 12.0,
       "t": 1.45,
       "tTol": -0.2
     },
     "lengths": [
       {
-        "l": 45,
+        "l": 45.0,
         "tol": -2.5
       }
     ]
@@ -47,9 +47,9 @@
       "T": 1.45,
       "TTol": 0.1,
       "alpha1": {
-        "degrees": 13,
-        "minutes": 18,
-        "seconds": 0
+        "degrees": 13.0,
+        "minutes": 18.0,
+        "seconds": 0.0
       }
     },
     "headspace": {
@@ -64,5 +64,6 @@
   "name": "Cal. 9 C.F. Mori",
   "pressureMethod": "Transducer",
   "published": "2004-09-27",
-  "revised": "2006-09-19"
+  "revised": "2006-09-19",
+  "tab": "VII"
 }

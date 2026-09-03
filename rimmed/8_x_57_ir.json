@@ -21,7 +21,7 @@
       "R": 1.4,
       "R1": 13.32,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -31,18 +31,18 @@
     "junctionCone": {
       "S": 62.7,
       "alpha": {
-        "degrees": 36,
-        "minutes": 17,
-        "seconds": 39
+        "degrees": 36.0,
+        "minutes": 17.0,
+        "seconds": 39.0
       },
       "r1Min": 0.5,
       "r2": 0.5
     },
     "lengths": {
-      "L1": 46,
+      "L1": 46.0,
       "L2": 48.99,
-      "L3": 57,
-      "L6": 82
+      "L3": 57.0,
+      "L6": 82.0
     },
     "misc": {
       "Fe": 0.15
@@ -52,15 +52,15 @@
       "P2": 10.95
     },
     "pressures": {
-      "EE": 3315,
-      "M": 25,
-      "PE": 4000,
-      "PK": 3680,
-      "Pmax": 3200
+      "EE": 3315.0,
+      "M": 25.0,
+      "PE": 4000.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
     },
     "projectile": {
       "G1": 8.09,
-      "L3PlusG": 99
+      "L3PlusG": 99.0
     }
   },
   "chamber": {
@@ -74,27 +74,27 @@
     },
     "collar": {
       "H1": 9.01,
-      "H2": 9
+      "H2": 9.0
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 50.3,
       "b": 4.4,
-      "u": 240
+      "u": 240.0
     },
     "junctionCone": {
       "S": 62.72,
       "alpha": {
-        "degrees": 36,
-        "minutes": 21,
-        "seconds": 12
+        "degrees": 36.0,
+        "minutes": 21.0,
+        "seconds": 12.0
       },
       "r1Max": 0.5,
       "r2": 0.5
     },
     "lengths": {
-      "L1": 46,
-      "L2": 49,
+      "L1": 46.0,
+      "L2": 49.0,
       "L3": 57.3
     },
     "powderChamber": {
@@ -102,14 +102,14 @@
       "P2": 10.98
     },
     "rifling": {
-      "G": 42,
+      "G": 42.0,
       "G1": 8.15,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.43,
       "i": {
-        "degrees": 0,
-        "minutes": 14,
-        "seconds": 28
+        "degrees": 0.0,
+        "minutes": 14.0,
+        "seconds": 28.0
       }
     }
   },
@@ -119,5 +119,6 @@
   "name": "8 x 57 IR",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2016-05-18"
+  "revised": "2016-05-18",
+  "tab": "II"
 }

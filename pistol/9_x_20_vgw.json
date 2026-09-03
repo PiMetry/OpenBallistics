@@ -19,8 +19,8 @@
       "E1": 8.79,
       "R": 1.27,
       "R1": 9.96,
-      "beta": 45,
-      "delta": 35,
+      "beta": 45.0,
+      "delta": 35.0,
       "eMin": 0.9,
       "f": 0.3
     },
@@ -40,9 +40,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 3900,
-      "PK": 3450,
-      "Pmax": 3000
+      "PE": 3900.0,
+      "PK": 3450.0,
+      "Pmax": 3000.0
     },
     "projectile": {
       "G1": 9.03,
@@ -55,16 +55,16 @@
       "Z": 9.02
     },
     "breech": {
-      "R1": 10
+      "R1": 10.0
     },
     "collar": {
       "H2": 9.68
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 62.61,
       "b": 2.49,
-      "u": 250
+      "u": 250.0
     },
     "lengths": {
       "L3": 20.15
@@ -76,11 +76,11 @@
     "rifling": {
       "G": 7.5,
       "G1": 9.05,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 52,
-        "seconds": 42
+        "degrees": 0.0,
+        "minutes": 52.0,
+        "seconds": 42.0
       }
     }
   },
@@ -89,5 +89,6 @@
   "key": "9_x_20_vgw",
   "name": "9 x 20 VGW",
   "pressureMethod": "Transducer",
-  "published": "2009-05-05"
+  "published": "2009-05-05",
+  "tab": "IV"
 }

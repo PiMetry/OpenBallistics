@@ -18,10 +18,10 @@
       "E": 3.7,
       "E1": 11.5,
       "R": 1.3,
-      "R1": 13,
-      "beta": 45,
-      "delta": 40,
-      "eMin": 1,
+      "R1": 13.0,
+      "beta": 45.0,
+      "delta": 40.0,
+      "eMin": 1.0,
       "f": 0.3
     },
     "collar": {
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 64.59,
       "alpha": {
-        "degrees": 60,
-        "minutes": 2,
-        "seconds": 21
+        "degrees": 60.0,
+        "minutes": 2.0,
+        "seconds": 21.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -43,8 +43,8 @@
       "L1Tol": -0.2,
       "L2": 57.52,
       "L2Tol": -0.2,
-      "L3": 66,
-      "L6": 84
+      "L3": 66.0,
+      "L6": 84.0
     },
     "misc": {
       "Fe": 0.1
@@ -55,15 +55,15 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 4525,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 4525.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 7.24,
-      "L3PlusG": 81
+      "L3PlusG": 81.0
     }
   },
   "chamber": {
@@ -80,17 +80,17 @@
       "H2": 8.2
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 40.47,
-      "b": 4,
-      "u": 260
+      "b": 4.0,
+      "u": 260.0
     },
     "junctionCone": {
       "S": 64.57,
       "alpha": {
-        "degrees": 60,
-        "minutes": 3,
-        "seconds": 21
+        "degrees": 60.0,
+        "minutes": 3.0,
+        "seconds": 21.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -106,13 +106,13 @@
       "P2": 12.73
     },
     "rifling": {
-      "G": 15,
+      "G": 15.0,
       "G1": 7.28,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 34,
-        "seconds": 22
+        "degrees": 0.0,
+        "minutes": 34.0,
+        "seconds": 22.0
       }
     }
   },
@@ -122,5 +122,6 @@
   "name": "7 mm SE v. H.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

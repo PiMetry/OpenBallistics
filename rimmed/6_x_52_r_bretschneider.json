@@ -18,7 +18,7 @@
       "R": 1.6,
       "R1": 12.5,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 56.67,
       "alpha": {
-        "degrees": 24,
-        "minutes": 0,
-        "seconds": 38
+        "degrees": 24.0,
+        "minutes": 0.0,
+        "seconds": 38.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -38,7 +38,7 @@
     "lengths": {
       "L1": 35.04,
       "L2": 40.73,
-      "L3": 52,
+      "L3": 52.0,
       "L6": 68.5
     },
     "misc": {
@@ -49,11 +49,11 @@
       "P2": 9.2
     },
     "pressures": {
-      "EE": 2205,
-      "M": 25,
-      "PE": 4125,
-      "PK": 3795,
-      "Pmax": 3300
+      "EE": 2205.0,
+      "M": 25.0,
+      "PE": 4125.0,
+      "PK": 3795.0,
+      "Pmax": 3300.0
     },
     "projectile": {
       "G1": 6.17,
@@ -74,17 +74,17 @@
       "H2": 6.8
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 29.25,
       "b": 1.73,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 56.73,
       "alpha": {
-        "degrees": 24,
-        "minutes": 0,
-        "seconds": 39
+        "degrees": 24.0,
+        "minutes": 0.0,
+        "seconds": 39.0
       },
       "r1Max": 3.8,
       "r2": 7.5
@@ -101,14 +101,14 @@
     "rifling": {
       "G": 6.67,
       "G1": 6.19,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.31,
       "i": {
-        "degrees": 1,
-        "minutes": 19,
-        "seconds": 36
+        "degrees": 1.0,
+        "minutes": 19.0,
+        "seconds": 36.0
       },
-      "s": 3
+      "s": 3.0
     }
   },
   "country": "DE",
@@ -117,5 +117,6 @@
   "name": "6 x 52 R Bretschneider",
   "pressureMethod": "Transducer",
   "published": "1998-01-27",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

@@ -19,13 +19,13 @@
       "E1": 10.4,
       "R": 1.24,
       "R1": 12.01,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 37,
-        "minutes": 48,
-        "seconds": 36
+        "degrees": 37.0,
+        "minutes": 48.0,
+        "seconds": 36.0
       },
-      "eMin": 1,
+      "eMin": 1.0,
       "f": 0.3
     },
     "collar": {
@@ -35,20 +35,20 @@
     "junctionCone": {
       "S": 60.23,
       "alpha": {
-        "degrees": 80,
-        "minutes": 13,
-        "seconds": 47
+        "degrees": 80.0,
+        "minutes": 13.0,
+        "seconds": 47.0
       },
       "r1Min": 0.5,
-      "r2": 1
+      "r2": 1.0
     },
     "lengths": {
       "L1": 53.42,
       "L1Tol": -0.2,
       "L2": 54.69,
       "L2Tol": -0.2,
-      "L3": 63,
-      "L6": 84
+      "L3": 63.0,
+      "L6": 84.0
     },
     "misc": {
       "Fe": 0.1
@@ -59,15 +59,15 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 5540,
-      "M": 25,
-      "PE": 5375,
-      "PK": 4945,
-      "Pmax": 4300
+      "EE": 5540.0,
+      "M": 25.0,
+      "PE": 5375.0,
+      "PK": 4945.0,
+      "Pmax": 4300.0
     },
     "projectile": {
       "G1": 8.59,
-      "L3PlusG": 72
+      "L3PlusG": 72.0
     }
   },
   "chamber": {
@@ -83,17 +83,17 @@
       "H2": 9.35
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 56.95,
       "b": 2.79,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 60.22,
       "alpha": {
-        "degrees": 80,
-        "minutes": 13,
-        "seconds": 47
+        "degrees": 80.0,
+        "minutes": 13.0,
+        "seconds": 47.0
       },
       "r1Max": 0.5,
       "r2": 1.25
@@ -109,14 +109,14 @@
       "P2": 11.5
     },
     "rifling": {
-      "G": 9,
+      "G": 9.0,
       "G1": 8.61,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.37,
       "i": {
-        "degrees": 2,
-        "minutes": 4,
-        "seconds": 40
+        "degrees": 2.0,
+        "minutes": 4.0,
+        "seconds": 40.0
       },
       "s": 5.83
     }
@@ -127,5 +127,6 @@
   "name": "8,5 x 63",
   "pressureMethod": "Transducer",
   "published": "1992-02-27",
-  "revised": "2021-04-07"
+  "revised": "2021-04-07",
+  "tab": "I"
 }

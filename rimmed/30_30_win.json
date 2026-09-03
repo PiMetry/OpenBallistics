@@ -7,7 +7,7 @@
       "category": "rifle_flat_nose",
       "ogive": "conical",
       "tip": "flat",
-      "verified": true
+      "verified": false
     },
     "defaultBulletShape": "flat",
     "implausible": [],
@@ -18,7 +18,7 @@
       "R": 1.6,
       "R1": 12.85,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 54.79,
       "alpha": {
-        "degrees": 31,
-        "minutes": 18,
-        "seconds": 0
+        "degrees": 31.0,
+        "minutes": 18.0,
+        "seconds": 0.0
       },
       "r1Min": 4.57,
       "r2": 11.68
@@ -49,11 +49,11 @@
       "P2": 10.19
     },
     "pressures": {
-      "EE": 2445,
-      "M": 25,
-      "PE": 4000,
-      "PK": 3680,
-      "Pmax": 3200
+      "EE": 2445.0,
+      "M": 25.0,
+      "PE": 4000.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
     },
     "projectile": {
       "G1": 7.85,
@@ -74,17 +74,17 @@
       "H2": 8.4
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 47.06,
       "b": 2.39,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 55.23,
       "alpha": {
-        "degrees": 31,
-        "minutes": 18,
-        "seconds": 0
+        "degrees": 31.0,
+        "minutes": 18.0,
+        "seconds": 0.0
       },
       "r1Max": 4.57,
       "r2": 11.68
@@ -101,8 +101,8 @@
     "rifling": {
       "G": 1.45,
       "G1": 8.4,
-      "alpha1": 30,
-      "i": 15
+      "alpha1": 30.0,
+      "i": 15.0
     }
   },
   "country": "US",
@@ -111,5 +111,6 @@
   "name": "30-30 Win.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

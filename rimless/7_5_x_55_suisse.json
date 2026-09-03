@@ -22,11 +22,11 @@
       "E1": 10.3,
       "R": 1.65,
       "R1": 12.65,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 51,
-        "minutes": 49,
-        "seconds": 16
+        "degrees": 51.0,
+        "minutes": 49.0,
+        "seconds": 16.0
       },
       "eMin": 0.89,
       "f": 0.5
@@ -37,9 +37,9 @@
     },
     "junctionCone": {
       "S": 54.45,
-      "alpha": 61,
-      "r1Min": 2,
-      "r2": 2
+      "alpha": 61.0,
+      "r1Min": 2.0,
+      "r2": 2.0
     },
     "lengths": {
       "L1": 44.58,
@@ -58,11 +58,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 3965,
-      "M": 25,
-      "PE": 4750,
-      "PK": 4370,
-      "Pmax": 3800
+      "EE": 3965.0,
+      "M": 25.0,
+      "PE": 4750.0,
+      "PK": 4370.0,
+      "Pmax": 3800.0
     },
     "projectile": {
       "G1": 7.78,
@@ -83,16 +83,16 @@
       "H2": 8.6
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 46.33,
       "b": 3.75,
-      "u": 270
+      "u": 270.0
     },
     "junctionCone": {
       "S": 55.78,
-      "alpha": 55,
+      "alpha": 55.0,
       "r1Max": 0.5,
-      "r2": 2
+      "r2": 2.0
     },
     "lengths": {
       "L1": 44.4,
@@ -107,10 +107,10 @@
     "rifling": {
       "G": 6.87,
       "G1": 7.78,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.41,
-      "i": 2,
-      "s": 3
+      "i": 2.0,
+      "s": 3.0
     }
   },
   "country": "CH",
@@ -119,5 +119,6 @@
   "name": "7,5 x 55 Suisse",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2016-05-18"
+  "revised": "2016-05-18",
+  "tab": "I"
 }

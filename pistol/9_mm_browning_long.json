@@ -20,8 +20,8 @@
       "R": 1.25,
       "R1": 10.2,
       "RTol": -0.25,
-      "beta": 45,
-      "delta": 45,
+      "beta": 45.0,
+      "delta": 45.0,
       "eMin": 1.1,
       "f": 0.3
     },
@@ -30,7 +30,7 @@
     },
     "lengths": {
       "L3": 20.2,
-      "L6": 28
+      "L6": 28.0
     },
     "misc": {
       "Fe": 0.3
@@ -40,9 +40,9 @@
     },
     "pressures": {
       "M": 10.5,
-      "PE": 2145,
-      "PK": 1898,
-      "Pmax": 1650
+      "PE": 2145.0,
+      "PK": 1898.0,
+      "Pmax": 1650.0
     },
     "projectile": {
       "G1": 9.09,
@@ -62,10 +62,10 @@
       "H2": 9.7
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 64.82,
       "b": 3.76,
-      "u": 400
+      "u": 400.0
     },
     "lengths": {
       "L3": 20.2
@@ -75,18 +75,18 @@
       "P1": 9.75
     },
     "rifling": {
-      "G": 5,
+      "G": 5.0,
       "G1": 9.2,
       "alpha1": {
-        "degrees": 14,
-        "minutes": 15,
-        "seconds": 0
+        "degrees": 14.0,
+        "minutes": 15.0,
+        "seconds": 0.0
       },
-      "h": 2,
+      "h": 2.0,
       "i": {
-        "degrees": 2,
-        "minutes": 40,
-        "seconds": 18
+        "degrees": 2.0,
+        "minutes": 40.0,
+        "seconds": 18.0
       }
     }
   },
@@ -96,5 +96,6 @@
   "name": "9 mm Browning long",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "IV"
 }

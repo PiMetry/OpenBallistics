@@ -20,9 +20,9 @@
       "R": 1.65,
       "R1": 16.26,
       "delta": {
-        "degrees": 36,
-        "minutes": 18,
-        "seconds": 36
+        "degrees": 36.0,
+        "minutes": 18.0,
+        "seconds": 36.0
       },
       "eMin": 1.02
     },
@@ -33,9 +33,9 @@
     "junctionCone": {
       "S": 72.33,
       "alpha": {
-        "degrees": 75,
-        "minutes": 9,
-        "seconds": 51
+        "degrees": 75.0,
+        "minutes": 9.0,
+        "seconds": 51.0
       }
     },
     "lengths": {
@@ -55,11 +55,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 7040,
-      "M": 25,
-      "PE": 3375,
-      "PK": 3105,
-      "Pmax": 2700
+      "EE": 7040.0,
+      "M": 25.0,
+      "PE": 3375.0,
+      "PK": 3105.0,
+      "Pmax": 2700.0
     },
     "projectile": {
       "G1": 12.83,
@@ -80,17 +80,17 @@
       "H2": 13.61
     },
     "grooves": {
-      "N": 5,
+      "N": 5.0,
       "Q": 127.14,
       "b": 5.33,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {
       "S": 72.24,
       "alpha": {
-        "degrees": 75,
-        "minutes": 30,
-        "seconds": 57
+        "degrees": 75.0,
+        "minutes": 30.0,
+        "seconds": 57.0
       }
     },
     "lengths": {
@@ -106,12 +106,12 @@
     "rifling": {
       "G": 8.97,
       "G1": 12.85,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.38,
       "i": {
-        "degrees": 1,
-        "minutes": 0,
-        "seconds": 11
+        "degrees": 1.0,
+        "minutes": 0.0,
+        "seconds": 11.0
       }
     }
   },
@@ -121,5 +121,6 @@
   "name": "505 Mag. Gibbs",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

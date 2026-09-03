@@ -17,7 +17,7 @@
     "caseHead": {
       "R": 1.5,
       "R1": 11.18,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.38
     },
     "collar": {
@@ -27,9 +27,9 @@
     "junctionCone": {
       "S": 37.12,
       "alpha": {
-        "degrees": 45,
-        "minutes": 33,
-        "seconds": 0
+        "degrees": 45.0,
+        "minutes": 33.0,
+        "seconds": 0.0
       },
       "r1Min": 0.76,
       "r2": 2.54
@@ -40,7 +40,7 @@
       "L2": 27.03,
       "L2Tol": -0.2,
       "L3": 32.8,
-      "L6": 56
+      "L6": 56.0
     },
     "misc": {
       "Fe": 0.15
@@ -52,9 +52,9 @@
     },
     "pressures": {
       "M": 17.5,
-      "PE": 3640,
-      "PK": 3220,
-      "Pmax": 2800
+      "PE": 3640.0,
+      "PK": 3220.0,
+      "Pmax": 2800.0
     },
     "projectile": {
       "G1": 7.82,
@@ -76,17 +76,17 @@
       "H2": 8.5
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 47.52,
       "b": 4.49,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 54.62,
       "alpha": {
-        "degrees": 18,
-        "minutes": 52,
-        "seconds": 5
+        "degrees": 18.0,
+        "minutes": 52.0,
+        "seconds": 5.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -94,7 +94,7 @@
     "lengths": {
       "L1": 25.7,
       "L2": 28.98,
-      "L3": 33
+      "L3": 33.0
     },
     "powderChamber": {
       "P1": 9.63,
@@ -104,15 +104,15 @@
       "G": 8.19,
       "G1": 7.85,
       "alpha1": {
-        "degrees": 89,
-        "minutes": 7,
-        "seconds": 31
+        "degrees": 89.0,
+        "minutes": 7.0,
+        "seconds": 31.0
       },
       "h": 0.33,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 2
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 2.0
       },
       "s": 3.8
     }
@@ -123,5 +123,6 @@
   "name": "30 PICRA",
   "pressureMethod": "Transducer",
   "published": "1999-04-20",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

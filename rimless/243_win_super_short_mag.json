@@ -19,8 +19,8 @@
       "E1": 12.19,
       "R": 1.37,
       "R1": 13.49,
-      "beta": 35,
-      "delta": 45,
+      "beta": 35.0,
+      "delta": 45.0,
       "eMin": 1.02,
       "f": 0.36
     },
@@ -30,7 +30,7 @@
     },
     "junctionCone": {
       "S": 42.21,
-      "alpha": 56,
+      "alpha": 56.0,
       "r1Min": 1.27,
       "r2": 3.3
     },
@@ -52,11 +52,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 3150,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 3150.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 6.17,
@@ -76,14 +76,14 @@
       "H2": 7.32
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 29.25,
       "b": 2.54,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 42.15,
-      "alpha": 56,
+      "alpha": 56.0,
       "r1Max": 1.27,
       "r2": 4.06
     },
@@ -100,12 +100,12 @@
     "rifling": {
       "G": 4.74,
       "G1": 6.24,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.54,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -115,5 +115,6 @@
   "name": "243 Win. Super Short Mag.",
   "pressureMethod": "Transducer",
   "published": "2003-11-07",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "I"
 }

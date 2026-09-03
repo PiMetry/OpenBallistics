@@ -18,7 +18,7 @@
       "R": 1.6,
       "R1": 14.4,
       "RTol": -0.25,
-      "beta": 70,
+      "beta": 70.0,
       "f": 0.6
     },
     "collar": {
@@ -26,18 +26,18 @@
       "H2": 9.9
     },
     "junctionCone": {
-      "S": 56,
+      "S": 56.0,
       "alpha": {
-        "degrees": 38,
-        "minutes": 59,
-        "seconds": 44
+        "degrees": 38.0,
+        "minutes": 59.0,
+        "seconds": 44.0
       }
     },
     "lengths": {
       "L1": 39.61,
       "L2": 41.94,
       "L3": 53.3,
-      "L6": 76
+      "L6": 76.0
     },
     "misc": {
       "Fe": 0.15
@@ -47,11 +47,11 @@
       "P2": 11.61
     },
     "pressures": {
-      "EE": 4300,
-      "M": 25,
-      "PE": 4250,
-      "PK": 3910,
-      "Pmax": 3400
+      "EE": 4300.0,
+      "M": 25.0,
+      "PE": 4250.0,
+      "PK": 3910.0,
+      "Pmax": 3400.0
     },
     "projectile": {
       "G1": 9.3,
@@ -72,17 +72,17 @@
       "H2": 9.96
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 66.51,
       "b": 3.1,
-      "u": 380
+      "u": 380.0
     },
     "junctionCone": {
       "S": 56.96,
       "alpha": {
-        "degrees": 37,
-        "minutes": 21,
-        "seconds": 43
+        "degrees": 37.0,
+        "minutes": 21.0,
+        "seconds": 43.0
       }
     },
     "lengths": {
@@ -97,12 +97,12 @@
     "rifling": {
       "G": 22.78,
       "G1": 9.36,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.3,
       "i": {
-        "degrees": 0,
-        "minutes": 47,
-        "seconds": 25
+        "degrees": 0.0,
+        "minutes": 47.0,
+        "seconds": 25.0
       },
       "s": 11.55
     }
@@ -113,5 +113,6 @@
   "name": "9,3 x 53 R Finnish",
   "pressureMethod": "Transducer",
   "published": "1995-03-09",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

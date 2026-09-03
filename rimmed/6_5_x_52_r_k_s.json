@@ -18,7 +18,7 @@
       "R": 1.6,
       "R1": 12.85,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -27,9 +27,9 @@
     },
     "junctionCone": {
       "S": 48.53,
-      "alpha": 80,
-      "r1Min": 1,
-      "r2": 1
+      "alpha": 80.0,
+      "r1Min": 1.0,
+      "r2": 1.0
     },
     "lengths": {
       "L1": 42.32,
@@ -45,11 +45,11 @@
       "P2": 10.42
     },
     "pressures": {
-      "EE": 2450,
-      "M": 25,
-      "PE": 4063,
-      "PK": 3738,
-      "Pmax": 3250
+      "EE": 2450.0,
+      "M": 25.0,
+      "PE": 4063.0,
+      "PK": 3738.0,
+      "Pmax": 3250.0
     },
     "projectile": {
       "G1": 6.72,
@@ -70,16 +70,16 @@
       "H2": 7.33
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 34.52,
       "b": 3.5,
-      "u": 200
+      "u": 200.0
     },
     "junctionCone": {
       "S": 48.58,
-      "alpha": 80,
-      "r1Max": 1,
-      "r2": 1
+      "alpha": 80.0,
+      "r1Max": 1.0,
+      "r2": 1.0
     },
     "lengths": {
       "L1": 42.35,
@@ -93,14 +93,14 @@
     "rifling": {
       "G": 8.35,
       "G1": 6.73,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.3,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
-      "s": 3
+      "s": 3.0
     }
   },
   "country": "DE",
@@ -108,5 +108,6 @@
   "key": "6_5_x_52_r_k_s",
   "name": "6,5 x 52 R K&S",
   "pressureMethod": "Transducer",
-  "published": "2012-05-30"
+  "published": "2012-05-30",
+  "tab": "II"
 }

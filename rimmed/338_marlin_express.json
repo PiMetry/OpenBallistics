@@ -19,8 +19,8 @@
       "E1": 11.2,
       "R": 1.27,
       "R1": 14.05,
-      "beta": 35,
-      "delta": 36,
+      "beta": 35.0,
+      "delta": 36.0,
       "eMin": 0.94,
       "f": 0.86
     },
@@ -30,7 +30,7 @@
     },
     "junctionCone": {
       "S": 50.46,
-      "alpha": 50,
+      "alpha": 50.0,
       "r1Min": 1.02,
       "r2": 3.18
     },
@@ -52,11 +52,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 4200,
-      "M": 25,
-      "PE": 4000,
-      "PK": 3680,
-      "Pmax": 3200
+      "EE": 4200.0,
+      "M": 25.0,
+      "PE": 4000.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
     },
     "projectile": {
       "G1": 8.6,
@@ -77,14 +77,14 @@
       "H2": 9.37
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 56.95,
       "b": 2.79,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 50.43,
-      "alpha": 50,
+      "alpha": 50.0,
       "r1Max": 0.76,
       "r2": 3.18
     },
@@ -100,12 +100,12 @@
     "rifling": {
       "G": 7.33,
       "G1": 8.61,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.38,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 2.92
     }
@@ -115,5 +115,6 @@
   "key": "338_marlin_express",
   "name": "338 Marlin Express",
   "pressureMethod": "Transducer",
-  "published": "2010-05-26"
+  "published": "2010-05-26",
+  "tab": "II"
 }

@@ -26,9 +26,9 @@
     "junctionCone": {
       "S": 115.06,
       "alpha": {
-        "degrees": 11,
-        "minutes": 14,
-        "seconds": 33
+        "degrees": 11.0,
+        "minutes": 14.0,
+        "seconds": 33.0
       },
       "r1Min": 19.56,
       "r2": 19.56
@@ -47,11 +47,11 @@
       "P2": 12.65
     },
     "pressures": {
-      "EE": 6993,
-      "M": 25,
-      "PE": 3690,
-      "PK": 3393,
-      "Pmax": 2950
+      "EE": 6993.0,
+      "M": 25.0,
+      "PE": 3690.0,
+      "PK": 3393.0,
+      "Pmax": 2950.0
     },
     "projectile": {
       "G1": 10.41,
@@ -72,17 +72,17 @@
       "H2": 11.07
     },
     "grooves": {
-      "N": 7,
+      "N": 7.0,
       "Q": 84.25,
       "b": 3.56,
-      "u": 381
+      "u": 381.0
     },
     "junctionCone": {
       "S": 115.63,
       "alpha": {
-        "degrees": 11,
-        "minutes": 10,
-        "seconds": 4
+        "degrees": 11.0,
+        "minutes": 10.0,
+        "seconds": 4.0
       }
     },
     "lengths": {
@@ -97,12 +97,12 @@
     "rifling": {
       "G": 10.32,
       "G1": 10.5,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.29,
       "i": {
-        "degrees": 0,
-        "minutes": 58,
-        "seconds": 14
+        "degrees": 0.0,
+        "minutes": 58.0,
+        "seconds": 14.0
       }
     }
   },
@@ -112,5 +112,6 @@
   "name": "450/400 Mag. N.E. 3\"1/4",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

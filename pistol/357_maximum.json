@@ -18,7 +18,7 @@
       "R": 1.52,
       "R1": 11.18,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.4
     },
     "collar": {
@@ -35,10 +35,10 @@
       "P1": 9.63
     },
     "pressures": {
-      "M": 25,
-      "PE": 4040,
-      "PK": 3565,
-      "Pmax": 3100
+      "M": 25.0,
+      "PE": 4040.0,
+      "PK": 3565.0,
+      "Pmax": 3100.0
     },
     "projectile": {
       "G1": 9.12,
@@ -58,10 +58,10 @@
       "H2": 9.65
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 62.57,
       "b": 2.69,
-      "u": 476
+      "u": 476.0
     },
     "lengths": {
       "L3": 40.89
@@ -72,12 +72,12 @@
     "rifling": {
       "G": 11.56,
       "G1": 9.09,
-      "alpha1": 13,
+      "alpha1": 13.0,
       "h": 2.46,
       "i": {
-        "degrees": 4,
-        "minutes": 45,
-        "seconds": 0
+        "degrees": 4.0,
+        "minutes": 45.0,
+        "seconds": 0.0
       },
       "s": 9.75
     }
@@ -88,5 +88,6 @@
   "name": "357 Maximum",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

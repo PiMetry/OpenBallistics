@@ -19,8 +19,8 @@
       "E1": 12.95,
       "R": 1.65,
       "R1": 14.76,
-      "beta": 45,
-      "delta": 45,
+      "beta": 45.0,
+      "delta": 45.0,
       "eMin": 1.4,
       "f": 0.64
     },
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 71.01,
       "alpha": {
-        "degrees": 60,
-        "minutes": 1,
-        "seconds": 36
+        "degrees": 60.0,
+        "minutes": 1.0,
+        "seconds": 36.0
       },
       "r1Min": 1.57,
       "r2": 1.57
@@ -56,11 +56,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 6760,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 6760.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 7.84,
@@ -80,17 +80,17 @@
       "H2": 8.81
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 47.38,
       "b": 2.91,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 70.97,
       "alpha": {
-        "degrees": 59,
-        "minutes": 59,
-        "seconds": 3
+        "degrees": 59.0,
+        "minutes": 59.0,
+        "seconds": 3.0
       },
       "r1Max": 1.57,
       "r2": 1.57
@@ -108,12 +108,12 @@
     "rifling": {
       "G": 4.96,
       "G1": 7.85,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.48,
       "i": {
-        "degrees": 2,
-        "minutes": 30,
-        "seconds": 12
+        "degrees": 2.0,
+        "minutes": 30.0,
+        "seconds": 12.0
       },
       "s": 2.33
     }
@@ -124,5 +124,6 @@
   "name": "7,82 Warbird",
   "pressureMethod": "Transducer",
   "published": "2000-02-15",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "I"
 }

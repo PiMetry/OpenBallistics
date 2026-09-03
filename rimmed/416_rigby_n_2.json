@@ -16,9 +16,9 @@
   "cartridge": {
     "caseHead": {
       "R": 1.65,
-      "R1": 17,
+      "R1": 17.0,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 66.62,
       "alpha": {
-        "degrees": 89,
-        "minutes": 45,
-        "seconds": 32
+        "degrees": 89.0,
+        "minutes": 45.0,
+        "seconds": 32.0
       }
     },
     "lengths": {
@@ -47,11 +47,11 @@
       "P2": 13.72
     },
     "pressures": {
-      "EE": 7270,
-      "M": 25,
-      "PE": 4060,
-      "PK": 3738,
-      "Pmax": 3250
+      "EE": 7270.0,
+      "M": 25.0,
+      "PE": 4060.0,
+      "PK": 3738.0,
+      "Pmax": 3250.0
     },
     "projectile": {
       "G1": 10.57,
@@ -72,17 +72,17 @@
       "H2": 11.35
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 86.61,
       "b": 3.6,
-      "u": 420
+      "u": 420.0
     },
     "junctionCone": {
       "S": 66.65,
       "alpha": {
-        "degrees": 89,
-        "minutes": 30,
-        "seconds": 59
+        "degrees": 89.0,
+        "minutes": 30.0,
+        "seconds": 59.0
       }
     },
     "lengths": {
@@ -97,12 +97,12 @@
     "rifling": {
       "G": 7.62,
       "G1": 10.59,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.38,
       "i": {
-        "degrees": 0,
-        "minutes": 54,
-        "seconds": 36
+        "degrees": 0.0,
+        "minutes": 54.0,
+        "seconds": 36.0
       }
     }
   },
@@ -111,5 +111,6 @@
   "key": "416_rigby_n_2",
   "name": "416 Rigby N°2",
   "pressureMethod": "Transducer",
-  "published": "2018-05-16"
+  "published": "2018-05-16",
+  "tab": "II"
 }

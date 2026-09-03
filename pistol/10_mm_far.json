@@ -19,8 +19,8 @@
       "E1": 8.85,
       "R": 1.4,
       "R1": 10.85,
-      "beta": 45,
-      "delta": 45,
+      "beta": 45.0,
+      "delta": 45.0,
       "eMin": 1.25
     },
     "collar": {
@@ -39,9 +39,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 2925,
-      "PK": 2590,
-      "Pmax": 2250
+      "PE": 2925.0,
+      "PK": 2590.0,
+      "Pmax": 2250.0
     },
     "projectile": {
       "G1": 10.17,
@@ -60,10 +60,10 @@
       "H2": 10.77
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 79.55,
       "b": 3.05,
-      "u": 406
+      "u": 406.0
     },
     "lengths": {
       "L3": 24.15
@@ -75,11 +75,11 @@
     "rifling": {
       "G": 8.83,
       "G1": 10.19,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 54,
-        "seconds": 29
+        "degrees": 0.0,
+        "minutes": 54.0,
+        "seconds": 29.0
       }
     }
   },
@@ -88,5 +88,6 @@
   "key": "10_mm_far",
   "name": "10 mm FAR",
   "pressureMethod": "Transducer",
-  "published": "2000-09-15"
+  "published": "2000-09-15",
+  "tab": "IV"
 }

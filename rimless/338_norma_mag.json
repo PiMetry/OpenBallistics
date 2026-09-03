@@ -19,8 +19,8 @@
       "E1": 13.24,
       "R": 1.52,
       "R1": 14.93,
-      "beta": 45,
-      "delta": 50,
+      "beta": 45.0,
+      "delta": 50.0,
       "eMin": 0.95,
       "f": 0.5
     },
@@ -30,7 +30,7 @@
     },
     "junctionCone": {
       "S": 67.17,
-      "alpha": 41,
+      "alpha": 41.0,
       "r2": 2.5
     },
     "lengths": {
@@ -50,11 +50,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 6170,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 6170.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 8.6,
@@ -74,14 +74,14 @@
       "H2": 9.41
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 56.86,
       "b": 2.79,
-      "u": 235
+      "u": 235.0
     },
     "junctionCone": {
       "S": 67.19,
-      "alpha": 41,
+      "alpha": 41.0,
       "r2": 2.41
     },
     "lengths": {
@@ -97,12 +97,12 @@
     "rifling": {
       "G": 10.32,
       "G1": 8.6,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.4,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 6.12
     }
@@ -112,5 +112,6 @@
   "key": "338_norma_mag",
   "name": "338 Norma Mag.",
   "pressureMethod": "Transducer",
-  "published": "2010-05-26"
+  "published": "2010-05-26",
+  "tab": "I"
 }

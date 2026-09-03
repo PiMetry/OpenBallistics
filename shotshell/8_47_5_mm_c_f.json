@@ -12,7 +12,7 @@
       "dTol": -0.1,
       "g": 12.2,
       "gTol": -0.3,
-      "h": 9,
+      "h": 9.0,
       "hTol": -0.2,
       "t": 1.45,
       "tTol": -0.2
@@ -38,9 +38,9 @@
       "T": 1.45,
       "TTol": 0.1,
       "alpha1": {
-        "degrees": 10,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 10.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     },
     "headspace": {
@@ -55,5 +55,6 @@
   "name": "Cal. 8/47,5 mm C.F.",
   "pressureMethod": "Transducer",
   "published": "2004-09-27",
-  "revised": "2006-09-19"
+  "revised": "2006-09-19",
+  "tab": "VII"
 }

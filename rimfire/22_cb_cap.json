@@ -50,9 +50,9 @@
       "P1": 5.72
     },
     "pressures": {
-      "EE": 77,
+      "EE": 77.0,
       "EK": 74.9,
-      "Emax": 70
+      "Emax": 70.0
     },
     "projectile": {
       "G1": 5.72,
@@ -73,10 +73,10 @@
       "H2": 5.72
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 23.9,
       "b": 1.25,
-      "u": 450
+      "u": 450.0
     },
     "lengths": {
       "L3": 7.8
@@ -88,15 +88,15 @@
       "G": 2.01,
       "G1": 5.6,
       "alpha1": {
-        "degrees": 4,
-        "minutes": 54,
-        "seconds": 28
+        "degrees": 4.0,
+        "minutes": 54.0,
+        "seconds": 28.0
       },
       "h": 1.4,
       "i": {
-        "degrees": 7,
-        "minutes": 0,
-        "seconds": 33
+        "degrees": 7.0,
+        "minutes": 0.0,
+        "seconds": 33.0
       }
     }
   },
@@ -106,5 +106,6 @@
   "name": "22 CB Cap",
   "pressureMethod": "Energy",
   "published": "1984-06-13",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "V"
 }

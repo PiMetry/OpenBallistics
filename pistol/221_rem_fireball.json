@@ -19,8 +19,8 @@
       "E1": 8.43,
       "R": 1.14,
       "R1": 9.6,
-      "beta": 35,
-      "delta": 25,
+      "beta": 35.0,
+      "delta": 25.0,
       "eMin": 0.76,
       "f": 0.45
     },
@@ -30,7 +30,7 @@
     },
     "junctionCone": {
       "S": 37.98,
-      "alpha": 46,
+      "alpha": 46.0,
       "r1Min": 0.64,
       "r2": 2.54
     },
@@ -52,9 +52,9 @@
     },
     "pressures": {
       "M": 17.5,
-      "PE": 4160,
-      "PK": 3680,
-      "Pmax": 3200
+      "PE": 4160.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
     },
     "projectile": {
       "G1": 5.7,
@@ -74,14 +74,14 @@
       "H2": 6.45
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 25.09,
       "b": 2.03,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 37.91,
-      "alpha": 46,
+      "alpha": 46.0,
       "r1Max": 0.64,
       "r2": 3.18
     },
@@ -98,12 +98,12 @@
     "rifling": {
       "G": 2.16,
       "G1": 5.69,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.38,
       "i": {
-        "degrees": 3,
-        "minutes": 10,
-        "seconds": 48
+        "degrees": 3.0,
+        "minutes": 10.0,
+        "seconds": 48.0
       },
       "s": 0.99
     }
@@ -114,5 +114,6 @@
   "name": "221 Rem. Fireball",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

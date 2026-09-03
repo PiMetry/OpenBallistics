@@ -18,7 +18,7 @@
       "R": 1.63,
       "R1": 13.84,
       "RTol": -0.25,
-      "beta": 40,
+      "beta": 40.0,
       "f": 0.39
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 57.61,
       "alpha": {
-        "degrees": 42,
-        "minutes": 12,
-        "seconds": 0
+        "degrees": 42.0,
+        "minutes": 12.0,
+        "seconds": 0.0
       },
       "r1Min": 3.94,
       "r2": 4.06
@@ -49,11 +49,11 @@
       "P2": 10.64
     },
     "pressures": {
-      "EE": 3750,
-      "M": 25,
-      "PE": 4060,
-      "PK": 3738,
-      "Pmax": 3250
+      "EE": 3750.0,
+      "M": 25.0,
+      "PE": 4060.0,
+      "PK": 3738.0,
+      "Pmax": 3250.0
     },
     "projectile": {
       "G1": 7.85,
@@ -74,17 +74,17 @@
       "H2": 8.61
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 47.06,
       "b": 2.39,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 57.74,
       "alpha": {
-        "degrees": 42,
-        "minutes": 12,
-        "seconds": 0
+        "degrees": 42.0,
+        "minutes": 12.0,
+        "seconds": 0.0
       },
       "r1Max": 3.94,
       "r2": 4.57
@@ -101,12 +101,12 @@
     "rifling": {
       "G": 8.32,
       "G1": 7.89,
-      "alpha1": 24,
+      "alpha1": 24.0,
       "h": 1.69,
       "i": {
-        "degrees": 1,
-        "minutes": 10,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 10.0,
+        "seconds": 0.0
       }
     }
   },
@@ -116,5 +116,6 @@
   "name": "30-40 Krag",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2011-05-25"
+  "revised": "2011-05-25",
+  "tab": "II"
 }

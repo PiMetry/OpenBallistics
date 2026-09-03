@@ -8,18 +8,18 @@
   },
   "cartridge": {
     "dimensions": {
-      "d": 7,
+      "d": 7.0,
       "dTol": -0.1,
-      "g": 9,
+      "g": 9.0,
       "gTol": -0.3,
-      "h": 6,
+      "h": 6.0,
       "hTol": -0.2,
-      "t": 1,
+      "t": 1.0,
       "tTol": -0.2
     },
     "lengths": [
       {
-        "l": 60,
+        "l": 60.0,
         "tol": -0.7
       }
     ]
@@ -27,7 +27,7 @@
   "chamber": {
     "chamberLengths": [],
     "dimensions": {
-      "B": 6,
+      "B": 6.0,
       "BTol": 0.5,
       "D": 7.15,
       "DTol": 0.1,
@@ -35,7 +35,7 @@
       "GTol": 0.2,
       "H": 6.05,
       "HTol": 0.1,
-      "T": 1,
+      "T": 1.0,
       "TTol": 0.1
     },
     "headspace": {
@@ -49,5 +49,6 @@
   "key": "6_mm_centrale_falco",
   "name": "6 mm Centrale FALCO",
   "pressureMethod": "Transducer",
-  "published": "2014-05-20"
+  "published": "2014-05-20",
+  "tab": "VII"
 }

@@ -32,7 +32,7 @@
       "R": 1.4,
       "R1": 14.2,
       "RTol": -0.25,
-      "beta": 30,
+      "beta": 30.0,
       "f": 0.5
     },
     "collar": {
@@ -42,18 +42,18 @@
     "junctionCone": {
       "S": 61.6,
       "alpha": {
-        "degrees": 29,
-        "minutes": 4,
-        "seconds": 45
+        "degrees": 29.0,
+        "minutes": 4.0,
+        "seconds": 45.0
       },
-      "r1Min": 10,
-      "r2": 2
+      "r1Min": 10.0,
+      "r2": 2.0
     },
     "lengths": {
       "L1": 38.29,
       "L2": 44.17,
       "L3": 50.2,
-      "L6": 76
+      "L6": 76.0
     },
     "misc": {
       "Fe": 0.15
@@ -63,11 +63,11 @@
       "P2": 12.09
     },
     "pressures": {
-      "EE": 3000,
-      "M": 25,
-      "PE": 4440,
-      "PK": 4083,
-      "Pmax": 3550
+      "EE": 3000.0,
+      "M": 25.0,
+      "PE": 4440.0,
+      "PK": 4083.0,
+      "Pmax": 3550.0
     },
     "projectile": {
       "G1": 8.22,
@@ -88,20 +88,20 @@
       "H2": 9.04
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 52.53,
       "b": 3.5,
-      "u": 250
+      "u": 250.0
     },
     "junctionCone": {
       "S": 53.94,
       "alpha": {
-        "degrees": 49,
-        "minutes": 3,
-        "seconds": 25
+        "degrees": 49.0,
+        "minutes": 3.0,
+        "seconds": 25.0
       },
       "r1Max": 10.04,
-      "r2": 2
+      "r2": 2.0
     },
     "lengths": {
       "L1": 40.55,
@@ -115,11 +115,11 @@
     "rifling": {
       "G": 22.95,
       "G1": 9.04,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 21,
-        "seconds": 37
+        "degrees": 1.0,
+        "minutes": 21.0,
+        "seconds": 37.0
       }
     }
   },
@@ -129,5 +129,6 @@
   "name": "8 x 50 R",
   "pressureMethod": "Transducer",
   "published": "1989-10-06",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

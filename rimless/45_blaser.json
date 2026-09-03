@@ -19,8 +19,8 @@
       "E1": 10.39,
       "R": 1.37,
       "R1": 12.01,
-      "beta": 35,
-      "delta": 36,
+      "beta": 35.0,
+      "delta": 36.0,
       "eMin": 1.2,
       "f": 0.38
     },
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 77.59,
       "alpha": {
-        "degrees": 19,
-        "minutes": 58,
-        "seconds": 44
+        "degrees": 19.0,
+        "minutes": 58.0,
+        "seconds": 44.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -43,7 +43,7 @@
       "L1Tol": -0.2,
       "L2": 42.5,
       "L2Tol": -0.2,
-      "L3": 55,
+      "L3": 55.0,
       "L6": 68.5
     },
     "misc": {
@@ -55,11 +55,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 4650,
-      "M": 25,
-      "PE": 4625,
-      "PK": 4255,
-      "Pmax": 3700
+      "EE": 4650.0,
+      "M": 25.0,
+      "PE": 4625.0,
+      "PK": 4255.0,
+      "Pmax": 3700.0
     },
     "projectile": {
       "G1": 11.64,
@@ -79,17 +79,17 @@
       "H2": 12.38
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 104.94,
       "b": 3.81,
-      "u": 356
+      "u": 356.0
     },
     "junctionCone": {
       "S": 77.62,
       "alpha": {
-        "degrees": 19,
-        "minutes": 58,
-        "seconds": 44
+        "degrees": 19.0,
+        "minutes": 58.0,
+        "seconds": 44.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -109,11 +109,11 @@
       "G1": 11.66,
       "h": 0.36,
       "i": {
-        "degrees": 3,
-        "minutes": 0,
-        "seconds": 20
+        "degrees": 3.0,
+        "minutes": 0.0,
+        "seconds": 20.0
       },
-      "s": 2
+      "s": 2.0
     }
   },
   "country": "DE",
@@ -122,5 +122,6 @@
   "name": "45 Blaser",
   "pressureMethod": "Transducer",
   "published": "2002-10-21",
-  "revised": "2022-04-26"
+  "revised": "2022-04-26",
+  "tab": "I"
 }

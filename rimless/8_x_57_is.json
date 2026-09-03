@@ -22,8 +22,8 @@
       "E1": 10.5,
       "R": 1.3,
       "R1": 11.95,
-      "beta": 45,
-      "delta": 36,
+      "beta": 45.0,
+      "delta": 36.0,
       "eMin": 0.9,
       "f": 0.3
     },
@@ -34,9 +34,9 @@
     "junctionCone": {
       "S": 62.01,
       "alpha": {
-        "degrees": 38,
-        "minutes": 12,
-        "seconds": 6
+        "degrees": 38.0,
+        "minutes": 12.0,
+        "seconds": 6.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -46,8 +46,8 @@
       "L1Tol": -0.2,
       "L2": 48.9,
       "L2Tol": -0.2,
-      "L3": 57,
-      "L6": 82
+      "L3": 57.0,
+      "L6": 82.0
     },
     "misc": {
       "Fe": 0.1
@@ -58,15 +58,15 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 4300,
-      "M": 25,
-      "PE": 4875,
-      "PK": 4485,
-      "Pmax": 3900
+      "EE": 4300.0,
+      "M": 25.0,
+      "PE": 4875.0,
+      "PK": 4485.0,
+      "Pmax": 3900.0
     },
     "projectile": {
       "G1": 8.22,
-      "L3PlusG": 92
+      "L3PlusG": 92.0
     }
   },
   "chamber": {
@@ -76,24 +76,24 @@
     },
     "breech": {
       "R": 1.3,
-      "R1": 12
+      "R1": 12.0
     },
     "collar": {
       "H1": 9.11,
       "H2": 9.1
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 51.78,
       "b": 4.4,
-      "u": 240
+      "u": 240.0
     },
     "junctionCone": {
       "S": 61.95,
       "alpha": {
-        "degrees": 38,
-        "minutes": 20,
-        "seconds": 0
+        "degrees": 38.0,
+        "minutes": 20.0,
+        "seconds": 0.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -109,13 +109,13 @@
       "P2": 10.98
     },
     "rifling": {
-      "G": 35,
+      "G": 35.0,
       "G1": 8.24,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 17,
-        "seconds": 11
+        "degrees": 0.0,
+        "minutes": 17.0,
+        "seconds": 11.0
       }
     }
   },
@@ -125,5 +125,6 @@
   "name": "8 x 57 IS",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2016-05-18"
+  "revised": "2016-05-18",
+  "tab": "I"
 }

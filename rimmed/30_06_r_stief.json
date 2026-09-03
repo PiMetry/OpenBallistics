@@ -25,7 +25,7 @@
     },
     "junctionCone": {
       "S": 67.03,
-      "alpha": 35,
+      "alpha": 35.0,
       "r1Min": 1.27,
       "r2": 2.54
     },
@@ -43,11 +43,11 @@
       "P2": 11.2
     },
     "pressures": {
-      "EE": 4335,
-      "M": 25,
-      "PE": 5060,
-      "PK": 4658,
-      "Pmax": 4050
+      "EE": 4335.0,
+      "M": 25.0,
+      "PE": 5060.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 7.85,
@@ -68,17 +68,17 @@
       "H2": 8.65
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 47.52,
       "b": 4.49,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 67.37,
       "alpha": {
-        "degrees": 34,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 34.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "r1Max": 1.27,
       "r2": 3.05
@@ -95,12 +95,12 @@
     "rifling": {
       "G": 6.2,
       "G1": 7.89,
-      "alpha1": 70,
+      "alpha1": 70.0,
       "h": 0.54,
       "i": {
-        "degrees": 1,
-        "minutes": 22,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 22.0,
+        "seconds": 0.0
       }
     }
   },
@@ -109,5 +109,6 @@
   "key": "30_06_r_stief",
   "name": "30-06 R Stief",
   "pressureMethod": "Transducer",
-  "published": "2009-05-05"
+  "published": "2009-05-05",
+  "tab": "II"
 }

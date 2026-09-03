@@ -20,9 +20,9 @@
       "R": 1.27,
       "R1": 13.79,
       "delta": {
-        "degrees": 36,
-        "minutes": 2,
-        "seconds": 39
+        "degrees": 36.0,
+        "minutes": 2.0,
+        "seconds": 39.0
       },
       "eMin": 1.02
     },
@@ -33,9 +33,9 @@
     "junctionCone": {
       "S": 62.04,
       "alpha": {
-        "degrees": 39,
-        "minutes": 42,
-        "seconds": 15
+        "degrees": 39.0,
+        "minutes": 42.0,
+        "seconds": 15.0
       }
     },
     "lengths": {
@@ -55,11 +55,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 4320,
-      "M": 25,
-      "PE": 4125,
-      "PK": 3795,
-      "Pmax": 3300
+      "EE": 4320.0,
+      "M": 25.0,
+      "PE": 4125.0,
+      "PK": 3795.0,
+      "Pmax": 3300.0
     },
     "projectile": {
       "G1": 8.46,
@@ -85,9 +85,9 @@
     "junctionCone": {
       "S": 62.03,
       "alpha": {
-        "degrees": 39,
-        "minutes": 42,
-        "seconds": 14
+        "degrees": 39.0,
+        "minutes": 42.0,
+        "seconds": 14.0
       }
     },
     "lengths": {
@@ -103,12 +103,12 @@
     "rifling": {
       "G": 6.11,
       "G1": 8.5,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.38,
       "i": {
-        "degrees": 1,
-        "minutes": 29,
-        "seconds": 57
+        "degrees": 1.0,
+        "minutes": 29.0,
+        "seconds": 57.0
       }
     }
   },
@@ -118,5 +118,6 @@
   "name": "333 Riml. N.E.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

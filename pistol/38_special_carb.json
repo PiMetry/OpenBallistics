@@ -80,9 +80,9 @@
     "powderChamber": {},
     "pressures": {
       "M": 12.5,
-      "PE": 1950,
-      "PK": 1725,
-      "Pmax": 1500
+      "PE": 1950.0,
+      "PK": 1725.0,
+      "Pmax": 1500.0
     },
     "projectile": {}
   },
@@ -99,10 +99,10 @@
       "H2": 9.65
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 62.55,
       "b": 2.67,
-      "u": 476
+      "u": 476.0
     },
     "lengths": {
       "L3": 29.54
@@ -114,9 +114,9 @@
       "G": 3.77,
       "G1": 9.65,
       "i": {
-        "degrees": 6,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 6.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -126,5 +126,6 @@
   "name": "38 Special (carb)",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "1995-05-10"
+  "revised": "1995-05-10",
+  "tab": "IV"
 }

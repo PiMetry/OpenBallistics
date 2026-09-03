@@ -19,8 +19,8 @@
       "E1": 6.8,
       "R": 1.2,
       "R1": 7.95,
-      "beta": 45,
-      "delta": 45,
+      "beta": 45.0,
+      "delta": 45.0,
       "eMin": 1.15,
       "f": 0.1
     },
@@ -28,10 +28,10 @@
       "H2": 7.9
     },
     "lengths": {
-      "L3": 28,
+      "L3": 28.0,
       "L3Tol": -0.25,
-      "L4": 30,
-      "L6": 41
+      "L4": 30.0,
+      "L6": 41.0
     },
     "misc": {
       "Fe": 0.3
@@ -41,9 +41,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 3575,
-      "PK": 3163,
-      "Pmax": 2750
+      "PE": 3575.0,
+      "PK": 3163.0,
+      "Pmax": 2750.0
     },
     "projectile": {
       "G1": 7.04,
@@ -57,32 +57,32 @@
       "Z": 7.03
     },
     "breech": {
-      "R1": 8
+      "R1": 8.0
     },
     "collar": {
       "H2": 7.98
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 37.4,
       "b": 0.85,
-      "u": 354
+      "u": 354.0
     },
     "lengths": {
-      "L3": 28
+      "L3": 28.0
     },
     "powderChamber": {
       "E": 2.92,
-      "P1": 8
+      "P1": 8.0
     },
     "rifling": {
       "G": 4.25,
       "G1": 7.15,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 57,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 57.0,
+        "seconds": 0.0
       }
     }
   },
@@ -91,5 +91,6 @@
   "key": "7_mm_penna_l",
   "name": "7 mm Penna L",
   "pressureMethod": "Transducer",
-  "published": "2006-05-16"
+  "published": "2006-05-16",
+  "tab": "IV"
 }

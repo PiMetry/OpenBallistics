@@ -26,16 +26,16 @@
     "junctionCone": {
       "S": 73.14,
       "alpha": {
-        "degrees": 40,
-        "minutes": 2,
-        "seconds": 2
+        "degrees": 40.0,
+        "minutes": 2.0,
+        "seconds": 2.0
       }
     },
     "lengths": {
       "L1": 57.77,
       "L2": 61.16,
-      "L3": 68,
-      "L6": 95
+      "L3": 68.0,
+      "L6": 95.0
     },
     "misc": {
       "Fe": 0.1
@@ -45,11 +45,11 @@
       "P2": 11.2
     },
     "pressures": {
-      "EE": 4500,
-      "M": 25,
-      "PE": 5060,
-      "PK": 4658,
-      "Pmax": 4050
+      "EE": 4500.0,
+      "M": 25.0,
+      "PE": 5060.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 7.85,
@@ -70,17 +70,17 @@
       "H2": 8.76
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 47.51,
       "b": 4.47,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 73.2,
       "alpha": {
-        "degrees": 40,
-        "minutes": 1,
-        "seconds": 16
+        "degrees": 40.0,
+        "minutes": 1.0,
+        "seconds": 16.0
       }
     },
     "lengths": {
@@ -96,14 +96,14 @@
     "rifling": {
       "G": 8.39,
       "G1": 7.85,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.46,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
-      "s": 4
+      "s": 4.0
     }
   },
   "country": "DE",
@@ -112,5 +112,6 @@
   "name": "30 R Blaser",
   "pressureMethod": "Transducer",
   "published": "1991-02-19",
-  "revised": "2007-07-06"
+  "revised": "2007-07-06",
+  "tab": "II"
 }

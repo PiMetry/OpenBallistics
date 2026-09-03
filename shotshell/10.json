@@ -19,7 +19,7 @@
     },
     "lengths": [
       {
-        "l": 76,
+        "l": 76.0,
         "marking": "10/76",
         "tol": -2.5
       },
@@ -40,29 +40,29 @@
       {
         "L": 76.2,
         "M": "25/30",
-        "PE": 1320,
-        "PK": 1200,
-        "Pmax": 1050,
+        "PE": 1320.0,
+        "PK": 1200.0,
+        "Pmax": 1050.0,
         "marking": "10/76",
-        "tol": 2
+        "tol": 2.0
       },
       {
         "L": 82.6,
         "M": "25/30",
-        "PE": 1320,
-        "PK": 1200,
-        "Pmax": 1050,
+        "PE": 1320.0,
+        "PK": 1200.0,
+        "Pmax": 1050.0,
         "marking": "10/82",
-        "tol": 2
+        "tol": 2.0
       },
       {
         "L": 88.9,
         "M": "25/30",
-        "PE": 1320,
-        "PK": 1200,
-        "Pmax": 1050,
+        "PE": 1320.0,
+        "PK": 1200.0,
+        "Pmax": 1050.0,
         "marking": "10/89",
-        "tol": 2
+        "tol": 2.0
       }
     ],
     "dimensions": {
@@ -77,9 +77,9 @@
       "T": 1.9,
       "TTol": 0.1,
       "alpha1": {
-        "degrees": 10,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 10.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     },
     "headspace": {
@@ -93,5 +93,6 @@
   "name": "Cal. 10",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2006-09-19"
+  "revised": "2006-09-19",
+  "tab": "VII"
 }

@@ -18,7 +18,7 @@
       "R": 1.4,
       "R1": 10.9,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.5
     },
     "collar": {
@@ -27,7 +27,7 @@
     },
     "junctionCone": {
       "S": 42.72,
-      "alpha": 46,
+      "alpha": 46.0,
       "r1Min": 0.64,
       "r2": 2.54
     },
@@ -45,11 +45,11 @@
       "P2": 9.07
     },
     "pressures": {
-      "EE": 1600,
-      "M": 25,
-      "PE": 4625,
-      "PK": 4255,
-      "Pmax": 3700
+      "EE": 1600.0,
+      "M": 25.0,
+      "PE": 4625.0,
+      "PK": 4255.0,
+      "Pmax": 3700.0
     },
     "projectile": {
       "G1": 5.7,
@@ -70,14 +70,14 @@
       "H2": 6.45
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 25.09,
       "b": 2.03,
-      "u": 356
+      "u": 356.0
     },
     "junctionCone": {
       "S": 42.73,
-      "alpha": 46,
+      "alpha": 46.0,
       "r1Max": 0.64,
       "r2": 3.18
     },
@@ -93,12 +93,12 @@
     "rifling": {
       "G": 2.19,
       "G1": 5.69,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.38,
       "i": {
-        "degrees": 3,
-        "minutes": 10,
-        "seconds": 47
+        "degrees": 3.0,
+        "minutes": 10.0,
+        "seconds": 47.0
       },
       "s": 1.02
     }
@@ -108,5 +108,6 @@
   "key": "222_r_stief",
   "name": "222 R Stief",
   "pressureMethod": "Transducer",
-  "published": "2014-05-20"
+  "published": "2014-05-20",
+  "tab": "II"
 }

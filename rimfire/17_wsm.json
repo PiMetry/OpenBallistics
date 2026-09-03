@@ -24,12 +24,12 @@
       "RTol": -0.18
     },
     "collar": {
-      "H1": 5,
-      "H2": 5
+      "H1": 5.0,
+      "H2": 5.0
     },
     "junctionCone": {
       "S": 33.82,
-      "alpha": 40
+      "alpha": 40.0
     },
     "lengths": {
       "L1": 24.44,
@@ -45,11 +45,11 @@
       "P2": 6.83
     },
     "pressures": {
-      "EE": 515,
+      "EE": 515.0,
       "M": 17.5,
-      "PE": 2860,
-      "PK": 2530,
-      "Pmax": 2200
+      "PE": 2860.0,
+      "PK": 2530.0,
+      "Pmax": 2200.0
     },
     "projectile": {
       "G1": 4.38,
@@ -70,17 +70,17 @@
       "H2": 5.03
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 14.8,
       "b": 1.57,
-      "u": 229
+      "u": 229.0
     },
     "junctionCone": {
       "S": 34.12,
       "alpha": {
-        "degrees": 39,
-        "minutes": 46,
-        "seconds": 0
+        "degrees": 39.0,
+        "minutes": 46.0,
+        "seconds": 0.0
       },
       "r1Max": 0.64,
       "r2": 2.79
@@ -97,12 +97,12 @@
     "rifling": {
       "G": 3.49,
       "G1": 4.37,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.33,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 1.58
     }
@@ -112,5 +112,6 @@
   "key": "17_wsm",
   "name": "17 WSM",
   "pressureMethod": "Transducer",
-  "published": "2016-05-18"
+  "published": "2016-05-18",
+  "tab": "V"
 }

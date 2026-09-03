@@ -1,0 +1,114 @@
+{
+  "annotations": {
+    "category": "rimfire",
+    "confidence": "implausible",
+    "defaultBulletShape": "shot",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.lengths.L3",
+          "chamber.lengths.L3"
+        ],
+        "kind": "exceptional",
+        "known": true,
+        "message": "cartridge L3 = 45 is more than chamber L3 = 10.5, but a chamber is at least as long as the case it takes",
+        "rule": "chamber_accepts_case",
+        "values": {
+          "cartridge.lengths.L3": 45.0,
+          "chamber.lengths.L3": 10.5
+        },
+        "why": "as 9mm Flobert à plombs Metal"
+      },
+      {
+        "fields": [
+          "cartridge.projectile.G1"
+        ],
+        "kind": "missing",
+        "message": "G1 is not published, and it is needed for the bullet the mouth grips, and the neck wall",
+        "rule": "missing_dimension",
+        "values": {}
+      }
+    ],
+    "primerType": "rimfire"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.45,
+      "R1": 10.45,
+      "RTol": -0.18
+    },
+    "collar": {
+      "H1": 8.4,
+      "H2": 8.35
+    },
+    "junctionCone": {
+      "S": 43.5,
+      "alpha": {
+        "degrees": 15.0,
+        "minutes": 11.0,
+        "seconds": 24.0
+      }
+    },
+    "lengths": {
+      "L1": 10.5,
+      "L2": 12.0,
+      "L3": 45.0,
+      "L6": 45.0
+    },
+    "misc": {
+      "Fe": 0.2
+    },
+    "powderChamber": {
+      "P1": 8.8,
+      "P2": 8.8
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 1170.0,
+      "PK": 1035.0,
+      "Pmax": 900.0
+    },
+    "projectile": {
+      "L1PlusG": 12.3
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.38,
+      "Z": 8.38
+    },
+    "breech": {
+      "R": 1.45,
+      "R1": 10.7
+    },
+    "collar": {
+      "H2": 8.8
+    },
+    "grooves": {
+      "Q": 55.15
+    },
+    "lengths": {
+      "L3": 10.5
+    },
+    "powderChamber": {
+      "P1": 8.85
+    },
+    "rifling": {
+      "G": 1.8,
+      "G1": 8.8,
+      "i": {
+        "degrees": 6.0,
+        "minutes": 39.0,
+        "seconds": 15.0
+      }
+    }
+  },
+  "country": "FR",
+  "family": "rimfire",
+  "key": "9mm_flobert_plombs_carton",
+  "name": "9mm Flobert à plombs Carton",
+  "pressureMethod": "Crusher",
+  "published": "1984-06-14",
+  "revised": "2000-06-07",
+  "tab": "V"
+}

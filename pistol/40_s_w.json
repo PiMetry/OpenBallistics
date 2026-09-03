@@ -19,8 +19,8 @@
       "E1": 8.81,
       "R": 1.4,
       "R1": 10.77,
-      "beta": 35,
-      "delta": 45,
+      "beta": 35.0,
+      "delta": 45.0,
       "eMin": 1.14,
       "f": 0.51
     },
@@ -41,9 +41,9 @@
     },
     "pressures": {
       "M": 10.5,
-      "PE": 2925,
-      "PK": 2588,
-      "Pmax": 2250
+      "PE": 2925.0,
+      "PK": 2588.0,
+      "Pmax": 2250.0
     },
     "projectile": {
       "G1": 10.17,
@@ -62,10 +62,10 @@
       "H2": 10.77
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 79.55,
       "b": 3.05,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {},
     "lengths": {
@@ -78,11 +78,11 @@
     "rifling": {
       "G": 8.83,
       "G1": 10.19,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 3.48
     }
@@ -93,5 +93,6 @@
   "name": "40 S.& W.",
   "pressureMethod": "Transducer",
   "published": "1990-02-01",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

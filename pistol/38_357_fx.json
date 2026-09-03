@@ -1,0 +1,83 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.47,
+      "R1": 11.05,
+      "RTol": -0.25,
+      "beta": 45.0,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 9.63
+    },
+    "lengths": {
+      "L3": 23.24,
+      "L6": 30.99
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 9.63
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 455.0,
+      "PK": 403.0,
+      "Pmax": 350.0
+    },
+    "projectile": {
+      "G1": 8.94
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.79,
+      "Z": 9.02
+    },
+    "breech": {
+      "R": 1.47,
+      "R1": 13.38
+    },
+    "collar": {
+      "H2": 9.68
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 62.42,
+      "b": 2.48,
+      "u": 254.0
+    },
+    "lengths": {
+      "L3": 23.38
+    },
+    "powderChamber": {
+      "P1": 9.68
+    },
+    "rifling": {
+      "G1": 8.79
+    }
+  },
+  "country": "CA",
+  "family": "pistol",
+  "key": "38_357_fx",
+  "name": "38/357 FX",
+  "pressureMethod": "Transducer",
+  "published": "1998-01-27",
+  "revised": "2000-06-07",
+  "tab": "IV"
+}

@@ -17,7 +17,7 @@
     "caseHead": {
       "R": 1.65,
       "R1": 8.89,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -26,7 +26,7 @@
     },
     "junctionCone": {
       "S": 33.73,
-      "alpha": 90
+      "alpha": 90.0
     },
     "lengths": {
       "L1": 30.09,
@@ -34,7 +34,7 @@
       "L2": 30.64,
       "L2Tol": -0.2,
       "L3": 35.64,
-      "L6": 48
+      "L6": 48.0
     },
     "misc": {
       "Fe": 0.15
@@ -46,9 +46,9 @@
     },
     "pressures": {
       "M": 17.5,
-      "PE": 4160,
-      "PK": 3680,
-      "Pmax": 3200
+      "PE": 4160.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
     },
     "projectile": {
       "G1": 5.7,
@@ -69,17 +69,17 @@
       "H2": 6.17
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 24.53,
       "b": 1.73,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {
       "S": 33.8,
       "alpha": {
-        "degrees": 88,
-        "minutes": 59,
-        "seconds": 9
+        "degrees": 88.0,
+        "minutes": 59.0,
+        "seconds": 9.0
       }
     },
     "lengths": {
@@ -95,15 +95,15 @@
       "G": 3.13,
       "G1": 5.82,
       "alpha1": {
-        "degrees": 91,
-        "minutes": 39,
-        "seconds": 38
+        "degrees": 91.0,
+        "minutes": 39.0,
+        "seconds": 38.0
       },
       "h": 0.17,
       "i": {
-        "degrees": 2,
-        "minutes": 59,
-        "seconds": 51
+        "degrees": 2.0,
+        "minutes": 59.0,
+        "seconds": 51.0
       }
     }
   },
@@ -113,5 +113,6 @@
   "name": "22 PICRA",
   "pressureMethod": "Transducer",
   "published": "1999-03-15",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

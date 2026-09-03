@@ -21,8 +21,8 @@
       "R": 1.6,
       "R1": 12.85,
       "RTol": -0.25,
-      "beta": 35,
-      "delta": 0,
+      "beta": 35.0,
+      "delta": 0.0,
       "f": 0.38
     },
     "collar": {
@@ -39,11 +39,11 @@
       "P1": 10.74
     },
     "pressures": {
-      "EE": 2900,
-      "M": 25,
-      "PE": 4419,
-      "PK": 4065,
-      "Pmax": 3535
+      "EE": 2900.0,
+      "M": 25.0,
+      "PE": 4419.0,
+      "PK": 4065.0,
+      "Pmax": 3535.0
     },
     "projectile": {
       "G1": 9.12,
@@ -63,7 +63,7 @@
       "H2": 9.69
     },
     "grooves": {
-      "N": 7,
+      "N": 7.0,
       "Q": 63.81,
       "b": 2.92,
       "u": 304.8
@@ -79,9 +79,9 @@
       "G1": 9.12,
       "h": 0.28,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 4.09
     }
@@ -91,5 +91,6 @@
   "key": "360_buckhammer",
   "name": "360 Buckhammer",
   "pressureMethod": "Transducer",
-  "published": "2023-11-08"
+  "published": "2023-11-08",
+  "tab": "II"
 }

@@ -38,9 +38,9 @@
       "T": 1.45,
       "TTol": 0.1,
       "alpha1": {
-        "degrees": 10,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 10.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     },
     "headspace": {
@@ -54,5 +54,6 @@
   "name": "Cal. 9 mm C.F.",
   "pressureMethod": "Transducer",
   "published": "1989-01-19",
-  "revised": "2006-09-19"
+  "revised": "2006-09-19",
+  "tab": "VII"
 }

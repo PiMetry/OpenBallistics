@@ -19,11 +19,11 @@
       "E1": 9.6,
       "R": 1.5,
       "R1": 11.3,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 42,
-        "minutes": 43,
-        "seconds": 12
+        "degrees": 42.0,
+        "minutes": 43.0,
+        "seconds": 12.0
       },
       "eMin": 1.1,
       "f": 0.4
@@ -35,12 +35,12 @@
     "junctionCone": {
       "S": 36.77,
       "alpha": {
-        "degrees": 60,
-        "minutes": 5,
-        "seconds": 34
+        "degrees": 60.0,
+        "minutes": 5.0,
+        "seconds": 34.0
       },
-      "r1Min": 1,
-      "r2": 3
+      "r1Min": 1.0,
+      "r2": 3.0
     },
     "lengths": {
       "L1": 27.3,
@@ -59,11 +59,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2020,
+      "EE": 2020.0,
       "M": 17.5,
-      "PE": 5060,
-      "PK": 4658,
-      "Pmax": 4050
+      "PE": 5060.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 6.17,
@@ -72,7 +72,7 @@
   },
   "chamber": {
     "barrel": {
-      "F": 6,
+      "F": 6.0,
       "Z": 6.14
     },
     "breech": {
@@ -83,20 +83,20 @@
       "H2": 6.85
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 29.26,
       "b": 2.28,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 36.78,
       "alpha": {
-        "degrees": 59,
-        "minutes": 58,
-        "seconds": 22
+        "degrees": 59.0,
+        "minutes": 58.0,
+        "seconds": 22.0
       },
       "r1Max": 0.5,
-      "r2": 3
+      "r2": 3.0
     },
     "lengths": {
       "L1": 27.27,
@@ -111,12 +111,12 @@
     "rifling": {
       "G": 5.48,
       "G1": 6.19,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.33,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 1.85
     }
@@ -127,5 +127,6 @@
   "name": "6 mm PPC-USA",
   "pressureMethod": "Transducer",
   "published": "1989-04-18",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

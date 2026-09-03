@@ -1,0 +1,129 @@
+{
+  "annotations": {
+    "category": "rimfire",
+    "confidence": "verified",
+    "defaultBulletShape": "shot",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.lengths.L3",
+          "cartridge.lengths.L6"
+        ],
+        "kind": "exceptional",
+        "known": true,
+        "message": "cartridge L3 = 32.2 is more than cartridge L6 = 32.1, but a case is no longer than the loaded round, unless its mouth closes over the bullet",
+        "rule": "case_within_round",
+        "values": {
+          "cartridge.lengths.L3": 32.2,
+          "cartridge.lengths.L6": 32.1
+        },
+        "why": "a shot load; L6 is a hundredth shorter than L3, and one of the two is a transcription error"
+      },
+      {
+        "fields": [
+          "cartridge.lengths.L3",
+          "chamber.lengths.L3"
+        ],
+        "kind": "exceptional",
+        "known": true,
+        "message": "cartridge L3 = 32.2 is more than chamber L3 = 7.8, but a chamber is at least as long as the case it takes",
+        "rule": "chamber_accepts_case",
+        "values": {
+          "cartridge.lengths.L3": 32.2,
+          "chamber.lengths.L3": 7.8
+        },
+        "why": "as the 9 mm Flobert shot loads; over by 24.4 mm"
+      },
+      {
+        "fields": [
+          "cartridge.projectile.G1"
+        ],
+        "kind": "missing",
+        "message": "G1 is not published, and it is needed for the bullet the mouth grips, and the neck wall",
+        "rule": "missing_dimension",
+        "values": {}
+      }
+    ],
+    "primerType": "rimfire"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.12,
+      "R1": 7.06,
+      "RTol": -0.18
+    },
+    "collar": {
+      "H1": 5.35,
+      "H2": 5.33
+    },
+    "junctionCone": {
+      "S": 23.06,
+      "alpha": {
+        "degrees": 20.0,
+        "minutes": 57.0,
+        "seconds": 45.0
+      }
+    },
+    "lengths": {
+      "L1": 7.6,
+      "L2": 8.6,
+      "L3": 32.2,
+      "L6": 32.1
+    },
+    "misc": {
+      "Fe": 0.2
+    },
+    "powderChamber": {
+      "P1": 5.74,
+      "P2": 5.72
+    },
+    "pressures": {
+      "EE": 110.0,
+      "EK": 107.0,
+      "Emax": 100.0
+    },
+    "projectile": {
+      "F": 5.5,
+      "L1PlusG": 9.0
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.5,
+      "Z": 5.5
+    },
+    "breech": {
+      "R": 1.12,
+      "R1": 7.3
+    },
+    "collar": {
+      "H2": 5.73
+    },
+    "grooves": {
+      "Q": 23.76
+    },
+    "lengths": {
+      "L3": 7.8
+    },
+    "powderChamber": {
+      "P1": 5.76
+    },
+    "rifling": {
+      "G": 1.4,
+      "G1": 5.73,
+      "i": {
+        "degrees": 4.0,
+        "minutes": 41.0,
+        "seconds": 44.0
+      }
+    }
+  },
+  "country": "IT/DE",
+  "family": "rimfire",
+  "key": "5_6_mm_flobert_plombs_dc",
+  "name": "5,6 mm Flobert à plombs DC",
+  "pressureMethod": "Energy",
+  "published": "1984-06-14",
+  "revised": "2000-06-07",
+  "tab": "V"
+}

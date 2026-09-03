@@ -18,7 +18,7 @@
       "R": 1.4,
       "R1": 13.35,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -28,15 +28,15 @@
     "junctionCone": {
       "S": 113.17,
       "alpha": {
-        "degrees": 10,
-        "minutes": 58,
-        "seconds": 0
+        "degrees": 10.0,
+        "minutes": 58.0,
+        "seconds": 0.0
       },
       "r1Min": 0.5,
       "r2": 0.5
     },
     "lengths": {
-      "L1": 59,
+      "L1": 59.0,
       "L2": 61.5,
       "L3": 74.7,
       "L6": 96.5
@@ -49,11 +49,11 @@
       "P2": 10.4
     },
     "pressures": {
-      "EE": 5045,
-      "M": 25,
-      "PE": 4250,
-      "PK": 3910,
-      "Pmax": 3400
+      "EE": 5045.0,
+      "M": 25.0,
+      "PE": 4250.0,
+      "PK": 3910.0,
+      "Pmax": 3400.0
     },
     "projectile": {
       "G1": 9.3,
@@ -62,7 +62,7 @@
   },
   "chamber": {
     "barrel": {
-      "F": 9,
+      "F": 9.0,
       "Z": 9.28
     },
     "breech": {
@@ -74,25 +74,25 @@
       "H2": 9.94
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 66.32,
       "b": 4.6,
-      "u": 360
+      "u": 360.0
     },
     "junctionCone": {
       "S": 113.33,
       "alpha": {
-        "degrees": 10,
-        "minutes": 58,
-        "seconds": 0
+        "degrees": 10.0,
+        "minutes": 58.0,
+        "seconds": 0.0
       },
       "r1Max": 0.5,
       "r2": 0.5
     },
     "lengths": {
-      "L1": 59,
+      "L1": 59.0,
       "L2": 61.5,
-      "L3": 75
+      "L3": 75.0
     },
     "powderChamber": {
       "P1": 11.93,
@@ -101,11 +101,11 @@
     "rifling": {
       "G": 26.4,
       "G1": 9.33,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 21,
-        "seconds": 29
+        "degrees": 0.0,
+        "minutes": 21.0,
+        "seconds": 29.0
       }
     }
   },
@@ -115,5 +115,6 @@
   "name": "9,3 x 74 R",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2006-05-16"
+  "revised": "2006-05-16",
+  "tab": "II"
 }

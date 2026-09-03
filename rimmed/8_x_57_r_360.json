@@ -18,7 +18,7 @@
       "R": 1.35,
       "R1": 12.4,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -28,36 +28,36 @@
     "junctionCone": {
       "S": 67.09,
       "alpha": {
-        "degrees": 25,
-        "minutes": 54,
-        "seconds": 20
+        "degrees": 25.0,
+        "minutes": 54.0,
+        "seconds": 20.0
       },
       "r1Min": 0.5,
       "r2": 0.5
     },
     "lengths": {
-      "L1": 46,
-      "L2": 48,
-      "L3": 57,
-      "L6": 77
+      "L1": 46.0,
+      "L2": 48.0,
+      "L3": 57.0,
+      "L6": 77.0
     },
     "misc": {
       "Fe": 0.15
     },
     "powderChamber": {
-      "P1": 11,
+      "P1": 11.0,
       "P2": 9.7
     },
     "pressures": {
-      "EE": 2170,
-      "M": 25,
-      "PE": 3060,
-      "PK": 2818,
-      "Pmax": 2450
+      "EE": 2170.0,
+      "M": 25.0,
+      "PE": 3060.0,
+      "PK": 2818.0,
+      "Pmax": 2450.0
     },
     "projectile": {
       "G1": 8.09,
-      "L3PlusG": 91
+      "L3PlusG": 91.0
     }
   },
   "chamber": {
@@ -74,24 +74,24 @@
       "H2": 8.8
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 50.3,
       "b": 4.4,
-      "u": 240
+      "u": 240.0
     },
     "junctionCone": {
       "S": 67.15,
       "alpha": {
-        "degrees": 25,
-        "minutes": 54,
-        "seconds": 21
+        "degrees": 25.0,
+        "minutes": 54.0,
+        "seconds": 21.0
       },
       "r1Max": 0.5,
       "r2": 0.5
     },
     "lengths": {
-      "L1": 46,
-      "L2": 48,
+      "L1": 46.0,
+      "L2": 48.0,
       "L3": 57.3
     },
     "powderChamber": {
@@ -99,13 +99,13 @@
       "P2": 9.73
     },
     "rifling": {
-      "G": 34,
+      "G": 34.0,
       "G1": 8.14,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 17,
-        "seconds": 11
+        "degrees": 0.0,
+        "minutes": 17.0,
+        "seconds": 11.0
       }
     }
   },
@@ -115,5 +115,6 @@
   "name": "8 x 57 R 360",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

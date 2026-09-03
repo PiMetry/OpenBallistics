@@ -11,7 +11,7 @@
       "category": "pistol_round_nose",
       "ogive": "elliptical",
       "tip": "open_meplat",
-      "verified": true
+      "verified": false
     },
     "defaultBulletShape": "rounded",
     "implausible": [],
@@ -23,8 +23,8 @@
       "E1": 8.79,
       "R": 1.27,
       "R1": 9.96,
-      "beta": 45,
-      "delta": 35,
+      "beta": 45.0,
+      "delta": 35.0,
       "eMin": 0.9,
       "f": 0.3
     },
@@ -45,9 +45,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 3055,
-      "PK": 2703,
-      "Pmax": 2350
+      "PE": 3055.0,
+      "PK": 2703.0,
+      "Pmax": 2350.0
     },
     "projectile": {
       "G1": 9.03,
@@ -60,16 +60,16 @@
       "Z": 9.02
     },
     "breech": {
-      "R1": 10
+      "R1": 10.0
     },
     "collar": {
       "H2": 9.68
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 62.61,
       "b": 2.49,
-      "u": 250
+      "u": 250.0
     },
     "junctionCone": {},
     "lengths": {
@@ -82,11 +82,11 @@
     "rifling": {
       "G": 3.35,
       "G1": 9.05,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 57,
-        "seconds": 57
+        "degrees": 1.0,
+        "minutes": 57.0,
+        "seconds": 57.0
       }
     }
   },
@@ -96,5 +96,6 @@
   "name": "9 mm Luger",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "IV"
 }

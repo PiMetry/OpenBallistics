@@ -22,8 +22,8 @@
       "E1": 12.19,
       "R": 1.37,
       "R1": 13.59,
-      "beta": 35,
-      "delta": 45,
+      "beta": 35.0,
+      "delta": 45.0,
       "eMin": 1.02,
       "f": 0.36
     },
@@ -33,7 +33,7 @@
     },
     "junctionCone": {
       "S": 52.03,
-      "alpha": 70,
+      "alpha": 70.0,
       "r1Min": 1.27,
       "r2": 2.54
     },
@@ -55,11 +55,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 4725,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 4725.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 7.22,
@@ -79,14 +79,14 @@
       "H2": 8.13
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 40.42,
       "b": 4.06,
       "u": 215.9
     },
     "junctionCone": {
       "S": 51.93,
-      "alpha": 70,
+      "alpha": 70.0,
       "r1Max": 1.27,
       "r2": 3.05
     },
@@ -103,12 +103,12 @@
     "rifling": {
       "G": 3.89,
       "G1": 7.23,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.45,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -117,5 +117,6 @@
   "key": "7_270_win_short_mag",
   "name": "7-270 Win. Short Mag.",
   "pressureMethod": "Transducer",
-  "published": "2020-11-10"
+  "published": "2020-11-10",
+  "tab": "I"
 }

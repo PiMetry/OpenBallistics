@@ -18,7 +18,7 @@
       "R": 1.52,
       "R1": 15.49,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 66.12,
       "alpha": {
-        "degrees": 53,
-        "minutes": 7,
-        "seconds": 48
+        "degrees": 53.0,
+        "minutes": 7.0,
+        "seconds": 48.0
       }
     },
     "lengths": {
@@ -47,11 +47,11 @@
       "P2": 10.72
     },
     "pressures": {
-      "EE": 3550,
-      "M": 25,
-      "PE": 3690,
-      "PK": 3393,
-      "Pmax": 2950
+      "EE": 3550.0,
+      "M": 25.0,
+      "PE": 3690.0,
+      "PK": 3393.0,
+      "Pmax": 2950.0
     },
     "projectile": {
       "G1": 7.29,
@@ -73,14 +73,14 @@
     },
     "grooves": {
       "Q": 39.04,
-      "u": 255
+      "u": 255.0
     },
     "junctionCone": {
       "S": 66.16,
       "alpha": {
-        "degrees": 53,
-        "minutes": 7,
-        "seconds": 48
+        "degrees": 53.0,
+        "minutes": 7.0,
+        "seconds": 48.0
       }
     },
     "lengths": {
@@ -95,11 +95,11 @@
     "rifling": {
       "G": 5.54,
       "G1": 7.34,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -109,5 +109,6 @@
   "name": "280 Fl. N. E.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

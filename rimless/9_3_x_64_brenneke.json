@@ -19,9 +19,9 @@
       "E1": 11.2,
       "R": 1.3,
       "R1": 12.6,
-      "beta": 45,
-      "delta": 43,
-      "eMin": 1,
+      "beta": 45.0,
+      "delta": 43.0,
+      "eMin": 1.0,
       "f": 0.3
     },
     "collar": {
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 71.21,
       "alpha": {
-        "degrees": 34,
-        "minutes": 58,
-        "seconds": 26
+        "degrees": 34.0,
+        "minutes": 58.0,
+        "seconds": 26.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -43,8 +43,8 @@
       "L1Tol": -0.2,
       "L2": 55.28,
       "L2Tol": -0.2,
-      "L3": 64,
-      "L5": 70,
+      "L3": 64.0,
+      "L5": 70.0,
       "L6": 85.6
     },
     "misc": {
@@ -56,21 +56,21 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 5335,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 5335.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 9.3,
       "G2": 9.25,
-      "L3PlusG": 92
+      "L3PlusG": 92.0
     }
   },
   "chamber": {
     "barrel": {
-      "F": 9,
+      "F": 9.0,
       "Z": 9.28
     },
     "breech": {
@@ -82,17 +82,17 @@
       "H2": 10.06
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 66.32,
       "b": 4.6,
-      "u": 360
+      "u": 360.0
     },
     "junctionCone": {
       "S": 71.21,
       "alpha": {
-        "degrees": 34,
-        "minutes": 58,
-        "seconds": 26
+        "degrees": 34.0,
+        "minutes": 58.0,
+        "seconds": 26.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -108,13 +108,13 @@
       "P2": 12.08
     },
     "rifling": {
-      "G": 28,
+      "G": 28.0,
       "G1": 9.35,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 21,
-        "seconds": 29
+        "degrees": 0.0,
+        "minutes": 21.0,
+        "seconds": 29.0
       }
     }
   },
@@ -124,5 +124,6 @@
   "name": "9,3 x 64 Brenneke",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

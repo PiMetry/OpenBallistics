@@ -33,11 +33,11 @@
       "P1": 9.02
     },
     "pressures": {
-      "EE": 680,
+      "EE": 680.0,
       "M": 17.5,
-      "PE": 1375,
-      "PK": 1265,
-      "Pmax": 1100
+      "PE": 1375.0,
+      "PK": 1265.0,
+      "Pmax": 1100.0
     },
     "projectile": {
       "G1": 8.2,
@@ -58,7 +58,7 @@
     },
     "grooves": {
       "Q": 49.02,
-      "u": 508
+      "u": 508.0
     },
     "lengths": {
       "L3": 28.7
@@ -69,11 +69,11 @@
     "rifling": {
       "G": 6.75,
       "G1": 8.25,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 29,
-        "seconds": 6
+        "degrees": 1.0,
+        "minutes": 29.0,
+        "seconds": 6.0
       }
     }
   },
@@ -83,5 +83,6 @@
   "name": "310 Cadet Rifle",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

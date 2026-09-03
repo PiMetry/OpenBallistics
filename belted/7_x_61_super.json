@@ -21,7 +21,7 @@
       "R": 1.3,
       "R1": 13.5,
       "R3": 13.5,
-      "delta": 35,
+      "delta": 35.0,
       "eMin": 1.1
     },
     "collar": {
@@ -31,18 +31,18 @@
     "junctionCone": {
       "S": 57.21,
       "alpha": {
-        "degrees": 85,
-        "minutes": 45,
-        "seconds": 0
+        "degrees": 85.0,
+        "minutes": 45.0,
+        "seconds": 0.0
       },
-      "r1Min": 2,
+      "r1Min": 2.0,
       "r2": 1.5
     },
     "lengths": {
       "L1": 50.8,
       "L2": 52.85,
-      "L3": 61,
-      "L6": 83
+      "L3": 61.0,
+      "L6": 83.0
     },
     "misc": {
       "Fe": 0.1
@@ -52,21 +52,21 @@
       "P2": 11.91
     },
     "pressures": {
-      "EE": 4620,
-      "M": 25,
-      "PE": 5060,
-      "PK": 4658,
-      "Pmax": 4050
+      "EE": 4620.0,
+      "M": 25.0,
+      "PE": 5060.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 7.2,
       "G2": 7.2,
-      "L3PlusG": 88
+      "L3PlusG": 88.0
     }
   },
   "chamber": {
     "barrel": {
-      "F": 7,
+      "F": 7.0,
       "Z": 7.22
     },
     "breech": {
@@ -78,15 +78,15 @@
       "H2": 8.18
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 40.31,
       "b": 2.7,
-      "u": 229
+      "u": 229.0
     },
     "junctionCone": {
       "S": 57.12,
-      "alpha": 88,
-      "r1Max": 2,
+      "alpha": 88.0,
+      "r1Max": 2.0,
       "r2": 1.5
     },
     "lengths": {
@@ -100,14 +100,14 @@
       "P2": 12.01
     },
     "rifling": {
-      "G": 27,
+      "G": 27.0,
       "G1": 7.23,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.48,
       "i": {
-        "degrees": 0,
-        "minutes": 19,
-        "seconds": 3
+        "degrees": 0.0,
+        "minutes": 19.0,
+        "seconds": 3.0
       },
       "s": 6.25
     }
@@ -118,5 +118,6 @@
   "name": "7 x 61 Super",
   "pressureMethod": "Transducer",
   "published": "1990-04-24",
-  "revised": "2011-05-25"
+  "revised": "2011-05-25",
+  "tab": "III"
 }

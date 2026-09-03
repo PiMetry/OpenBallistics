@@ -18,7 +18,7 @@
       "R": 1.78,
       "R1": 15.49,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 59.71,
       "alpha": {
-        "degrees": 38,
-        "minutes": 10,
-        "seconds": 45
+        "degrees": 38.0,
+        "minutes": 10.0,
+        "seconds": 45.0
       },
       "r1Min": 0.76,
       "r2": 2.54
@@ -39,7 +39,7 @@
       "L1": 41.91,
       "L2": 46.88,
       "L3": 57.28,
-      "L6": 82
+      "L6": 82.0
     },
     "misc": {
       "Fe": 0.15
@@ -49,11 +49,11 @@
       "P2": 12.32
     },
     "pressures": {
-      "EE": 2600,
-      "M": 25,
-      "PE": 3750,
-      "PK": 3450,
-      "Pmax": 3000
+      "EE": 2600.0,
+      "M": 25.0,
+      "PE": 3750.0,
+      "PK": 3450.0,
+      "Pmax": 3000.0
     },
     "projectile": {
       "G1": 8.22,
@@ -74,17 +74,17 @@
       "H2": 8.87
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 51.52,
       "b": 4.05,
-      "u": 240
+      "u": 240.0
     },
     "junctionCone": {
       "S": 59.93,
       "alpha": {
-        "degrees": 38,
-        "minutes": 19,
-        "seconds": 19
+        "degrees": 38.0,
+        "minutes": 19.0,
+        "seconds": 19.0
       },
       "r1Max": 0.76,
       "r2": 2.54
@@ -101,14 +101,14 @@
     "rifling": {
       "G": 9.49,
       "G1": 8.23,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.32,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 2
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 2.0
       },
-      "s": 3
+      "s": 3.0
     }
   },
   "country": "FR",
@@ -117,5 +117,6 @@
   "name": "8 mm - 348 Win.",
   "pressureMethod": "Transducer",
   "published": "1999-03-16",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

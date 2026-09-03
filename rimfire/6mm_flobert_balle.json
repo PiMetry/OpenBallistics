@@ -47,13 +47,13 @@
       "P1": 5.92
     },
     "pressures": {
-      "EE": 77,
+      "EE": 77.0,
       "EK": 74.9,
-      "Emax": 70
+      "Emax": 70.0
     },
     "projectile": {
       "G1": 5.87,
-      "L3PlusG": 10
+      "L3PlusG": 10.0
     }
   },
   "chamber": {
@@ -81,9 +81,9 @@
       "G": 2.1,
       "G1": 5.9,
       "i": {
-        "degrees": 5,
-        "minutes": 26,
-        "seconds": 25
+        "degrees": 5.0,
+        "minutes": 26.0,
+        "seconds": 25.0
       }
     }
   },
@@ -93,5 +93,6 @@
   "name": "6mm Flobert à balle",
   "pressureMethod": "Energy",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "V"
 }

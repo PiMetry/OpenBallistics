@@ -19,9 +19,9 @@
       "E1": 10.2,
       "R": 1.5,
       "R1": 11.8,
-      "beta": 45,
-      "delta": 45,
-      "eMin": 1,
+      "beta": 45.0,
+      "delta": 45.0,
+      "eMin": 1.0,
       "f": 0.3
     },
     "collar": {
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 62.94,
       "alpha": {
-        "degrees": 30,
-        "minutes": 1,
-        "seconds": 18
+        "degrees": 30.0,
+        "minutes": 1.0,
+        "seconds": 18.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -43,7 +43,7 @@
       "L1Tol": -0.2,
       "L2": 48.58,
       "L2Tol": -0.2,
-      "L3": 58,
+      "L3": 58.0,
       "L6": 82.5
     },
     "misc": {
@@ -55,15 +55,15 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 3330,
-      "M": 25,
-      "PE": 4440,
-      "PK": 4083,
-      "Pmax": 3550
+      "EE": 3330.0,
+      "M": 25.0,
+      "PE": 4440.0,
+      "PK": 4083.0,
+      "Pmax": 3550.0
     },
     "projectile": {
       "G1": 6.7,
-      "L3PlusG": 88
+      "L3PlusG": 88.0
     }
   },
   "chamber": {
@@ -80,17 +80,17 @@
       "H2": 7.72
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 34.52,
       "b": 3.5,
-      "u": 200
+      "u": 200.0
     },
     "junctionCone": {
       "S": 62.97,
       "alpha": {
-        "degrees": 29,
-        "minutes": 58,
-        "seconds": 26
+        "degrees": 29.0,
+        "minutes": 58.0,
+        "seconds": 26.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -106,14 +106,14 @@
       "P2": 10.98
     },
     "rifling": {
-      "G": 30,
+      "G": 30.0,
       "G1": 6.75,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.49,
       "i": {
-        "degrees": 0,
-        "minutes": 17,
-        "seconds": 28
+        "degrees": 0.0,
+        "minutes": 17.0,
+        "seconds": 28.0
       }
     }
   },
@@ -123,5 +123,6 @@
   "name": "6,5 x 58 Mauser",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

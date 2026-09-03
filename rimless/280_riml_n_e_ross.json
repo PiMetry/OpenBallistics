@@ -20,9 +20,9 @@
       "R": 1.52,
       "R1": 14.22,
       "delta": {
-        "degrees": 28,
-        "minutes": 43,
-        "seconds": 48
+        "degrees": 28.0,
+        "minutes": 43.0,
+        "seconds": 48.0
       },
       "eMin": 1.02
     },
@@ -33,9 +33,9 @@
     "junctionCone": {
       "S": 66.12,
       "alpha": {
-        "degrees": 53,
-        "minutes": 7,
-        "seconds": 48
+        "degrees": 53.0,
+        "minutes": 7.0,
+        "seconds": 48.0
       }
     },
     "lengths": {
@@ -55,11 +55,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 4440,
-      "M": 25,
-      "PE": 4060,
-      "PK": 3738,
-      "Pmax": 3250
+      "EE": 4440.0,
+      "M": 25.0,
+      "PE": 4060.0,
+      "PK": 3738.0,
+      "Pmax": 3250.0
     },
     "projectile": {
       "G1": 7.29,
@@ -81,14 +81,14 @@
     },
     "grooves": {
       "Q": 39.04,
-      "u": 220
+      "u": 220.0
     },
     "junctionCone": {
       "S": 66.09,
       "alpha": {
-        "degrees": 53,
-        "minutes": 7,
-        "seconds": 48
+        "degrees": 53.0,
+        "minutes": 7.0,
+        "seconds": 48.0
       }
     },
     "lengths": {
@@ -104,12 +104,12 @@
     "rifling": {
       "G": 5.95,
       "G1": 7.34,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.41,
       "i": {
-        "degrees": 1,
-        "minutes": 29,
-        "seconds": 57
+        "degrees": 1.0,
+        "minutes": 29.0,
+        "seconds": 57.0
       }
     }
   },
@@ -119,5 +119,6 @@
   "name": "280 Riml. N. E. Ross",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

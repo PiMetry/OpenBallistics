@@ -18,7 +18,7 @@
       "R": 1.5,
       "R1": 11.18,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -37,9 +37,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 1950,
-      "PK": 1725,
-      "Pmax": 1500
+      "PE": 1950.0,
+      "PK": 1725.0,
+      "Pmax": 1500.0
     },
     "projectile": {
       "G1": 9.12,
@@ -59,10 +59,10 @@
       "H2": 9.65
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 62.55,
       "b": 2.67,
-      "u": 476
+      "u": 476.0
     },
     "junctionCone": {},
     "lengths": {
@@ -74,12 +74,12 @@
     "rifling": {
       "G": 13.72,
       "G1": 9.09,
-      "alpha1": 13,
+      "alpha1": 13.0,
       "h": 2.46,
       "i": {
-        "degrees": 4,
-        "minutes": 45,
-        "seconds": 0
+        "degrees": 4.0,
+        "minutes": 45.0,
+        "seconds": 0.0
       },
       "s": 11.91
     }
@@ -90,5 +90,6 @@
   "name": "38 Special",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

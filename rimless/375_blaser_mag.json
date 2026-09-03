@@ -19,8 +19,8 @@
       "E1": 12.19,
       "R": 1.37,
       "R1": 13.59,
-      "beta": 35,
-      "delta": 45,
+      "beta": 35.0,
+      "delta": 45.0,
       "eMin": 1.42,
       "f": 0.3
     },
@@ -30,9 +30,9 @@
     },
     "junctionCone": {
       "S": 70.3,
-      "alpha": 60,
+      "alpha": 60.0,
       "r1Min": 1.5,
-      "r2": 2
+      "r2": 2.0
     },
     "lengths": {
       "L1": 59.13,
@@ -40,7 +40,7 @@
       "L2": 61.37,
       "L2Tol": -0.2,
       "L3": 71.7,
-      "L6": 92
+      "L6": 92.0
     },
     "misc": {
       "Fe": 0.1,
@@ -52,11 +52,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 7370,
-      "M": 25,
-      "PE": 5250,
-      "PK": 4830,
-      "Pmax": 4200
+      "EE": 7370.0,
+      "M": 25.0,
+      "PE": 5250.0,
+      "PK": 4830.0,
+      "Pmax": 4200.0
     },
     "projectile": {
       "G1": 9.53,
@@ -77,21 +77,21 @@
       "H2": 10.33
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 70.27,
       "b": 4.49,
       "u": 355.6
     },
     "junctionCone": {
       "S": 70.29,
-      "alpha": 60,
+      "alpha": 60.0,
       "r1Max": 1.5,
-      "r2": 2
+      "r2": 2.0
     },
     "lengths": {
       "L1": 59.08,
       "L2": 61.29,
-      "L3": 72
+      "L3": 72.0
     },
     "powderChamber": {
       "E": 3.61,
@@ -101,14 +101,14 @@
     "rifling": {
       "G": 12.55,
       "G1": 9.55,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.39,
       "i": {
-        "degrees": 0,
-        "minutes": 45,
-        "seconds": 0
+        "degrees": 0.0,
+        "minutes": 45.0,
+        "seconds": 0.0
       },
-      "s": 3
+      "s": 3.0
     }
   },
   "country": "SE",
@@ -116,5 +116,6 @@
   "key": "375_blaser_mag",
   "name": "375 Blaser Mag.",
   "pressureMethod": "Transducer",
-  "published": "2009-05-05"
+  "published": "2009-05-05",
+  "tab": "I"
 }

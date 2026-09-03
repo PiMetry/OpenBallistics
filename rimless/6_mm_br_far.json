@@ -19,8 +19,8 @@
       "E1": 10.39,
       "R": 1.37,
       "R1": 11.97,
-      "beta": 45,
-      "delta": 36,
+      "beta": 45.0,
+      "delta": 36.0,
       "eMin": 1.4,
       "f": 0.4
     },
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 37.22,
       "alpha": {
-        "degrees": 80,
-        "minutes": 14,
-        "seconds": 19
+        "degrees": 80.0,
+        "minutes": 14.0,
+        "seconds": 19.0
       },
       "r1Min": 0.25,
       "r2": 1.5
@@ -44,7 +44,7 @@
       "L2": 33.17,
       "L2Tol": -0.2,
       "L3": 39.24,
-      "L6": 62
+      "L6": 62.0
     },
     "misc": {
       "Fe": 0.1
@@ -55,11 +55,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2545,
+      "EE": 2545.0,
       "M": 17.5,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 6.17,
@@ -72,14 +72,14 @@
       "Z": 6.17
     },
     "breech": {
-      "R1": 12
+      "R1": 12.0
     },
     "collar": {
       "H1": 6.87,
       "H2": 6.87
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 29.52,
       "b": 2.29,
       "u": 203.2
@@ -87,9 +87,9 @@
     "junctionCone": {
       "S": 37.36,
       "alpha": {
-        "degrees": 80,
-        "minutes": 0,
-        "seconds": 14
+        "degrees": 80.0,
+        "minutes": 0.0,
+        "seconds": 14.0
       },
       "r1Max": 0.25,
       "r2": 1.5
@@ -107,12 +107,12 @@
     "rifling": {
       "G": 6.79,
       "G1": 6.18,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.35,
       "i": {
-        "degrees": 1,
-        "minutes": 27,
-        "seconds": 17
+        "degrees": 1.0,
+        "minutes": 27.0,
+        "seconds": 17.0
       },
       "s": 3.64
     }
@@ -122,5 +122,6 @@
   "key": "6_mm_br_far",
   "name": "6 mm BR Farè",
   "pressureMethod": "Transducer",
-  "published": "2015-05-19"
+  "published": "2015-05-19",
+  "tab": "I"
 }

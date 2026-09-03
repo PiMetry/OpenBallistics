@@ -18,7 +18,7 @@
       "R": 1.6,
       "R1": 12.83,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -27,7 +27,7 @@
     },
     "junctionCone": {
       "S": 52.64,
-      "alpha": 32,
+      "alpha": 32.0,
       "r1Min": 0.76,
       "r2": 2.54
     },
@@ -45,11 +45,11 @@
       "P2": 10.5
     },
     "pressures": {
-      "EE": 2455,
-      "M": 25,
-      "PE": 3375,
-      "PK": 3105,
-      "Pmax": 2700
+      "EE": 2455.0,
+      "M": 25.0,
+      "PE": 3375.0,
+      "PK": 3105.0,
+      "Pmax": 2700.0
     },
     "projectile": {
       "G1": 7.9,
@@ -70,14 +70,14 @@
       "H2": 8.55
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 47.16,
       "b": 2.54,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 52.89,
-      "alpha": 32,
+      "alpha": 32.0,
       "r1Max": 0.76,
       "r2": 5.08
     },
@@ -95,15 +95,15 @@
       "G": 6.76,
       "G1": 7.92,
       "alpha1": {
-        "degrees": 101,
-        "minutes": 34,
-        "seconds": 0
+        "degrees": 101.0,
+        "minutes": 34.0,
+        "seconds": 0.0
       },
       "h": 0.26,
       "i": {
-        "degrees": 1,
-        "minutes": 19,
-        "seconds": 20
+        "degrees": 1.0,
+        "minutes": 19.0,
+        "seconds": 20.0
       }
     }
   },
@@ -113,5 +113,6 @@
   "name": "303 Savage",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2011-05-25"
+  "revised": "2011-05-25",
+  "tab": "II"
 }

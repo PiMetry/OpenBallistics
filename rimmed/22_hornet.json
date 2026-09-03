@@ -18,7 +18,7 @@
       "R": 1.65,
       "R1": 8.89,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 57.33,
       "alpha": {
-        "degrees": 11,
-        "minutes": 16,
-        "seconds": 0
+        "degrees": 11.0,
+        "minutes": 16.0,
+        "seconds": 0.0
       },
       "r1Min": 12.7,
       "r2": 22.23
@@ -49,11 +49,11 @@
       "P2": 7.04
     },
     "pressures": {
-      "EE": 1055,
+      "EE": 1055.0,
       "M": 17.5,
-      "PE": 3750,
-      "PK": 3450,
-      "Pmax": 3000
+      "PE": 3750.0,
+      "PK": 3450.0,
+      "Pmax": 3000.0
     },
     "projectile": {
       "G1": 5.7,
@@ -74,17 +74,17 @@
       "H2": 6.17
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 24.53,
       "b": 1.73,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {
       "S": 58.26,
       "alpha": {
-        "degrees": 10,
-        "minutes": 58,
-        "seconds": 1
+        "degrees": 10.0,
+        "minutes": 58.0,
+        "seconds": 1.0
       },
       "r1Max": 12.7,
       "r2": 22.23
@@ -101,9 +101,9 @@
     "rifling": {
       "G": 3.14,
       "G1": 5.82,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.18,
-      "i": 3
+      "i": 3.0
     }
   },
   "country": "US",
@@ -112,5 +112,6 @@
   "name": "22 Hornet",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

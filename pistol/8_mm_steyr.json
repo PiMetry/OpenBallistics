@@ -19,11 +19,11 @@
       "E1": 7.85,
       "R": 1.1,
       "R1": 8.85,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 24,
-        "minutes": 26,
-        "seconds": 38
+        "degrees": 24.0,
+        "minutes": 26.0,
+        "seconds": 38.0
       },
       "eMin": 1.1,
       "f": 0.3
@@ -44,9 +44,9 @@
     },
     "pressures": {
       "M": 10.5,
-      "PE": 2730,
-      "PK": 2415,
-      "Pmax": 2100
+      "PE": 2730.0,
+      "PK": 2415.0,
+      "Pmax": 2100.0
     },
     "projectile": {
       "G1": 8.15,
@@ -59,16 +59,16 @@
       "Z": 8.15
     },
     "breech": {
-      "R1": 9
+      "R1": 9.0
     },
     "collar": {
       "H2": 8.83
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 50.55,
-      "b": 3,
-      "u": 250
+      "b": 3.0,
+      "u": 250.0
     },
     "lengths": {
       "L3": 18.65
@@ -80,11 +80,11 @@
     "rifling": {
       "G": 4.5,
       "G1": 8.2,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 54,
-        "seconds": 33
+        "degrees": 1.0,
+        "minutes": 54.0,
+        "seconds": 33.0
       }
     }
   },
@@ -94,5 +94,6 @@
   "name": "8 mm Steyr",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

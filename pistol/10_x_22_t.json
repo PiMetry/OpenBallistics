@@ -15,7 +15,7 @@
         "rule": "bullet_within_mouth",
         "values": {
           "cartridge.collar.H2": 9.75,
-          "cartridge.projectile.G1": 10
+          "cartridge.projectile.G1": 10.0
         },
         "why": "a heeled bullet: full diameter outside the case, on a reduced heel inside it"
       },
@@ -43,16 +43,16 @@
       "E1": 8.3,
       "R": 1.25,
       "R1": 9.5,
-      "beta": 45,
-      "delta": 40,
-      "eMin": 1,
+      "beta": 45.0,
+      "delta": 40.0,
+      "eMin": 1.0,
       "f": 0.4
     },
     "collar": {
       "H2": 9.75
     },
     "lengths": {
-      "L2": 22,
+      "L2": 22.0,
       "L3": 22.5,
       "L3Tol": -0.25,
       "L6": 22.7
@@ -65,12 +65,12 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 585,
-      "PK": 518,
-      "Pmax": 450
+      "PE": 585.0,
+      "PK": 518.0,
+      "Pmax": 450.0
     },
     "projectile": {
-      "G1": 10,
+      "G1": 10.0,
       "L3PlusG": 42.5
     }
   },
@@ -92,11 +92,11 @@
       "P1": 9.8
     },
     "rifling": {
-      "G": 20,
-      "G1": 7,
-      "alpha1": 90,
+      "G": 20.0,
+      "G1": 7.0,
+      "alpha1": 90.0,
       "h": 1.4,
-      "i": 45,
+      "i": 45.0,
       "s": 19.65
     }
   },
@@ -106,5 +106,6 @@
   "name": "10 x 22 T",
   "pressureMethod": "Transducer",
   "published": "2000-12-11",
-  "revised": "2004-09-27"
+  "revised": "2004-09-27",
+  "tab": "IV"
 }

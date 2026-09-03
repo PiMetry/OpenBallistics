@@ -26,9 +26,9 @@
     "junctionCone": {
       "S": 146.35,
       "alpha": {
-        "degrees": 10,
-        "minutes": 20,
-        "seconds": 53
+        "degrees": 10.0,
+        "minutes": 20.0,
+        "seconds": 53.0
       }
     },
     "lengths": {
@@ -45,11 +45,11 @@
       "P2": 13.97
     },
     "pressures": {
-      "EE": 6957,
-      "M": 25,
-      "PE": 3440,
-      "PK": 3163,
-      "Pmax": 2750
+      "EE": 6957.0,
+      "M": 25.0,
+      "PE": 3440.0,
+      "PK": 3163.0,
+      "Pmax": 2750.0
     },
     "projectile": {
       "G1": 12.39,
@@ -70,17 +70,17 @@
       "H2": 13.07
     },
     "grooves": {
-      "N": 7,
+      "N": 7.0,
       "Q": 118.1,
       "b": 2.67,
-      "u": 457
+      "u": 457.0
     },
     "junctionCone": {
       "S": 145.71,
       "alpha": {
-        "degrees": 10,
-        "minutes": 27,
-        "seconds": 36
+        "degrees": 10.0,
+        "minutes": 27.0,
+        "seconds": 36.0
       }
     },
     "lengths": {
@@ -90,17 +90,17 @@
     },
     "powderChamber": {
       "P1": 14.76,
-      "P2": 14
+      "P2": 14.0
     },
     "rifling": {
       "G": 7.64,
       "G1": 12.42,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.33,
       "i": {
-        "degrees": 1,
-        "minutes": 12,
-        "seconds": 53
+        "degrees": 1.0,
+        "minutes": 12.0,
+        "seconds": 53.0
       }
     }
   },
@@ -110,5 +110,6 @@
   "name": "475 N°2 N.E. 3\"1/2 Jeffery",
   "pressureMethod": "Transducer",
   "published": "1998-01-27",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

@@ -7,7 +7,7 @@
       "category": "rifle_spitzer",
       "ogive": "tangent",
       "tip": "open_meplat",
-      "verified": true
+      "verified": false
     },
     "defaultBulletShape": "pointy",
     "implausible": [],
@@ -18,7 +18,7 @@
       "R": 1.63,
       "R1": 13.72,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.4
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 62.17,
       "alpha": {
-        "degrees": 33,
-        "minutes": 56,
-        "seconds": 8
+        "degrees": 33.0,
+        "minutes": 56.0,
+        "seconds": 8.0
       },
       "r1Min": 2.29,
       "r2": 2.29
@@ -49,11 +49,11 @@
       "P2": 10.19
     },
     "pressures": {
-      "EE": 2910,
-      "M": 25,
-      "PE": 4560,
-      "PK": 4198,
-      "Pmax": 3650
+      "EE": 2910.0,
+      "M": 25.0,
+      "PE": 4560.0,
+      "PK": 4198.0,
+      "Pmax": 3650.0
     },
     "projectile": {
       "G1": 7.92,
@@ -74,17 +74,17 @@
       "H2": 8.66
     },
     "grooves": {
-      "N": 5,
+      "N": 5.0,
       "Q": 48.07,
       "b": 2.12,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 59.94,
       "alpha": {
-        "degrees": 40,
-        "minutes": 29,
-        "seconds": 21
+        "degrees": 40.0,
+        "minutes": 29.0,
+        "seconds": 21.0
       }
     },
     "lengths": {
@@ -99,12 +99,12 @@
     "rifling": {
       "G": 14.63,
       "G1": 7.93,
-      "alpha1": 19,
+      "alpha1": 19.0,
       "h": 2.18,
       "i": {
-        "degrees": 0,
-        "minutes": 31,
-        "seconds": 45
+        "degrees": 0.0,
+        "minutes": 31.0,
+        "seconds": 45.0
       }
     }
   },
@@ -114,5 +114,6 @@
   "name": "303 British",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "II"
 }

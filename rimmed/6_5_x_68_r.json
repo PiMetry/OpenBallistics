@@ -16,9 +16,9 @@
   "cartridge": {
     "caseHead": {
       "R": 1.75,
-      "R1": 15,
+      "R1": 15.0,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 75.05,
       "alpha": {
-        "degrees": 29,
-        "minutes": 19,
-        "seconds": 59
+        "degrees": 29.0,
+        "minutes": 19.0,
+        "seconds": 59.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -49,11 +49,11 @@
       "P2": 12.18
     },
     "pressures": {
-      "EE": 3810,
-      "M": 25,
-      "PE": 4875,
-      "PK": 4485,
-      "Pmax": 3900
+      "EE": 3810.0,
+      "M": 25.0,
+      "PE": 4875.0,
+      "PK": 4485.0,
+      "Pmax": 3900.0
     },
     "projectile": {
       "G1": 6.7,
@@ -74,17 +74,17 @@
       "H2": 7.63
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 34.52,
       "b": 3.5,
-      "u": 250
+      "u": 250.0
     },
     "junctionCone": {
       "S": 75.11,
       "alpha": {
-        "degrees": 29,
-        "minutes": 19,
-        "seconds": 58
+        "degrees": 29.0,
+        "minutes": 19.0,
+        "seconds": 58.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -99,13 +99,13 @@
       "P2": 12.21
     },
     "rifling": {
-      "G": 30,
+      "G": 30.0,
       "G1": 6.75,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 17,
-        "seconds": 11
+        "degrees": 0.0,
+        "minutes": 17.0,
+        "seconds": 11.0
       }
     }
   },
@@ -115,5 +115,6 @@
   "name": "6,5 x 68 R",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

@@ -19,11 +19,11 @@
       "E1": 8.44,
       "R": 1.14,
       "R1": 9.6,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 25,
-        "minutes": 22,
-        "seconds": 18
+        "degrees": 25.0,
+        "minutes": 22.0,
+        "seconds": 18.0
       },
       "eMin": 0.8,
       "f": 0.5
@@ -35,9 +35,9 @@
     "junctionCone": {
       "S": 47.85,
       "alpha": {
-        "degrees": 80,
-        "minutes": 6,
-        "seconds": 18
+        "degrees": 80.0,
+        "minutes": 6.0,
+        "seconds": 18.0
       }
     },
     "lengths": {
@@ -45,7 +45,7 @@
       "L1Tol": -0.2,
       "L2": 43.23,
       "L2Tol": -0.2,
-      "L3": 49,
+      "L3": 49.0,
       "L6": 73.5
     },
     "misc": {
@@ -57,10 +57,10 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "M": 25,
-      "PE": 5720,
-      "PK": 5060,
-      "Pmax": 4400
+      "M": 25.0,
+      "PE": 5720.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 7.25,
@@ -81,17 +81,17 @@
       "H2": 7.8
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 39.91,
       "b": 3.7,
-      "u": 228
+      "u": 228.0
     },
     "junctionCone": {
       "S": 47.84,
       "alpha": {
-        "degrees": 80,
-        "minutes": 14,
-        "seconds": 27
+        "degrees": 80.0,
+        "minutes": 14.0,
+        "seconds": 27.0
       }
     },
     "lengths": {
@@ -107,12 +107,12 @@
     "rifling": {
       "G": 12.09,
       "G1": 7.3,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.25,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 5.6
     }
@@ -123,5 +123,6 @@
   "name": "7x49 GJW",
   "pressureMethod": "Transducer",
   "published": "1991-02-19",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "IV"
 }

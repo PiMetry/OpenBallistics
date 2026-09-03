@@ -19,11 +19,11 @@
       "E1": 9.6,
       "R": 1.5,
       "R1": 11.3,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 42,
-        "minutes": 40,
-        "seconds": 48
+        "degrees": 42.0,
+        "minutes": 40.0,
+        "seconds": 48.0
       },
       "eMin": 1.1,
       "f": 0.4
@@ -35,12 +35,12 @@
     "junctionCone": {
       "S": 36.77,
       "alpha": {
-        "degrees": 60,
-        "minutes": 2,
-        "seconds": 47
+        "degrees": 60.0,
+        "minutes": 2.0,
+        "seconds": 47.0
       },
-      "r1Min": 1,
-      "r2": 3
+      "r1Min": 1.0,
+      "r2": 3.0
     },
     "lengths": {
       "L1": 27.3,
@@ -59,11 +59,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 1935,
+      "EE": 1935.0,
       "M": 17.5,
-      "PE": 5060,
-      "PK": 4658,
-      "Pmax": 4050
+      "PE": 5060.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 5.7,
@@ -84,20 +84,20 @@
       "H2": 6.38
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 24.83,
       "b": 2.04,
-      "u": 355
+      "u": 355.0
     },
     "junctionCone": {
       "S": 36.79,
       "alpha": {
-        "degrees": 59,
-        "minutes": 56,
-        "seconds": 16
+        "degrees": 59.0,
+        "minutes": 56.0,
+        "seconds": 16.0
       },
       "r1Max": 0.5,
-      "r2": 3
+      "r2": 3.0
     },
     "lengths": {
       "L1": 27.27,
@@ -112,12 +112,12 @@
     "rifling": {
       "G": 5.48,
       "G1": 5.72,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.33,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 1.85
     }
@@ -128,5 +128,6 @@
   "name": "22 PPC-USA",
   "pressureMethod": "Transducer",
   "published": "1989-04-18",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

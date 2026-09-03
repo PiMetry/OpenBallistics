@@ -19,8 +19,8 @@
       "E1": 9.09,
       "R": 1.24,
       "R1": 10.72,
-      "beta": 35,
-      "delta": 36,
+      "beta": 35.0,
+      "delta": 36.0,
       "eMin": 0.84,
       "f": 0.38
     },
@@ -30,7 +30,7 @@
     },
     "junctionCone": {
       "S": 45.05,
-      "alpha": 46,
+      "alpha": 46.0,
       "r1Min": 0.64,
       "r2": 2.54
     },
@@ -52,11 +52,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2993,
-      "M": 25,
-      "PE": 5063,
-      "PK": 4658,
-      "Pmax": 4050
+      "EE": 2993.0,
+      "M": 25.0,
+      "PE": 5063.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 7.06,
@@ -76,14 +76,14 @@
       "H2": 7.8
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 38.52,
       "b": 4.06,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 44.98,
-      "alpha": 46,
+      "alpha": 46.0,
       "r1Max": 0.76,
       "r2": 3.18
     },
@@ -100,12 +100,12 @@
     "rifling": {
       "G": 5.57,
       "G1": 7.06,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.37,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 1.64
     }
@@ -115,5 +115,6 @@
   "key": "6_8_mm_rem_spc",
   "name": "6,8 mm Rem. SPC",
   "pressureMethod": "Transducer",
-  "published": "2006-05-16"
+  "published": "2006-05-16",
+  "tab": "I"
 }

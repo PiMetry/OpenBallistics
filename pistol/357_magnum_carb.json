@@ -94,10 +94,10 @@
       "H2": 9.65
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 62.57,
       "b": 2.69,
-      "u": 476
+      "u": 476.0
     },
     "lengths": {
       "L3": 33.07
@@ -109,9 +109,9 @@
       "G": 3.77,
       "G1": 9.65,
       "i": {
-        "degrees": 6,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 6.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -120,5 +120,6 @@
   "key": "357_magnum_carb",
   "name": "357 Magnum (carb)",
   "published": "1984-06-14",
-  "revised": "2005-11-02"
+  "revised": "2005-11-02",
+  "tab": "IV"
 }

@@ -23,8 +23,8 @@
       "H2": 8.56
     },
     "lengths": {
-      "L3": 27,
-      "L6": 36
+      "L3": 27.0,
+      "L6": 36.0
     },
     "misc": {
       "Fe": 0.25
@@ -34,9 +34,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 1300,
-      "PK": 1150,
-      "Pmax": 1000
+      "PE": 1300.0,
+      "PK": 1150.0,
+      "Pmax": 1000.0
     },
     "projectile": {
       "G1": 8.11,
@@ -56,10 +56,10 @@
       "H2": 8.6
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 50.24,
-      "b": 3,
-      "u": 150
+      "b": 3.0,
+      "u": 150.0
     },
     "lengths": {
       "L3": 27.5
@@ -70,12 +70,12 @@
     "rifling": {
       "G": 0.99,
       "G1": 8.08,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.26,
       "i": {
-        "degrees": 8,
-        "minutes": 57,
-        "seconds": 9
+        "degrees": 8.0,
+        "minutes": 57.0,
+        "seconds": 9.0
       }
     }
   },
@@ -85,5 +85,6 @@
   "name": "8 mm Gasser",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

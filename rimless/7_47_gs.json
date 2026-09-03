@@ -19,8 +19,8 @@
       "E1": 10.39,
       "R": 1.37,
       "R1": 12.01,
-      "beta": 45,
-      "delta": 36,
+      "beta": 45.0,
+      "delta": 36.0,
       "eMin": 1.4,
       "f": 0.38
     },
@@ -31,11 +31,11 @@
     "junctionCone": {
       "S": 45.45,
       "alpha": {
-        "degrees": 61,
-        "minutes": 21,
-        "seconds": 0
+        "degrees": 61.0,
+        "minutes": 21.0,
+        "seconds": 0.0
       },
-      "r1Min": 1,
+      "r1Min": 1.0,
       "r2": 1.5
     },
     "lengths": {
@@ -43,8 +43,8 @@
       "L1Tol": -0.2,
       "L2": 38.9,
       "L2Tol": -0.2,
-      "L3": 47,
-      "L6": 71
+      "L3": 47.0,
+      "L6": 71.0
     },
     "misc": {
       "Fe": 0.1,
@@ -56,11 +56,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 3600,
-      "M": 25,
-      "PE": 5438,
-      "PK": 5003,
-      "Pmax": 4350
+      "EE": 3600.0,
+      "M": 25.0,
+      "PE": 5438.0,
+      "PK": 5003.0,
+      "Pmax": 4350.0
     },
     "projectile": {
       "F": 6.86,
@@ -81,17 +81,17 @@
       "H2": 7.8
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 38.52,
       "b": 4.06,
-      "u": 280
+      "u": 280.0
     },
     "junctionCone": {
       "S": 45.33,
       "alpha": {
-        "degrees": 61,
-        "minutes": 34,
-        "seconds": 57
+        "degrees": 61.0,
+        "minutes": 34.0,
+        "seconds": 57.0
       },
       "r1Max": 0.75,
       "r2": 1.75
@@ -109,12 +109,12 @@
     "rifling": {
       "G": 5.57,
       "G1": 7.06,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.37,
       "i": {
-        "degrees": 1,
-        "minutes": 27,
-        "seconds": 27
+        "degrees": 1.0,
+        "minutes": 27.0,
+        "seconds": 27.0
       },
       "s": 1.64
     }
@@ -124,5 +124,6 @@
   "key": "7_47_gs",
   "name": "7-47 GS",
   "pressureMethod": "Transducer",
-  "published": "2013-05-22"
+  "published": "2013-05-22",
+  "tab": "I"
 }

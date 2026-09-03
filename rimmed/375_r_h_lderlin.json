@@ -17,7 +17,7 @@
     "caseHead": {
       "R": 1.75,
       "R1": 14.95,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -27,9 +27,9 @@
     "junctionCone": {
       "S": 76.61,
       "alpha": {
-        "degrees": 29,
-        "minutes": 5,
-        "seconds": 34
+        "degrees": 29.0,
+        "minutes": 5.0,
+        "seconds": 34.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -38,7 +38,7 @@
       "L1": 53.2,
       "L2": 56.57,
       "L3": 67.5,
-      "L6": 87
+      "L6": 87.0
     },
     "misc": {
       "Fe": 0.1
@@ -48,11 +48,11 @@
       "P2": 12.15
     },
     "pressures": {
-      "EE": 6500,
-      "M": 25,
-      "PE": 4500,
-      "PK": 4140,
-      "Pmax": 3600
+      "EE": 6500.0,
+      "M": 25.0,
+      "PE": 4500.0,
+      "PK": 4140.0,
+      "Pmax": 3600.0
     },
     "projectile": {
       "G1": 9.55,
@@ -66,24 +66,24 @@
     },
     "breech": {
       "R": 1.75,
-      "R1": 15
+      "R1": 15.0
     },
     "collar": {
       "H1": 10.43,
       "H2": 10.42
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 70.16,
       "b": 2.92,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 76.66,
       "alpha": {
-        "degrees": 29,
-        "minutes": 5,
-        "seconds": 34
+        "degrees": 29.0,
+        "minutes": 5.0,
+        "seconds": 34.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -101,10 +101,10 @@
     "rifling": {
       "G": 6.72,
       "G1": 9.56,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.43,
-      "i": 2,
-      "s": 3
+      "i": 2.0,
+      "s": 3.0
     }
   },
   "country": "DE",
@@ -112,5 +112,6 @@
   "key": "375_r_h_lderlin",
   "name": "375 R Hölderlin",
   "pressureMethod": "Transducer",
-  "published": "2007-05-14"
+  "published": "2007-05-14",
+  "tab": "II"
 }

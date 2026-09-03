@@ -18,7 +18,7 @@
       "R": 1.25,
       "R1": 10.85,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -26,7 +26,7 @@
     },
     "lengths": {
       "L3": 17.9,
-      "L6": 28
+      "L6": 28.0
     },
     "misc": {
       "Fe": 0.25
@@ -36,9 +36,9 @@
     },
     "pressures": {
       "M": 10.5,
-      "PE": 884,
-      "PK": 782,
-      "Pmax": 680
+      "PE": 884.0,
+      "PK": 782.0,
+      "Pmax": 680.0
     },
     "projectile": {
       "G1": 9.15,
@@ -58,10 +58,10 @@
       "H2": 9.73
     },
     "grooves": {
-      "N": 7,
+      "N": 7.0,
       "Q": 63.1,
       "b": 1.1,
-      "u": 400
+      "u": 400.0
     },
     "lengths": {
       "L3": 18.2
@@ -72,12 +72,12 @@
     "rifling": {
       "G": 2.08,
       "G1": 9.15,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.29,
       "i": {
-        "degrees": 3,
-        "minutes": 59,
-        "seconds": 41
+        "degrees": 3.0,
+        "minutes": 59.0,
+        "seconds": 41.0
       }
     }
   },
@@ -87,5 +87,6 @@
   "name": "380 Short",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

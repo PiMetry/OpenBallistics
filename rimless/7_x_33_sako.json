@@ -18,12 +18,12 @@
       "E": 3.05,
       "E1": 8.8,
       "R": 1.27,
-      "R1": 10,
-      "beta": 45,
+      "R1": 10.0,
+      "beta": 45.0,
       "delta": {
-        "degrees": 32,
-        "minutes": 42,
-        "seconds": 0
+        "degrees": 32.0,
+        "minutes": 42.0,
+        "seconds": 0.0
       },
       "eMin": 0.9,
       "f": 0.3
@@ -35,9 +35,9 @@
     "junctionCone": {
       "S": 41.35,
       "alpha": {
-        "degrees": 35,
-        "minutes": 56,
-        "seconds": 39
+        "degrees": 35.0,
+        "minutes": 56.0,
+        "seconds": 39.0
       }
     },
     "lengths": {
@@ -57,11 +57,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 1715,
+      "EE": 1715.0,
       "M": 17.5,
-      "PE": 3500,
-      "PK": 3220,
-      "Pmax": 2800
+      "PE": 3500.0,
+      "PK": 3220.0,
+      "Pmax": 2800.0
     },
     "projectile": {
       "G1": 7.26,
@@ -82,17 +82,17 @@
       "H2": 7.93
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 40.15,
       "b": 3.6,
-      "u": 401
+      "u": 401.0
     },
     "junctionCone": {
       "S": 41.69,
       "alpha": {
-        "degrees": 34,
-        "minutes": 59,
-        "seconds": 45
+        "degrees": 34.0,
+        "minutes": 59.0,
+        "seconds": 45.0
       }
     },
     "lengths": {
@@ -108,12 +108,12 @@
     "rifling": {
       "G": 8.07,
       "G1": 7.29,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.32,
       "i": {
-        "degrees": 1,
-        "minutes": 8,
-        "seconds": 44
+        "degrees": 1.0,
+        "minutes": 8.0,
+        "seconds": 44.0
       }
     }
   },
@@ -123,5 +123,6 @@
   "name": "7 x 33 Sako",
   "pressureMethod": "Transducer",
   "published": "1995-03-09",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

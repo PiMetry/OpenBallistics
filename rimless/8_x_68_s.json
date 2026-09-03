@@ -18,14 +18,14 @@
       "E": 3.5,
       "E1": 11.2,
       "R": 1.4,
-      "R1": 13,
-      "beta": 45,
+      "R1": 13.0,
+      "beta": 45.0,
       "delta": {
-        "degrees": 43,
-        "minutes": 42,
-        "seconds": 0
+        "degrees": 43.0,
+        "minutes": 42.0,
+        "seconds": 0.0
       },
-      "eMin": 1,
+      "eMin": 1.0,
       "f": 0.3
     },
     "collar": {
@@ -35,9 +35,9 @@
     "junctionCone": {
       "S": 76.61,
       "alpha": {
-        "degrees": 29,
-        "minutes": 5,
-        "seconds": 34
+        "degrees": 29.0,
+        "minutes": 5.0,
+        "seconds": 34.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -45,11 +45,11 @@
     "lengths": {
       "L1": 53.2,
       "L1Tol": -0.2,
-      "L2": 59,
+      "L2": 59.0,
       "L2Tol": -0.2,
       "L3": 67.5,
       "L4": 70.6,
-      "L6": 87
+      "L6": 87.0
     },
     "misc": {
       "Fe": 0.1
@@ -60,11 +60,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 5975,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 5975.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 8.22,
@@ -86,17 +86,17 @@
       "H2": 9.16
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 51.78,
       "b": 4.4,
-      "u": 280
+      "u": 280.0
     },
     "junctionCone": {
       "S": 76.61,
       "alpha": {
-        "degrees": 29,
-        "minutes": 5,
-        "seconds": 34
+        "degrees": 29.0,
+        "minutes": 5.0,
+        "seconds": 34.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -112,13 +112,13 @@
       "P2": 12.18
     },
     "rifling": {
-      "G": 34,
+      "G": 34.0,
       "G1": 8.23,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 17,
-        "seconds": 11
+        "degrees": 0.0,
+        "minutes": 17.0,
+        "seconds": 11.0
       }
     }
   },
@@ -128,5 +128,6 @@
   "name": "8 x 68 S",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2006-09-19"
+  "revised": "2006-09-19",
+  "tab": "I"
 }

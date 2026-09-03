@@ -10,7 +10,7 @@
       "category": "pistol_round_nose",
       "ogive": "elliptical",
       "tip": "open_meplat",
-      "verified": true
+      "verified": false
     },
     "defaultBulletShape": "rounded",
     "implausible": [],
@@ -22,8 +22,8 @@
       "E1": 10.16,
       "R": 1.24,
       "R1": 12.19,
-      "beta": 35,
-      "delta": 26,
+      "beta": 35.0,
+      "delta": 26.0,
       "eMin": 0.89,
       "f": 0.38
     },
@@ -44,9 +44,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 1690,
-      "PK": 1495,
-      "Pmax": 1300
+      "PE": 1690.0,
+      "PK": 1495.0,
+      "Pmax": 1300.0
     },
     "projectile": {
       "G1": 11.48,
@@ -65,10 +65,10 @@
       "H2": 12.04
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 101.33,
       "b": 3.73,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {},
     "lengths": {
@@ -81,11 +81,11 @@
     "rifling": {
       "G": 2.77,
       "G1": 11.48,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 2,
-        "minutes": 34,
-        "seconds": 59
+        "degrees": 2.0,
+        "minutes": 34.0,
+        "seconds": 59.0
       }
     }
   },
@@ -95,5 +95,6 @@
   "name": "45 Auto",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2020-04-21"
+  "revised": "2020-04-21",
+  "tab": "IV"
 }

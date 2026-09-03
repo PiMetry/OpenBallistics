@@ -18,7 +18,7 @@
       "R": 1.65,
       "R1": 13.34,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.38
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 71.81,
       "alpha": {
-        "degrees": 13,
-        "minutes": 36,
-        "seconds": 0
+        "degrees": 13.0,
+        "minutes": 36.0,
+        "seconds": 0.0
       },
       "r1Min": 17.53,
       "r2": 13.72
@@ -49,11 +49,11 @@
       "P2": 11.54
     },
     "pressures": {
-      "EE": 1945,
+      "EE": 1945.0,
       "M": 17.5,
-      "PE": 1440,
-      "PK": 1323,
-      "Pmax": 1150
+      "PE": 1440.0,
+      "PK": 1323.0,
+      "Pmax": 1150.0
     },
     "projectile": {
       "G1": 10.17,
@@ -74,17 +74,17 @@
       "H2": 10.61
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 80.13,
       "b": 3.14,
-      "u": 914
+      "u": 914.0
     },
     "junctionCone": {
       "S": 71.34,
       "alpha": {
-        "degrees": 13,
-        "minutes": 44,
-        "seconds": 0
+        "degrees": 13.0,
+        "minutes": 44.0,
+        "seconds": 0.0
       },
       "r1Max": 17.53,
       "r2": 13.72
@@ -101,8 +101,8 @@
     "rifling": {
       "G": 1.54,
       "G1": 10.61,
-      "alpha1": 180,
-      "i": 11
+      "alpha1": 180.0,
+      "i": 11.0
     }
   },
   "country": "US",
@@ -111,5 +111,6 @@
   "name": "38-40 Win.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

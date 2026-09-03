@@ -19,8 +19,8 @@
       "E1": 12.7,
       "R": 1.65,
       "R1": 14.73,
-      "beta": 45,
-      "delta": 45,
+      "beta": 45.0,
+      "delta": 45.0,
       "eMin": 1.12,
       "f": 0.25
     },
@@ -30,7 +30,7 @@
     },
     "junctionCone": {
       "S": 75.75,
-      "alpha": 56,
+      "alpha": 56.0,
       "r1Min": 1.02,
       "r2": 3.18
     },
@@ -51,11 +51,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 6400,
-      "M": 25,
-      "PE": 5375,
-      "PK": 4945,
-      "Pmax": 4300
+      "EE": 6400.0,
+      "M": 25.0,
+      "PE": 5375.0,
+      "PK": 4945.0,
+      "Pmax": 4300.0
     },
     "projectile": {
       "G1": 7.82,
@@ -75,14 +75,14 @@
       "H2": 8.64
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 47.45,
-      "b": 3,
-      "u": 254
+      "b": 3.0,
+      "u": 254.0
     },
     "junctionCone": {
       "S": 75.75,
-      "alpha": 56,
+      "alpha": 56.0,
       "r1Max": 0.76,
       "r2": 3.81
     },
@@ -99,12 +99,12 @@
     "rifling": {
       "G": 11.7,
       "G1": 7.85,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.4,
       "i": {
-        "degrees": 1,
-        "minutes": 6,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 6.0,
+        "seconds": 0.0
       },
       "s": 5.72
     }
@@ -114,5 +114,6 @@
   "key": "300_pegasus",
   "name": "300 Pegasus",
   "pressureMethod": "Transducer",
-  "published": "2014-05-20"
+  "published": "2014-05-20",
+  "tab": "I"
 }

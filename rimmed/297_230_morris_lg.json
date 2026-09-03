@@ -27,9 +27,9 @@
     "junctionCone": {
       "S": 19.92,
       "alpha": {
-        "degrees": 36,
-        "minutes": 23,
-        "seconds": 11
+        "degrees": 36.0,
+        "minutes": 23.0,
+        "seconds": 11.0
       }
     },
     "lengths": {
@@ -64,14 +64,14 @@
     },
     "grooves": {
       "Q": 24.28,
-      "u": 255
+      "u": 255.0
     },
     "junctionCone": {
       "S": 19.98,
       "alpha": {
-        "degrees": 36,
-        "minutes": 23,
-        "seconds": 9
+        "degrees": 36.0,
+        "minutes": 23.0,
+        "seconds": 9.0
       }
     },
     "lengths": {
@@ -86,11 +86,11 @@
     "rifling": {
       "G": 3.82,
       "G1": 5.76,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -99,5 +99,6 @@
   "key": "297_230_morris_lg",
   "name": "297/230 Morris lg",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "II"
 }

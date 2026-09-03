@@ -18,7 +18,7 @@
       "R": 1.4,
       "R1": 13.35,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -28,18 +28,18 @@
     "junctionCone": {
       "S": 89.35,
       "alpha": {
-        "degrees": 19,
-        "minutes": 59,
-        "seconds": 42
+        "degrees": 19.0,
+        "minutes": 59.0,
+        "seconds": 42.0
       },
       "r1Min": 0.5,
       "r2": 0.5
     },
     "lengths": {
-      "L1": 59,
+      "L1": 59.0,
       "L2": 66.8,
-      "L3": 75,
-      "L6": 97
+      "L3": 75.0,
+      "L6": 97.0
     },
     "misc": {
       "Fe": 0.1
@@ -49,15 +49,15 @@
       "P2": 10.7
     },
     "pressures": {
-      "EE": 4830,
-      "M": 25,
-      "PE": 5190,
-      "PK": 4773,
-      "Pmax": 4150
+      "EE": 4830.0,
+      "M": 25.0,
+      "PE": 5190.0,
+      "PK": 4773.0,
+      "Pmax": 4150.0
     },
     "projectile": {
       "G1": 7.24,
-      "L3PlusG": 94
+      "L3PlusG": 94.0
     }
   },
   "chamber": {
@@ -74,23 +74,23 @@
       "H2": 7.97
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 40.29,
       "b": 3.7,
-      "u": 240
+      "u": 240.0
     },
     "junctionCone": {
       "S": 89.43,
       "alpha": {
-        "degrees": 19,
-        "minutes": 59,
-        "seconds": 42
+        "degrees": 19.0,
+        "minutes": 59.0,
+        "seconds": 42.0
       },
       "r1Max": 0.5,
       "r2": 0.5
     },
     "lengths": {
-      "L1": 59,
+      "L1": 59.0,
       "L2": 66.8,
       "L3": 75.5
     },
@@ -99,13 +99,13 @@
       "P2": 10.73
     },
     "rifling": {
-      "G": 19,
+      "G": 19.0,
       "G1": 7.36,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 34,
-        "seconds": 22
+        "degrees": 0.0,
+        "minutes": 34.0,
+        "seconds": 22.0
       }
     }
   },
@@ -115,5 +115,6 @@
   "name": "7 x 75 R SE.v.H.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

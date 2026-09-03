@@ -1,0 +1,96 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.14,
+      "E1": 8.79,
+      "R": 1.19,
+      "R1": 9.96,
+      "beta": 55.0,
+      "delta": 35.0,
+      "eMin": 1.14,
+      "f": 0.3
+    },
+    "collar": {
+      "H2": 9.75
+    },
+    "lengths": {
+      "L3": 19.51,
+      "L3Tol": -0.25,
+      "L6": 29.03
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 9.93
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 455.0,
+      "PK": 403.0,
+      "Pmax": 350.0
+    },
+    "projectile": {
+      "G1": 7.72,
+      "L3PlusG": 22.69
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.59,
+      "Z": 7.81
+    },
+    "breech": {
+      "R1": 9.96
+    },
+    "collar": {
+      "H1": 9.86,
+      "H2": 9.82
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 45.92,
+      "b": 1.02,
+      "u": 254.0
+    },
+    "lengths": {
+      "L2": 14.0,
+      "L3": 19.51
+    },
+    "powderChamber": {
+      "E": 3.14,
+      "P1": 9.94
+    },
+    "rifling": {
+      "G": 3.18,
+      "G1": 7.87,
+      "i": {
+        "degrees": 2.0,
+        "minutes": 31.0,
+        "seconds": 15.0
+      }
+    }
+  },
+  "country": "CA",
+  "family": "pistol",
+  "key": "9_mm_fx_cqt",
+  "name": "9 mm FX & CQT",
+  "pressureMethod": "Transducer",
+  "published": "1998-01-27",
+  "revised": "2022-04-26",
+  "tab": "IV"
+}

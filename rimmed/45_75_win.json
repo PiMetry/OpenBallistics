@@ -18,7 +18,7 @@
       "R": 1.63,
       "R1": 15.98,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.3
     },
     "collar": {
@@ -28,13 +28,13 @@
     "junctionCone": {
       "S": 94.23,
       "alpha": {
-        "degrees": 11,
-        "minutes": 42,
-        "seconds": 57
+        "degrees": 11.0,
+        "minutes": 42.0,
+        "seconds": 57.0
       }
     },
     "lengths": {
-      "L1": 26,
+      "L1": 26.0,
       "L2": 33.7,
       "L3": 47.1,
       "L6": 57.28
@@ -44,14 +44,14 @@
     },
     "powderChamber": {
       "P1": 14.2,
-      "P2": 14
+      "P2": 14.0
     },
     "pressures": {
-      "EE": 3700,
-      "M": 25,
-      "PE": 2563,
-      "PK": 2358,
-      "Pmax": 2050
+      "EE": 3700.0,
+      "M": 25.0,
+      "PE": 2563.0,
+      "PK": 2358.0,
+      "Pmax": 2050.0
     },
     "projectile": {
       "G1": 11.66,
@@ -72,17 +72,17 @@
       "H2": 12.29
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 104.25,
       "b": 3.58,
-      "u": 508
+      "u": 508.0
     },
     "junctionCone": {
       "S": 93.78,
       "alpha": {
-        "degrees": 11,
-        "minutes": 50,
-        "seconds": 17
+        "degrees": 11.0,
+        "minutes": 50.0,
+        "seconds": 17.0
       }
     },
     "lengths": {
@@ -97,11 +97,11 @@
     "rifling": {
       "G": 1.38,
       "G1": 11.69,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 5,
-        "minutes": 22,
-        "seconds": 54
+        "degrees": 5.0,
+        "minutes": 22.0,
+        "seconds": 54.0
       }
     }
   },
@@ -111,5 +111,6 @@
   "name": "45-75 Win.",
   "pressureMethod": "Transducer",
   "published": "2007-05-15",
-  "revised": "2008-04-15"
+  "revised": "2008-04-15",
+  "tab": "II"
 }

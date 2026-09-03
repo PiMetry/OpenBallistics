@@ -18,7 +18,7 @@
       "R": 1.35,
       "R1": 9.68,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.36
     },
     "collar": {
@@ -36,9 +36,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 1300,
-      "PK": 1150,
-      "Pmax": 1000
+      "PE": 1300.0,
+      "PK": 1150.0,
+      "Pmax": 1000.0
     },
     "projectile": {
       "G1": 7.97,
@@ -58,10 +58,10 @@
       "H2": 8.13
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 48.39,
       "b": 2.69,
-      "u": 406
+      "u": 406.0
     },
     "lengths": {
       "L3": 33.1
@@ -72,11 +72,11 @@
     "rifling": {
       "G": 2.57,
       "G1": 8.13,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 4,
-        "minutes": 34,
-        "seconds": 59
+        "degrees": 4.0,
+        "minutes": 34.0,
+        "seconds": 59.0
       },
       "s": 0.2
     }
@@ -87,5 +87,6 @@
   "name": "32 Long Colt",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

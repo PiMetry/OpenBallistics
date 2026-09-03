@@ -17,7 +17,7 @@
     "caseHead": {
       "R": 1.65,
       "R1": 15.9,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -26,14 +26,14 @@
     },
     "junctionCone": {
       "S": 72.7,
-      "alpha": 58,
+      "alpha": 58.0,
       "r1Min": 0.5,
       "r2": 1.7
     },
     "lengths": {
       "L1": 60.58,
       "L2": 63.5,
-      "L3": 73,
+      "L3": 73.0,
       "L6": 92.25
     },
     "misc": {
@@ -44,11 +44,11 @@
       "P2": 13.45
     },
     "pressures": {
-      "EE": 7100,
-      "M": 25,
-      "PE": 5125,
-      "PK": 4715,
-      "Pmax": 4100
+      "EE": 7100.0,
+      "M": 25.0,
+      "PE": 5125.0,
+      "PK": 4715.0,
+      "Pmax": 4100.0
     },
     "projectile": {
       "G1": 9.53,
@@ -69,14 +69,14 @@
       "H2": 10.26
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 69.98,
       "b": 2.92,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 72.75,
-      "alpha": 58,
+      "alpha": 58.0,
       "r1Max": 0.3,
       "r2": 1.7
     },
@@ -92,12 +92,12 @@
     "rifling": {
       "G": 11.4,
       "G1": 9.54,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.36,
       "i": {
-        "degrees": 1,
-        "minutes": 46,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 46.0,
+        "seconds": 0.0
       },
       "s": 7.51
     }
@@ -107,5 +107,6 @@
   "key": "375_r_verney_carron",
   "name": "375 R Verney-Carron",
   "pressureMethod": "Transducer",
-  "published": "2010-05-26"
+  "published": "2010-05-26",
+  "tab": "II"
 }

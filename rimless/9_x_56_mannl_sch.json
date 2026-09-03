@@ -19,13 +19,13 @@
       "E1": 10.3,
       "R": 1.2,
       "R1": 11.9,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 36,
-        "minutes": 52,
-        "seconds": 12
+        "degrees": 36.0,
+        "minutes": 52.0,
+        "seconds": 12.0
       },
-      "eMin": 1,
+      "eMin": 1.0,
       "f": 0.3
     },
     "collar": {
@@ -35,9 +35,9 @@
     "junctionCone": {
       "S": 61.97,
       "alpha": {
-        "degrees": 38,
-        "minutes": 6,
-        "seconds": 33
+        "degrees": 38.0,
+        "minutes": 6.0,
+        "seconds": 33.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -45,10 +45,10 @@
     "lengths": {
       "L1": 46.48,
       "L1Tol": -0.2,
-      "L2": 48,
+      "L2": 48.0,
       "L2Tol": -0.2,
       "L3": 56.3,
-      "L6": 81
+      "L6": 81.0
     },
     "misc": {
       "Fe": 0.15
@@ -59,11 +59,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2815,
-      "M": 25,
-      "PE": 2600,
-      "PK": 2392,
-      "Pmax": 2080
+      "EE": 2815.0,
+      "M": 25.0,
+      "PE": 2600.0,
+      "PK": 2392.0,
+      "Pmax": 2080.0
     },
     "projectile": {
       "G1": 9.08,
@@ -84,17 +84,17 @@
       "H2": 9.68
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 64.04,
       "b": 4.4,
-      "u": 280
+      "u": 280.0
     },
     "junctionCone": {
       "S": 61.97,
       "alpha": {
-        "degrees": 38,
-        "minutes": 6,
-        "seconds": 33
+        "degrees": 38.0,
+        "minutes": 6.0,
+        "seconds": 33.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -112,11 +112,11 @@
     "rifling": {
       "G": 15.2,
       "G1": 9.18,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 42,
-        "seconds": 58
+        "degrees": 0.0,
+        "minutes": 42.0,
+        "seconds": 58.0
       }
     }
   },
@@ -126,5 +126,6 @@
   "name": "9 x 56 Mannl. Sch.",
   "pressureMethod": "Transducer",
   "published": "1995-06-28",
-  "revised": "2005-07-01"
+  "revised": "2005-07-01",
+  "tab": "I"
 }

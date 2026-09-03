@@ -33,11 +33,11 @@
       "E1": 9.95,
       "R": 1.5,
       "R1": 11.45,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 74,
-        "minutes": 40,
-        "seconds": 48
+        "degrees": 74.0,
+        "minutes": 40.0,
+        "seconds": 48.0
       },
       "eMin": 1.5,
       "f": 0.3
@@ -49,12 +49,12 @@
     "junctionCone": {
       "S": 45.72,
       "alpha": {
-        "degrees": 48,
-        "minutes": 18,
-        "seconds": 15
+        "degrees": 48.0,
+        "minutes": 18.0,
+        "seconds": 15.0
       },
-      "r1Min": 3,
-      "r2": 2
+      "r1Min": 3.0,
+      "r2": 2.0
     },
     "lengths": {
       "L1": 33.52,
@@ -74,11 +74,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2010,
-      "M": 25,
-      "PE": 4313,
-      "PK": 3968,
-      "Pmax": 3450
+      "EE": 2010.0,
+      "M": 25.0,
+      "PE": 4313.0,
+      "PK": 3968.0,
+      "Pmax": 3450.0
     },
     "projectile": {
       "G1": 6.71,
@@ -98,7 +98,7 @@
       "H2": 7.57
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 34.67,
       "b": 2.42,
       "u": 228.6
@@ -106,12 +106,12 @@
     "junctionCone": {
       "S": 45.67,
       "alpha": {
-        "degrees": 48,
-        "minutes": 10,
-        "seconds": 40
+        "degrees": 48.0,
+        "minutes": 10.0,
+        "seconds": 40.0
       },
-      "r1Max": 3,
-      "r2": 2
+      "r1Max": 3.0,
+      "r2": 2.0
     },
     "lengths": {
       "L1": 33.42,
@@ -126,9 +126,9 @@
     "rifling": {
       "G": 5.62,
       "G1": 6.73,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.42,
-      "i": 3,
+      "i": 3.0,
       "s": 3.43
     }
   },
@@ -137,5 +137,6 @@
   "key": "6_5_mm_lahoz",
   "name": "6,5 mm Lahoz",
   "pressureMethod": "Transducer",
-  "published": "2011-05-25"
+  "published": "2011-05-25",
+  "tab": "I"
 }

@@ -18,7 +18,7 @@
       "R": 1.78,
       "R1": 15.49,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 59.73,
       "alpha": {
-        "degrees": 38,
-        "minutes": 7,
-        "seconds": 59
+        "degrees": 38.0,
+        "minutes": 7.0,
+        "seconds": 59.0
       },
       "r1Min": 0.76,
       "r2": 2.54
@@ -49,11 +49,11 @@
       "P2": 12.32
     },
     "pressures": {
-      "EE": 3640,
-      "M": 25,
-      "PE": 4000,
-      "PK": 3680,
-      "Pmax": 3200
+      "EE": 3640.0,
+      "M": 25.0,
+      "PE": 4000.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
     },
     "projectile": {
       "G1": 8.88,
@@ -74,17 +74,17 @@
       "H2": 9.56
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 60.5,
       "b": 3.05,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 59.92,
       "alpha": {
-        "degrees": 38,
-        "minutes": 19,
-        "seconds": 58
+        "degrees": 38.0,
+        "minutes": 19.0,
+        "seconds": 58.0
       },
       "r1Max": 0.76,
       "r2": 2.54
@@ -101,12 +101,12 @@
     "rifling": {
       "G": 3.25,
       "G1": 8.79,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.39,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -116,5 +116,6 @@
   "name": "348 Win.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

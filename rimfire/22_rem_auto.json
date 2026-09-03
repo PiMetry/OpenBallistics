@@ -34,9 +34,9 @@
     },
     "pressures": {
       "M": 19.27,
-      "PE": 2080,
-      "PK": 1840,
-      "Pmax": 1600
+      "PE": 2080.0,
+      "PK": 1840.0,
+      "Pmax": 1600.0
     },
     "projectile": {
       "G1": 5.8,
@@ -66,12 +66,12 @@
     "rifling": {
       "G": 0.94,
       "G1": 5.74,
-      "alpha1": 60,
+      "alpha1": 60.0,
       "h": 0.4,
       "i": {
-        "degrees": 8,
-        "minutes": 27,
-        "seconds": 29
+        "degrees": 8.0,
+        "minutes": 27.0,
+        "seconds": 29.0
       }
     }
   },
@@ -81,5 +81,6 @@
   "name": "22 Rem. Auto",
   "pressureMethod": "Crusher",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "V"
 }

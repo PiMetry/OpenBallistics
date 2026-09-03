@@ -22,8 +22,8 @@
       "E1": 9.6,
       "R": 1.5,
       "R1": 11.2,
-      "beta": 35,
-      "delta": 45,
+      "beta": 35.0,
+      "delta": 45.0,
       "eMin": 1.19,
       "f": 0.38
     },
@@ -33,7 +33,7 @@
     },
     "junctionCone": {
       "S": 38.68,
-      "alpha": 60,
+      "alpha": 60.0,
       "r1Min": 0.76,
       "r2": 3.18
     },
@@ -54,11 +54,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2250,
+      "EE": 2250.0,
       "M": 17.5,
-      "PE": 5063,
-      "PK": 4658,
-      "Pmax": 4050
+      "PE": 5063.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 5.7,
@@ -78,14 +78,14 @@
       "H2": 6.45
     },
     "grooves": {
-      "N": 6,
-      "Q": 25,
+      "N": 6.0,
+      "Q": 25.0,
       "b": 1.88,
       "u": 177.8
     },
     "junctionCone": {
       "S": 38.67,
-      "alpha": 60,
+      "alpha": 60.0,
       "r1Max": 0.76,
       "r2": 3.18
     },
@@ -104,9 +104,9 @@
       "G1": 5.7,
       "h": 0.37,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 3.71
     }
@@ -116,5 +116,6 @@
   "key": "22_advanced_rifle_cartridge",
   "name": "22 Advanced Rifle Cartridge",
   "pressureMethod": "Transducer",
-  "published": "2024-05-14"
+  "published": "2024-05-14",
+  "tab": "I"
 }

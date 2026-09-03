@@ -18,7 +18,7 @@
       "R": 1.78,
       "R1": 15.44,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.38
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 206.69,
       "alpha": {
-        "degrees": 3,
-        "minutes": 39,
-        "seconds": 21
+        "degrees": 3.0,
+        "minutes": 39.0,
+        "seconds": 21.0
       }
     },
     "lengths": {
@@ -47,11 +47,11 @@
       "P2": 11.21
     },
     "pressures": {
-      "EE": 3300,
-      "M": 25,
-      "PE": 2625,
-      "PK": 2415,
-      "Pmax": 2100
+      "EE": 3300.0,
+      "M": 25.0,
+      "PE": 2625.0,
+      "PK": 2415.0,
+      "Pmax": 2100.0
     },
     "projectile": {
       "G1": 10.31,
@@ -72,17 +72,17 @@
       "H2": 10.88
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 81.92,
       "b": 3.19,
-      "u": 457
+      "u": 457.0
     },
     "junctionCone": {
       "S": 191.49,
       "alpha": {
-        "degrees": 4,
-        "minutes": 1,
-        "seconds": 22
+        "degrees": 4.0,
+        "minutes": 1.0,
+        "seconds": 22.0
       }
     },
     "lengths": {
@@ -97,11 +97,11 @@
     "rifling": {
       "G": 1.29,
       "G1": 10.34,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 4,
-        "minutes": 25,
-        "seconds": 58
+        "degrees": 4.0,
+        "minutes": 25.0,
+        "seconds": 58.0
       }
     }
   },
@@ -110,5 +110,6 @@
   "key": "40_65_win",
   "name": "40-65 Win.",
   "pressureMethod": "Transducer",
-  "published": "2017-05-17"
+  "published": "2017-05-17",
+  "tab": "II"
 }

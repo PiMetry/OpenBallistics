@@ -22,8 +22,8 @@
       "E1": 10.39,
       "R": 1.37,
       "R1": 12.01,
-      "beta": 35,
-      "delta": 36,
+      "beta": 35.0,
+      "delta": 36.0,
       "eMin": 1.4,
       "f": 0.38
     },
@@ -33,7 +33,7 @@
     },
     "junctionCone": {
       "S": 55.46,
-      "alpha": 40,
+      "alpha": 40.0,
       "r1Min": 0.76,
       "r2": 3.18
     },
@@ -55,11 +55,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 3600,
-      "M": 25,
-      "PE": 5188,
-      "PK": 4773,
-      "Pmax": 4150
+      "EE": 3600.0,
+      "M": 25.0,
+      "PE": 5188.0,
+      "PK": 4773.0,
+      "Pmax": 4150.0
     },
     "projectile": {
       "G1": 7.84,
@@ -79,14 +79,14 @@
       "H2": 8.74
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 47.51,
       "b": 4.47,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 55.35,
-      "alpha": 40,
+      "alpha": 40.0,
       "r1Max": 0.76,
       "r2": 3.68
     },
@@ -103,12 +103,12 @@
     "rifling": {
       "G": 6.98,
       "G1": 7.84,
-      "alpha1": 75,
+      "alpha1": 75.0,
       "h": 0.59,
       "i": {
-        "degrees": 2,
-        "minutes": 18,
-        "seconds": 57
+        "degrees": 2.0,
+        "minutes": 18.0,
+        "seconds": 57.0
       },
       "s": 4.26
     }
@@ -118,5 +118,6 @@
   "key": "308_match",
   "name": "308 Match",
   "pressureMethod": "Transducer",
-  "published": "2014-05-20"
+  "published": "2014-05-20",
+  "tab": "I"
 }

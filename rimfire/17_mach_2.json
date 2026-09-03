@@ -25,7 +25,7 @@
     },
     "junctionCone": {
       "S": 22.12,
-      "alpha": 40,
+      "alpha": 40.0,
       "r1Min": 0.25,
       "r2": 1.27
     },
@@ -44,9 +44,9 @@
     },
     "pressures": {
       "M": 6.5,
-      "PE": 2340,
-      "PK": 2070,
-      "Pmax": 1800
+      "PE": 2340.0,
+      "PK": 2070.0,
+      "Pmax": 1800.0
     },
     "projectile": {
       "G1": 4.38,
@@ -68,14 +68,14 @@
       "H2": 4.88
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 14.8,
       "b": 1.57,
       "u": 228.6
     },
     "junctionCone": {
       "S": 22.26,
-      "alpha": 40,
+      "alpha": 40.0,
       "r1Max": 0.64,
       "r2": 1.9
     },
@@ -91,12 +91,12 @@
     "rifling": {
       "G": 3.69,
       "G1": 4.37,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.25,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 1.78
     }
@@ -107,5 +107,6 @@
   "name": "17 Mach 2",
   "pressureMethod": "Transducer",
   "published": "2004-09-27",
-  "revised": "2012-09-25"
+  "revised": "2012-09-25",
+  "tab": "V"
 }
