@@ -2,11 +2,22 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+// What readers have confirmed against the sheets, promoted once three of them agree.
+//
+// The confirmations are written to `verifications.json` at the repository root -- one entry per
+// record, saying what was confirmed and by whom -- and **not into the records**. The records are
+// produced upstream (BallisticViz's `build_dist.py`) and copied here by its sync, which mirrors
+// them exactly; a flag written into a record here would be overwritten by the next sync. The
+// upstream build reads this file instead and merges each entry into the record's `annotations`
+// (`confidence: verified`, `defaultBullet.verified`), so the round trip closes: confirm here,
+// build there, sync back with the flag in place.
+
 const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, '..', '..');
 const families = ['belted', 'pistol', 'rimfire', 'rimless', 'rimmed', 'shotshell'];
 const issuesPath = process.argv[2] ?? join(root, 'verification-issues.json');
 const summaryPath = process.argv[3] ?? join(root, 'verification-pr.md');
+const verificationsPath = join(root, 'verifications.json');
 const threshold = 3;
 
 // A field's value from a GitHub issue-form body: the block under its `### <label>` heading, read
@@ -25,17 +36,16 @@ function field(body, label) {
   return (end === -1 ? rest : rest.slice(0, end)).trim();
 }
 
-async function recordPath(key) {
+async function recordExists(key) {
   for (const family of families) {
-    const candidate = join(root, family, `${key}.json`);
     try {
-      await readFile(candidate);
-      return candidate;
+      await readFile(join(root, family, `${key}.json`));
+      return true;
     } catch {
       // The key can belong to any case family.
     }
   }
-  return null;
+  return false;
 }
 
 const issues = JSON.parse(await readFile(issuesPath, 'utf8'));
@@ -54,30 +64,36 @@ for (const issue of issues) {
   confirmations.set(groupKey, group);
 }
 
+let verifications = {};
+try {
+  verifications = JSON.parse(await readFile(verificationsPath, 'utf8'));
+} catch {
+  // No confirmations yet.
+}
+
 const changes = [];
 for (const group of confirmations.values()) {
   if (group.users.size < threshold) continue;
+  if (!(await recordExists(group.key))) continue;
 
-  const path = await recordPath(group.key);
-  if (!path) continue;
-  const record = JSON.parse(await readFile(path, 'utf8'));
-  record.annotations ??= {};
-
-  if (group.target === 'cartridge') {
-    if (record.annotations.confidence === 'verified') continue;
-    record.annotations.confidence = 'verified';
-  } else {
-    if (!record.annotations.defaultBullet || record.annotations.defaultBullet.verified === true) continue;
-    record.annotations.defaultBullet.verified = true;
-  }
-
-  await writeFile(path, `${JSON.stringify(record, null, 2)}\n`, 'utf8');
+  const entry = (verifications[group.key] ??= {});
+  if (entry[group.target] === true) continue;
+  entry[group.target] = true;
+  entry.by = [...new Set([...(entry.by ?? []), ...group.users.keys()])].sort();
+  entry.issues = [
+    ...new Set([...(entry.issues ?? []), ...[...group.users.values()].map((issue) => `#${issue.number}`)])
+  ];
   changes.push({
-    path: path.slice(root.length + 1).replaceAll('\\', '/'),
+    key: group.key,
     target: group.target,
     users: [...group.users.keys()],
     issues: [...group.users.values()].map((issue) => `#${issue.number}`)
   });
+}
+
+if (changes.length) {
+  const sorted = Object.fromEntries(Object.entries(verifications).sort(([a], [b]) => a.localeCompare(b)));
+  await writeFile(verificationsPath, `${JSON.stringify(sorted, null, 2)}\n`, 'utf8');
 }
 
 const lines = [
@@ -86,8 +102,10 @@ const lines = [
   'These records reached three independent GitHub contributors through verification issues:',
   '',
   ...changes.map(
-    (change) => `- ${'`'}${change.path}${'`'}: ${change.target} verified by ${change.users.map((user) => `@${user}`).join(', ')} (${change.issues.join(', ')})`
+    (change) => `- ${'`'}${change.key}${'`'}: ${change.target} verified by ${change.users.map((user) => `@${user}`).join(', ')} (${change.issues.join(', ')})`
   ),
+  '',
+  'Recorded in `verifications.json`; the upstream build merges it into the records on the next sync.',
   ''
 ];
 await writeFile(summaryPath, lines.join('\n'), 'utf8');

@@ -1,0 +1,16 @@
+{
+  "22_long_rifle_shot_claybirding": "shot loading in a rimfire case, no bullet",
+  "22_long_shot": "shot loading in a rimfire case, no bullet",
+  "357_magnum_carb": "carbine test-barrel record duplicating 357 Magnum; chamber side only",
+  "38_357_fx": "marking round (Simunition FX), not a bullet",
+  "38_special_carb": "carbine test-barrel record duplicating 38 Special; chamber side only",
+  "44_rem_mag_carb": "carbine test-barrel record duplicating 44 Rem. Mag.; chamber side only",
+  "44_s_w_special_carb": "carbine test-barrel record duplicating 44 S&W Special; chamber side only",
+  "45_colt_carb": "carbine test-barrel record duplicating 45 Colt; chamber side only",
+  "45_s_w_schofield_carb": "carbine test-barrel record duplicating 45 S&W Schofield; chamber side only",
+  "5_6_mm_flobert_plombs_dc": "Flobert shot loading (a plombs is 'with shot'), no bullet",
+  "5_6_mm_flobert_plombs_sc": "Flobert shot loading, no bullet",
+  "9_mm_fx_cqt": "marking / close-quarter training round (Simunition FX and CQT), not a bullet",
+  "9mm_flobert_plombs_carton": "Flobert shot loading, no bullet",
+  "9mm_flobert_plombs_metal": "Flobert shot loading, no bullet"
+}

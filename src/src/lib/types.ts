@@ -24,7 +24,7 @@ export interface Record_ {
   revised?: string | null;
   cartridge: Record<string, Group | GroupList>;
   chamber: Record<string, Group | GroupList>;
-  /** Not CIP's: what this dataset added. See cartridges/README.md. */
+  /** Not CIP's: what this dataset added, under its own key so the standard can be taken without it. */
   annotations?: {
     category?: string;
     primerType?: string;
