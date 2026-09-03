@@ -1,0 +1,78 @@
+name: Something is wrong with this cartridge
+description: A value, a drawing, a bullet or a classification that disagrees with the C.I.P. sheet or with the cartridge itself.
+title: "Data: "
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for checking. **36 of the 540 records have been confirmed against their C.I.P.
+        sheet by a person**, and the rest have not; each cartridge page says which it is. The
+        drawings are rendered from the numbers, and the projectile on them is a default chosen per
+        cartridge. A report that names its source is the most useful thing anyone can send.
+
+        If you arrived here from the site, the cartridge and the page link are already filled in.
+  - type: input
+    id: cartridge
+    attributes:
+      label: Cartridge
+      description: Its name and key, e.g. `308 Win. (308_win)`.
+    validations:
+      required: true
+  - type: checkboxes
+    id: what
+    attributes:
+      label: What is wrong
+      description: Tick everything that applies. The fields below ask for the details.
+      options:
+        - label: A dimension is wrong (a number differs from the sheet)
+        - label: A dimension is missing (the sheet publishes it, the record does not)
+        - label: The case drawing is wrong (rim, groove, belt, shoulder, neck or mouth drawn wrongly)
+        - label: A section line is wrong, missing or extra
+        - label: The bullet is the wrong shape (pointed, round, flat, wadcutter…)
+        - label: The bullet is the wrong size (how far it stands out, or its diameter)
+        - label: The bullet's material or colour is wrong
+        - label: The name or an alternative name is wrong
+        - label: The family or table is wrong (rimless, rimmed, belted, pistol, rimfire, shotshell)
+        - label: The primer type or category annotation is wrong
+        - label: This cartridge should not be on the site (blank, marking, shot loading, dummy…)
+        - label: A cartridge is missing (use the "Add a cartridge" form instead)
+        - label: Something else (say what below)
+  - type: input
+    id: field
+    attributes:
+      label: Which field
+      description: For a dimension, the C.I.P. column, e.g. `cartridge.lengths.L3` or just `L3`. Leave empty for a drawing fault.
+  - type: input
+    id: published
+    attributes:
+      label: What the data or the drawing shows
+      description: The value as published, or what the drawing shows, e.g. `51.18`, `a round nose`, `no line at the belt`.
+  - type: input
+    id: expected
+    attributes:
+      label: What it should be
+      description: e.g. `51.20`, `a pointed bullet`, `a line at E = 3.85`.
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: >
+        Anything that helps: which part of the drawing, which view (card, cartridge page,
+        technical drawing), what you compared it against. For a bullet report, say which loading
+        you have in mind if the shape is a matter of choice rather than of the sheet.
+  - type: textarea
+    id: source
+    attributes:
+      label: Where you are reading that from
+      description: >
+        The single most useful part. The C.I.P. sheet for this cartridge, a revision date, a
+        measurement, a manufacturer's drawing — anything that lets the report be checked rather
+        than taken on trust. A claim about the data has to be checkable against the source.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The page you were looking at.
