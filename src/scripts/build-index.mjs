@@ -33,19 +33,20 @@ const OUT = join(here, '..', 'src', 'lib', 'index.generated.json');
  */
 async function drawings() {
   const sizes = new Map();
-  let files;
-  try {
-    files = await readdir(OUTLINES);
-  } catch {
-    console.warn('index: no public/outlines -- cards will fall back to the dimension outline');
-    return sizes;
-  }
-  for (const file of files) {
-    if (!file.endsWith('.svg')) continue;
-    const head = (await readFile(join(OUTLINES, file), 'utf8')).slice(0, 400);
-    const w = /width="([\d.]+)"/.exec(head);
-    const h = /height="([\d.]+)"/.exec(head);
-    if (w && h) sizes.set(file.slice(0, -4), [Number(w[1]), Number(h[1])]);
+  for (const family of FAMILIES) {
+    let files;
+    try {
+      files = await readdir(join(OUTLINES, family));
+    } catch {
+      continue;
+    }
+    for (const file of files) {
+      if (!file.endsWith('.svg')) continue;
+      const head = (await readFile(join(OUTLINES, family, file), 'utf8')).slice(0, 400);
+      const w = /width="([\d.]+)"/.exec(head);
+      const h = /height="([\d.]+)"/.exec(head);
+      if (w && h) sizes.set(`${family}/${file.slice(0, -4)}`, [Number(w[1]), Number(h[1])]);
+    }
   }
   return sizes;
 }
@@ -70,6 +71,11 @@ function length(record) {
     return values.length ? Math.max(...values) : null;
   }
   return lengths.L3 ?? null;
+}
+
+function overallLength(record) {
+  const lengths = record.cartridge?.lengths;
+  return lengths && !Array.isArray(lengths) ? (lengths.L6 ?? null) : null;
 }
 
 /**
@@ -147,15 +153,17 @@ for (const family of families) {
       // Two dimensions, so the list can be sorted and scanned without opening anything: the case
       // length and the bullet diameter are what identifies a cartridge to a reader at a glance.
       L3: length(record),
+      L6: overallLength(record),
       G1: cartridge.projectile?.G1 ?? null,
       // The size of the drawing shipped for this cartridge, in millimetres, or null where there is
       // none. `shape` is the fallback the card draws itself; see below for what it does not carry.
-      svg: sizes.get(record.key) ?? null,
+      svg: sizes.get(`${record.family}/${record.key}`) ?? null,
       shape: shape(record),
       // How far the record can be trusted, and how many findings nothing explains. Both come
       // from the dataset's own annotations (see cartridges/README.md); the card shows the one
       // word, the cartridge page lists the findings.
       confidence: record.annotations?.confidence ?? 'unverified',
+      checks: (record.annotations?.implausible ?? []).length,
       warnings: (record.annotations?.implausible ?? []).filter((f) => !f.known).length,
       // The second verification: the drawn bullet's nose form, held against the drawing by a
       // person or not. Independent of the numbers' confidence.
