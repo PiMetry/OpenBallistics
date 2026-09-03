@@ -25,7 +25,7 @@ jobs:
     # must be "GitHub Actions" rather than the gh-pages branch.
     defaults:
       run:
-        working-directory: browser
+        working-directory: src
     steps:
       - uses: actions/checkout@v4
 
@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: browser/package-lock.json
+          cache-dependency-path: src/package-lock.json
 
       - run: npm ci
 
@@ -43,8 +43,8 @@ jobs:
       # served from the root, so it gets '/' instead.
       #
       # Note this is the *repository* name, not the site's directory: the site is served from the
-      # root of the Pages deployment regardless of living in `browser/` here, because the workflow
-      # uploads `browser/dist` as the whole artifact.
+      # root of the Pages deployment regardless of living in `src/` here, because the workflow
+      # uploads `src/dist` as the whole artifact.
       - name: Resolve the Pages base path
         id: base
         run: |
@@ -67,7 +67,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: browser/dist
+          path: src/dist
 
   deploy:
     needs: build
