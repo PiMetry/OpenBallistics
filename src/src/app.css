@@ -148,6 +148,36 @@ select {
   overflow-x: auto;
 }
 
+/* Paper is white whatever the screen is set to.
+
+   The print rules set the body black on white, but they left the tokens alone -- so a reader in
+   dark mode printed a page whose every token-coloured label (the dt names, the units, the group
+   headings, the tolerances) kept a pale grey chosen to sit on a dark background, and on paper it
+   was barely there. The palette goes back to its light values for print, under both the explicit
+   dark theme and the system one, so that a printout is the same sheet whoever prints it. */
+@media print {
+  :root,
+  :root[data-theme='dark'] {
+    --paper: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #ffffff;
+    --ink: #1b1a18;
+    --ink-2: #59554e;
+    --ink-3: #8b867d;
+    --rule: #dedad2;
+    --rule-strong: #bab5aa;
+    --accent: #2f5d7c;
+    --accent-ink: #ffffff;
+    --accent-soft: #e6eef4;
+    --ok: #2f7a3f;
+    --ok-soft: #e5f3e8;
+    --warn: #8a5a00;
+    --warn-soft: #fff3d6;
+    --alert: #a32d2d;
+    --alert-soft: #fbe9e7;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;

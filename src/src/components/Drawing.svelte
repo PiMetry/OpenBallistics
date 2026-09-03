@@ -1,6 +1,6 @@
 <script lang="ts">
   import Silhouette from './Silhouette.svelte';
-  import type { Entry } from '../lib/types';
+  import type { Drawing, Entry } from '../lib/types';
 
   /**
    * The cartridge as a picture.
@@ -16,6 +16,11 @@
    * Six records publish too little to draw. Those fall back to `Silhouette`, which builds an
    * outline from the dimensions in the index, a skeleton, and honest about being one.
    *
+   * A cartridge is more than one drawing: of itself or of the chamber it is fired in, rendered or
+   * dimensioned, and -- where it is a shot cartridge, which is a family rather than a cartridge --
+   * at each published hull length. Pass `drawing` to show one of them; with none passed this is
+   * the cartridge's own drawing, which is what a card in the list shows.
+   *
    * The drawing also carries its own extent in millimetres, as `--mm-w` and `--mm-h`, which is
    * what the cartridge page's print rules size it by. On screen a millimetre is a convention;
    * on paper it is a millimetre, so the printed sheet is the one place the drawing is life size
@@ -29,23 +34,47 @@
     entry: Entry;
     scale: number;
     height: number;
+    /**
+     * Which of the cartridge's drawings to show -- the one the cartridge page's toggles resolved
+     * to. Left unset everywhere else, and then this is the cartridge's own drawing.
+     */
+    drawing?: Drawing | null;
+    /**
+     * Fetch the drawing straight away rather than when it scrolls into view. For the copies the
+     * print sheet uses: they are hidden on screen, and a lazy image that is hidden is an image the
+     * browser has every right not to have fetched by the time somebody prints.
+     */
+    eager?: boolean;
   }
-  let { entry, scale, height }: Props = $props();
+  let { entry, scale, height, drawing = null, eager = false }: Props = $props();
 
-  const url = $derived(`${import.meta.env.BASE_URL}outlines/${entry.family}/${entry.key}.svg`);
+  const size = $derived(drawing?.svg ?? entry.svg);
+  const url = $derived(
+    `${import.meta.env.BASE_URL}outlines/${entry.family}/${drawing ? drawing.file : `${entry.key}.svg`}`
+  );
+  /** Named for what it shows, so a screen reader is told which of several drawings this is. */
+  const alt = $derived(
+    [
+      entry.name,
+      drawing?.marking ? ` in ${drawing.marking}` : '',
+      drawing?.subject === 'chamber' ? ' chamber' : '',
+      drawing?.style === 'technical' ? ', technical drawing' : '',
+      ', drawn to scale'
+    ].join('')
+  );
 </script>
 
-{#if entry.svg}
+{#if size}
   <img
     class="drawing"
     src={url}
-    alt={`${entry.name}, drawn to scale`}
-    loading="lazy"
+    {alt}
+    loading={eager ? 'eager' : 'lazy'}
     decoding="async"
     draggable="false"
-    width={entry.svg[0] * scale}
-    height={entry.svg[1] * scale}
-    style={`width:${(entry.svg[0] * scale).toFixed(1)}px;--mm-w:${entry.svg[0]};--mm-h:${entry.svg[1]}`}
+    width={size[0] * scale}
+    height={size[1] * scale}
+    style={`width:${(size[0] * scale).toFixed(1)}px;--mm-w:${size[0]};--mm-h:${size[1]}`}
   />
 {:else}
   <Silhouette shape={entry.shape} {scale} {height} label={`${entry.name} case outline`} />

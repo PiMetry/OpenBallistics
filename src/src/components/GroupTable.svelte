@@ -13,8 +13,16 @@
     side: 'cartridge' | 'chamber';
     heading: string;
     groups: Record<string, Group | GroupList>;
+    /**
+     * The marking of the hull length the reader has picked, where the cartridge publishes several.
+     * A shot cartridge's two repeating groups are the same list read from either side -- the hull
+     * lengths and the chambers cut for them -- and both name each row with the same marking, so
+     * picking 12/70 marks the row in both tables and the reader can read one cartridge across the
+     * page instead of counting rows down two of them.
+     */
+    selected?: string | null;
   }
-  let { side, heading, groups }: Props = $props();
+  let { side, heading, groups, selected = null }: Props = $props();
 
   function label(field: string): string {
     return FIELD_LABELS[field] ?? field;
@@ -69,7 +77,7 @@
           </thead>
           <tbody>
             {#each group as row, index (index)}
-              <tr>
+              <tr class:selected={selected !== null && row.marking === selected}>
                 {#each columns as column (column)}
                   {@const shown = formatValue((row[column] ?? null) as Value)}
                   <td class="num" class:silent={shown === null}>{shown ?? '-'}</td>
@@ -188,5 +196,24 @@
   }
   td {
     font-weight: 500;
+  }
+  /* The picked length, in both tables. Marked with weight and a rule rather than a fill, so that
+     it survives a print, where backgrounds are dropped by default. */
+  tbody tr.selected td {
+    color: var(--ink);
+    font-weight: 700;
+    background: var(--accent-soft);
+    box-shadow: inset 0 -1px 0 var(--accent), inset 0 1px 0 var(--accent);
+  }
+  tbody tr.selected td:first-child {
+    box-shadow: inset 0 -1px 0 var(--accent), inset 0 1px 0 var(--accent),
+      inset 2px 0 0 var(--accent);
+  }
+  @media print {
+    tbody tr.selected td {
+      background: transparent;
+      box-shadow: none;
+      text-decoration: underline;
+    }
   }
 </style>

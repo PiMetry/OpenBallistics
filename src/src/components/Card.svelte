@@ -1,7 +1,14 @@
 <script lang="ts">
   import Drawing from './Drawing.svelte';
   import { href } from '../lib/router';
-  import { CONFIDENCE_LABELS, FAMILY_LABELS, type Entry } from '../lib/types';
+  import {
+    FAMILY_LABELS,
+    tally,
+    verificationState,
+    verificationSummary,
+    VERIFICATION_LABELS,
+    type Entry
+  } from '../lib/types';
 
   interface Props {
     entry: Entry;
@@ -10,6 +17,11 @@
     height?: number;
   }
   let { entry, scale, height = 78 }: Props = $props();
+
+  const counted = $derived(tally(entry.verified));
+  // Named `level` rather than `state`: a top-level `state` would turn every `$state`
+  // rune in this file into a store read of it.
+  const level = $derived(verificationState(entry.verified));
   let drawing: HTMLSpanElement;
   let dragging = $state(false);
   let dragged = $state(false);
@@ -92,32 +104,30 @@
     <span class="chip">{FAMILY_LABELS[entry.family] ?? entry.family}</span>
     {#if entry.country}<span class="chip quiet num">{entry.country}</span>{/if}
     <!--
-      How far the numbers can be trusted, said on every card so that the grid never reads as
-      uniformly authoritative: a verified record earns a tick, an unverified one says so quietly,
-      and a record with a plausibility finding nothing explains carries a small warning with the
-      count. The cartridge page lists what the finding is.
+      How far the record can be trusted, said on every card so that the grid never reads as
+      uniformly authoritative.
+
+      Five things can be confirmed about a record and the card has room for none of them by name,
+      so it shows the count and hands the names to the hover. A count is the honest summary here:
+      "3 of 4 verified" says both that somebody has been through this record and that they have not
+      finished, which neither a tick nor the word "unverified" manages on its own.
     -->
-    <span
-      class="chip confidence {entry.checks ? 'implausible' : entry.confidence}"
-      title={entry.checks
-        ? `${entry.checks} check${entry.checks === 1 ? '' : 's'} found; see the cartridge page`
-        : entry.confidence === 'verified'
-          ? 'Confirmed by a person'
-          : 'Not yet confirmed by a person'}
-    >
-      {#if entry.checks}⚠ Cartridge {CONFIDENCE_LABELS.implausible} ({entry.checks})
-      {:else if entry.confidence === 'verified'}✓ Cartridge {CONFIDENCE_LABELS.verified}
-      {:else}Cartridge {CONFIDENCE_LABELS.unverified}{/if}
+    <span class="chip confidence {level}" title={verificationSummary(entry.verified)}>
+      {#if level === 'full'}✓ {VERIFICATION_LABELS.full}
+      {:else if level === 'partial'}{counted.done} of {counted.total} verified
+      {:else}{VERIFICATION_LABELS.none}{/if}
     </span>
-    <!-- The second verification, for the drawn bullet's nose form rather than the numbers. -->
-    {#if entry.svg}
+    <!--
+      Separate from the count, because it is a different kind of statement: not "nobody has checked
+      this" but "a rule fired on it and nothing accounts for that". Only the unexplained ones; a
+      finding the dataset explains has been dealt with.
+    -->
+    {#if entry.warnings}
       <span
-        class="chip confidence {entry.bulletVerified ? 'verified' : 'unverified'}"
-        title={entry.bulletVerified
-          ? 'The bullet type has been confirmed against the drawing by a person'
-          : 'The bullet type is a default, not yet confirmed by a person'}
+        class="chip confidence implausible"
+        title={`${entry.warnings} plausibility finding${entry.warnings === 1 ? '' : 's'} nothing explains; see the cartridge page`}
       >
-        {#if entry.bulletVerified}✓ Bullet verified{:else}Bullet unverified{/if}
+        ⚠ {entry.warnings} check{entry.warnings === 1 ? '' : 's'}
       </span>
     {/if}
   </span>
@@ -210,12 +220,19 @@
     background: var(--surface-2);
     color: var(--ink-2);
   }
-  .confidence.verified {
+  .confidence.full {
     color: var(--ok, #2f7a3f);
     border-color: currentColor;
     background: var(--ok-soft);
   }
-  .confidence.unverified {
+  /* Partly verified is its own state and reads as one: not the green of finished, not the grey of
+     untouched. */
+  .confidence.partial {
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-color: currentColor;
+  }
+  .confidence.none {
     color: var(--ink-3);
     background: var(--surface-2);
     border-color: var(--rule);

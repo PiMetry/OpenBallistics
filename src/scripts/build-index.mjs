@@ -21,43 +21,103 @@ const OUTLINES = join(here, '..', 'public', 'outlines');
 const OUT = join(here, '..', 'src', 'lib', 'index.generated.json');
 
 /**
- * The size, in millimetres, of the drawing shipped for each cartridge.
+ * The size, in millimetres, of a drawing, read off its root element.
  *
  * The drawings are rendered upstream by BallisticViz and vendored into the repository's `svg/`
- * directory. Each one carries its own extent on its root element -- `width` and `height` in
- * millimetres, with the viewBox in the renderer's own units -- so a page laying several out at one
- * scale can size them without loading them first. The build copies them to `public/outlines/` for
- * the deployed app and reads the same source files for the index.
+ * directory. Each one carries its own extent there -- `width` and `height` in millimetres, with
+ * the viewBox in the renderer's own units -- so a page laying several out at one scale can size
+ * them without loading them first.
+ */
+async function extent(file) {
+  const head = (await readFile(file, 'utf8')).slice(0, 400);
+  const w = /width="([\d.]+)"/.exec(head);
+  const h = /height="([\d.]+)"/.exec(head);
+  return w && h ? [Number(w[1]), Number(h[1])] : null;
+}
+
+/**
+ * The drawings shipped for each cartridge.
  *
- * A cartridge with no drawing is simply absent: 6 records publish too little to draw, and the
- * card falls back to the outline it can build from the dimensions themselves.
+ * `svg/<family>/<key>.svg` is the cartridge's own drawing: one picture, which is what a card in
+ * the list shows and what a cartridge page opens at. Every one shipped so far is the same kind of
+ * picture -- the renderer titles them `<name> - visual` -- of the cartridge, at one length.
+ *
+ * A cartridge is more than one drawing along three axes, and `svg/<family>/<key>/`, a directory
+ * beside that file, holds the rest:
+ *
+ * - **subject**: the cartridge, or the chamber it is fired in. Two drawings of one standard; the
+ *   tables have always shown both sides and the picture showed one.
+ * - **style**: `visual`, the rendered object, or `technical`, the dimensioned drawing. The same
+ *   geometry answering two different questions -- what is it, and what are its numbers.
+ * - **length**: a shot cartridge is published at several hull lengths (a 12 gauge at nine, from
+ *   12/35 to 12/89) and a single drawing can only be at one of them.
+ *
+ * Which is which is read off the path: every directory name and every `_`- or `-`-separated word
+ * of the file name is a token, and `chamber`, `cartridge`, `technical`/`tech` and `visual` name an
+ * axis. So all of `technical/12_70.svg`, `12_70_technical.svg` and `chamber/technical/12_70.svg`
+ * say what they are, and an export is not held to one shape. What is left over names the length.
+ *
+ * All of it is optional. Absent the directory the page shows the one drawing, as it always did,
+ * and a toggle appears only for a kind that has actually been drawn.
+ *
+ * The build copies both to `public/outlines/` for the deployed app and reads the same source files
+ * for the index. A cartridge with no drawing at all is simply absent: 6 records publish too little
+ * to draw, and the card falls back to the outline it can build from the dimensions themselves.
  */
 async function drawings() {
   const sizes = new Map();
+  const extra = new Map();
+
+  // The directory is walked rather than listed, so a drawing may be filed under `technical/` or
+  // named `..._technical.svg` and mean the same thing.
+  async function walk(family, key, within) {
+    const found = [];
+    const dir = join(SVG, family, key, within);
+    for (const item of (await readdir(dir, { withFileTypes: true })).sort((a, b) =>
+      a.name.localeCompare(b.name)
+    )) {
+      const relative = within ? `${within}/${item.name}` : item.name;
+      if (item.isDirectory()) {
+        found.push(...(await walk(family, key, relative)));
+        continue;
+      }
+      if (!item.name.endsWith('.svg')) continue;
+      const svg = await extent(join(dir, item.name));
+      if (!svg) continue;
+      await mkdir(dirname(join(OUTLINES, family, key, relative)), { recursive: true });
+      await cp(join(dir, item.name), join(OUTLINES, family, key, relative));
+      // Kept as a path under the family, which is how a page addresses either kind.
+      found.push({ file: `${key}/${relative}`, tokens: tokens(relative), svg });
+    }
+    return found;
+  }
+
   for (const family of FAMILIES) {
-    let files;
+    let items;
     try {
-      files = await readdir(join(SVG, family));
+      items = await readdir(join(SVG, family), { withFileTypes: true });
     } catch {
       continue;
     }
-    for (const file of files) {
-      if (!file.endsWith('.svg')) continue;
-      const source = join(SVG, family, file);
-      const head = (await readFile(source, 'utf8')).slice(0, 400);
-      const w = /width="([\d.]+)"/.exec(head);
-      const h = /height="([\d.]+)"/.exec(head);
-      if (w && h) {
-        await mkdir(join(OUTLINES, family), { recursive: true });
-        await cp(source, join(OUTLINES, family, file));
-        sizes.set(`${family}/${file.slice(0, -4)}`, [Number(w[1]), Number(h[1])]);
+    for (const item of items) {
+      if (item.isDirectory()) {
+        const found = await walk(family, item.name, '');
+        if (found.length) extra.set(`${family}/${item.name}`, found);
+        continue;
       }
+      if (!item.name.endsWith('.svg')) continue;
+      const source = join(SVG, family, item.name);
+      const svg = await extent(source);
+      if (!svg) continue;
+      await mkdir(join(OUTLINES, family), { recursive: true });
+      await cp(source, join(OUTLINES, family, item.name));
+      sizes.set(`${family}/${item.name.slice(0, -4)}`, svg);
     }
   }
-  return sizes;
+  return { sizes, extra };
 }
 
-const sizes = await drawings();
+const { sizes, extra } = await drawings();
 
 const families = [...FAMILIES].sort();
 
@@ -82,6 +142,177 @@ function length(record) {
 function overallLength(record) {
   const lengths = record.cartridge?.lengths;
   return lengths && !Array.isArray(lengths) ? (lengths.L6 ?? null) : null;
+}
+
+/** A name written the way the dataset spells its keys: lower case, one underscore per gap. */
+function slug(text) {
+  return String(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '');
+}
+
+/** Every word of a drawing's path, which is where its subject, style and length are written. */
+function tokens(path) {
+  return slug(path.replace(/\.svg$/, '')).split('_').filter(Boolean);
+}
+
+/** The words that name an axis. Everything else in a path names the length. */
+const SUBJECTS = new Map([
+  ['cartridge', 'cartridge'],
+  ['chamber', 'chamber']
+]);
+const STYLES = new Map([
+  ['visual', 'visual'],
+  ['technical', 'technical'],
+  ['tech', 'technical']
+]);
+
+/**
+ * What a drawing is, read off the words in its path.
+ *
+ * The defaults are what every drawing shipped so far is -- the cartridge, drawn visually, which is
+ * the word the renderer titles them with -- so a file that says nothing is that, and `12_70.svg`
+ * still means what it meant before there was anything else for it to mean.
+ */
+function kind(words) {
+  let subject = 'cartridge';
+  let style = 'visual';
+  const rest = [];
+  for (const word of words) {
+    if (SUBJECTS.has(word)) subject = SUBJECTS.get(word);
+    else if (STYLES.has(word)) style = STYLES.get(word);
+    else rest.push(word);
+  }
+  return { subject, style, name: rest.join('_') };
+}
+
+/**
+ * How much wider than the hull a drawing of it may be, in millimetres.
+ *
+ * The renderer draws the hull plus a small constant margin -- 0.8 mm in every drawing shipped so
+ * far -- so a drawing is always a little wider than the length it is drawn at and never narrower.
+ * That is enough to tell nine drawings of a 12 gauge apart without trusting their file names, as
+ * long as the margin stays under the gap between two published lengths; the closest pair in the
+ * dataset is 1.5 mm apart (63.5 and 65.0), so this is held below that.
+ *
+ * It holds only for a visual drawing of the cartridge, which is the only kind it was measured on.
+ * A technical drawing is as wide as its dimension lines and its text, and a chamber is as long as
+ * the barrel it is sectioned from; neither width is the hull's. Those name their length or they
+ * are reported and left out.
+ */
+const DRAWING_MARGIN = 1.4;
+
+/**
+ * Every drawing shipped for a cartridge, each with what it is a drawing of.
+ *
+ * The three axes are read from the path by `kind`; what is left over names the length, matched
+ * against the markings the sheet prints -- `12_70.svg` or `70.svg` for the 12/70. A visual drawing
+ * of the cartridge that names no length is matched on its width instead, which is what lets the
+ * cartridge's own `<key>.svg` take its place among the lengths without being renamed.
+ *
+ * A length may be claimed once per kind: a cartridge and a chamber are both drawn at 12/70 and
+ * neither is the other. `<key>.svg` is offered last and only for a length nothing else has taken,
+ * so it never doubles a drawing that came out of the directory. Whichever drawing ends up at that
+ * length is flagged `main`: it is the picture the card in the list shows, and so the one the
+ * cartridge page opens at, whether it came from the file or from the directory that displaced it.
+ *
+ * A drawing whose length cannot be told is reported rather than filed under a guess -- on a 12
+ * gauge that would put a picture of one cartridge under the name of another. Returns `null` where
+ * there is nothing to say beyond "there is one drawing", which is most of the dataset.
+ */
+function cartridgeDrawings(record, files, single) {
+  const published = record.cartridge?.lengths;
+  const rows = Array.isArray(published)
+    ? published
+        .map((entry, index) => ({ index, l: entry.l, marking: entry.marking ?? null }))
+        .filter((row) => typeof row.l === 'number')
+    : [];
+  const many = rows.length > 1;
+
+  const taken = new Set();
+  const free = (what, row) => !taken.has(`${what.subject}|${what.style}|${row.index}`);
+  const claim = (what, row) => taken.add(`${what.subject}|${what.style}|${row.index}`);
+
+  const placed = [];
+  const unnamed = [];
+  for (const found of files ?? []) {
+    const what = { ...kind(found.tokens), found };
+    const row =
+      what.name &&
+      rows.find(
+        (row) =>
+          row.marking &&
+          free(what, row) &&
+          [slug(row.marking), slug(row.marking.split('/').pop())].includes(what.name)
+      );
+    if (row) {
+      claim(what, row);
+      placed.push({ ...what, row });
+    } else {
+      unnamed.push(what);
+    }
+  }
+
+  const own = single ? { subject: 'cartridge', style: 'visual', name: '', found: single } : null;
+  for (const what of [...unnamed, ...(own ? [own] : [])]) {
+    // A cartridge published at one length is drawn at it without anybody having to say so.
+    if (!rows.length) {
+      placed.push({ ...what, row: null });
+      continue;
+    }
+    if (!many) {
+      if (free(what, rows[0])) {
+        claim(what, rows[0]);
+        placed.push({ ...what, row: rows[0] });
+      }
+      continue;
+    }
+    const measurable = what.subject === 'cartridge' && what.style === 'visual';
+    const fits = measurable
+      ? rows.filter((row) => free(what, row) && row.l <= what.found.svg[0])
+      : [];
+    const row = fits.length ? fits.reduce((a, b) => (b.l > a.l ? b : a)) : null;
+    if (row && what.found.svg[0] - row.l <= DRAWING_MARGIN) {
+      claim(what, row);
+      placed.push({ ...what, row });
+    } else if (what !== own) {
+      console.warn(
+        `  ${record.family}/${record.key}: ${what.found.file} is a ${what.style} ${what.subject}` +
+          ' drawing at no length this record publishes'
+      );
+    }
+  }
+
+  // The length the cartridge's own drawing is at, whether or not it is the drawing filed there.
+  // Worked out from its width the same way, but without claiming: a directory drawing of the same
+  // length displaces the file, and the page still has to know which length the card is showing.
+  const fits = single ? rows.filter((row) => row.l <= single.svg[0]) : [];
+  const at = fits.length ? fits.reduce((a, b) => (b.l > a.l ? b : a)) : null;
+  const mainRow = at && single.svg[0] - at.l <= DRAWING_MARGIN ? at : null;
+  const isMain = (what) =>
+    what.subject === 'cartridge' &&
+    what.style === 'visual' &&
+    (mainRow ? what.row?.index === mainRow.index : !many);
+
+  const order = { cartridge: 0, chamber: 1, visual: 0, technical: 1 };
+  const out = placed.map((what) => ({
+    file: what.found.file,
+    svg: what.found.svg,
+    subject: what.subject,
+    style: what.style,
+    ...(what.row ? { l: what.row.l, marking: what.row.marking } : {}),
+    ...(isMain(what) ? { main: true } : {})
+  }));
+  out.sort(
+    (a, b) =>
+      order[a.subject] - order[b.subject] ||
+      order[a.style] - order[b.style] ||
+      (a.l ?? 0) - (b.l ?? 0)
+  );
+  // One drawing of one kind is what `svg` already says. The list earns its place in the index
+  // where there is a choice to make: another kind, or a length to pick between.
+  return out.length > 1 || (out.length === 1 && many) ? out : null;
 }
 
 /**
@@ -141,13 +372,76 @@ function shape(record) {
   return points;
 }
 
+/**
+ * What a person has confirmed about a record, facet by facet.
+ *
+ * A record is not verified or unverified as a whole. Five different things can be held against the
+ * source by five different readings, and they are checked at different times by different people:
+ * the cartridge's published numbers, the chamber's, the drawing of each, and the nose form of the
+ * bullet the cartridge drawing puts in the case mouth.
+ *
+ * **Two of them already had a home and keep it.** The cartridge's numbers are `confidence`, which
+ * is a word rather than a flag because it also carries `implausible`; the bullet is
+ * `defaultBullet.verified`. Restating either inside `annotations.verified` would be a second copy
+ * of a fact able to disagree with the first, which is the thing this dataset avoids everywhere
+ * else. So `annotations.verified` carries only the three that had nowhere to live:
+ *
+ * ```json
+ * "verified": { "chamber": true, "cartridgeDrawing": true, "chamberDrawing": false }
+ * ```
+ *
+ * Absent means unverified, never "does not apply". **What does not apply is left out entirely**,
+ * and that is the difference the site counts on: a facet missing from the returned object is one
+ * nobody can confirm because there is nothing to confirm -- a chamber drawing that has not been
+ * rendered, a bullet on a record that dimensions no bullet. Counting those as unverified would
+ * make a fully checked shot cartridge read as four fifths done for ever.
+ */
+function verifications(record, svg, drawings) {
+  const notes = record.annotations ?? {};
+  const held = notes.verified ?? {};
+  const drawn = (subject) => (drawings ?? []).some((drawing) => drawing.subject === subject);
+
+  const out = {};
+  // Both sides of the sheet are always published, so both can always be read against it.
+  out.cartridge = notes.confidence === 'verified';
+  out.chamber = held.chamber === true;
+  if (svg || drawn('cartridge')) out.cartridgeDrawing = held.cartridgeDrawing === true;
+  if (drawn('chamber')) out.chamberDrawing = held.chamberDrawing === true;
+  // The nose form is a property of the bullet the record dimensions; 32 records dimension none.
+  if (notes.defaultBullet) out.bullet = notes.defaultBullet.verified === true;
+  return out;
+}
+
 const entries = [];
+/**
+ * Which drawing directories a record actually claimed.
+ *
+ * A directory under `svg/<family>/` is named for a record, and one that names no record is a
+ * mistake worth hearing about rather than a folder that quietly does nothing -- a key misspelled,
+ * or a cartridge filed under the wrong family. Excluded records claim theirs too: they are left
+ * out of the site deliberately, and their drawings are not orphans.
+ */
+const claimed = new Set();
 for (const family of families) {
   const files = (await readdir(join(RECORDS, family))).filter((name) => name.endsWith('.json'));
   for (const file of files.sort()) {
-    if (file.slice(0, -5) in EXCLUDE) continue;
+    if (file.slice(0, -5) in EXCLUDE) {
+      claimed.add(`${family}/${file.slice(0, -5)}`);
+      continue;
+    }
     const record = JSON.parse(await readFile(join(RECORDS, family, file), 'utf8'));
     const cartridge = record.cartridge ?? {};
+    const svg = sizes.get(`${record.family}/${record.key}`) ?? null;
+    // Every drawing shipped for this cartridge -- of the cartridge or of its chamber, visual or
+    // technical, at each published hull length where it has several. See `cartridgeDrawings`;
+    // absent from the index wherever there is only the one drawing to show.
+    const held = `${record.family}/${record.key}`;
+    claimed.add(held);
+    const shippedDrawings = cartridgeDrawings(
+      record,
+      extra.get(held),
+      svg ? { file: `${record.key}.svg`, tokens: [], svg } : null
+    );
     entries.push({
       key: record.key,
       name: record.name,
@@ -163,18 +457,24 @@ for (const family of families) {
       G1: cartridge.projectile?.G1 ?? null,
       // The size of the drawing shipped for this cartridge, in millimetres, or null where there is
       // none. `shape` is the fallback the card draws itself; see below for what it does not carry.
-      svg: sizes.get(`${record.family}/${record.key}`) ?? null,
+      svg,
+      ...(shippedDrawings ? { drawings: shippedDrawings } : {}),
       shape: shape(record),
-      // How far the record can be trusted, and how many findings nothing explains. Both come
-      // from the dataset's own annotations (see cartridges/README.md); the card shows the one
-      // word, the cartridge page lists the findings.
-      confidence: record.annotations?.confidence ?? 'unverified',
+      // What a person has confirmed, facet by facet, and what only applies where it applies; see
+      // `verifications`. The list filters and sorts on these and the cartridge page names them.
+      verified: verifications(record, svg, shippedDrawings),
+      // How many plausibility rules fired on the record, and how many of those nothing explains.
+      // From the dataset's own annotations (see cartridges/README.md); the cartridge page lists
+      // what each finding is. A record can be fully verified and still carry an explained one.
       checks: (record.annotations?.implausible ?? []).length,
-      warnings: (record.annotations?.implausible ?? []).filter((f) => !f.known).length,
-      // The second verification: the drawn bullet's nose form, held against the drawing by a
-      // person or not. Independent of the numbers' confidence.
-      bulletVerified: record.annotations?.defaultBullet?.verified === true
+      warnings: (record.annotations?.implausible ?? []).filter((f) => !f.known).length
     });
+  }
+}
+
+for (const held of extra.keys()) {
+  if (!claimed.has(held)) {
+    console.warn(`  svg/${held}/ holds drawings for no record of that key in that family`);
   }
 }
 
@@ -183,7 +483,20 @@ await mkdir(dirname(OUT), { recursive: true });
 await writeFile(OUT, JSON.stringify(entries), 'utf8');
 
 const bytes = Buffer.byteLength(JSON.stringify(entries));
+const shipped = entries.flatMap((entry) => entry.drawings ?? []);
+const kinds = new Map();
+for (const drawing of shipped) {
+  const name = `${drawing.style} ${drawing.subject}`;
+  kinds.set(name, (kinds.get(name) ?? 0) + 1);
+}
 console.log(
   `index: ${entries.length} records, ${families.length} families, ${(bytes / 1024).toFixed(1)} KB` +
     ` -- ${sizes.size} with a rendered drawing, ${entries.length - sizes.size} falling back`
 );
+if (shipped.length) {
+  console.log(
+    `drawings: ${shipped.length} beyond the one per cartridge, across` +
+      ` ${entries.filter((entry) => entry.drawings).length} cartridges -- ` +
+      [...kinds].map(([name, n]) => `${n} ${name}`).join(', ')
+  );
+}
