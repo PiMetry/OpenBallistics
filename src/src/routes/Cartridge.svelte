@@ -61,7 +61,7 @@
   function zoomBy(direction: 1 | -1) {
     const index = ZOOM_STEPS.indexOf(zoom);
     const next = ZOOM_STEPS[Math.min(ZOOM_STEPS.length - 1, Math.max(0, index + direction))];
-    setZoom(next);
+    setZoom(next ?? 1);
   }
   const scale = $derived(fitted * zoom);
 </script>
