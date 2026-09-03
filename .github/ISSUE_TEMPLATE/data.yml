@@ -6,10 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for checking. **36 of the 540 records have been confirmed against their C.I.P.
-        sheet by a person**, and the rest have not; each cartridge page says which it is. The
-        drawings are rendered from the numbers, and the projectile on them is a default chosen per
-        cartridge. A report that names its source is the most useful thing anyone can send.
+        Thank you for reporting an issue you found. Please select below what is wrong, and say
+        where you are reading the correct value from: a report that names its source is the most
+        useful thing anyone can send.
 
         If you arrived here from the site, the cartridge and the page link are already filled in.
   - type: input
