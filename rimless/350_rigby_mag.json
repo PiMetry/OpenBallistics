@@ -23,9 +23,9 @@
       "R": 1.52,
       "R1": 13.36,
       "delta": {
-        "degrees": 26,
-        "minutes": 51,
-        "seconds": 36
+        "degrees": 26.0,
+        "minutes": 51.0,
+        "seconds": 36.0
       },
       "eMin": 0.76
     },
@@ -35,7 +35,7 @@
     },
     "junctionCone": {
       "S": 62.87,
-      "alpha": 90
+      "alpha": 90.0
     },
     "lengths": {
       "L1": 57.15,
@@ -55,11 +55,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 4810,
-      "M": 25,
-      "PE": 3875,
-      "PK": 3565,
-      "Pmax": 3100
+      "EE": 4810.0,
+      "M": 25.0,
+      "PE": 3875.0,
+      "PK": 3565.0,
+      "Pmax": 3100.0
     },
     "projectile": {
       "G1": 9.07,
@@ -80,14 +80,14 @@
       "H2": 9.75
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 63.52,
       "b": 2.79,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 62.83,
-      "alpha": 90
+      "alpha": 90.0
     },
     "lengths": {
       "L1": 57.1,
@@ -102,12 +102,12 @@
     "rifling": {
       "G": 4.89,
       "G1": 9.13,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.31,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -117,5 +117,6 @@
   "name": "350 Rigby Mag.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2020-11-10"
+  "revised": "2020-11-10",
+  "tab": "I"
 }

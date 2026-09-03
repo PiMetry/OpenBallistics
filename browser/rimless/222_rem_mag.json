@@ -1,0 +1,119 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.11,
+      "E1": 8.43,
+      "R": 1.14,
+      "R1": 9.6,
+      "beta": 35,
+      "delta": 25,
+      "eMin": 0.76,
+      "f": 0.45
+    },
+    "collar": {
+      "H1": 6.43,
+      "H2": 6.43
+    },
+    "junctionCone": {
+      "S": 47.86,
+      "alpha": 46,
+      "r1Min": 0.64,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 37.18,
+      "L1Tol": -0.2,
+      "L2": 40.29,
+      "L2Tol": -0.2,
+      "L3": 46.99,
+      "L6": 57.91
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.09
+    },
+    "powderChamber": {
+      "P1": 9.56,
+      "P2": 9.07,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 1820,
+      "M": 25,
+      "PE": 5060,
+      "PK": 4658,
+      "Pmax": 4050
+    },
+    "projectile": {
+      "G1": 5.7,
+      "L3PlusG": 49.18
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.56,
+      "Z": 5.69
+    },
+    "breech": {
+      "R1": 9.63
+    },
+    "collar": {
+      "H1": 6.48,
+      "H2": 6.45
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 25.09,
+      "b": 2.03,
+      "u": 356
+    },
+    "junctionCone": {
+      "S": 47.78,
+      "alpha": 46,
+      "r1Max": 0.64,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 37.07,
+      "L2": 40.15,
+      "L3": 47.29
+    },
+    "powderChamber": {
+      "E": 3.11,
+      "P1": 9.59,
+      "P2": 9.09
+    },
+    "rifling": {
+      "G": 2.19,
+      "G1": 5.69,
+      "h": 0.38,
+      "i": {
+        "degrees": 3,
+        "minutes": 10,
+        "seconds": 36
+      },
+      "s": 1.02
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "222_rem_mag",
+  "name": "222 Rem. Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2022-04-26"
+}

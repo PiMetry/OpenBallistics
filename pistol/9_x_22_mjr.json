@@ -19,8 +19,8 @@
       "E1": 8.81,
       "R": 1.4,
       "R1": 10.77,
-      "beta": 35,
-      "delta": 45,
+      "beta": 35.0,
+      "delta": 45.0,
       "eMin": 1.14,
       "f": 0.51
     },
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 33.98,
       "alpha": {
-        "degrees": 31,
-        "minutes": 31,
-        "seconds": 27
+        "degrees": 31.0,
+        "minutes": 31.0,
+        "seconds": 27.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -43,8 +43,8 @@
       "L1Tol": -0.2,
       "L2": 16.81,
       "L2Tol": -0.2,
-      "L3": 22,
-      "L6": 29
+      "L3": 22.0,
+      "L6": 29.0
     },
     "misc": {
       "Fe": 0.2
@@ -56,9 +56,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 3315,
-      "PK": 2933,
-      "Pmax": 2550
+      "PE": 3315.0,
+      "PK": 2933.0,
+      "Pmax": 2550.0
     },
     "projectile": {
       "G1": 9.03,
@@ -78,17 +78,17 @@
       "H2": 9.75
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 62.61,
       "b": 2.49,
-      "u": 250
+      "u": 250.0
     },
     "junctionCone": {
       "S": 34.07,
       "alpha": {
-        "degrees": 31,
-        "minutes": 22,
-        "seconds": 48
+        "degrees": 31.0,
+        "minutes": 22.0,
+        "seconds": 48.0
       }
     },
     "lengths": {
@@ -104,12 +104,12 @@
     "rifling": {
       "G": 6.1,
       "G1": 9.05,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.35,
       "i": {
-        "degrees": 1,
-        "minutes": 57,
-        "seconds": 58
+        "degrees": 1.0,
+        "minutes": 57.0,
+        "seconds": 58.0
       },
       "s": 2.75
     }
@@ -120,5 +120,6 @@
   "name": "9 x 22 MJR",
   "pressureMethod": "Transducer",
   "published": "1993-12-13",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "IV"
 }

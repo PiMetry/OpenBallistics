@@ -18,8 +18,8 @@
       "R": 1.09,
       "R1": 7.06,
       "RTol": -0.18,
-      "beta": 0,
-      "delta": 0
+      "beta": 0.0,
+      "delta": 0.0
     },
     "collar": {
       "H2": 5.74
@@ -35,10 +35,10 @@
       "P1": 5.74
     },
     "pressures": {
-      "M": 9,
-      "PE": 2210,
-      "PK": 1955,
-      "Pmax": 1700
+      "M": 9.0,
+      "PE": 2210.0,
+      "PK": 1955.0,
+      "Pmax": 1700.0
     },
     "projectile": {
       "G1": 5.35,
@@ -59,7 +59,7 @@
       "H2": 5.79
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 21.94,
       "b": 1.73,
       "u": 304.8
@@ -75,9 +75,9 @@
       "G1": 5.36,
       "h": 0.22,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 2.62
     }
@@ -87,5 +87,6 @@
   "key": "21_sharp",
   "name": "21 Sharp",
   "pressureMethod": "Transducer",
-  "published": "2024-05-14"
+  "published": "2024-05-14",
+  "tab": "V"
 }

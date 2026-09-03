@@ -1,0 +1,120 @@
+{
+  "alternativeNames": [
+    "22 ARC"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.49,
+      "E1": 9.6,
+      "R": 1.5,
+      "R1": 11.2,
+      "beta": 35,
+      "delta": 45,
+      "eMin": 1.19,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 6.43,
+      "H2": 6.43
+    },
+    "junctionCone": {
+      "S": 38.68,
+      "alpha": 60,
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 29.24,
+      "L1Tol": -0.2,
+      "L2": 33.12,
+      "L2Tol": -0.2,
+      "L3": 38.74,
+      "L6": 57.4
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.22,
+      "P2": 10.92,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2250,
+      "M": 17.5,
+      "PE": 5063,
+      "PK": 4658,
+      "Pmax": 4050
+    },
+    "projectile": {
+      "G1": 5.7,
+      "L3PlusG": 45.12
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.56,
+      "Z": 5.69
+    },
+    "breech": {
+      "R1": 11.31
+    },
+    "collar": {
+      "H1": 6.45,
+      "H2": 6.45
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 25,
+      "b": 1.88,
+      "u": 177.8
+    },
+    "junctionCone": {
+      "S": 38.67,
+      "alpha": 60,
+      "r1Max": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 29.22,
+      "L2": 33.1,
+      "L3": 38.86
+    },
+    "powderChamber": {
+      "E": 3.49,
+      "P1": 11.26,
+      "P2": 10.94
+    },
+    "rifling": {
+      "G": 6.38,
+      "G1": 5.7,
+      "h": 0.37,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 3.71
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "22_advanced_rifle_cartridge",
+  "name": "22 Advanced Rifle Cartridge",
+  "pressureMethod": "Transducer",
+  "published": "2024-05-14"
+}

@@ -1,0 +1,101 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": []
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.27,
+      "R1": 9.02,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H1": 6.2,
+      "H2": 6.15
+    },
+    "junctionCone": {
+      "S": 19.92,
+      "alpha": {
+        "degrees": 36,
+        "minutes": 23,
+        "seconds": 11
+      }
+    },
+    "lengths": {
+      "L1": 8.71,
+      "L2": 10.49,
+      "L3": 14.99,
+      "L6": 22.61
+    },
+    "misc": {},
+    "powderChamber": {
+      "P1": 7.59,
+      "P2": 7.37
+    },
+    "pressures": {},
+    "projectile": {
+      "G1": 5.71,
+      "L3PlusG": 18.81
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.56,
+      "Z": 5.69
+    },
+    "breech": {
+      "R": 1.3,
+      "R1": 9.14
+    },
+    "collar": {
+      "H1": 6.22,
+      "H2": 6.17
+    },
+    "grooves": {
+      "Q": 24.28,
+      "u": 255
+    },
+    "junctionCone": {
+      "S": 19.98,
+      "alpha": {
+        "degrees": 36,
+        "minutes": 23,
+        "seconds": 9
+      }
+    },
+    "lengths": {
+      "L1": 8.74,
+      "L2": 10.52,
+      "L3": 15.24
+    },
+    "powderChamber": {
+      "P1": 7.62,
+      "P2": 7.39
+    },
+    "rifling": {
+      "G": 3.82,
+      "G1": 5.76,
+      "alpha1": 180,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "297_230_morris_sh",
+  "name": "297/230 Morris sh",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

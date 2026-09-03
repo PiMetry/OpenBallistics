@@ -32,15 +32,15 @@
       "R": 1.32,
       "R1": 9.65,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.38
     },
     "collar": {
-      "H2": 8
+      "H2": 8.0
     },
     "lengths": {
       "L3": 20.5,
-      "L6": 30
+      "L6": 30.0
     },
     "misc": {
       "Fe": 0.25
@@ -50,9 +50,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 1300,
-      "PK": 1150,
-      "Pmax": 1000
+      "PE": 1300.0,
+      "PK": 1150.0,
+      "Pmax": 1000.0
     },
     "projectile": {
       "G1": 7.7,
@@ -72,13 +72,13 @@
       "H2": 8.1
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 48.03,
       "b": 2.7,
-      "u": 450
+      "u": 450.0
     },
     "lengths": {
-      "L3": 23,
+      "L3": 23.0,
       "L3Tol": 0.381
     },
     "powderChamber": {
@@ -87,12 +87,12 @@
     "rifling": {
       "G": 1.66,
       "G1": 7.9,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.1,
       "i": {
-        "degrees": 4,
-        "minutes": 34,
-        "seconds": 59
+        "degrees": 4.0,
+        "minutes": 34.0,
+        "seconds": 59.0
       }
     }
   },
@@ -102,5 +102,6 @@
   "name": "320 Long",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

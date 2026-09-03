@@ -19,8 +19,8 @@
       "E1": 8.81,
       "R": 1.4,
       "R1": 10.77,
-      "beta": 55,
-      "delta": 43,
+      "beta": 55.0,
+      "delta": 43.0,
       "eMin": 1.14,
       "f": 0.51
     },
@@ -30,7 +30,7 @@
     },
     "junctionCone": {
       "S": 33.05,
-      "alpha": 36,
+      "alpha": 36.0,
       "r1Min": 1.52,
       "r2": 3.81
     },
@@ -52,9 +52,9 @@
     },
     "pressures": {
       "M": 10.5,
-      "PE": 3965,
-      "PK": 3508,
-      "Pmax": 3050
+      "PE": 3965.0,
+      "PK": 3508.0,
+      "Pmax": 3050.0
     },
     "projectile": {
       "G1": 9.03,
@@ -74,14 +74,14 @@
       "H2": 9.7
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 62.57,
       "b": 2.69,
       "u": 406.4
     },
     "junctionCone": {
       "S": 33.44,
-      "alpha": 36,
+      "alpha": 36.0,
       "r1Max": 1.27,
       "r2": 3.81
     },
@@ -98,11 +98,11 @@
     "rifling": {
       "G": 6.47,
       "G1": 9.09,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 0.74
     }
@@ -113,5 +113,6 @@
   "name": "357 SIG",
   "pressureMethod": "Transducer",
   "published": "1995-03-09",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "IV"
 }

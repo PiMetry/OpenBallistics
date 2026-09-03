@@ -1,0 +1,121 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.34,
+      "E1": 8.65,
+      "R": 1.32,
+      "R1": 9.95,
+      "beta": 45,
+      "delta": 30,
+      "eMin": 1,
+      "f": 0.6
+    },
+    "collar": {
+      "H1": 8.49,
+      "H2": 8.49
+    },
+    "junctionCone": {
+      "S": 33.37,
+      "alpha": 38,
+      "r1Min": 0.5,
+      "r2": 2
+    },
+    "lengths": {
+      "L1": 19.6,
+      "L1Tol": -0.2,
+      "L2": 21.04,
+      "L2Tol": -0.2,
+      "L3": 25,
+      "L6": 35.2
+    },
+    "misc": {
+      "Fe": 0.2
+    },
+    "powderChamber": {
+      "P1": 9.83,
+      "P2": 9.48,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "M": 17.5,
+      "PE": 3250,
+      "PK": 2875,
+      "Pmax": 2500
+    },
+    "projectile": {
+      "G1": 7.9,
+      "L3PlusG": 34.8
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.92
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 10
+    },
+    "collar": {
+      "H1": 8.55,
+      "H2": 8.5
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 47.99,
+      "b": 3.81,
+      "u": 240
+    },
+    "junctionCone": {
+      "S": 37.35,
+      "alpha": {
+        "degrees": 30,
+        "minutes": 2,
+        "seconds": 38
+      },
+      "r1Max": 0.5,
+      "r2": 1
+    },
+    "lengths": {
+      "L1": 19.65,
+      "L2": 21.42,
+      "L3": 25
+    },
+    "powderChamber": {
+      "E": 3.4,
+      "P1": 9.95,
+      "P2": 9.5
+    },
+    "rifling": {
+      "G": 9.8,
+      "G1": 7.9,
+      "alpha1": 180,
+      "i": {
+        "degrees": 0,
+        "minutes": 49,
+        "seconds": 6
+      }
+    }
+  },
+  "country": "SU",
+  "family": "pistol",
+  "key": "7_62_x_25_tokarev",
+  "name": "7,62 x 25 Tokarev",
+  "pressureMethod": "Transducer",
+  "published": "1990-04-04",
+  "revised": "2006-09-19"
+}

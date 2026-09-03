@@ -1,0 +1,91 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.35,
+      "R1": 9.68,
+      "RTol": -0.25,
+      "beta": 35,
+      "f": 0.36
+    },
+    "collar": {
+      "H2": 8.08
+    },
+    "lengths": {
+      "L3": 23.27,
+      "L6": 30.89
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 8.08
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 1300,
+      "PK": 1150,
+      "Pmax": 1000
+    },
+    "projectile": {
+      "G1": 7.97,
+      "L3PlusG": 25.84
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.75,
+      "Z": 7.9
+    },
+    "breech": {
+      "R": 1.35,
+      "R1": 9.78
+    },
+    "collar": {
+      "H2": 8.13
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 48.39,
+      "b": 2.69,
+      "u": 406
+    },
+    "lengths": {
+      "L3": 33.1
+    },
+    "powderChamber": {
+      "P1": 8.13
+    },
+    "rifling": {
+      "G": 2.57,
+      "G1": 8.13,
+      "alpha1": 180,
+      "i": {
+        "degrees": 4,
+        "minutes": 34,
+        "seconds": 59
+      },
+      "s": 0.2
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "32_long_colt",
+  "name": "32 Long Colt",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

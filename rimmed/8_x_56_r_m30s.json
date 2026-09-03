@@ -18,7 +18,7 @@
       "R": 1.5,
       "R1": 14.2,
       "RTol": -0.25,
-      "beta": 30,
+      "beta": 30.0,
       "f": 0.5
     },
     "collar": {
@@ -28,12 +28,12 @@
     "junctionCone": {
       "S": 86.82,
       "alpha": {
-        "degrees": 13,
-        "minutes": 54,
-        "seconds": 41
+        "degrees": 13.0,
+        "minutes": 54.0,
+        "seconds": 41.0
       },
-      "r1Min": 10,
-      "r2": 15
+      "r1Min": 10.0,
+      "r2": 15.0
     },
     "lengths": {
       "L1": 37.03,
@@ -49,11 +49,11 @@
       "P2": 12.15
     },
     "pressures": {
-      "EE": 3933,
-      "M": 25,
-      "PE": 4440,
-      "PK": 4083,
-      "Pmax": 3550
+      "EE": 3933.0,
+      "M": 25.0,
+      "PE": 4440.0,
+      "PK": 4083.0,
+      "Pmax": 3550.0
     },
     "projectile": {
       "G1": 8.4,
@@ -74,20 +74,20 @@
       "H2": 9.2
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 52.53,
       "b": 3.5,
-      "u": 250
+      "u": 250.0
     },
     "junctionCone": {
       "S": 88.43,
       "alpha": {
-        "degrees": 13,
-        "minutes": 33,
-        "seconds": 30
+        "degrees": 13.0,
+        "minutes": 33.0,
+        "seconds": 30.0
       },
-      "r1Max": 10,
-      "r2": 10
+      "r1Max": 10.0,
+      "r2": 10.0
     },
     "lengths": {
       "L1": 37.08,
@@ -102,15 +102,15 @@
       "G": 18.75,
       "G1": 8.7,
       "alpha1": {
-        "degrees": 28,
-        "minutes": 4,
-        "seconds": 0
+        "degrees": 28.0,
+        "minutes": 4.0,
+        "seconds": 0.0
       },
-      "h": 1,
+      "h": 1.0,
       "i": {
-        "degrees": 1,
-        "minutes": 12,
-        "seconds": 37
+        "degrees": 1.0,
+        "minutes": 12.0,
+        "seconds": 37.0
       }
     }
   },
@@ -120,5 +120,6 @@
   "name": "8 x 56 R M30S",
   "pressureMethod": "Transducer",
   "published": "1988-01-30",
-  "revised": "2006-08-02"
+  "revised": "2006-08-02",
+  "tab": "II"
 }

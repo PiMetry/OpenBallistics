@@ -21,11 +21,11 @@
       "R": 1.09,
       "R1": 11.89,
       "R3": 12.12,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 26,
-        "minutes": 34,
-        "seconds": 12
+        "degrees": 26.0,
+        "minutes": 34.0,
+        "seconds": 12.0
       },
       "eMin": 0.81,
       "f": 0.3
@@ -37,9 +37,9 @@
     "junctionCone": {
       "S": 64.7,
       "alpha": {
-        "degrees": 34,
-        "minutes": 45,
-        "seconds": 33
+        "degrees": 34.0,
+        "minutes": 45.0,
+        "seconds": 33.0
       }
     },
     "lengths": {
@@ -56,11 +56,11 @@
       "P2": 10.29
     },
     "pressures": {
-      "EE": 2625,
-      "M": 25,
-      "PE": 4125,
-      "PK": 3795,
-      "Pmax": 3300
+      "EE": 2625.0,
+      "M": 25.0,
+      "PE": 4125.0,
+      "PK": 3795.0,
+      "Pmax": 3300.0
     },
     "projectile": {
       "G1": 6.22,
@@ -81,23 +81,23 @@
       "H2": 7.14
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 29.95,
       "b": 3.5,
-      "u": 203
+      "u": 203.0
     },
     "junctionCone": {
       "S": 64.9,
       "alpha": {
-        "degrees": 34,
-        "minutes": 44,
-        "seconds": 49
+        "degrees": 34.0,
+        "minutes": 44.0,
+        "seconds": 49.0
       }
     },
     "lengths": {
       "L1": 48.41,
       "L2": 53.46,
-      "L3": 64
+      "L3": 64.0
     },
     "powderChamber": {
       "E": 5.56,
@@ -107,12 +107,12 @@
     "rifling": {
       "G": 5.21,
       "G1": 6.27,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.44,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 4
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 4.0
       }
     }
   },
@@ -122,5 +122,6 @@
   "name": "240 Belt. Riml. N.E.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "III"
 }

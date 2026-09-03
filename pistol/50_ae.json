@@ -19,8 +19,8 @@
       "E1": 11.7,
       "R": 1.5,
       "R1": 13.06,
-      "beta": 45,
-      "delta": 35,
+      "beta": 45.0,
+      "delta": 35.0,
       "eMin": 0.95,
       "f": 0.5
     },
@@ -40,9 +40,9 @@
     },
     "pressures": {
       "M": 10.5,
-      "PE": 2990,
-      "PK": 2645,
-      "Pmax": 2300
+      "PE": 2990.0,
+      "PK": 2645.0,
+      "Pmax": 2300.0
     },
     "projectile": {
       "G1": 12.71,
@@ -61,7 +61,7 @@
       "H2": 13.52
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 124.29,
       "b": 3.43,
       "u": 482.6
@@ -76,11 +76,11 @@
     "rifling": {
       "G": 3.55,
       "G1": 12.75,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 2,
-        "minutes": 34,
-        "seconds": 59
+        "degrees": 2.0,
+        "minutes": 34.0,
+        "seconds": 59.0
       }
     }
   },
@@ -90,5 +90,6 @@
   "name": "50 AE",
   "pressureMethod": "Transducer",
   "published": "1991-10-18",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

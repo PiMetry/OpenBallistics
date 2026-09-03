@@ -19,18 +19,18 @@
       "E1": 10.39,
       "R": 1.24,
       "R1": 12.01,
-      "beta": 35,
-      "delta": 36,
+      "beta": 35.0,
+      "delta": 36.0,
       "eMin": 0.84,
       "f": 0.38
     },
     "collar": {
-      "H1": 8,
-      "H2": 8
+      "H1": 8.0,
+      "H2": 8.0
     },
     "junctionCone": {
       "S": 68.56,
-      "alpha": 35,
+      "alpha": 35.0,
       "r1Min": 0.64,
       "r2": 2.54
     },
@@ -52,11 +52,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 3930,
-      "M": 25,
-      "PE": 5060,
-      "PK": 4658,
-      "Pmax": 4050
+      "EE": 3930.0,
+      "M": 25.0,
+      "PE": 5060.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 7.23,
@@ -76,17 +76,17 @@
       "H2": 8.02
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 40.39,
       "b": 4.06,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 68.69,
       "alpha": {
-        "degrees": 34,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 34.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "r1Max": 0.64,
       "r2": 3.18
@@ -98,18 +98,18 @@
     },
     "powderChamber": {
       "E": 3.17,
-      "P1": 12,
+      "P1": 12.0,
       "P2": 11.23
     },
     "rifling": {
       "G": 4.75,
       "G1": 7.25,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.39,
       "i": {
-        "degrees": 1,
-        "minutes": 22,
-        "seconds": 34
+        "degrees": 1.0,
+        "minutes": 22.0,
+        "seconds": 34.0
       }
     }
   },
@@ -119,5 +119,6 @@
   "name": "280 Rem.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

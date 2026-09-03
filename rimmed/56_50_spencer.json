@@ -26,9 +26,9 @@
     "junctionCone": {
       "S": 105.2,
       "alpha": {
-        "degrees": 10,
-        "minutes": 11,
-        "seconds": 0
+        "degrees": 10.0,
+        "minutes": 11.0,
+        "seconds": 0.0
       },
       "r1Min": 0.5
     },
@@ -46,14 +46,14 @@
       "P2": 13.75
     },
     "pressures": {
-      "EE": 1950,
+      "EE": 1950.0,
       "M": 17.5,
-      "PE": 2560,
-      "PK": 2358,
-      "Pmax": 2050
+      "PE": 2560.0,
+      "PK": 2358.0,
+      "Pmax": 2050.0
     },
     "projectile": {
-      "G1": 13,
+      "G1": 13.0,
       "L1PlusG": 39.76
     }
   },
@@ -70,10 +70,10 @@
       "H2": 13.77
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 129.34,
       "b": 3.5,
-      "u": 508
+      "u": 508.0
     },
     "lengths": {
       "L3": 29.55
@@ -84,9 +84,9 @@
     "rifling": {
       "G": 10.32,
       "G1": 13.03,
-      "alpha1": 30,
+      "alpha1": 30.0,
       "h": 1.38,
-      "i": 15,
+      "i": 15.0,
       "s": 9.7
     }
   },
@@ -96,5 +96,6 @@
   "name": "56/50 Spencer",
   "pressureMethod": "Transducer",
   "published": "2004-05-18",
-  "revised": "2006-09-19"
+  "revised": "2006-09-19",
+  "tab": "II"
 }

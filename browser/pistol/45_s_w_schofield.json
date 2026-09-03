@@ -1,0 +1,110 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "implausible",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.projectile.G1",
+          "chamber.barrel.Z"
+        ],
+        "kind": "approximate",
+        "message": "the bullet differs from the groove diameter by 0.15 mm (G1 = 11.58, Z = 11.43); within 0.1 mm is manufacture",
+        "rule": "bullet_matches_grooves",
+        "values": {
+          "G1": 11.58,
+          "Z": 11.43
+        }
+      }
+    ],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.52,
+      "R1": 12.95,
+      "RTol": -0.25,
+      "beta": 35,
+      "f": 0.4
+    },
+    "collar": {
+      "H2": 12.19
+    },
+    "lengths": {
+      "L3": 27.69,
+      "L6": 36.32
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 12.19
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 1300,
+      "PK": 1150,
+      "Pmax": 1000
+    },
+    "projectile": {
+      "G1": 11.58,
+      "L3PlusG": 38.97
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.23,
+      "Z": 11.43
+    },
+    "breech": {
+      "R": 1.52,
+      "R1": 13.01
+    },
+    "collar": {
+      "H2": 12.19
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 101.48,
+      "b": 3.96,
+      "u": 406
+    },
+    "lengths": {
+      "L3": 27.94
+    },
+    "powderChamber": {
+      "P1": 12.37
+    },
+    "rifling": {
+      "G": 11.28,
+      "G1": 11.5,
+      "alpha1": {
+        "degrees": 15,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "h": 2.54,
+      "i": {
+        "degrees": 4,
+        "minutes": 34,
+        "seconds": 59
+      },
+      "s": 9.6
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "45_s_w_schofield",
+  "name": "45 S&W Schofield",
+  "pressureMethod": "Transducer",
+  "published": "2000-02-15",
+  "revised": "2000-06-07"
+}

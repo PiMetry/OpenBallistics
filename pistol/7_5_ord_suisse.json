@@ -18,7 +18,7 @@
       "R": 1.5,
       "R1": 10.4,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.5
     },
     "collar": {
@@ -32,23 +32,23 @@
       "Fe": 0.25
     },
     "powderChamber": {
-      "P1": 9
+      "P1": 9.0
     },
     "pressures": {
       "M": 12.5,
-      "PE": 2405,
-      "PK": 2128,
-      "Pmax": 1850
+      "PE": 2405.0,
+      "PK": 2128.0,
+      "Pmax": 1850.0
     },
     "projectile": {
-      "G1": 8,
+      "G1": 8.0,
       "L3PlusG": 25.88
     }
   },
   "chamber": {
     "barrel": {
       "F": 7.65,
-      "Z": 8
+      "Z": 8.0
     },
     "breech": {
       "R": 1.5,
@@ -58,26 +58,26 @@
       "H2": 8.43
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 47.67,
       "b": 2.4,
-      "u": 350
+      "u": 350.0
     },
     "lengths": {
-      "L3": 23
+      "L3": 23.0
     },
     "powderChamber": {
       "P1": 9.03
     },
     "rifling": {
       "G": 3.08,
-      "G1": 8,
-      "alpha1": 90,
+      "G1": 8.0,
+      "alpha1": 90.0,
       "h": 0.22,
       "i": {
-        "degrees": 3,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 3.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -87,5 +87,6 @@
   "name": "7,5 Ord. Suisse",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

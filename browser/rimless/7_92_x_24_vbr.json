@@ -1,0 +1,96 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 2.9,
+      "E1": 7.87,
+      "R": 1.27,
+      "R1": 9.14,
+      "beta": 35,
+      "delta": 37,
+      "eMin": 0.84,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 8.62
+    },
+    "lengths": {
+      "L3": 24,
+      "L4": 25.24,
+      "L6": 32.1
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 9.06
+    },
+    "pressures": {
+      "EE": 660,
+      "M": 17.5,
+      "PE": 4300,
+      "PK": 3807,
+      "Pmax": 3310
+    },
+    "projectile": {
+      "G1": 7.92,
+      "G2": 7.92,
+      "L3PlusG": 29.09
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R": 1.27,
+      "R1": 9.4
+    },
+    "collar": {
+      "H2": 8.69
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 47.4,
+      "b": 2.92,
+      "u": 250
+    },
+    "lengths": {
+      "L3": 24
+    },
+    "powderChamber": {
+      "E": 2.9,
+      "P1": 9.15
+    },
+    "rifling": {
+      "G": 3.91,
+      "G1": 8.03,
+      "alpha1": 180,
+      "i": {
+        "degrees": 3,
+        "minutes": 0,
+        "seconds": 4
+      }
+    }
+  },
+  "country": "BE",
+  "family": "rimless",
+  "key": "7_92_x_24_vbr",
+  "name": "7,92 x 24 VBR",
+  "pressureMethod": "Transducer",
+  "published": "2007-05-14"
+}

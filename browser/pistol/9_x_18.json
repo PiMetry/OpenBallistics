@@ -1,0 +1,116 @@
+{
+  "alternativeNames": [
+    "9 x 18 Ultra",
+    "9mm Police"
+  ],
+  "annotations": {
+    "category": "pistol",
+    "confidence": "implausible",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.lengths.L3",
+          "chamber.lengths.L3"
+        ],
+        "kind": "exceptional",
+        "message": "cartridge L3 = 18 is more than chamber L3 = 17.95, but a chamber is at least as long as the case it takes",
+        "rule": "chamber_accepts_case",
+        "values": {
+          "cartridge.lengths.L3": 18,
+          "chamber.lengths.L3": 17.95
+        }
+      }
+    ],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 2.93,
+      "E1": 8.25,
+      "R": 1.25,
+      "R1": 9.5,
+      "beta": 45,
+      "delta": {
+        "degrees": 49,
+        "minutes": 59,
+        "seconds": 24
+      },
+      "eMin": 1,
+      "f": 0.6
+    },
+    "collar": {
+      "H2": 9.68
+    },
+    "lengths": {
+      "L3": 18,
+      "L3Tol": -0.25,
+      "L6": 25.5
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 9.87
+    },
+    "pressures": {
+      "M": 9,
+      "PE": 2340,
+      "PK": 2070,
+      "Pmax": 1800
+    },
+    "projectile": {
+      "G1": 9.02,
+      "L3PlusG": 20.58
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.82,
+      "Z": 9.02
+    },
+    "breech": {
+      "R1": 9.97
+    },
+    "collar": {
+      "H2": 9.7
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 62.61,
+      "b": 2.49,
+      "u": 250
+    },
+    "lengths": {
+      "L3": 17.95
+    },
+    "powderChamber": {
+      "E": 2.93,
+      "P1": 9.93
+    },
+    "rifling": {
+      "G": 2.58,
+      "G1": 9.09,
+      "alpha1": 180,
+      "i": {
+        "degrees": 2,
+        "minutes": 59,
+        "seconds": 43
+      }
+    }
+  },
+  "country": "DE/AT",
+  "family": "pistol",
+  "key": "9_x_18",
+  "name": "9 x 18",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2008-09-23"
+}

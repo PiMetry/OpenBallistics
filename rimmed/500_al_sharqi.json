@@ -18,8 +18,8 @@
       "R": 1.27,
       "R1": 19.05,
       "RTol": -0.25,
-      "beta": 45,
-      "delta": 0,
+      "beta": 45.0,
+      "delta": 0.0,
       "f": 0.3
     },
     "collar": {
@@ -29,17 +29,17 @@
     "junctionCone": {
       "S": 85.96,
       "alpha": {
-        "degrees": 32,
-        "minutes": 52,
-        "seconds": 0
+        "degrees": 32.0,
+        "minutes": 52.0,
+        "seconds": 0.0
       },
       "r1Min": 0.5,
       "r2": 0.5
     },
     "lengths": {
-      "L1": 58,
+      "L1": 58.0,
       "L2": 62.83,
-      "L3": 75,
+      "L3": 75.0,
       "L6": 98.5
     },
     "misc": {
@@ -50,11 +50,11 @@
       "P2": 16.5
     },
     "pressures": {
-      "EE": 10000,
-      "M": 25,
-      "PE": 3750,
-      "PK": 3450,
-      "Pmax": 3000
+      "EE": 10000.0,
+      "M": 25.0,
+      "PE": 3750.0,
+      "PK": 3450.0,
+      "Pmax": 3000.0
     },
     "projectile": {
       "G1": 12.95,
@@ -64,7 +64,7 @@
   "chamber": {
     "barrel": {
       "F": 12.7,
-      "Z": 13
+      "Z": 13.0
     },
     "breech": {
       "R": 1.27,
@@ -75,14 +75,14 @@
       "H2": 13.68
     },
     "grooves": {
-      "N": 8,
+      "N": 8.0,
       "Q": 130.56,
       "b": 3.2,
-      "u": 381
+      "u": 381.0
     },
     "junctionCone": {
       "S": 85.97,
-      "alpha": 33,
+      "alpha": 33.0,
       "r1Max": 0.5,
       "r2": 0.5
     },
@@ -97,12 +97,12 @@
     },
     "rifling": {
       "G": 9.89,
-      "G1": 13,
+      "G1": 13.0,
       "h": 0.34,
       "i": {
-        "degrees": 0,
-        "minutes": 53,
-        "seconds": 59
+        "degrees": 0.0,
+        "minutes": 53.0,
+        "seconds": 59.0
       }
     }
   },
@@ -111,5 +111,6 @@
   "key": "500_al_sharqi",
   "name": "500 Al Sharqi",
   "pressureMethod": "Transducer",
-  "published": "2021-11-09"
+  "published": "2021-11-09",
+  "tab": "II"
 }

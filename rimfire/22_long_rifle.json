@@ -41,8 +41,8 @@
       "R": 1.09,
       "R1": 7.06,
       "RTol": -0.18,
-      "beta": 0,
-      "delta": 0
+      "beta": 0.0,
+      "delta": 0.0
     },
     "collar": {
       "H2": 5.72
@@ -59,10 +59,10 @@
       "P1": 5.74
     },
     "pressures": {
-      "M": 9,
-      "PE": 2210,
-      "PK": 1955,
-      "Pmax": 1700
+      "M": 9.0,
+      "PE": 2210.0,
+      "PK": 1955.0,
+      "Pmax": 1700.0
     },
     "projectile": {
       "G1": 5.72,
@@ -83,10 +83,10 @@
       "H2": 5.72
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 24.07,
       "b": 2.16,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {},
     "lengths": {
@@ -98,7 +98,7 @@
     "rifling": {
       "G": 1.94,
       "G1": 5.72,
-      "i": 5
+      "i": 5.0
     }
   },
   "country": "US",
@@ -107,5 +107,6 @@
   "name": "22 Long Rifle",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2024-05-14"
+  "revised": "2024-05-14",
+  "tab": "V"
 }

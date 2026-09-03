@@ -94,10 +94,10 @@
       "H2": 12.19
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 101.48,
       "b": 3.96,
-      "u": 406
+      "u": 406.0
     },
     "lengths": {
       "L3": 27.94
@@ -109,9 +109,9 @@
       "G": 3.53,
       "G1": 12.19,
       "i": {
-        "degrees": 7,
-        "minutes": 45,
-        "seconds": 0
+        "degrees": 7.0,
+        "minutes": 45.0,
+        "seconds": 0.0
       }
     }
   },
@@ -119,5 +119,6 @@
   "family": "pistol",
   "key": "45_s_w_schofield_carb",
   "name": "45 S&W Schofield (carb)",
-  "published": "2000-02-15"
+  "published": "2000-02-15",
+  "tab": "IV"
 }

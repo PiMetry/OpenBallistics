@@ -1,0 +1,125 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.11,
+      "E1": 13.24,
+      "R": 1.52,
+      "R1": 14.93,
+      "beta": 45,
+      "delta": {
+        "degrees": 50,
+        "minutes": 18,
+        "seconds": 0
+      },
+      "eMin": 0.9,
+      "f": 0.5
+    },
+    "collar": {
+      "H1": 8.78,
+      "H2": 8.73
+    },
+    "junctionCone": {
+      "S": 73.84,
+      "alpha": 40,
+      "r2": 2
+    },
+    "lengths": {
+      "L1": 54.86,
+      "L1Tol": -0.2,
+      "L2": 61.78,
+      "L2Tol": -0.2,
+      "L3": 69.2,
+      "L6": 93.2
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.02
+    },
+    "powderChamber": {
+      "P1": 14.91,
+      "P2": 13.82,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 5200,
+      "M": 25,
+      "PE": 5250,
+      "PK": 4830,
+      "Pmax": 4200
+    },
+    "projectile": {
+      "G1": 7.85,
+      "L3PlusG": 76.97
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R1": 15.03
+    },
+    "collar": {
+      "H1": 8.83,
+      "H2": 8.77
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 47.51,
+      "b": 4.47,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 73.84,
+      "alpha": {
+        "degrees": 39,
+        "minutes": 58,
+        "seconds": 46
+      },
+      "r2": 3
+    },
+    "lengths": {
+      "L1": 54.8,
+      "L2": 61.7,
+      "L3": 69.45
+    },
+    "powderChamber": {
+      "E": 3.12,
+      "P1": 14.96,
+      "P2": 13.85
+    },
+    "rifling": {
+      "G": 7.77,
+      "G1": 7.87,
+      "alpha1": 90,
+      "h": 0.45,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 3
+    }
+  },
+  "country": "DE",
+  "family": "rimless",
+  "key": "30_338_prechtl_mag",
+  "name": "30-338 Prechtl Mag.",
+  "pressureMethod": "Transducer",
+  "published": "2017-05-17"
+}

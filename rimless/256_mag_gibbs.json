@@ -20,9 +20,9 @@
       "R": 1.02,
       "R1": 12.09,
       "delta": {
-        "degrees": 35,
-        "minutes": 3,
-        "seconds": 36
+        "degrees": 35.0,
+        "minutes": 3.0,
+        "seconds": 36.0
       },
       "eMin": 1.02
     },
@@ -33,9 +33,9 @@
     "junctionCone": {
       "S": 59.61,
       "alpha": {
-        "degrees": 40,
-        "minutes": 13,
-        "seconds": 7
+        "degrees": 40.0,
+        "minutes": 13.0,
+        "seconds": 7.0
       },
       "r1Min": 7.11,
       "r2": 5.08
@@ -57,11 +57,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2645,
-      "M": 25,
-      "PE": 4250,
-      "PK": 3910,
-      "Pmax": 3400
+      "EE": 2645.0,
+      "M": 25.0,
+      "PE": 4250.0,
+      "PK": 3910.0,
+      "Pmax": 3400.0
     },
     "projectile": {
       "G1": 6.73,
@@ -87,9 +87,9 @@
     "junctionCone": {
       "S": 59.7,
       "alpha": {
-        "degrees": 40,
-        "minutes": 1,
-        "seconds": 44
+        "degrees": 40.0,
+        "minutes": 1.0,
+        "seconds": 44.0
       }
     },
     "lengths": {
@@ -105,12 +105,12 @@
     "rifling": {
       "G": 4.98,
       "G1": 6.74,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.4,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 2
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 2.0
       }
     }
   },
@@ -120,5 +120,6 @@
   "name": "256 Mag. Gibbs",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

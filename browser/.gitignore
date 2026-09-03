@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+
+# Generated at build time by scripts/build-index.mjs from the record directories beside it.
+# Not committed: it is derived, and a committed copy could go stale against the records.
+src/lib/index.generated.json

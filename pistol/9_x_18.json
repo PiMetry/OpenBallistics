@@ -24,7 +24,7 @@
         "message": "cartridge L3 = 18 is more than chamber L3 = 17.95, but a chamber is at least as long as the case it takes",
         "rule": "chamber_accepts_case",
         "values": {
-          "cartridge.lengths.L3": 18,
+          "cartridge.lengths.L3": 18.0,
           "chamber.lengths.L3": 17.95
         }
       }
@@ -37,20 +37,20 @@
       "E1": 8.25,
       "R": 1.25,
       "R1": 9.5,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 49,
-        "minutes": 59,
-        "seconds": 24
+        "degrees": 49.0,
+        "minutes": 59.0,
+        "seconds": 24.0
       },
-      "eMin": 1,
+      "eMin": 1.0,
       "f": 0.6
     },
     "collar": {
       "H2": 9.68
     },
     "lengths": {
-      "L3": 18,
+      "L3": 18.0,
       "L3Tol": -0.25,
       "L6": 25.5
     },
@@ -61,10 +61,10 @@
       "P1": 9.87
     },
     "pressures": {
-      "M": 9,
-      "PE": 2340,
-      "PK": 2070,
-      "Pmax": 1800
+      "M": 9.0,
+      "PE": 2340.0,
+      "PK": 2070.0,
+      "Pmax": 1800.0
     },
     "projectile": {
       "G1": 9.02,
@@ -83,10 +83,10 @@
       "H2": 9.7
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 62.61,
       "b": 2.49,
-      "u": 250
+      "u": 250.0
     },
     "lengths": {
       "L3": 17.95
@@ -98,11 +98,11 @@
     "rifling": {
       "G": 2.58,
       "G1": 9.09,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 2,
-        "minutes": 59,
-        "seconds": 43
+        "degrees": 2.0,
+        "minutes": 59.0,
+        "seconds": 43.0
       }
     }
   },
@@ -112,5 +112,6 @@
   "name": "9 x 18",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "IV"
 }

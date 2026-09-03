@@ -24,8 +24,8 @@
       "E1": 10.39,
       "R": 1.24,
       "R1": 12.01,
-      "beta": 35,
-      "delta": 36,
+      "beta": 35.0,
+      "delta": 36.0,
       "eMin": 0.84,
       "f": 0.38
     },
@@ -35,7 +35,7 @@
     },
     "junctionCone": {
       "S": 67.25,
-      "alpha": 35,
+      "alpha": 35.0,
       "r1Min": 1.27,
       "r2": 2.54
     },
@@ -57,11 +57,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 4335,
-      "M": 25,
-      "PE": 5060,
-      "PK": 4658,
-      "Pmax": 4050
+      "EE": 4335.0,
+      "M": 25.0,
+      "PE": 5060.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 7.85,
@@ -81,17 +81,17 @@
       "H2": 8.65
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 47.55,
       "b": 4.49,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 67.37,
       "alpha": {
-        "degrees": 34,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 34.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "r1Max": 1.27,
       "r2": 3.05
@@ -110,15 +110,15 @@
       "G": 6.19,
       "G1": 7.89,
       "alpha1": {
-        "degrees": 71,
-        "minutes": 25,
-        "seconds": 48
+        "degrees": 71.0,
+        "minutes": 25.0,
+        "seconds": 48.0
       },
       "h": 0.53,
       "i": {
-        "degrees": 1,
-        "minutes": 22,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 22.0,
+        "seconds": 0.0
       }
     }
   },
@@ -128,5 +128,6 @@
   "name": "30-06 Spring.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "I"
 }

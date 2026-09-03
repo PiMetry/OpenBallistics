@@ -1,0 +1,126 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 2.9,
+      "E1": 6.58,
+      "R": 1.13,
+      "R1": 7.64,
+      "RTol": -0.25,
+      "delta": {
+        "degrees": 16,
+        "minutes": 40,
+        "seconds": 10
+      }
+    },
+    "collar": {
+      "H1": 6.26,
+      "H2": 6.26
+    },
+    "junctionCone": {
+      "S": 24.6,
+      "alpha": {
+        "degrees": 32,
+        "minutes": 54,
+        "seconds": 28
+      }
+    },
+    "lengths": {
+      "L1": 12.07,
+      "L1Tol": -0.2,
+      "L2": 14,
+      "L2Tol": -0.2,
+      "L3": 18.03,
+      "L3Tol": -0.25,
+      "L6": 25
+    },
+    "misc": {
+      "Fe": 0.2
+    },
+    "powderChamber": {
+      "P1": 7.64,
+      "P2": 7.4,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "M": 9,
+      "PE": 2275,
+      "PK": 2013,
+      "Pmax": 1750
+    },
+    "projectile": {
+      "G1": 5.63,
+      "L3PlusG": 21.89
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.45,
+      "Z": 5.6
+    },
+    "breech": {
+      "R": 1.05,
+      "R1": 7.7
+    },
+    "collar": {
+      "H1": 6.36,
+      "H2": 6.3
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 24.25,
+      "b": 2,
+      "u": 270
+    },
+    "junctionCone": {
+      "S": 25,
+      "alpha": {
+        "degrees": 31,
+        "minutes": 30,
+        "seconds": 57
+      }
+    },
+    "lengths": {
+      "L1": 11.7,
+      "L2": 13.72,
+      "L3": 18.15,
+      "L3Tol": 0.1
+    },
+    "powderChamber": {
+      "E": 3.35,
+      "P1": 7.65,
+      "P2": 7.5,
+      "P2Tol": 0.02
+    },
+    "rifling": {
+      "G": 3.86,
+      "G1": 5.8,
+      "alpha1": 180,
+      "i": {
+        "degrees": 2,
+        "minutes": 35,
+        "seconds": 44
+      }
+    }
+  },
+  "country": "SU",
+  "family": "pistol",
+  "key": "5_45x18",
+  "name": "5,45x18",
+  "pressureMethod": "Transducer",
+  "published": "1993-05-24",
+  "revised": "2000-06-07"
+}

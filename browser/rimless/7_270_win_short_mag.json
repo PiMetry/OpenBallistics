@@ -1,0 +1,121 @@
+{
+  "alternativeNames": [
+    "7-270 WSM"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.36,
+      "E1": 12.19,
+      "R": 1.37,
+      "R1": 13.59,
+      "beta": 35,
+      "delta": 45,
+      "eMin": 1.02,
+      "f": 0.36
+    },
+    "collar": {
+      "H1": 8.01,
+      "H2": 8.01
+    },
+    "junctionCone": {
+      "S": 52.03,
+      "alpha": 70,
+      "r1Min": 1.27,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 42.27,
+      "L1Tol": -0.2,
+      "L2": 46.31,
+      "L2Tol": -0.2,
+      "L3": 53.34,
+      "L6": 72.64
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.11
+    },
+    "powderChamber": {
+      "P1": 14.12,
+      "P2": 13.67,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 4725,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 7.22,
+      "L3PlusG": 57.23
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.05,
+      "Z": 7.21
+    },
+    "breech": {
+      "R1": 14.19
+    },
+    "collar": {
+      "H1": 8.13,
+      "H2": 8.13
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 40.42,
+      "b": 4.06,
+      "u": 215.9
+    },
+    "junctionCone": {
+      "S": 51.93,
+      "alpha": 70,
+      "r1Max": 1.27,
+      "r2": 3.05
+    },
+    "lengths": {
+      "L1": 42.14,
+      "L2": 46.12,
+      "L3": 53.59
+    },
+    "powderChamber": {
+      "E": 3.36,
+      "P1": 14.15,
+      "P2": 13.7
+    },
+    "rifling": {
+      "G": 3.89,
+      "G1": 7.23,
+      "alpha1": 90,
+      "h": 0.45,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "7_270_win_short_mag",
+  "name": "7-270 Win. Short Mag.",
+  "pressureMethod": "Transducer",
+  "published": "2020-11-10"
+}

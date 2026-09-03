@@ -18,7 +18,7 @@
       "R": 1.65,
       "R1": 13.34,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -27,7 +27,7 @@
     },
     "junctionCone": {
       "S": 106.52,
-      "alpha": 8,
+      "alpha": 8.0,
       "r1Min": 5.08,
       "r2": 5.08
     },
@@ -45,11 +45,11 @@
       "P2": 11.6
     },
     "pressures": {
-      "EE": 890,
+      "EE": 890.0,
       "M": 17.5,
-      "PE": 1375,
-      "PK": 1265,
-      "Pmax": 1100
+      "PE": 1375.0,
+      "PK": 1265.0,
+      "Pmax": 1100.0
     },
     "projectile": {
       "G1": 10.85,
@@ -70,14 +70,14 @@
       "H2": 11.27
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 91.97,
       "b": 3.37,
-      "u": 914
+      "u": 914.0
     },
     "junctionCone": {
       "S": 97.33,
-      "alpha": 9,
+      "alpha": 9.0,
       "r1Max": 5.08,
       "r2": 5.08
     },
@@ -93,11 +93,11 @@
     "rifling": {
       "G": 4.16,
       "G1": 11.27,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 3,
-        "minutes": 43,
-        "seconds": 0
+        "degrees": 3.0,
+        "minutes": 43.0,
+        "seconds": 0.0
       }
     }
   },
@@ -107,5 +107,6 @@
   "name": "44-40 Win.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

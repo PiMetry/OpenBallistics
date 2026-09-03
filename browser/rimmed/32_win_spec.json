@@ -1,0 +1,115 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.6,
+      "R1": 12.85,
+      "RTol": -0.25,
+      "beta": 35,
+      "delta": 0,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 8.78,
+      "H2": 8.71
+    },
+    "junctionCone": {
+      "S": 56.42,
+      "alpha": {
+        "degrees": 29,
+        "minutes": 2,
+        "seconds": 0
+      },
+      "r1Min": 3.81,
+      "r2": 7.62
+    },
+    "lengths": {
+      "L1": 36.72,
+      "L2": 39.47,
+      "L3": 51.82,
+      "L6": 65.15
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 10.72,
+      "P2": 10.2
+    },
+    "pressures": {
+      "EE": 2370,
+      "M": 25,
+      "PE": 3810,
+      "PK": 3508,
+      "Pmax": 3050
+    },
+    "projectile": {
+      "G1": 8.18,
+      "L3PlusG": 53.16
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8,
+      "Z": 8.13
+    },
+    "breech": {
+      "R": 1.6,
+      "R1": 13.11
+    },
+    "collar": {
+      "H1": 8.8,
+      "H2": 8.72
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 51.34,
+      "b": 2.69,
+      "u": 406
+    },
+    "junctionCone": {
+      "S": 56.29,
+      "alpha": {
+        "degrees": 29,
+        "minutes": 28,
+        "seconds": 0
+      },
+      "r1Max": 3.81,
+      "r2": 7.62
+    },
+    "lengths": {
+      "L1": 36.82,
+      "L2": 39.56,
+      "L3": 52.91
+    },
+    "powderChamber": {
+      "P1": 10.74,
+      "P2": 10.24
+    },
+    "rifling": {
+      "G": 1.34,
+      "G1": 8.72,
+      "i": 15
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "32_win_spec",
+  "name": "32 Win. Spec.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2022-04-26"
+}

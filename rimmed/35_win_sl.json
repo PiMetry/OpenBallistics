@@ -20,7 +20,7 @@
       "R": 1.27,
       "R1": 10.29,
       "RTol": -0.25,
-      "delta": 8,
+      "delta": 8.0,
       "eMin": 0.64
     },
     "collar": {
@@ -37,11 +37,11 @@
       "P1": 9.68
     },
     "pressures": {
-      "EE": 1150,
+      "EE": 1150.0,
       "M": 17.5,
-      "PE": 3000,
-      "PK": 2760,
-      "Pmax": 2400
+      "PE": 3000.0,
+      "PK": 2760.0,
+      "Pmax": 2400.0
     },
     "projectile": {
       "G1": 8.95,
@@ -61,10 +61,10 @@
       "H2": 9.62
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 61.61,
       "b": 2.75,
-      "u": 406
+      "u": 406.0
     },
     "lengths": {
       "L3": 29.81
@@ -75,12 +75,12 @@
     "rifling": {
       "G": 9.51,
       "G1": 8.95,
-      "alpha1": 30,
+      "alpha1": 30.0,
       "h": 1.25,
       "i": {
-        "degrees": 0,
-        "minutes": 39,
-        "seconds": 31
+        "degrees": 0.0,
+        "minutes": 39.0,
+        "seconds": 31.0
       }
     }
   },
@@ -90,5 +90,6 @@
   "name": "35 Win. SL",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

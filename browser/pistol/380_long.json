@@ -1,0 +1,91 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.25,
+      "R1": 10.85,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.3
+    },
+    "collar": {
+      "H2": 9.7
+    },
+    "lengths": {
+      "L3": 24.3,
+      "L6": 35
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 9.7
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 1001,
+      "PK": 886,
+      "Pmax": 770
+    },
+    "projectile": {
+      "G1": 9.15,
+      "L3PlusG": 26.79
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.9,
+      "Z": 9.13
+    },
+    "breech": {
+      "R": 1.25,
+      "R1": 10.9
+    },
+    "collar": {
+      "H2": 9.73
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 63.89,
+      "b": 2.4,
+      "u": 500
+    },
+    "lengths": {
+      "L3": 24.5
+    },
+    "powderChamber": {
+      "P1": 9.75
+    },
+    "rifling": {
+      "G": 2.49,
+      "G1": 9.15,
+      "alpha1": 90,
+      "h": 0.29,
+      "i": {
+        "degrees": 3,
+        "minutes": 15,
+        "seconds": 6
+      }
+    }
+  },
+  "country": "GB",
+  "family": "pistol",
+  "key": "380_long",
+  "name": "380 Long",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

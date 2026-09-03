@@ -1,0 +1,95 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.15,
+      "R1": 12.75,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 7.57,
+      "H2": 7.57
+    },
+    "lengths": {
+      "L2": 47.5,
+      "L3": 58.5,
+      "L6": 78
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.1
+    },
+    "pressures": {
+      "EE": 2300,
+      "M": 25,
+      "PE": 3500,
+      "PK": 3220,
+      "Pmax": 2800
+    },
+    "projectile": {
+      "G1": 6.64,
+      "L3PlusG": 88.5
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.4,
+      "Z": 6.64
+    },
+    "breech": {
+      "R": 1.15,
+      "R1": 12.8
+    },
+    "collar": {
+      "H1": 7.6,
+      "H2": 7.59
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 33.94,
+      "b": 3.5,
+      "u": 200
+    },
+    "lengths": {
+      "L2": 47.5,
+      "L3": 58.8
+    },
+    "powderChamber": {
+      "P1": 11.13
+    },
+    "rifling": {
+      "G": 30,
+      "G1": 6.7,
+      "alpha1": 180,
+      "i": {
+        "degrees": 0,
+        "minutes": 17,
+        "seconds": 11
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimmed",
+  "key": "6_5_x_58_r",
+  "name": "6,5 x 58 R",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

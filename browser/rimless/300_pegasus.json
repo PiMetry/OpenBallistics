@@ -1,0 +1,118 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.79,
+      "E1": 12.7,
+      "R": 1.65,
+      "R1": 14.73,
+      "beta": 45,
+      "delta": 45,
+      "eMin": 1.12,
+      "f": 0.25
+    },
+    "collar": {
+      "H1": 8.61,
+      "H2": 8.59
+    },
+    "junctionCone": {
+      "S": 75.75,
+      "alpha": 56,
+      "r1Min": 1.02,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 62.23,
+      "L1Tol": -0.2,
+      "L2": 67.66,
+      "L2Tol": -0.2,
+      "L3": 75.95,
+      "L6": 95.25
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 14.73,
+      "P2": 14.38,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 6400,
+      "M": 25,
+      "PE": 5375,
+      "PK": 4945,
+      "Pmax": 4300
+    },
+    "projectile": {
+      "G1": 7.82,
+      "L3PlusG": 87.65
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R1": 14.78
+    },
+    "collar": {
+      "H1": 8.66,
+      "H2": 8.64
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 47.45,
+      "b": 3,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 75.75,
+      "alpha": 56,
+      "r1Max": 0.76,
+      "r2": 3.81
+    },
+    "lengths": {
+      "L1": 62.2,
+      "L2": 67.61,
+      "L3": 76.2
+    },
+    "powderChamber": {
+      "E": 3.85,
+      "P1": 14.76,
+      "P2": 14.41
+    },
+    "rifling": {
+      "G": 11.7,
+      "G1": 7.85,
+      "alpha1": 90,
+      "h": 0.4,
+      "i": {
+        "degrees": 1,
+        "minutes": 6,
+        "seconds": 0
+      },
+      "s": 5.72
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "300_pegasus",
+  "name": "300 Pegasus",
+  "pressureMethod": "Transducer",
+  "published": "2014-05-20"
+}

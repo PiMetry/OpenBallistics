@@ -47,9 +47,9 @@
       "P1": 4.65
     },
     "pressures": {
-      "EE": 33,
+      "EE": 33.0,
       "EK": 32.1,
-      "Emax": 30
+      "Emax": 30.0
     },
     "projectile": {
       "F": 4.05,
@@ -70,10 +70,10 @@
       "H2": 4.58
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 13.83,
       "b": 1.25,
-      "u": 450
+      "u": 450.0
     },
     "lengths": {
       "L3": 8.6
@@ -85,9 +85,9 @@
       "G": 2.65,
       "G1": 4.58,
       "i": {
-        "degrees": 5,
-        "minutes": 42,
-        "seconds": 38
+        "degrees": 5.0,
+        "minutes": 42.0,
+        "seconds": 38.0
       }
     }
   },
@@ -97,5 +97,6 @@
   "name": "4 mm Randz. long",
   "pressureMethod": "Energy",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "V"
 }

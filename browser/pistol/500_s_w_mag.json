@@ -1,0 +1,96 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.28,
+      "E1": 12.19,
+      "R": 1.5,
+      "R1": 14.22,
+      "RTol": -0.25,
+      "beta": 35,
+      "delta": 45,
+      "eMin": 1.14,
+      "f": 0.26
+    },
+    "collar": {
+      "H2": 13.46
+    },
+    "lengths": {
+      "L3": 41.28,
+      "L6": 58.42
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 13.46
+    },
+    "pressures": {
+      "M": 23,
+      "PE": 4810,
+      "PK": 4255,
+      "Pmax": 3700
+    },
+    "projectile": {
+      "G1": 12.7,
+      "L3PlusG": 59.98
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 12.4,
+      "Z": 12.66
+    },
+    "breech": {
+      "R": 1.5,
+      "R1": 14.35
+    },
+    "collar": {
+      "H2": 13.49
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 123.37,
+      "b": 3.3,
+      "u": 476.3
+    },
+    "lengths": {
+      "L3": 41.79
+    },
+    "powderChamber": {
+      "P1": 13.54
+    },
+    "rifling": {
+      "G": 18.7,
+      "G1": 12.7,
+      "alpha1": 10,
+      "h": 4.51,
+      "i": {
+        "degrees": 4,
+        "minutes": 35,
+        "seconds": 0
+      },
+      "s": 16.83
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "500_s_w_mag",
+  "name": "500 S&W Mag",
+  "pressureMethod": "Transducer",
+  "published": "2004-05-18",
+  "revised": "2014-05-20"
+}

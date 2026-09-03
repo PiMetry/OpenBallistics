@@ -21,9 +21,9 @@
       "R1": 9.91,
       "RTol": -0.25,
       "delta": {
-        "degrees": 3,
-        "minutes": 44,
-        "seconds": 24
+        "degrees": 3.0,
+        "minutes": 44.0,
+        "seconds": 24.0
       }
     },
     "collar": {
@@ -40,11 +40,11 @@
       "P1": 8.93
     },
     "pressures": {
-      "EE": 1080,
+      "EE": 1080.0,
       "M": 17.5,
-      "PE": 1940,
-      "PK": 1783,
-      "Pmax": 1550
+      "PE": 1940.0,
+      "PK": 1783.0,
+      "Pmax": 1550.0
     },
     "projectile": {
       "G1": 8.18,
@@ -53,7 +53,7 @@
   },
   "chamber": {
     "barrel": {
-      "F": 8,
+      "F": 8.0,
       "Z": 8.13
     },
     "breech": {
@@ -64,10 +64,10 @@
       "H2": 8.88
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 51.26,
       "b": 2.51,
-      "u": 406
+      "u": 406.0
     },
     "lengths": {
       "L3": 33.6
@@ -78,11 +78,11 @@
     "rifling": {
       "G": 9.45,
       "G1": 8.19,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 34,
-        "seconds": 32
+        "degrees": 0.0,
+        "minutes": 34.0,
+        "seconds": 32.0
       }
     }
   },
@@ -92,5 +92,6 @@
   "name": "32 Win. SL",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

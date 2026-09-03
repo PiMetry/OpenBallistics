@@ -19,11 +19,11 @@
       "E1": 13.24,
       "R": 1.52,
       "R1": 14.93,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 50,
-        "minutes": 18,
-        "seconds": 0
+        "degrees": 50.0,
+        "minutes": 18.0,
+        "seconds": 0.0
       },
       "eMin": 0.9,
       "f": 0.5
@@ -34,8 +34,8 @@
     },
     "junctionCone": {
       "S": 73.84,
-      "alpha": 40,
-      "r2": 2
+      "alpha": 40.0,
+      "r2": 2.0
     },
     "lengths": {
       "L1": 54.86,
@@ -55,11 +55,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 5200,
-      "M": 25,
-      "PE": 5250,
-      "PK": 4830,
-      "Pmax": 4200
+      "EE": 5200.0,
+      "M": 25.0,
+      "PE": 5250.0,
+      "PK": 4830.0,
+      "Pmax": 4200.0
     },
     "projectile": {
       "G1": 7.85,
@@ -79,19 +79,19 @@
       "H2": 8.77
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 47.51,
       "b": 4.47,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 73.84,
       "alpha": {
-        "degrees": 39,
-        "minutes": 58,
-        "seconds": 46
+        "degrees": 39.0,
+        "minutes": 58.0,
+        "seconds": 46.0
       },
-      "r2": 3
+      "r2": 3.0
     },
     "lengths": {
       "L1": 54.8,
@@ -106,14 +106,14 @@
     "rifling": {
       "G": 7.77,
       "G1": 7.87,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.45,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
-      "s": 3
+      "s": 3.0
     }
   },
   "country": "DE",
@@ -121,5 +121,6 @@
   "key": "30_338_prechtl_mag",
   "name": "30-338 Prechtl Mag.",
   "pressureMethod": "Transducer",
-  "published": "2017-05-17"
+  "published": "2017-05-17",
+  "tab": "I"
 }

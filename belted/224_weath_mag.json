@@ -21,8 +21,8 @@
       "R": 1.27,
       "R1": 10.91,
       "R3": 10.91,
-      "beta": 45,
-      "delta": 45,
+      "beta": 45.0,
+      "delta": 45.0,
       "eMin": 1.14,
       "f": 0.31
     },
@@ -33,9 +33,9 @@
     "junctionCone": {
       "S": 44.62,
       "alpha": {
-        "degrees": 83,
-        "minutes": 26,
-        "seconds": 17
+        "degrees": 83.0,
+        "minutes": 26.0,
+        "seconds": 17.0
       },
       "r1Min": 3.3,
       "r2": 3.83
@@ -54,11 +54,11 @@
       "P2": 10.01
     },
     "pressures": {
-      "EE": 2310,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 2310.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 5.7,
@@ -79,17 +79,17 @@
       "H2": 6.45
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 24.93,
       "b": 1.8,
-      "u": 356
+      "u": 356.0
     },
     "junctionCone": {
       "S": 44.65,
       "alpha": {
-        "degrees": 84,
-        "minutes": 57,
-        "seconds": 3
+        "degrees": 84.0,
+        "minutes": 57.0,
+        "seconds": 3.0
       },
       "r1Max": 3.05,
       "r2": 3.83
@@ -107,9 +107,9 @@
     "rifling": {
       "G": 5.64,
       "G1": 5.7,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.38,
-      "i": 3,
+      "i": 3.0,
       "s": 4.11
     }
   },
@@ -119,5 +119,6 @@
   "name": "224 Weath. Mag.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "III"
 }

@@ -1,0 +1,122 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": true
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 5.59,
+      "E1": 12.07,
+      "ETol": -0.2,
+      "R": 1.27,
+      "R1": 13.51,
+      "R3": 13.56,
+      "beta": 45,
+      "delta": 35,
+      "eMin": 0.94,
+      "f": 0.41
+    },
+    "collar": {
+      "H1": 10.21,
+      "H2": 10.21
+    },
+    "junctionCone": {
+      "S": 82.54,
+      "alpha": {
+        "degrees": 29,
+        "minutes": 55,
+        "seconds": 43
+      }
+    },
+    "lengths": {
+      "L1": 61.27,
+      "L2": 63.44,
+      "L3": 72.39,
+      "L6": 91.44
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.03,
+      "P2": 11.37
+    },
+    "pressures": {
+      "EE": 6090,
+      "M": 25,
+      "PE": 5375,
+      "PK": 4945,
+      "Pmax": 4300
+    },
+    "projectile": {
+      "G1": 9.55,
+      "L3PlusG": 81.3
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.3,
+      "Z": 9.55
+    },
+    "breech": {
+      "R1": 13.59,
+      "R3": 13.59
+    },
+    "collar": {
+      "H1": 10.29,
+      "H2": 10.26
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 70.16,
+      "b": 2.92,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 82.71,
+      "alpha": {
+        "degrees": 29,
+        "minutes": 53,
+        "seconds": 52
+      }
+    },
+    "lengths": {
+      "L1": 61.38,
+      "L2": 63.44,
+      "L3": 72.9
+    },
+    "powderChamber": {
+      "E": 5.59,
+      "P1": 13.06,
+      "P2": 11.39
+    },
+    "rifling": {
+      "G": 8.91,
+      "G1": 9.91,
+      "alpha1": 90,
+      "h": 0.18,
+      "i": {
+        "degrees": 2,
+        "minutes": 0,
+        "seconds": 2
+      }
+    }
+  },
+  "country": "GB",
+  "family": "belted",
+  "key": "375_h_h_mag",
+  "name": "375 H&H Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

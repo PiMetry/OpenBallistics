@@ -1,0 +1,120 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.84,
+      "E1": 10.39,
+      "R": 1.37,
+      "R1": 11.99,
+      "beta": 35,
+      "delta": 36,
+      "eMin": 1.4,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 7.49,
+      "H2": 7.49
+    },
+    "junctionCone": {
+      "S": 48.01,
+      "alpha": 60,
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 37.84,
+      "L1Tol": -0.2,
+      "L2": 41.52,
+      "L2Tol": -0.2,
+      "L3": 48.77,
+      "L6": 71.76
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.06
+    },
+    "powderChamber": {
+      "P1": 11.95,
+      "P2": 11.74,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3400,
+      "M": 25,
+      "PE": 5438,
+      "PK": 5003,
+      "Pmax": 4350
+    },
+    "projectile": {
+      "G1": 6.72,
+      "L3PlusG": 58.42
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.5,
+      "Z": 6.71
+    },
+    "breech": {
+      "R1": 12.01
+    },
+    "collar": {
+      "H1": 7.54,
+      "H2": 7.52
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 34.66,
+      "b": 2.29,
+      "u": 203
+    },
+    "junctionCone": {
+      "S": 47.95,
+      "alpha": 60,
+      "r1Max": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 37.76,
+      "L2": 41.42,
+      "L3": 48.9
+    },
+    "powderChamber": {
+      "E": 3.84,
+      "P1": 11.98,
+      "P2": 11.76
+    },
+    "rifling": {
+      "G": 9.65,
+      "G1": 6.72,
+      "alpha1": 90,
+      "h": 0.4,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 5.45
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "6_5_creedmoor",
+  "name": "6,5 Creedmoor",
+  "pressureMethod": "Transducer",
+  "published": "2012-05-30",
+  "revised": "2020-04-21"
+}

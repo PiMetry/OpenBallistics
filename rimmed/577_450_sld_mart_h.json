@@ -26,9 +26,9 @@
     "junctionCone": {
       "S": 64.25,
       "alpha": {
-        "degrees": 31,
-        "minutes": 35,
-        "seconds": 57
+        "degrees": 31.0,
+        "minutes": 35.0,
+        "seconds": 57.0
       },
       "r2": 9.14
     },
@@ -46,11 +46,11 @@
       "P2": 16.15
     },
     "pressures": {
-      "EE": 2532,
-      "M": 25,
-      "PE": 2190,
-      "PK": 2013,
-      "Pmax": 1750
+      "EE": 2532.0,
+      "M": 25.0,
+      "PE": 2190.0,
+      "PK": 2013.0,
+      "Pmax": 1750.0
     },
     "projectile": {
       "G1": 11.81,
@@ -72,14 +72,14 @@
     },
     "grooves": {
       "Q": 101.18,
-      "u": 508
+      "u": 508.0
     },
     "junctionCone": {
       "S": 64.24,
       "alpha": {
-        "degrees": 31,
-        "minutes": 41,
-        "seconds": 49
+        "degrees": 31.0,
+        "minutes": 41.0,
+        "seconds": 49.0
       }
     },
     "lengths": {
@@ -94,12 +94,12 @@
     "rifling": {
       "G": 15.66,
       "G1": 11.88,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.49,
       "i": {
-        "degrees": 1,
-        "minutes": 0,
-        "seconds": 2
+        "degrees": 1.0,
+        "minutes": 0.0,
+        "seconds": 2.0
       }
     }
   },
@@ -109,5 +109,6 @@
   "name": "577/450 Sld. Mart. H.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

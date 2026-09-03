@@ -19,8 +19,8 @@
       "E1": 10.39,
       "R": 1.24,
       "R1": 12.01,
-      "beta": 35,
-      "delta": 36,
+      "beta": 35.0,
+      "delta": 36.0,
       "eMin": 0.84,
       "f": 0.38
     },
@@ -30,7 +30,7 @@
     },
     "junctionCone": {
       "S": 67.24,
-      "alpha": 35,
+      "alpha": 35.0,
       "r1Min": 1.27,
       "r2": 2.54
     },
@@ -52,11 +52,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 3340,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 3340.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 6.54,
@@ -76,17 +76,17 @@
       "H2": 7.39
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 33.02,
       "b": 2.44,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 67.37,
       "alpha": {
-        "degrees": 34,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 34.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "r1Max": 1.27,
       "r2": 3.05
@@ -105,12 +105,12 @@
       "G": 5.07,
       "G1": 6.54,
       "alpha1": {
-        "degrees": 71,
-        "minutes": 25,
-        "seconds": 48
+        "degrees": 71.0,
+        "minutes": 25.0,
+        "seconds": 48.0
       },
       "h": 0.59,
-      "i": 3,
+      "i": 3.0,
       "s": 3.26
     }
   },
@@ -120,5 +120,6 @@
   "name": "25-06 Rem.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "I"
 }

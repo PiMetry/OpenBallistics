@@ -1,0 +1,97 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_fmj_truncated",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.52,
+      "E1": 8.81,
+      "R": 1.4,
+      "R1": 10.77,
+      "beta": 35,
+      "delta": 45,
+      "eMin": 1.14,
+      "f": 0.51
+    },
+    "collar": {
+      "H2": 10.74
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 21.59,
+      "L3Tol": -0.25,
+      "L6": 28.83
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 10.77
+    },
+    "pressures": {
+      "M": 10.5,
+      "PE": 2925,
+      "PK": 2588,
+      "Pmax": 2250
+    },
+    "projectile": {
+      "G1": 10.17,
+      "L3PlusG": 30.42
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.91,
+      "Z": 10.17
+    },
+    "breech": {
+      "R1": 10.88
+    },
+    "collar": {
+      "H2": 10.77
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 79.55,
+      "b": 3.05,
+      "u": 406
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 21.59
+    },
+    "powderChamber": {
+      "E": 5.08,
+      "P1": 10.86
+    },
+    "rifling": {
+      "G": 8.83,
+      "G1": 10.19,
+      "alpha1": 180,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 3.48
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "40_s_w",
+  "name": "40 S.& W.",
+  "pressureMethod": "Transducer",
+  "published": "1990-02-01",
+  "revised": "2000-06-07"
+}

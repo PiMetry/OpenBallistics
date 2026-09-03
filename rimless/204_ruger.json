@@ -19,8 +19,8 @@
       "E1": 8.43,
       "R": 1.14,
       "R1": 9.6,
-      "beta": 35,
-      "delta": 25,
+      "beta": 35.0,
+      "delta": 25.0,
       "eMin": 0.76,
       "f": 0.48
     },
@@ -30,7 +30,7 @@
     },
     "junctionCone": {
       "S": 46.99,
-      "alpha": 60,
+      "alpha": 60.0,
       "r1Min": 0.64,
       "r2": 2.54
     },
@@ -51,11 +51,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 1940,
-      "M": 25,
-      "PE": 5063,
-      "PK": 4658,
-      "Pmax": 4050
+      "EE": 1940.0,
+      "M": 25.0,
+      "PE": 5063.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 5.19,
@@ -75,14 +75,14 @@
       "H2": 5.89
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 20.68,
       "b": 1.37,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 46.92,
-      "alpha": 60,
+      "alpha": 60.0,
       "r1Max": 0.64,
       "r2": 3.18
     },
@@ -99,12 +99,12 @@
     "rifling": {
       "G": 4.99,
       "G1": 5.19,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.35,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 2.89
     }
@@ -114,5 +114,6 @@
   "key": "204_ruger",
   "name": "204 Ruger",
   "pressureMethod": "Transducer",
-  "published": "2006-05-16"
+  "published": "2006-05-16",
+  "tab": "I"
 }

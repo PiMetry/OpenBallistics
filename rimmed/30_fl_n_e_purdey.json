@@ -26,9 +26,9 @@
     "junctionCone": {
       "S": 63.7,
       "alpha": {
-        "degrees": 29,
-        "minutes": 0,
-        "seconds": 1
+        "degrees": 29.0,
+        "minutes": 0.0,
+        "seconds": 1.0
       },
       "r1Min": 3.81,
       "r2": 3.81
@@ -47,11 +47,11 @@
       "P2": 10.69
     },
     "pressures": {
-      "EE": 3455,
-      "M": 25,
-      "PE": 4000,
-      "PK": 3680,
-      "Pmax": 3200
+      "EE": 3455.0,
+      "M": 25.0,
+      "PE": 4000.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
     },
     "projectile": {
       "G1": 7.82,
@@ -72,17 +72,17 @@
       "H2": 8.53
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 47.27,
       "b": 2.72,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 63.83,
       "alpha": {
-        "degrees": 28,
-        "minutes": 55,
-        "seconds": 55
+        "degrees": 28.0,
+        "minutes": 55.0,
+        "seconds": 55.0
       },
       "r1Max": 3.81,
       "r2": 3.81
@@ -99,11 +99,11 @@
     "rifling": {
       "G": 6.95,
       "G1": 7.89,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 6,
-        "seconds": 46
+        "degrees": 1.0,
+        "minutes": 6.0,
+        "seconds": 46.0
       }
     }
   },
@@ -113,5 +113,6 @@
   "name": "30 Fl. N.E. Purdey",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2011-05-25"
+  "revised": "2011-05-25",
+  "tab": "II"
 }

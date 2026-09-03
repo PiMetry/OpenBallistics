@@ -1,0 +1,121 @@
+{
+  "alternativeNames": [
+    "350 Mag. Rigby"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.81,
+      "E1": 11.61,
+      "R": 1.52,
+      "R1": 13.36,
+      "delta": {
+        "degrees": 26,
+        "minutes": 51,
+        "seconds": 36
+      },
+      "eMin": 0.76
+    },
+    "collar": {
+      "H1": 9.75,
+      "H2": 9.73
+    },
+    "junctionCone": {
+      "S": 62.87,
+      "alpha": 90
+    },
+    "lengths": {
+      "L1": 57.15,
+      "L1Tol": -0.2,
+      "L2": 57.99,
+      "L2Tol": -0.2,
+      "L3": 69.85,
+      "L6": 90.8
+    },
+    "misc": {
+      "Fe": 0.15,
+      "deltaL": 0.04
+    },
+    "powderChamber": {
+      "P1": 13.16,
+      "P2": 11.43,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 4810,
+      "M": 25,
+      "PE": 3875,
+      "PK": 3565,
+      "Pmax": 3100
+    },
+    "projectile": {
+      "G1": 9.07,
+      "L3PlusG": 74.74
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.89,
+      "Z": 9.06
+    },
+    "breech": {
+      "R": 1.52,
+      "R1": 13.41
+    },
+    "collar": {
+      "H1": 9.78,
+      "H2": 9.75
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 63.52,
+      "b": 2.79,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 62.83,
+      "alpha": 90
+    },
+    "lengths": {
+      "L1": 57.1,
+      "L2": 57.94,
+      "L3": 70.15
+    },
+    "powderChamber": {
+      "E": 3.81,
+      "P1": 13.18,
+      "P2": 11.46
+    },
+    "rifling": {
+      "G": 4.89,
+      "G1": 9.13,
+      "alpha1": 90,
+      "h": 0.31,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimless",
+  "key": "350_rigby_mag",
+  "name": "350 Rigby Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2020-11-10"
+}

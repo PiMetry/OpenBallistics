@@ -18,7 +18,7 @@
       "R": 1.5,
       "R1": 11.18,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 54.88,
       "alpha": {
-        "degrees": 13,
-        "minutes": 21,
-        "seconds": 0
+        "degrees": 13.0,
+        "minutes": 21.0,
+        "seconds": 0.0
       },
       "r1Min": 0.76,
       "r2": 2.54
@@ -50,9 +50,9 @@
     },
     "pressures": {
       "M": 10.5,
-      "PE": 3315,
-      "PK": 2933,
-      "Pmax": 2550
+      "PE": 3315.0,
+      "PK": 2933.0,
+      "Pmax": 2550.0
     },
     "projectile": {
       "G1": 5.65,
@@ -73,17 +73,17 @@
       "H2": 6.4
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 24.77,
       "b": 1.8,
-      "u": 381
+      "u": 381.0
     },
     "junctionCone": {
       "S": 54.99,
       "alpha": {
-        "degrees": 13,
-        "minutes": 21,
-        "seconds": 0
+        "degrees": 13.0,
+        "minutes": 21.0,
+        "seconds": 0.0
       },
       "r1Max": 0.76,
       "r2": 3.18
@@ -100,12 +100,12 @@
     "rifling": {
       "G": 10.31,
       "G1": 5.69,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.35,
       "i": {
-        "degrees": 4,
-        "minutes": 45,
-        "seconds": 0
+        "degrees": 4.0,
+        "minutes": 45.0,
+        "seconds": 0.0
       },
       "s": 9.53
     }
@@ -116,5 +116,6 @@
   "name": "22 Rem. Jet Mag.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

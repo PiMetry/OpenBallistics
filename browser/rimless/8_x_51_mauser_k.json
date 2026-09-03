@@ -1,0 +1,126 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.2,
+      "E1": 10.5,
+      "R": 1.3,
+      "R1": 11.95,
+      "beta": 45,
+      "delta": 36,
+      "eMin": 0.9,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 8.97,
+      "H2": 8.97
+    },
+    "junctionCone": {
+      "S": 58.91,
+      "alpha": {
+        "degrees": 29,
+        "minutes": 59,
+        "seconds": 8
+      },
+      "r1Min": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 38.09,
+      "L1Tol": -0.2,
+      "L2": 42.16,
+      "L2Tol": -0.2,
+      "L3": 50.7,
+      "L6": 68
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.95,
+      "P2": 11.15,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2635,
+      "M": 25,
+      "PE": 4250,
+      "PK": 3910,
+      "Pmax": 3400
+    },
+    "projectile": {
+      "G1": 8.07,
+      "L3PlusG": 85.7
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.8,
+      "Z": 8.07
+    },
+    "breech": {
+      "R": 1.3,
+      "R1": 12
+    },
+    "collar": {
+      "H1": 9.01,
+      "H2": 9
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 50.3,
+      "b": 4.4,
+      "u": 240
+    },
+    "junctionCone": {
+      "S": 58.91,
+      "alpha": {
+        "degrees": 29,
+        "minutes": 59,
+        "seconds": 42
+      },
+      "r1Max": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 38.04,
+      "L2": 42.09,
+      "L3": 51
+    },
+    "powderChamber": {
+      "E": 3.2,
+      "P1": 11.98,
+      "P2": 11.18
+    },
+    "rifling": {
+      "G": 35,
+      "G1": 8.15,
+      "alpha1": 180,
+      "i": {
+        "degrees": 0,
+        "minutes": 17,
+        "seconds": 11
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimless",
+  "key": "8_x_51_mauser_k",
+  "name": "8 x 51 (Mauser K)",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

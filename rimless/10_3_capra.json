@@ -19,8 +19,8 @@
       "E1": 10.39,
       "R": 1.37,
       "R1": 12.01,
-      "beta": 35,
-      "delta": 36,
+      "beta": 35.0,
+      "delta": 36.0,
       "eMin": 1.4,
       "f": 0.38
     },
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 66.89,
       "alpha": {
-        "degrees": 49,
-        "minutes": 14,
-        "seconds": 49
+        "degrees": 49.0,
+        "minutes": 14.0,
+        "seconds": 49.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -45,7 +45,7 @@
       "L2Tol": -0.2,
       "L3": 68.51,
       "L5": 69.5,
-      "L6": 84
+      "L6": 84.0
     },
     "misc": {
       "Fe": 0.1
@@ -56,11 +56,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 6500,
-      "M": 25,
-      "PE": 5125,
-      "PK": 4715,
-      "Pmax": 4100
+      "EE": 6500.0,
+      "M": 25.0,
+      "PE": 5125.0,
+      "PK": 4715.0,
+      "Pmax": 4100.0
     },
     "projectile": {
       "G1": 10.54,
@@ -81,17 +81,17 @@
       "H2": 11.11
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 85.16,
       "b": 3.6,
-      "u": 450
+      "u": 450.0
     },
     "junctionCone": {
       "S": 66.82,
       "alpha": {
-        "degrees": 49,
-        "minutes": 31,
-        "seconds": 8
+        "degrees": 49.0,
+        "minutes": 31.0,
+        "seconds": 8.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -107,13 +107,13 @@
       "P2": 12.23
     },
     "rifling": {
-      "G": 30,
+      "G": 30.0,
       "G1": 10.65,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 22,
-        "seconds": 55
+        "degrees": 0.0,
+        "minutes": 22.0,
+        "seconds": 55.0
       }
     }
   },
@@ -122,5 +122,6 @@
   "key": "10_3_capra",
   "name": "10,3 Capra",
   "pressureMethod": "Transducer",
-  "published": "2018-05-16"
+  "published": "2018-05-16",
+  "tab": "I"
 }

@@ -1,0 +1,115 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.27,
+      "R1": 19.05,
+      "RTol": -0.25,
+      "beta": 45,
+      "delta": 0,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 13.65,
+      "H2": 13.65
+    },
+    "junctionCone": {
+      "S": 85.96,
+      "alpha": {
+        "degrees": 32,
+        "minutes": 52,
+        "seconds": 0
+      },
+      "r1Min": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 58,
+      "L2": 62.83,
+      "L3": 75,
+      "L6": 98.5
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 16.81,
+      "P2": 16.5
+    },
+    "pressures": {
+      "EE": 10000,
+      "M": 25,
+      "PE": 3750,
+      "PK": 3450,
+      "Pmax": 3000
+    },
+    "projectile": {
+      "G1": 12.95,
+      "L3PlusG": 84.89
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 12.7,
+      "Z": 13
+    },
+    "breech": {
+      "R": 1.27,
+      "R1": 19.1
+    },
+    "collar": {
+      "H1": 13.7,
+      "H2": 13.68
+    },
+    "grooves": {
+      "N": 8,
+      "Q": 130.56,
+      "b": 3.2,
+      "u": 381
+    },
+    "junctionCone": {
+      "S": 85.97,
+      "alpha": 33,
+      "r1Max": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 58.05,
+      "L2": 62.83,
+      "L3": 75.3
+    },
+    "powderChamber": {
+      "P1": 16.84,
+      "P2": 16.53
+    },
+    "rifling": {
+      "G": 9.89,
+      "G1": 13,
+      "h": 0.34,
+      "i": {
+        "degrees": 0,
+        "minutes": 53,
+        "seconds": 59
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimmed",
+  "key": "500_al_sharqi",
+  "name": "500 Al Sharqi",
+  "pressureMethod": "Transducer",
+  "published": "2021-11-09"
+}

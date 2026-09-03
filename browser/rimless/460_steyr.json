@@ -1,0 +1,127 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 6.23,
+      "E1": 17.27,
+      "R": 2.26,
+      "R1": 20.42,
+      "beta": 45,
+      "delta": 36,
+      "eMin": 1.8,
+      "f": 0.84
+    },
+    "collar": {
+      "H1": 12.72,
+      "H2": 12.72
+    },
+    "junctionCone": {
+      "S": 88.33,
+      "alpha": {
+        "degrees": 56,
+        "minutes": 38,
+        "seconds": 53
+      },
+      "r1Min": 1,
+      "r2": 3
+    },
+    "lengths": {
+      "L1": 71.4,
+      "L1Tol": -0.2,
+      "L2": 76.53,
+      "L2Tol": -0.2,
+      "L3": 90,
+      "L6": 140
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 20.42,
+      "P2": 18.25,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 15000,
+      "M": 40,
+      "PE": 4625,
+      "PK": 4255,
+      "Pmax": 3700
+    },
+    "projectile": {
+      "F": 11.43,
+      "G1": 11.65,
+      "L3PlusG": 105.3
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.43,
+      "Z": 11.63
+    },
+    "breech": {
+      "R1": 20.52
+    },
+    "collar": {
+      "H1": 12.85,
+      "H2": 12.75
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 104.94,
+      "b": 3.81,
+      "u": 356
+    },
+    "junctionCone": {
+      "S": 88.66,
+      "alpha": {
+        "degrees": 55,
+        "minutes": 57,
+        "seconds": 13
+      },
+      "r1Max": 1,
+      "r2": 3
+    },
+    "lengths": {
+      "L1": 71.43,
+      "L2": 76.56,
+      "L3": 91
+    },
+    "powderChamber": {
+      "E": 6.23,
+      "P1": 20.45,
+      "P2": 18.3
+    },
+    "rifling": {
+      "G": 15.3,
+      "G1": 11.65,
+      "alpha1": 90,
+      "h": 0.55,
+      "i": {
+        "degrees": 0,
+        "minutes": 42,
+        "seconds": 58
+      },
+      "s": 6.5
+    }
+  },
+  "country": "AT",
+  "family": "rimless",
+  "key": "460_steyr",
+  "name": "460 Steyr",
+  "pressureMethod": "Transducer",
+  "published": "2006-05-16"
+}

@@ -39,9 +39,9 @@
     },
     "pressures": {
       "M": 17.5,
-      "PE": 2080,
-      "PK": 1840,
-      "Pmax": 1600
+      "PE": 2080.0,
+      "PK": 1840.0,
+      "Pmax": 1600.0
     },
     "projectile": {
       "G1": 5.7,
@@ -62,10 +62,10 @@
       "H2": 6.17
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 25.03,
       "b": 1.88,
-      "u": 406
+      "u": 406.0
     },
     "lengths": {
       "L3": 27.18
@@ -76,12 +76,12 @@
     "rifling": {
       "G": 4.59,
       "G1": 5.76,
-      "alpha1": 30,
+      "alpha1": 30.0,
       "h": 0.77,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -91,5 +91,6 @@
   "name": "22 Win. Mag. R.F.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "V"
 }

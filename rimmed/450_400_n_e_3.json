@@ -26,16 +26,16 @@
     "junctionCone": {
       "S": 79.84,
       "alpha": {
-        "degrees": 30,
-        "minutes": 4,
-        "seconds": 56
+        "degrees": 30.0,
+        "minutes": 4.0,
+        "seconds": 56.0
       },
       "r1Min": 14.53,
       "r2": 14.53
     },
     "lengths": {
       "L1": 55.26,
-      "L2": 59,
+      "L2": 59.0,
       "L3": 76.2,
       "L6": 95.25
     },
@@ -47,11 +47,11 @@
       "P2": 13.21
     },
     "pressures": {
-      "EE": 5310,
-      "M": 25,
-      "PE": 3500,
-      "PK": 3220,
-      "Pmax": 2800
+      "EE": 5310.0,
+      "M": 25.0,
+      "PE": 3500.0,
+      "PK": 3220.0,
+      "Pmax": 2800.0
     },
     "projectile": {
       "G1": 10.41,
@@ -72,17 +72,17 @@
       "H2": 11.2
     },
     "grooves": {
-      "N": 7,
+      "N": 7.0,
       "Q": 84.25,
       "b": 3.56,
-      "u": 381
+      "u": 381.0
     },
     "junctionCone": {
       "S": 79.74,
       "alpha": {
-        "degrees": 30,
-        "minutes": 18,
-        "seconds": 8
+        "degrees": 30.0,
+        "minutes": 18.0,
+        "seconds": 8.0
       },
       "r1Max": 14.53,
       "r2": 14.53
@@ -99,12 +99,12 @@
     "rifling": {
       "G": 10.38,
       "G1": 10.5,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.35,
       "i": {
-        "degrees": 0,
-        "minutes": 58,
-        "seconds": 16
+        "degrees": 0.0,
+        "minutes": 58.0,
+        "seconds": 16.0
       }
     }
   },
@@ -114,5 +114,6 @@
   "name": "450/400 N.E. 3''",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2008-04-15"
+  "revised": "2008-04-15",
+  "tab": "II"
 }

@@ -18,7 +18,7 @@
       "R": 1.02,
       "R1": 16.64,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -28,14 +28,14 @@
     "junctionCone": {
       "S": 86.43,
       "alpha": {
-        "degrees": 29,
-        "minutes": 40,
-        "seconds": 7
+        "degrees": 29.0,
+        "minutes": 40.0,
+        "seconds": 7.0
       }
     },
     "lengths": {
       "L1": 60.96,
-      "L2": 65,
+      "L2": 65.0,
       "L3": 82.55,
       "L6": 101.09
     },
@@ -47,11 +47,11 @@
       "P2": 13.49
     },
     "pressures": {
-      "EE": 6720,
-      "M": 25,
-      "PE": 3940,
-      "PK": 3625,
-      "Pmax": 3150
+      "EE": 6720.0,
+      "M": 25.0,
+      "PE": 3940.0,
+      "PK": 3625.0,
+      "Pmax": 3150.0
     },
     "projectile": {
       "G1": 10.57,
@@ -72,20 +72,20 @@
       "H2": 11.35
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 86.56,
       "b": 3.6,
-      "u": 420
+      "u": 420.0
     },
     "junctionCone": {
       "S": 86.61,
       "alpha": {
-        "degrees": 29,
-        "minutes": 32,
-        "seconds": 9
+        "degrees": 29.0,
+        "minutes": 32.0,
+        "seconds": 9.0
       },
-      "r1Max": 3,
-      "r2": 3
+      "r1Max": 3.0,
+      "r2": 3.0
     },
     "lengths": {
       "L1": 60.99,
@@ -99,12 +99,12 @@
     "rifling": {
       "G": 7.62,
       "G1": 10.59,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.38,
       "i": {
-        "degrees": 0,
-        "minutes": 56,
-        "seconds": 57
+        "degrees": 0.0,
+        "minutes": 56.0,
+        "seconds": 57.0
       }
     }
   },
@@ -114,5 +114,6 @@
   "name": "500/416 N.E. 3\"1/4",
   "pressureMethod": "Transducer",
   "published": "1996-12-20",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

@@ -21,7 +21,7 @@
       "R": 1.4,
       "R1": 9.53,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -39,12 +39,12 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 1300,
-      "PK": 1150,
-      "Pmax": 1000
+      "PE": 1300.0,
+      "PK": 1150.0,
+      "Pmax": 1000.0
     },
     "projectile": {
-      "G1": 8,
+      "G1": 8.0,
       "L3PlusG": 34.51
     }
   },
@@ -61,10 +61,10 @@
       "H2": 8.63
     },
     "grooves": {
-      "N": 5,
+      "N": 5.0,
       "Q": 47.91,
       "b": 2.41,
-      "u": 476
+      "u": 476.0
     },
     "lengths": {
       "L3": 23.9
@@ -75,12 +75,12 @@
     "rifling": {
       "G": 11.14,
       "G1": 7.98,
-      "alpha1": 25,
+      "alpha1": 25.0,
       "h": 1.47,
       "i": {
-        "degrees": 4,
-        "minutes": 35,
-        "seconds": 0
+        "degrees": 4.0,
+        "minutes": 35.0,
+        "seconds": 0.0
       },
       "s": 9.4
     }
@@ -91,5 +91,6 @@
   "name": "32 S.&W. Long",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2009-05-05"
+  "revised": "2009-05-05",
+  "tab": "IV"
 }

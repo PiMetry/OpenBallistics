@@ -25,13 +25,13 @@
     },
     "junctionCone": {
       "S": 68.92,
-      "alpha": 40
+      "alpha": 40.0
     },
     "lengths": {
       "L1": 53.85,
       "L2": 58.52,
-      "L3": 65,
-      "L6": 85
+      "L3": 65.0,
+      "L6": 85.0
     },
     "misc": {
       "Fe": 0.15
@@ -41,11 +41,11 @@
       "P2": 10.97
     },
     "pressures": {
-      "EE": 3675,
-      "M": 25,
-      "PE": 4750,
-      "PK": 4170,
-      "Pmax": 3800
+      "EE": 3675.0,
+      "M": 25.0,
+      "PE": 4750.0,
+      "PK": 4170.0,
+      "Pmax": 3800.0
     },
     "projectile": {
       "G1": 6.7,
@@ -66,14 +66,14 @@
       "H2": 7.6
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 34.52,
       "b": 3.5,
-      "u": 200
+      "u": 200.0
     },
     "junctionCone": {
       "S": 68.97,
-      "alpha": 40
+      "alpha": 40.0
     },
     "lengths": {
       "L1": 53.86,
@@ -82,19 +82,19 @@
     },
     "powderChamber": {
       "P1": 12.11,
-      "P2": 11
+      "P2": 11.0
     },
     "rifling": {
       "G": 9.96,
       "G1": 6.71,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.45,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
-      "s": 5
+      "s": 5.0
     }
   },
   "country": "DE",
@@ -103,5 +103,6 @@
   "name": "6,5 x 65 R RWS",
   "pressureMethod": "Transducer",
   "published": "1990-04-05",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

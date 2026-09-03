@@ -1,0 +1,127 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.7,
+      "E1": 11.5,
+      "R": 1.3,
+      "R1": 13,
+      "beta": 45,
+      "delta": 40,
+      "eMin": 1,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 10.26,
+      "H2": 10.26
+    },
+    "junctionCone": {
+      "S": 62.97,
+      "alpha": {
+        "degrees": 81,
+        "minutes": 23,
+        "seconds": 28
+      },
+      "r1Min": 0.5,
+      "r2": 1
+    },
+    "lengths": {
+      "L1": 55,
+      "L1Tol": -0.2,
+      "L2": 57,
+      "L2Tol": -0.2,
+      "L3": 66,
+      "L6": 85
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.85,
+      "P2": 13.7,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 6080,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 9.55,
+      "L3PlusG": 74.92
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.3,
+      "Z": 9.55
+    },
+    "breech": {
+      "R": 1.3,
+      "R1": 13.05
+    },
+    "collar": {
+      "H1": 10.3,
+      "H2": 10.29
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 70.16,
+      "b": 2.92,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 62.96,
+      "alpha": {
+        "degrees": 81,
+        "minutes": 30,
+        "seconds": 36
+      },
+      "r1Max": 0.5,
+      "r2": 1
+    },
+    "lengths": {
+      "L1": 54.99,
+      "L2": 56.98,
+      "L3": 66.3
+    },
+    "powderChamber": {
+      "E": 3.7,
+      "P1": 13.88,
+      "P2": 13.73
+    },
+    "rifling": {
+      "G": 8.92,
+      "G1": 9.91,
+      "alpha1": 90,
+      "h": 0.19,
+      "i": {
+        "degrees": 2,
+        "minutes": 0,
+        "seconds": 2
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimless",
+  "key": "9_5_x_66_se_v_h",
+  "name": "9,5 x 66 SE v. H.",
+  "pressureMethod": "Transducer",
+  "published": "1996-05-24",
+  "revised": "2002-05-15"
+}

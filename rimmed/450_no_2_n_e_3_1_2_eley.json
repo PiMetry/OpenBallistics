@@ -26,9 +26,9 @@
     "junctionCone": {
       "S": 113.41,
       "alpha": {
-        "degrees": 19,
-        "minutes": 19,
-        "seconds": 36
+        "degrees": 19.0,
+        "minutes": 19.0,
+        "seconds": 36.0
       }
     },
     "lengths": {
@@ -45,11 +45,11 @@
       "P2": 13.97
     },
     "pressures": {
-      "EE": 7140,
-      "M": 25,
-      "PE": 3500,
-      "PK": 3220,
-      "Pmax": 2800
+      "EE": 7140.0,
+      "M": 25.0,
+      "PE": 3500.0,
+      "PK": 3220.0,
+      "Pmax": 2800.0
     },
     "projectile": {
       "G1": 11.63,
@@ -70,17 +70,17 @@
       "H2": 12.29
     },
     "grooves": {
-      "N": 7,
+      "N": 7.0,
       "Q": 104.89,
       "b": 3.56,
-      "u": 381
+      "u": 381.0
     },
     "junctionCone": {
       "S": 113.43,
       "alpha": {
-        "degrees": 20,
-        "minutes": 5,
-        "seconds": 34
+        "degrees": 20.0,
+        "minutes": 5.0,
+        "seconds": 34.0
       }
     },
     "lengths": {
@@ -95,12 +95,12 @@
     "rifling": {
       "G": 4.77,
       "G1": 11.68,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.31,
       "i": {
-        "degrees": 1,
-        "minutes": 36,
-        "seconds": 19
+        "degrees": 1.0,
+        "minutes": 36.0,
+        "seconds": 19.0
       }
     }
   },
@@ -110,5 +110,6 @@
   "name": "450 No.2 N.E. 3''1/2 Eley",
   "pressureMethod": "Transducer",
   "published": "1998-01-27",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

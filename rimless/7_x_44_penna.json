@@ -33,8 +33,8 @@
       "E1": 8.43,
       "R": 1.14,
       "R1": 9.6,
-      "beta": 35,
-      "delta": 25,
+      "beta": 35.0,
+      "delta": 25.0,
       "eMin": 0.76,
       "f": 0.45
     },
@@ -45,20 +45,20 @@
     "junctionCone": {
       "S": 58.17,
       "alpha": {
-        "degrees": 22,
-        "minutes": 2,
-        "seconds": 56
+        "degrees": 22.0,
+        "minutes": 2.0,
+        "seconds": 56.0
       },
       "r1Min": 0.6,
       "r2": 2.5
     },
     "lengths": {
-      "L1": 35,
+      "L1": 35.0,
       "L1Tol": -0.2,
       "L2": 38.67,
       "L2Tol": -0.2,
       "L3": 44.5,
-      "L6": 60
+      "L6": 60.0
     },
     "misc": {
       "Fe": 0.1,
@@ -70,11 +70,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2000,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 2000.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 7.04,
@@ -94,17 +94,17 @@
       "H2": 7.62
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 37.4,
       "b": 0.85,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 59.04,
       "alpha": {
-        "degrees": 21,
-        "minutes": 11,
-        "seconds": 3
+        "degrees": 21.0,
+        "minutes": 11.0,
+        "seconds": 3.0
       },
       "r1Max": 0.6,
       "r2": 2.5
@@ -122,13 +122,13 @@
     "rifling": {
       "G": 15.16,
       "G1": 7.04,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 59,
-        "seconds": 57
+        "degrees": 0.0,
+        "minutes": 59.0,
+        "seconds": 57.0
       },
-      "s": 10
+      "s": 10.0
     }
   },
   "country": "IT",
@@ -136,5 +136,6 @@
   "key": "7_x_44_penna",
   "name": "7 x 44 Penna",
   "pressureMethod": "Transducer",
-  "published": "2013-05-22"
+  "published": "2013-05-22",
+  "tab": "I"
 }

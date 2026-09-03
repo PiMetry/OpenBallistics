@@ -1,0 +1,75 @@
+{
+  "annotations": {
+    "category": "shotgun",
+    "confidence": "unverified",
+    "defaultBulletShape": "shot",
+    "implausible": [],
+    "primerType": "209"
+  },
+  "cartridge": {
+    "dimensions": {
+      "d": 13.6,
+      "dTol": -0.2,
+      "g": 15.4,
+      "gTol": -0.2,
+      "h": 13.25,
+      "hTol": -0.35,
+      "t": 1.5,
+      "tTol": -0.3
+    },
+    "lengths": [
+      {
+        "l": 65,
+        "marking": "32/65 R",
+        "tol": -2.5
+      },
+      {
+        "l": 69.8,
+        "marking": "32/70 R",
+        "tol": -2.5
+      }
+    ]
+  },
+  "chamber": {
+    "chamberLengths": [
+      {
+        "L": 65.1,
+        "marking": "32/65 R",
+        "tol": 2
+      },
+      {
+        "L": 69.9,
+        "marking": "32/70 R",
+        "tol": 2
+      }
+    ],
+    "dimensions": {
+      "B": 12.5,
+      "BTol": 0.3,
+      "D": 13.6,
+      "DTol": 0.1,
+      "G": 15.5,
+      "GTol": 0.2,
+      "H": 13.3,
+      "HTol": 0.1,
+      "T": 1.5,
+      "TTol": 0.1,
+      "alpha1": {
+        "degrees": 10,
+        "minutes": 30,
+        "seconds": 0
+      }
+    },
+    "headspace": {
+      "Fe": 0.1,
+      "FeAutomatic": 0.35,
+      "FeBascule": 0.2
+    }
+  },
+  "family": "shotshell",
+  "key": "32_rus",
+  "name": "Cal. 32 RUS",
+  "pressureMethod": "Transducer",
+  "published": "1999-04-20",
+  "revised": "2006-09-19"
+}

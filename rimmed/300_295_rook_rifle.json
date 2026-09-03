@@ -33,11 +33,11 @@
       "P1": 8.1
     },
     "pressures": {
-      "EE": 375,
+      "EE": 375.0,
       "M": 17.5,
-      "PE": 1500,
-      "PK": 1380,
-      "Pmax": 1200
+      "PE": 1500.0,
+      "PK": 1380.0,
+      "Pmax": 1200.0
     },
     "projectile": {
       "G1": 7.65,
@@ -58,7 +58,7 @@
     },
     "grooves": {
       "Q": 43.01,
-      "u": 508
+      "u": 508.0
     },
     "lengths": {
       "L3": 30.23
@@ -67,13 +67,13 @@
       "P1": 8.13
     },
     "rifling": {
-      "G": 5,
+      "G": 5.0,
       "G1": 7.65,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 25,
-        "seconds": 55
+        "degrees": 1.0,
+        "minutes": 25.0,
+        "seconds": 55.0
       }
     }
   },
@@ -83,5 +83,6 @@
   "name": "300/295 Rook Rifle",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2011-05-25"
+  "revised": "2011-05-25",
+  "tab": "II"
 }

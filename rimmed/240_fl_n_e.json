@@ -18,7 +18,7 @@
       "R": 1.09,
       "R1": 12.95,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 65.97,
       "alpha": {
-        "degrees": 34,
-        "minutes": 45,
-        "seconds": 33
+        "degrees": 34.0,
+        "minutes": 45.0,
+        "seconds": 33.0
       },
       "r1Min": 4.57,
       "r2": 4.57
@@ -49,11 +49,11 @@
       "P2": 10.29
     },
     "pressures": {
-      "EE": 2660,
-      "M": 25,
-      "PE": 4000,
-      "PK": 3680,
-      "Pmax": 3200
+      "EE": 2660.0,
+      "M": 25.0,
+      "PE": 4000.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
     },
     "projectile": {
       "G1": 6.22,
@@ -74,17 +74,17 @@
       "H2": 7.14
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 29.95,
       "b": 3.5,
-      "u": 203
+      "u": 203.0
     },
     "junctionCone": {
       "S": 66.08,
       "alpha": {
-        "degrees": 34,
-        "minutes": 39,
-        "seconds": 25
+        "degrees": 34.0,
+        "minutes": 39.0,
+        "seconds": 25.0
       }
     },
     "lengths": {
@@ -99,12 +99,12 @@
     "rifling": {
       "G": 12.7,
       "G1": 6.3,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.42,
       "i": {
-        "degrees": 0,
-        "minutes": 39,
-        "seconds": 11
+        "degrees": 0.0,
+        "minutes": 39.0,
+        "seconds": 11.0
       }
     }
   },
@@ -114,5 +114,6 @@
   "name": "240 Fl. N.E.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2004-05-18"
+  "revised": "2004-05-18",
+  "tab": "II"
 }

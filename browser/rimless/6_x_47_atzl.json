@@ -1,0 +1,127 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.11,
+      "E1": 8.43,
+      "R": 1.14,
+      "R1": 9.6,
+      "beta": 35,
+      "delta": 25,
+      "eMin": 0.76,
+      "f": 0.45
+    },
+    "collar": {
+      "H1": 6.65,
+      "H2": 6.65
+    },
+    "junctionCone": {
+      "S": 47.76,
+      "alpha": {
+        "degrees": 46,
+        "minutes": 0,
+        "seconds": 30
+      },
+      "r1Min": 0.64,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 37.08,
+      "L1Tol": -0.2,
+      "L2": 39.93,
+      "L2Tol": -0.2,
+      "L3": 47,
+      "L6": 63
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 9.56,
+      "P2": 9.07,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2100,
+      "M": 25,
+      "PE": 5060,
+      "PK": 4660,
+      "Pmax": 4050
+    },
+    "projectile": {
+      "G1": 6.17,
+      "L3PlusG": 52.57
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.02,
+      "Z": 6.17
+    },
+    "breech": {
+      "R1": 9.63
+    },
+    "collar": {
+      "H1": 6.65,
+      "H2": 6.65
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 29.52,
+      "b": 2.29,
+      "u": 356
+    },
+    "junctionCone": {
+      "S": 47.8,
+      "alpha": {
+        "degrees": 45,
+        "minutes": 54,
+        "seconds": 58
+      },
+      "r1Max": 0.64,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 37.07,
+      "L2": 39.95,
+      "L3": 47.3
+    },
+    "powderChamber": {
+      "E": 3.11,
+      "P1": 9.59,
+      "P2": 9.09
+    },
+    "rifling": {
+      "G": 5.57,
+      "G1": 6.18,
+      "alpha1": 90,
+      "h": 0.24,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 9
+      },
+      "s": 2.52
+    }
+  },
+  "country": "AT",
+  "family": "rimless",
+  "key": "6_x_47_atzl",
+  "name": "6 x 47 ATZL",
+  "pressureMethod": "Transducer",
+  "published": "1997-11-05",
+  "revised": "2011-05-25"
+}

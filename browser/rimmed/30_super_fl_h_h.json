@@ -1,0 +1,116 @@
+{
+  "alternativeNames": [
+    "300 Fl. N.E."
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.52,
+      "R1": 14.53,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H1": 8.59,
+      "H2": 8.59
+    },
+    "junctionCone": {
+      "S": 93.94,
+      "alpha": {
+        "degrees": 16,
+        "minutes": 58,
+        "seconds": 3
+      }
+    },
+    "lengths": {
+      "L1": 55.63,
+      "L2": 65.15,
+      "L3": 74.68,
+      "L6": 93.73
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 13.13,
+      "P2": 11.43
+    },
+    "pressures": {
+      "EE": 3520,
+      "M": 25,
+      "PE": 4000,
+      "PK": 3680,
+      "Pmax": 3200
+    },
+    "projectile": {
+      "G1": 7.82,
+      "L3PlusG": 81.67
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R": 1.55,
+      "R1": 14.78
+    },
+    "collar": {
+      "H1": 8.62,
+      "H2": 8.61
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 47.27,
+      "b": 2.72,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 94.11,
+      "alpha": {
+        "degrees": 16,
+        "minutes": 56,
+        "seconds": 58
+      }
+    },
+    "lengths": {
+      "L1": 55.65,
+      "L2": 65.18,
+      "L3": 74.93
+    },
+    "powderChamber": {
+      "P1": 13.16,
+      "P2": 11.46
+    },
+    "rifling": {
+      "G": 6.99,
+      "G1": 7.89,
+      "alpha1": 180,
+      "i": {
+        "degrees": 1,
+        "minutes": 6,
+        "seconds": 23
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "30_super_fl_h_h",
+  "name": "30 Super Fl. H&H",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2011-05-25"
+}

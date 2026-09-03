@@ -23,16 +23,16 @@
       "R": 1.6,
       "R1": 16.25,
       "beta": {
-        "degrees": 35,
-        "minutes": 19,
-        "seconds": 59
+        "degrees": 35.0,
+        "minutes": 19.0,
+        "seconds": 59.0
       },
       "delta": {
-        "degrees": 53,
-        "minutes": 44,
-        "seconds": 0
+        "degrees": 53.0,
+        "minutes": 44.0,
+        "seconds": 0.0
       },
-      "eMin": 2,
+      "eMin": 2.0,
       "f": 0.5
     },
     "collar": {
@@ -42,9 +42,9 @@
     "junctionCone": {
       "S": 81.02,
       "alpha": {
-        "degrees": 44,
-        "minutes": 8,
-        "seconds": 46
+        "degrees": 44.0,
+        "minutes": 8.0,
+        "seconds": 46.0
       }
     },
     "lengths": {
@@ -65,11 +65,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 10500,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 10500.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "F": 10.16,
@@ -90,17 +90,17 @@
       "H2": 11.23
     },
     "grooves": {
-      "N": 8,
+      "N": 8.0,
       "Q": 83.15,
       "b": 2.57,
       "u": 330.2
     },
     "junctionCone": {
-      "S": 81,
+      "S": 81.0,
       "alpha": {
-        "degrees": 43,
-        "minutes": 55,
-        "seconds": 49
+        "degrees": 43.0,
+        "minutes": 55.0,
+        "seconds": 49.0
       },
       "r2": 3.05
     },
@@ -117,12 +117,12 @@
     "rifling": {
       "G": 6.59,
       "G1": 10.37,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.43,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 2.58
     }
@@ -133,5 +133,6 @@
   "name": "408 Chey Tac",
   "pressureMethod": "Transducer",
   "published": "2013-05-22",
-  "revised": "2016-10-18"
+  "revised": "2016-10-18",
+  "tab": "I"
 }

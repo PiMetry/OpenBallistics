@@ -1,0 +1,124 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.74,
+      "E1": 11.7,
+      "R": 1.4,
+      "R1": 13.6,
+      "delta": 45,
+      "eMin": 1.2
+    },
+    "collar": {
+      "H1": 9.06,
+      "H2": 9.05
+    },
+    "junctionCone": {
+      "S": 53.9,
+      "alpha": {
+        "degrees": 79,
+        "minutes": 51,
+        "seconds": 50
+      },
+      "r1Min": 1.3,
+      "r2": 1.52
+    },
+    "lengths": {
+      "L1": 45.82,
+      "L1Tol": -0.2,
+      "L2": 48.49,
+      "L2Tol": -0.2,
+      "L3": 57,
+      "L6": 82
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.97,
+      "P2": 13.53,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 5200,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 8.2,
+      "L3PlusG": 90.54
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.89,
+      "Z": 8.2
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 14
+    },
+    "collar": {
+      "H1": 9.11,
+      "H2": 9.1
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 51.78,
+      "b": 4.4,
+      "u": 240
+    },
+    "junctionCone": {
+      "S": 54.26,
+      "alpha": {
+        "degrees": 80,
+        "minutes": 6,
+        "seconds": 57
+      },
+      "r1Max": 1.3,
+      "r2": 1.52
+    },
+    "lengths": {
+      "L1": 46.17,
+      "L2": 48.84,
+      "L3": 57.51
+    },
+    "powderChamber": {
+      "E": 3.71,
+      "P1": 14,
+      "P2": 13.6
+    },
+    "rifling": {
+      "G": 33.54,
+      "G1": 8.24,
+      "alpha1": 90,
+      "h": 0.43,
+      "i": {
+        "degrees": 0,
+        "minutes": 18,
+        "seconds": 10
+      }
+    }
+  },
+  "country": "IT",
+  "family": "rimless",
+  "key": "8_x_57_pcc",
+  "name": "8 x 57 PCC",
+  "pressureMethod": "Transducer",
+  "published": "2009-05-05"
+}

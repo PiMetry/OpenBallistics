@@ -25,7 +25,7 @@
     },
     "junctionCone": {
       "S": 27.28,
-      "alpha": 50,
+      "alpha": 50.0,
       "r1Min": 1.14,
       "r2": 1.78
     },
@@ -44,9 +44,9 @@
     },
     "pressures": {
       "M": 27.71,
-      "PE": 3315,
-      "PK": 2933,
-      "Pmax": 2550
+      "PE": 3315.0,
+      "PK": 2933.0,
+      "Pmax": 2550.0
     },
     "projectile": {
       "G1": 5.21,
@@ -68,14 +68,14 @@
       "H2": 5.74
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 20.96,
       "b": 2.08,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 27.41,
-      "alpha": 50,
+      "alpha": 50.0,
       "r1Max": 1.14,
       "r2": 1.91
     },
@@ -91,12 +91,12 @@
     "rifling": {
       "G": 3.32,
       "G1": 5.23,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.26,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -106,5 +106,6 @@
   "name": "5 mm Rem. Mag.",
   "pressureMethod": "Crusher",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "V"
 }

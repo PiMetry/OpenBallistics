@@ -19,8 +19,8 @@
       "E1": 10.39,
       "R": 1.24,
       "R1": 12.01,
-      "beta": 35,
-      "delta": 36,
+      "beta": 35.0,
+      "delta": 36.0,
       "eMin": 0.84,
       "f": 0.38
     },
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 58.28,
       "alpha": {
-        "degrees": 41,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 41.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "r1Min": 0.76,
       "r2": 2.54
@@ -56,11 +56,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2850,
-      "M": 25,
-      "PE": 4440,
-      "PK": 4083,
-      "Pmax": 3550
+      "EE": 2850.0,
+      "M": 25.0,
+      "PE": 4440.0,
+      "PK": 4083.0,
+      "Pmax": 3550.0
     },
     "projectile": {
       "G1": 6.55,
@@ -80,17 +80,17 @@
       "H2": 7.39
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 32.78,
       "b": 2.41,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 58.2,
       "alpha": {
-        "degrees": 41,
-        "minutes": 18,
-        "seconds": 0
+        "degrees": 41.0,
+        "minutes": 18.0,
+        "seconds": 0.0
       },
       "r1Max": 0.76,
       "r2": 3.18
@@ -108,12 +108,12 @@
     "rifling": {
       "G": 3.13,
       "G1": 6.63,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.38,
       "i": {
-        "degrees": 2,
-        "minutes": 55,
-        "seconds": 0
+        "degrees": 2.0,
+        "minutes": 55.0,
+        "seconds": 0.0
       }
     }
   },
@@ -123,5 +123,6 @@
   "name": "257 Roberts",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

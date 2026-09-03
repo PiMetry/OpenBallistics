@@ -26,9 +26,9 @@
     "junctionCone": {
       "S": 192.29,
       "alpha": {
-        "degrees": 5,
-        "minutes": 41,
-        "seconds": 28
+        "degrees": 5.0,
+        "minutes": 41.0,
+        "seconds": 28.0
       }
     },
     "lengths": {
@@ -45,11 +45,11 @@
       "P2": 13.56
     },
     "pressures": {
-      "EE": 6372,
-      "M": 25,
-      "PE": 3060,
-      "PK": 2818,
-      "Pmax": 2450
+      "EE": 6372.0,
+      "M": 25.0,
+      "PE": 3060.0,
+      "PK": 2818.0,
+      "Pmax": 2450.0
     },
     "projectile": {
       "G1": 11.89,
@@ -70,17 +70,17 @@
       "H2": 12.5
     },
     "grooves": {
-      "N": 7,
+      "N": 7.0,
       "Q": 108.57,
       "b": 2.54,
-      "u": 711
+      "u": 711.0
     },
     "junctionCone": {
       "S": 191.28,
       "alpha": {
-        "degrees": 5,
-        "minutes": 44,
-        "seconds": 49
+        "degrees": 5.0,
+        "minutes": 44.0,
+        "seconds": 49.0
       }
     },
     "lengths": {
@@ -95,12 +95,12 @@
     "rifling": {
       "G": 10.6,
       "G1": 11.95,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.28,
       "i": {
-        "degrees": 0,
-        "minutes": 49,
-        "seconds": 58
+        "degrees": 0.0,
+        "minutes": 49.0,
+        "seconds": 58.0
       }
     }
   },
@@ -110,5 +110,6 @@
   "name": "500/465 N.E.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

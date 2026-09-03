@@ -1,0 +1,132 @@
+{
+  "alternativeNames": [
+    "30-06 Springfield",
+    "30-06",
+    "7,62 x 63"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.16,
+      "E1": 10.39,
+      "R": 1.24,
+      "R1": 12.01,
+      "beta": 35,
+      "delta": 36,
+      "eMin": 0.84,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 8.63,
+      "H2": 8.63
+    },
+    "junctionCone": {
+      "S": 67.25,
+      "alpha": 35,
+      "r1Min": 1.27,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 49.49,
+      "L1Tol": -0.2,
+      "L2": 53.56,
+      "L2Tol": -0.2,
+      "L3": 63.35,
+      "L6": 84.84
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.16
+    },
+    "powderChamber": {
+      "P1": 11.96,
+      "P2": 11.2,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 4335,
+      "M": 25,
+      "PE": 5060,
+      "PK": 4658,
+      "Pmax": 4050
+    },
+    "projectile": {
+      "G1": 7.85,
+      "L3PlusG": 69.54
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R1": 12.04
+    },
+    "collar": {
+      "H1": 8.7,
+      "H2": 8.65
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 47.55,
+      "b": 4.49,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 67.37,
+      "alpha": {
+        "degrees": 34,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "r1Max": 1.27,
+      "r2": 3.05
+    },
+    "lengths": {
+      "L1": 49.27,
+      "L2": 53.36,
+      "L3": 63.55
+    },
+    "powderChamber": {
+      "E": 3.16,
+      "P1": 11.99,
+      "P2": 11.24
+    },
+    "rifling": {
+      "G": 6.19,
+      "G1": 7.89,
+      "alpha1": {
+        "degrees": 71,
+        "minutes": 25,
+        "seconds": 48
+      },
+      "h": 0.53,
+      "i": {
+        "degrees": 1,
+        "minutes": 22,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "30_06_spring",
+  "name": "30-06 Spring.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2008-09-23"
+}

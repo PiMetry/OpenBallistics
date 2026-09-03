@@ -1,0 +1,124 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.18,
+      "E1": 10.41,
+      "R": 1.02,
+      "R1": 12.09,
+      "delta": {
+        "degrees": 35,
+        "minutes": 3,
+        "seconds": 36
+      },
+      "eMin": 1.02
+    },
+    "collar": {
+      "H1": 7.62,
+      "H2": 7.52
+    },
+    "junctionCone": {
+      "S": 59.61,
+      "alpha": {
+        "degrees": 40,
+        "minutes": 13,
+        "seconds": 7
+      },
+      "r1Min": 7.11,
+      "r2": 5.08
+    },
+    "lengths": {
+      "L1": 44.83,
+      "L1Tol": -0.2,
+      "L2": 49.2,
+      "L2Tol": -0.2,
+      "L3": 55.25,
+      "L6": 77.47
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 12.01,
+      "P2": 10.82,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2645,
+      "M": 25,
+      "PE": 4250,
+      "PK": 3910,
+      "Pmax": 3400
+    },
+    "projectile": {
+      "G1": 6.73,
+      "L3PlusG": 60.23
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.5,
+      "Z": 6.72
+    },
+    "breech": {
+      "R": 1.02,
+      "R1": 12.14
+    },
+    "collar": {
+      "H1": 7.65,
+      "H2": 7.54
+    },
+    "grooves": {
+      "Q": 33.18
+    },
+    "junctionCone": {
+      "S": 59.7,
+      "alpha": {
+        "degrees": 40,
+        "minutes": 1,
+        "seconds": 44
+      }
+    },
+    "lengths": {
+      "L1": 44.78,
+      "L2": 49.2,
+      "L3": 55.55
+    },
+    "powderChamber": {
+      "E": 3.18,
+      "P1": 12.04,
+      "P2": 10.87
+    },
+    "rifling": {
+      "G": 4.98,
+      "G1": 6.74,
+      "alpha1": 90,
+      "h": 0.4,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 2
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimless",
+  "key": "256_mag_gibbs",
+  "name": "256 Mag. Gibbs",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

@@ -20,11 +20,11 @@
       "R": 1.5,
       "R1": 11.35,
       "delta": {
-        "degrees": 51,
-        "minutes": 58,
-        "seconds": 13
+        "degrees": 51.0,
+        "minutes": 58.0,
+        "seconds": 13.0
       },
-      "eMin": 1
+      "eMin": 1.0
     },
     "collar": {
       "H1": 6.29,
@@ -33,15 +33,15 @@
     "junctionCone": {
       "S": 40.57,
       "alpha": {
-        "degrees": 41,
-        "minutes": 12,
-        "seconds": 31
+        "degrees": 41.0,
+        "minutes": 12.0,
+        "seconds": 31.0
       },
       "r1Min": 0.5,
-      "r2": 2
+      "r2": 2.0
     },
     "lengths": {
-      "L1": 27,
+      "L1": 27.0,
       "L1Tol": -0.2,
       "L2": 32.2,
       "L2Tol": -0.2,
@@ -58,11 +58,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2100,
+      "EE": 2100.0,
       "M": 17.5,
-      "PE": 4375,
-      "PK": 4025,
-      "Pmax": 3500
+      "PE": 4375.0,
+      "PK": 4025.0,
+      "Pmax": 3500.0
     },
     "projectile": {
       "G1": 5.67,
@@ -83,17 +83,17 @@
       "H2": 6.29
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 24.19,
-      "b": 2,
-      "u": 420
+      "b": 2.0,
+      "u": 420.0
     },
     "junctionCone": {
       "S": 41.08,
       "alpha": {
-        "degrees": 39,
-        "minutes": 38,
-        "seconds": 50
+        "degrees": 39.0,
+        "minutes": 38.0,
+        "seconds": 50.0
       },
       "r1Max": 0.5,
       "r2": 2.5
@@ -112,17 +112,17 @@
       "G": 10.31,
       "G1": 5.78,
       "alpha1": {
-        "degrees": 23,
-        "minutes": 59,
-        "seconds": 38
+        "degrees": 23.0,
+        "minutes": 59.0,
+        "seconds": 38.0
       },
       "h": 1.2,
       "i": {
-        "degrees": 2,
-        "minutes": 11,
-        "seconds": 33
+        "degrees": 2.0,
+        "minutes": 11.0,
+        "seconds": 33.0
       },
-      "s": 6
+      "s": 6.0
     }
   },
   "country": "RU",
@@ -131,5 +131,6 @@
   "name": "5,6 x 39",
   "pressureMethod": "Transducer",
   "published": "2000-02-15",
-  "revised": "2007-05-14"
+  "revised": "2007-05-14",
+  "tab": "I"
 }

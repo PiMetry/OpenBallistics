@@ -19,8 +19,8 @@
       "E1": 12.07,
       "R": 1.27,
       "R1": 13.51,
-      "beta": 35,
-      "delta": 35,
+      "beta": 35.0,
+      "delta": 35.0,
       "eMin": 0.94,
       "f": 0.41
     },
@@ -30,7 +30,7 @@
     },
     "junctionCone": {
       "S": 66.7,
-      "alpha": 60,
+      "alpha": 60.0,
       "r1Min": 0.76,
       "r2": 3.18
     },
@@ -52,11 +52,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 6350,
-      "M": 25,
-      "PE": 5344,
-      "PK": 4916,
-      "Pmax": 4275
+      "EE": 6350.0,
+      "M": 25.0,
+      "PE": 5344.0,
+      "PK": 4916.0,
+      "Pmax": 4275.0
     },
     "projectile": {
       "G1": 9.55,
@@ -76,14 +76,14 @@
       "H2": 10.31
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 70.16,
       "b": 2.92,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 66.6,
-      "alpha": 60,
+      "alpha": 60.0,
       "r1Max": 0.76,
       "r2": 3.18
     },
@@ -100,12 +100,12 @@
     "rifling": {
       "G": 8.51,
       "G1": 9.56,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.38,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 3.55
     }
@@ -115,5 +115,6 @@
   "key": "375_ruger",
   "name": "375 Ruger",
   "pressureMethod": "Transducer",
-  "published": "2009-05-05"
+  "published": "2009-05-05",
+  "tab": "I"
 }

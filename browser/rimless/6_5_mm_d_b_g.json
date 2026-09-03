@@ -1,0 +1,121 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.75,
+      "E1": 12.07,
+      "R": 1.27,
+      "R1": 13.56,
+      "beta": 35,
+      "delta": 32,
+      "eMin": 0.94,
+      "f": 0.41
+    },
+    "collar": {
+      "H1": 7.5,
+      "H2": 7.5
+    },
+    "junctionCone": {
+      "S": 50.68,
+      "alpha": {
+        "degrees": 60,
+        "minutes": 2,
+        "seconds": 18
+      }
+    },
+    "lengths": {
+      "L1": 38.92,
+      "L1Tol": -0.2,
+      "L2": 44.19,
+      "L2Tol": -0.2,
+      "L3": 51.9,
+      "L6": 72
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 14,
+      "P2": 13.59,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3800,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 6.71,
+      "L3PlusG": 58.62
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.5,
+      "Z": 6.71
+    },
+    "breech": {
+      "R1": 14.05
+    },
+    "collar": {
+      "H1": 7.52,
+      "H2": 7.52
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 34.29,
+      "b": 1.73,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 50.74,
+      "alpha": {
+        "degrees": 59,
+        "minutes": 57,
+        "seconds": 25
+      }
+    },
+    "lengths": {
+      "L1": 38.95,
+      "L2": 44.22,
+      "L3": 51.93
+    },
+    "powderChamber": {
+      "E": 3.75,
+      "P1": 14.02,
+      "P2": 13.6
+    },
+    "rifling": {
+      "G": 6.72,
+      "G1": 6.72,
+      "alpha1": 90,
+      "h": 0.4,
+      "i": {
+        "degrees": 1,
+        "minutes": 28,
+        "seconds": 20
+      },
+      "s": 2.44
+    }
+  },
+  "country": "Italy",
+  "family": "rimless",
+  "key": "6_5_mm_d_b_g",
+  "name": "6,5 mm D.B.G.",
+  "published": "2015-05-19"
+}

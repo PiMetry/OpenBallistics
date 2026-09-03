@@ -1,0 +1,112 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.6,
+      "R1": 12.5,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 6.88,
+      "H2": 6.88
+    },
+    "junctionCone": {
+      "S": 54.99,
+      "alpha": 36,
+      "r1Min": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 40.83,
+      "L2": 44.4,
+      "L3": 52,
+      "L6": 69
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 10.62,
+      "P2": 9.2
+    },
+    "pressures": {
+      "EE": 2200,
+      "M": 25,
+      "PE": 4125,
+      "PK": 3795,
+      "Pmax": 3300
+    },
+    "projectile": {
+      "G1": 6.17,
+      "L3PlusG": 58.67
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.02,
+      "Z": 6.17
+    },
+    "breech": {
+      "R": 1.6,
+      "R1": 12.55
+    },
+    "collar": {
+      "H1": 6.91,
+      "H2": 6.9
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 29.25,
+      "b": 1.73,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 55.02,
+      "alpha": 36,
+      "r1Max": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 40.82,
+      "L2": 44.39,
+      "L3": 52.3
+    },
+    "powderChamber": {
+      "P1": 10.65,
+      "P2": 9.23
+    },
+    "rifling": {
+      "G": 6.67,
+      "G1": 6.19,
+      "alpha1": 90,
+      "h": 0.36,
+      "i": {
+        "degrees": 1,
+        "minutes": 19,
+        "seconds": 36
+      },
+      "s": 3
+    }
+  },
+  "country": "DE",
+  "family": "rimmed",
+  "key": "6_x_52_r_bb2",
+  "name": "6 x 52 R BB2",
+  "pressureMethod": "Transducer",
+  "published": "2005-05-25"
+}

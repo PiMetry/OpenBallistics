@@ -1,0 +1,121 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.5,
+      "E1": 9.6,
+      "R": 1.5,
+      "R1": 11.18,
+      "beta": 35,
+      "delta": {
+        "degrees": 43,
+        "minutes": 43,
+        "seconds": 12
+      },
+      "eMin": 1.2,
+      "f": 0.4
+    },
+    "collar": {
+      "H1": 6.65,
+      "H2": 6.65
+    },
+    "junctionCone": {
+      "S": 36.76,
+      "alpha": 60
+    },
+    "lengths": {
+      "L1": 27.3,
+      "L1Tol": -0.2,
+      "L2": 31,
+      "L2Tol": -0.2,
+      "L3": 38.18,
+      "L6": 55.7
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.13,
+      "P2": 10.92,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2250,
+      "M": 17.5,
+      "PE": 5060,
+      "PK": 4658,
+      "Pmax": 4050
+    },
+    "projectile": {
+      "G1": 6.17,
+      "L3PlusG": 43.76
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.02,
+      "Z": 6.17
+    },
+    "breech": {
+      "R1": 11.2
+    },
+    "collar": {
+      "H1": 6.65,
+      "H2": 6.65
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 29.52,
+      "b": 2.29,
+      "u": 551
+    },
+    "junctionCone": {
+      "S": 36.78,
+      "alpha": 60,
+      "r1Max": 1.52,
+      "r2": 1.52
+    },
+    "lengths": {
+      "L1": 27.3,
+      "L2": 31.02,
+      "L3": 38.86
+    },
+    "powderChamber": {
+      "E": 3.5,
+      "P1": 11.17,
+      "P2": 10.95
+    },
+    "rifling": {
+      "G": 5.58,
+      "G1": 6.18,
+      "alpha1": 90,
+      "h": 0.24,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 2.52
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "6_mm_ppc",
+  "name": "6 mm PPC",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

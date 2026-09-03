@@ -1,0 +1,117 @@
+{
+  "alternativeNames": [
+    "375 H&H Fl. Mag. N.E."
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.52,
+      "R1": 14.35,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H1": 10.29,
+      "H2": 10.29
+    },
+    "junctionCone": {
+      "S": 86.43,
+      "alpha": {
+        "degrees": 25,
+        "minutes": 17,
+        "seconds": 47
+      }
+    },
+    "lengths": {
+      "L1": 60.96,
+      "L2": 63.5,
+      "L3": 74.68,
+      "L6": 96.52
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 13.13,
+      "P2": 11.43
+    },
+    "pressures": {
+      "EE": 5925,
+      "M": 25,
+      "PE": 4060,
+      "PK": 3738,
+      "Pmax": 3250
+    },
+    "projectile": {
+      "G1": 9.52,
+      "L3PlusG": 83.15
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.25,
+      "Z": 9.5
+    },
+    "breech": {
+      "R": 1.55,
+      "R1": 14.78
+    },
+    "collar": {
+      "H1": 10.31,
+      "H2": 10.31
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 69.43,
+      "b": 2.92,
+      "u": 406
+    },
+    "junctionCone": {
+      "S": 86.3,
+      "alpha": {
+        "degrees": 25,
+        "minutes": 30,
+        "seconds": 39
+      }
+    },
+    "lengths": {
+      "L1": 60.99,
+      "L2": 63.53,
+      "L3": 74.93
+    },
+    "powderChamber": {
+      "P1": 13.16,
+      "P2": 11.46
+    },
+    "rifling": {
+      "G": 8.47,
+      "G1": 9.58,
+      "alpha1": 90,
+      "h": 0.37,
+      "i": {
+        "degrees": 1,
+        "minutes": 10,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "375_fl_mag_n_e",
+  "name": "375 Fl. Mag. N.E.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2013-05-22"
+}

@@ -1,0 +1,98 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 2.36,
+      "E1": 10.67,
+      "R": 1.6,
+      "R1": 12.85,
+      "RTol": -0.25,
+      "delta": 45,
+      "eMin": 0.43
+    },
+    "collar": {
+      "H1": 10.92,
+      "H2": 10.92
+    },
+    "lengths": {
+      "L2": 43.18,
+      "L3": 51.56,
+      "L6": 65.53
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.33
+    },
+    "pressures": {
+      "EE": 4190,
+      "M": 25,
+      "PE": 5125,
+      "PK": 4715,
+      "Pmax": 4100
+    },
+    "projectile": {
+      "G1": 10.31,
+      "L3PlusG": 58.14
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.15,
+      "Z": 10.33
+    },
+    "breech": {
+      "R": 1.6,
+      "R1": 12.88
+    },
+    "collar": {
+      "H1": 10.97,
+      "H2": 10.97
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 82.67,
+      "b": 3.19,
+      "u": 356
+    },
+    "lengths": {
+      "L2": 43.18,
+      "L3": 52.2
+    },
+    "powderChamber": {
+      "P1": 11.39
+    },
+    "rifling": {
+      "G": 6.58,
+      "G1": 10.38,
+      "alpha1": 30,
+      "h": 1.1,
+      "i": {
+        "degrees": 1,
+        "minutes": 12,
+        "seconds": 8
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "408_win",
+  "name": "408 Win.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

@@ -1,0 +1,122 @@
+{
+  "alternativeNames": [
+    "416 A-SUB"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 2.97,
+      "E1": 10.39,
+      "R": 1.2,
+      "R1": 11.9,
+      "beta": 35,
+      "delta": 45,
+      "eMin": 1,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 11.13,
+      "H2": 11.13
+    },
+    "junctionCone": {
+      "S": 61.54,
+      "alpha": 25,
+      "r1Min": 2,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 35,
+      "L1Tol": -0.2,
+      "L2": 36.44,
+      "L2Tol": -0.2,
+      "L3": 45,
+      "L6": 71
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.92,
+      "P2": 11.77,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3000,
+      "M": 25,
+      "PE": 5188,
+      "PK": 4773,
+      "Pmax": 4150
+    },
+    "projectile": {
+      "G1": 10.57,
+      "L3PlusG": 52.79
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.36,
+      "Z": 10.57
+    },
+    "breech": {
+      "R1": 11.95,
+      "r": 1
+    },
+    "collar": {
+      "H1": 11.18,
+      "H2": 11.15
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 86.38,
+      "b": 3.25,
+      "u": 356
+    },
+    "junctionCone": {
+      "S": 61.61,
+      "alpha": 25,
+      "r1Max": 2,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 35,
+      "L2": 36.4,
+      "L3": 45.2
+    },
+    "powderChamber": {
+      "E": 3.5,
+      "P1": 11.95,
+      "P2": 11.8
+    },
+    "rifling": {
+      "G": 7.79,
+      "G1": 10.58,
+      "alpha1": 60,
+      "h": 0.49,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 3.59
+    }
+  },
+  "country": "NO",
+  "family": "rimless",
+  "key": "416_a_tec",
+  "name": "416 A-TEC",
+  "pressureMethod": "Transducer",
+  "published": "2016-05-18"
+}

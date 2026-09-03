@@ -29,9 +29,9 @@
     "junctionCone": {
       "S": 93.94,
       "alpha": {
-        "degrees": 16,
-        "minutes": 58,
-        "seconds": 3
+        "degrees": 16.0,
+        "minutes": 58.0,
+        "seconds": 3.0
       }
     },
     "lengths": {
@@ -48,11 +48,11 @@
       "P2": 11.43
     },
     "pressures": {
-      "EE": 3520,
-      "M": 25,
-      "PE": 4000,
-      "PK": 3680,
-      "Pmax": 3200
+      "EE": 3520.0,
+      "M": 25.0,
+      "PE": 4000.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
     },
     "projectile": {
       "G1": 7.82,
@@ -73,17 +73,17 @@
       "H2": 8.61
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 47.27,
       "b": 2.72,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 94.11,
       "alpha": {
-        "degrees": 16,
-        "minutes": 56,
-        "seconds": 58
+        "degrees": 16.0,
+        "minutes": 56.0,
+        "seconds": 58.0
       }
     },
     "lengths": {
@@ -98,11 +98,11 @@
     "rifling": {
       "G": 6.99,
       "G1": 7.89,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 6,
-        "seconds": 23
+        "degrees": 1.0,
+        "minutes": 6.0,
+        "seconds": 23.0
       }
     }
   },
@@ -112,5 +112,6 @@
   "name": "30 Super Fl. H&H",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2011-05-25"
+  "revised": "2011-05-25",
+  "tab": "II"
 }

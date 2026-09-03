@@ -1,0 +1,119 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.24,
+      "E1": 12.07,
+      "R": 1.27,
+      "R1": 13.51,
+      "beta": 35,
+      "delta": 35,
+      "eMin": 0.94,
+      "f": 0.41
+    },
+    "collar": {
+      "H1": 10.29,
+      "H2": 10.29
+    },
+    "junctionCone": {
+      "S": 66.7,
+      "alpha": 60,
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 55.36,
+      "L1Tol": -0.2,
+      "L2": 57.78,
+      "L2Tol": -0.2,
+      "L3": 65.53,
+      "L6": 84.84
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.52,
+      "P2": 13.08,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 6350,
+      "M": 25,
+      "PE": 5344,
+      "PK": 4916,
+      "Pmax": 4275
+    },
+    "projectile": {
+      "G1": 9.55,
+      "L3PlusG": 74.04
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.3,
+      "Z": 9.55
+    },
+    "breech": {
+      "R1": 13.58
+    },
+    "collar": {
+      "H1": 10.34,
+      "H2": 10.31
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 70.16,
+      "b": 2.92,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 66.6,
+      "alpha": 60,
+      "r1Max": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 55.24,
+      "L2": 57.64,
+      "L3": 65.79
+    },
+    "powderChamber": {
+      "E": 3.24,
+      "P1": 13.55,
+      "P2": 13.11
+    },
+    "rifling": {
+      "G": 8.51,
+      "G1": 9.56,
+      "alpha1": 90,
+      "h": 0.38,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 3.55
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "375_ruger",
+  "name": "375 Ruger",
+  "pressureMethod": "Transducer",
+  "published": "2009-05-05"
+}

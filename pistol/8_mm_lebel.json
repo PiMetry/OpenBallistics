@@ -18,7 +18,7 @@
       "R": 1.5,
       "R1": 10.5,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.75
     },
     "collar": {
@@ -27,8 +27,8 @@
     "junctionCone": {},
     "lengths": {
       "L3": 27.4,
-      "L4": 32,
-      "L6": 37
+      "L4": 32.0,
+      "L6": 37.0
     },
     "misc": {
       "Fe": 0.25
@@ -38,9 +38,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 1625,
-      "PK": 1438,
-      "Pmax": 1250
+      "PE": 1625.0,
+      "PK": 1438.0,
+      "Pmax": 1250.0
     },
     "projectile": {
       "G1": 8.28,
@@ -49,7 +49,7 @@
   },
   "chamber": {
     "barrel": {
-      "F": 8,
+      "F": 8.0,
       "Z": 8.3
     },
     "breech": {
@@ -60,10 +60,10 @@
       "H2": 8.95
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 52.91,
       "b": 4.19,
-      "u": 240
+      "u": 240.0
     },
     "junctionCone": {},
     "lengths": {
@@ -75,9 +75,9 @@
     "rifling": {
       "G": 2.5,
       "G1": 8.35,
-      "alpha1": 62,
+      "alpha1": 62.0,
       "h": 0.5,
-      "i": 5
+      "i": 5.0
     }
   },
   "country": "FR",
@@ -86,5 +86,6 @@
   "name": "8 mm Lebel",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

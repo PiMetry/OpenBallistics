@@ -1,0 +1,117 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.63,
+      "R1": 13.84,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H1": 8.59,
+      "H2": 8.51
+    },
+    "junctionCone": {
+      "S": 63.7,
+      "alpha": {
+        "degrees": 29,
+        "minutes": 0,
+        "seconds": 1
+      },
+      "r1Min": 3.81,
+      "r2": 3.81
+    },
+    "lengths": {
+      "L1": 43.03,
+      "L2": 47.09,
+      "L3": 58.78,
+      "L6": 75.69
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.73,
+      "P2": 10.69
+    },
+    "pressures": {
+      "EE": 3455,
+      "M": 25,
+      "PE": 4000,
+      "PK": 3680,
+      "Pmax": 3200
+    },
+    "projectile": {
+      "G1": 7.82,
+      "L3PlusG": 65.73
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R": 1.65,
+      "R1": 14.1
+    },
+    "collar": {
+      "H1": 8.62,
+      "H2": 8.53
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 47.27,
+      "b": 2.72,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 63.83,
+      "alpha": {
+        "degrees": 28,
+        "minutes": 55,
+        "seconds": 55
+      },
+      "r1Max": 3.81,
+      "r2": 3.81
+    },
+    "lengths": {
+      "L1": 43.05,
+      "L2": 47.12,
+      "L3": 59.03
+    },
+    "powderChamber": {
+      "P1": 11.76,
+      "P2": 10.72
+    },
+    "rifling": {
+      "G": 6.95,
+      "G1": 7.89,
+      "alpha1": 180,
+      "i": {
+        "degrees": 1,
+        "minutes": 6,
+        "seconds": 46
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "30_fl_n_e_purdey",
+  "name": "30 Fl. N.E. Purdey",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2011-05-25"
+}

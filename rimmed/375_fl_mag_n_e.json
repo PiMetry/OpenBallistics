@@ -29,9 +29,9 @@
     "junctionCone": {
       "S": 86.43,
       "alpha": {
-        "degrees": 25,
-        "minutes": 17,
-        "seconds": 47
+        "degrees": 25.0,
+        "minutes": 17.0,
+        "seconds": 47.0
       }
     },
     "lengths": {
@@ -48,11 +48,11 @@
       "P2": 11.43
     },
     "pressures": {
-      "EE": 5925,
-      "M": 25,
-      "PE": 4060,
-      "PK": 3738,
-      "Pmax": 3250
+      "EE": 5925.0,
+      "M": 25.0,
+      "PE": 4060.0,
+      "PK": 3738.0,
+      "Pmax": 3250.0
     },
     "projectile": {
       "G1": 9.52,
@@ -73,17 +73,17 @@
       "H2": 10.31
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 69.43,
       "b": 2.92,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {
       "S": 86.3,
       "alpha": {
-        "degrees": 25,
-        "minutes": 30,
-        "seconds": 39
+        "degrees": 25.0,
+        "minutes": 30.0,
+        "seconds": 39.0
       }
     },
     "lengths": {
@@ -98,12 +98,12 @@
     "rifling": {
       "G": 8.47,
       "G1": 9.58,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.37,
       "i": {
-        "degrees": 1,
-        "minutes": 10,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 10.0,
+        "seconds": 0.0
       }
     }
   },
@@ -113,5 +113,6 @@
   "name": "375 Fl. Mag. N.E.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2013-05-22"
+  "revised": "2013-05-22",
+  "tab": "II"
 }

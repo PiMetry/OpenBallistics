@@ -1,0 +1,118 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.13,
+      "E1": 8.43,
+      "R": 1.14,
+      "R1": 9.6,
+      "beta": 35,
+      "delta": 25,
+      "eMin": 0.76,
+      "f": 0.45
+    },
+    "collar": {
+      "H1": 6.43,
+      "H2": 6.43
+    },
+    "junctionCone": {
+      "S": 37.98,
+      "alpha": 46,
+      "r1Min": 0.64,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 27.2,
+      "L1Tol": -0.2,
+      "L2": 30.42,
+      "L2Tol": -0.2,
+      "L3": 35.56,
+      "L6": 46.48
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 9.58,
+      "P2": 9.162,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "M": 17.5,
+      "PE": 4160,
+      "PK": 3680,
+      "Pmax": 3200
+    },
+    "projectile": {
+      "G1": 5.7,
+      "L3PlusG": 37.72
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.56,
+      "Z": 5.69
+    },
+    "breech": {
+      "R1": 9.65
+    },
+    "collar": {
+      "H1": 6.48,
+      "H2": 6.45
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 25.09,
+      "b": 2.03,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 37.91,
+      "alpha": 46,
+      "r1Max": 0.64,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 27.08,
+      "L2": 30.28,
+      "L3": 36.37
+    },
+    "powderChamber": {
+      "E": 3.13,
+      "P1": 9.61,
+      "P2": 9.19
+    },
+    "rifling": {
+      "G": 2.16,
+      "G1": 5.69,
+      "alpha1": 90,
+      "h": 0.38,
+      "i": {
+        "degrees": 3,
+        "minutes": 10,
+        "seconds": 48
+      },
+      "s": 0.99
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "221_rem_fireball",
+  "name": "221 Rem. Fireball",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

@@ -1,0 +1,117 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.4,
+      "R1": 8.85,
+      "RTol": -0.2
+    },
+    "collar": {
+      "H1": 6.35,
+      "H2": 6.33
+    },
+    "junctionCone": {
+      "S": 70.36,
+      "alpha": {
+        "degrees": 8,
+        "minutes": 0,
+        "seconds": 29
+      },
+      "r1Min": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 20,
+      "L2": 25,
+      "L3": 35.5,
+      "L6": 43.5
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 7.55,
+      "P2": 7.05
+    },
+    "pressures": {
+      "EE": 855,
+      "M": 17.5,
+      "PE": 3510,
+      "PK": 3105,
+      "Pmax": 2700
+    },
+    "projectile": {
+      "G1": 5.63,
+      "L3PlusG": 55.3
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.35,
+      "Z": 5.58
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 8.9
+    },
+    "collar": {
+      "H1": 6.38,
+      "H2": 6.35
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 23.62,
+      "b": 2.4,
+      "u": 360
+    },
+    "junctionCone": {
+      "S": 70.57,
+      "alpha": {
+        "degrees": 8,
+        "minutes": 0,
+        "seconds": 28
+      },
+      "r1Max": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 20,
+      "L2": 25,
+      "L3": 35.8
+    },
+    "powderChamber": {
+      "P1": 7.58,
+      "P2": 7.08
+    },
+    "rifling": {
+      "G": 19.8,
+      "G1": 5.68,
+      "alpha1": 180,
+      "i": {
+        "degrees": 0,
+        "minutes": 28,
+        "seconds": 39
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimmed",
+  "key": "5_6_x_35_r",
+  "name": "5,6 x 35 R",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

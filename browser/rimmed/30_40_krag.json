@@ -1,0 +1,120 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.63,
+      "R1": 13.84,
+      "RTol": -0.25,
+      "beta": 40,
+      "f": 0.39
+    },
+    "collar": {
+      "H1": 8.61,
+      "H2": 8.59
+    },
+    "junctionCone": {
+      "S": 57.61,
+      "alpha": {
+        "degrees": 42,
+        "minutes": 12,
+        "seconds": 0
+      },
+      "r1Min": 3.94,
+      "r2": 4.06
+    },
+    "lengths": {
+      "L1": 43.82,
+      "L2": 46.45,
+      "L3": 58.78,
+      "L6": 78.46
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.71,
+      "P2": 10.64
+    },
+    "pressures": {
+      "EE": 3750,
+      "M": 25,
+      "PE": 4060,
+      "PK": 3738,
+      "Pmax": 3250
+    },
+    "projectile": {
+      "G1": 7.85,
+      "L3PlusG": 67.1
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R": 1.63,
+      "R1": 14.1
+    },
+    "collar": {
+      "H1": 8.63,
+      "H2": 8.61
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 47.06,
+      "b": 2.39,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 57.74,
+      "alpha": {
+        "degrees": 42,
+        "minutes": 12,
+        "seconds": 0
+      },
+      "r1Max": 3.94,
+      "r2": 4.57
+    },
+    "lengths": {
+      "L1": 43.92,
+      "L2": 46.56,
+      "L3": 58.98
+    },
+    "powderChamber": {
+      "P1": 11.74,
+      "P2": 10.67
+    },
+    "rifling": {
+      "G": 8.32,
+      "G1": 7.89,
+      "alpha1": 24,
+      "h": 1.69,
+      "i": {
+        "degrees": 1,
+        "minutes": 10,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "30_40_krag",
+  "name": "30-40 Krag",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2011-05-25"
+}

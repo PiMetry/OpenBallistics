@@ -1,0 +1,97 @@
+{
+  "annotations": {
+    "category": "shotgun",
+    "confidence": "unverified",
+    "defaultBulletShape": "shot",
+    "implausible": [],
+    "primerType": "209"
+  },
+  "cartridge": {
+    "dimensions": {
+      "d": 21.7,
+      "dTol": -0.24,
+      "g": 23.65,
+      "gTol": -0.64,
+      "h": 21.3,
+      "hTol": -0.47,
+      "t": 1.9,
+      "tTol": -0.4
+    },
+    "lengths": [
+      {
+        "l": 76,
+        "marking": "10/76",
+        "tol": -2.5
+      },
+      {
+        "l": 82.4,
+        "marking": "10/82",
+        "tol": -2.5
+      },
+      {
+        "l": 88.7,
+        "marking": "10/89",
+        "tol": -2.5
+      }
+    ]
+  },
+  "chamber": {
+    "chamberLengths": [
+      {
+        "L": 76.2,
+        "M": "25/30",
+        "PE": 1320,
+        "PK": 1200,
+        "Pmax": 1050,
+        "marking": "10/76",
+        "tol": 2
+      },
+      {
+        "L": 82.6,
+        "M": "25/30",
+        "PE": 1320,
+        "PK": 1200,
+        "Pmax": 1050,
+        "marking": "10/82",
+        "tol": 2
+      },
+      {
+        "L": 88.9,
+        "M": "25/30",
+        "PE": 1320,
+        "PK": 1200,
+        "Pmax": 1050,
+        "marking": "10/89",
+        "tol": 2
+      }
+    ],
+    "dimensions": {
+      "B": 19.3,
+      "BTol": 0.7,
+      "D": 21.75,
+      "DTol": 0.1,
+      "G": 23.75,
+      "GTol": 0.1,
+      "H": 21.4,
+      "HTol": 0.1,
+      "T": 1.9,
+      "TTol": 0.1,
+      "alpha1": {
+        "degrees": 10,
+        "minutes": 30,
+        "seconds": 0
+      }
+    },
+    "headspace": {
+      "Fe": 0.1,
+      "FeAutomatic": 0.35,
+      "FeBascule": 0.2
+    }
+  },
+  "family": "shotshell",
+  "key": "10",
+  "name": "Cal. 10",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2006-09-19"
+}

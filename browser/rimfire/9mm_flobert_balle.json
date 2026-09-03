@@ -1,0 +1,99 @@
+{
+  "annotations": {
+    "category": "rimfire",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.projectile.G1",
+          "chamber.barrel.Z"
+        ],
+        "kind": "approximate",
+        "known": true,
+        "message": "the bullet differs from the groove diameter by 0.42 mm (G1 = 8.8, Z = 8.38); within 0.1 mm is manufacture",
+        "rule": "bullet_matches_grooves",
+        "values": {
+          "G1": 8.8,
+          "Z": 8.38
+        },
+        "why": "a heeled bullet (G1 is not narrower than H2) is sized to the case, not to the grooves, and engraves deeply by design"
+      }
+    ],
+    "primerType": "rimfire"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.45,
+      "R1": 10.5,
+      "RTol": -0.18
+    },
+    "collar": {
+      "H2": 8.8
+    },
+    "lengths": {
+      "L3": 10.5,
+      "L6": 18.1
+    },
+    "misc": {
+      "Fe": 0.2
+    },
+    "powderChamber": {
+      "P1": 8.8
+    },
+    "pressures": {
+      "EE": 110,
+      "EK": 107,
+      "Emax": 100
+    },
+    "projectile": {
+      "G1": 8.8,
+      "L3PlusG": 13.02
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.38,
+      "Z": 8.38
+    },
+    "breech": {
+      "R": 1.45,
+      "R1": 10.7
+    },
+    "collar": {
+      "H2": 8.8
+    },
+    "grooves": {
+      "Q": 55.15
+    },
+    "lengths": {
+      "L3": 10.5
+    },
+    "powderChamber": {
+      "P1": 8.85
+    },
+    "rifling": {
+      "G": 2.52,
+      "G1": 8.8,
+      "i": {
+        "degrees": 4,
+        "minutes": 45,
+        "seconds": 49
+      }
+    }
+  },
+  "country": "FR",
+  "family": "rimfire",
+  "key": "9mm_flobert_balle",
+  "name": "9mm Flobert à balle",
+  "pressureMethod": "Energy",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

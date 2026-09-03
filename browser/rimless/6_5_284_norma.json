@@ -1,0 +1,123 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.78,
+      "E1": 10.39,
+      "R": 1.37,
+      "R1": 12.01,
+      "beta": 45,
+      "delta": 40,
+      "eMin": 1.02,
+      "f": 0.35
+    },
+    "collar": {
+      "H1": 7.53,
+      "H2": 7.53
+    },
+    "junctionCone": {
+      "S": 53.55,
+      "alpha": {
+        "degrees": 70,
+        "minutes": 14,
+        "seconds": 46
+      },
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 44.98,
+      "L1Tol": -0.2,
+      "L2": 48.2,
+      "L2Tol": -0.2,
+      "L3": 55.12,
+      "L6": 82
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 12.72,
+      "P2": 12.06,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3200,
+      "M": 25,
+      "PE": 5125,
+      "PK": 4715,
+      "Pmax": 4100
+    },
+    "projectile": {
+      "G1": 6.71,
+      "L3PlusG": 67.34
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.5,
+      "Z": 6.71
+    },
+    "breech": {
+      "R1": 12.81
+    },
+    "collar": {
+      "H1": 7.58,
+      "H2": 7.55
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 34.66,
+      "b": 2.29,
+      "u": 228.6
+    },
+    "junctionCone": {
+      "S": 53.59,
+      "alpha": 70,
+      "r1Max": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 44.96,
+      "L2": 48.18,
+      "L3": 55.37
+    },
+    "powderChamber": {
+      "E": 3.78,
+      "P1": 12.75,
+      "P2": 12.09
+    },
+    "rifling": {
+      "G": 12.22,
+      "G1": 6.72,
+      "alpha1": 90,
+      "h": 0.42,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 8.02
+    }
+  },
+  "country": "SE",
+  "family": "rimless",
+  "key": "6_5_284_norma",
+  "name": "6,5 - 284 Norma",
+  "pressureMethod": "Transducer",
+  "published": "2000-02-15",
+  "revised": "2008-04-15"
+}

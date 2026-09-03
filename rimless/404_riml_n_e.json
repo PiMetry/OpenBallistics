@@ -23,9 +23,9 @@
       "R": 1.27,
       "R1": 13.79,
       "delta": {
-        "degrees": 36,
-        "minutes": 2,
-        "seconds": 39
+        "degrees": 36.0,
+        "minutes": 2.0,
+        "seconds": 39.0
       },
       "eMin": 1.02
     },
@@ -36,9 +36,9 @@
     "junctionCone": {
       "S": 95.88,
       "alpha": {
-        "degrees": 16,
-        "minutes": 59,
-        "seconds": 26
+        "degrees": 16.0,
+        "minutes": 59.0,
+        "seconds": 26.0
       }
     },
     "lengths": {
@@ -58,11 +58,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 6815,
-      "M": 25,
-      "PE": 4560,
-      "PK": 4198,
-      "Pmax": 3650
+      "EE": 6815.0,
+      "M": 25.0,
+      "PE": 4560.0,
+      "PK": 4198.0,
+      "Pmax": 3650.0
     },
     "projectile": {
       "G1": 10.72,
@@ -83,17 +83,17 @@
       "H2": 11.51
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 89.25,
       "b": 3.5,
-      "u": 420
+      "u": 420.0
     },
     "junctionCone": {
       "S": 95.69,
       "alpha": {
-        "degrees": 17,
-        "minutes": 4,
-        "seconds": 45
+        "degrees": 17.0,
+        "minutes": 4.0,
+        "seconds": 45.0
       }
     },
     "lengths": {
@@ -109,12 +109,12 @@
     "rifling": {
       "G": 7.62,
       "G1": 10.77,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.37,
       "i": {
-        "degrees": 1,
-        "minutes": 13,
-        "seconds": 28
+        "degrees": 1.0,
+        "minutes": 13.0,
+        "seconds": 28.0
       }
     }
   },
@@ -124,5 +124,6 @@
   "name": "404 Riml. N.E.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2020-04-21"
+  "revised": "2020-04-21",
+  "tab": "I"
 }

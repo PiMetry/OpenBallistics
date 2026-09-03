@@ -1,0 +1,120 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 2.89,
+      "E1": 10.82,
+      "R": 1.24,
+      "R1": 12.01,
+      "beta": 35,
+      "delta": 15,
+      "eMin": 0.64,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 6.64,
+      "H2": 6.6
+    },
+    "junctionCone": {
+      "S": 57.06,
+      "alpha": 42,
+      "r1Min": 0.76,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 43.76,
+      "L1Tol": -0.2,
+      "L2": 48.41,
+      "L2Tol": -0.2,
+      "L3": 56.01,
+      "L6": 68.07
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.36,
+      "P2": 10.21,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2380,
+      "M": 25,
+      "PE": 5375,
+      "PK": 4945,
+      "Pmax": 4300
+    },
+    "projectile": {
+      "G1": 5.7,
+      "L3PlusG": 60.22
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.56,
+      "Z": 5.69
+    },
+    "breech": {
+      "R": 1.35,
+      "R1": 12.27
+    },
+    "collar": {
+      "H1": 6.67,
+      "H2": 6.63
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 25.03,
+      "b": 1.88,
+      "u": 356
+    },
+    "junctionCone": {
+      "S": 56.96,
+      "alpha": 42,
+      "r1Max": 0.76,
+      "r2": 3.81
+    },
+    "lengths": {
+      "L1": 43.62,
+      "L2": 48.27,
+      "L3": 56.16
+    },
+    "powderChamber": {
+      "E": 1.35,
+      "P1": 11.43,
+      "P2": 10.24
+    },
+    "rifling": {
+      "G": 4.21,
+      "G1": 5.74,
+      "alpha1": 60,
+      "h": 0.77,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "220_swift",
+  "name": "220 Swift",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2008-09-23"
+}

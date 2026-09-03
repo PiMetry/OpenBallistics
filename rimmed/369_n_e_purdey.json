@@ -26,9 +26,9 @@
     "junctionCone": {
       "S": 88.47,
       "alpha": {
-        "degrees": 21,
-        "minutes": 11,
-        "seconds": 5
+        "degrees": 21.0,
+        "minutes": 11.0,
+        "seconds": 5.0
       }
     },
     "lengths": {
@@ -45,11 +45,11 @@
       "P2": 12.19
     },
     "pressures": {
-      "EE": 4130,
-      "M": 25,
-      "PE": 3810,
-      "PK": 3508,
-      "Pmax": 3050
+      "EE": 4130.0,
+      "M": 25.0,
+      "PE": 3810.0,
+      "PK": 3508.0,
+      "Pmax": 3050.0
     },
     "projectile": {
       "G1": 9.52,
@@ -71,14 +71,14 @@
     },
     "grooves": {
       "Q": 65.76,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {
       "S": 88.41,
       "alpha": {
-        "degrees": 21,
-        "minutes": 17,
-        "seconds": 38
+        "degrees": 21.0,
+        "minutes": 17.0,
+        "seconds": 38.0
       }
     },
     "lengths": {
@@ -93,12 +93,12 @@
     "rifling": {
       "G": 9.54,
       "G1": 9.55,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.38,
       "i": {
-        "degrees": 1,
-        "minutes": 15,
-        "seconds": 2
+        "degrees": 1.0,
+        "minutes": 15.0,
+        "seconds": 2.0
       }
     }
   },
@@ -108,5 +108,6 @@
   "name": "369 N.E. Purdey",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

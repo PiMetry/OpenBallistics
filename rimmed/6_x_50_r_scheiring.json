@@ -18,7 +18,7 @@
       "R": 1.4,
       "R1": 10.9,
       "RTol": -0.15,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.5
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 50.84,
       "alpha": {
-        "degrees": 46,
-        "minutes": 4,
-        "seconds": 44
+        "degrees": 46.0,
+        "minutes": 4.0,
+        "seconds": 44.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -38,26 +38,26 @@
     "lengths": {
       "L1": 40.26,
       "L2": 42.87,
-      "L3": 50,
-      "L6": 69
+      "L3": 50.0,
+      "L6": 69.0
     },
     "misc": {
       "Fe": 0.1
     },
     "powderChamber": {
       "P1": 9.59,
-      "P2": 9
+      "P2": 9.0
     },
     "pressures": {
-      "EE": 2100,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 2100.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 6.17,
-      "L3PlusG": 56
+      "L3PlusG": 56.0
     }
   },
   "chamber": {
@@ -74,17 +74,17 @@
       "H2": 6.8
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 29.25,
       "b": 1.73,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 50.89,
       "alpha": {
-        "degrees": 46,
-        "minutes": 1,
-        "seconds": 22
+        "degrees": 46.0,
+        "minutes": 1.0,
+        "seconds": 22.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -99,15 +99,15 @@
       "P2": 9.03
     },
     "rifling": {
-      "G": 6,
+      "G": 6.0,
       "G1": 6.19,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 37,
-        "seconds": 22
+        "degrees": 1.0,
+        "minutes": 37.0,
+        "seconds": 22.0
       },
-      "s": 3
+      "s": 3.0
     }
   },
   "country": "AT",
@@ -116,5 +116,6 @@
   "name": "6 x 50 R Scheiring",
   "pressureMethod": "Transducer",
   "published": "1987-09-29",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

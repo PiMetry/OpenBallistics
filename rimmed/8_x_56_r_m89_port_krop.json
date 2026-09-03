@@ -15,50 +15,50 @@
   },
   "cartridge": {
     "caseHead": {
-      "R": 2,
+      "R": 2.0,
       "R1": 15.9,
       "RTol": -0.25,
-      "beta": 23,
-      "delta": 0,
-      "f": 1
+      "beta": 23.0,
+      "delta": 0.0,
+      "f": 1.0
     },
     "collar": {
-      "H1": 9,
-      "H2": 9
+      "H1": 9.0,
+      "H2": 9.0
     },
     "junctionCone": {
       "S": 61.05,
       "alpha": {
-        "degrees": 29,
-        "minutes": 59,
-        "seconds": 25
+        "degrees": 29.0,
+        "minutes": 59.0,
+        "seconds": 25.0
       },
-      "r1Min": 10,
-      "r2": 15
+      "r1Min": 10.0,
+      "r2": 15.0
     },
     "lengths": {
       "L1": 38.65,
       "L2": 44.25,
-      "L3": 56,
-      "L6": 81
+      "L3": 56.0,
+      "L6": 81.0
     },
     "misc": {
       "Fe": 0.15
     },
     "powderChamber": {
       "P1": 13.85,
-      "P2": 12
+      "P2": 12.0
     },
     "pressures": {
-      "EE": 2520,
-      "M": 25,
-      "PE": 4250,
-      "PK": 3910,
-      "Pmax": 3400
+      "EE": 2520.0,
+      "M": 25.0,
+      "PE": 4250.0,
+      "PK": 3910.0,
+      "Pmax": 3400.0
     },
     "projectile": {
       "G1": 8.2,
-      "L3PlusG": 76
+      "L3PlusG": 76.0
     }
   },
   "chamber": {
@@ -67,24 +67,24 @@
       "Z": 8.2
     },
     "breech": {
-      "R": 2,
-      "R1": 16
+      "R": 2.0,
+      "R1": 16.0
     },
     "collar": {
       "H1": 9.05,
       "H2": 9.03
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 51.66,
       "b": 4.4,
-      "u": 250
+      "u": 250.0
     },
     "junctionCone": {
       "S": 61.1,
-      "alpha": 30,
-      "r1Max": 10,
-      "r2": 15
+      "alpha": 30.0,
+      "r1Max": 10.0,
+      "r2": 15.0
     },
     "lengths": {
       "L1": 38.65,
@@ -96,13 +96,13 @@
       "P2": 12.03
     },
     "rifling": {
-      "G": 20,
+      "G": 20.0,
       "G1": 8.25,
       "h": 0.39,
       "i": {
-        "degrees": 0,
-        "minutes": 35,
-        "seconds": 4
+        "degrees": 0.0,
+        "minutes": 35.0,
+        "seconds": 4.0
       }
     }
   },
@@ -112,5 +112,6 @@
   "name": "8 x 56 R M89 Port.Krop.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2022-04-26"
+  "revised": "2022-04-26",
+  "tab": "II"
 }

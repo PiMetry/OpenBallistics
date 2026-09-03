@@ -19,8 +19,8 @@
       "E1": 10.39,
       "R": 1.24,
       "R1": 12.01,
-      "beta": 35,
-      "delta": 36,
+      "beta": 35.0,
+      "delta": 36.0,
       "eMin": 0.84,
       "f": 0.38
     },
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 67.23,
       "alpha": {
-        "degrees": 35,
-        "minutes": 2,
-        "seconds": 39
+        "degrees": 35.0,
+        "minutes": 2.0,
+        "seconds": 39.0
       },
       "r1Min": 1.27,
       "r2": 2.54
@@ -56,11 +56,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 3800,
-      "M": 25,
-      "PE": 4375,
-      "PK": 4025,
-      "Pmax": 3500
+      "EE": 3800.0,
+      "M": 25.0,
+      "PE": 4375.0,
+      "PK": 4025.0,
+      "Pmax": 3500.0
     },
     "projectile": {
       "G1": 7.85,
@@ -80,17 +80,17 @@
       "H2": 8.65
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 47.52,
       "b": 4.49,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 67.37,
       "alpha": {
-        "degrees": 34,
-        "minutes": 30,
-        "seconds": 3
+        "degrees": 34.0,
+        "minutes": 30.0,
+        "seconds": 3.0
       },
       "r1Max": 1.27,
       "r2": 3.05
@@ -109,15 +109,15 @@
       "G": 6.17,
       "G1": 7.89,
       "alpha1": {
-        "degrees": 71,
-        "minutes": 16,
-        "seconds": 12
+        "degrees": 71.0,
+        "minutes": 16.0,
+        "seconds": 12.0
       },
       "h": 0.53,
       "i": {
-        "degrees": 1,
-        "minutes": 22,
-        "seconds": 13
+        "degrees": 1.0,
+        "minutes": 22.0,
+        "seconds": 13.0
       }
     }
   },
@@ -127,5 +127,6 @@
   "name": "30-06 Court Cartry",
   "pressureMethod": "Transducer",
   "published": "1995-12-10",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

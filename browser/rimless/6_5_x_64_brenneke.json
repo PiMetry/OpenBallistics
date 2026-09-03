@@ -1,0 +1,128 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.23,
+      "E1": 10.39,
+      "R": 1.24,
+      "R1": 12.01,
+      "beta": 72,
+      "delta": 36,
+      "eMin": 0.9,
+      "f": 0.91
+    },
+    "collar": {
+      "H1": 7.45,
+      "H2": 7.42
+    },
+    "junctionCone": {
+      "S": 67.09,
+      "alpha": {
+        "degrees": 35,
+        "minutes": 20,
+        "seconds": 54
+      },
+      "r1Min": 1.02,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 49.5,
+      "L1Tol": -0.2,
+      "L2": 55.4,
+      "L2Tol": -0.2,
+      "L3": 64.52,
+      "L6": 84.84
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.18
+    },
+    "powderChamber": {
+      "P1": 11.97,
+      "P2": 11.21,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3645,
+      "M": 25,
+      "PE": 5190,
+      "PK": 4945,
+      "Pmax": 4300
+    },
+    "projectile": {
+      "G1": 6.7,
+      "L3PlusG": 71.1
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.45,
+      "Z": 6.7
+    },
+    "breech": {
+      "R1": 12.04
+    },
+    "collar": {
+      "H1": 7.48,
+      "H2": 7.45
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 34.52,
+      "b": 3.5,
+      "u": 255
+    },
+    "junctionCone": {
+      "S": 67.37,
+      "alpha": {
+        "degrees": 34,
+        "minutes": 29,
+        "seconds": 30
+      },
+      "r1Max": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 49.28,
+      "L2": 55.32,
+      "L3": 65.02
+    },
+    "powderChamber": {
+      "E": 3.17,
+      "P1": 11.98,
+      "P2": 11.23
+    },
+    "rifling": {
+      "G": 6.58,
+      "G1": 6.7,
+      "alpha1": 75,
+      "h": 0.49,
+      "i": {
+        "degrees": 1,
+        "minutes": 59,
+        "seconds": 35
+      },
+      "s": 3
+    }
+  },
+  "country": "DE",
+  "family": "rimless",
+  "key": "6_5_x_64_brenneke",
+  "name": "6,5 x 64 Brenneke",
+  "pressureMethod": "Transducer",
+  "published": "1992-02-27",
+  "revised": "2013-05-22"
+}

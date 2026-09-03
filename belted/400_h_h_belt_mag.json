@@ -21,8 +21,8 @@
       "R": 1.27,
       "R1": 13.51,
       "R3": 13.56,
-      "beta": 45,
-      "delta": 35,
+      "beta": 45.0,
+      "delta": 35.0,
       "eMin": 0.94,
       "f": 0.41
     },
@@ -33,9 +33,9 @@
     "junctionCone": {
       "S": 94.82,
       "alpha": {
-        "degrees": 16,
-        "minutes": 1,
-        "seconds": 1
+        "degrees": 16.0,
+        "minutes": 1.0,
+        "seconds": 1.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -44,7 +44,7 @@
       "L1": 50.4,
       "L2": 55.02,
       "L3": 72.3,
-      "L6": 90
+      "L6": 90.0
     },
     "misc": {
       "Fe": 0.1
@@ -54,11 +54,11 @@
       "P2": 12.5
     },
     "pressures": {
-      "EE": 6800,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 6800.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 10.44,
@@ -79,17 +79,17 @@
       "H2": 11.23
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 84.39,
       "b": 3.33,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 94.82,
       "alpha": {
-        "degrees": 15,
-        "minutes": 59,
-        "seconds": 53
+        "degrees": 15.0,
+        "minutes": 59.0,
+        "seconds": 53.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -107,12 +107,12 @@
     "rifling": {
       "G": 9.96,
       "G1": 10.45,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.39,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 5.95
     }
@@ -122,5 +122,6 @@
   "key": "400_h_h_belt_mag",
   "name": "400 H&H Belt. Mag.",
   "pressureMethod": "Transducer",
-  "published": "2005-05-25"
+  "published": "2005-05-25",
+  "tab": "III"
 }

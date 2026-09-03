@@ -24,8 +24,8 @@
       "E1": 8.79,
       "R": 1.22,
       "R1": 9.98,
-      "beta": 45,
-      "delta": 20,
+      "beta": 45.0,
+      "delta": 20.0,
       "eMin": 0.9,
       "f": 0.3
     },
@@ -36,9 +36,9 @@
     "junctionCone": {
       "S": 32.93,
       "alpha": {
-        "degrees": 30,
-        "minutes": 57,
-        "seconds": 41
+        "degrees": 30.0,
+        "minutes": 57.0,
+        "seconds": 41.0
       },
       "r2": 2.5
     },
@@ -60,9 +60,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 3055,
-      "PK": 2703,
-      "Pmax": 2350
+      "PE": 3055.0,
+      "PK": 2703.0,
+      "Pmax": 2350.0
     },
     "projectile": {
       "G1": 7.85,
@@ -83,17 +83,17 @@
       "H2": 8.48
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 46.92,
       "b": 3.05,
-      "u": 275
+      "u": 275.0
     },
     "junctionCone": {
       "S": 33.03,
       "alpha": {
-        "degrees": 30,
-        "minutes": 46,
-        "seconds": 45
+        "degrees": 30.0,
+        "minutes": 46.0,
+        "seconds": 45.0
       },
       "r2": 2.5
     },
@@ -110,12 +110,12 @@
     "rifling": {
       "G": 5.46,
       "G1": 7.9,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.29,
       "i": {
-        "degrees": 1,
-        "minutes": 33,
-        "seconds": 3
+        "degrees": 1.0,
+        "minutes": 33.0,
+        "seconds": 3.0
       }
     }
   },
@@ -125,5 +125,6 @@
   "name": "7,65 Parabellum",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2008-09-23"
+  "revised": "2008-09-23",
+  "tab": "IV"
 }

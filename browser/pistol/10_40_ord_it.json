@@ -1,0 +1,137 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.projectile.G1",
+          "cartridge.collar.H2"
+        ],
+        "kind": "exceptional",
+        "known": true,
+        "message": "cartridge G1 = 11.1 is more than cartridge H2 = 10.86, but a bullet is no wider than the mouth that holds it, unless it is heeled",
+        "rule": "bullet_within_mouth",
+        "values": {
+          "cartridge.collar.H2": 10.86,
+          "cartridge.projectile.G1": 11.1
+        },
+        "why": "a heeled bullet; the heel is published as G2 = 10.55"
+      },
+      {
+        "fields": [
+          "cartridge.projectile.G1",
+          "chamber.barrel.Z"
+        ],
+        "kind": "approximate",
+        "known": true,
+        "message": "the bullet differs from the groove diameter by 0.35 mm (G1 = 11.1, Z = 10.75); within 0.1 mm is manufacture",
+        "rule": "bullet_matches_grooves",
+        "values": {
+          "G1": 11.1,
+          "Z": 10.75
+        },
+        "why": "a heeled bullet (G1 is not narrower than H2) is sized to the case, not to the grooves, and engraves deeply by design"
+      }
+    ],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.65,
+      "R1": 13.2,
+      "RTol": -0.25,
+      "beta": 27,
+      "f": 0.8
+    },
+    "collar": {
+      "H1": 10.86,
+      "H2": 10.86
+    },
+    "junctionCone": {
+      "S": 50.03,
+      "alpha": {
+        "degrees": 17,
+        "minutes": 14,
+        "seconds": 43
+      }
+    },
+    "lengths": {
+      "L1": 13,
+      "L2": 14.22,
+      "L3": 19.8,
+      "L4": 20.9,
+      "L6": 30.2
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 11.8,
+      "P2": 11.23
+    },
+    "pressures": {
+      "M": 10.5,
+      "PE": 819,
+      "PK": 725,
+      "Pmax": 630
+    },
+    "projectile": {
+      "G1": 11.1,
+      "G2": 10.55,
+      "L1PlusG": 21.91
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.35,
+      "Z": 10.75
+    },
+    "breech": {
+      "R": 1.7,
+      "R1": 13.25,
+      "R2": 1.5
+    },
+    "collar": {
+      "H2": 11.13
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 87.42,
+      "b": 4,
+      "u": 250
+    },
+    "lengths": {
+      "L3": 20.5
+    },
+    "powderChamber": {
+      "P1": 11.85
+    },
+    "rifling": {
+      "G": 2.11,
+      "G1": 10.9,
+      "alpha1": 90,
+      "h": 0.11,
+      "i": {
+        "degrees": 7,
+        "minutes": 49,
+        "seconds": 45
+      }
+    }
+  },
+  "country": "IT",
+  "family": "pistol",
+  "key": "10_40_ord_it",
+  "name": "10,40 Ord. It.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

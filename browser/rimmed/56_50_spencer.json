@@ -1,0 +1,100 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.55,
+      "R1": 16.13,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H1": 13.5,
+      "H2": 13.5
+    },
+    "junctionCone": {
+      "S": 105.2,
+      "alpha": {
+        "degrees": 10,
+        "minutes": 11,
+        "seconds": 0
+      },
+      "r1Min": 0.5
+    },
+    "lengths": {
+      "L1": 28.04,
+      "L2": 29.44,
+      "L3": 29.44,
+      "L6": 38.56
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 14.3,
+      "P2": 13.75
+    },
+    "pressures": {
+      "EE": 1950,
+      "M": 17.5,
+      "PE": 2560,
+      "PK": 2358,
+      "Pmax": 2050
+    },
+    "projectile": {
+      "G1": 13,
+      "L1PlusG": 39.76
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 12.7,
+      "Z": 12.95
+    },
+    "breech": {
+      "R": 1.55,
+      "R1": 16.2
+    },
+    "collar": {
+      "H2": 13.77
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 129.34,
+      "b": 3.5,
+      "u": 508
+    },
+    "lengths": {
+      "L3": 29.55
+    },
+    "powderChamber": {
+      "P1": 14.32
+    },
+    "rifling": {
+      "G": 10.32,
+      "G1": 13.03,
+      "alpha1": 30,
+      "h": 1.38,
+      "i": 15,
+      "s": 9.7
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "56_50_spencer",
+  "name": "56/50 Spencer",
+  "pressureMethod": "Transducer",
+  "published": "2004-05-18",
+  "revised": "2006-09-19"
+}

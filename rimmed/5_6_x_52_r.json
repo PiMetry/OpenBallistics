@@ -18,7 +18,7 @@
       "R": 1.6,
       "R1": 12.5,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 56.68,
       "alpha": {
-        "degrees": 23,
-        "minutes": 59,
-        "seconds": 16
+        "degrees": 23.0,
+        "minutes": 59.0,
+        "seconds": 16.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -38,7 +38,7 @@
     "lengths": {
       "L1": 35.03,
       "L2": 41.62,
-      "L3": 52,
+      "L3": 52.0,
       "L6": 63.75
     },
     "misc": {
@@ -49,15 +49,15 @@
       "P2": 9.2
     },
     "pressures": {
-      "EE": 1830,
-      "M": 25,
-      "PE": 4125,
-      "PK": 3795,
-      "Pmax": 3300
+      "EE": 1830.0,
+      "M": 25.0,
+      "PE": 4125.0,
+      "PK": 3795.0,
+      "Pmax": 3300.0
     },
     "projectile": {
       "G1": 5.79,
-      "L3PlusG": 70
+      "L3PlusG": 70.0
     }
   },
   "chamber": {
@@ -74,14 +74,14 @@
       "H2": 6.42
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 25.42,
-      "b": 2,
-      "u": 270
+      "b": 2.0,
+      "u": 270.0
     },
     "junctionCone": {
       "S": 56.74,
-      "alpha": 24,
+      "alpha": 24.0,
       "r1Max": 3.8,
       "r2": 7.6
     },
@@ -95,13 +95,13 @@
       "P2": 9.23
     },
     "rifling": {
-      "G": 18,
+      "G": 18.0,
       "G1": 5.85,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 28,
-        "seconds": 39
+        "degrees": 0.0,
+        "minutes": 28.0,
+        "seconds": 39.0
       }
     }
   },
@@ -111,5 +111,6 @@
   "name": "5,6 x 52 R",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

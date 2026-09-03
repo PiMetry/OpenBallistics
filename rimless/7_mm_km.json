@@ -19,8 +19,8 @@
       "E1": 13.24,
       "R": 1.52,
       "R1": 14.93,
-      "beta": 45,
-      "delta": 50,
+      "beta": 45.0,
+      "delta": 50.0,
       "eMin": 0.9,
       "f": 0.5
     },
@@ -31,11 +31,11 @@
     "junctionCone": {
       "S": 69.05,
       "alpha": {
-        "degrees": 52,
-        "minutes": 1,
-        "seconds": 19
+        "degrees": 52.0,
+        "minutes": 1.0,
+        "seconds": 19.0
       },
-      "r2": 2
+      "r2": 2.0
     },
     "lengths": {
       "L1": 54.9,
@@ -54,11 +54,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 5670,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 5670.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 7.23,
@@ -78,17 +78,17 @@
       "H2": 8.14
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 40.39,
       "b": 2.79,
-      "u": 216
+      "u": 216.0
     },
     "junctionCone": {
       "S": 69.06,
       "alpha": {
-        "degrees": 52,
-        "minutes": 1,
-        "seconds": 27
+        "degrees": 52.0,
+        "minutes": 1.0,
+        "seconds": 27.0
       },
       "r2": 2.5
     },
@@ -106,15 +106,15 @@
       "G": 7.12,
       "G1": 7.23,
       "alpha1": {
-        "degrees": 90,
-        "minutes": 37,
-        "seconds": 59
+        "degrees": 90.0,
+        "minutes": 37.0,
+        "seconds": 59.0
       },
       "h": 0.45,
       "i": {
-        "degrees": 1,
-        "minutes": 43,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 43.0,
+        "seconds": 0.0
       },
       "s": 3.95
     }
@@ -125,5 +125,6 @@
   "name": "7 mm KM",
   "pressureMethod": "Transducer",
   "published": "1999-09-01",
-  "revised": "2011-05-25"
+  "revised": "2011-05-25",
+  "tab": "I"
 }

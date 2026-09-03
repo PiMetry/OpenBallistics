@@ -1,0 +1,125 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.72,
+      "E1": 8.73,
+      "R": 1.27,
+      "R1": 9.98,
+      "beta": 45,
+      "delta": 20,
+      "eMin": 0.9,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 8.46,
+      "H2": 8.46
+    },
+    "junctionCone": {
+      "S": 34.61,
+      "alpha": {
+        "degrees": 34,
+        "minutes": 46,
+        "seconds": 47
+      },
+      "r2": 2.5
+    },
+    "lengths": {
+      "L1": 19.28,
+      "L1Tol": -0.2,
+      "L2": 21.1,
+      "L2Tol": -0.2,
+      "L3": 25.15,
+      "L6": 35.08
+    },
+    "misc": {
+      "Fe": 0.2
+    },
+    "powderChamber": {
+      "P1": 9.86,
+      "P2": 9.6,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "M": 17.5,
+      "PE": 2925,
+      "PK": 2588,
+      "Pmax": 2250
+    },
+    "projectile": {
+      "G1": 7.86,
+      "L3PlusG": 28.22
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.85
+    },
+    "breech": {
+      "R": 1.27,
+      "R1": 10.03
+    },
+    "collar": {
+      "H1": 8.63,
+      "H2": 8.55
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 47.47,
+      "b": 2.65,
+      "u": 250
+    },
+    "junctionCone": {
+      "S": 36.1,
+      "alpha": {
+        "degrees": 31,
+        "minutes": 50,
+        "seconds": 53
+      },
+      "r1Max": 2.5,
+      "r2": 2.5
+    },
+    "lengths": {
+      "L1": 19.21,
+      "L2": 20.98,
+      "L3": 25.5
+    },
+    "powderChamber": {
+      "E": 3.72,
+      "P1": 9.93,
+      "P2": 9.64
+    },
+    "rifling": {
+      "G": 3.07,
+      "G1": 7.9,
+      "alpha1": 90,
+      "h": 0.33,
+      "i": {
+        "degrees": 2,
+        "minutes": 55,
+        "seconds": 30
+      }
+    }
+  },
+  "country": "DE",
+  "family": "pistol",
+  "key": "7_63_mauser",
+  "name": "7,63 Mauser",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2006-09-19"
+}

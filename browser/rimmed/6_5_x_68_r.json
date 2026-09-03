@@ -1,0 +1,119 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.75,
+      "R1": 15,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 7.6,
+      "H2": 7.6
+    },
+    "junctionCone": {
+      "S": 75.05,
+      "alpha": {
+        "degrees": 29,
+        "minutes": 19,
+        "seconds": 59
+      },
+      "r1Min": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 51.78,
+      "L2": 60.53,
+      "L3": 67.5,
+      "L6": 87.5
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.34,
+      "P2": 12.18
+    },
+    "pressures": {
+      "EE": 3810,
+      "M": 25,
+      "PE": 4875,
+      "PK": 4485,
+      "Pmax": 3900
+    },
+    "projectile": {
+      "G1": 6.7,
+      "L3PlusG": 97.5
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.45,
+      "Z": 6.7
+    },
+    "breech": {
+      "R": 1.75,
+      "R1": 15.05
+    },
+    "collar": {
+      "H1": 7.63,
+      "H2": 7.63
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 34.52,
+      "b": 3.5,
+      "u": 250
+    },
+    "junctionCone": {
+      "S": 75.11,
+      "alpha": {
+        "degrees": 29,
+        "minutes": 19,
+        "seconds": 58
+      },
+      "r1Max": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 51.78,
+      "L2": 60.53,
+      "L3": 67.8
+    },
+    "powderChamber": {
+      "P1": 13.37,
+      "P2": 12.21
+    },
+    "rifling": {
+      "G": 30,
+      "G1": 6.75,
+      "alpha1": 180,
+      "i": {
+        "degrees": 0,
+        "minutes": 17,
+        "seconds": 11
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimmed",
+  "key": "6_5_x_68_r",
+  "name": "6,5 x 68 R",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

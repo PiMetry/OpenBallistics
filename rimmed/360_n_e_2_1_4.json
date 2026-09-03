@@ -33,11 +33,11 @@
       "P1": 10.92
     },
     "pressures": {
-      "EE": 2285,
-      "M": 25,
-      "PE": 3060,
-      "PK": 2818,
-      "Pmax": 2450
+      "EE": 2285.0,
+      "M": 25.0,
+      "PE": 3060.0,
+      "PK": 2818.0,
+      "Pmax": 2450.0
     },
     "projectile": {
       "G1": 9.32,
@@ -58,7 +58,7 @@
     },
     "grooves": {
       "Q": 62.21,
-      "u": 508
+      "u": 508.0
     },
     "lengths": {
       "L3": 57.4
@@ -69,12 +69,12 @@
     "rifling": {
       "G": 6.68,
       "G1": 9.35,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.24,
       "i": {
-        "degrees": 2,
-        "minutes": 0,
-        "seconds": 2
+        "degrees": 2.0,
+        "minutes": 0.0,
+        "seconds": 2.0
       }
     }
   },
@@ -84,5 +84,6 @@
   "name": "360 N.E. 2 ''1/4",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

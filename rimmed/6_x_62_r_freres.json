@@ -26,16 +26,16 @@
     "junctionCone": {
       "S": 65.25,
       "alpha": {
-        "degrees": 39,
-        "minutes": 58,
-        "seconds": 50
+        "degrees": 39.0,
+        "minutes": 58.0,
+        "seconds": 50.0
       }
     },
     "lengths": {
       "L1": 49.4,
       "L2": 55.75,
       "L3": 61.75,
-      "L6": 82
+      "L6": 82.0
     },
     "misc": {
       "Fe": 0.1
@@ -45,11 +45,11 @@
       "P2": 11.53
     },
     "pressures": {
-      "EE": 3435,
-      "M": 25,
-      "PE": 5375,
-      "PK": 4945,
-      "Pmax": 4300
+      "EE": 3435.0,
+      "M": 25.0,
+      "PE": 5375.0,
+      "PK": 4945.0,
+      "Pmax": 4300.0
     },
     "projectile": {
       "G1": 6.18,
@@ -70,23 +70,23 @@
       "H2": 6.93
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 29.25,
       "b": 1.73,
-      "u": 260
+      "u": 260.0
     },
     "junctionCone": {
       "S": 65.27,
       "alpha": {
-        "degrees": 39,
-        "minutes": 59,
-        "seconds": 42
+        "degrees": 39.0,
+        "minutes": 59.0,
+        "seconds": 42.0
       }
     },
     "lengths": {
       "L1": 49.4,
       "L2": 55.72,
-      "L3": 62
+      "L3": 62.0
     },
     "powderChamber": {
       "P1": 12.14,
@@ -95,11 +95,11 @@
     "rifling": {
       "G": 6.67,
       "G1": 6.19,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 19,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 19.0,
+        "seconds": 0.0
       },
       "s": 2.97
     }
@@ -110,5 +110,6 @@
   "name": "6 x 62 R Freres",
   "pressureMethod": "Transducer",
   "published": "1992-02-27",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

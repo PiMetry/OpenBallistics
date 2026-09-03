@@ -1,0 +1,116 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.22,
+      "E1": 10.39,
+      "R": 1.24,
+      "R1": 12.01,
+      "beta": 35,
+      "delta": 34,
+      "eMin": 0.84,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 6.5,
+      "H2": 6.45
+    },
+    "junctionCone": {
+      "S": 48.37,
+      "alpha": 56,
+      "r1Min": 2.54,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 38.48,
+      "L1Tol": -0.2,
+      "L2": 42.26,
+      "L2Tol": -0.2,
+      "L3": 48.46,
+      "L6": 59.69
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.08
+    },
+    "powderChamber": {
+      "P1": 11.93,
+      "P2": 10.52,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2370,
+      "M": 25,
+      "PE": 5060,
+      "PK": 4658,
+      "Pmax": 4050
+    },
+    "projectile": {
+      "G1": 5.7,
+      "L3PlusG": 52.39
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.56,
+      "Z": 5.69
+    },
+    "breech": {
+      "R1": 12.09
+    },
+    "collar": {
+      "H1": 6.53,
+      "H2": 6.48
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 25.09,
+      "b": 2.03,
+      "u": 356
+    },
+    "junctionCone": {
+      "S": 48.29,
+      "alpha": 56,
+      "r1Max": 0.64,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 38.36,
+      "L2": 42.15,
+      "L3": 48.87
+    },
+    "powderChamber": {
+      "E": 3.22,
+      "P1": 11.96,
+      "P2": 10.56
+    },
+    "rifling": {
+      "G": 3.93,
+      "G1": 5.7,
+      "alpha1": 90,
+      "h": 0.39,
+      "i": 2,
+      "s": 1.93
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "22_250_rem",
+  "name": "22-250 Rem",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

@@ -1,0 +1,94 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 4.11,
+      "E1": 10.16,
+      "R": 1.24,
+      "R1": 11.94,
+      "beta": 35,
+      "delta": 26,
+      "eMin": 0.89,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 12.01
+    },
+    "lengths": {
+      "L3": 19.3,
+      "L3Tol": -0.25,
+      "L6": 28.89
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 12.09
+    },
+    "pressures": {
+      "M": 10.5,
+      "PE": 1690,
+      "PK": 1495,
+      "Pmax": 1300
+    },
+    "projectile": {
+      "G1": 11.48,
+      "L3PlusG": 25.53
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.23,
+      "Z": 11.43
+    },
+    "breech": {
+      "R1": 11.97
+    },
+    "collar": {
+      "H2": 12.04
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 101.33,
+      "b": 3.73,
+      "u": 406
+    },
+    "lengths": {
+      "L3": 19.3
+    },
+    "powderChamber": {
+      "E": 5.08,
+      "P1": 12.18
+    },
+    "rifling": {
+      "G": 6.23,
+      "G1": 11.48,
+      "alpha1": 180,
+      "i": {
+        "degrees": 1,
+        "minutes": 9,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "AT",
+  "family": "pistol",
+  "key": "45_gap",
+  "name": "45 GAP",
+  "pressureMethod": "Transducer",
+  "published": "2003-06-05",
+  "revised": "2011-05-25"
+}

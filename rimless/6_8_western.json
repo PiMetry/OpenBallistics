@@ -19,8 +19,8 @@
       "E1": 12.19,
       "R": 1.37,
       "R1": 13.59,
-      "beta": 35,
-      "delta": 45,
+      "beta": 35.0,
+      "delta": 45.0,
       "eMin": 1.02,
       "f": 0.35
     },
@@ -30,7 +30,7 @@
     },
     "junctionCone": {
       "S": 49.99,
-      "alpha": 70,
+      "alpha": 70.0,
       "r1Min": 1.27,
       "r2": 2.54
     },
@@ -52,11 +52,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 5040,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 5040.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 7.06,
@@ -73,17 +73,17 @@
     },
     "collar": {
       "H1": 8.03,
-      "H2": 8
+      "H2": 8.0
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 38.29,
       "b": 2.41,
       "u": 203.2
     },
     "junctionCone": {
       "S": 49.89,
-      "alpha": 70,
+      "alpha": 70.0,
       "r1Max": 1.27,
       "r2": 3.05
     },
@@ -98,13 +98,13 @@
       "P2": 13.7
     },
     "rifling": {
-      "G": 3,
+      "G": 3.0,
       "G1": 7.06,
       "h": 0.47,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -113,5 +113,6 @@
   "key": "6_8_western",
   "name": "6,8 Western",
   "pressureMethod": "Transducer",
-  "published": "2022-11-08"
+  "published": "2022-11-08",
+  "tab": "I"
 }

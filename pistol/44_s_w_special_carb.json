@@ -94,10 +94,10 @@
       "H2": 11.63
     },
     "grooves": {
-      "N": 5,
+      "N": 5.0,
       "Q": 90.65,
       "b": 3.26,
-      "u": 508
+      "u": 508.0
     },
     "lengths": {
       "L3": 30.06
@@ -109,9 +109,9 @@
       "G": 2.65,
       "G1": 11.63,
       "i": {
-        "degrees": 11,
-        "minutes": 6,
-        "seconds": 0
+        "degrees": 11.0,
+        "minutes": 6.0,
+        "seconds": 0.0
       }
     }
   },
@@ -120,5 +120,6 @@
   "key": "44_s_w_special_carb",
   "name": "44 S&W Special (carb)",
   "published": "1984-06-14",
-  "revised": "1995-05-10"
+  "revised": "1995-05-10",
+  "tab": "IV"
 }

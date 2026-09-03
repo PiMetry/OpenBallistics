@@ -18,7 +18,7 @@
       "R": 1.4,
       "R1": 9.53,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.38
     },
     "collar": {
@@ -35,13 +35,13 @@
       "P1": 8.56
     },
     "pressures": {
-      "M": 8,
-      "PE": 2015,
-      "PK": 1783,
-      "Pmax": 1550
+      "M": 8.0,
+      "PE": 2015.0,
+      "PK": 1783.0,
+      "Pmax": 1550.0
     },
     "projectile": {
-      "G1": 8,
+      "G1": 8.0,
       "L3PlusG": 26.31
     }
   },
@@ -58,10 +58,10 @@
       "H2": 8.57
     },
     "grooves": {
-      "N": 5,
+      "N": 5.0,
       "Q": 47.87,
       "b": 2.41,
-      "u": 476
+      "u": 476.0
     },
     "lengths": {
       "L3": 23.9
@@ -73,9 +73,9 @@
       "G": 3.04,
       "G1": 8.57,
       "i": {
-        "degrees": 8,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 8.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -85,5 +85,6 @@
   "name": "32 S&W Long Wad Cut.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

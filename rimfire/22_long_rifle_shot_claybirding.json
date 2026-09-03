@@ -1,0 +1,107 @@
+{
+  "annotations": {
+    "category": "rimfire",
+    "confidence": "implausible",
+    "defaultBulletShape": "shot",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.lengths.L3",
+          "chamber.lengths.L3"
+        ],
+        "kind": "exceptional",
+        "known": true,
+        "message": "cartridge L3 = 25.15 is more than chamber L3 = 23.22, but a chamber is at least as long as the case it takes",
+        "rule": "chamber_accepts_case",
+        "values": {
+          "cartridge.lengths.L3": 25.15,
+          "chamber.lengths.L3": 23.22
+        },
+        "why": "a shot load whose crimp opens forward into the throat"
+      },
+      {
+        "fields": [
+          "cartridge.projectile.G1"
+        ],
+        "kind": "missing",
+        "message": "G1 is not published, and it is needed for the bullet the mouth grips, and the neck wall",
+        "rule": "missing_dimension",
+        "values": {}
+      }
+    ],
+    "primerType": "rimfire"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.09,
+      "R1": 7.06,
+      "RTol": -0.18
+    },
+    "collar": {
+      "H1": 5.51,
+      "H2": 5.51
+    },
+    "junctionCone": {
+      "S": 53.0,
+      "alpha": 9.0
+    },
+    "lengths": {
+      "L1": 16.53,
+      "L2": 17.98,
+      "L3": 25.15,
+      "L6": 25.15
+    },
+    "misc": {
+      "Fe": 0.2
+    },
+    "powderChamber": {
+      "P1": 5.74,
+      "P2": 5.74
+    },
+    "pressures": {
+      "M": 26.95,
+      "PE": 1950.0,
+      "PK": 1725.0,
+      "Pmax": 1500.0
+    },
+    "projectile": {
+      "F": 5.51
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.51,
+      "Z": 5.51
+    },
+    "breech": {
+      "R": 1.09,
+      "R1": 7.32,
+      "r": 0.13
+    },
+    "collar": {
+      "H2": 5.68
+    },
+    "grooves": {
+      "Q": 23.81
+    },
+    "lengths": {
+      "L3": 23.22
+    },
+    "powderChamber": {
+      "P1": 5.8
+    },
+    "rifling": {
+      "G1": 5.51,
+      "alpha1": 60.0,
+      "h": 0.15
+    }
+  },
+  "country": "US",
+  "family": "rimfire",
+  "key": "22_long_rifle_shot_claybirding",
+  "name": "22 Long Rifle Shot Claybirding",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07",
+  "tab": "V"
+}

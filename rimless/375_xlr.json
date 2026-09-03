@@ -23,7 +23,7 @@
       "E1": 13.24,
       "R": 1.52,
       "R1": 14.93,
-      "beta": 45,
+      "beta": 45.0,
       "delta": 50.026111,
       "eMin": 0.9,
       "f": 0.5
@@ -35,11 +35,11 @@
     "junctionCone": {
       "S": 73.9,
       "alpha": {
-        "degrees": 39,
-        "minutes": 59,
-        "seconds": 49
+        "degrees": 39.0,
+        "minutes": 59.0,
+        "seconds": 49.0
       },
-      "r2": 2
+      "r2": 2.0
     },
     "lengths": {
       "L1": 54.9,
@@ -47,7 +47,7 @@
       "L2": 59.63,
       "L2Tol": -0.2,
       "L3": 69.2,
-      "L6": 98
+      "L6": 98.0
     },
     "misc": {
       "Fe": 0.1,
@@ -59,11 +59,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 8050,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 8050.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 9.55,
@@ -83,17 +83,17 @@
       "H2": 10.42
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 70.16,
       "b": 2.92,
-      "u": 305
+      "u": 305.0
     },
     "junctionCone": {
       "S": 73.83,
       "alpha": {
-        "degrees": 40,
-        "minutes": 0,
-        "seconds": 45
+        "degrees": 40.0,
+        "minutes": 0.0,
+        "seconds": 45.0
       }
     },
     "lengths": {
@@ -110,8 +110,8 @@
       "G": 6.72,
       "G1": 9.56,
       "h": 0.43,
-      "i": 2,
-      "s": 3
+      "i": 2.0,
+      "s": 3.0
     }
   },
   "country": "DE",
@@ -119,5 +119,6 @@
   "key": "375_xlr",
   "name": "375 XLR",
   "pressureMethod": "Transducer",
-  "published": "2022-04-26"
+  "published": "2022-04-26",
+  "tab": "I"
 }

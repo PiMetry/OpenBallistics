@@ -1,0 +1,98 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "hollow_base",
+      "category": "pistol_wadcutter",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "wadcutter",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.2,
+      "E1": 8.76,
+      "R": 1.27,
+      "R1": 10.31,
+      "RTol": -0.25,
+      "beta": 35,
+      "delta": {
+        "degrees": 12,
+        "minutes": 42,
+        "seconds": 5
+      },
+      "f": 0.91
+    },
+    "collar": {
+      "H2": 9.63
+    },
+    "lengths": {
+      "L3": 29.34,
+      "L6": 30.23
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 9.63
+    },
+    "pressures": {
+      "M": 10.5,
+      "PE": 1625,
+      "PK": 1438,
+      "Pmax": 1250
+    },
+    "projectile": {
+      "G1": 9.11,
+      "L3PlusG": 45.76
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.79,
+      "Z": 9.02
+    },
+    "breech": {
+      "R": 1.27,
+      "R1": 10.41
+    },
+    "collar": {
+      "H2": 9.65
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 62.85,
+      "b": 3.07,
+      "u": 356
+    },
+    "lengths": {
+      "L3": 29.34
+    },
+    "powderChamber": {
+      "P1": 9.71
+    },
+    "rifling": {
+      "G": 16.42,
+      "G1": 9.4,
+      "alpha1": 3,
+      "h": 4.77,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "38_spl_amu",
+  "name": "38 Spl. AMU",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2008-09-23"
+}

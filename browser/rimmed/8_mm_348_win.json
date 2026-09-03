@@ -1,0 +1,121 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.78,
+      "R1": 15.49,
+      "RTol": -0.25,
+      "beta": 35,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 8.88,
+      "H2": 8.85
+    },
+    "junctionCone": {
+      "S": 59.71,
+      "alpha": {
+        "degrees": 38,
+        "minutes": 10,
+        "seconds": 45
+      },
+      "r1Min": 0.76,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 41.91,
+      "L2": 46.88,
+      "L3": 57.28,
+      "L6": 82
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 14.05,
+      "P2": 12.32
+    },
+    "pressures": {
+      "EE": 2600,
+      "M": 25,
+      "PE": 3750,
+      "PK": 3450,
+      "Pmax": 3000
+    },
+    "projectile": {
+      "G1": 8.22,
+      "L3PlusG": 66.77
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.89,
+      "Z": 8.2
+    },
+    "breech": {
+      "R": 1.78,
+      "R1": 15.75
+    },
+    "collar": {
+      "H1": 8.9,
+      "H2": 8.87
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 51.52,
+      "b": 4.05,
+      "u": 240
+    },
+    "junctionCone": {
+      "S": 59.93,
+      "alpha": {
+        "degrees": 38,
+        "minutes": 19,
+        "seconds": 19
+      },
+      "r1Max": 0.76,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 42.17,
+      "L2": 47.12,
+      "L3": 57.53
+    },
+    "powderChamber": {
+      "P1": 14.07,
+      "P2": 12.34
+    },
+    "rifling": {
+      "G": 9.49,
+      "G1": 8.23,
+      "alpha1": 90,
+      "h": 0.32,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 2
+      },
+      "s": 3
+    }
+  },
+  "country": "FR",
+  "family": "rimmed",
+  "key": "8_mm_348_win",
+  "name": "8 mm - 348 Win.",
+  "pressureMethod": "Transducer",
+  "published": "1999-03-16",
+  "revised": "2002-05-15"
+}

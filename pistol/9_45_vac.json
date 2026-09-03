@@ -19,8 +19,8 @@
       "E1": 10.15,
       "R": 1.24,
       "R1": 12.1,
-      "beta": 35,
-      "delta": 45,
+      "beta": 35.0,
+      "delta": 45.0,
       "eMin": 0.9,
       "f": 0.3
     },
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 23.66,
       "alpha": {
-        "degrees": 78,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 78.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "r1Min": 1.2,
       "r2": 1.2
@@ -56,9 +56,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 3055,
-      "PK": 2703,
-      "Pmax": 2350
+      "PE": 3055.0,
+      "PK": 2703.0,
+      "Pmax": 2350.0
     },
     "projectile": {
       "G1": 9.03,
@@ -79,17 +79,17 @@
       "H2": 9.68
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 62.61,
       "b": 2.49,
-      "u": 250
+      "u": 250.0
     },
     "junctionCone": {
       "S": 23.66,
       "alpha": {
-        "degrees": 78,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 78.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "r1Max": 1.2,
       "r2": 1.5
@@ -107,12 +107,12 @@
     "rifling": {
       "G": 4.79,
       "G1": 9.13,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.28,
       "i": {
-        "degrees": 1,
-        "minutes": 58,
-        "seconds": 6
+        "degrees": 1.0,
+        "minutes": 58.0,
+        "seconds": 6.0
       }
     }
   },
@@ -121,5 +121,6 @@
   "key": "9_45_vac",
   "name": "9-45 VAC",
   "pressureMethod": "Transducer",
-  "published": "2021-04-07"
+  "published": "2021-04-07",
+  "tab": "IV"
 }

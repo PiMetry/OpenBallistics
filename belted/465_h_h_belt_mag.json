@@ -21,8 +21,8 @@
       "R": 1.6,
       "R1": 14.71,
       "R3": 15.33,
-      "beta": 45,
-      "delta": 45,
+      "beta": 45.0,
+      "delta": 45.0,
       "eMin": 1.24,
       "f": 0.3
     },
@@ -33,9 +33,9 @@
     "junctionCone": {
       "S": 130.66,
       "alpha": {
-        "degrees": 9,
-        "minutes": 59,
-        "seconds": 55
+        "degrees": 9.0,
+        "minutes": 59.0,
+        "seconds": 55.0
       },
       "r1Min": 0.5,
       "r2": 0.5
@@ -44,7 +44,7 @@
       "L1": 53.5,
       "L2": 58.93,
       "L3": 73.5,
-      "L6": 90
+      "L6": 90.0
     },
     "misc": {
       "Fe": 0.1
@@ -54,11 +54,11 @@
       "P2": 13.5
     },
     "pressures": {
-      "EE": 8300,
-      "M": 25,
-      "PE": 5375,
-      "PK": 4945,
-      "Pmax": 4300
+      "EE": 8300.0,
+      "M": 25.0,
+      "PE": 5375.0,
+      "PK": 4945.0,
+      "Pmax": 4300.0
     },
     "projectile": {
       "G1": 11.89,
@@ -80,17 +80,17 @@
       "H2": 12.58
     },
     "grooves": {
-      "N": 8,
+      "N": 8.0,
       "Q": 109.81,
       "b": 3.25,
-      "u": 356
+      "u": 356.0
     },
     "junctionCone": {
       "S": 130.57,
       "alpha": {
-        "degrees": 10,
-        "minutes": 0,
-        "seconds": 14
+        "degrees": 10.0,
+        "minutes": 0.0,
+        "seconds": 14.0
       },
       "r1Max": 0.5,
       "r2": 0.5
@@ -108,14 +108,14 @@
     "rifling": {
       "G": 9.77,
       "G1": 11.9,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.34,
       "i": {
-        "degrees": 1,
-        "minutes": 26,
-        "seconds": 28
+        "degrees": 1.0,
+        "minutes": 26.0,
+        "seconds": 28.0
       },
-      "s": 5
+      "s": 5.0
     }
   },
   "country": "GB",
@@ -123,5 +123,6 @@
   "key": "465_h_h_belt_mag",
   "name": "465 H&H Belt. Mag.",
   "pressureMethod": "Transducer",
-  "published": "2006-09-19"
+  "published": "2006-09-19",
+  "tab": "III"
 }

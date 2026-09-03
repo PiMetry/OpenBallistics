@@ -1,0 +1,116 @@
+{
+  "alternativeNames": [
+    "9mm Browning Kurz (short, corto)",
+    "9 mm kurz",
+    "380 ACP",
+    "380 Auto(matic)"
+  ],
+  "annotations": {
+    "category": "pistol",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.lengths.L3",
+          "chamber.lengths.L3"
+        ],
+        "kind": "exceptional",
+        "message": "cartridge L3 = 17.33 is more than chamber L3 = 17.3, but a chamber is at least as long as the case it takes",
+        "rule": "chamber_accepts_case",
+        "values": {
+          "cartridge.lengths.L3": 17.33,
+          "chamber.lengths.L3": 17.3
+        }
+      }
+    ],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 2.84,
+      "E1": 8.25,
+      "R": 1.3,
+      "R1": 9.53,
+      "beta": 45,
+      "delta": 40,
+      "eMin": 0.8,
+      "f": 0.5
+    },
+    "collar": {
+      "H2": 9.53
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 17.33,
+      "L3Tol": -0.25,
+      "L6": 25
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 9.53
+    },
+    "pressures": {
+      "M": 9,
+      "PE": 1755,
+      "PK": 1553,
+      "Pmax": 1350
+    },
+    "projectile": {
+      "G1": 9.04,
+      "L3PlusG": 19.93
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.84,
+      "Z": 9.04
+    },
+    "breech": {
+      "R1": 9.66
+    },
+    "collar": {
+      "H2": 9.55
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 63.26,
+      "b": 3.07,
+      "u": 250
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 17.3
+    },
+    "powderChamber": {
+      "E": 2.84,
+      "P1": 9.65
+    },
+    "rifling": {
+      "G": 2.6,
+      "G1": 9.1,
+      "alpha1": 180,
+      "i": {
+        "degrees": 2,
+        "minutes": 51,
+        "seconds": 45
+      }
+    }
+  },
+  "country": "BE",
+  "family": "pistol",
+  "key": "9_mm_browning_court",
+  "name": "9 mm Browning court",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2008-09-23"
+}

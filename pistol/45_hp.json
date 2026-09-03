@@ -19,8 +19,8 @@
       "E1": 10.16,
       "R": 1.24,
       "R1": 12.05,
-      "beta": 45,
-      "delta": 26,
+      "beta": 45.0,
+      "delta": 26.0,
       "eMin": 0.89,
       "f": 0.44
     },
@@ -40,9 +40,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 1690,
-      "PK": 1495,
-      "Pmax": 1300
+      "PE": 1690.0,
+      "PK": 1495.0,
+      "Pmax": 1300.0
     },
     "projectile": {
       "G1": 11.48,
@@ -61,26 +61,26 @@
       "H2": 12.04
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 101.33,
       "b": 3.73,
-      "u": 406
+      "u": 406.0
     },
     "lengths": {
       "L3": 21.81
     },
     "powderChamber": {
-      "E": 5,
+      "E": 5.0,
       "P1": 12.18
     },
     "rifling": {
       "G": 2.77,
       "G1": 11.48,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 2,
-        "minutes": 35,
-        "seconds": 2
+        "degrees": 2.0,
+        "minutes": 35.0,
+        "seconds": 2.0
       }
     }
   },
@@ -90,5 +90,6 @@
   "name": "45 HP",
   "pressureMethod": "Transducer",
   "published": "1984-11-16",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

@@ -1,0 +1,115 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.85,
+      "E1": 10.39,
+      "R": 1.37,
+      "R1": 12.01,
+      "beta": 30,
+      "delta": 36,
+      "eMin": 1.4,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 7.54,
+      "H2": 7.54
+    },
+    "junctionCone": {
+      "S": 55.46,
+      "alpha": 40,
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 39.62,
+      "L1Tol": -0.2,
+      "L2": 45.1,
+      "L2Tol": -0.2,
+      "L3": 51.69,
+      "L6": 71.12
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.96,
+      "P2": 11.53,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2770,
+      "M": 25,
+      "PE": 5190,
+      "PK": 4773,
+      "Pmax": 4150
+    },
+    "projectile": {
+      "G1": 6.72,
+      "L3PlusG": 57.31
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.5,
+      "Z": 6.71
+    },
+    "breech": {
+      "R1": 12.03
+    },
+    "collar": {
+      "H1": 7.59,
+      "H2": 7.57
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 34.74,
+      "b": 2.42,
+      "u": 229
+    },
+    "junctionCone": {
+      "S": 55.36,
+      "alpha": 40,
+      "r1Max": 0.76,
+      "r2": 3.81
+    },
+    "lengths": {
+      "L1": 39.48,
+      "L2": 44.93,
+      "L3": 51.94
+    },
+    "powderChamber": {
+      "E": 3.85,
+      "P1": 11.98,
+      "P2": 11.56
+    },
+    "rifling": {
+      "G": 5.62,
+      "G1": 6.73,
+      "alpha1": 90,
+      "h": 0.42,
+      "i": 3,
+      "s": 3.43
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "260_rem",
+  "name": "260 Rem.",
+  "pressureMethod": "Transducer",
+  "published": "1998-02-09",
+  "revised": "2002-05-15"
+}

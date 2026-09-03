@@ -1,0 +1,88 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.17,
+      "R1": 12.32,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H2": 9.8
+    },
+    "lengths": {
+      "L3": 57.15,
+      "L6": 76.2
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 10.92
+    },
+    "pressures": {
+      "EE": 2285,
+      "M": 25,
+      "PE": 3060,
+      "PK": 2818,
+      "Pmax": 2450
+    },
+    "projectile": {
+      "G1": 9.32,
+      "L3PlusG": 63.83
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.9,
+      "Z": 9.3
+    },
+    "breech": {
+      "R": 1.19,
+      "R1": 12.57
+    },
+    "collar": {
+      "H2": 9.83
+    },
+    "grooves": {
+      "Q": 62.21,
+      "u": 508
+    },
+    "lengths": {
+      "L3": 57.4
+    },
+    "powderChamber": {
+      "P1": 10.95
+    },
+    "rifling": {
+      "G": 6.68,
+      "G1": 9.35,
+      "alpha1": 90,
+      "h": 0.24,
+      "i": {
+        "degrees": 2,
+        "minutes": 0,
+        "seconds": 2
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "360_n_e_2_1_4",
+  "name": "360 N.E. 2 ''1/4",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

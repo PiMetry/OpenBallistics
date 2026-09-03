@@ -1,0 +1,102 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "implausible",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.projectile.G1",
+          "chamber.barrel.Z"
+        ],
+        "kind": "approximate",
+        "message": "the bullet differs from the groove diameter by 0.15 mm (G1 = 9.12, Z = 8.97); within 0.1 mm is manufacture",
+        "rule": "bullet_matches_grooves",
+        "values": {
+          "G1": 9.12,
+          "Z": 8.97
+        }
+      }
+    ],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.52,
+      "R1": 11.18,
+      "RTol": -0.25,
+      "beta": 35,
+      "f": 0.4
+    },
+    "collar": {
+      "H2": 9.6
+    },
+    "lengths": {
+      "L3": 26.29,
+      "L6": 34.54
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 9.63
+    },
+    "pressures": {
+      "M": 10.5,
+      "PE": 1170,
+      "PK": 1035,
+      "Pmax": 900
+    },
+    "projectile": {
+      "G1": 9.12,
+      "L3PlusG": 39.8
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.81,
+      "Z": 8.97
+    },
+    "breech": {
+      "R": 1.52,
+      "R1": 11.28
+    },
+    "collar": {
+      "H2": 9.63
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 62.45,
+      "b": 3.05,
+      "u": 406
+    },
+    "lengths": {
+      "L3": 29.59
+    },
+    "powderChamber": {
+      "P1": 9.66
+    },
+    "rifling": {
+      "G": 13.51,
+      "G1": 9.11,
+      "alpha1": 6,
+      "h": 4.96,
+      "i": 5,
+      "s": 11.8
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "38_long_colt",
+  "name": "38 Long Colt",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

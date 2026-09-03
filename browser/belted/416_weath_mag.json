@@ -1,0 +1,126 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 6.4,
+      "E1": 12.57,
+      "R": 1.6,
+      "R1": 14.71,
+      "R3": 15.33,
+      "beta": 45,
+      "delta": 45,
+      "eMin": 1.24,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 11.28,
+      "H2": 11.28
+    },
+    "junctionCone": {
+      "S": 70.19,
+      "alpha": {
+        "degrees": 73,
+        "minutes": 32,
+        "seconds": 42
+      },
+      "r1Min": 3.3,
+      "r2": 4.17
+    },
+    "lengths": {
+      "L1": 60.66,
+      "L2": 62.64,
+      "L3": 73.99,
+      "L6": 95.25
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 14.78,
+      "P2": 14.24
+    },
+    "pressures": {
+      "EE": 9030,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 10.57,
+      "L3PlusG": 84.26
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.36,
+      "Z": 10.57
+    },
+    "breech": {
+      "R1": 15.39,
+      "R3": 15.39
+    },
+    "collar": {
+      "H1": 11.41,
+      "H2": 11.38
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 86.37,
+      "b": 3.23,
+      "u": 356
+    },
+    "junctionCone": {
+      "S": 70.54,
+      "alpha": {
+        "degrees": 72,
+        "minutes": 34,
+        "seconds": 30
+      },
+      "r1Max": 3.05,
+      "r2": 4.42
+    },
+    "lengths": {
+      "L1": 60.79,
+      "L2": 62.77,
+      "L3": 74.65
+    },
+    "powderChamber": {
+      "E": 6.43,
+      "P1": 14.83,
+      "P2": 14.32
+    },
+    "rifling": {
+      "G": 10.27,
+      "G1": 10.58,
+      "alpha1": 93,
+      "h": 0.38,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 6.07
+    }
+  },
+  "country": "US",
+  "family": "belted",
+  "key": "416_weath_mag",
+  "name": "416 Weath. Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1991-02-19",
+  "revised": "2004-05-18"
+}

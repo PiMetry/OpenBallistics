@@ -18,7 +18,7 @@
       "R": 1.6,
       "R1": 12.85,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -28,9 +28,9 @@
     "junctionCone": {
       "S": 56.67,
       "alpha": {
-        "degrees": 34,
-        "minutes": 24,
-        "seconds": 0
+        "degrees": 34.0,
+        "minutes": 24.0,
+        "seconds": 0.0
       },
       "r1Min": 4.57,
       "r2": 6.35
@@ -49,11 +49,11 @@
       "P2": 10.14
     },
     "pressures": {
-      "EE": 2760,
-      "M": 25,
-      "PE": 4250,
-      "PK": 3910,
-      "Pmax": 3400
+      "EE": 2760.0,
+      "M": 25.0,
+      "PE": 4250.0,
+      "PK": 3910.0,
+      "Pmax": 3400.0
     },
     "projectile": {
       "G1": 7.23,
@@ -74,7 +74,7 @@
       "H2": 7.79
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 40.26,
       "b": 2.79,
       "u": 241.3
@@ -82,9 +82,9 @@
     "junctionCone": {
       "S": 57.11,
       "alpha": {
-        "degrees": 34,
-        "minutes": 25,
-        "seconds": 58
+        "degrees": 34.0,
+        "minutes": 25.0,
+        "seconds": 58.0
       },
       "r1Max": 4.32,
       "r2": 6.35
@@ -101,8 +101,8 @@
     "rifling": {
       "G": 6.91,
       "G1": 7.23,
-      "alpha1": 180,
-      "i": 3,
+      "alpha1": 180.0,
+      "i": 3.0,
       "s": 5.1
     }
   },
@@ -112,5 +112,6 @@
   "name": "7-30 Waters",
   "pressureMethod": "Transducer",
   "published": "1991-02-19",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

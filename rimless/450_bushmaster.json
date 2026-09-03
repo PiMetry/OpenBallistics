@@ -19,8 +19,8 @@
       "E1": 10.39,
       "R": 1.37,
       "R1": 12.01,
-      "beta": 45,
-      "delta": 40,
+      "beta": 45.0,
+      "delta": 40.0,
       "eMin": 1.02,
       "f": 0.86
     },
@@ -39,11 +39,11 @@
       "P1": 12.7
     },
     "pressures": {
-      "EE": 3950,
-      "M": 25,
-      "PE": 3375,
-      "PK": 3105,
-      "Pmax": 2700
+      "EE": 3950.0,
+      "M": 25.0,
+      "PE": 3375.0,
+      "PK": 3105.0,
+      "Pmax": 2700.0
     },
     "projectile": {
       "G1": 11.49,
@@ -62,7 +62,7 @@
       "H2": 12.22
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 101.35,
       "b": 3.76,
       "u": 609.6
@@ -77,11 +77,11 @@
     "rifling": {
       "G": 8.29,
       "G1": 11.51,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 2,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 2.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 5.08
     }
@@ -91,5 +91,6 @@
   "key": "450_bushmaster",
   "name": "450 Bushmaster",
   "pressureMethod": "Transducer",
-  "published": "2010-05-26"
+  "published": "2010-05-26",
+  "tab": "I"
 }

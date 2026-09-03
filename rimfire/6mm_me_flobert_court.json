@@ -35,7 +35,7 @@
     "pressures": {
       "EE": 49.5,
       "EK": 48.2,
-      "Emax": 45
+      "Emax": 45.0
     },
     "projectile": {
       "G1": 5.65,
@@ -55,10 +55,10 @@
       "H2": 5.73
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 24.06,
       "b": 2.16,
-      "u": 406
+      "u": 406.0
     },
     "lengths": {
       "L3": 8.4
@@ -70,9 +70,9 @@
       "G": 0.8,
       "G1": 5.73,
       "i": {
-        "degrees": 12,
-        "minutes": 20,
-        "seconds": 24
+        "degrees": 12.0,
+        "minutes": 20.0,
+        "seconds": 24.0
       }
     }
   },
@@ -82,5 +82,6 @@
   "name": "6mm ME Flobert court",
   "pressureMethod": "Energy",
   "published": "1996-01-24",
-  "revised": "2006-05-24"
+  "revised": "2006-05-24",
+  "tab": "V"
 }

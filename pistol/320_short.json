@@ -18,7 +18,7 @@
       "R": 1.32,
       "R1": 9.55,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.38
     },
     "collar": {
@@ -36,12 +36,12 @@
     },
     "pressures": {
       "M": 10.5,
-      "PE": 1560,
-      "PK": 1380,
-      "Pmax": 1200
+      "PE": 1560.0,
+      "PK": 1380.0,
+      "Pmax": 1200.0
     },
     "projectile": {
-      "G1": 8,
+      "G1": 8.0,
       "L3PlusG": 18.86
     }
   },
@@ -58,13 +58,13 @@
       "H2": 8.15
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 48.03,
       "b": 2.7,
-      "u": 450
+      "u": 450.0
     },
     "lengths": {
-      "L3": 17
+      "L3": 17.0
     },
     "powderChamber": {
       "P1": 8.15
@@ -72,12 +72,12 @@
     "rifling": {
       "G": 2.26,
       "G1": 7.98,
-      "alpha1": 46,
+      "alpha1": 46.0,
       "h": 0.2,
       "i": {
-        "degrees": 4,
-        "minutes": 34,
-        "seconds": 59
+        "degrees": 4.0,
+        "minutes": 34.0,
+        "seconds": 59.0
       }
     }
   },
@@ -87,5 +87,6 @@
   "name": "320 Short",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

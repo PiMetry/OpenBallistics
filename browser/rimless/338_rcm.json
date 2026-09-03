@@ -1,0 +1,119 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.25,
+      "E1": 12.07,
+      "R": 1.27,
+      "R1": 13.51,
+      "beta": 45,
+      "delta": 35,
+      "eMin": 0.94,
+      "f": 0.41
+    },
+    "collar": {
+      "H1": 9.4,
+      "H2": 9.37
+    },
+    "junctionCone": {
+      "S": 51.18,
+      "alpha": 60,
+      "r1Min": 1.27,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 39.83,
+      "L1Tol": -0.2,
+      "L2": 43.04,
+      "L2Tol": -0.2,
+      "L3": 51.18,
+      "L6": 72.14
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.07
+    },
+    "powderChamber": {
+      "P1": 13.53,
+      "P2": 13.11,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 4950,
+      "M": 25,
+      "PE": 5375,
+      "PK": 4945,
+      "Pmax": 4300
+    },
+    "projectile": {
+      "G1": 8.61,
+      "L3PlusG": 59.33
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.38,
+      "Z": 8.59
+    },
+    "breech": {
+      "R1": 13.58
+    },
+    "collar": {
+      "H1": 9.42,
+      "H2": 9.4
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 56.95,
+      "b": 2.79,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 51.11,
+      "alpha": 60,
+      "r1Max": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 39.74,
+      "L2": 42.95,
+      "L3": 51.44
+    },
+    "powderChamber": {
+      "E": 3.25,
+      "P1": 13.55,
+      "P2": 13.13
+    },
+    "rifling": {
+      "G": 8.15,
+      "G1": 8.62,
+      "alpha1": 90,
+      "h": 0.39,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 3.57
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "338_rcm",
+  "name": "338 RCM",
+  "pressureMethod": "Transducer",
+  "published": "2011-05-25"
+}

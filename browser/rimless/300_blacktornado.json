@@ -1,0 +1,117 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.1,
+      "E1": 13.24,
+      "R": 1.52,
+      "R1": 14.85,
+      "beta": 45,
+      "delta": 50,
+      "eMin": 0.95,
+      "f": 0.5
+    },
+    "collar": {
+      "H1": 8.56,
+      "H2": 8.56
+    },
+    "junctionCone": {
+      "S": 55.41,
+      "alpha": 80,
+      "r2": 1.52
+    },
+    "lengths": {
+      "L1": 46.9,
+      "L1Tol": -0.2,
+      "L2": 50.3,
+      "L2Tol": -0.2,
+      "L3": 62,
+      "L6": 84
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 14.74,
+      "P2": 14.26,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 5220,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 7.83,
+      "L3PlusG": 68.11
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R1": 14.9
+    },
+    "collar": {
+      "H1": 8.61,
+      "H2": 8.61
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 47.51,
+      "b": 4.47,
+      "u": 229
+    },
+    "junctionCone": {
+      "S": 55.51,
+      "alpha": 80,
+      "r2": 1.52
+    },
+    "lengths": {
+      "L1": 46.99,
+      "L2": 50.38,
+      "L3": 62.23
+    },
+    "powderChamber": {
+      "E": 3.15,
+      "P1": 14.86,
+      "P2": 14.3
+    },
+    "rifling": {
+      "G": 6.11,
+      "G1": 7.84,
+      "alpha1": 90,
+      "h": 0.39,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 1.91
+    }
+  },
+  "country": "IT",
+  "family": "rimless",
+  "key": "300_blacktornado",
+  "name": "300 Blacktornado",
+  "pressureMethod": "Transducer",
+  "published": "2015-05-19",
+  "revised": "2016-05-18"
+}

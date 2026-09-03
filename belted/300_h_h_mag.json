@@ -25,8 +25,8 @@
       "R": 1.27,
       "R1": 13.51,
       "R3": 13.56,
-      "beta": 45,
-      "delta": 35,
+      "beta": 45.0,
+      "delta": 35.0,
       "eMin": 0.94,
       "f": 0.41
     },
@@ -37,9 +37,9 @@
     "junctionCone": {
       "S": 91.69,
       "alpha": {
-        "degrees": 17,
-        "minutes": 0,
-        "seconds": 9
+        "degrees": 17.0,
+        "minutes": 0.0,
+        "seconds": 9.0
       }
     },
     "lengths": {
@@ -56,11 +56,11 @@
       "P2": 11.43
     },
     "pressures": {
-      "EE": 4725,
-      "M": 25,
-      "PE": 5375,
-      "PK": 4945,
-      "Pmax": 4300
+      "EE": 4725.0,
+      "M": 25.0,
+      "PE": 5375.0,
+      "PK": 4945.0,
+      "Pmax": 4300.0
     },
     "projectile": {
       "G1": 7.82,
@@ -81,17 +81,17 @@
       "H2": 8.62
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 47.27,
       "b": 2.72,
-      "u": 254
+      "u": 254.0
     },
     "junctionCone": {
       "S": 90.74,
       "alpha": {
-        "degrees": 17,
-        "minutes": 43,
-        "seconds": 5
+        "degrees": 17.0,
+        "minutes": 43.0,
+        "seconds": 5.0
       },
       "r1Max": 1.27,
       "r2": 2.54
@@ -109,12 +109,12 @@
     "rifling": {
       "G": 3.17,
       "G1": 7.82,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.4,
       "i": {
-        "degrees": 2,
-        "minutes": 3,
-        "seconds": 59
+        "degrees": 2.0,
+        "minutes": 3.0,
+        "seconds": 59.0
       }
     }
   },
@@ -124,5 +124,6 @@
   "name": "300 H&H Mag.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2011-05-25"
+  "revised": "2011-05-25",
+  "tab": "III"
 }

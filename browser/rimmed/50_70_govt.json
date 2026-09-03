@@ -1,0 +1,92 @@
+{
+  "alternativeNames": [
+    "50-70 Musket"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.78,
+      "R1": 16.92,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 13.73
+    },
+    "lengths": {
+      "L3": 45.01,
+      "L6": 57.15
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 14.48
+    },
+    "pressures": {
+      "EE": 5000,
+      "M": 25,
+      "PE": 2625,
+      "PK": 2415,
+      "Pmax": 2100
+    },
+    "projectile": {
+      "G1": 13.08,
+      "L3PlusG": 46.91
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 12.52,
+      "Z": 13.03
+    },
+    "breech": {
+      "R": 1.78,
+      "R1": 17.18
+    },
+    "collar": {
+      "H2": 13.76
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 128.93,
+      "b": 3.75,
+      "u": 508
+    },
+    "lengths": {
+      "L3": 45.13
+    },
+    "powderChamber": {
+      "P1": 14.55
+    },
+    "rifling": {
+      "G": 1.9,
+      "G1": 13.54,
+      "i": {
+        "degrees": 15,
+        "minutes": 1,
+        "seconds": 31
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "50_70_govt",
+  "name": "50-70 Govt.",
+  "pressureMethod": "Transducer",
+  "published": "2017-05-17"
+}

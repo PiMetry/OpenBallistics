@@ -1,0 +1,68 @@
+{
+  "annotations": {
+    "category": "shotgun",
+    "confidence": "verified",
+    "defaultBulletShape": "shot",
+    "implausible": [],
+    "primerType": "209"
+  },
+  "cartridge": {
+    "dimensions": {
+      "alpha": {
+        "degrees": 15,
+        "minutes": 11,
+        "seconds": 24
+      },
+      "d": 8.8,
+      "d2": 8.4,
+      "dTol": -0.1,
+      "g": 10.45,
+      "gTol": -0.3,
+      "h": 8.35,
+      "hTol": -0.35,
+      "l1": 10.5,
+      "l2": 12,
+      "t": 1.45,
+      "tTol": -0.2
+    },
+    "lengths": [
+      {
+        "l": 45,
+        "tol": -2.5
+      }
+    ]
+  },
+  "chamber": {
+    "chamberLengths": [],
+    "dimensions": {
+      "B": 8.38,
+      "BTol": 0.5,
+      "D": 8.85,
+      "D1": 8.8,
+      "DTol": 0.1,
+      "G": 10.7,
+      "GTol": 0.2,
+      "H": 8.38,
+      "HTol": 0.1,
+      "T": 1.45,
+      "TTol": 0.1,
+      "alpha1": {
+        "degrees": 13,
+        "minutes": 18,
+        "seconds": 0
+      }
+    },
+    "headspace": {
+      "Fe": 0.1,
+      "FeAutomatic": 0.35,
+      "FeBascule": 0.2
+    }
+  },
+  "country": "IT",
+  "family": "shotshell",
+  "key": "9_c_f_mori",
+  "name": "Cal. 9 C.F. Mori",
+  "pressureMethod": "Transducer",
+  "published": "2004-09-27",
+  "revised": "2006-09-19"
+}

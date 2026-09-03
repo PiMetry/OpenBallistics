@@ -18,8 +18,8 @@
       "R": 1.6,
       "R1": 12.85,
       "RTol": -0.25,
-      "beta": 35,
-      "delta": 0,
+      "beta": 35.0,
+      "delta": 0.0,
       "f": 0.38
     },
     "collar": {
@@ -29,9 +29,9 @@
     "junctionCone": {
       "S": 57.66,
       "alpha": {
-        "degrees": 23,
-        "minutes": 8,
-        "seconds": 0
+        "degrees": 23.0,
+        "minutes": 8.0,
+        "seconds": 0.0
       },
       "r1Min": 18.8,
       "r2": 12.7
@@ -50,11 +50,11 @@
       "P2": 9.25
     },
     "pressures": {
-      "EE": 1750,
-      "M": 25,
-      "PE": 3810,
-      "PK": 3508,
-      "Pmax": 3050
+      "EE": 1750.0,
+      "M": 25.0,
+      "PE": 3810.0,
+      "PK": 3508.0,
+      "Pmax": 3050.0
     },
     "projectile": {
       "G1": 6.55,
@@ -75,17 +75,17 @@
       "H2": 7.18
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 32.58,
-      "b": 2,
-      "u": 203
+      "b": 2.0,
+      "u": 203.0
     },
     "junctionCone": {
       "S": 57.82,
       "alpha": {
-        "degrees": 23,
-        "minutes": 8,
-        "seconds": 0
+        "degrees": 23.0,
+        "minutes": 8.0,
+        "seconds": 0.0
       },
       "r1Max": 15.24,
       "r2": 12.7
@@ -103,9 +103,9 @@
       "G": 3.79,
       "G1": 7.18,
       "i": {
-        "degrees": 6,
-        "minutes": 15,
-        "seconds": 0
+        "degrees": 6.0,
+        "minutes": 15.0,
+        "seconds": 0.0
       }
     }
   },
@@ -115,5 +115,6 @@
   "name": "25-35 Win.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2022-04-26"
+  "revised": "2022-04-26",
+  "tab": "II"
 }

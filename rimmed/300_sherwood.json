@@ -33,11 +33,11 @@
       "P1": 8.13
     },
     "pressures": {
-      "EE": 930,
-      "M": 25,
-      "PE": 1750,
-      "PK": 1610,
-      "Pmax": 1400
+      "EE": 930.0,
+      "M": 25.0,
+      "PE": 1750.0,
+      "PK": 1610.0,
+      "Pmax": 1400.0
     },
     "projectile": {
       "G1": 7.62,
@@ -58,7 +58,7 @@
     },
     "grooves": {
       "Q": 43.01,
-      "u": 508
+      "u": 508.0
     },
     "lengths": {
       "L3": 39.62
@@ -69,11 +69,11 @@
     "rifling": {
       "G": 4.44,
       "G1": 7.62,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 1,
-        "minutes": 25,
-        "seconds": 9
+        "degrees": 1.0,
+        "minutes": 25.0,
+        "seconds": 9.0
       }
     }
   },
@@ -83,5 +83,6 @@
   "name": "300 Sherwood",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

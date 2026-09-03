@@ -1,0 +1,89 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.1,
+      "R1": 9.68,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H2": 8.56
+    },
+    "lengths": {
+      "L3": 27,
+      "L6": 36
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 8.6
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 1300,
+      "PK": 1150,
+      "Pmax": 1000
+    },
+    "projectile": {
+      "G1": 8.11,
+      "L3PlusG": 27.99
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.85,
+      "Z": 8.05
+    },
+    "breech": {
+      "R": 1.1,
+      "R1": 9.75
+    },
+    "collar": {
+      "H2": 8.6
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 50.24,
+      "b": 3,
+      "u": 150
+    },
+    "lengths": {
+      "L3": 27.5
+    },
+    "powderChamber": {
+      "P1": 8.64
+    },
+    "rifling": {
+      "G": 0.99,
+      "G1": 8.08,
+      "alpha1": 90,
+      "h": 0.26,
+      "i": {
+        "degrees": 8,
+        "minutes": 57,
+        "seconds": 9
+      }
+    }
+  },
+  "country": "AT",
+  "family": "pistol",
+  "key": "8_mm_gasser",
+  "name": "8 mm Gasser",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

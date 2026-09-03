@@ -1,0 +1,116 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.85,
+      "E1": 10.39,
+      "R": 1.37,
+      "R1": 12.01,
+      "beta": 30,
+      "delta": 36,
+      "eMin": 1.4,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 7.49,
+      "H2": 7.49
+    },
+    "junctionCone": {
+      "S": 48.55,
+      "alpha": 80,
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 41.55,
+      "L1Tol": -0.2,
+      "L2": 44.08,
+      "L2Tol": -0.2,
+      "L3": 52,
+      "L6": 75
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.96,
+      "P2": 11.73
+    },
+    "pressures": {
+      "EE": 3400,
+      "M": 25,
+      "PE": 5438,
+      "PK": 5003,
+      "Pmax": 4350
+    },
+    "projectile": {
+      "G1": 6.72,
+      "L3PlusG": 61.65
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.5,
+      "Z": 6.71
+    },
+    "breech": {
+      "R1": 12.03
+    },
+    "collar": {
+      "H1": 7.54,
+      "H2": 7.52
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 34.56,
+      "b": 2.14
+    },
+    "junctionCone": {
+      "S": 48.4,
+      "alpha": 80,
+      "r1Max": 0.76,
+      "r2": 3.68
+    },
+    "lengths": {
+      "L1": 41.38,
+      "L2": 43.9,
+      "L3": 52.2
+    },
+    "powderChamber": {
+      "E": 3.85,
+      "P1": 11.98,
+      "P2": 11.76
+    },
+    "rifling": {
+      "G": 9.65,
+      "G1": 6.72,
+      "h": 0.4,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 5.45
+    }
+  },
+  "country": "TR",
+  "family": "rimless",
+  "key": "666t",
+  "name": "666T",
+  "pressureMethod": "Transducer",
+  "published": "2022-04-26"
+}

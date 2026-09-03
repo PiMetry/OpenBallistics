@@ -1,0 +1,118 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.02,
+      "R1": 16.64,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 12.85,
+      "H2": 12.8
+    },
+    "junctionCone": {
+      "S": 114.5,
+      "alpha": {
+        "degrees": 14,
+        "minutes": 21,
+        "seconds": 39
+      },
+      "r1Min": 6.35,
+      "r2": 6.35
+    },
+    "lengths": {
+      "L1": 60.96,
+      "L2": 63.5,
+      "L3": 82.55,
+      "L6": 101.09
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 14.55,
+      "P2": 13.49
+    },
+    "pressures": {
+      "EE": 6957,
+      "M": 25,
+      "PE": 3375,
+      "PK": 3105,
+      "Pmax": 2700
+    },
+    "projectile": {
+      "G1": 12.04,
+      "L3PlusG": 91.51
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.85,
+      "Z": 12.05
+    },
+    "breech": {
+      "R": 1.04,
+      "R1": 16.89
+    },
+    "collar": {
+      "H1": 12.88,
+      "H2": 12.83
+    },
+    "grooves": {
+      "N": 7,
+      "Q": 112.76,
+      "b": 3.48,
+      "u": 533
+    },
+    "junctionCone": {
+      "S": 115.46,
+      "alpha": {
+        "degrees": 14,
+        "minutes": 8,
+        "seconds": 20
+      }
+    },
+    "lengths": {
+      "L1": 60.99,
+      "L2": 63.53,
+      "L3": 82.8
+    },
+    "powderChamber": {
+      "P1": 14.58,
+      "P2": 13.51
+    },
+    "rifling": {
+      "G": 8.96,
+      "G1": 12.1,
+      "alpha1": 90,
+      "h": 0.37,
+      "i": {
+        "degrees": 0,
+        "minutes": 50,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "470_n_e",
+  "name": "470 N.E.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2013-05-22"
+}

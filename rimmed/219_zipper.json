@@ -25,8 +25,8 @@
     },
     "junctionCone": {
       "S": 56.33,
-      "alpha": 24,
-      "r2": 8
+      "alpha": 24.0,
+      "r2": 8.0
     },
     "lengths": {
       "L1": 34.55,
@@ -42,11 +42,11 @@
       "P2": 9.26
     },
     "pressures": {
-      "EE": 1935,
-      "M": 25,
-      "PE": 3560,
-      "PK": 3278,
-      "Pmax": 2850
+      "EE": 1935.0,
+      "M": 25.0,
+      "PE": 3560.0,
+      "PK": 3278.0,
+      "Pmax": 2850.0
     },
     "projectile": {
       "G1": 5.7,
@@ -67,15 +67,15 @@
       "H2": 6.43
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 25.03,
       "b": 1.88,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {
       "S": 56.59,
-      "alpha": 24,
-      "r2": 8
+      "alpha": 24.0,
+      "r2": 8.0
     },
     "lengths": {
       "L1": 34.76,
@@ -89,12 +89,12 @@
     "rifling": {
       "G": 4.58,
       "G1": 5.77,
-      "alpha1": 60,
+      "alpha1": 60.0,
       "h": 0.57,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -104,5 +104,6 @@
   "name": "219 Zipper",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

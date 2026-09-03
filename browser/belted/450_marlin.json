@@ -1,0 +1,101 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 6.4,
+      "E1": 12.07,
+      "ETol": -0.2,
+      "R": 1.27,
+      "R1": 13.51,
+      "R3": 13.51,
+      "beta": 35,
+      "delta": 35,
+      "eMin": 0.94,
+      "f": 0.41
+    },
+    "collar": {
+      "H2": 12.21
+    },
+    "lengths": {
+      "L3": 53.34,
+      "L6": 64.76
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 13.03
+    },
+    "pressures": {
+      "EE": 4850,
+      "M": 25,
+      "PE": 4125,
+      "PK": 3795,
+      "Pmax": 3300
+    },
+    "projectile": {
+      "G1": 11.64,
+      "L3PlusG": 58.69
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.43,
+      "Z": 11.58
+    },
+    "breech": {
+      "R1": 13.59,
+      "R3": 13.59
+    },
+    "collar": {
+      "H2": 12.26
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 104.25,
+      "b": 3.58,
+      "u": 508
+    },
+    "lengths": {
+      "L3": 53.79
+    },
+    "powderChamber": {
+      "E": 6.4,
+      "P1": 13.07
+    },
+    "rifling": {
+      "G": 5.35,
+      "G1": 11.81,
+      "alpha1": {
+        "degrees": 25,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "h": 1,
+      "i": {
+        "degrees": 2,
+        "minutes": 30,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "US",
+  "family": "belted",
+  "key": "450_marlin",
+  "name": "450 Marlin",
+  "pressureMethod": "Transducer",
+  "published": "2009-05-05"
+}

@@ -1,0 +1,126 @@
+{
+  "alternativeNames": [
+    "300 Whisper",
+    "300 BLK",
+    "7,62 x 35"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.15,
+      "E1": 8.43,
+      "R": 1.14,
+      "R1": 9.6,
+      "beta": 35,
+      "delta": 25,
+      "eMin": 0.76,
+      "f": 0.45
+    },
+    "collar": {
+      "H1": 8.48,
+      "H2": 8.48
+    },
+    "junctionCone": {
+      "S": 37.99,
+      "alpha": 46,
+      "r1Min": 0.64,
+      "r2": 1.27
+    },
+    "lengths": {
+      "L1": 27.2,
+      "L1Tol": -0.2,
+      "L2": 28,
+      "L2Tol": -0.2,
+      "L3": 34.75,
+      "L6": 57.4
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.08
+    },
+    "powderChamber": {
+      "P1": 9.6,
+      "P2": 9.16,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2000,
+      "M": 17.5,
+      "PE": 4875,
+      "PK": 4485,
+      "Pmax": 3900
+    },
+    "projectile": {
+      "F": 7.62,
+      "G1": 7.85,
+      "L3PlusG": 43.89
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R1": 9.66
+    },
+    "collar": {
+      "H1": 8.56,
+      "H2": 8.51
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 47.54,
+      "b": 4.52,
+      "u": 203.2
+    },
+    "junctionCone": {
+      "S": 37.91,
+      "alpha": 46,
+      "r1Max": 0.64,
+      "r2": 1.27
+    },
+    "lengths": {
+      "L1": 27.09,
+      "L2": 27.83,
+      "L3": 35
+    },
+    "powderChamber": {
+      "E": 3.15,
+      "P1": 9.62,
+      "P2": 9.19
+    },
+    "rifling": {
+      "G": 9.14,
+      "G1": 7.85,
+      "alpha1": 90,
+      "h": 0.33,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 4.75
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "300_aac_blackout",
+  "name": "300 AAC Blackout",
+  "pressureMethod": "Transducer",
+  "published": "2015-05-19",
+  "revised": "2018-10-17"
+}

@@ -1,0 +1,122 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 5.6,
+      "E1": 12.2,
+      "ETol": -0.2,
+      "R": 1.3,
+      "R1": 13.5,
+      "R3": 13.5,
+      "delta": 35,
+      "eMin": 1.1
+    },
+    "collar": {
+      "H1": 8.1,
+      "H2": 8.06
+    },
+    "junctionCone": {
+      "S": 57.21,
+      "alpha": {
+        "degrees": 85,
+        "minutes": 45,
+        "seconds": 0
+      },
+      "r1Min": 2,
+      "r2": 1.5
+    },
+    "lengths": {
+      "L1": 50.8,
+      "L2": 52.85,
+      "L3": 61,
+      "L6": 83
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.05,
+      "P2": 11.91
+    },
+    "pressures": {
+      "EE": 4620,
+      "M": 25,
+      "PE": 5060,
+      "PK": 4658,
+      "Pmax": 4050
+    },
+    "projectile": {
+      "G1": 7.2,
+      "G2": 7.2,
+      "L3PlusG": 88
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7,
+      "Z": 7.22
+    },
+    "breech": {
+      "R1": 13.56,
+      "R3": 13.56
+    },
+    "collar": {
+      "H1": 8.21,
+      "H2": 8.18
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 40.31,
+      "b": 2.7,
+      "u": 229
+    },
+    "junctionCone": {
+      "S": 57.12,
+      "alpha": 88,
+      "r1Max": 2,
+      "r2": 1.5
+    },
+    "lengths": {
+      "L1": 50.9,
+      "L2": 52.87,
+      "L3": 61.62
+    },
+    "powderChamber": {
+      "E": 5.62,
+      "P1": 13.08,
+      "P2": 12.01
+    },
+    "rifling": {
+      "G": 27,
+      "G1": 7.23,
+      "alpha1": 90,
+      "h": 0.48,
+      "i": {
+        "degrees": 0,
+        "minutes": 19,
+        "seconds": 3
+      },
+      "s": 6.25
+    }
+  },
+  "country": "US",
+  "family": "belted",
+  "key": "7_x_61_super",
+  "name": "7 x 61 Super",
+  "pressureMethod": "Transducer",
+  "published": "1990-04-24",
+  "revised": "2011-05-25"
+}

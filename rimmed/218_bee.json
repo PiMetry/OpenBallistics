@@ -18,7 +18,7 @@
       "R": 1.65,
       "R1": 10.36,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.38
     },
     "collar": {
@@ -27,7 +27,7 @@
     },
     "junctionCone": {
       "S": 39.2,
-      "alpha": 30,
+      "alpha": 30.0,
       "r1Min": 1.02,
       "r2": 4.7
     },
@@ -45,11 +45,11 @@
       "P2": 8.44
     },
     "pressures": {
-      "EE": 1115,
+      "EE": 1115.0,
       "M": 17.5,
-      "PE": 4000,
-      "PK": 3680,
-      "Pmax": 3200
+      "PE": 4000.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
     },
     "projectile": {
       "G1": 5.7,
@@ -70,14 +70,14 @@
       "H2": 6.17
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 25.03,
       "b": 1.88,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {
       "S": 39.45,
-      "alpha": 30,
+      "alpha": 30.0,
       "r1Max": 0.64,
       "r2": 4.7
     },
@@ -93,12 +93,12 @@
     "rifling": {
       "G": 4.59,
       "G1": 5.76,
-      "alpha1": 30,
+      "alpha1": 30.0,
       "h": 0.77,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -108,5 +108,6 @@
   "name": "218 Bee",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "II"
 }

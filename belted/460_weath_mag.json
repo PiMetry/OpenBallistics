@@ -21,8 +21,8 @@
       "R": 1.6,
       "R1": 14.71,
       "R3": 15.33,
-      "beta": 45,
-      "delta": 45,
+      "beta": 45.0,
+      "delta": 45.0,
       "eMin": 1.24,
       "f": 0.3
     },
@@ -33,9 +33,9 @@
     "junctionCone": {
       "S": 73.71,
       "alpha": {
-        "degrees": 56,
-        "minutes": 15,
-        "seconds": 56
+        "degrees": 56.0,
+        "minutes": 15.0,
+        "seconds": 56.0
       },
       "r1Min": 3.3,
       "r2": 4.72
@@ -54,11 +54,11 @@
       "P2": 14.24
     },
     "pressures": {
-      "EE": 10605,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 10605.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 11.64,
@@ -79,17 +79,17 @@
       "H2": 12.47
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 104.44,
       "b": 4.45,
-      "u": 406
+      "u": 406.0
     },
     "junctionCone": {
-      "S": 74,
+      "S": 74.0,
       "alpha": {
-        "degrees": 56,
-        "minutes": 5,
-        "seconds": 38
+        "degrees": 56.0,
+        "minutes": 5.0,
+        "seconds": 38.0
       },
       "r1Max": 3.05,
       "r2": 4.62
@@ -107,12 +107,12 @@
     "rifling": {
       "G": 24.72,
       "G1": 11.64,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.42,
       "i": {
-        "degrees": 1,
-        "minutes": 5,
-        "seconds": 20
+        "degrees": 1.0,
+        "minutes": 5.0,
+        "seconds": 20.0
       },
       "s": 19.2
     }
@@ -123,5 +123,6 @@
   "name": "460 Weath. Mag.",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "III"
 }

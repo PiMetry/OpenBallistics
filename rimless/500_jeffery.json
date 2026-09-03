@@ -19,13 +19,13 @@
       "E1": 13.77,
       "R": 1.32,
       "R1": 14.61,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 34,
-        "minutes": 39,
-        "seconds": 36
+        "degrees": 34.0,
+        "minutes": 39.0,
+        "seconds": 36.0
       },
-      "eMin": 1,
+      "eMin": 1.0,
       "f": 0.3
     },
     "collar": {
@@ -35,9 +35,9 @@
     "junctionCone": {
       "S": 92.06,
       "alpha": {
-        "degrees": 25,
-        "minutes": 13,
-        "seconds": 41
+        "degrees": 25.0,
+        "minutes": 13.0,
+        "seconds": 41.0
       }
     },
     "lengths": {
@@ -57,11 +57,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 9660,
-      "M": 25,
-      "PE": 4125,
-      "PK": 3795,
-      "Pmax": 3300
+      "EE": 9660.0,
+      "M": 25.0,
+      "PE": 4125.0,
+      "PK": 3795.0,
+      "Pmax": 3300.0
     },
     "projectile": {
       "G1": 12.95,
@@ -82,17 +82,17 @@
       "H2": 13.69
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 130.36,
       "b": 4.45,
-      "u": 508
+      "u": 508.0
     },
     "junctionCone": {
       "S": 92.44,
       "alpha": {
-        "degrees": 24,
-        "minutes": 56,
-        "seconds": 56
+        "degrees": 24.0,
+        "minutes": 56.0,
+        "seconds": 56.0
       }
     },
     "lengths": {
@@ -108,12 +108,12 @@
     "rifling": {
       "G": 10.41,
       "G1": 12.98,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.36,
       "i": {
-        "degrees": 0,
-        "minutes": 47,
-        "seconds": 53
+        "degrees": 0.0,
+        "minutes": 47.0,
+        "seconds": 53.0
       }
     }
   },
@@ -123,5 +123,6 @@
   "name": "500 Jeffery",
   "pressureMethod": "Transducer",
   "published": "1999-01-12",
-  "revised": "2002-05-15"
+  "revised": "2002-05-15",
+  "tab": "I"
 }

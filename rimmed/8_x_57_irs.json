@@ -21,7 +21,7 @@
       "R": 1.4,
       "R1": 13.32,
       "RTol": -0.25,
-      "beta": 45,
+      "beta": 45.0,
       "f": 0.3
     },
     "collar": {
@@ -31,18 +31,18 @@
     "junctionCone": {
       "S": 62.69,
       "alpha": {
-        "degrees": 36,
-        "minutes": 19,
-        "seconds": 34
+        "degrees": 36.0,
+        "minutes": 19.0,
+        "seconds": 34.0
       },
       "r1Min": 0.5,
       "r2": 0.5
     },
     "lengths": {
-      "L1": 46,
+      "L1": 46.0,
       "L2": 48.85,
-      "L3": 57,
-      "L6": 82
+      "L3": 57.0,
+      "L6": 82.0
     },
     "misc": {
       "Fe": 0.15
@@ -52,15 +52,15 @@
       "P2": 10.95
     },
     "pressures": {
-      "EE": 3955,
-      "M": 25,
-      "PE": 4125,
-      "PK": 3795,
-      "Pmax": 3300
+      "EE": 3955.0,
+      "M": 25.0,
+      "PE": 4125.0,
+      "PK": 3795.0,
+      "Pmax": 3300.0
     },
     "projectile": {
       "G1": 8.22,
-      "L3PlusG": 92
+      "L3PlusG": 92.0
     }
   },
   "chamber": {
@@ -77,23 +77,23 @@
       "H2": 9.1
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 51.78,
       "b": 4.4,
-      "u": 240
+      "u": 240.0
     },
     "junctionCone": {
       "S": 62.73,
       "alpha": {
-        "degrees": 36,
-        "minutes": 19,
-        "seconds": 34
+        "degrees": 36.0,
+        "minutes": 19.0,
+        "seconds": 34.0
       },
       "r1Max": 0.5,
       "r2": 0.5
     },
     "lengths": {
-      "L1": 46,
+      "L1": 46.0,
       "L2": 48.85,
       "L3": 57.3
     },
@@ -102,13 +102,13 @@
       "P2": 10.98
     },
     "rifling": {
-      "G": 35,
+      "G": 35.0,
       "G1": 8.24,
-      "alpha1": 180,
+      "alpha1": 180.0,
       "i": {
-        "degrees": 0,
-        "minutes": 17,
-        "seconds": 11
+        "degrees": 0.0,
+        "minutes": 17.0,
+        "seconds": 11.0
       }
     }
   },
@@ -118,5 +118,6 @@
   "name": "8 x 57 IRS",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2016-05-18"
+  "revised": "2016-05-18",
+  "tab": "II"
 }

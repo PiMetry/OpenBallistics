@@ -21,8 +21,8 @@
       "R": 1.27,
       "R1": 13.46,
       "RTol": -0.25,
-      "beta": 0,
-      "delta": 0
+      "beta": 0.0,
+      "delta": 0.0
     },
     "collar": {
       "H1": 9.73,
@@ -31,9 +31,9 @@
     "junctionCone": {
       "S": 97.89,
       "alpha": {
-        "degrees": 13,
-        "minutes": 37,
-        "seconds": 13
+        "degrees": 13.0,
+        "minutes": 37.0,
+        "seconds": 13.0
       },
       "r1Min": 8.13,
       "r2": 8.13
@@ -52,11 +52,11 @@
       "P2": 10.64
     },
     "pressures": {
-      "EE": 4900,
-      "M": 25,
-      "PE": 4125,
-      "PK": 3795,
-      "Pmax": 3300
+      "EE": 4900.0,
+      "M": 25.0,
+      "PE": 4125.0,
+      "PK": 3795.0,
+      "Pmax": 3300.0
     },
     "projectile": {
       "G1": 9.07,
@@ -77,17 +77,17 @@
       "H2": 9.73
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 62.07,
       "b": 3.08,
-      "u": 304
+      "u": 304.0
     },
     "junctionCone": {
       "S": 97.56,
       "alpha": {
-        "degrees": 13,
-        "minutes": 46,
-        "seconds": 6
+        "degrees": 13.0,
+        "minutes": 46.0,
+        "seconds": 6.0
       },
       "r1Max": 8.13,
       "r2": 8.13
@@ -106,9 +106,9 @@
       "G1": 9.1,
       "h": 0.32,
       "i": {
-        "degrees": 1,
-        "minutes": 15,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 15.0,
+        "seconds": 0.0
       }
     }
   },
@@ -118,5 +118,6 @@
   "name": "350 Rigby No. 2",
   "pressureMethod": "Transducer",
   "published": "1984-06-14",
-  "revised": "2024-05-14"
+  "revised": "2024-05-14",
+  "tab": "II"
 }

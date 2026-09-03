@@ -1,0 +1,96 @@
+{
+  "alternativeNames": [
+    "450 Schuster"
+  ],
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.38,
+      "E1": 10.16,
+      "R": 1.27,
+      "R1": 12.11,
+      "beta": 35,
+      "delta": 45,
+      "eMin": 1.14,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 12.04
+    },
+    "lengths": {
+      "L3": 23.81,
+      "L3Tol": -0.25,
+      "L6": 32.39
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 12.09
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 2925,
+      "PK": 2588,
+      "Pmax": 2250
+    },
+    "projectile": {
+      "G1": 11.48,
+      "L3PlusG": 27.9
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.23,
+      "Z": 11.43
+    },
+    "breech": {
+      "R1": 12.17
+    },
+    "collar": {
+      "H2": 12.05
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 101.33,
+      "b": 3.73,
+      "u": 406
+    },
+    "lengths": {
+      "L3": 23.81
+    },
+    "powderChamber": {
+      "E": 3.38,
+      "P1": 12.19
+    },
+    "rifling": {
+      "G": 4.09,
+      "G1": 11.48,
+      "alpha1": 180,
+      "i": {
+        "degrees": 1,
+        "minutes": 45,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "CH",
+  "family": "pistol",
+  "key": "450_sch",
+  "name": "450 SCH",
+  "pressureMethod": "Transducer",
+  "published": "2013-05-22"
+}

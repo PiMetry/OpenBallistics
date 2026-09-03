@@ -22,8 +22,8 @@
       "E1": 17.27,
       "R": 2.11,
       "R1": 20.42,
-      "beta": 45,
-      "delta": 36,
+      "beta": 45.0,
+      "delta": 36.0,
       "eMin": 1.96,
       "f": 0.69
     },
@@ -33,7 +33,7 @@
     },
     "junctionCone": {
       "S": 83.62,
-      "alpha": 50
+      "alpha": 50.0
     },
     "lengths": {
       "L1": 63.74,
@@ -53,11 +53,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 14250,
-      "M": 25,
-      "PE": 5500,
-      "PK": 5060,
-      "Pmax": 4400
+      "EE": 14250.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
     },
     "projectile": {
       "G1": 10.57,
@@ -77,14 +77,14 @@
       "H2": 11.68
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 86.96,
       "b": 4.11,
       "u": 304.8
     },
     "junctionCone": {
       "S": 83.52,
-      "alpha": 50
+      "alpha": 50.0
     },
     "lengths": {
       "L1": 63.61,
@@ -99,12 +99,12 @@
     "rifling": {
       "G": 9.09,
       "G1": 10.59,
-      "alpha1": 30,
+      "alpha1": 30.0,
       "h": 2.03,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 4.7
     }
@@ -114,5 +114,6 @@
   "key": "416_barrett",
   "name": "416 Barrett",
   "pressureMethod": "Transducer",
-  "published": "2016-05-18"
+  "published": "2016-05-18",
+  "tab": "I"
 }

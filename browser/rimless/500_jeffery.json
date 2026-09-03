@@ -1,0 +1,127 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.73,
+      "E1": 13.77,
+      "R": 1.32,
+      "R1": 14.61,
+      "beta": 45,
+      "delta": {
+        "degrees": 34,
+        "minutes": 39,
+        "seconds": 36
+      },
+      "eMin": 1,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 13.67,
+      "H2": 13.61
+    },
+    "junctionCone": {
+      "S": 92.06,
+      "alpha": {
+        "degrees": 25,
+        "minutes": 13,
+        "seconds": 41
+      }
+    },
+    "lengths": {
+      "L1": 57.61,
+      "L1Tol": -0.2,
+      "L2": 61.52,
+      "L2Tol": -0.2,
+      "L3": 69.85,
+      "L6": 88.09
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 15.72,
+      "P2": 15.42,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 9660,
+      "M": 25,
+      "PE": 4125,
+      "PK": 3795,
+      "Pmax": 3300
+    },
+    "projectile": {
+      "G1": 12.95,
+      "L3PlusG": 80.26
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 12.7,
+      "Z": 12.97
+    },
+    "breech": {
+      "R": 1.32,
+      "R1": 15.77
+    },
+    "collar": {
+      "H1": 13.74,
+      "H2": 13.69
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 130.36,
+      "b": 4.45,
+      "u": 508
+    },
+    "junctionCone": {
+      "S": 92.44,
+      "alpha": {
+        "degrees": 24,
+        "minutes": 56,
+        "seconds": 56
+      }
+    },
+    "lengths": {
+      "L1": 57.48,
+      "L2": 61.39,
+      "L3": 70.23
+    },
+    "powderChamber": {
+      "E": 3.73,
+      "P1": 15.77,
+      "P2": 15.47
+    },
+    "rifling": {
+      "G": 10.41,
+      "G1": 12.98,
+      "alpha1": 90,
+      "h": 0.36,
+      "i": {
+        "degrees": 0,
+        "minutes": 47,
+        "seconds": 53
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimless",
+  "key": "500_jeffery",
+  "name": "500 Jeffery",
+  "pressureMethod": "Transducer",
+  "published": "1999-01-12",
+  "revised": "2002-05-15"
+}

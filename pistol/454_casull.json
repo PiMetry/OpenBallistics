@@ -21,9 +21,9 @@
       "R1": 13.1,
       "RTol": -0.25,
       "delta": {
-        "degrees": 15,
-        "minutes": 15,
-        "seconds": 18
+        "degrees": 15.0,
+        "minutes": 15.0,
+        "seconds": 18.0
       },
       "f": 0.4
     },
@@ -42,9 +42,9 @@
     },
     "pressures": {
       "M": 17.5,
-      "PE": 5070,
-      "PK": 4485,
-      "Pmax": 3900
+      "PE": 5070.0,
+      "PK": 4485.0,
+      "Pmax": 3900.0
     },
     "projectile": {
       "G1": 11.49,
@@ -64,10 +64,10 @@
       "H2": 12.13
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 101.54,
       "b": 4.06,
-      "u": 508
+      "u": 508.0
     },
     "lengths": {
       "L3": 35.74
@@ -78,12 +78,12 @@
     "rifling": {
       "G": 11.28,
       "G1": 11.49,
-      "alpha1": 60,
+      "alpha1": 60.0,
       "h": 0.55,
       "i": {
-        "degrees": 4,
-        "minutes": 25,
-        "seconds": 29
+        "degrees": 4.0,
+        "minutes": 25.0,
+        "seconds": 29.0
       },
       "s": 9.6
     }
@@ -94,5 +94,6 @@
   "name": "454 Casull",
   "pressureMethod": "Transducer",
   "published": "1995-03-09",
-  "revised": "2015-05-19"
+  "revised": "2015-05-19",
+  "tab": "IV"
 }

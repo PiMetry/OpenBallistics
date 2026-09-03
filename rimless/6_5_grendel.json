@@ -22,8 +22,8 @@
       "E1": 9.6,
       "R": 1.5,
       "R1": 11.2,
-      "beta": 55,
-      "delta": 45,
+      "beta": 55.0,
+      "delta": 45.0,
       "eMin": 1.19,
       "f": 0.25
     },
@@ -33,7 +33,7 @@
     },
     "junctionCone": {
       "S": 38.68,
-      "alpha": 60,
+      "alpha": 60.0,
       "r1Min": 0.76,
       "r2": 1.27
     },
@@ -54,11 +54,11 @@
       "P2Tol": -0.2
     },
     "pressures": {
-      "EE": 2800,
-      "M": 25,
-      "PE": 5063,
-      "PK": 4658,
-      "Pmax": 4050
+      "EE": 2800.0,
+      "M": 25.0,
+      "PE": 5063.0,
+      "PK": 4658.0,
+      "Pmax": 4050.0
     },
     "projectile": {
       "G1": 6.71,
@@ -79,14 +79,14 @@
       "H2": 7.62
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 34.66,
       "b": 2.29,
-      "u": 200
+      "u": 200.0
     },
     "junctionCone": {
       "S": 38.69,
-      "alpha": 60,
+      "alpha": 60.0,
       "r1Max": 0.51,
       "r2": 1.52
     },
@@ -103,18 +103,18 @@
     "rifling": {
       "G": 7.32,
       "G1": 6.65,
-      "alpha1": 90,
+      "alpha1": 90.0,
       "h": 0.45,
       "i": {
-        "degrees": 1,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "s": 4.46,
       "w": {
-        "degrees": 0,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 0.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       }
     }
   },
@@ -124,5 +124,6 @@
   "name": "6,5 Grendel",
   "pressureMethod": "Transducer",
   "published": "2013-05-22",
-  "revised": "2015-05-19"
+  "revised": "2015-05-19",
+  "tab": "I"
 }

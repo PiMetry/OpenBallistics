@@ -1,0 +1,110 @@
+{
+  "annotations": {
+    "category": "rimfire",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "rimfire"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.26,
+      "R1": 8.26,
+      "RTol": -0.18
+    },
+    "collar": {
+      "H1": 5.72,
+      "H2": 5.72
+    },
+    "junctionCone": {
+      "S": 27.28,
+      "alpha": 50,
+      "r1Min": 1.14,
+      "r2": 1.78
+    },
+    "lengths": {
+      "L1": 20.22,
+      "L2": 21.15,
+      "L3": 25.91,
+      "L6": 32.89
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 6.58,
+      "P2": 6.58
+    },
+    "pressures": {
+      "M": 27.71,
+      "PE": 3315,
+      "PK": 2933,
+      "Pmax": 2550
+    },
+    "projectile": {
+      "G1": 5.21,
+      "L3PlusG": 29.23
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.07,
+      "Z": 5.19
+    },
+    "breech": {
+      "R": 1.26,
+      "R1": 8.31,
+      "r": 0.3
+    },
+    "collar": {
+      "H1": 5.75,
+      "H2": 5.74
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 20.96,
+      "b": 2.08,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 27.41,
+      "alpha": 50,
+      "r1Max": 1.14,
+      "r2": 1.91
+    },
+    "lengths": {
+      "L1": 20.32,
+      "L2": 21.24,
+      "L3": 26.04
+    },
+    "powderChamber": {
+      "P1": 6.63,
+      "P2": 6.61
+    },
+    "rifling": {
+      "G": 3.32,
+      "G1": 5.23,
+      "alpha1": 90,
+      "h": 0.26,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimfire",
+  "key": "5_mm_rem_mag",
+  "name": "5 mm Rem. Mag.",
+  "pressureMethod": "Crusher",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

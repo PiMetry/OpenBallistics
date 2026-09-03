@@ -19,13 +19,13 @@
       "E1": 8.55,
       "R": 1.25,
       "R1": 9.95,
-      "beta": 45,
+      "beta": 45.0,
       "delta": {
-        "degrees": 29,
-        "minutes": 15,
-        "seconds": 0
+        "degrees": 29.0,
+        "minutes": 15.0,
+        "seconds": 0.0
       },
-      "eMin": 1,
+      "eMin": 1.0,
       "f": 0.6
     },
     "collar": {
@@ -34,7 +34,7 @@
     "lengths": {
       "L3": 18.1,
       "L3Tol": -0.25,
-      "L6": 25
+      "L6": 25.0
     },
     "misc": {
       "Fe": 0.3
@@ -44,9 +44,9 @@
     },
     "pressures": {
       "M": 10.5,
-      "PE": 2080,
-      "PK": 1840,
-      "Pmax": 1600
+      "PE": 2080.0,
+      "PK": 1840.0,
+      "Pmax": 1600.0
     },
     "projectile": {
       "G1": 9.27,
@@ -55,7 +55,7 @@
   },
   "chamber": {
     "barrel": {
-      "F": 9,
+      "F": 9.0,
       "Z": 9.27
     },
     "breech": {
@@ -65,10 +65,10 @@
       "H2": 9.93
     },
     "grooves": {
-      "N": 4,
+      "N": 4.0,
       "Q": 66.16,
       "b": 4.5,
-      "u": 240
+      "u": 240.0
     },
     "lengths": {
       "L3": 18.1
@@ -80,12 +80,12 @@
     "rifling": {
       "G": 8.3,
       "G1": 9.35,
-      "alpha1": 120,
+      "alpha1": 120.0,
       "h": 0.17,
       "i": {
-        "degrees": 1,
-        "minutes": 13,
-        "seconds": 59
+        "degrees": 1.0,
+        "minutes": 13.0,
+        "seconds": 59.0
       }
     }
   },
@@ -95,5 +95,6 @@
   "name": "9 mm Makarov",
   "pressureMethod": "Transducer",
   "published": "1991-09-20",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

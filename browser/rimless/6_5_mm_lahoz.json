@@ -1,0 +1,141 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "implausible",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.lengths.L3",
+          "chamber.lengths.L3"
+        ],
+        "kind": "exceptional",
+        "message": "cartridge L3 = 42.87 is more than chamber L3 = 42.72, but a chamber is at least as long as the case it takes",
+        "rule": "chamber_accepts_case",
+        "values": {
+          "cartridge.lengths.L3": 42.87,
+          "chamber.lengths.L3": 42.72
+        }
+      }
+    ],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.2,
+      "E1": 9.95,
+      "R": 1.5,
+      "R1": 11.45,
+      "beta": 45,
+      "delta": {
+        "degrees": 74,
+        "minutes": 40,
+        "seconds": 48
+      },
+      "eMin": 1.5,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 7.55,
+      "H2": 7.55
+    },
+    "junctionCone": {
+      "S": 45.72,
+      "alpha": {
+        "degrees": 48,
+        "minutes": 18,
+        "seconds": 15
+      },
+      "r1Min": 3,
+      "r2": 2
+    },
+    "lengths": {
+      "L1": 33.52,
+      "L1Tol": -0.2,
+      "L2": 37.3,
+      "L2Tol": -0.2,
+      "L3": 42.87,
+      "L6": 57.4
+    },
+    "misc": {
+      "Fe": 0.15,
+      "deltaL": 0.14
+    },
+    "powderChamber": {
+      "P1": 11.41,
+      "P2": 10.94,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2010,
+      "M": 25,
+      "PE": 4313,
+      "PK": 3968,
+      "Pmax": 3450
+    },
+    "projectile": {
+      "G1": 6.71,
+      "L3PlusG": 48.49
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.5,
+      "Z": 6.7
+    },
+    "breech": {
+      "R1": 11.47
+    },
+    "collar": {
+      "H1": 7.57,
+      "H2": 7.57
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 34.67,
+      "b": 2.42,
+      "u": 228.6
+    },
+    "junctionCone": {
+      "S": 45.67,
+      "alpha": {
+        "degrees": 48,
+        "minutes": 10,
+        "seconds": 40
+      },
+      "r1Max": 3,
+      "r2": 2
+    },
+    "lengths": {
+      "L1": 33.42,
+      "L2": 37.2,
+      "L3": 42.72
+    },
+    "powderChamber": {
+      "E": 3.2,
+      "P1": 11.46,
+      "P2": 10.95
+    },
+    "rifling": {
+      "G": 5.62,
+      "G1": 6.73,
+      "alpha1": 90,
+      "h": 0.42,
+      "i": 3,
+      "s": 3.43
+    }
+  },
+  "country": "FR",
+  "family": "rimless",
+  "key": "6_5_mm_lahoz",
+  "name": "6,5 mm Lahoz",
+  "pressureMethod": "Transducer",
+  "published": "2011-05-25"
+}

@@ -32,7 +32,7 @@
       "R": 1.52,
       "R1": 12.95,
       "RTol": -0.25,
-      "beta": 35,
+      "beta": 35.0,
       "f": 0.4
     },
     "collar": {
@@ -50,9 +50,9 @@
     },
     "pressures": {
       "M": 12.5,
-      "PE": 1300,
-      "PK": 1150,
-      "Pmax": 1000
+      "PE": 1300.0,
+      "PK": 1150.0,
+      "Pmax": 1000.0
     },
     "projectile": {
       "G1": 11.58,
@@ -72,10 +72,10 @@
       "H2": 12.19
     },
     "grooves": {
-      "N": 6,
+      "N": 6.0,
       "Q": 101.48,
       "b": 3.96,
-      "u": 406
+      "u": 406.0
     },
     "lengths": {
       "L3": 27.94
@@ -87,15 +87,15 @@
       "G": 11.28,
       "G1": 11.5,
       "alpha1": {
-        "degrees": 15,
-        "minutes": 30,
-        "seconds": 0
+        "degrees": 15.0,
+        "minutes": 30.0,
+        "seconds": 0.0
       },
       "h": 2.54,
       "i": {
-        "degrees": 4,
-        "minutes": 34,
-        "seconds": 59
+        "degrees": 4.0,
+        "minutes": 34.0,
+        "seconds": 59.0
       },
       "s": 9.6
     }
@@ -106,5 +106,6 @@
   "name": "45 S&W Schofield",
   "pressureMethod": "Transducer",
   "published": "2000-02-15",
-  "revised": "2000-06-07"
+  "revised": "2000-06-07",
+  "tab": "IV"
 }

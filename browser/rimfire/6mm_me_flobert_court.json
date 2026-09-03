@@ -1,0 +1,86 @@
+{
+  "annotations": {
+    "category": "rimfire",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "rimfire"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.4,
+      "R1": 7.25,
+      "RTol": -0.18
+    },
+    "collar": {
+      "H2": 5.73
+    },
+    "lengths": {
+      "L3": 6.8,
+      "L6": 9.2
+    },
+    "misc": {
+      "Fe": 0.2
+    },
+    "powderChamber": {
+      "P1": 5.75
+    },
+    "pressures": {
+      "EE": 49.5,
+      "EK": 48.2,
+      "Emax": 45
+    },
+    "projectile": {
+      "G1": 5.65,
+      "L3PlusG": 7.6
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.38,
+      "Z": 5.58
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 7.55
+    },
+    "collar": {
+      "H2": 5.73
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 24.06,
+      "b": 2.16,
+      "u": 406
+    },
+    "lengths": {
+      "L3": 8.4
+    },
+    "powderChamber": {
+      "P1": 5.76
+    },
+    "rifling": {
+      "G": 0.8,
+      "G1": 5.73,
+      "i": {
+        "degrees": 12,
+        "minutes": 20,
+        "seconds": 24
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimfire",
+  "key": "6mm_me_flobert_court",
+  "name": "6mm ME Flobert court",
+  "pressureMethod": "Energy",
+  "published": "1996-01-24",
+  "revised": "2006-05-24"
+}

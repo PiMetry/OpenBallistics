@@ -1,0 +1,118 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 5.56,
+      "E1": 11.6,
+      "ETol": -0.2,
+      "R": 1.25,
+      "R1": 13.5,
+      "R3": 13.5,
+      "beta": 45,
+      "delta": 45,
+      "eMin": 1,
+      "f": 0.4
+    },
+    "collar": {
+      "H1": 9.85,
+      "H2": 9.85
+    },
+    "junctionCone": {
+      "S": 65.99,
+      "alpha": 51,
+      "r1Min": 1,
+      "r2": 3
+    },
+    "lengths": {
+      "L1": 52.94,
+      "L2": 55.66,
+      "L3": 64,
+      "L6": 85
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.03,
+      "P2": 12.45
+    },
+    "pressures": {
+      "EE": 4725,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 9.12,
+      "L3PlusG": 70.5
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.89,
+      "Z": 9.1
+    },
+    "breech": {
+      "R1": 13.75,
+      "R3": 13.75
+    },
+    "collar": {
+      "H1": 10.03,
+      "H2": 10
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 64.27,
+      "b": 3.4,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 66.05,
+      "alpha": 52,
+      "r1Max": 2,
+      "r2": 3.6
+    },
+    "lengths": {
+      "L1": 53.22,
+      "L2": 55.77,
+      "L3": 64.58
+    },
+    "powderChamber": {
+      "E": 5.58,
+      "P1": 13.06,
+      "P2": 12.52
+    },
+    "rifling": {
+      "G": 6.5,
+      "G1": 9.14,
+      "alpha1": 90,
+      "h": 0.43,
+      "i": {
+        "degrees": 1,
+        "minutes": 10,
+        "seconds": 47
+      }
+    }
+  },
+  "country": "SE",
+  "family": "belted",
+  "key": "358_norma_mag",
+  "name": "358 Norma Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

@@ -1,0 +1,122 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.3,
+      "E1": 12.37,
+      "R": 1.27,
+      "R1": 13.79,
+      "delta": {
+        "degrees": 36,
+        "minutes": 2,
+        "seconds": 39
+      },
+      "eMin": 1.02
+    },
+    "collar": {
+      "H1": 9.27,
+      "H2": 9.22
+    },
+    "junctionCone": {
+      "S": 62.04,
+      "alpha": {
+        "degrees": 39,
+        "minutes": 42,
+        "seconds": 15
+      }
+    },
+    "lengths": {
+      "L1": 44.45,
+      "L1Tol": -0.2,
+      "L2": 49.2,
+      "L2Tol": -0.2,
+      "L3": 62.86,
+      "L6": 88.9
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 13.84,
+      "P2": 12.7,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 4320,
+      "M": 25,
+      "PE": 4125,
+      "PK": 3795,
+      "Pmax": 3300
+    },
+    "projectile": {
+      "G1": 8.46,
+      "L3PlusG": 68.97
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.2,
+      "Z": 8.46
+    },
+    "breech": {
+      "R": 1.27,
+      "R1": 13.84
+    },
+    "collar": {
+      "H1": 9.3,
+      "H2": 9.25
+    },
+    "grooves": {
+      "Q": 52.81
+    },
+    "junctionCone": {
+      "S": 62.03,
+      "alpha": {
+        "degrees": 39,
+        "minutes": 42,
+        "seconds": 14
+      }
+    },
+    "lengths": {
+      "L1": 44.4,
+      "L2": 49.15,
+      "L3": 63.17
+    },
+    "powderChamber": {
+      "E": 3.3,
+      "P1": 13.87,
+      "P2": 12.73
+    },
+    "rifling": {
+      "G": 6.11,
+      "G1": 8.5,
+      "alpha1": 90,
+      "h": 0.38,
+      "i": {
+        "degrees": 1,
+        "minutes": 29,
+        "seconds": 57
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimless",
+  "key": "333_riml_n_e",
+  "name": "333 Riml. N.E.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}
