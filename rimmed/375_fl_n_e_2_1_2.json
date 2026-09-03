@@ -1,0 +1,91 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.65,
+      "R1": 13.41,
+      "RTol": -0.25,
+      "beta": 45,
+      "delta": 0
+    },
+    "collar": {
+      "H2": 10.19
+    },
+    "lengths": {
+      "L3": 63.5,
+      "L6": 82.55
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.68
+    },
+    "pressures": {
+      "EE": 3220,
+      "M": 25,
+      "PE": 2750,
+      "PK": 2530,
+      "Pmax": 2200
+    },
+    "projectile": {
+      "G1": 9.52,
+      "L3PlusG": 71.92
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.25,
+      "Z": 9.5
+    },
+    "breech": {
+      "R": 1.65,
+      "R1": 13.67
+    },
+    "collar": {
+      "H2": 10.21
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 69.43,
+      "b": 2.92,
+      "u": 475
+    },
+    "lengths": {
+      "L3": 63.75
+    },
+    "powderChamber": {
+      "P1": 11.68
+    },
+    "rifling": {
+      "G": 8.42,
+      "G1": 9.58,
+      "h": 0.32,
+      "i": {
+        "degrees": 1,
+        "minutes": 10,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "375_fl_n_e_2_1_2",
+  "name": "375 Fl. N.E. 2\"1/2",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2022-04-26"
+}

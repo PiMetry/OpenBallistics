@@ -1,0 +1,118 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.76,
+      "E1": 10.39,
+      "R": 1.37,
+      "R1": 12.01,
+      "beta": 35,
+      "delta": 40,
+      "eMin": 1.02,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 7.9,
+      "H2": 7.9
+    },
+    "junctionCone": {
+      "S": 53.54,
+      "alpha": 70,
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 44.77,
+      "L1Tol": -0.2,
+      "L2": 47.9,
+      "L2Tol": -0.2,
+      "L3": 54.87,
+      "L6": 78
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 12.69,
+      "P2": 12.29,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 4300,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 7.21,
+      "L3PlusG": 64.39
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.03,
+      "Z": 7.21
+    },
+    "breech": {
+      "R1": 12.77
+    },
+    "collar": {
+      "H1": 7.95,
+      "H2": 7.95
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 39.85,
+      "b": 2.79,
+      "u": 228
+    },
+    "junctionCone": {
+      "S": 53.58,
+      "alpha": 70,
+      "r1Max": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 44.78,
+      "L2": 47.9,
+      "L3": 54.99
+    },
+    "powderChamber": {
+      "E": 3.76,
+      "P1": 12.73,
+      "P2": 12.32
+    },
+    "rifling": {
+      "G": 9.52,
+      "G1": 7.23,
+      "alpha1": 90,
+      "h": 0.36,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 5.7
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "284_shehane",
+  "name": "284 Shehane",
+  "pressureMethod": "Transducer",
+  "published": "2020-11-10"
+}

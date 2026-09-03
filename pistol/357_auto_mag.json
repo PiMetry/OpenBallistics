@@ -1,0 +1,118 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.56,
+      "E1": 10.4,
+      "R": 1.37,
+      "R1": 12.01,
+      "beta": 35,
+      "delta": 45,
+      "eMin": 1.4,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 9.75,
+      "H2": 9.75
+    },
+    "junctionCone": {
+      "S": 40.22,
+      "alpha": 40,
+      "r1Min": 1,
+      "r2": 3.2
+    },
+    "lengths": {
+      "L1": 24.13,
+      "L1Tol": -0.2,
+      "L2": 26.83,
+      "L2Tol": -0.2,
+      "L3": 33,
+      "L6": 40.65
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.97,
+      "P2": 11.71,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "M": 17.5,
+      "PE": 3315,
+      "PK": 2933,
+      "Pmax": 2550
+    },
+    "projectile": {
+      "G1": 9.12,
+      "L3PlusG": 38.73
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.84,
+      "Z": 9.09
+    },
+    "breech": {
+      "R": 1.37,
+      "R1": 12.04
+    },
+    "collar": {
+      "H1": 9.8,
+      "H2": 9.78
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 63.42,
+      "b": 2.69,
+      "u": 457
+    },
+    "junctionCone": {
+      "S": 40.22,
+      "alpha": 40,
+      "r1Max": 1,
+      "r2": 3.2
+    },
+    "lengths": {
+      "L1": 24.09,
+      "L2": 26.76,
+      "L3": 33.5
+    },
+    "powderChamber": {
+      "E": 3.56,
+      "P1": 11.99,
+      "P2": 11.74
+    },
+    "rifling": {
+      "G": 5.73,
+      "G1": 9.13,
+      "alpha1": 90,
+      "h": 0.32,
+      "i": {
+        "degrees": 1,
+        "minutes": 32,
+        "seconds": 17
+      }
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "357_auto_mag",
+  "name": "357 Auto Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2008-09-23"
+}

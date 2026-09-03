@@ -1,0 +1,126 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.83,
+      "E1": 10.39,
+      "R": 1.37,
+      "R1": 11.97,
+      "beta": 45,
+      "delta": 36,
+      "eMin": 1.4,
+      "f": 0.4
+    },
+    "collar": {
+      "H1": 6.82,
+      "H2": 6.82
+    },
+    "junctionCone": {
+      "S": 37.22,
+      "alpha": {
+        "degrees": 80,
+        "minutes": 14,
+        "seconds": 19
+      },
+      "r1Min": 0.25,
+      "r2": 1.5
+    },
+    "lengths": {
+      "L1": 30.31,
+      "L1Tol": -0.2,
+      "L2": 33.17,
+      "L2Tol": -0.2,
+      "L3": 39.24,
+      "L6": 62
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.93,
+      "P2": 11.64,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2545,
+      "M": 17.5,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 6.17,
+      "L3PlusG": 46.03
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.02,
+      "Z": 6.17
+    },
+    "breech": {
+      "R1": 12
+    },
+    "collar": {
+      "H1": 6.87,
+      "H2": 6.87
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 29.52,
+      "b": 2.29,
+      "u": 203.2
+    },
+    "junctionCone": {
+      "S": 37.36,
+      "alpha": {
+        "degrees": 80,
+        "minutes": 0,
+        "seconds": 14
+      },
+      "r1Max": 0.25,
+      "r2": 1.5
+    },
+    "lengths": {
+      "L1": 30.41,
+      "L2": 33.27,
+      "L3": 39.5
+    },
+    "powderChamber": {
+      "E": 3.85,
+      "P1": 11.96,
+      "P2": 11.67
+    },
+    "rifling": {
+      "G": 6.79,
+      "G1": 6.18,
+      "alpha1": 90,
+      "h": 0.35,
+      "i": {
+        "degrees": 1,
+        "minutes": 27,
+        "seconds": 17
+      },
+      "s": 3.64
+    }
+  },
+  "country": "IT",
+  "family": "rimless",
+  "key": "6_mm_br_far",
+  "name": "6 mm BR Farè",
+  "pressureMethod": "Transducer",
+  "published": "2015-05-19"
+}

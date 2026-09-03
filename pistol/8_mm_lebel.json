@@ -1,0 +1,90 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.5,
+      "R1": 10.5,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.75
+    },
+    "collar": {
+      "H2": 8.9
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 27.4,
+      "L4": 32,
+      "L6": 37
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 9.1
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 1625,
+      "PK": 1438,
+      "Pmax": 1250
+    },
+    "projectile": {
+      "G1": 8.28,
+      "L3PlusG": 29.9
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8,
+      "Z": 8.3
+    },
+    "breech": {
+      "R": 1.5,
+      "R1": 10.6
+    },
+    "collar": {
+      "H2": 8.95
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 52.91,
+      "b": 4.19,
+      "u": 240
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 27.5
+    },
+    "powderChamber": {
+      "P1": 9.2
+    },
+    "rifling": {
+      "G": 2.5,
+      "G1": 8.35,
+      "alpha1": 62,
+      "h": 0.5,
+      "i": 5
+    }
+  },
+  "country": "FR",
+  "family": "pistol",
+  "key": "8_mm_lebel",
+  "name": "8 mm Lebel",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

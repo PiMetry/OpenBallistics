@@ -1,0 +1,91 @@
+{
+  "annotations": {
+    "category": "rimfire",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "rimfire"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.09,
+      "R1": 7.06,
+      "RTol": -0.18,
+      "beta": 0,
+      "delta": 0
+    },
+    "collar": {
+      "H2": 5.74
+    },
+    "lengths": {
+      "L3": 15.57,
+      "L6": 25.4
+    },
+    "misc": {
+      "Fe": 0.2
+    },
+    "powderChamber": {
+      "P1": 5.74
+    },
+    "pressures": {
+      "M": 9,
+      "PE": 2210,
+      "PK": 1955,
+      "Pmax": 1700
+    },
+    "projectile": {
+      "G1": 5.35,
+      "L3PlusG": 21.1
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.21,
+      "Z": 5.33
+    },
+    "breech": {
+      "R": 1.09,
+      "R1": 7.32,
+      "r": 0.13
+    },
+    "collar": {
+      "H2": 5.79
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 21.94,
+      "b": 1.73,
+      "u": 304.8
+    },
+    "lengths": {
+      "L3": 15.93
+    },
+    "powderChamber": {
+      "P1": 5.89
+    },
+    "rifling": {
+      "G": 5.53,
+      "G1": 5.36,
+      "h": 0.22,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 2.62
+    }
+  },
+  "country": "US",
+  "family": "rimfire",
+  "key": "21_sharp",
+  "name": "21 Sharp",
+  "pressureMethod": "Transducer",
+  "published": "2024-05-14"
+}

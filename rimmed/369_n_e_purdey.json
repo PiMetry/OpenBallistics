@@ -1,0 +1,112 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.07,
+      "R1": 15.85,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H1": 10.29,
+      "H2": 10.29
+    },
+    "junctionCone": {
+      "S": 88.47,
+      "alpha": {
+        "degrees": 21,
+        "minutes": 11,
+        "seconds": 5
+      }
+    },
+    "lengths": {
+      "L1": 55.88,
+      "L2": 60.96,
+      "L3": 68.58,
+      "L6": 91.44
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 13.74,
+      "P2": 12.19
+    },
+    "pressures": {
+      "EE": 4130,
+      "M": 25,
+      "PE": 3810,
+      "PK": 3508,
+      "Pmax": 3050
+    },
+    "projectile": {
+      "G1": 9.52,
+      "L3PlusG": 78.12
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.15,
+      "Z": 9.5
+    },
+    "breech": {
+      "R": 1.09,
+      "R1": 16.1
+    },
+    "collar": {
+      "H1": 10.31,
+      "H2": 10.31
+    },
+    "grooves": {
+      "Q": 65.76,
+      "u": 406
+    },
+    "junctionCone": {
+      "S": 88.41,
+      "alpha": {
+        "degrees": 21,
+        "minutes": 17,
+        "seconds": 38
+      }
+    },
+    "lengths": {
+      "L1": 55.91,
+      "L2": 60.99,
+      "L3": 68.83
+    },
+    "powderChamber": {
+      "P1": 13.77,
+      "P2": 12.22
+    },
+    "rifling": {
+      "G": 9.54,
+      "G1": 9.55,
+      "alpha1": 90,
+      "h": 0.38,
+      "i": {
+        "degrees": 1,
+        "minutes": 15,
+        "seconds": 2
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "369_n_e_purdey",
+  "name": "369 N.E. Purdey",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

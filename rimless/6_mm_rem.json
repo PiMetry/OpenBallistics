@@ -1,0 +1,118 @@
+{
+  "alternativeNames": [
+    "244 Rem."
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.4,
+      "E1": 10.36,
+      "R": 1.24,
+      "R1": 12.01,
+      "beta": 35,
+      "delta": 34,
+      "eMin": 0.94,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 7.01,
+      "H2": 7.01
+    },
+    "junctionCone": {
+      "S": 54.99,
+      "alpha": 52,
+      "r1Min": 0.64,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 43.81,
+      "L1Tol": -0.2,
+      "L2": 47.81,
+      "L2Tol": -0.2,
+      "L3": 56.72,
+      "L6": 71.76
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.1
+    },
+    "powderChamber": {
+      "P1": 12.01,
+      "P2": 10.91,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3180,
+      "M": 25,
+      "PE": 5375,
+      "PK": 4945,
+      "Pmax": 4300
+    },
+    "projectile": {
+      "G1": 6.18,
+      "L3PlusG": 61.34
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.02,
+      "Z": 6.17
+    },
+    "breech": {
+      "R1": 12.14
+    },
+    "collar": {
+      "H1": 7.06,
+      "H2": 7.04
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 29.52,
+      "b": 2.29,
+      "u": 228.6
+    },
+    "junctionCone": {
+      "S": 54.9,
+      "alpha": 52,
+      "r1Max": 0.64,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 43.66,
+      "L2": 47.66,
+      "L3": 57.25
+    },
+    "powderChamber": {
+      "E": 3.4,
+      "P1": 12.04,
+      "P2": 10.96
+    },
+    "rifling": {
+      "G": 4.58,
+      "G1": 6.19,
+      "h": 0.43,
+      "i": 3,
+      "s": 2.96
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "6_mm_rem",
+  "name": "6 mm Rem.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2023-05-09"
+}

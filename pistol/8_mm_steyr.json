@@ -1,0 +1,98 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.3,
+      "E1": 7.85,
+      "R": 1.1,
+      "R1": 8.85,
+      "beta": 45,
+      "delta": {
+        "degrees": 24,
+        "minutes": 26,
+        "seconds": 38
+      },
+      "eMin": 1.1,
+      "f": 0.3
+    },
+    "collar": {
+      "H2": 8.8
+    },
+    "lengths": {
+      "L3": 18.65,
+      "L3Tol": -0.25,
+      "L6": 28.7
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 8.85
+    },
+    "pressures": {
+      "M": 10.5,
+      "PE": 2730,
+      "PK": 2415,
+      "Pmax": 2100
+    },
+    "projectile": {
+      "G1": 8.15,
+      "L3PlusG": 23.15
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.9,
+      "Z": 8.15
+    },
+    "breech": {
+      "R1": 9
+    },
+    "collar": {
+      "H2": 8.83
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 50.55,
+      "b": 3,
+      "u": 250
+    },
+    "lengths": {
+      "L3": 18.65
+    },
+    "powderChamber": {
+      "E": 3.3,
+      "P1": 8.88
+    },
+    "rifling": {
+      "G": 4.5,
+      "G1": 8.2,
+      "alpha1": 180,
+      "i": {
+        "degrees": 1,
+        "minutes": 54,
+        "seconds": 33
+      }
+    }
+  },
+  "country": "AT",
+  "family": "pistol",
+  "key": "8_mm_steyr",
+  "name": "8 mm Steyr",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

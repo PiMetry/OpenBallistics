@@ -1,0 +1,99 @@
+{
+  "alternativeNames": [
+    "45 ACP"
+  ],
+  "annotations": {
+    "category": "pistol",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": true
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 4.11,
+      "E1": 10.16,
+      "R": 1.24,
+      "R1": 12.19,
+      "beta": 35,
+      "delta": 26,
+      "eMin": 0.89,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 12.01
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 22.81,
+      "L3Tol": -0.25,
+      "L6": 32.39
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 12.09
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 1690,
+      "PK": 1495,
+      "Pmax": 1300
+    },
+    "projectile": {
+      "G1": 11.48,
+      "L3PlusG": 25.58
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.23,
+      "Z": 11.43
+    },
+    "breech": {
+      "R1": 12.22
+    },
+    "collar": {
+      "H2": 12.04
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 101.33,
+      "b": 3.73,
+      "u": 406
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 22.81
+    },
+    "powderChamber": {
+      "E": 5.08,
+      "P1": 12.18
+    },
+    "rifling": {
+      "G": 2.77,
+      "G1": 11.48,
+      "alpha1": 180,
+      "i": {
+        "degrees": 2,
+        "minutes": 34,
+        "seconds": 59
+      }
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "45_auto",
+  "name": "45 Auto",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2020-04-21"
+}

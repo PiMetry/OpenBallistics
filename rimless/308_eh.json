@@ -1,0 +1,132 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.85,
+      "E1": 10.39,
+      "R": 1.37,
+      "R1": 12.01,
+      "beta": 45,
+      "delta": 36,
+      "eMin": 1.4,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 8.72,
+      "H2": 8.72
+    },
+    "junctionCone": {
+      "S": 46.29,
+      "alpha": {
+        "degrees": 40,
+        "minutes": 0,
+        "seconds": 6
+      },
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 30.45,
+      "L1Tol": -0.2,
+      "L2": 34.31,
+      "L2Tol": -0.2,
+      "L3": 41,
+      "L6": 57.5
+    },
+    "misc": {
+      "Fe": 0.15,
+      "deltaL": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.96,
+      "P2": 11.53,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3920,
+      "M": 25,
+      "PE": 4750,
+      "PK": 4370,
+      "Pmax": 3800
+    },
+    "projectile": {
+      "G1": 7.85,
+      "L3PlusG": 48.04
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R1": 12.03
+    },
+    "collar": {
+      "H1": 8.79,
+      "H2": 8.74
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 47.51,
+      "b": 4.47,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 46.17,
+      "alpha": {
+        "degrees": 40,
+        "minutes": 3,
+        "seconds": 3
+      },
+      "r1Max": 0.76,
+      "r2": 3.76
+    },
+    "lengths": {
+      "L1": 30.31,
+      "L2": 34.11,
+      "L3": 41.26
+    },
+    "powderChamber": {
+      "E": 3.85,
+      "P1": 11.99,
+      "P2": 11.56
+    },
+    "rifling": {
+      "G": 7.04,
+      "G1": 7.87,
+      "alpha1": {
+        "degrees": 71,
+        "minutes": 52,
+        "seconds": 48
+      },
+      "h": 0.6,
+      "i": {
+        "degrees": 1,
+        "minutes": 43,
+        "seconds": 31
+      },
+      "s": 2.89
+    }
+  },
+  "country": "FR",
+  "family": "rimless",
+  "key": "308_eh",
+  "name": "308 EH",
+  "pressureMethod": "Transducer",
+  "published": "1989-09-20",
+  "revised": "2002-05-15"
+}

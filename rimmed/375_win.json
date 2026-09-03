@@ -1,0 +1,93 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.6,
+      "R1": 12.85,
+      "RTol": -0.25,
+      "beta": 35,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 10.16,
+      "H2": 10.16
+    },
+    "lengths": {
+      "L2": 45.72,
+      "L3": 51.31,
+      "L6": 65.02
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 10.71
+    },
+    "pressures": {
+      "EE": 2930,
+      "M": 25,
+      "PE": 4750,
+      "PK": 4370,
+      "Pmax": 3800
+    },
+    "projectile": {
+      "G1": 9.55,
+      "L3PlusG": 58.62
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.3,
+      "Z": 9.55
+    },
+    "breech": {
+      "R": 1.6,
+      "R1": 13.11
+    },
+    "collar": {
+      "H1": 10.2,
+      "H2": 10.2
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 70.16,
+      "b": 2.92,
+      "u": 305
+    },
+    "lengths": {
+      "L2": 45.72,
+      "L3": 52.83
+    },
+    "powderChamber": {
+      "P1": 10.74
+    },
+    "rifling": {
+      "G": 7.31,
+      "G1": 9.61,
+      "alpha1": 30,
+      "h": 1.1,
+      "i": 2,
+      "s": 2.87
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "375_win",
+  "name": "375 Win.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2010-05-26"
+}

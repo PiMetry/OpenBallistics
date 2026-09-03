@@ -1,0 +1,87 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1,
+      "R1": 13.5,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 12.14
+    },
+    "lengths": {
+      "L3": 19.5,
+      "L6": 32
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 12.15
+    },
+    "pressures": {
+      "M": 7.5,
+      "PE": 1170,
+      "PK": 1035,
+      "Pmax": 900
+    },
+    "projectile": {
+      "G1": 11.57,
+      "L3PlusG": 23.15
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.3,
+      "Z": 11.55
+    },
+    "breech": {
+      "R": 1,
+      "R1": 13.55
+    },
+    "collar": {
+      "H2": 12.16
+    },
+    "grooves": {
+      "N": 7,
+      "Q": 103.68,
+      "b": 3.8,
+      "u": 500
+    },
+    "lengths": {
+      "L3": 20
+    },
+    "powderChamber": {
+      "P1": 12.2
+    },
+    "rifling": {
+      "G": 3.65,
+      "G1": 11.58,
+      "alpha1": 20,
+      "h": 1.65,
+      "i": 4
+    }
+  },
+  "country": "GB",
+  "family": "pistol",
+  "key": "455_mk_ii",
+  "name": "455 MK II",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2007-05-14"
+}

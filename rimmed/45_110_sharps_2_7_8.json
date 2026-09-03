@@ -1,0 +1,91 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.78,
+      "R1": 15.44,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 12.22
+    },
+    "lengths": {
+      "L3": 73.11,
+      "L6": 85.3
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 12.84
+    },
+    "pressures": {
+      "EE": 5700,
+      "M": 25,
+      "PE": 3188,
+      "PK": 2933,
+      "Pmax": 2550
+    },
+    "projectile": {
+      "F": 11.43,
+      "G1": 11.63,
+      "L3PlusG": 74.86
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.43,
+      "Z": 11.58
+    },
+    "breech": {
+      "R": 1.78,
+      "R1": 15.7
+    },
+    "collar": {
+      "H2": 12.22
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 104.25,
+      "b": 3.58,
+      "u": 508
+    },
+    "lengths": {
+      "L3": 73.35
+    },
+    "powderChamber": {
+      "P1": 12.91
+    },
+    "rifling": {
+      "G": 1.75,
+      "G1": 12.22,
+      "alpha1": 180,
+      "i": {
+        "degrees": 12,
+        "minutes": 43,
+        "seconds": 10
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "45_110_sharps_2_7_8",
+  "name": "45-110 Sharps 2\"7/8",
+  "pressureMethod": "Transducer",
+  "published": "2017-05-17"
+}

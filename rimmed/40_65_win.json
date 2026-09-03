@@ -1,0 +1,114 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.78,
+      "R1": 15.44,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 10.85,
+      "H2": 10.83
+    },
+    "junctionCone": {
+      "S": 206.69,
+      "alpha": {
+        "degrees": 3,
+        "minutes": 39,
+        "seconds": 21
+      }
+    },
+    "lengths": {
+      "L1": 31.07,
+      "L2": 36.71,
+      "L3": 53.34,
+      "L6": 62.74
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 12.8,
+      "P2": 11.21
+    },
+    "pressures": {
+      "EE": 3300,
+      "M": 25,
+      "PE": 2625,
+      "PK": 2415,
+      "Pmax": 2100
+    },
+    "projectile": {
+      "G1": 10.31,
+      "L3PlusG": 54.63
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.14,
+      "Z": 10.26
+    },
+    "breech": {
+      "R": 1.78,
+      "R1": 15.49
+    },
+    "collar": {
+      "H1": 10.91,
+      "H2": 10.88
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 81.92,
+      "b": 3.19,
+      "u": 457
+    },
+    "junctionCone": {
+      "S": 191.49,
+      "alpha": {
+        "degrees": 4,
+        "minutes": 1,
+        "seconds": 22
+      }
+    },
+    "lengths": {
+      "L1": 30.76,
+      "L2": 36.17,
+      "L3": 53.64
+    },
+    "powderChamber": {
+      "P1": 12.83,
+      "P2": 11.29
+    },
+    "rifling": {
+      "G": 1.29,
+      "G1": 10.34,
+      "alpha1": 180,
+      "i": {
+        "degrees": 4,
+        "minutes": 25,
+        "seconds": 58
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "40_65_win",
+  "name": "40-65 Win.",
+  "pressureMethod": "Transducer",
+  "published": "2017-05-17"
+}

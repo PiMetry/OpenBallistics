@@ -1,0 +1,115 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 5.59,
+      "E1": 12.07,
+      "ETol": -0.2,
+      "R": 1.27,
+      "R1": 13.51,
+      "R3": 13.51,
+      "beta": 35,
+      "delta": 35,
+      "eMin": 0.94,
+      "f": 0.41
+    },
+    "collar": {
+      "H1": 7.63,
+      "H2": 7.57
+    },
+    "junctionCone": {
+      "S": 56.67,
+      "alpha": 50,
+      "r1Min": 0.76,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 43.18,
+      "L2": 48.49,
+      "L3": 55.12,
+      "L6": 71.12
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.03,
+      "P2": 12.58
+    },
+    "pressures": {
+      "EE": 3885,
+      "M": 25,
+      "PE": 5438,
+      "PK": 5003,
+      "Pmax": 4350
+    },
+    "projectile": {
+      "G1": 6.72,
+      "L3PlusG": 62.17
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.5,
+      "Z": 6.71
+    },
+    "breech": {
+      "R1": 13.59,
+      "R3": 13.59
+    },
+    "collar": {
+      "H1": 7.68,
+      "H2": 7.62
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 34.71,
+      "b": 2.41,
+      "u": 229
+    },
+    "junctionCone": {
+      "S": 56.9,
+      "alpha": 50,
+      "r1Max": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 43.39,
+      "L2": 48.67,
+      "L3": 55.73
+    },
+    "powderChamber": {
+      "E": 5.59,
+      "P1": 13.06,
+      "P2": 12.6
+    },
+    "rifling": {
+      "G": 7.05,
+      "G1": 6.72,
+      "alpha1": 60,
+      "h": 0.78,
+      "i": 3,
+      "s": 4.95
+    }
+  },
+  "country": "US",
+  "family": "belted",
+  "key": "6_5_mm_rem_mag",
+  "name": "6,5 mm Rem. Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

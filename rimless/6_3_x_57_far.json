@@ -1,0 +1,119 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.09,
+      "E1": 10.45,
+      "R": 1.2,
+      "R1": 11.94,
+      "beta": 45,
+      "delta": 40,
+      "eMin": 1,
+      "f": 0.2
+    },
+    "collar": {
+      "H1": 7.16,
+      "H2": 7.16
+    },
+    "junctionCone": {
+      "S": 52.61,
+      "alpha": 80,
+      "r1Min": 0.76,
+      "r2": 1.17
+    },
+    "lengths": {
+      "L1": 45.75,
+      "L1Tol": -0.2,
+      "L2": 48.35,
+      "L2Tol": -0.2,
+      "L3": 56.26,
+      "L6": 75
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.94,
+      "P2": 11.53,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3300,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "F": 6.35,
+      "G1": 6.52,
+      "L3PlusG": 62.38
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.35,
+      "Z": 6.52
+    },
+    "breech": {
+      "R1": 12
+    },
+    "collar": {
+      "H1": 7.26,
+      "H2": 7.26
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 32.98,
+      "b": 2.5,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 52.67,
+      "alpha": 80,
+      "r1Max": 0.76,
+      "r2": 1.57
+    },
+    "lengths": {
+      "L1": 45.79,
+      "L2": 48.35,
+      "L3": 56.72
+    },
+    "powderChamber": {
+      "E": 3.09,
+      "P1": 11.97,
+      "P2": 11.56
+    },
+    "rifling": {
+      "G": 6.12,
+      "G1": 6.54,
+      "alpha1": 90,
+      "h": 0.36,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 2.49
+    }
+  },
+  "country": "IT",
+  "family": "rimless",
+  "key": "6_3_x_57_far",
+  "name": "6,3 x 57 Farè",
+  "pressureMethod": "Transducer",
+  "published": "2012-05-30"
+}

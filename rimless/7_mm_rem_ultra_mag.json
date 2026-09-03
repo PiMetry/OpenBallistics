@@ -1,0 +1,115 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.75,
+      "E1": 12.07,
+      "R": 1.27,
+      "R1": 13.56,
+      "beta": 35,
+      "delta": 32,
+      "eMin": 0.94,
+      "f": 0.41
+    },
+    "collar": {
+      "H1": 8.18,
+      "H2": 8.18
+    },
+    "junctionCone": {
+      "S": 72.18,
+      "alpha": 60,
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 60.64,
+      "L1Tol": -0.2,
+      "L2": 65.1,
+      "L2Tol": -0.2,
+      "L3": 72.39,
+      "L6": 91.44
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.99,
+      "P2": 13.33,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 5250,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 7.23,
+      "L3PlusG": 88.2
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.04,
+      "Z": 7.21
+    },
+    "breech": {
+      "R1": 14.05
+    },
+    "collar": {
+      "H1": 8.23,
+      "H2": 8.2
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 40.34,
+      "b": 2.79,
+      "u": 241.3
+    },
+    "junctionCone": {
+      "S": 72.08,
+      "alpha": 60,
+      "r1Max": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 60.51,
+      "L2": 64.96,
+      "L3": 72.64
+    },
+    "powderChamber": {
+      "E": 3.75,
+      "P1": 14.02,
+      "P2": 13.36
+    },
+    "rifling": {
+      "G": 15.81,
+      "G1": 7.23,
+      "alpha1": 90,
+      "h": 0.49,
+      "i": 1,
+      "s": 10.65
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "7_mm_rem_ultra_mag",
+  "name": "7 mm Rem. Ultra Mag.",
+  "pressureMethod": "Transducer",
+  "published": "2002-01-22",
+  "revised": "2002-05-15"
+}

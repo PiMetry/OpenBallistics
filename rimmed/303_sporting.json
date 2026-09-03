@@ -1,0 +1,122 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.63,
+      "R1": 13.92,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.4
+    },
+    "collar": {
+      "H1": 8.64,
+      "H2": 8.59
+    },
+    "junctionCone": {
+      "S": 58.55,
+      "alpha": {
+        "degrees": 33,
+        "minutes": 56,
+        "seconds": 8
+      },
+      "r1Min": 2.29,
+      "r2": 2.29
+    },
+    "lengths": {
+      "L1": 41.85,
+      "L2": 44.39,
+      "L3": 52.82,
+      "L6": 74.49
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.7,
+      "P2": 10.19
+    },
+    "pressures": {
+      "EE": 2800,
+      "M": 25,
+      "PE": 4125,
+      "PK": 3795,
+      "Pmax": 3300
+    },
+    "projectile": {
+      "G1": 7.92,
+      "L3PlusG": 67.45
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.7,
+      "Z": 7.98
+    },
+    "breech": {
+      "R": 1.63,
+      "R1": 13.97
+    },
+    "collar": {
+      "H1": 8.76,
+      "H2": 8.66
+    },
+    "grooves": {
+      "N": 5,
+      "Q": 48.07,
+      "b": 2.12,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 56.32,
+      "alpha": {
+        "degrees": 40,
+        "minutes": 29,
+        "seconds": 20
+      }
+    },
+    "lengths": {
+      "L1": 42.42,
+      "L2": 44.44,
+      "L3": 52.82
+    },
+    "powderChamber": {
+      "P1": 11.74,
+      "P2": 10.25
+    },
+    "rifling": {
+      "G": 14.63,
+      "G1": 7.93,
+      "alpha1": {
+        "degrees": 19,
+        "minutes": 0,
+        "seconds": 36
+      },
+      "h": 2.18,
+      "i": {
+        "degrees": 0,
+        "minutes": 31,
+        "seconds": 45
+      }
+    }
+  },
+  "country": "FR",
+  "family": "rimmed",
+  "key": "303_sporting",
+  "name": "303 Sporting",
+  "pressureMethod": "Transducer",
+  "published": "2000-11-13",
+  "revised": "2002-05-15"
+}

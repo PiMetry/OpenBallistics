@@ -1,0 +1,136 @@
+{
+  "alternativeNames": [
+    "9,5 x 77"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 4.47,
+      "E1": 13.8,
+      "R": 1.6,
+      "R1": 16.25,
+      "beta": {
+        "degrees": 35,
+        "minutes": 19,
+        "seconds": 59
+      },
+      "delta": {
+        "degrees": 53,
+        "minutes": 44,
+        "seconds": 0
+      },
+      "eMin": 2,
+      "f": 0.5
+    },
+    "collar": {
+      "H1": 10.31,
+      "H2": 10.31
+    },
+    "junctionCone": {
+      "S": 81.16,
+      "alpha": {
+        "degrees": 43,
+        "minutes": 54,
+        "seconds": 38
+      }
+    },
+    "lengths": {
+      "L1": 62.28,
+      "L1Tol": -0.2,
+      "L2": 68.37,
+      "L2Tol": -0.2,
+      "L3": 76.91,
+      "L6": 113.4
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.09
+    },
+    "powderChamber": {
+      "P1": 16.18,
+      "P2": 15.22,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 10000,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "F": 9.3,
+      "G1": 9.52,
+      "L3PlusG": 84.35
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.3,
+      "Z": 9.53
+    },
+    "breech": {
+      "R1": 16.3
+    },
+    "collar": {
+      "H1": 10.41,
+      "H2": 10.4
+    },
+    "grooves": {
+      "N": 8,
+      "Q": 70.32,
+      "b": 2.57,
+      "u": 330.2
+    },
+    "junctionCone": {
+      "S": 81.04,
+      "alpha": {
+        "degrees": 43,
+        "minutes": 59,
+        "seconds": 18
+      },
+      "r2": 3.05
+    },
+    "lengths": {
+      "L1": 62.01,
+      "L2": 68.15,
+      "L3": 77.3
+    },
+    "powderChamber": {
+      "E": 5.08,
+      "P1": 16.23,
+      "P2": 15.37
+    },
+    "rifling": {
+      "G": 7.44,
+      "G1": 9.54,
+      "alpha1": 90,
+      "h": 0.43,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 2.86
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "375_chey_tac",
+  "name": "375 Chey Tac",
+  "pressureMethod": "Transducer",
+  "published": "2017-05-17"
+}

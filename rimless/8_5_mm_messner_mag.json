@@ -1,0 +1,119 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.48,
+      "E1": 12.19,
+      "R": 1.38,
+      "R1": 13.6,
+      "beta": 35,
+      "delta": 45,
+      "eMin": 1.02,
+      "f": 0.36
+    },
+    "collar": {
+      "H1": 9.35,
+      "H2": 9.35
+    },
+    "junctionCone": {
+      "S": 63.44,
+      "alpha": 58,
+      "r1Min": 0.66,
+      "r2": 1.85
+    },
+    "lengths": {
+      "L1": 50.88,
+      "L1Tol": -0.2,
+      "L2": 55.01,
+      "L2Tol": -0.2,
+      "L3": 63.85,
+      "L6": 88
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 14.35,
+      "P2": 13.93,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 6400,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 8.59,
+      "L3PlusG": 75.1
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.38,
+      "Z": 8.59
+    },
+    "breech": {
+      "R": 1.38,
+      "R1": 13.62
+    },
+    "collar": {
+      "H1": 9.38,
+      "H2": 9.38
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 56.95,
+      "b": 2.79,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 63.44,
+      "alpha": 58,
+      "r1Max": 0.55,
+      "r2": 2.22
+    },
+    "lengths": {
+      "L1": 50.85,
+      "L2": 54.98,
+      "L3": 64.1
+    },
+    "powderChamber": {
+      "E": 3.35,
+      "P1": 14.38,
+      "P2": 13.96
+    },
+    "rifling": {
+      "G": 11.25,
+      "G1": 8.61,
+      "alpha1": 90,
+      "h": 0.39,
+      "i": {
+        "degrees": 1,
+        "minutes": 54,
+        "seconds": 53
+      },
+      "s": 7.81
+    }
+  },
+  "country": "FR",
+  "family": "rimless",
+  "key": "8_5_mm_messner_mag",
+  "name": "8,5 mm Messner Mag.",
+  "pressureMethod": "Transducer",
+  "published": "2013-05-22"
+}

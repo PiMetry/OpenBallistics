@@ -1,0 +1,92 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.37,
+      "R1": 9.6,
+      "RTol": -0.25,
+      "beta": 35,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 8.61
+    },
+    "lengths": {
+      "L3": 15.37,
+      "L6": 23.62
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 8.61
+    },
+    "pressures": {
+      "M": 8,
+      "PE": 1170,
+      "PK": 1035,
+      "Pmax": 900
+    },
+    "projectile": {
+      "G1": 8,
+      "L3PlusG": 34.88
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.7,
+      "Z": 7.92
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 9.7
+    },
+    "collar": {
+      "H2": 8.62
+    },
+    "grooves": {
+      "N": 5,
+      "Q": 47.91,
+      "b": 2.41,
+      "u": 476
+    },
+    "lengths": {
+      "L3": 15.47
+    },
+    "powderChamber": {
+      "P1": 8.64
+    },
+    "rifling": {
+      "G": 19.51,
+      "G1": 7.98,
+      "alpha1": 25,
+      "h": 1.44,
+      "i": {
+        "degrees": 4,
+        "minutes": 45,
+        "seconds": 0
+      },
+      "s": 17.83
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "32_s_w",
+  "name": "32 S&W",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2008-09-23"
+}

@@ -1,0 +1,114 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.14,
+      "E1": 10.39,
+      "R": 1.24,
+      "R1": 12.01,
+      "beta": 35,
+      "delta": 36,
+      "eMin": 0.84,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 7.33,
+      "H2": 7.25
+    },
+    "junctionCone": {
+      "S": 48.95,
+      "alpha": 53,
+      "r1Min": 2.54,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 38.4,
+      "L1Tol": -0.2,
+      "L2": 41.6,
+      "L2Tol": -0.2,
+      "L3": 48.56,
+      "L6": 63.88
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.93,
+      "P2": 10.52,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2900,
+      "M": 25,
+      "PE": 4560,
+      "PK": 4198,
+      "Pmax": 3650
+    },
+    "projectile": {
+      "G1": 6.55,
+      "L3PlusG": 51.55
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.35,
+      "Z": 6.53
+    },
+    "breech": {
+      "R1": 12.14
+    },
+    "collar": {
+      "H1": 7.35,
+      "H2": 7.26
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 32.9,
+      "b": 2.24,
+      "u": 356
+    },
+    "junctionCone": {
+      "S": 48.95,
+      "alpha": 53,
+      "r1Max": 2.54,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 38.36,
+      "L2": 41.58,
+      "L3": 48.82
+    },
+    "powderChamber": {
+      "E": 3.14,
+      "P1": 12.01,
+      "P2": 10.56
+    },
+    "rifling": {
+      "G": 2.99,
+      "G1": 6.63,
+      "alpha1": 90,
+      "h": 0.32,
+      "i": 3
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "250_savage",
+  "name": "250 Savage",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

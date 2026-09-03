@@ -1,0 +1,111 @@
+{
+  "annotations": {
+    "category": "rimfire",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "rimfire"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.09,
+      "R1": 7.06,
+      "RTol": -0.18
+    },
+    "collar": {
+      "H1": 4.83,
+      "H2": 4.83
+    },
+    "junctionCone": {
+      "S": 22.12,
+      "alpha": 40,
+      "r1Min": 0.25,
+      "r2": 1.27
+    },
+    "lengths": {
+      "L1": 14.23,
+      "L2": 15.48,
+      "L3": 18.14,
+      "L6": 25.4
+    },
+    "misc": {
+      "Fe": 0.2
+    },
+    "powderChamber": {
+      "P1": 5.74,
+      "P2": 5.74
+    },
+    "pressures": {
+      "M": 6.5,
+      "PE": 2340,
+      "PK": 2070,
+      "Pmax": 1800
+    },
+    "projectile": {
+      "G1": 4.38,
+      "L3PlusG": 21.83
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 4.27,
+      "Z": 4.37
+    },
+    "breech": {
+      "R": 1.09,
+      "R1": 7.32,
+      "r": 0.25
+    },
+    "collar": {
+      "H1": 4.88,
+      "H2": 4.88
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 14.8,
+      "b": 1.57,
+      "u": 228.6
+    },
+    "junctionCone": {
+      "S": 22.26,
+      "alpha": 40,
+      "r1Max": 0.64,
+      "r2": 1.9
+    },
+    "lengths": {
+      "L1": 14.31,
+      "L2": 15.56,
+      "L3": 18.29
+    },
+    "powderChamber": {
+      "P1": 5.79,
+      "P2": 5.79
+    },
+    "rifling": {
+      "G": 3.69,
+      "G1": 4.37,
+      "alpha1": 90,
+      "h": 0.25,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 1.78
+    }
+  },
+  "country": "US",
+  "family": "rimfire",
+  "key": "17_mach_2",
+  "name": "17 Mach 2",
+  "pressureMethod": "Transducer",
+  "published": "2004-09-27",
+  "revised": "2012-09-25"
+}

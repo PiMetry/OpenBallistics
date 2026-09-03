@@ -1,0 +1,119 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.62,
+      "E1": 12.19,
+      "R": 1.37,
+      "R1": 13.59,
+      "beta": 35,
+      "delta": 45,
+      "eMin": 1.42,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 9.36,
+      "H2": 9.36
+    },
+    "junctionCone": {
+      "S": 53.79,
+      "alpha": 60,
+      "r1Min": 1.5,
+      "r2": 2
+    },
+    "lengths": {
+      "L1": 42.38,
+      "L1Tol": -0.2,
+      "L2": 45.68,
+      "L2Tol": -0.2,
+      "L3": 54.7,
+      "L6": 75.84
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.84,
+      "P2": 13.17,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 4500,
+      "M": 25,
+      "PE": 5375,
+      "PK": 4945,
+      "Pmax": 4300
+    },
+    "projectile": {
+      "G1": 8.59,
+      "L3PlusG": 65.1
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.38,
+      "Z": 8.59
+    },
+    "breech": {
+      "R": 1.37,
+      "R1": 13.92
+    },
+    "collar": {
+      "H1": 9.43,
+      "H2": 9.38
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 57.03,
+      "b": 4.27,
+      "u": 304.8
+    },
+    "junctionCone": {
+      "S": 53.79,
+      "alpha": 60,
+      "r1Max": 1.5,
+      "r2": 2
+    },
+    "lengths": {
+      "L1": 42.35,
+      "L2": 45.62,
+      "L3": 55
+    },
+    "powderChamber": {
+      "E": 3.62,
+      "P1": 13.87,
+      "P2": 13.21
+    },
+    "rifling": {
+      "G": 10.4,
+      "G1": 8.6,
+      "alpha1": 90,
+      "h": 0.39,
+      "i": {
+        "degrees": 0,
+        "minutes": 45,
+        "seconds": 0
+      },
+      "s": 2
+    }
+  },
+  "country": "SE",
+  "family": "rimless",
+  "key": "8_5_x_55_blaser",
+  "name": "8,5 x 55 Blaser",
+  "pressureMethod": "Transducer",
+  "published": "2019-05-22"
+}

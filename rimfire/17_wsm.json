@@ -1,0 +1,116 @@
+{
+  "alternativeNames": [
+    "17 Winchester Super Magnum",
+    "17 Win. Super Mag."
+  ],
+  "annotations": {
+    "category": "rimfire",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "rimfire"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.68,
+      "R1": 8.46,
+      "RTol": -0.18
+    },
+    "collar": {
+      "H1": 5,
+      "H2": 5
+    },
+    "junctionCone": {
+      "S": 33.82,
+      "alpha": 40
+    },
+    "lengths": {
+      "L1": 24.44,
+      "L2": 26.95,
+      "L3": 30.48,
+      "L6": 40.39
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 6.83,
+      "P2": 6.83
+    },
+    "pressures": {
+      "EE": 515,
+      "M": 17.5,
+      "PE": 2860,
+      "PK": 2530,
+      "Pmax": 2200
+    },
+    "projectile": {
+      "G1": 4.38,
+      "L3PlusG": 33.97
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 4.27,
+      "Z": 4.37
+    },
+    "breech": {
+      "R": 1.68,
+      "R1": 8.66
+    },
+    "collar": {
+      "H1": 5.03,
+      "H2": 5.03
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 14.8,
+      "b": 1.57,
+      "u": 229
+    },
+    "junctionCone": {
+      "S": 34.12,
+      "alpha": {
+        "degrees": 39,
+        "minutes": 46,
+        "seconds": 0
+      },
+      "r1Max": 0.64,
+      "r2": 2.79
+    },
+    "lengths": {
+      "L1": 24.64,
+      "L2": 27.17,
+      "L3": 30.78
+    },
+    "powderChamber": {
+      "P1": 6.91,
+      "P2": 6.86
+    },
+    "rifling": {
+      "G": 3.49,
+      "G1": 4.37,
+      "alpha1": 90,
+      "h": 0.33,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 1.58
+    }
+  },
+  "country": "US",
+  "family": "rimfire",
+  "key": "17_wsm",
+  "name": "17 WSM",
+  "pressureMethod": "Transducer",
+  "published": "2016-05-18"
+}

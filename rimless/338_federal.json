@@ -1,0 +1,115 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.85,
+      "E1": 10.39,
+      "R": 1.37,
+      "R1": 12.01,
+      "beta": 55,
+      "delta": 36,
+      "eMin": 1.4,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 9.4,
+      "H2": 9.4
+    },
+    "junctionCone": {
+      "S": 55.46,
+      "alpha": 40,
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 39.62,
+      "L1Tol": -0.2,
+      "L2": 42.55,
+      "L2Tol": -0.2,
+      "L3": 51.18,
+      "L6": 71.63
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.96,
+      "P2": 11.53,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 4150,
+      "M": 25,
+      "PE": 5188,
+      "PK": 4773,
+      "Pmax": 4150
+    },
+    "projectile": {
+      "G1": 8.61,
+      "L3PlusG": 56.95
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.38,
+      "Z": 8.59
+    },
+    "breech": {
+      "R1": 12.03
+    },
+    "collar": {
+      "H1": 9.45,
+      "H2": 9.42
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 56.92,
+      "b": 2.75,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 55.36,
+      "alpha": 40,
+      "r1Max": 0.76,
+      "r2": 3.68
+    },
+    "lengths": {
+      "L1": 39.48,
+      "L2": 42.38,
+      "L3": 51.44
+    },
+    "powderChamber": {
+      "E": 3.85,
+      "P1": 11.99,
+      "P2": 11.56
+    },
+    "rifling": {
+      "G": 5.77,
+      "G1": 8.76,
+      "alpha1": 90,
+      "h": 0.33,
+      "i": 2
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "338_federal",
+  "name": "338 Federal",
+  "pressureMethod": "Transducer",
+  "published": "2007-05-14",
+  "revised": "2011-05-25"
+}

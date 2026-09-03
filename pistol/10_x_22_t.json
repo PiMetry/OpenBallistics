@@ -1,0 +1,110 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.projectile.G1",
+          "cartridge.collar.H2"
+        ],
+        "kind": "exceptional",
+        "known": true,
+        "message": "cartridge G1 = 10 is more than cartridge H2 = 9.75, but a bullet is no wider than the mouth that holds it, unless it is heeled",
+        "rule": "bullet_within_mouth",
+        "values": {
+          "cartridge.collar.H2": 9.75,
+          "cartridge.projectile.G1": 10
+        },
+        "why": "a heeled bullet: full diameter outside the case, on a reduced heel inside it"
+      },
+      {
+        "fields": [
+          "cartridge.lengths.L3",
+          "chamber.lengths.L3"
+        ],
+        "kind": "exceptional",
+        "known": true,
+        "message": "cartridge L3 = 22.5 is more than chamber L3 = 20.7, but a chamber is at least as long as the case it takes",
+        "rule": "chamber_accepts_case",
+        "values": {
+          "cartridge.lengths.L3": 22.5,
+          "chamber.lengths.L3": 20.7
+        },
+        "why": "over by 1.8 mm, like the 22 rimfire shot loads whose crimp opens forward into the throat"
+      }
+    ],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 2.97,
+      "E1": 8.3,
+      "R": 1.25,
+      "R1": 9.5,
+      "beta": 45,
+      "delta": 40,
+      "eMin": 1,
+      "f": 0.4
+    },
+    "collar": {
+      "H2": 9.75
+    },
+    "lengths": {
+      "L2": 22,
+      "L3": 22.5,
+      "L3Tol": -0.25,
+      "L6": 22.7
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 9.75
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 585,
+      "PK": 518,
+      "Pmax": 450
+    },
+    "projectile": {
+      "G1": 10,
+      "L3PlusG": 42.5
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.3
+    },
+    "breech": {},
+    "collar": {
+      "H2": 9.8
+    },
+    "grooves": {
+      "Q": 31.17
+    },
+    "lengths": {
+      "L3": 20.7
+    },
+    "powderChamber": {
+      "P1": 9.8
+    },
+    "rifling": {
+      "G": 20,
+      "G1": 7,
+      "alpha1": 90,
+      "h": 1.4,
+      "i": 45,
+      "s": 19.65
+    }
+  },
+  "country": "IT",
+  "family": "pistol",
+  "key": "10_x_22_t",
+  "name": "10 x 22 T",
+  "pressureMethod": "Transducer",
+  "published": "2000-12-11",
+  "revised": "2004-09-27"
+}

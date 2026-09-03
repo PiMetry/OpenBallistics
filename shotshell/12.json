@@ -1,0 +1,181 @@
+{
+  "annotations": {
+    "category": "shotgun",
+    "confidence": "verified",
+    "defaultBulletShape": "shot",
+    "implausible": [],
+    "primerType": "209"
+  },
+  "cartridge": {
+    "dimensions": {
+      "d": 20.6,
+      "dTol": -0.28,
+      "g": 22.45,
+      "gTol": -0.48,
+      "h": 20.2,
+      "hTol": -0.47,
+      "t": 1.85,
+      "tTol": -0.3
+    },
+    "lengths": [
+      {
+        "l": 35,
+        "marking": "12/35 T",
+        "tol": -2.5
+      },
+      {
+        "l": 55,
+        "marking": "12/55",
+        "tol": -2.5
+      },
+      {
+        "l": 60,
+        "marking": "12/60",
+        "tol": -2.5
+      },
+      {
+        "l": 65,
+        "marking": "12/65",
+        "tol": -2.5
+      },
+      {
+        "l": 67.5,
+        "marking": "12/67",
+        "tol": -2.5
+      },
+      {
+        "l": 69.8,
+        "marking": "12/70",
+        "tol": -2.5
+      },
+      {
+        "l": 72.8,
+        "marking": "12/73",
+        "tol": -2.5
+      },
+      {
+        "l": 76,
+        "marking": "12/76",
+        "tol": -2.5
+      },
+      {
+        "l": 88.7,
+        "marking": "12/89",
+        "tol": -2.5
+      }
+    ]
+  },
+  "chamber": {
+    "chamberLengths": [
+      {
+        "L": 35,
+        "M": 25,
+        "PE": 188,
+        "PK": 173,
+        "Pmax": 150,
+        "marking": "12/35 T",
+        "tol": 2
+      },
+      {
+        "L": 55.1,
+        "M": "25/30",
+        "PE": 930,
+        "PK": 850,
+        "Pmax": 740,
+        "marking": "12/55",
+        "tol": 2
+      },
+      {
+        "L": 60.1,
+        "M": "25/30",
+        "PE": 930,
+        "PK": 850,
+        "Pmax": 740,
+        "marking": "12/60",
+        "tol": 2
+      },
+      {
+        "L": 65.1,
+        "M": "25/30",
+        "PE": 930,
+        "PK": 850,
+        "Pmax": 740,
+        "marking": "12/65",
+        "tol": 2
+      },
+      {
+        "L": 67.6,
+        "M": "25/30",
+        "PE": 930,
+        "PK": 850,
+        "Pmax": 740,
+        "marking": "12/67",
+        "tol": 2
+      },
+      {
+        "L": 69.9,
+        "M": "25/30",
+        "PE": 930,
+        "PK": 850,
+        "Pmax": 740,
+        "marking": "12/70",
+        "tol": 2
+      },
+      {
+        "L": 73,
+        "M": "25/30",
+        "PE": 1320,
+        "PK": 1200,
+        "Pmax": 1050,
+        "marking": "12/73",
+        "tol": 2
+      },
+      {
+        "L": 76.2,
+        "M": "25/30",
+        "PE": 1320,
+        "PK": 1200,
+        "Pmax": 1050,
+        "marking": "12/76",
+        "tol": 2
+      },
+      {
+        "L": 88.9,
+        "M": "25/30",
+        "PE": 1320,
+        "PK": 1200,
+        "Pmax": 1050,
+        "marking": "12/89",
+        "tol": 2
+      }
+    ],
+    "dimensions": {
+      "B": 18.2,
+      "BTol": 0.7,
+      "D": 20.65,
+      "DTol": 0.1,
+      "G": 22.55,
+      "GTol": 0.1,
+      "H": 20.3,
+      "HTol": 0.1,
+      "T": 1.85,
+      "TTol": 0.1,
+      "alpha1": {
+        "degrees": 10,
+        "minutes": 30,
+        "seconds": 0
+      }
+    },
+    "headspace": {
+      "Fe": 0.1,
+      "FeAutomatic": 0.35,
+      "FeBascule": 0.2
+    }
+  },
+  "family": "shotshell",
+  "key": "12",
+  "name": "Cal. 12",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2018-10-17"
+}

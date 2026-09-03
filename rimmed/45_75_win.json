@@ -1,0 +1,115 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.63,
+      "R1": 15.98,
+      "RTol": -0.25,
+      "beta": 35,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 12.42,
+      "H2": 12.26
+    },
+    "junctionCone": {
+      "S": 94.23,
+      "alpha": {
+        "degrees": 11,
+        "minutes": 42,
+        "seconds": 57
+      }
+    },
+    "lengths": {
+      "L1": 26,
+      "L2": 33.7,
+      "L3": 47.1,
+      "L6": 57.28
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 14.2,
+      "P2": 14
+    },
+    "pressures": {
+      "EE": 3700,
+      "M": 25,
+      "PE": 2563,
+      "PK": 2358,
+      "Pmax": 2050
+    },
+    "projectile": {
+      "G1": 11.66,
+      "L3PlusG": 48.48
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.43,
+      "Z": 11.58
+    },
+    "breech": {
+      "R": 1.63,
+      "R1": 16.03
+    },
+    "collar": {
+      "H1": 12.45,
+      "H2": 12.29
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 104.25,
+      "b": 3.58,
+      "u": 508
+    },
+    "junctionCone": {
+      "S": 93.78,
+      "alpha": {
+        "degrees": 11,
+        "minutes": 50,
+        "seconds": 17
+      }
+    },
+    "lengths": {
+      "L1": 26.12,
+      "L2": 33.74,
+      "L3": 47.18
+    },
+    "powderChamber": {
+      "P1": 14.23,
+      "P2": 14.03
+    },
+    "rifling": {
+      "G": 1.38,
+      "G1": 11.69,
+      "alpha1": 180,
+      "i": {
+        "degrees": 5,
+        "minutes": 22,
+        "seconds": 54
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "45_75_win",
+  "name": "45-75 Win.",
+  "pressureMethod": "Transducer",
+  "published": "2007-05-15",
+  "revised": "2008-04-15"
+}

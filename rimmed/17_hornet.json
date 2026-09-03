@@ -1,0 +1,112 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.65,
+      "R1": 8.89,
+      "RTol": -0.25,
+      "beta": 35,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 4.93,
+      "H2": 4.93
+    },
+    "junctionCone": {
+      "S": 34.61,
+      "alpha": 50,
+      "r1Min": 0.64,
+      "r2": 1.91
+    },
+    "lengths": {
+      "L1": 26.6,
+      "L2": 29.32,
+      "L3": 34.29,
+      "L6": 43.69
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 7.59,
+      "P2": 7.47
+    },
+    "pressures": {
+      "EE": 820,
+      "M": 17.5,
+      "PE": 4625,
+      "PK": 4255,
+      "Pmax": 3700
+    },
+    "projectile": {
+      "G1": 4.38,
+      "L3PlusG": 37.95
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 4.27,
+      "Z": 4.37
+    },
+    "breech": {
+      "R": 1.65,
+      "R1": 9.14
+    },
+    "collar": {
+      "H1": 4.97,
+      "H2": 4.96
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 14.8,
+      "b": 1.57,
+      "u": 228
+    },
+    "junctionCone": {
+      "S": 34.61,
+      "alpha": 50,
+      "r1Max": 0.64,
+      "r2": 1.91
+    },
+    "lengths": {
+      "L1": 26.58,
+      "L2": 29.28,
+      "L3": 34.46
+    },
+    "powderChamber": {
+      "P1": 7.62,
+      "P2": 7.49
+    },
+    "rifling": {
+      "G": 3.66,
+      "G1": 4.38,
+      "alpha1": 90,
+      "h": 0.29,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 1.56
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "17_hornet",
+  "name": "17 Hornet",
+  "pressureMethod": "Transducer",
+  "published": "2014-05-20"
+}

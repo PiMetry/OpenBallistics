@@ -1,0 +1,114 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.75,
+      "E1": 12.07,
+      "R": 1.27,
+      "R1": 13.56,
+      "beta": 35,
+      "delta": 32,
+      "eMin": 0.94
+    },
+    "collar": {
+      "H1": 8.74,
+      "H2": 8.74
+    },
+    "junctionCone": {
+      "S": 72.19,
+      "alpha": 60,
+      "r2": 3.17
+    },
+    "lengths": {
+      "L1": 60.64,
+      "L1Tol": -0.2,
+      "L2": 64.62,
+      "L2Tol": -0.2,
+      "L3": 72.39,
+      "L6": 91.44
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.11
+    },
+    "powderChamber": {
+      "P1": 13.97,
+      "P2": 13.34,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 5985,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 7.85,
+      "L3PlusG": 82.23
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R1": 14.05
+    },
+    "collar": {
+      "H1": 8.79,
+      "H2": 8.76
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 47.4,
+      "b": 2.92,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 72.08,
+      "alpha": 60,
+      "r1Max": 0.78,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 60.51,
+      "L2": 64.47,
+      "L3": 72.64
+    },
+    "powderChamber": {
+      "E": 3.75,
+      "P1": 14.02,
+      "P2": 13.36
+    },
+    "rifling": {
+      "G": 9.84,
+      "G1": 7.85,
+      "alpha1": 90,
+      "h": 0.46,
+      "i": 1,
+      "s": 3.25
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "300_rem_ultra_mag",
+  "name": "300 Rem. Ultra Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1998-11-03",
+  "revised": "2008-09-23"
+}

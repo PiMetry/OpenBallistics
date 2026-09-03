@@ -1,0 +1,98 @@
+{
+  "alternativeNames": [
+    "32 Auto(matic)",
+    "32 ACP"
+  ],
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.01,
+      "E1": 7.85,
+      "R": 1.25,
+      "R1": 9.1,
+      "RTol": -0.25,
+      "beta": 45,
+      "delta": 20,
+      "eMin": 0.8,
+      "f": 0.6
+    },
+    "collar": {
+      "H2": 8.52
+    },
+    "lengths": {
+      "L3": 17.2,
+      "L6": 25
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 8.55
+    },
+    "pressures": {
+      "M": 10.5,
+      "PE": 2080,
+      "PK": 1840,
+      "Pmax": 1600
+    },
+    "projectile": {
+      "G1": 7.85,
+      "L3PlusG": 21.21
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.63,
+      "Z": 7.83
+    },
+    "breech": {
+      "R": 1.25,
+      "R1": 9.2
+    },
+    "collar": {
+      "H2": 8.55
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 47.37,
+      "b": 2.69,
+      "u": 250
+    },
+    "lengths": {
+      "L3": 17.6
+    },
+    "powderChamber": {
+      "P1": 8.62
+    },
+    "rifling": {
+      "G": 4.01,
+      "G1": 8.05,
+      "alpha1": 180,
+      "i": {
+        "degrees": 2,
+        "minutes": 59,
+        "seconds": 52
+      }
+    }
+  },
+  "country": "BE",
+  "family": "pistol",
+  "key": "7_65_mm_browning",
+  "name": "7,65 mm Browning",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2008-09-23"
+}

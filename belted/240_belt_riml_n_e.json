@@ -1,0 +1,126 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 5.56,
+      "E1": 10.46,
+      "ETol": -0.2,
+      "R": 1.09,
+      "R1": 11.89,
+      "R3": 12.12,
+      "beta": 45,
+      "delta": {
+        "degrees": 26,
+        "minutes": 34,
+        "seconds": 12
+      },
+      "eMin": 0.81,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 7.11,
+      "H2": 7.11
+    },
+    "junctionCone": {
+      "S": 64.7,
+      "alpha": {
+        "degrees": 34,
+        "minutes": 45,
+        "seconds": 33
+      }
+    },
+    "lengths": {
+      "L1": 48.26,
+      "L2": 53.34,
+      "L3": 63.5,
+      "L6": 82.55
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.56,
+      "P2": 10.29
+    },
+    "pressures": {
+      "EE": 2625,
+      "M": 25,
+      "PE": 4125,
+      "PK": 3795,
+      "Pmax": 3300
+    },
+    "projectile": {
+      "G1": 6.22,
+      "L3PlusG": 68.71
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.02,
+      "Z": 6.22
+    },
+    "breech": {
+      "R1": 12.17,
+      "R3": 12.17
+    },
+    "collar": {
+      "H1": 7.16,
+      "H2": 7.14
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 29.95,
+      "b": 3.5,
+      "u": 203
+    },
+    "junctionCone": {
+      "S": 64.9,
+      "alpha": {
+        "degrees": 34,
+        "minutes": 44,
+        "seconds": 49
+      }
+    },
+    "lengths": {
+      "L1": 48.41,
+      "L2": 53.46,
+      "L3": 64
+    },
+    "powderChamber": {
+      "E": 5.56,
+      "P1": 11.56,
+      "P2": 10.32
+    },
+    "rifling": {
+      "G": 5.21,
+      "G1": 6.27,
+      "alpha1": 90,
+      "h": 0.44,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 4
+      }
+    }
+  },
+  "country": "GB",
+  "family": "belted",
+  "key": "240_belt_riml_n_e",
+  "name": "240 Belt. Riml. N.E.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

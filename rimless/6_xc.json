@@ -1,0 +1,117 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.86,
+      "E1": 10.3,
+      "R": 1.35,
+      "R1": 11.95,
+      "beta": 45,
+      "delta": 36,
+      "eMin": 1.4,
+      "f": 0.4
+    },
+    "collar": {
+      "H1": 6.96,
+      "H2": 6.96
+    },
+    "junctionCone": {
+      "S": 46.84,
+      "alpha": 60,
+      "r1Min": 1,
+      "r2": 1.5
+    },
+    "lengths": {
+      "L1": 36.85,
+      "L1Tol": -0.2,
+      "L2": 40.81,
+      "L2Tol": -0.2,
+      "L3": 48.3,
+      "L6": 70
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.92,
+      "P2": 11.53,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3080,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 6.18,
+      "L3PlusG": 57.87
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6,
+      "Z": 6.2
+    },
+    "breech": {
+      "R1": 11.98
+    },
+    "collar": {
+      "H1": 6.98,
+      "H2": 6.98
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 29.21,
+      "b": 2.29,
+      "u": 203.2
+    },
+    "junctionCone": {
+      "S": 46.86,
+      "alpha": 60,
+      "r2": 1.52
+    },
+    "lengths": {
+      "L1": 36.85,
+      "L2": 40.81,
+      "L3": 48.54
+    },
+    "powderChamber": {
+      "E": 3.83,
+      "P1": 11.94,
+      "P2": 11.56
+    },
+    "rifling": {
+      "G": 9.57,
+      "G1": 6.19,
+      "alpha1": 90,
+      "h": 0.39,
+      "i": {
+        "degrees": 0,
+        "minutes": 45,
+        "seconds": 0
+      },
+      "s": 2.31
+    }
+  },
+  "country": "SE",
+  "family": "rimless",
+  "key": "6_xc",
+  "name": "6 XC",
+  "pressureMethod": "Transducer",
+  "published": "2008-04-15"
+}

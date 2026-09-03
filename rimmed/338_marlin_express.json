@@ -1,0 +1,119 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.37,
+      "E1": 11.2,
+      "R": 1.27,
+      "R1": 14.05,
+      "beta": 35,
+      "delta": 36,
+      "eMin": 0.94,
+      "f": 0.86
+    },
+    "collar": {
+      "H1": 9.35,
+      "H2": 9.35
+    },
+    "junctionCone": {
+      "S": 50.46,
+      "alpha": 50,
+      "r1Min": 1.02,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 37.03,
+      "L1Tol": -0.2,
+      "L2": 40.43,
+      "L2Tol": -0.2,
+      "L3": 48.01,
+      "L6": 62.23
+    },
+    "misc": {
+      "Fe": 0.15,
+      "deltaL": 0.03
+    },
+    "powderChamber": {
+      "P1": 12.89,
+      "P2": 12.52,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 4200,
+      "M": 25,
+      "PE": 4000,
+      "PK": 3680,
+      "Pmax": 3200
+    },
+    "projectile": {
+      "G1": 8.6,
+      "L3PlusG": 55.34
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.38,
+      "Z": 8.59
+    },
+    "breech": {
+      "R": 1.78,
+      "R1": 14.3
+    },
+    "collar": {
+      "H1": 9.4,
+      "H2": 9.37
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 56.95,
+      "b": 2.79,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 50.43,
+      "alpha": 50,
+      "r1Max": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 36.97,
+      "L2": 40.35,
+      "L3": 48.24
+    },
+    "powderChamber": {
+      "P1": 12.93,
+      "P2": 12.55
+    },
+    "rifling": {
+      "G": 7.33,
+      "G1": 8.61,
+      "alpha1": 90,
+      "h": 0.38,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 2.92
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "338_marlin_express",
+  "name": "338 Marlin Express",
+  "pressureMethod": "Transducer",
+  "published": "2010-05-26"
+}

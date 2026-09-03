@@ -1,0 +1,95 @@
+{
+  "alternativeNames": [
+    "360 BHMR"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.6,
+      "R1": 12.85,
+      "RTol": -0.25,
+      "beta": 35,
+      "delta": 0,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 9.65
+    },
+    "lengths": {
+      "L3": 45.72,
+      "L6": 63.5
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 10.74
+    },
+    "pressures": {
+      "EE": 2900,
+      "M": 25,
+      "PE": 4419,
+      "PK": 4065,
+      "Pmax": 3535
+    },
+    "projectile": {
+      "G1": 9.12,
+      "L3PlusG": 54.71
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.86,
+      "Z": 9.07
+    },
+    "breech": {
+      "R": 1.6,
+      "R1": 13.11
+    },
+    "collar": {
+      "H2": 9.69
+    },
+    "grooves": {
+      "N": 7,
+      "Q": 63.81,
+      "b": 2.92,
+      "u": 304.8
+    },
+    "lengths": {
+      "L3": 45.86
+    },
+    "powderChamber": {
+      "P1": 10.79
+    },
+    "rifling": {
+      "G": 8.99,
+      "G1": 9.12,
+      "h": 0.28,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 4.09
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "360_buckhammer",
+  "name": "360 Buckhammer",
+  "pressureMethod": "Transducer",
+  "published": "2023-11-08"
+}

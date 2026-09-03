@@ -1,0 +1,127 @@
+{
+  "alternativeNames": [
+    "308 Winchester",
+    "7,62 x 51"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.85,
+      "E1": 10.39,
+      "R": 1.37,
+      "R1": 12.01,
+      "beta": 35,
+      "delta": 36,
+      "eMin": 1.4,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 8.72,
+      "H2": 8.72
+    },
+    "junctionCone": {
+      "S": 55.46,
+      "alpha": 40,
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 39.62,
+      "L1Tol": -0.2,
+      "L2": 43.48,
+      "L2Tol": -0.2,
+      "L3": 51.18,
+      "L6": 71.12
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.96,
+      "P2": 11.53,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3920,
+      "M": 25,
+      "PE": 5190,
+      "PK": 4773,
+      "Pmax": 4150
+    },
+    "projectile": {
+      "G1": 7.85,
+      "L3PlusG": 58.16
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R1": 12.03
+    },
+    "collar": {
+      "H1": 8.79,
+      "H2": 8.74
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 47.51,
+      "b": 4.47,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 55.36,
+      "alpha": 40,
+      "r1Max": 0.76,
+      "r2": 3.68
+    },
+    "lengths": {
+      "L1": 39.48,
+      "L2": 43.28,
+      "L3": 51.44
+    },
+    "powderChamber": {
+      "E": 3.85,
+      "P1": 11.99,
+      "P2": 11.56
+    },
+    "rifling": {
+      "G": 6.98,
+      "G1": 7.87,
+      "alpha1": {
+        "degrees": 71,
+        "minutes": 25,
+        "seconds": 59
+      },
+      "h": 0.6,
+      "i": {
+        "degrees": 1,
+        "minutes": 45,
+        "seconds": 0
+      },
+      "s": 2.89
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "308_win",
+  "name": "308 Win.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2008-09-23"
+}

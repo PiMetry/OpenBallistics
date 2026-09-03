@@ -1,0 +1,97 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_fmj_truncated",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.54,
+      "E1": 8.81,
+      "R": 1.4,
+      "R1": 10.8,
+      "beta": 55,
+      "delta": 45,
+      "eMin": 1.14,
+      "f": 0.51
+    },
+    "collar": {
+      "H2": 10.74
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 25.2,
+      "L3Tol": -0.25,
+      "L6": 32
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 10.8
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 2990,
+      "PK": 2645,
+      "Pmax": 2300
+    },
+    "projectile": {
+      "G1": 10.17,
+      "L3PlusG": 33.6
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.91,
+      "Z": 10.17
+    },
+    "breech": {
+      "R1": 10.9
+    },
+    "collar": {
+      "H2": 10.77
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 79.55,
+      "b": 3.05,
+      "u": 406.4
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 25.2
+    },
+    "powderChamber": {
+      "E": 3.54,
+      "P1": 10.88
+    },
+    "rifling": {
+      "G": 8.4,
+      "G1": 10.19,
+      "alpha1": 180,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 3.05
+    }
+  },
+  "country": "SE",
+  "family": "pistol",
+  "key": "10_mm_auto",
+  "name": "10 mm Auto",
+  "pressureMethod": "Transducer",
+  "published": "1984-10-03",
+  "revised": "2012-05-30"
+}

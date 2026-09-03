@@ -1,0 +1,96 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 2.68,
+      "E1": 11.56,
+      "R": 1.5,
+      "R1": 13.21,
+      "RTol": -0.25,
+      "beta": 35,
+      "delta": 45,
+      "eMin": 0.89,
+      "f": 0.41
+    },
+    "collar": {
+      "H2": 12.14
+    },
+    "lengths": {
+      "L3": 45.72,
+      "L6": 58.12
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 12.14
+    },
+    "pressures": {
+      "M": 25,
+      "PE": 5135,
+      "PK": 4543,
+      "Pmax": 3950
+    },
+    "projectile": {
+      "G1": 11.49,
+      "L3PlusG": 61.24
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.28,
+      "Z": 11.46
+    },
+    "breech": {
+      "R": 1.52,
+      "R1": 13.31
+    },
+    "collar": {
+      "H2": 12.17
+    },
+    "grooves": {
+      "N": 5,
+      "Q": 101.61,
+      "b": 3.66,
+      "u": 508
+    },
+    "lengths": {
+      "L3": 45.97
+    },
+    "powderChamber": {
+      "P1": 12.19
+    },
+    "rifling": {
+      "G": 15.52,
+      "G1": 11.48,
+      "alpha1": 13,
+      "h": 3.03,
+      "i": {
+        "degrees": 4,
+        "minutes": 35,
+        "seconds": 0
+      },
+      "s": 14.27
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "460_s_w_mag",
+  "name": "460 S&W Mag",
+  "pressureMethod": "Transducer",
+  "published": "2006-05-16",
+  "revised": "2008-04-15"
+}

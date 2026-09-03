@@ -1,0 +1,133 @@
+{
+  "alternativeNames": [
+    "8,6 (mm) x 70"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.12,
+      "E1": 13.24,
+      "R": 1.52,
+      "R1": 14.93,
+      "beta": 45,
+      "delta": {
+        "degrees": 50,
+        "minutes": 4,
+        "seconds": 48
+      },
+      "eMin": 0.9,
+      "f": 0.5
+    },
+    "collar": {
+      "H1": 9.46,
+      "H2": 9.41
+    },
+    "junctionCone": {
+      "S": 73.89,
+      "alpha": {
+        "degrees": 39,
+        "minutes": 59,
+        "seconds": 49
+      },
+      "r2": 2.5
+    },
+    "lengths": {
+      "L1": 54.9,
+      "L1Tol": -0.2,
+      "L2": 60.89,
+      "L2Tol": -0.2,
+      "L3": 69.2,
+      "L6": 93.5
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.05
+    },
+    "powderChamber": {
+      "P1": 14.91,
+      "P2": 13.82,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 6600,
+      "M": 25,
+      "PE": 5250,
+      "PK": 4830,
+      "Pmax": 4200
+    },
+    "projectile": {
+      "G1": 8.61,
+      "L3PlusG": 75.28
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.38,
+      "Z": 8.58
+    },
+    "breech": {
+      "R1": 15.03
+    },
+    "collar": {
+      "H1": 9.51,
+      "H2": 9.45
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 56.86,
+      "b": 2.79,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 73.83,
+      "alpha": {
+        "degrees": 40,
+        "minutes": 0,
+        "seconds": 45
+      },
+      "r2": 3
+    },
+    "lengths": {
+      "L1": 54.81,
+      "L2": 60.77,
+      "L3": 69.45
+    },
+    "powderChamber": {
+      "E": 3.12,
+      "P1": 14.96,
+      "P2": 13.85
+    },
+    "rifling": {
+      "G": 6.08,
+      "G1": 8.63,
+      "alpha1": 90,
+      "h": 0.41,
+      "i": {
+        "degrees": 3,
+        "minutes": 0,
+        "seconds": 23
+      },
+      "s": 3.7
+    }
+  },
+  "country": "FI",
+  "family": "rimless",
+  "key": "338_lapua_mag",
+  "name": "338 Lapua Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1989-09-09",
+  "revised": "2016-10-18"
+}

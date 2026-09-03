@@ -1,0 +1,90 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.32,
+      "R1": 13.26
+    },
+    "collar": {
+      "H2": 10.85
+    },
+    "lengths": {
+      "L3": 76.2,
+      "L6": 91.44
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.99
+    },
+    "pressures": {
+      "EE": 3300,
+      "M": 25,
+      "PE": 3000,
+      "PK": 2760,
+      "Pmax": 2400
+    },
+    "projectile": {
+      "G1": 10.29,
+      "L3PlusG": 86.36
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.08,
+      "Z": 10.33
+    },
+    "breech": {
+      "R": 1.35,
+      "R1": 13.51
+    },
+    "collar": {
+      "H2": 10.87
+    },
+    "grooves": {
+      "N": 7,
+      "Q": 82.98,
+      "b": 3.56,
+      "u": 381
+    },
+    "lengths": {
+      "L3": 76.45
+    },
+    "powderChamber": {
+      "P1": 12.01
+    },
+    "rifling": {
+      "G": 10.16,
+      "G1": 10.33,
+      "alpha1": 90,
+      "h": 0.27,
+      "i": {
+        "degrees": 1,
+        "minutes": 24,
+        "seconds": 34
+      },
+      "s": 5.08
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "400_purdey_3",
+  "name": "400 Purdey 3\"",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2007-05-14"
+}

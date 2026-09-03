@@ -1,0 +1,116 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.4,
+      "R1": 13.5,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H1": 8.73,
+      "H2": 8.73
+    },
+    "junctionCone": {
+      "S": 73.14,
+      "alpha": {
+        "degrees": 40,
+        "minutes": 2,
+        "seconds": 2
+      }
+    },
+    "lengths": {
+      "L1": 57.77,
+      "L2": 61.16,
+      "L3": 68,
+      "L6": 95
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 12.2,
+      "P2": 11.2
+    },
+    "pressures": {
+      "EE": 4500,
+      "M": 25,
+      "PE": 5060,
+      "PK": 4658,
+      "Pmax": 4050
+    },
+    "projectile": {
+      "G1": 7.85,
+      "L3PlusG": 76.39
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 13.55
+    },
+    "collar": {
+      "H1": 8.79,
+      "H2": 8.76
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 47.51,
+      "b": 4.47,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 73.2,
+      "alpha": {
+        "degrees": 40,
+        "minutes": 1,
+        "seconds": 16
+      }
+    },
+    "lengths": {
+      "L1": 57.78,
+      "L2": 61.13,
+      "L3": 68.3
+    },
+    "powderChamber": {
+      "E": 1.4,
+      "P1": 12.23,
+      "P2": 11.23
+    },
+    "rifling": {
+      "G": 8.39,
+      "G1": 7.85,
+      "alpha1": 90,
+      "h": 0.46,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "s": 4
+    }
+  },
+  "country": "DE",
+  "family": "rimmed",
+  "key": "30_r_blaser",
+  "name": "30 R Blaser",
+  "pressureMethod": "Transducer",
+  "published": "1991-02-19",
+  "revised": "2007-07-06"
+}

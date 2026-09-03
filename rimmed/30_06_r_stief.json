@@ -1,0 +1,113 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.4,
+      "R1": 13.32,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H1": 8.63,
+      "H2": 8.63
+    },
+    "junctionCone": {
+      "S": 67.03,
+      "alpha": 35,
+      "r1Min": 1.27,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 49.27,
+      "L2": 53.35,
+      "L3": 63.35,
+      "L6": 84.84
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.99,
+      "P2": 11.2
+    },
+    "pressures": {
+      "EE": 4335,
+      "M": 25,
+      "PE": 5060,
+      "PK": 4658,
+      "Pmax": 4050
+    },
+    "projectile": {
+      "G1": 7.85,
+      "L3PlusG": 69.55
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 13.37
+    },
+    "collar": {
+      "H1": 8.7,
+      "H2": 8.65
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 47.52,
+      "b": 4.49,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 67.37,
+      "alpha": {
+        "degrees": 34,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "r1Max": 1.27,
+      "r2": 3.05
+    },
+    "lengths": {
+      "L1": 49.27,
+      "L2": 53.36,
+      "L3": 63.55
+    },
+    "powderChamber": {
+      "P1": 12.02,
+      "P2": 11.24
+    },
+    "rifling": {
+      "G": 6.2,
+      "G1": 7.89,
+      "alpha1": 70,
+      "h": 0.54,
+      "i": {
+        "degrees": 1,
+        "minutes": 22,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimmed",
+  "key": "30_06_r_stief",
+  "name": "30-06 R Stief",
+  "pressureMethod": "Transducer",
+  "published": "2009-05-05"
+}

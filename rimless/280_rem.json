@@ -1,0 +1,123 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.17,
+      "E1": 10.39,
+      "R": 1.24,
+      "R1": 12.01,
+      "beta": 35,
+      "delta": 36,
+      "eMin": 0.84,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 8,
+      "H2": 8
+    },
+    "junctionCone": {
+      "S": 68.56,
+      "alpha": 35,
+      "r1Min": 0.64,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 50.78,
+      "L1Tol": -0.2,
+      "L2": 55.87,
+      "L2Tol": -0.2,
+      "L3": 64.52,
+      "L6": 84.58
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.14
+    },
+    "powderChamber": {
+      "P1": 11.97,
+      "P2": 11.21,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3930,
+      "M": 25,
+      "PE": 5060,
+      "PK": 4658,
+      "Pmax": 4050
+    },
+    "projectile": {
+      "G1": 7.23,
+      "L3PlusG": 69.27
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.04,
+      "Z": 7.21
+    },
+    "breech": {
+      "R1": 12.06
+    },
+    "collar": {
+      "H1": 8.07,
+      "H2": 8.02
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 40.39,
+      "b": 4.06,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 68.69,
+      "alpha": {
+        "degrees": 34,
+        "minutes": 30,
+        "seconds": 0
+      },
+      "r1Max": 0.64,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 50.61,
+      "L2": 55.7,
+      "L3": 65.02
+    },
+    "powderChamber": {
+      "E": 3.17,
+      "P1": 12,
+      "P2": 11.23
+    },
+    "rifling": {
+      "G": 4.75,
+      "G1": 7.25,
+      "alpha1": 90,
+      "h": 0.39,
+      "i": {
+        "degrees": 1,
+        "minutes": 22,
+        "seconds": 34
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "280_rem",
+  "name": "280 Rem.",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

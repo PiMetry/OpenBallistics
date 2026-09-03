@@ -1,0 +1,130 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.2,
+      "E1": 10.5,
+      "R": 1.3,
+      "R1": 11.95,
+      "beta": 45,
+      "delta": {
+        "degrees": 37,
+        "minutes": 52,
+        "seconds": 48
+      },
+      "eMin": 1,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 7.24,
+      "H2": 7.1
+    },
+    "junctionCone": {
+      "S": 61.95,
+      "alpha": {
+        "degrees": 34,
+        "minutes": 49,
+        "seconds": 5
+      },
+      "r1Min": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 44.51,
+      "L1Tol": -0.2,
+      "L2": 50.41,
+      "L2Tol": -0.2,
+      "L3": 56.7,
+      "L6": 69
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.9,
+      "P2": 10.94,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2725,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 5.7,
+      "L3PlusG": 67.5
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.54,
+      "Z": 5.69
+    },
+    "breech": {
+      "R": 1.3,
+      "R1": 12
+    },
+    "collar": {
+      "H1": 7.26,
+      "H2": 7.12
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 25.03,
+      "b": 2,
+      "u": 250
+    },
+    "junctionCone": {
+      "S": 61.96,
+      "alpha": {
+        "degrees": 34,
+        "minutes": 47,
+        "seconds": 45
+      },
+      "r1Max": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 44.46,
+      "L2": 50.38,
+      "L3": 57
+    },
+    "powderChamber": {
+      "E": 3.2,
+      "P1": 11.93,
+      "P2": 10.97
+    },
+    "rifling": {
+      "G": 10.8,
+      "G1": 5.72,
+      "alpha1": 180,
+      "i": {
+        "degrees": 0,
+        "minutes": 28,
+        "seconds": 39
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimless",
+  "key": "5_6_x_57",
+  "name": "5,6 x 57",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

@@ -1,0 +1,110 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.6,
+      "R1": 12.85,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H1": 6.45,
+      "H2": 6.45
+    },
+    "junctionCone": {
+      "S": 53.97,
+      "alpha": 28,
+      "r1Min": 3.81,
+      "r2": 3.81
+    },
+    "lengths": {
+      "L1": 35.52,
+      "L2": 41.04,
+      "L3": 52.07,
+      "L6": 63.75
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 10.74,
+      "P2": 9.2
+    },
+    "pressures": {
+      "EE": 1990,
+      "M": 25,
+      "PE": 4125,
+      "PK": 3795,
+      "Pmax": 3300
+    },
+    "projectile": {
+      "G1": 5.79,
+      "L3PlusG": 55.22
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.61,
+      "Z": 5.74
+    },
+    "breech": {
+      "R": 1.65,
+      "R1": 13.08
+    },
+    "collar": {
+      "H1": 6.67,
+      "H2": 6.55
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 25.37,
+      "b": 1.65,
+      "u": 305
+    },
+    "junctionCone": {
+      "S": 54.27,
+      "alpha": 28,
+      "r1Max": 3.81,
+      "r2": 7.62
+    },
+    "lengths": {
+      "L1": 35.66,
+      "L2": 40.89,
+      "L3": 52.12
+    },
+    "powderChamber": {
+      "P1": 10.8,
+      "P2": 9.28
+    },
+    "rifling": {
+      "G": 3.15,
+      "G1": 6.1,
+      "alpha1": 17,
+      "h": 1.51,
+      "i": {
+        "degrees": 8,
+        "minutes": 30,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "22_savage",
+  "name": "22 Savage",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

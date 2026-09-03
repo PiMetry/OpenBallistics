@@ -1,0 +1,90 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.73,
+      "R1": 15.44,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H2": 12.22
+    },
+    "lengths": {
+      "L3": 60.96,
+      "L6": 82
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 12.82
+    },
+    "pressures": {
+      "EE": 3650,
+      "M": 25,
+      "PE": 2750,
+      "PK": 2530,
+      "Pmax": 2200
+    },
+    "projectile": {
+      "G1": 11.63,
+      "L3PlusG": 70.3
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.43,
+      "Z": 11.58
+    },
+    "breech": {
+      "R": 1.73,
+      "R1": 15.5
+    },
+    "collar": {
+      "H2": 12.25
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 104.25,
+      "b": 3.58,
+      "u": 508
+    },
+    "lengths": {
+      "L3": 61.6
+    },
+    "powderChamber": {
+      "P1": 12.85
+    },
+    "rifling": {
+      "G": 9.34,
+      "G1": 11.91,
+      "alpha1": 90,
+      "h": 0.17,
+      "i": {
+        "degrees": 1,
+        "minutes": 29,
+        "seconds": 57
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimmed",
+  "key": "45_90_wm",
+  "name": "45-90 WM",
+  "pressureMethod": "Transducer",
+  "published": "2003-04-08",
+  "revised": "2004-09-27"
+}

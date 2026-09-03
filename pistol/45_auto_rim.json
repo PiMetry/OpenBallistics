@@ -1,0 +1,91 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 2.26,
+      "R1": 13.11,
+      "RTol": -0.25,
+      "beta": 35,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 11.99
+    },
+    "lengths": {
+      "L3": 22.81,
+      "L6": 32.39
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 12.09
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 1560,
+      "PK": 1380,
+      "Pmax": 1200
+    },
+    "projectile": {
+      "G1": 11.48,
+      "L3PlusG": 44.77
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.28,
+      "Z": 11.46
+    },
+    "breech": {
+      "R": 2.29,
+      "R1": 13.21
+    },
+    "collar": {
+      "H2": 12.01
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 102.12,
+      "b": 3.96,
+      "u": 406
+    },
+    "lengths": {
+      "L3": 22.86
+    },
+    "powderChamber": {
+      "P1": 12.18
+    },
+    "rifling": {
+      "G": 21.96,
+      "G1": 11.57,
+      "alpha1": 180,
+      "i": {
+        "degrees": 4,
+        "minutes": 34,
+        "seconds": 59
+      },
+      "s": 20.15
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "45_auto_rim",
+  "name": "45 Auto Rim",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

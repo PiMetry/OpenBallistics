@@ -1,0 +1,92 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.52,
+      "R1": 13.06,
+      "RTol": -0.25,
+      "beta": 35,
+      "f": 0.4
+    },
+    "collar": {
+      "H2": 11.6
+    },
+    "lengths": {
+      "L3": 29.46,
+      "L6": 41.02
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 11.6
+    },
+    "pressures": {
+      "M": 17.5,
+      "PE": 1300,
+      "PK": 1150,
+      "Pmax": 1000
+    },
+    "projectile": {
+      "G1": 10.98,
+      "L3PlusG": 43.26
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.59,
+      "Z": 10.9
+    },
+    "breech": {
+      "R": 1.52,
+      "R1": 13.16
+    },
+    "collar": {
+      "H2": 11.63
+    },
+    "grooves": {
+      "N": 5,
+      "Q": 90.65,
+      "b": 3.26,
+      "u": 508
+    },
+    "lengths": {
+      "L3": 30.06
+    },
+    "powderChamber": {
+      "P1": 11.66
+    },
+    "rifling": {
+      "G": 13.8,
+      "G1": 10.99,
+      "alpha1": {
+        "degrees": 22,
+        "minutes": 12,
+        "seconds": 50
+      },
+      "h": 1.63,
+      "i": 5,
+      "s": 11.51
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "44_s_w_special",
+  "name": "44 S&W Special",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

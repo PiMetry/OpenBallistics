@@ -1,0 +1,94 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "lpm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.94,
+      "E1": 11.7,
+      "R": 1.5,
+      "R1": 13.06,
+      "beta": 45,
+      "delta": 35,
+      "eMin": 0.95,
+      "f": 0.5
+    },
+    "collar": {
+      "H2": 13.5
+    },
+    "lengths": {
+      "L3": 32.64,
+      "L3Tol": -0.25,
+      "L6": 40.5
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 13.79
+    },
+    "pressures": {
+      "M": 10.5,
+      "PE": 2990,
+      "PK": 2645,
+      "Pmax": 2300
+    },
+    "projectile": {
+      "G1": 12.71,
+      "L3PlusG": 36.19
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 12.43,
+      "Z": 12.73
+    },
+    "breech": {
+      "R1": 13.96
+    },
+    "collar": {
+      "H2": 13.52
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 124.29,
+      "b": 3.43,
+      "u": 482.6
+    },
+    "lengths": {
+      "L3": 32.64
+    },
+    "powderChamber": {
+      "E": 5.14,
+      "P1": 13.89
+    },
+    "rifling": {
+      "G": 3.55,
+      "G1": 12.75,
+      "alpha1": 180,
+      "i": {
+        "degrees": 2,
+        "minutes": 34,
+        "seconds": 59
+      }
+    }
+  },
+  "country": "IL",
+  "family": "pistol",
+  "key": "50_ae",
+  "name": "50 AE",
+  "pressureMethod": "Transducer",
+  "published": "1991-10-18",
+  "revised": "2000-06-07"
+}

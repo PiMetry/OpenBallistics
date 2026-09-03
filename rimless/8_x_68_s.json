@@ -1,0 +1,132 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.5,
+      "E1": 11.2,
+      "R": 1.4,
+      "R1": 13,
+      "beta": 45,
+      "delta": {
+        "degrees": 43,
+        "minutes": 42,
+        "seconds": 0
+      },
+      "eMin": 1,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 9.14,
+      "H2": 9.14
+    },
+    "junctionCone": {
+      "S": 76.61,
+      "alpha": {
+        "degrees": 29,
+        "minutes": 5,
+        "seconds": 34
+      },
+      "r1Min": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 53.2,
+      "L1Tol": -0.2,
+      "L2": 59,
+      "L2Tol": -0.2,
+      "L3": 67.5,
+      "L4": 70.6,
+      "L6": 87
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.3,
+      "P2": 12.15,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 5975,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 8.22,
+      "G2": 8.18,
+      "L3PlusG": 101.5
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.89,
+      "Z": 8.2
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 13.05
+    },
+    "collar": {
+      "H1": 9.17,
+      "H2": 9.16
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 51.78,
+      "b": 4.4,
+      "u": 280
+    },
+    "junctionCone": {
+      "S": 76.61,
+      "alpha": {
+        "degrees": 29,
+        "minutes": 5,
+        "seconds": 34
+      },
+      "r1Max": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 53.14,
+      "L2": 58.94,
+      "L3": 67.8
+    },
+    "powderChamber": {
+      "E": 3.5,
+      "P1": 13.33,
+      "P2": 12.18
+    },
+    "rifling": {
+      "G": 34,
+      "G1": 8.23,
+      "alpha1": 180,
+      "i": {
+        "degrees": 0,
+        "minutes": 17,
+        "seconds": 11
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimless",
+  "key": "8_x_68_s",
+  "name": "8 x 68 S",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2006-09-19"
+}

@@ -1,0 +1,116 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.07,
+      "R1": 15.85,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H1": 11.15,
+      "H2": 11.05
+    },
+    "junctionCone": {
+      "S": 115.06,
+      "alpha": {
+        "degrees": 11,
+        "minutes": 14,
+        "seconds": 33
+      },
+      "r1Min": 19.56,
+      "r2": 19.56
+    },
+    "lengths": {
+      "L1": 50.8,
+      "L2": 58.42,
+      "L3": 82.55,
+      "L6": 100.33
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 13.84,
+      "P2": 12.65
+    },
+    "pressures": {
+      "EE": 6993,
+      "M": 25,
+      "PE": 3690,
+      "PK": 3393,
+      "Pmax": 2950
+    },
+    "projectile": {
+      "G1": 10.41,
+      "L3PlusG": 92.87
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.16,
+      "Z": 10.41
+    },
+    "breech": {
+      "R": 1.09,
+      "R1": 16.1
+    },
+    "collar": {
+      "H1": 11.18,
+      "H2": 11.07
+    },
+    "grooves": {
+      "N": 7,
+      "Q": 84.25,
+      "b": 3.56,
+      "u": 381
+    },
+    "junctionCone": {
+      "S": 115.63,
+      "alpha": {
+        "degrees": 11,
+        "minutes": 10,
+        "seconds": 4
+      }
+    },
+    "lengths": {
+      "L1": 50.83,
+      "L2": 58.45,
+      "L3": 82.8
+    },
+    "powderChamber": {
+      "P1": 13.87,
+      "P2": 12.67
+    },
+    "rifling": {
+      "G": 10.32,
+      "G1": 10.5,
+      "alpha1": 90,
+      "h": 0.29,
+      "i": {
+        "degrees": 0,
+        "minutes": 58,
+        "seconds": 14
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "450_400_mag_n_e_3_1_4",
+  "name": "450/400 Mag. N.E. 3\"1/4",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15"
+}

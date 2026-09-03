@@ -1,0 +1,92 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.4,
+      "R1": 9.53,
+      "RTol": -0.25,
+      "beta": 35,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 8.56
+    },
+    "lengths": {
+      "L3": 27.31,
+      "L6": 34.29
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 8.56
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 1820,
+      "PK": 1610,
+      "Pmax": 1400
+    },
+    "projectile": {
+      "G1": 8,
+      "L3PlusG": 38.45
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.7,
+      "Z": 7.92
+    },
+    "breech": {
+      "R": 1.42,
+      "R1": 9.63
+    },
+    "collar": {
+      "H2": 8.62
+    },
+    "grooves": {
+      "N": 5,
+      "Q": 47.91,
+      "b": 2.41,
+      "u": 406
+    },
+    "lengths": {
+      "L3": 27.84
+    },
+    "powderChamber": {
+      "P1": 8.67
+    },
+    "rifling": {
+      "G": 11.14,
+      "G1": 7.98,
+      "alpha1": 25,
+      "h": 1.47,
+      "i": {
+        "degrees": 4,
+        "minutes": 34,
+        "seconds": 59
+      },
+      "s": 9.4
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "32_h_r_mag",
+  "name": "32 H&R Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1986-02-25",
+  "revised": "2000-06-07"
+}

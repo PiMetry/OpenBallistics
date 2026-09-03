@@ -1,0 +1,87 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.1,
+      "R1": 12.95,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.3
+    },
+    "collar": {
+      "H2": 12.17
+    },
+    "lengths": {
+      "L3": 17.6,
+      "L6": 28.5
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 12.18
+    },
+    "pressures": {
+      "M": 8,
+      "PE": 936,
+      "PK": 828,
+      "Pmax": 720
+    },
+    "projectile": {
+      "G1": 11.58,
+      "L3PlusG": 20.27
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.25,
+      "Z": 11.48
+    },
+    "breech": {
+      "R": 1.1,
+      "R1": 13
+    },
+    "collar": {
+      "H2": 12.2
+    },
+    "grooves": {
+      "N": 5,
+      "Q": 101.6,
+      "b": 3.78,
+      "u": 500
+    },
+    "lengths": {
+      "L3": 17.8
+    },
+    "powderChamber": {
+      "P1": 12.22
+    },
+    "rifling": {
+      "G": 2.67,
+      "G1": 11.58,
+      "alpha1": 90,
+      "h": 0.31,
+      "i": 4
+    }
+  },
+  "country": "GB",
+  "family": "pistol",
+  "key": "450_short",
+  "name": "450 Short",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

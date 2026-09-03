@@ -1,0 +1,106 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "implausible",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.projectile.G1",
+          "chamber.barrel.Z"
+        ],
+        "kind": "approximate",
+        "message": "the bullet differs from the groove diameter by 0.20 mm (G1 = 7.7, Z = 7.9); within 0.1 mm is manufacture",
+        "rule": "bullet_matches_grooves",
+        "values": {
+          "G1": 7.7,
+          "Z": 7.9
+        }
+      }
+    ],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.32,
+      "R1": 9.65,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 8
+    },
+    "lengths": {
+      "L3": 20.5,
+      "L6": 30
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 8.05
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 1300,
+      "PK": 1150,
+      "Pmax": 1000
+    },
+    "projectile": {
+      "G1": 7.7,
+      "L3PlusG": 22.16
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.65,
+      "Z": 7.9
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 9.7
+    },
+    "collar": {
+      "H2": 8.1
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 48.03,
+      "b": 2.7,
+      "u": 450
+    },
+    "lengths": {
+      "L3": 23,
+      "L3Tol": 0.381
+    },
+    "powderChamber": {
+      "P1": 8.1
+    },
+    "rifling": {
+      "G": 1.66,
+      "G1": 7.9,
+      "alpha1": 90,
+      "h": 0.1,
+      "i": {
+        "degrees": 4,
+        "minutes": 34,
+        "seconds": 59
+      }
+    }
+  },
+  "country": "GB",
+  "family": "pistol",
+  "key": "320_long",
+  "name": "320 Long",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07"
+}

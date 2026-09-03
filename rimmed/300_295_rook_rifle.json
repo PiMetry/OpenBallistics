@@ -1,0 +1,87 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.14,
+      "R1": 9.52,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H2": 8.08
+    },
+    "lengths": {
+      "L3": 29.97,
+      "L6": 36.83
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 8.1
+    },
+    "pressures": {
+      "EE": 375,
+      "M": 17.5,
+      "PE": 1500,
+      "PK": 1380,
+      "Pmax": 1200
+    },
+    "projectile": {
+      "G1": 7.65,
+      "L3PlusG": 34.97
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.4,
+      "Z": 7.62
+    },
+    "breech": {
+      "R": 1.17,
+      "R1": 9.65
+    },
+    "collar": {
+      "H2": 8.1
+    },
+    "grooves": {
+      "Q": 43.01,
+      "u": 508
+    },
+    "lengths": {
+      "L3": 30.23
+    },
+    "powderChamber": {
+      "P1": 8.13
+    },
+    "rifling": {
+      "G": 5,
+      "G1": 7.65,
+      "alpha1": 180,
+      "i": {
+        "degrees": 1,
+        "minutes": 25,
+        "seconds": 55
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "300_295_rook_rifle",
+  "name": "300/295 Rook Rifle",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2011-05-25"
+}

@@ -1,0 +1,121 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.2,
+      "E1": 10.5,
+      "R": 1.4,
+      "R1": 12.34,
+      "beta": 45,
+      "delta": {
+        "degrees": 41,
+        "minutes": 11,
+        "seconds": 9
+      },
+      "eMin": 0.8,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 8.66,
+      "H2": 8.62
+    },
+    "junctionCone": {
+      "S": 58.32,
+      "alpha": 40,
+      "r1Min": 2,
+      "r2": 3.2
+    },
+    "lengths": {
+      "L1": 42.79,
+      "L1Tol": -0.2,
+      "L2": 46.42,
+      "L2Tol": -0.2,
+      "L3": 54,
+      "L6": 76
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 12.25,
+      "P2": 11.3,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 3250,
+      "M": 25,
+      "PE": 4750,
+      "PK": 4370,
+      "Pmax": 3800
+    },
+    "projectile": {
+      "G1": 7.84,
+      "L3PlusG": 67.58
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.57,
+      "Z": 7.85
+    },
+    "breech": {
+      "R1": 12.39
+    },
+    "collar": {
+      "H1": 8.7,
+      "H2": 8.66
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 47.17,
+      "b": 3.7,
+      "u": 270
+    },
+    "junctionCone": {
+      "S": 58.32,
+      "alpha": 40,
+      "r1Max": 2,
+      "r2": 3.2
+    },
+    "lengths": {
+      "L1": 42.73,
+      "L2": 46.37,
+      "L3": 54.32
+    },
+    "powderChamber": {
+      "E": 3.2,
+      "P1": 12.3,
+      "P2": 11.35
+    },
+    "rifling": {
+      "G": 13.58,
+      "G1": 7.9,
+      "alpha1": 90,
+      "h": 0.38,
+      "i": {
+        "degrees": 0,
+        "minutes": 42,
+        "seconds": 58
+      }
+    }
+  },
+  "country": "France",
+  "family": "rimless",
+  "key": "7_5_x_54_mas",
+  "name": "7,5 x 54 MAS",
+  "published": "2007-05-14",
+  "revised": "2021-04-07"
+}

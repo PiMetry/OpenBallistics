@@ -1,0 +1,98 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 5.59,
+      "E1": 12.07,
+      "ETol": -0.2,
+      "R": 1.27,
+      "R1": 13.51,
+      "R3": 13.51,
+      "beta": 35,
+      "delta": 35,
+      "eMin": 0.94,
+      "f": 0.41
+    },
+    "collar": {
+      "H2": 12.25
+    },
+    "lengths": {
+      "L3": 51.2,
+      "L6": 62
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.03
+    },
+    "pressures": {
+      "EE": 5800,
+      "M": 25,
+      "PE": 5000,
+      "PK": 4600,
+      "Pmax": 4000
+    },
+    "projectile": {
+      "G1": 11.49,
+      "L3PlusG": 62.48
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.23,
+      "Z": 11.43
+    },
+    "breech": {
+      "R1": 13.51,
+      "R3": 13.59
+    },
+    "collar": {
+      "H2": 12.28
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 101.54,
+      "b": 4.06,
+      "u": 508
+    },
+    "lengths": {
+      "L3": 51.3
+    },
+    "powderChamber": {
+      "E": 5.59,
+      "P1": 13.06
+    },
+    "rifling": {
+      "G": 11.28,
+      "G1": 11.49,
+      "alpha1": 90,
+      "h": 0.4,
+      "i": {
+        "degrees": 0,
+        "minutes": 48,
+        "seconds": 9
+      },
+      "s": 2
+    }
+  },
+  "country": "DE",
+  "family": "belted",
+  "key": "11_5_x_51",
+  "name": "11,5 x 51",
+  "pressureMethod": "Transducer",
+  "published": "2009-05-05"
+}

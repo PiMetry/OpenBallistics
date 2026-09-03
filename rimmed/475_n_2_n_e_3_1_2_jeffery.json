@@ -1,0 +1,114 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 2.03,
+      "R1": 17.14,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H1": 13.05,
+      "H2": 13.05
+    },
+    "junctionCone": {
+      "S": 146.35,
+      "alpha": {
+        "degrees": 10,
+        "minutes": 20,
+        "seconds": 53
+      }
+    },
+    "lengths": {
+      "L1": 69.21,
+      "L2": 74.29,
+      "L3": 88.9,
+      "L6": 109.98
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 14.73,
+      "P2": 13.97
+    },
+    "pressures": {
+      "EE": 6957,
+      "M": 25,
+      "PE": 3440,
+      "PK": 3163,
+      "Pmax": 2750
+    },
+    "projectile": {
+      "G1": 12.39,
+      "L3PlusG": 96.54
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 12.11,
+      "Z": 12.42
+    },
+    "breech": {
+      "R": 2.06,
+      "R1": 17.4
+    },
+    "collar": {
+      "H1": 13.07,
+      "H2": 13.07
+    },
+    "grooves": {
+      "N": 7,
+      "Q": 118.1,
+      "b": 2.67,
+      "u": 457
+    },
+    "junctionCone": {
+      "S": 145.71,
+      "alpha": {
+        "degrees": 10,
+        "minutes": 27,
+        "seconds": 36
+      }
+    },
+    "lengths": {
+      "L1": 69.24,
+      "L2": 74.32,
+      "L3": 89.15
+    },
+    "powderChamber": {
+      "P1": 14.76,
+      "P2": 14
+    },
+    "rifling": {
+      "G": 7.64,
+      "G1": 12.42,
+      "alpha1": 90,
+      "h": 0.33,
+      "i": {
+        "degrees": 1,
+        "minutes": 12,
+        "seconds": 53
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "475_n_2_n_e_3_1_2_jeffery",
+  "name": "475 N°2 N.E. 3\"1/2 Jeffery",
+  "pressureMethod": "Transducer",
+  "published": "1998-01-27",
+  "revised": "2002-05-15"
+}

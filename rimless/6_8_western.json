@@ -1,0 +1,117 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.35,
+      "E1": 12.19,
+      "R": 1.37,
+      "R1": 13.59,
+      "beta": 35,
+      "delta": 45,
+      "eMin": 1.02,
+      "f": 0.35
+    },
+    "collar": {
+      "H1": 7.98,
+      "H2": 7.98
+    },
+    "junctionCone": {
+      "S": 49.99,
+      "alpha": 70,
+      "r1Min": 1.27,
+      "r2": 2.54
+    },
+    "lengths": {
+      "L1": 40.22,
+      "L1Tol": -0.2,
+      "L2": 44.29,
+      "L2Tol": -0.2,
+      "L3": 51.31,
+      "L6": 75.06
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.1
+    },
+    "powderChamber": {
+      "P1": 14.12,
+      "P2": 13.67,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 5040,
+      "M": 25,
+      "PE": 5500,
+      "PK": 5060,
+      "Pmax": 4400
+    },
+    "projectile": {
+      "G1": 7.06,
+      "L3PlusG": 54.31
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.86,
+      "Z": 7.04
+    },
+    "breech": {
+      "R1": 14.19
+    },
+    "collar": {
+      "H1": 8.03,
+      "H2": 8
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 38.29,
+      "b": 2.41,
+      "u": 203.2
+    },
+    "junctionCone": {
+      "S": 49.89,
+      "alpha": 70,
+      "r1Max": 1.27,
+      "r2": 3.05
+    },
+    "lengths": {
+      "L1": 40.1,
+      "L2": 44.15,
+      "L3": 51.56
+    },
+    "powderChamber": {
+      "E": 3.35,
+      "P1": 14.15,
+      "P2": 13.7
+    },
+    "rifling": {
+      "G": 3,
+      "G1": 7.06,
+      "h": 0.47,
+      "i": {
+        "degrees": 1,
+        "minutes": 30,
+        "seconds": 0
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "6_8_western",
+  "name": "6,8 Western",
+  "pressureMethod": "Transducer",
+  "published": "2022-11-08"
+}

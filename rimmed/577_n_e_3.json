@@ -1,0 +1,90 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.27,
+      "R1": 19.05,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H2": 15.37
+    },
+    "lengths": {
+      "L3": 76.2,
+      "L6": 93.98
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 16.81
+    },
+    "pressures": {
+      "EE": 9975,
+      "M": 25,
+      "PE": 3060,
+      "PK": 2818,
+      "Pmax": 2450
+    },
+    "projectile": {
+      "G1": 14.83,
+      "L3PlusG": 85.06
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 14.66,
+      "Z": 14.86
+    },
+    "breech": {
+      "R": 1.3,
+      "R1": 19.3
+    },
+    "collar": {
+      "H2": 15.39
+    },
+    "grooves": {
+      "N": 7,
+      "Q": 172.11,
+      "b": 4.66,
+      "u": 762
+    },
+    "lengths": {
+      "L3": 76.45
+    },
+    "powderChamber": {
+      "P1": 16.84
+    },
+    "rifling": {
+      "G": 8.86,
+      "G1": 14.85,
+      "alpha1": 90,
+      "h": 0.27,
+      "i": {
+        "degrees": 0,
+        "minutes": 38,
+        "seconds": 1
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "577_n_e_3",
+  "name": "577 N.E. 3''",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2012-05-30"
+}

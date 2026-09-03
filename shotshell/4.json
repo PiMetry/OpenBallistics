@@ -1,0 +1,83 @@
+{
+  "annotations": {
+    "category": "shotgun",
+    "confidence": "unverified",
+    "defaultBulletShape": "shot",
+    "implausible": [],
+    "primerType": "209"
+  },
+  "cartridge": {
+    "dimensions": {
+      "d": 27.6,
+      "dTol": -0.25,
+      "g": 30.45,
+      "gTol": -0.45,
+      "h": 26.2,
+      "hTol": -0.45,
+      "t": 3.25,
+      "tTol": -0.4
+    },
+    "lengths": [
+      {
+        "l": 82.4,
+        "marking": "4/82",
+        "tol": -2.5
+      },
+      {
+        "l": 101,
+        "marking": "4/101",
+        "tol": -2.5
+      }
+    ]
+  },
+  "chamber": {
+    "chamberLengths": [
+      {
+        "L": 82.6,
+        "M": "25/30",
+        "PE": 1320,
+        "PK": 1200,
+        "Pmax": 1050,
+        "marking": "4/82",
+        "tol": 2
+      },
+      {
+        "L": 101.2,
+        "M": "25/30",
+        "PE": 1320,
+        "PK": 1200,
+        "Pmax": 1050,
+        "marking": "4/101",
+        "tol": 2
+      }
+    ],
+    "dimensions": {
+      "B": 23.35,
+      "BTol": 0.7,
+      "D": 27.7,
+      "DTol": 0.1,
+      "G": 30.5,
+      "GTol": 0.1,
+      "H": 26.3,
+      "HTol": 0.1,
+      "T": 3.3,
+      "TTol": 0.1,
+      "alpha1": {
+        "degrees": 10,
+        "minutes": 30,
+        "seconds": 0
+      }
+    },
+    "headspace": {
+      "Fe": 0.1,
+      "FeAutomatic": 0.35,
+      "FeBascule": 0.2
+    }
+  },
+  "family": "shotshell",
+  "key": "4",
+  "name": "Cal. 4",
+  "pressureMethod": "Transducer",
+  "published": "1989-01-19",
+  "revised": "2006-09-19"
+}

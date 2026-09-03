@@ -1,0 +1,114 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.15,
+      "E1": 9.09,
+      "R": 1.24,
+      "R1": 10.72,
+      "beta": 35,
+      "delta": 36,
+      "eMin": 0.84,
+      "f": 0.38
+    },
+    "collar": {
+      "H1": 6.77,
+      "H2": 6.77
+    },
+    "junctionCone": {
+      "S": 41.77,
+      "alpha": 60
+    },
+    "lengths": {
+      "L1": 32.82,
+      "L1Tol": -0.2,
+      "L2": 35.91,
+      "L2Tol": -0.2,
+      "L3": 41,
+      "L6": 58
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 10.65,
+      "P2": 10.34,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 2100,
+      "M": 25,
+      "PE": 5188,
+      "PK": 4773,
+      "Pmax": 4150
+    },
+    "projectile": {
+      "G1": 6.17,
+      "L3PlusG": 44.84
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.02,
+      "Z": 6.17
+    },
+    "breech": {
+      "R1": 10.8
+    },
+    "collar": {
+      "H1": 6.78,
+      "H2": 6.78
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 29.25,
+      "b": 1.73,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 41.89,
+      "alpha": 60
+    },
+    "lengths": {
+      "L1": 32.91,
+      "L2": 36.02,
+      "L3": 41.23
+    },
+    "powderChamber": {
+      "E": 3.18,
+      "P1": 10.68,
+      "P2": 10.37
+    },
+    "rifling": {
+      "G": 3.84,
+      "G1": 6.18,
+      "alpha1": 90,
+      "h": 0.3,
+      "i": {
+        "degrees": 1,
+        "minutes": 18,
+        "seconds": 7
+      },
+      "s": 0.32
+    }
+  },
+  "country": "IT",
+  "family": "rimless",
+  "key": "6_mm_d_b_g",
+  "name": "6 mm D.B.G.",
+  "pressureMethod": "Transducer",
+  "published": "2016-05-18"
+}

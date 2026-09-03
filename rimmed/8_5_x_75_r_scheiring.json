@@ -1,0 +1,104 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.4,
+      "R1": 13.35,
+      "RTol": -0.25,
+      "beta": 45,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 9.41,
+      "H2": 9.38
+    },
+    "junctionCone": {
+      "S": 74.1,
+      "alpha": 80
+    },
+    "lengths": {
+      "L1": 67.3,
+      "L2": 68.5,
+      "L3": 74.7,
+      "L6": 96
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.9,
+      "P2": 11.43
+    },
+    "pressures": {
+      "EE": 5500,
+      "M": 25,
+      "PE": 4750,
+      "PK": 4370,
+      "Pmax": 3800
+    },
+    "projectile": {
+      "G1": 8.61,
+      "L3PlusG": 83.7
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.38,
+      "Z": 8.59
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 13.4
+    },
+    "collar": {
+      "H1": 9.44,
+      "H2": 9.41
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 56.95,
+      "b": 2.79,
+      "u": 254
+    },
+    "junctionCone": {
+      "S": 74.14,
+      "alpha": 80
+    },
+    "lengths": {
+      "L1": 67.31,
+      "L2": 68.51,
+      "L3": 75
+    },
+    "powderChamber": {
+      "P1": 11.93,
+      "P2": 11.46
+    },
+    "rifling": {
+      "G": 9,
+      "G1": 8.61,
+      "alpha1": 90,
+      "h": 0.4,
+      "i": 2,
+      "s": 5.71
+    }
+  },
+  "country": "AT",
+  "family": "rimmed",
+  "key": "8_5_x_75_r_scheiring",
+  "name": "8,5 x 75 R Scheiring",
+  "pressureMethod": "Transducer",
+  "published": "2014-05-20"
+}

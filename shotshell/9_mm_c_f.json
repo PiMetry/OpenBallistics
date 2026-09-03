@@ -1,0 +1,58 @@
+{
+  "annotations": {
+    "category": "shotgun",
+    "confidence": "unverified",
+    "defaultBulletShape": "shot",
+    "implausible": [],
+    "primerType": "209"
+  },
+  "cartridge": {
+    "dimensions": {
+      "d": 9.85,
+      "dTol": -0.1,
+      "g": 11.4,
+      "gTol": -0.3,
+      "h": 9.65,
+      "hTol": -0.35,
+      "t": 1.4,
+      "tTol": -0.25
+    },
+    "lengths": [
+      {
+        "l": 44.5,
+        "tol": -2.5
+      }
+    ]
+  },
+  "chamber": {
+    "chamberLengths": [],
+    "dimensions": {
+      "B": 8.5,
+      "BTol": 0.5,
+      "D": 9.9,
+      "DTol": 0.1,
+      "G": 11.5,
+      "GTol": 0.1,
+      "H": 9.7,
+      "HTol": 0.1,
+      "T": 1.45,
+      "TTol": 0.1,
+      "alpha1": {
+        "degrees": 10,
+        "minutes": 30,
+        "seconds": 0
+      }
+    },
+    "headspace": {
+      "Fe": 0.1,
+      "FeAutomatic": 0.35,
+      "FeBascule": 0.2
+    }
+  },
+  "family": "shotshell",
+  "key": "9_mm_c_f",
+  "name": "Cal. 9 mm C.F.",
+  "pressureMethod": "Transducer",
+  "published": "1989-01-19",
+  "revised": "2006-09-19"
+}

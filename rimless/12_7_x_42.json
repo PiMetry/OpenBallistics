@@ -1,0 +1,96 @@
+{
+  "alternativeNames": [
+    "500 DR"
+  ],
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 4.46,
+      "E1": 9.35,
+      "R": 1.45,
+      "R1": 11.35,
+      "beta": 45,
+      "delta": 55,
+      "eMin": 1.45,
+      "f": 0.5
+    },
+    "collar": {
+      "H2": 13.26
+    },
+    "lengths": {
+      "L3": 42.04,
+      "L3Tol": -0.25,
+      "L6": 57.15
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 13.82
+    },
+    "pressures": {
+      "EE": 4000,
+      "M": 25,
+      "PE": 3000,
+      "PK": 2760,
+      "Pmax": 2400
+    },
+    "projectile": {
+      "G1": 12.75,
+      "L3PlusG": 45.59
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 12.43,
+      "Z": 12.73
+    },
+    "breech": {
+      "R1": 13.88
+    },
+    "collar": {
+      "H2": 13.28
+    },
+    "grooves": {
+      "N": 6,
+      "Q": 124.47,
+      "b": 3.43,
+      "u": 16
+    },
+    "lengths": {
+      "L3": 42.1
+    },
+    "powderChamber": {
+      "E": 4.47,
+      "P1": 13.84
+    },
+    "rifling": {
+      "G": 3.55,
+      "G1": 12.78,
+      "i": {
+        "degrees": 2,
+        "minutes": 49,
+        "seconds": 19
+      }
+    }
+  },
+  "country": "IT",
+  "family": "rimless",
+  "key": "12_7_x_42",
+  "name": "12,7 X 42",
+  "pressureMethod": "Transducer",
+  "published": "2021-11-09"
+}

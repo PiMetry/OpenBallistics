@@ -1,0 +1,111 @@
+{
+  "annotations": {
+    "category": "shotgun",
+    "confidence": "unverified",
+    "defaultBulletShape": "shot",
+    "implausible": [],
+    "primerType": "209"
+  },
+  "cartridge": {
+    "dimensions": {
+      "d": 18.9,
+      "dTol": -0.23,
+      "g": 20.65,
+      "gTol": -0.33,
+      "h": 18.55,
+      "hTol": -0.49,
+      "t": 1.65,
+      "tTol": -0.35
+    },
+    "lengths": [
+      {
+        "l": 65,
+        "marking": "16/65",
+        "tol": -2.5
+      },
+      {
+        "l": 67.5,
+        "marking": "16/67",
+        "tol": -2.5
+      },
+      {
+        "l": 69.8,
+        "marking": "16/70",
+        "tol": -2.5
+      },
+      {
+        "l": 76,
+        "marking": "16/76",
+        "tol": -2.5
+      }
+    ]
+  },
+  "chamber": {
+    "chamberLengths": [
+      {
+        "L": 65.1,
+        "M": "25/30",
+        "PE": 980,
+        "PK": 900,
+        "Pmax": 780,
+        "marking": "16/65",
+        "tol": 2
+      },
+      {
+        "L": 67.6,
+        "M": "25/30",
+        "PE": 980,
+        "PK": 900,
+        "Pmax": 780,
+        "marking": "16/67",
+        "tol": 2
+      },
+      {
+        "L": 69.9,
+        "M": "25/30",
+        "PE": 980,
+        "PK": 900,
+        "Pmax": 780,
+        "marking": "16/70",
+        "tol": 2
+      },
+      {
+        "L": 76.2,
+        "M": "25/30",
+        "PE": 1320,
+        "PK": 1200,
+        "Pmax": 1050,
+        "marking": "16/76",
+        "tol": 2
+      }
+    ],
+    "dimensions": {
+      "B": 16.8,
+      "BTol": 0.5,
+      "D": 18.95,
+      "DTol": 0.1,
+      "G": 20.75,
+      "GTol": 0.1,
+      "H": 18.6,
+      "HTol": 0.1,
+      "T": 1.65,
+      "TTol": 0.1,
+      "alpha1": {
+        "degrees": 10,
+        "minutes": 30,
+        "seconds": 0
+      }
+    },
+    "headspace": {
+      "Fe": 0.1,
+      "FeAutomatic": 0.35,
+      "FeBascule": 0.2
+    }
+  },
+  "family": "shotshell",
+  "key": "16",
+  "name": "Cal. 16",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2010-05-26"
+}

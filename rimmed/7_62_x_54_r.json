@@ -1,0 +1,139 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "implausible",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.lengths.L3",
+          "chamber.lengths.L3"
+        ],
+        "kind": "exceptional",
+        "message": "cartridge L3 = 53.72 is more than chamber L3 = 53.7, but a chamber is at least as long as the case it takes",
+        "rule": "chamber_accepts_case",
+        "values": {
+          "cartridge.lengths.L3": 53.72,
+          "chamber.lengths.L3": 53.7
+        }
+      }
+    ],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.6,
+      "R1": 14.48,
+      "RTol": -0.25,
+      "beta": 20,
+      "f": 0.6
+    },
+    "collar": {
+      "H1": 8.53,
+      "H2": 8.53
+    },
+    "junctionCone": {
+      "S": 57.04,
+      "alpha": {
+        "degrees": 37,
+        "minutes": 1,
+        "seconds": 9
+      },
+      "r1Min": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 39.7,
+      "L2": 44.3,
+      "L3": 53.72,
+      "L5": 57,
+      "L6": 77.16
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 12.37,
+      "P2": 11.61
+    },
+    "pressures": {
+      "EE": 3960,
+      "M": 25,
+      "PE": 4875,
+      "PK": 4485,
+      "Pmax": 3900
+    },
+    "projectile": {
+      "G1": 7.92,
+      "L3PlusG": 74.8
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.92
+    },
+    "breech": {
+      "R": 1.63,
+      "R1": 14.5
+    },
+    "collar": {
+      "H1": 8.61,
+      "H2": 8.6
+    },
+    "grooves": {
+      "N": 4,
+      "Q": 47.99,
+      "b": 3.81,
+      "u": 240
+    },
+    "junctionCone": {
+      "S": 57.12,
+      "alpha": {
+        "degrees": 37,
+        "minutes": 7,
+        "seconds": 59
+      },
+      "r1Max": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 39.73,
+      "L2": 44.3,
+      "L3": 53.7
+    },
+    "powderChamber": {
+      "P1": 12.48,
+      "P2": 11.68
+    },
+    "rifling": {
+      "G": 21.08,
+      "G1": 7.93,
+      "alpha1": {
+        "degrees": 12,
+        "minutes": 31,
+        "seconds": 48
+      },
+      "h": 3.05,
+      "i": {
+        "degrees": 0,
+        "minutes": 29,
+        "seconds": 33
+      }
+    }
+  },
+  "country": "SU",
+  "family": "rimmed",
+  "key": "7_62_x_54_r",
+  "name": "7,62 x 54 R",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2014-05-20"
+}
