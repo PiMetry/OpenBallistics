@@ -17,8 +17,9 @@ export const entries: Entry[] = indexData as Entry[];
 
 export const families: string[] = [...new Set(entries.map((entry) => entry.family))].sort();
 
+/** Every origin named in the dataset, each once, including both halves of a joint standard. */
 export const countries: string[] = [
-  ...new Set(entries.map((entry) => entry.country).filter((c): c is string => Boolean(c)))
+  ...new Set(entries.flatMap((entry) => entry.countries))
 ].sort();
 
 const cache = new Map<string, Promise<Record_>>();

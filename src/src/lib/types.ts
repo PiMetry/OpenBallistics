@@ -207,7 +207,12 @@ export interface Entry {
   key: string;
   name: string;
   family: string;
-  country: string | null;
+  /**
+   * Where the sheet says the cartridge comes from, as ISO codes -- two of them for the six
+   * cartridges two countries standardised together, and none for the 17 that name no origin. See
+   * `countriesOf` in `scripts/build-index.mjs` for what is normalised on the way in.
+   */
+  countries: string[];
   alt: string[];
   L3: number | null;
   L6: number | null;
@@ -246,6 +251,37 @@ export interface Entry {
   /** Findings on the record that no listed exception explains. */
   warnings: number;
 }
+
+/**
+ * The countries the dataset names, spelled out.
+ *
+ * Only these: it is a table for the twenty codes in this dataset and not a copy of ISO 3166, and
+ * anything not here falls back to its code rather than being guessed at. `SU` and `CS` are the
+ * states the sheets were published by and are named as such -- a 7,62 x 39 is a Soviet standard,
+ * and calling it Russian would be saying something its sheet does not.
+ */
+export const COUNTRY_NAMES: Record<string, string> = {
+  AT: 'Austria',
+  BE: 'Belgium',
+  CA: 'Canada',
+  CH: 'Switzerland',
+  CS: 'Czechoslovakia',
+  CZ: 'Czechia',
+  DE: 'Germany',
+  FI: 'Finland',
+  FR: 'France',
+  GB: 'United Kingdom',
+  IL: 'Israel',
+  IT: 'Italy',
+  JP: 'Japan',
+  NO: 'Norway',
+  PT: 'Portugal',
+  RU: 'Russia',
+  SE: 'Sweden',
+  SU: 'Soviet Union',
+  TR: 'Türkiye',
+  US: 'United States'
+};
 
 export const FAMILY_LABELS: Record<string, string> = {
   rimless: 'Rimless',

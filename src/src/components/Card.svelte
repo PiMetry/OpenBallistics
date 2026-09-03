@@ -1,5 +1,6 @@
 <script lang="ts">
   import Drawing from './Drawing.svelte';
+  import Flag from './Flag.svelte';
   import { href } from '../lib/router';
   import {
     FAMILY_LABELS,
@@ -102,7 +103,7 @@
 
   <span class="chips">
     <span class="chip">{FAMILY_LABELS[entry.family] ?? entry.family}</span>
-    {#if entry.country}<span class="chip quiet num">{entry.country}</span>{/if}
+    {#if entry.countries.length}<Flag codes={entry.countries} />{/if}
     <!--
       How far the record can be trusted, said on every card so that the grid never reads as
       uniformly authoritative.
@@ -206,6 +207,7 @@
   .chips {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 0.3rem;
   }
   .chip {

@@ -18,7 +18,10 @@ const here = dirname(fileURLToPath(import.meta.url));
 const RECORDS = ROOT;
 const SVG = join(ROOT, 'svg');
 const OUTLINES = join(here, '..', 'public', 'outlines');
+const FLAG_SOURCE = join(here, '..', 'node_modules', 'flag-icons', 'flags', '4x3');
+const FLAGS = join(here, '..', 'public', 'flags');
 const OUT = join(here, '..', 'src', 'lib', 'index.generated.json');
+const FLAGS_OUT = join(here, '..', 'src', 'lib', 'flags.generated.json');
 
 /**
  * The size, in millimetres, of a drawing, read off its root element.
@@ -137,6 +140,65 @@ function length(record) {
     return values.length ? Math.max(...values) : null;
   }
   return lengths.L3 ?? null;
+}
+
+/**
+ * Where a cartridge comes from, as ISO country codes.
+ *
+ * The sheet's title block names an origin and the records copy it, which is why this is not just
+ * `record.country`:
+ *
+ * - Two records write `Italy` and one writes `France` where every other record writes a code.
+ *   Left alone they become their own entries in the country filter, so that Italy is listed twice
+ *   and neither entry finds all of it. Normalised here rather than edited in the dataset -- the
+ *   records are the published thing and correcting them is their owner's call, not the site's.
+ * - Six cartridges are standardised by two countries and say so: `IT/DE`, `DE/AT`, `DE/FI`. Those
+ *   are two origins, not a twenty-seventh country, and a reader filtering for Germany should find
+ *   the 9 x 18 that Germany and Austria published together.
+ *
+ * `SU` and `CS` are kept exactly as they are. They are the Soviet Union and Czechoslovakia, which
+ * is what those sheets say and what those cartridges are; they have no current flag and the site
+ * prints the code instead of inventing a successor state for them.
+ */
+const COUNTRY_ALIASES = new Map([
+  ['ITALY', 'IT'],
+  ['FRANCE', 'FR']
+]);
+
+function countriesOf(record) {
+  const published = record.country;
+  if (typeof published !== 'string' || !published.trim()) return [];
+  return published
+    .split('/')
+    .map((part) => part.trim().toUpperCase())
+    .filter(Boolean)
+    .map((part) => COUNTRY_ALIASES.get(part) ?? part);
+}
+
+/**
+ * The flags for the countries the dataset actually names, copied out of `flag-icons` (MIT).
+ *
+ * Only the ones in use: the package ships 271 and this dataset names twenty. They are copied
+ * rather than committed for the same reason the drawings are -- the package is the one copy, and a
+ * second in `public/` could go stale against it.
+ *
+ * Which codes have a flag is written out beside the index, because the page has to know: a code
+ * with no flag is shown as a code, and the alternative is an image that quietly fails to load.
+ */
+async function flags(codes) {
+  const drawn = [];
+  const missing = [];
+  for (const code of [...codes].sort()) {
+    const file = `${code.toLowerCase()}.svg`;
+    try {
+      await mkdir(FLAGS, { recursive: true });
+      await cp(join(FLAG_SOURCE, file), join(FLAGS, file));
+      drawn.push(code);
+    } catch {
+      missing.push(code);
+    }
+  }
+  return { drawn, missing };
 }
 
 function overallLength(record) {
@@ -446,9 +508,10 @@ for (const family of families) {
       key: record.key,
       name: record.name,
       family: record.family,
-      // Printed on the sheet: `country` is in the drawing's title block. Filtering a list of 532
-      // needs it in hand, not a fetch away.
-      country: record.country ?? null,
+      // Printed on the sheet: the origin is in the drawing's title block. Filtering a list of 532
+      // needs it in hand, not a fetch away. See `countriesOf` for why it is a list of codes and
+      // not the string the record publishes.
+      countries: countriesOf(record),
       alt: record.alternativeNames ?? [],
       // Two dimensions, so the list can be sorted and scanned without opening anything: the case
       // length and the bullet diameter are what identifies a cartridge to a reader at a glance.
@@ -470,6 +533,15 @@ for (const family of families) {
       warnings: (record.annotations?.implausible ?? []).filter((f) => !f.known).length
     });
   }
+}
+
+const flagged = await flags(new Set(entries.flatMap((entry) => entry.countries)));
+await writeFile(FLAGS_OUT, JSON.stringify(flagged.drawn), 'utf8');
+if (flagged.missing.length) {
+  console.log(
+    `flags: ${flagged.drawn.length} copied; no flag for ${flagged.missing.join(', ')}` +
+      ' (shown as the code)'
+  );
 }
 
 for (const held of extra.keys()) {

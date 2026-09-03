@@ -81,6 +81,22 @@ site itself ran and what it caught. A finding with a `why` is a known exception 
 nothing; one without is the site having positive reason to doubt a figure, which is a different
 statement from nobody having read it yet.
 
+## Flags
+
+The origin in each sheet's title block is shown as a flag, from
+[flag-icons](https://github.com/lipis/flag-icons) (MIT, Copyright (c) 2013 Panayiotis Lipiridis).
+A build-time dependency only: `src/scripts/build-index.mjs` copies the seventeen flags this dataset
+needs out of the 271 the package ships, into `src/public/flags/`, and writes the list of codes that
+have one beside the index. Neither is committed.
+
+`SU` and `CS` have no current flag and are shown as the code; they are the Soviet Union and
+Czechoslovakia, which is what those sheets say. Six cartridges are standardised by two countries
+and get two flags, and a filter for either country finds them.
+
+Three records write the country out in full (`Italy`, `France`) where every other record writes a
+code. The build normalises those so the filter does not list Italy twice, but the records
+themselves are worth correcting, since the dataset is the published thing.
+
 ## Attribution
 
 These are the dimensions standardised by the **Commission Internationale Permanente pour l'Épreuve

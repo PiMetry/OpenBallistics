@@ -6,3 +6,4 @@ dist/
 # Generated at build time by scripts/build-index.mjs from the dataset at the repository root.
 # Not committed: it is derived, and a committed copy could go stale against the records.
 src/lib/index.generated.json
+src/lib/flags.generated.json

@@ -105,6 +105,12 @@
     them here, and none could be. Everything else, the records, the drawings and the code behind
     this site, is under the MIT licence.
   </p>
+  <p>
+    Country flags from
+    <a href="https://github.com/lipis/flag-icons" target="_blank" rel="noopener noreferrer">
+      flag-icons</a
+    >, Copyright (c) 2013 Panayiotis Lipiridis, under the MIT licence.
+  </p>
 </footer>
 
 <style>

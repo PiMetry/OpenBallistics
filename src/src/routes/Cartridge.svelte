@@ -1,5 +1,6 @@
 <script lang="ts">
   import Drawing from '../components/Drawing.svelte';
+  import Flag from '../components/Flag.svelte';
   import GroupTable from '../components/GroupTable.svelte';
   import { byKey, load } from '../lib/data';
   import { issueUrl, verifyUrl } from '../lib/issue';
@@ -413,7 +414,10 @@
     <div>
       <p class="eyebrow">
         {FAMILY_LABELS[data.family] ?? data.family}
-        {#if data.country}· {data.country}{/if}
+        {#if entry?.countries.length}
+          <span class="origin">·</span>
+          <Flag codes={entry.countries} />
+        {/if}
       </p>
       <h1>{data.name}</h1>
       {#if data.alternativeNames?.length}
@@ -617,6 +621,14 @@
   h1 {
     font-size: var(--step-4);
     letter-spacing: -0.01em;
+  }
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .origin {
+    color: var(--ink-3);
   }
   .alt {
     margin: 0.25rem 0 0;

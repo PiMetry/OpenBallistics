@@ -1,10 +1,12 @@
 <script lang="ts">
   import Card from '../components/Card.svelte';
+  import Flag from '../components/Flag.svelte';
   import { addCartridgeUrl } from '../lib/issue';
   import { countries, entries, families, search } from '../lib/data';
   import { href } from '../lib/router';
   import { PX_PER_MM } from '../lib/scale';
   import {
+    COUNTRY_NAMES,
     FACETS,
     FACET_LABELS,
     FAMILY_LABELS,
@@ -119,7 +121,9 @@
   const shown = $derived.by(() => {
     let list = entries;
     if (family) list = list.filter((entry) => entry.family === family);
-    if (country) list = list.filter((entry) => entry.country === country);
+    // A joint standard answers to either of its countries: filtering for Germany finds the 9 x 18
+    // that Germany and Austria published together.
+    if (country) list = list.filter((entry) => entry.countries.includes(country));
     if (verification) list = list.filter((entry) => matches(entry, verification));
     list = search(query, list);
 
@@ -251,12 +255,12 @@
       </select>
     </label>
 
-    <label class="narrow">
+    <label class="wide">
       <span class="eyebrow">Country</span>
       <select bind:value={country} class:on={country !== ''}>
         <option value="">All</option>
         {#each countries as code (code)}
-          <option value={code}>{code}</option>
+          <option value={code}>{COUNTRY_NAMES[code] ?? code}</option>
         {/each}
       </select>
     </label>
@@ -318,15 +322,6 @@
         </button>
       </span>
     </label>
-
-    <label class="narrow">
-      <span class="eyebrow">Size</span>
-      <select bind:value={zoomPercent}>
-        {#each ZOOMS as percent (percent)}
-          <option value={percent}>{percent}%</option>
-        {/each}
-      </select>
-    </label>
   </div>
 </div>
 
@@ -347,8 +342,27 @@
       <a href={addCartridgeUrl()} target="_blank" rel="noopener noreferrer">Add a cartridge</a>
     </p>
   </div>
-  <div class="views" role="group" aria-label="View">
-    <div class="segmented">
+  <div class="views">
+    <!--
+      How big the drawings are, beside the control that decides whether there are any. It sat in
+      the filter bar, where it was one of five look-alike selects and read as though it narrowed
+      the results; here it is plainly part of the view, and it goes away in the list view, which
+      has no drawings for it to size. No label: the percentages say what it is, and the row it is
+      in is about the view already.
+    -->
+    {#if view === 'grid'}
+      <select
+        class="size"
+        bind:value={zoomPercent}
+        aria-label="Drawing size"
+        title="Drawing size, where 100% is the cartridge at life size"
+      >
+        {#each ZOOMS as percent (percent)}
+          <option value={percent}>{percent}%</option>
+        {/each}
+      </select>
+    {/if}
+    <div class="segmented" role="group" aria-label="View">
       <button
         type="button"
         class:on={view === 'grid'}
@@ -411,7 +425,7 @@
               {/if}
             </td>
             <td class="muted">{FAMILY_LABELS[entry.family] ?? entry.family}</td>
-            <td class="num muted">{entry.country ?? '-'}</td>
+            <td class="muted"><Flag codes={entry.countries} fallback="-" /></td>
             <td>
               <span class="verifications">
                 <!--
@@ -479,20 +493,24 @@
     gap: 0.6rem;
     min-width: 0;
   }
-  /* Left, after the filters, rather than pushed to the far edge. Pushing it right read well on a
-     wide bar and left an orphan hanging mid-air on any width where it wrapped to its own line;
-     the gap between the two clusters is what separates them, and it separates them at every
-     width. */
+  /* The sort sits at the far right of the bar, against the edge the count and the view controls
+     line up on below it, so the page has one axis: what is shown on the left, how it is shown on
+     the right. Below the width where the two clusters share a line it goes back to the left --
+     pushed right on a line of its own it hangs in mid-air. */
+  .cluster.presentation {
+    margin-left: auto;
+  }
+  @media (max-width: 56rem) {
+    .cluster.presentation {
+      margin-left: 0;
+    }
+  }
   .cluster label {
     flex: 1 1 auto;
     min-width: 0;
   }
   .cluster select {
     width: 100%;
-  }
-  .narrow {
-    flex-basis: 6rem;
-    max-width: 9rem;
   }
   .wide {
     flex-basis: 10.5rem;
@@ -530,7 +548,14 @@
   }
   .views {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
+    gap: 0.4rem;
+  }
+  .size {
+    padding: 0.25rem 0.4rem;
+    font-size: var(--step-0);
+    color: var(--ink-2);
   }
   .segmented {
     display: inline-flex;

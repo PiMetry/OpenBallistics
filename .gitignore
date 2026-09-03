@@ -2,3 +2,8 @@
 # svg/<family> sources at the repository root. The sources are the one copy; a committed copy here
 # would be a second able to go stale against it.
 src/public/outlines/
+
+# Copied at build time from the `flag-icons` package (MIT) by src/scripts/build-index.mjs, which
+# takes only the twenty the dataset names. The package is the one copy; a committed one here could
+# go stale against it.
+src/public/flags/
