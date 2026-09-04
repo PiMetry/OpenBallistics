@@ -1,7 +1,7 @@
 {
   "annotations": {
     "category": "pistol",
-    "confidence": "unverified",
+    "confidence": "implausible",
     "defaultBullet": {
       "base": "flat",
       "category": "pistol_round_nose",
@@ -10,7 +10,21 @@
       "verified": false
     },
     "defaultBulletShape": "rounded",
-    "implausible": [],
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.caseHead.E1",
+          "cartridge.caseHead.E",
+          "cartridge.caseHead.delta"
+        ],
+        "kind": "unplaced",
+        "message": "an extractor groove is published (E1 = 11.65) with neither E nor delta to place it on the head; the case is drawn without it",
+        "rule": "groove_is_placed",
+        "values": {
+          "E1": 11.65
+        }
+      }
+    ],
     "primerType": "lpm"
   },
   "cartridge": {
