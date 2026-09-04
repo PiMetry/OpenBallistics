@@ -38,6 +38,19 @@ body:
         - bullet
     validations:
       required: true
+  - type: dropdown
+    id: verdict
+    attributes:
+      label: Does it agree with the source?
+      description: >
+        The vote itself. Three readers agreeing marks that facet verified on the site; a reader who
+        finds it wrong is counted against it, so a facet carrying one disagreement needs a fourth
+        reader to agree before it is marked. Close your own issue to withdraw your vote.
+      options:
+        - It agrees with the source
+        - It does not agree with the source
+    validations:
+      required: true
   - type: textarea
     id: result
     attributes:

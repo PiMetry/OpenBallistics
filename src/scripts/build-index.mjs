@@ -20,6 +20,7 @@ const SVG = join(ROOT, 'svg');
 const OUTLINES = join(here, '..', 'public', 'outlines');
 const FLAG_SOURCE = join(here, '..', 'node_modules', 'flag-icons', 'flags', '4x3');
 const FLAGS = join(here, '..', 'public', 'flags');
+const VOTES = join(ROOT, 'verifications.json');
 const OUT = join(here, '..', 'src', 'lib', 'index.generated.json');
 const FLAGS_OUT = join(here, '..', 'src', 'lib', 'flags.generated.json');
 
@@ -528,21 +529,58 @@ function shape(record) {
  * nobody can confirm because there is nothing to confirm -- a chamber drawing that has not been
  * rendered, a bullet on a record that dimensions no bullet. Counting those as unverified would
  * make a fully checked shot cartridge read as four fifths done for ever.
+ *
+ * **The verdict and the count come from different places, on purpose** (2026-09-04). Whether a
+ * facet is settled is the record's own annotation, written upstream from the votes and mirrored
+ * by the sync. How the vote stands -- four for, one against -- is in `verifications.json`, which
+ * no record carries because a record is not the place for the arithmetic behind it. The file is
+ * the ballot box and the record is the declared result; where the two disagree, because somebody
+ * voted since the last upstream build, the record's verdict is what the page states and the file's
+ * tally is what it shows underneath.
  */
-function verifications(record, svg, drawings) {
+function verifications(record, svg, drawings, ballots) {
   const notes = record.annotations ?? {};
   const held = notes.verified ?? {};
   const drawn = (subject) => (drawings ?? []).some((drawing) => drawing.subject === subject);
 
-  const out = {};
+  const verified = {};
+  // How the vote stands, and **only where somebody has actually voted**. Every visitor downloads
+  // this index, and a tally of two zeros on every facet of 526 records is 91 KB of nothing; the
+  // page reads an absent tally as no votes cast, which is what it is. The older shape of the
+  // file, a bare `true` per facet, carries a verdict and no arithmetic, and lands here as no
+  // votes for the same reason.
+  const votes = {};
+  const cast = (facet, verdict) => {
+    verified[facet] = verdict;
+    const tally = ballots?.[facet];
+    if (!tally || typeof tally !== 'object') return;
+    const approve = Number(tally.approve) || 0;
+    const reject = Number(tally.reject) || 0;
+    if (approve || reject) votes[facet] = { approve, reject };
+  };
+
   // Both sides of the sheet are always published, so both can always be read against it.
-  out.cartridge = notes.confidence === 'verified';
-  out.chamber = held.chamber === true;
-  if (svg || drawn('cartridge')) out.cartridgeDrawing = held.cartridgeDrawing === true;
-  if (drawn('chamber')) out.chamberDrawing = held.chamberDrawing === true;
+  cast('cartridge', notes.confidence === 'verified');
+  cast('chamber', held.chamber === true);
+  if (svg || drawn('cartridge')) cast('cartridgeDrawing', held.cartridgeDrawing === true);
+  if (drawn('chamber')) cast('chamberDrawing', held.chamberDrawing === true);
   // The nose form is a property of the bullet the record dimensions; 32 records dimension none.
-  if (notes.defaultBullet) out.bullet = notes.defaultBullet.verified === true;
-  return out;
+  if (notes.defaultBullet) cast('bullet', notes.defaultBullet.verified === true);
+  return Object.keys(votes).length ? { verified, votes } : { verified };
+}
+
+/**
+ * How the vote stands on each facet, from `verifications.json` at the repository root.
+ *
+ * Written by `promote-verifications.mjs` from the open verification issues and read here for the
+ * counts alone; the verdict travels in the records themselves. An absent or unreadable file is a
+ * dataset nobody has voted on yet, which is where this one starts, so it is not an error.
+ */
+let ballots = {};
+try {
+  ballots = JSON.parse(await readFile(VOTES, 'utf8'));
+} catch {
+  // Nobody has voted yet.
 }
 
 const entries = [];
@@ -594,9 +632,10 @@ for (const family of families) {
       svg,
       ...(shippedDrawings ? { drawings: shippedDrawings } : {}),
       shape: shape(record),
-      // What a person has confirmed, facet by facet, and what only applies where it applies; see
+      // What is settled facet by facet (`verified`), and how the vote stands where anybody has
+      // voted (`votes`, absent on a record nobody has); what only applies applies. See
       // `verifications`. The list filters and sorts on these and the cartridge page names them.
-      verified: verifications(record, svg, shippedDrawings),
+      ...verifications(record, svg, shippedDrawings, ballots[record.key]),
       // How many plausibility rules fired on the record, and how many of those nothing explains.
       // From the dataset's own annotations (see cartridges/README.md); the cartridge page lists
       // what each finding is. A record can be fully verified and still carry an explained one.

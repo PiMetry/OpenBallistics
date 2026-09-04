@@ -22,6 +22,10 @@
     FACETS,
     FACET_LABELS,
     FACET_NOTES,
+    facetState,
+    facetSummary,
+    net,
+    VERIFY_THRESHOLD,
     FAMILY_LABELS,
     tally,
     verificationState,
@@ -377,6 +381,7 @@
   {@const unexplained = findings.filter((f) => !f.known)}
   {@const explained = findings.filter((f) => f.known)}
   {@const verified = entry?.verified ?? {}}
+  {@const votes = entry?.votes ?? {}}
   {@const counted = tally(verified)}
   {@const level = verificationState(verified)}
   <section class="verified" aria-label="Verification status">
@@ -387,11 +392,31 @@
         {:else}{VERIFICATION_LABELS.none}{/if}
       </span>
       <span class="verified-what">- verified means a person did proofread the data</span>
+      <!--
+        Each facet with how its vote stands, which is what a count could never say. Three readings
+        in agreement settle a facet; a reader who finds a fault costs it one, so `2 of 3 agreed`
+        and `disputed` are different states and neither is "unverified". The mark carries the
+        state for a glance, the number is only printed where there is a number to print, and the
+        hover says what the facet means and what the tally is.
+      -->
       <span class="facets">
         {#each FACETS.filter((facet) => facet in verified) as facet (facet)}
-          <span class="facet" class:yes={verified[facet]} title={FACET_NOTES[facet]}>
-            <span class="facet-mark" aria-hidden="true">{verified[facet] ? '✓' : '·'}</span>
+          {@const settled = verified[facet] === true}
+          {@const cast = votes[facet]}
+          {@const state = facetState(settled, cast)}
+          <span
+            class="facet {state}"
+            title={`${FACET_NOTES[facet]} - ${facetSummary(settled, cast)}`}
+          >
+            <span class="facet-mark" aria-hidden="true"
+              >{state === 'verified' ? '✓' : state === 'disputed' ? '!' : '·'}</span
+            >
             {FACET_LABELS[facet]}
+            {#if !settled && net(cast) > 0}
+              <span class="facet-vote num">{net(cast)}/{VERIFY_THRESHOLD}</span>
+            {:else if cast && cast.reject > 0}
+              <span class="facet-vote num">{cast.approve}-{cast.reject}</span>
+            {/if}
           </span>
         {/each}
       </span>
@@ -936,8 +961,21 @@
     gap: 0.25rem;
     white-space: nowrap;
   }
-  .facet.yes {
+  .facet.verified {
     color: var(--ok);
+  }
+  /* A reading that found a fault is not a facet nobody has read: it is the one state on the strip
+     that asks the reader for something, so it is the one that is allowed to be loud. */
+  .facet.disputed {
+    color: var(--alert);
+  }
+  /* Part way there. Coloured like a link rather than like a verdict, because it is neither. */
+  .facet.reading {
+    color: var(--accent);
+  }
+  .facet-vote {
+    font-size: 0.9em;
+    opacity: 0.85;
   }
   .facet-mark {
     font-weight: 700;
