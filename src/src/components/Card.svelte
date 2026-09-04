@@ -2,14 +2,15 @@
   import Drawing from './Drawing.svelte';
   import Flag from './Flag.svelte';
   import { card } from '../lib/drawings';
+  import { t } from '../lib/i18n.svelte';
   import { href } from '../lib/router';
   import {
-    FAMILY_LABELS,
+    familyLabel,
     tally,
     type Facet,
+    verificationLabel,
     verificationState,
     verificationSummary,
-    VERIFICATION_LABELS,
     type DrawingStyle,
     type Entry
   } from '../lib/types';
@@ -126,7 +127,7 @@
   </span>
 
   <span class="chips">
-    <span class="chip">{FAMILY_LABELS[entry.family] ?? entry.family}</span>
+    <span class="chip">{familyLabel(entry.family)}</span>
     {#if entry.countries.length}<Flag codes={entry.countries} />{/if}
     <!--
       How far the record can be trusted, said on every card so that the grid never reads as
@@ -138,9 +139,9 @@
       finished, which neither a tick nor the word "unverified" manages on its own.
     -->
     <span class="chip confidence {level}" title={verificationSummary(entry.verified, entry.votes)}>
-      {#if level === 'full'}✓ {VERIFICATION_LABELS.full}
-      {:else if level === 'partial'}{counted.done} of {counted.total} verified
-      {:else}{VERIFICATION_LABELS.none}{/if}
+      {#if level === 'full'}✓ {verificationLabel('full')}
+      {:else if level === 'partial'}{t('verify.count', { done: counted.done, total: counted.total })}
+      {:else}{verificationLabel('none')}{/if}
     </span>
     <!--
       A reading that found a fault, which the count above cannot show: it counts what is settled,
@@ -149,7 +150,7 @@
     -->
     {#if disputed}
       <span class="chip confidence disputed" title={verificationSummary(entry.verified, entry.votes)}>
-        {disputed} disputed
+        {t('verify.disputedCount', { count: disputed })}
       </span>
     {/if}
     <!--
@@ -160,9 +161,11 @@
     {#if entry.warnings}
       <span
         class="chip confidence implausible"
-        title={`${entry.warnings} plausibility finding${entry.warnings === 1 ? '' : 's'} nothing explains; see the cartridge page`}
+        title={t('verify.checkNote', { count: entry.warnings })}
       >
-        ⚠ {entry.warnings} check{entry.warnings === 1 ? '' : 's'}
+        ⚠ {entry.warnings === 1
+          ? t('verify.checkChip', { count: entry.warnings })
+          : t('verify.checkChipPlural', { count: entry.warnings })}
       </span>
     {/if}
   </span>

@@ -9,26 +9,28 @@
     plates,
     rememberStyle,
     storedStyle,
-    STYLE_LABELS,
-    STYLE_NOTES,
     STYLES,
+    styleLabel,
+    styleNote,
+    subjectLabel,
     SUBJECTS
   } from '../lib/drawings';
   import { issueUrl, verifyUrl } from '../lib/issue';
   import { href } from '../lib/router';
+  import { inSentence, t } from '../lib/i18n.svelte';
   import { PX_PER_MM } from '../lib/scale';
   import {
     FACETS,
-    FACET_LABELS,
-    FACET_NOTES,
+    facetLabel,
+    facetNote,
     facetState,
     facetSummary,
     net,
     VERIFY_THRESHOLD,
-    FAMILY_LABELS,
+    familyLabel,
     tally,
     verificationState,
-    VERIFICATION_LABELS,
+    verificationLabel,
     type Drawing as Plate,
     type DrawingStyle,
     type DrawingSubject,
@@ -276,7 +278,9 @@
   /** How a drawing is named in a sentence: "technical chamber at 12/70". */
   function describe(plate: Plate): string {
     const at = tag(plate);
-    return `${STYLE_LABELS[plate.style].toLowerCase()} ${plate.subject}${at ? ` at ${at}` : ''}`;
+    return `${styleLabel(plate.style).toLowerCase()} ${subjectLabel(plate.subject).toLowerCase()}${
+      at ? t('draw.at', { length: at }) : ''
+    }`;
   }
 
 
@@ -293,8 +297,12 @@
     length: string | null,
     plate: Plate
   ): string {
-    const asked = `${STYLE_LABELS[style].toLowerCase()} ${subject} drawing`;
-    return `No ${asked}${length ? ` at ${length}` : ''}; showing the ${describe(plate)}.`;
+    const asked = `${styleLabel(style).toLowerCase()} ${subjectLabel(subject).toLowerCase()}`;
+    return t('draw.missing', {
+      asked,
+      at: length ? t('draw.at', { length }) : '',
+      shown: describe(plate)
+    });
   }
 
   /**
@@ -359,7 +367,7 @@
 <svelte:window bind:innerHeight={viewportHeight} />
 
 {#await record}
-  <p class="status">Loading {entry?.name ?? key}…</p>
+  <p class="status">{t('record.loading', { name: entry?.name ?? key })}</p>
 {:then data}
   {@const drawn = plates(entry)}
   {@const styles = offered(STYLES, drawn, 'style')}
@@ -403,14 +411,17 @@
   {@const votes = entry?.votes ?? {}}
   {@const counted = tally(verified)}
   {@const level = verificationState(verified)}
-  <section class="verified" aria-label="Verification status">
+  <section class="verified" aria-label={t('verify.status')}>
     <p class="verified-line">
       <span class="verified-count {level}">
-        {#if level === 'full'}✓ {VERIFICATION_LABELS.full}
-        {:else if level === 'partial'}{counted.done} of {counted.total} verified
-        {:else}{VERIFICATION_LABELS.none}{/if}
+        {#if level === 'full'}✓ {verificationLabel('full')}
+        {:else if level === 'partial'}{t('verify.count', {
+            done: counted.done,
+            total: counted.total
+          })}
+        {:else}{verificationLabel('none')}{/if}
       </span>
-      <span class="verified-what">- verified means a person did proofread the data</span>
+      <span class="verified-what">{t('verify.means')}</span>
       <!--
         Each facet with how its vote stands, which is what a count could never say. Three readings
         in agreement settle a facet; a reader who finds a fault costs it one, so `2 of 3 agreed`
@@ -425,12 +436,12 @@
           {@const state = facetState(settled, cast)}
           <span
             class="facet {state}"
-            title={`${FACET_NOTES[facet]} - ${facetSummary(settled, cast)}`}
+            title={`${facetNote(facet)} - ${facetSummary(settled, cast)}`}
           >
             <span class="facet-mark" aria-hidden="true"
               >{state === 'verified' ? '✓' : state === 'disputed' ? '!' : '·'}</span
             >
-            {FACET_LABELS[facet]}
+            {facetLabel(facet)}
             {#if !settled && net(cast) > 0}
               <span class="facet-vote num">{net(cast)}/{VERIFY_THRESHOLD}</span>
             {:else if cast && cast.reject > 0}
@@ -444,7 +455,9 @@
     {#if findings.length}
       <div class="checks" class:open={unexplained.length}>
         <p class="checks-head">
-          Plausibility check{#if unexplained.length} - {unexplained.length} unexplained{/if}
+          {t('verify.checks')}{#if unexplained.length} - {t('verify.unexplained', {
+              count: unexplained.length
+            })}{/if}
         </p>
         <ul>
           {#each unexplained as f (f.rule + f.fields.join())}
@@ -461,7 +474,7 @@
   <header class="head">
     <div>
       <p class="eyebrow">
-        {FAMILY_LABELS[data.family] ?? data.family}
+        {familyLabel(data.family)}
         {#if entry?.countries.length}
           <span class="origin">·</span>
           <Flag codes={entry.countries} />
@@ -469,23 +482,23 @@
       </p>
       <h1>{data.name}</h1>
       {#if data.alternativeNames?.length}
-        <p class="alt">Also published as {data.alternativeNames.join(', ')}</p>
+        <p class="alt">{t('record.alsoPublished', { names: data.alternativeNames.join(', ') })}</p>
       {/if}
     </div>
     <dl class="meta">
       {#if data.pressureMethod}
-        <dt>Method</dt>
+        <dt>{t('record.method')}</dt>
         <dd>{data.pressureMethod}</dd>
       {/if}
       {#if data.published}
-        <dt>Published</dt>
+        <dt>{t('record.published')}</dt>
         <dd class="num">{data.published}</dd>
       {/if}
       {#if data.revised}
-        <dt>Revised</dt>
+        <dt>{t('record.revised')}</dt>
         <dd class="num">{data.revised}</dd>
       {/if}
-      <dt>Key</dt>
+      <dt>{t('record.key')}</dt>
       <dd class="num">{data.key}</dd>
     </dl>
   </header>
@@ -504,7 +517,7 @@
     <div class="views">
       {#if styles.length > 1}
         <div class="view">
-          <span class="eyebrow view-label">Style</span>
+          <span class="eyebrow view-label">{t('draw.style')}</span>
           <div class="options" role="group" aria-label="Drawing style">
             {#each styles as option (option)}
               <button
@@ -512,10 +525,10 @@
                 class="option"
                 class:on={option === style}
                 aria-pressed={option === style}
-                title={STYLE_NOTES[option]}
+                title={styleNote(option)}
                 onclick={() => setStyle(option)}
               >
-                <span class="option-name">{STYLE_LABELS[option]}</span>
+                <span class="option-name">{styleLabel(option)}</span>
               </button>
             {/each}
           </div>
@@ -524,7 +537,7 @@
 
       {#if hulls}
         <div class="view">
-          <span class="eyebrow view-label">Length</span>
+          <span class="eyebrow view-label">{t('draw.length')}</span>
           <div class="options" role="group" aria-label="Published hull length">
             {#each hulls as row (tag(row))}
               {@const on = tag(row) === selected}
@@ -535,7 +548,7 @@
                 aria-pressed={on}
                 onclick={() => (chosen = { key, length: tag(row)! })}
               >
-                <span class="option-name">{row.marking ?? 'Published'}</span>
+                <span class="option-name">{row.marking ?? t('draw.published')}</span>
                 <span class="option-sub num">{row.l} mm</span>
               </button>
             {/each}
@@ -551,22 +564,22 @@
       -->
       {#if shown.length}
         <div class="view">
-          <span class="eyebrow view-label">Size</span>
+          <span class="eyebrow view-label">{t('draw.size')}</span>
           <div class="zoom" role="group" aria-label="Drawing size">
             <button
               type="button"
               onclick={() => zoomBy(-1)}
               disabled={zoom === ZOOM_STEPS[0]}
-              aria-label="Smaller">−</button
+              aria-label={t('draw.smaller')}>−</button
             >
-            <button type="button" class="reset" onclick={() => setZoom(1)} title="Reset to life size"
-              >{zoom === 'fit' ? 'Fit' : `${Math.round(zoom * 100)}%`}</button
+            <button type="button" class="reset" onclick={() => setZoom(1)} title={t('draw.reset')}
+              >{zoom === 'fit' ? t('draw.fit') : `${Math.round(zoom * 100)}%`}</button
             >
             <button
               type="button"
               onclick={() => zoomBy(1)}
               disabled={zoom === ZOOM_STEPS[ZOOM_STEPS.length - 1]}
-              aria-label="Larger">+</button
+              aria-label={t('draw.larger')}>+</button
             >
           </div>
         </div>
@@ -614,7 +627,7 @@
         class:dragging
         role="region"
         aria-label={`${data.name}, ${label}`}
-        title="Drag to inspect an oversized drawing"
+        title={t('draw.drag')}
       >
         <div class="plate" bind:clientWidth={panelWidth}>
           <div
@@ -657,7 +670,7 @@
     {#if entry && shown.length}
       {@render panel(shown.find((plate) => plate.subject === 'cartridge'), 'cartridge drawing')}
     {/if}
-    <GroupTable side="cartridge" heading="Cartridge maxi" groups={data.cartridge} {selected}>
+    <GroupTable side="cartridge" heading={t('record.cartridgeMaxi')} groups={data.cartridge} {selected}>
       <!--
         The bullet the drawing puts in the case mouth, among the cartridge's own dimensions, which
         is what it is a property of. It used to sit inside the verification box, where it read as
@@ -666,19 +679,19 @@
       -->
       {#if data.annotations?.defaultBullet}
         <section class="group bullet">
-          <h3>Bullet as drawn</h3>
+          <h3>{t('record.bullet')}</h3>
           <dl class="bullet-data">
             {#if data.annotations.defaultBulletShape}
-              <dt>Shape</dt>
+              <dt>{t('record.shape')}</dt>
               <dd>{data.annotations.defaultBulletShape}</dd>
             {/if}
-            <dt>Category</dt>
+            <dt>{t('record.category')}</dt>
             <dd>{data.annotations.defaultBullet.category}</dd>
-            <dt>Ogive</dt>
+            <dt>{t('record.ogive')}</dt>
             <dd>{data.annotations.defaultBullet.ogive}</dd>
-            <dt>Base</dt>
+            <dt>{t('record.base')}</dt>
             <dd>{data.annotations.defaultBullet.base}</dd>
-            <dt>Tip</dt>
+            <dt>{t('record.tip')}</dt>
             <dd>{data.annotations.defaultBullet.tip}</dd>
           </dl>
         </section>
@@ -688,13 +701,13 @@
     {#if entry && shown.length}
       {@render panel(shown.find((plate) => plate.subject === 'chamber'), 'chamber drawing')}
     {/if}
-    <GroupTable side="chamber" heading="Chamber mini" groups={data.chamber} {selected} />
+    <GroupTable side="chamber" heading={t('record.chamberMini')} groups={data.chamber} {selected} />
   </div>
 
   <p class="foot">
-    <a href={href.list()}>Back to all cartridges</a>
+    <a href={href.list()}>{t('record.back')}</a>
     {#if report}
-      · <a href={report} target="_blank" rel="noopener noreferrer">Something look wrong?</a>
+      · <a href={report} target="_blank" rel="noopener noreferrer">{t('record.report')}</a>
     {/if}
     <!--
       The separator is an element with its own spacing rather than a character between two tags:
@@ -705,7 +718,7 @@
       <span class="sep" aria-hidden="true">·</span><a
         {href}
         target="_blank"
-        rel="noopener noreferrer">Verify {FACET_LABELS[facet].toLowerCase()}</a
+        rel="noopener noreferrer">{t('record.verifyFacet', { facet: inSentence(facetLabel(facet)) })}</a
       >
     {/each}
   </p>
@@ -865,13 +878,6 @@
     align-items: center;
     gap: 0.4rem 1.4rem;
     margin: 1.5rem 0 0;
-  }
-  /* Under the figure, where a caption goes: it is about what was just shown, not a control. */
-  .figure-note {
-    margin: -0.75rem 0 1.5rem;
-    max-width: 62ch;
-    font-size: 0.78rem;
-    color: var(--ink-2);
   }
   .view {
     display: flex;
@@ -1165,10 +1171,6 @@
       /* On screen a drawing larger than its column is dragged about inside it; on paper there is
          nothing to drag with, and a clipped drawing would just be a drawing with its end cut off. */
       overflow: visible;
-    }
-    .plate-note,
-    .figure-note {
-      display: none;
     }
     .plate-box {
       position: relative;

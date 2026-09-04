@@ -8,26 +8,24 @@
  * sets the grid to dimensioned drawings and opens a card should land on a dimensioned drawing.
  */
 
+import { t } from './i18n.svelte';
 import type { Drawing, DrawingStyle, DrawingSubject, Entry } from './types';
 
 export const SUBJECTS: DrawingSubject[] = ['cartridge', 'chamber'];
 export const STYLES: DrawingStyle[] = ['visual', 'technical'];
 
-export const SUBJECT_LABELS: Record<DrawingSubject, string> = {
-  cartridge: 'Cartridge',
-  chamber: 'Chamber'
-};
+export function subjectLabel(subject: DrawingSubject): string {
+  return t(`subject.${subject}`);
+}
 
-export const STYLE_LABELS: Record<DrawingStyle, string> = {
-  visual: 'Visual',
-  technical: 'Technical'
-};
+export function styleLabel(style: DrawingStyle): string {
+  return t(`style.${style}`);
+}
 
 /** What each style is, for a hover on a control that has room for one word. */
-export const STYLE_NOTES: Record<DrawingStyle, string> = {
-  visual: 'The cartridge as it is: the rendered object, at life size',
-  technical: "The dimensioned drawing, naming where each of C.I.P.'s symbols is measured"
-};
+export function styleNote(style: DrawingStyle): string {
+  return t(`style.${style}Note`);
+}
 
 /**
  * Every drawing this cartridge has.

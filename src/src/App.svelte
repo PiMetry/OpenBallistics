@@ -2,6 +2,7 @@
   import Cartridge from './routes/Cartridge.svelte';
   import List from './routes/List.svelte';
   import { href, route } from './lib/router';
+  import { lang, LANG_LABELS, LANGS, setLang, t } from './lib/i18n.svelte';
 
   const current = $derived($route);
   const repository = import.meta.env.VITE_REPO ?? 'PiMetry/OpenBallistics';
@@ -29,6 +30,11 @@
   $effect(() => {
     document.documentElement.dataset.theme = theme;
   });
+  // And what language it is in, which `setLang` stamps when the reader switches and nothing
+  // stamped on the first load of a page that remembered a choice from last time.
+  $effect(() => {
+    document.documentElement.lang = lang();
+  });
   function toggleTheme() {
     theme = theme === 'dark' ? 'light' : 'dark';
     try {
@@ -39,7 +45,7 @@
   }
 </script>
 
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">{t('site.skip')}</a>
 
 <header class="bar">
   <!--
@@ -51,10 +57,12 @@
   -->
   <a class="brand" href={href.list()}>
     <span class="mark">OB</span>
-    <span class="title">Cartridge &amp; chamber dimensions</span>
+    <span class="title">{t('site.title')}</span>
   </a>
   <nav class="tools" aria-label="Site">
-    <a class="tool" href={href.list()} aria-current={current.view === 'list' ? 'page' : undefined}>Home</a>
+    <a class="tool" href={href.list()} aria-current={current.view === 'list' ? 'page' : undefined}
+      >{t('site.home')}</a
+    >
     <a class="tool" href={`https://github.com/${repository}`} target="_blank" rel="noopener noreferrer">
       GitHub
     </a>
@@ -63,10 +71,29 @@
       class="tool"
       onclick={toggleTheme}
       aria-pressed={theme === 'dark'}
-      title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={theme === 'dark' ? t('site.toLight') : t('site.toDark')}
     >
-      {#if theme === 'dark'}☀ Light{:else}☾ Dark{/if}
+      {#if theme === 'dark'}{t('site.light')}{:else}{t('site.dark')}{/if}
     </button>
+    <!--
+      Each language named in itself, so a reader who cannot read the page can still find their own.
+      A pair of buttons rather than a select: there are two, and a select would hide one of them
+      behind a click to save nothing.
+    -->
+    <div class="langs" role="group" aria-label={t('site.language')}>
+      {#each LANGS as code (code)}
+        <button
+          type="button"
+          class="tool lang"
+          class:on={lang() === code}
+          aria-pressed={lang() === code}
+          onclick={() => setLang(code)}
+          lang={code}
+        >
+          {LANG_LABELS[code]}
+        </button>
+      {/each}
+    </div>
   </nav>
 </header>
 
@@ -76,21 +103,15 @@
   using a number, so it is the first thing on the page.
 -->
 <aside class="alert" role="alert">
-  <p class="alert-title">Reference only - alpha</p>
-  <p>
-    Verify every figure against the official C.I.P. tables before machining a chamber, cutting a
-    reamer, or loading ammunition. These pages are a convenience for reading published dimensions
-    and are not a substitute for the standard.
-  </p>
+  <p class="alert-title">{t('alert.title')}</p>
+  <p>{t('alert.body')}</p>
   <!--
     What "alpha" means, rather than the word on its own. A reader who is about to cut metal needs
     to know what the label buys them, and the honest answer is: not much yet. How far any one
     record has been proofread is said on that record's page, not here.
   -->
   <p class="alert-alpha">
-    <strong>This site is in development and at alpha status</strong>: it is an early, incomplete
-    version, published so it can be checked and corrected. Expect errors, gaps and changes to the
-    data, and treat nothing here as settled.
+    <strong>{t('alert.alphaLead')}</strong>{t('alert.alphaBody')}
   </p>
 </aside>
 
@@ -103,18 +124,20 @@
 </main>
 
 <footer>
+  <!--
+    One sentence in the dictionary, with the three parts that carry their own emphasis passed into
+    it: word order moves between languages and a sentence glued together in the markup can only
+    ever have English's.
+  -->
   <p>
-    Dimensions are specified by the <strong>Permanent International Commission for the Proof of
-    Small Arms (C.I.P.)</strong> and published in its <em>Tables of Dimensions of Cartridges and
-    Chambers</em>. C.I.P. is the authority for these values.
-    <strong>This site is independent and is not affiliated with, endorsed by, or published by
-    C.I.P.</strong>
+    {@html
+      t('footer.source', {
+        authority: `<strong>${t('footer.authority')}</strong>`,
+        tables: `<em>${t('footer.tables')}</em>`,
+        independent: `<strong>${t('footer.independent')}</strong>`
+      })}
   </p>
-  <p>
-    The dimensions themselves are technical facts and nobody's property; no rights are claimed over
-    them here, and none could be. Everything else, the records, the drawings and the code behind
-    this site, is under the MIT licence.
-  </p>
+  <p>{t('footer.licence')}</p>
 
 </footer>
 
@@ -184,6 +207,16 @@
     border-color: var(--accent);
     text-decoration: none;
   }
+  .langs {
+    display: inline-flex;
+    gap: 0.25rem;
+  }
+  .lang.on {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    font-weight: 600;
+  }
   .tool[aria-current='page'] {
     color: var(--ink-3);
     border-color: var(--rule);
@@ -211,7 +244,7 @@
   footer p:last-child {
     margin-bottom: 0;
   }
-  footer strong {
+  :global(footer strong) {
     color: var(--ink);
   }
   .alert {

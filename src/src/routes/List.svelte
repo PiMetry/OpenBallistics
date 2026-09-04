@@ -2,19 +2,20 @@
   import Card from '../components/Card.svelte';
   import Flag from '../components/Flag.svelte';
   import { countries, entries, families, search } from '../lib/data';
-  import { rememberStyle, storedStyle, STYLE_LABELS, STYLE_NOTES, STYLES } from '../lib/drawings';
+  import { rememberStyle, storedStyle, styleLabel, styleNote, STYLES } from '../lib/drawings';
+  import { lang, t } from '../lib/i18n.svelte';
   import { href } from '../lib/router';
   import { PX_PER_MM } from '../lib/scale';
   import {
     COUNTRY_NAMES,
     FACETS,
-    FACET_LABELS,
-    FAMILY_LABELS,
+    facetLabel,
+    familyLabel,
     tally,
     verificationScore,
     verificationState,
     verificationSummary,
-    VERIFICATION_LABELS,
+    verificationLabel,
     type DrawingStyle,
     type Entry,
     type Facet
@@ -146,10 +147,7 @@
     } else if (sort === 'family') {
       sorted.sort(
         (a, b) =>
-          (FAMILY_LABELS[a.family] ?? a.family).localeCompare(
-            FAMILY_LABELS[b.family] ?? b.family,
-            'en'
-          ) || byName(a, b)
+          familyLabel(a.family).localeCompare(familyLabel(b.family), lang()) || byName(a, b)
       );
     } else if (sort === 'verification') {
       sorted.sort((a, b) => verificationScore(a) - verificationScore(b) || byName(a, b));
@@ -264,30 +262,30 @@
 -->
 <div class="controls">
   <label class="search">
-    <span class="eyebrow">Search</span>
+    <span class="eyebrow">{t('list.search')}</span>
     <input
       type="search"
       bind:value={query}
-      placeholder="308, 7.62 x 51, 9 mm Luger…"
+      placeholder={t('list.searchHint')}
       autocomplete="off"
     />
   </label>
 
   <div class="cluster">
     <label class="wide">
-      <span class="eyebrow">Family</span>
+      <span class="eyebrow">{t('list.family')}</span>
       <select bind:value={family} class:on={family !== ''}>
-        <option value="">All families</option>
+        <option value="">{t('list.allFamilies')}</option>
         {#each families as name (name)}
-          <option value={name}>{FAMILY_LABELS[name] ?? name}</option>
+          <option value={name}>{familyLabel(name)}</option>
         {/each}
       </select>
     </label>
 
     <label class="wide">
-      <span class="eyebrow">Country</span>
+      <span class="eyebrow">{t('list.country')}</span>
       <select bind:value={country} class:on={country !== ''}>
-        <option value="">All</option>
+        <option value="">{t('list.all')}</option>
         {#each countries as code (code)}
           <option value={code}>{COUNTRY_NAMES[code] ?? code}</option>
         {/each}
@@ -300,22 +298,26 @@
       sitting under a heading that says Verification could be read as a family.
     -->
     <label class="widest">
-      <span class="eyebrow">Verification</span>
+      <span class="eyebrow">{t('list.verification')}</span>
       <select bind:value={verification} class:on={verification !== ''}>
-        <option value="">Any</option>
+        <option value="">{t('list.any')}</option>
         <optgroup label="How far along">
-          <option value="full">{VERIFICATION_LABELS.full}</option>
-          <option value="partial">{VERIFICATION_LABELS.partial}</option>
-          <option value="none">{VERIFICATION_LABELS.none}</option>
+          <option value="full">{verificationLabel('full')}</option>
+          <option value="partial">{verificationLabel('partial')}</option>
+          <option value="none">{verificationLabel('none')}</option>
         </optgroup>
         <optgroup label="Confirmed">
           {#each FACETS as facet (facet)}
-            <option value={`is:${facet}`}>{FACET_LABELS[facet]} verified</option>
+            <option value={`is:${facet}`}
+              >{t('list.verifiedFacet', { facet: facetLabel(facet) })}</option
+            >
           {/each}
         </optgroup>
         <optgroup label="Still to confirm">
           {#each FACETS as facet (facet)}
-            <option value={`not:${facet}`}>{FACET_LABELS[facet]} unverified</option>
+            <option value={`not:${facet}`}
+              >{t('list.unverifiedFacet', { facet: facetLabel(facet) })}</option
+            >
           {/each}
         </optgroup>
         <optgroup label="Disagreement">
@@ -331,14 +333,14 @@
 
   <div class="cluster presentation">
     <label class="wide">
-      <span class="eyebrow">Sort</span>
+      <span class="eyebrow">{t('list.sort')}</span>
       <span class="sort-row">
         <select value={sort} onchange={(event) => setSort(event.currentTarget.value as Sort)}>
-          <option value="name">Name</option>
-          <option value="family">Family</option>
-          <option value="verification">Verification</option>
-          <option value="L3">Case length</option>
-          <option value="L6">Overall length</option>
+          <option value="name">{t('list.sortName')}</option>
+          <option value="family">{t('list.sortFamily')}</option>
+          <option value="verification">{t('list.sortVerification')}</option>
+          <option value="L3">{t('list.sortCaseLength')}</option>
+          <option value="L6">{t('list.sortOverallLength')}</option>
           <option value="G1">Bullet diameter</option>
         </select>
         <button
@@ -360,7 +362,10 @@
 <div class="summary">
   <div>
     <p class="count">
-      <strong class="num">{shown.length}</strong> of {entries.length} cartridges
+      {@html t('list.count', {
+        shown: `<strong class="num">${shown.length}</strong>`,
+        total: entries.length
+      })}
       <!--
         Offered whenever a filter is set, not whenever the count has changed. A search that happens
         to match everything is still a search somebody has to clear, and it used to hide its own
@@ -386,43 +391,43 @@
         shipped under, and a pictogram for "dimensioned" would be a puzzle. It goes away in the
         list view along with the size, for the same reason: there are no drawings there to be of.
       -->
-      <div class="segmented styles" role="group" aria-label="Drawing style">
+      <div class="segmented styles" role="group" aria-label={t('list.style')}>
         {#each STYLES as option (option)}
           <button
             type="button"
             class:on={style === option}
             aria-pressed={style === option}
-            title={STYLE_NOTES[option]}
-            onclick={() => setStyle(option)}>{STYLE_LABELS[option]}</button
+            title={styleNote(option)}
+            onclick={() => setStyle(option)}>{styleLabel(option)}</button
           >
         {/each}
       </div>
       <select
         class="size"
         bind:value={zoomPercent}
-        aria-label="Drawing size"
-        title="Drawing size, where 100% is the cartridge at life size"
+        aria-label={t('list.scale')}
+        title={t('list.scaleNote')}
       >
         {#each ZOOMS as percent (percent)}
           <option value={percent}>{percent}%</option>
         {/each}
       </select>
     {/if}
-    <div class="segmented" role="group" aria-label="View">
+    <div class="segmented" role="group" aria-label={t('list.view')}>
       <button
         type="button"
         class:on={view === 'grid'}
         aria-pressed={view === 'grid'}
-        aria-label="Grid view"
-        title="Grid view"
+        aria-label={t('list.gridView')}
+        title={t('list.gridView')}
         onclick={() => (view = 'grid')}><span aria-hidden="true">▦</span></button
       >
       <button
         type="button"
         class:on={view === 'list'}
         aria-pressed={view === 'list'}
-        aria-label="List view"
-        title="List view"
+        aria-label={t('list.listView')}
+        title={t('list.listView')}
         onclick={() => (view = 'list')}><span aria-hidden="true">☷</span></button
       >
     </div>
@@ -431,9 +436,12 @@
 
 {#if shown.length === 0}
   <p class="empty">
-    Nothing matches. The tables use C.I.P.'s own spelling, <code>308 Win.</code>,
-    <code>9 mm Luger</code>, <code>7,62 x 39</code>, and the search also reads the alternative
-    names each sheet lists.
+    {t('list.emptyLead')}
+    {@html t('list.emptyBody', {
+      a: '<code>308 Win.</code>',
+      b: '<code>9 mm Luger</code>',
+      c: '<code>7,62 x 39</code>'
+    })}
   </p>
 {:else if view === 'grid'}
   <div class="grid">
@@ -470,7 +478,7 @@
                 <span class="alt">{entry.alt.join(' · ')}</span>
               {/if}
             </td>
-            <td class="muted">{FAMILY_LABELS[entry.family] ?? entry.family}</td>
+            <td class="muted">{familyLabel(entry.family)}</td>
             <td class="muted"><Flag codes={entry.countries} fallback="-" /></td>
             <td>
               <span class="verifications">
@@ -657,7 +665,7 @@
     color: var(--ink-2);
     max-width: 46ch;
   }
-  code {
+  :global(.empty code) {
     font-family: var(--mono);
     font-size: 0.85em;
     background: var(--surface-2);

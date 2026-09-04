@@ -1,5 +1,7 @@
 /** The shape of a record in `public/cartridges/`, and of the index built from those records. */
 
+import { t } from './i18n.svelte';
+
 export type Angle = { degrees: number; minutes?: number; seconds?: number };
 export type Value = number | string | Angle | null;
 
@@ -69,11 +71,9 @@ export interface Finding {
  */
 export type Confidence = 'verified' | 'unverified' | 'implausible';
 
-export const CONFIDENCE_LABELS: Record<Confidence, string> = {
-  verified: 'Verified',
-  unverified: 'Unverified',
-  implausible: 'Check'
-};
+export function confidenceLabel(confidence: Confidence): string {
+  return confidence === 'implausible' ? t('list.plausibility') : t(`verify.${confidence}`);
+}
 
 /** What a drawing is a drawing of: the cartridge, or the chamber it is fired in. */
 export type DrawingSubject = 'cartridge' | 'chamber';
@@ -130,22 +130,21 @@ export const FACETS = [
 ] as const;
 export type Facet = (typeof FACETS)[number];
 
-export const FACET_LABELS: Record<Facet, string> = {
-  cartridge: 'Cartridge',
-  chamber: 'Chamber',
-  cartridgeDrawing: 'Cartridge drawing',
-  chamberDrawing: 'Chamber drawing',
-  bullet: 'Bullet'
-};
+/**
+ * What a facet is called, in the reader's language.
+ *
+ * A function rather than the map it used to be, because the answer now depends on something that
+ * changes while the page is open. The keys never do: they are the dataset's own names and the
+ * words the issue forms are keyed by.
+ */
+export function facetLabel(facet: Facet): string {
+  return t(`facet.${facet}`);
+}
 
 /** What each facet means, for the reader who wants to know what a person actually proofread. */
-export const FACET_NOTES: Record<Facet, string> = {
-  cartridge: "The cartridge's published dimensions, proofread by a person",
-  chamber: "The chamber's published dimensions, proofread by a person",
-  cartridgeDrawing: 'The drawing of the cartridge, proofread by a person',
-  chamberDrawing: 'The drawing of the chamber, proofread by a person',
-  bullet: "The drawn bullet's nose form, proofread by a person"
-};
+export function facetNote(facet: Facet): string {
+  return t(`facetNote.${facet}`);
+}
 
 /**
  * What is confirmed about one record.
@@ -223,11 +222,9 @@ export function verificationState(verified: Verified): VerificationState {
   return done ? 'partial' : 'none';
 }
 
-export const VERIFICATION_LABELS: Record<VerificationState, string> = {
-  full: 'Fully verified',
-  partial: 'Partly verified',
-  none: 'Unverified'
-};
+export function verificationLabel(state: VerificationState): string {
+  return t(`verify.${state}`);
+}
 
 /**
  * The facets spelled out, for the hover of a badge that can only afford a number.
@@ -237,7 +234,7 @@ export const VERIFICATION_LABELS: Record<VerificationState, string> = {
  */
 export function verificationSummary(verified: Verified, votes: Votes = {}): string {
   return FACETS.filter((facet) => facet in verified)
-    .map((facet) => `${FACET_LABELS[facet]} ${facetSummary(verified[facet] === true, votes[facet])}`)
+    .map((facet) => `${facetLabel(facet)} ${facetSummary(verified[facet] === true, votes[facet])}`)
     .join(' · ');
 }
 
@@ -381,11 +378,14 @@ export const COUNTRY_NAMES: Record<string, string> = {
   US: 'United States'
 };
 
-export const FAMILY_LABELS: Record<string, string> = {
-  rimless: 'Rimless',
-  rimmed: 'Rimmed',
-  belted: 'Belted',
-  pistol: 'Pistol & revolver',
-  rimfire: 'Rimfire',
-  shotshell: 'Shot cartridge'
-};
+const FAMILIES = ['rimless', 'rimmed', 'belted', 'pistol', 'rimfire', 'shotshell'];
+
+/**
+ * What a case family is called, in the reader's language.
+ *
+ * A family the dataset grows and this list has not heard of is shown by its own name rather than
+ * hidden or guessed at, which is what the old map did by falling through.
+ */
+export function familyLabel(family: string): string {
+  return FAMILIES.includes(family) ? t(`family.${family}`) : family;
+}

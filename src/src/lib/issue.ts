@@ -15,7 +15,7 @@
  * checkable against the sheet.
  */
 
-import { FACET_LABELS, type Entry, type Facet } from './types';
+import { type Entry, type Facet } from './types';
 
 /**
  * The repository issues live in, as `owner/name`.
@@ -56,8 +56,20 @@ export function issueUrl(entry: Entry): string {
  * GitHub selects a dropdown option by matching its text, so the two have to agree; renaming a
  * facet here without renaming the option there loses the prefill silently.
  */
+/** How the issue form names each facet, in the form's own language. */
+const FORM_FACETS: Record<Facet, string> = {
+  cartridge: 'cartridge',
+  chamber: 'chamber',
+  cartridgeDrawing: 'cartridge drawing',
+  chamberDrawing: 'chamber drawing',
+  bullet: 'bullet'
+};
+
 export function verifyUrl(entry: Entry, target: Facet): string {
-  const what = FACET_LABELS[target].toLowerCase();
+  // The form's own wording, not the reader's language: these words are the dropdown's options in
+  // `verify.yml` and the keys `promote-verifications.mjs` counts by, and a German prefill would
+  // match none of them. See FACETS there.
+  const what = FORM_FACETS[target];
   return formUrl('verify.yml', 'verification', `Verify ${what}: ${entry.name} (${entry.key})`, {
     cartridge: `${entry.name} (${entry.key})`,
     target: what,
