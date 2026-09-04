@@ -273,6 +273,46 @@
   }
 
   /**
+   * How tall each drawing may print, in millimetres of paper.
+   *
+   * The printed sheet is composed rather than measured -- see the print rules for why the obvious
+   * way, handing the figure whatever the tables leave, does not survive the PDF renderer -- so the
+   * page has to decide up front how much height the drawings may take. What that depends on is how
+   * much the record has to tabulate: a 9 mm Luger publishes 41 figures and a 308 Win 59, and the
+   * second needs about 20 mm more paper for its tables than the first.
+   *
+   * The line through it is measured rather than reasoned. Records were printed at eight budgets
+   * each and the last one that still came out on a single sheet was recorded: a 9 mm Luger, 34
+   * figures, holds 70 mm a drawing, and both a 308 Win at 54 figures and a 375 Chey Tac at 52 hold
+   * 58 mm. That is three fifths of a millimetre of drawing lost per figure tabulated, which is this
+   * line, less four millimetres of margin because the failure is a second sheet carrying two tables
+   * and nothing else.
+   *
+   * It is arithmetic on a count, and a count is not a layout: a record whose labels wrap, or whose
+   * figures are spread over many short groups, takes more paper per figure than these did -- the
+   * Chey Tac and the 308 stop at the same budget on two figures' difference, which is the size of
+   * the error being carried. Hence the margin, hence the floor, and hence `--print-cap` being a
+   * ceiling rather than a size: most drawings never reach it, because the width of the sheet binds
+   * first. The sweep in the scratchpad prints a spread of the dataset and counts the pages.
+   */
+  function printCap(data: Record_): string {
+    const values = (side: Record<string, unknown> | undefined): number =>
+      Object.values(side ?? {}).reduce((sum: number, group) => {
+        if (Array.isArray(group)) return sum + group.length;
+        if (!group || typeof group !== 'object') return sum;
+        return (
+          sum +
+          Object.entries(group).filter(
+            ([field, value]) => !field.endsWith('Tol') && value !== null && value !== undefined
+          ).length
+        );
+      }, 0);
+    const counted = values(data.cartridge) + values(data.chamber);
+    const mm = 66 - 0.6 * (counted - 34);
+    return `${Math.round(Math.min(66, Math.max(50, mm)))}mm`;
+  }
+
+  /**
    * What is on screen, where it is not what was asked for.
    *
    * Written here rather than in the markup so that the sentence is one string: a `{#if}` around a
@@ -564,12 +604,14 @@
       onlostpointercapture={endDrag}
       class:dragging
       class:paired={shown.length > 1}
-      class:long={widest > 95}
       role="region"
       aria-label={`${data.name}, cartridge and chamber drawings`}
       title="Drag to inspect an oversized drawing"
     >
-      <div class="stage" style={`--mm-widest:${widest};--mm-tallest:${tallest}`}>
+      <div
+        class="stage"
+        style={`--mm-widest:${widest};--mm-tallest:${tallest};--print-cap:${printCap(data)}`}
+      >
         {#each shown as plate (plate.subject)}
           {@const off =
             plate.style !== style ||
@@ -1064,29 +1106,31 @@
     .foot {
       display: none !important;
     }
-    :global(main) {
-      max-width: none;
-      padding: 0;
-    }
+    /* The sheet is a whole page: the masthead, the drawings, then the tables.
 
-    /* The same panels the screen shows, on one sheet.
+       The drawings are what fills it. They are the one thing here worth more the larger it is --
+       C.I.P. sets its symbols 1.6 mm high, which is the whole reason the screen offers a zoom --
+       so they are given the width of the sheet and as much height as the tables can spare.
 
-       Nothing is duplicated for paper: one set of images serves both, which is why they are
-       already loaded when somebody hits print.
+       Stacked down the page rather than set beside each other. Two columns halved the width and
+       with it the scale: a 308 Win came out at life size in an 86 mm column when the same drawing
+       across the sheet is one and a half times that, and the pair still reads down the page the
+       way it does on screen, hung from one left edge with the chamber under the round that goes
+       into it.
 
-       One layout for both styles. The rendered drawings used to stand upright side by side and the
-       dimensioned ones lay stacked and enlarged, which were two different sheets for one cartridge
-       and left the dimensioned one running onto a second page. Now every drawing lies the way the
-       screen lays it, in the same two columns as the tables underneath, so the cartridge is over
-       Cartridge maxi and the chamber over Chamber mini whichever style is printed; a dimensioned
-       drawing could never be turned anyway, because its labels are set horizontally.
+       The size is arithmetic in millimetres, not a share of what is left over. Laying the sheet
+       out as a flex column and handing the figure the slack is the obvious way to fill a page and
+       it does work in the browser's own print preview -- and not in the pipeline that renders the
+       PDF, where the flex height stays indefinite, every drawing falls back to its natural size,
+       and the second one prints across the tables. So the page is composed rather than measured.
 
-       Sizes are in `mm` throughout, which on paper is a millimetre rather than the CSS convention
-       a screen settles for. Both drawings are at one scale, worked out once from the widest and
-       tallest of the pair (`--mm-widest`, `--mm-tallest`, set on the stage): each fills its column
-       or the height budget, whichever binds first, and never more than life size and a half. A
-       cartridge too long for half a sheet -- `.long`, over 95 mm of drawing -- stacks the pair
-       across the full width instead, since at half width its symbols would be under a millimetre. */
+       One scale for both panels, from the wider and the taller of the two (`--mm-widest`,
+       `--mm-tallest` on the stage), because the point of printing a cartridge beside its chamber
+       is the tenth of a millimetre between them, and two scales would quietly destroy it.
+
+       `--print-cap` is the height each drawing may have, and the page sets it from how much the
+       record has to tabulate; see `printCap`. Whichever binds first, the width of the sheet or
+       that, is the scale. */
     .drawing {
       display: block;
       min-height: 0;
@@ -1101,44 +1145,27 @@
        least as specifically here or the pair keeps the screen's own tracks. */
     .drawing .stage,
     .drawing.paired .stage {
-      --col: 86mm;
-      --cap: 60mm;
+      --col: 180mm;
       --scale: min(
         calc(var(--col) / var(--mm-widest)),
-        calc(var(--cap) / var(--mm-tallest)),
-        1.5mm
+        calc(var(--print-cap, 68mm) / var(--mm-tallest))
       );
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0 8mm;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 4mm 0;
       align-items: start;
       justify-items: start;
       margin: 0;
       width: 100%;
     }
-    .drawing:not(.paired) .stage,
-    .drawing.long .stage,
-    .drawing.long.paired .stage {
-      --col: 180mm;
-      --cap: 46mm;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 3mm 0;
-      justify-items: center;
-    }
     .plate,
     .drawing.paired .plate {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      display: block;
       margin: 0;
       break-inside: avoid;
       /* On screen a panel is a small viewport that pans; on paper there is nothing to pan with,
          and a clipped drawing would just be a drawing with its end cut off. */
       overflow: visible;
-    }
-    .drawing:not(.paired) .plate,
-    .drawing.long .plate {
-      align-items: center;
     }
     /* Captioned even where there is only one, which the screen leaves unnamed: the controls that
        said which style and which length are not on the sheet, so the caption is the only thing
@@ -1164,7 +1191,6 @@
       height: auto !important;
       max-width: none;
     }
-
     /* Off the sheet. It is a caveat about who has read the page, which belongs beside the page
        while you are reading it and not on the paper you carry to the machine. */
     .verified {
