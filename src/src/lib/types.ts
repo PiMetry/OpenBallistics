@@ -88,10 +88,15 @@ export type DrawingStyle = 'visual' | 'technical';
 /**
  * One drawing shipped for a cartridge, and what it is a drawing of.
  *
- * `file` is its path under `outlines/<family>/`; `svg` is its extent in millimetres,
- * `[width, height]`, the same as `Entry.svg`. `l` and `marking` are set only on a shot cartridge,
- * where the gauge names a family and the hull length names a member of it -- a 12 gauge is drawn
- * at each of nine, from 12/35 to 12/89.
+ * `file` is its path under `outlines/<family>/`. `svg` is its extent in millimetres,
+ * `[width, height]`, the same as `Entry.svg` -- real millimetres, not the units it was drawn in:
+ * the renderer draws the cartridge at 1:1 and the chamber and both dimensioned drawings at 4:1,
+ * and `unitsPerMm` in the build is where that is undone. Everything on this site is laid out in
+ * millimetres and at one millimetres-per-pixel, so a value here that was not one would put a
+ * chamber beside its cartridge at four times the size of the round that goes in it.
+ *
+ * `l` and `marking` are set only on a shot cartridge, where the gauge names a family and the hull
+ * length names a member of it -- a 12 gauge is drawn at each of nine, from 12/35 to 12/89.
  */
 export interface Drawing {
   file: string;

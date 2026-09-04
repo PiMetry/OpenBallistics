@@ -38,6 +38,15 @@ function records(): Plugin {
       });
     },
     closeBundle() {
+      // The notices travel with the thing they are notices for. The built site serves other
+      // people's files -- the flags, and Svelte's runtime inside the bundle -- and the MIT licence
+      // asks that its notice be included with the copies, which a file in the repository alone
+      // does not do for somebody who only ever sees the deployed page.
+      const notices = join(root, 'THIRD-PARTY.md');
+      if (existsSync(notices)) {
+        mkdirSync(join(app, 'dist'), { recursive: true });
+        copyFileSync(notices, join(app, 'dist', 'THIRD-PARTY.md'));
+      }
       for (const family of FAMILIES) {
         const source = join(root, family);
         if (!existsSync(source)) continue;

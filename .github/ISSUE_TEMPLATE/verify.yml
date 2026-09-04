@@ -1,5 +1,5 @@
-name: Verify a cartridge or bullet
-description: Confirm the dimensions or bullet drawing against a published source.
+name: Verify a record against its source
+description: Confirm one part of a record - its cartridge or chamber numbers, either drawing, or the bullet - against a published source.
 title: "Verify: "
 labels: [verification]
 body:
@@ -9,7 +9,13 @@ body:
         Thank you for checking a record against its source. A verification report should say what
         you checked, which source you used, and whether it agrees.
 
-        If you arrived here from the site, the cartridge and page link are already filled in.
+        **One facet per report.** A record is verified in five separate parts and they are
+        confirmed at different times by different people, so a report that covers one of them can
+        be acted on and a report that claims all five cannot be checked. Open another for the next
+        one.
+
+        If you arrived here from the site, the cartridge, the facet and the page link are already
+        filled in.
   - type: input
     id: cartridge
     attributes:
@@ -21,8 +27,14 @@ body:
     id: target
     attributes:
       label: What did you verify?
+      description: >
+        The published dimensions of the cartridge or of the chamber, the drawing of either, or the
+        nose form of the bullet the cartridge drawing puts in the case mouth.
       options:
         - cartridge
+        - chamber
+        - cartridge drawing
+        - chamber drawing
         - bullet
     validations:
       required: true
@@ -30,7 +42,10 @@ body:
     id: result
     attributes:
       label: Verification result
-      description: Say what you checked and whether the record or drawing agrees with the source.
+      description: >
+        Say what you checked and whether the record or the drawing agrees with the source. If it
+        does not, say where it differs; that is a correction as well as a verification, and both
+        are useful.
     validations:
       required: true
   - type: input

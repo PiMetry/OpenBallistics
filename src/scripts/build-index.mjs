@@ -24,12 +24,14 @@ const OUT = join(here, '..', 'src', 'lib', 'index.generated.json');
 const FLAGS_OUT = join(here, '..', 'src', 'lib', 'flags.generated.json');
 
 /**
- * The size, in millimetres, of a drawing, read off its root element.
+ * The size of a drawing in its own units, read off its root element.
  *
  * The drawings are rendered upstream by BallisticViz and vendored into the repository's `svg/`
- * directory. Each one carries its own extent there -- `width` and `height` in millimetres, with
- * the viewBox in the renderer's own units -- so a page laying several out at one scale can size
- * them without loading them first.
+ * directory. Each one carries its own extent there -- `width` and `height` matching the viewBox --
+ * so a page laying several out at one scale can size them without loading them first.
+ *
+ * Its own units, not millimetres: the cartridge is drawn at 1:1 and everything else at 4:1. See
+ * `unitsPerMm`, which is where that becomes a millimetre again, and why it has to.
  */
 async function extent(file) {
   const head = (await readFile(file, 'utf8')).slice(0, 400);
@@ -266,6 +268,72 @@ function kind(words) {
 const DRAWING_MARGIN = 1.4;
 
 /**
+ * How many of a drawing's own units make a millimetre.
+ *
+ * The renderer draws the cartridge itself at 1:1 -- `<key>.svg` is 71.92 units across for a
+ * 308 Win. 71.12 mm long -- and everything else at 4:1. A chamber is sectioned out of a barrel
+ * and a dimensioned drawing carries extension lines, arrowheads and 6.4-unit labels around the
+ * geometry; neither has room to say what it has to say at the size of the object.
+ *
+ * Measured rather than assumed: the technical drawing of every one of the 512 cartridges that
+ * publishes an L3 is four units per millimetre of it to three decimal places, and a chamber's
+ * visual and technical drawings are the same geometry as each other to within a hundredth of a
+ * unit. `checkScale` says so out loud if that ever stops being true.
+ *
+ * It matters because the app draws in millimetres and nothing else. Taken at face value a .308's
+ * chamber is 322 mm of barrel standing beside the 72 mm round it holds, and the sheet that comes
+ * off the printer is wrong by a factor of four.
+ */
+function unitsPerMm(subject, style) {
+  return subject === 'cartridge' && style === 'visual' ? 1 : 4;
+}
+
+/** A drawing's extent as real millimetres, whatever units it happens to be drawn in. */
+function millimetres(svg, subject, style) {
+  const units = unitsPerMm(subject, style);
+  return units === 1 ? svg : [svg[0] / units, svg[1] / units];
+}
+
+/**
+ * One placed drawing's extent in millimetres, checked against the case it is a drawing of.
+ *
+ * Against its own length where it has one: a 12/35 is a drawing of 35 mm of hull and not of the
+ * 89 mm the 12 gauge also publishes, and holding every drawing of a shot cartridge against the
+ * longest of them would report eight of the nine.
+ */
+function measured(record, what) {
+  const mm = millimetres(what.found.svg, what.subject, what.style);
+  checkScale(record, what.found.file, mm, what.subject, what.style, what.row?.l ?? length(record));
+  return mm;
+}
+
+/**
+ * Whether a drawing came out a plausible size for the cartridge it is of.
+ *
+ * The conversion above is a convention, and one the renderer could change upstream without this
+ * repository hearing about it. So every converted drawing is held against the one thing true of
+ * all of them: a drawing is longer than the case it draws, and not by very much more, whether the
+ * extra length is a bullet, a barrel or a row of dimension lines. Across the 2134 shipped the
+ * ratio runs from 1.0 to 2.6, the wide end being a chamber of a very short case -- a .22 CB Cap
+ * is 6.9 mm of hull in 34 mm of barrel. A change of unit would move every one of them by four and
+ * put the whole dataset outside this band at once, which is the point.
+ *
+ * The two that are outside it today are a real fault and not a unit: `45_60_win` renders with a
+ * dimension leader shooting off the canvas, and its drawing is 12 times the length of its case.
+ * Reported rather than silently shipped at a size nobody checked.
+ */
+function checkScale(record, file, mm, subject, style, l) {
+  if (!l) return;
+  const ratio = mm[0] / l;
+  if (ratio >= 0.9 && ratio <= 6) return;
+  console.warn(
+    `  ${record.family}/${record.key}: ${file} is ${mm[0].toFixed(1)} mm across for a` +
+      ` ${l} mm case -- ${ratio.toFixed(1)}x, so ${style} ${subject} is either no longer drawn at` +
+      ` ${unitsPerMm(subject, style)} units per millimetre, or is not drawn right`
+  );
+}
+
+/**
  * Every drawing shipped for a cartridge, each with what it is a drawing of.
  *
  * The three axes are read from the path by `kind`; what is left over names the length, matched
@@ -360,7 +428,10 @@ function cartridgeDrawings(record, files, single) {
   const order = { cartridge: 0, chamber: 1, visual: 0, technical: 1 };
   const out = placed.map((what) => ({
     file: what.found.file,
-    svg: what.found.svg,
+    // In millimetres, whatever the drawing was drawn in; see `unitsPerMm`. Everything downstream
+    // -- the shared scale of the grid, the pair on the cartridge page, the printed sheet -- is in
+    // millimetres, so this is the one place the renderer's units are allowed to exist.
+    svg: measured(record, what),
     subject: what.subject,
     style: what.style,
     ...(what.row ? { l: what.row.l, marking: what.row.marking } : {}),

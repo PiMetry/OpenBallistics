@@ -76,11 +76,21 @@
   using a number, so it is the first thing on the page.
 -->
 <aside class="alert" role="alert">
-  <p class="alert-title">Reference only</p>
+  <p class="alert-title">Reference only - alpha</p>
   <p>
     Verify every figure against the official C.I.P. tables before machining a chamber, cutting a
     reamer, or loading ammunition. These pages are a convenience for reading published dimensions
     and are not a substitute for the standard.
+  </p>
+  <!--
+    What "alpha" means, rather than the word on its own. A reader who is about to cut metal needs
+    to know what the label buys them, and the honest answer is: not much yet. How far any one
+    record has been read against its sheet is said on that record's page, not here.
+  -->
+  <p class="alert-alpha">
+    <strong>This site is in development and at alpha status</strong>: it is an early, incomplete
+    version, published so it can be checked and corrected. Expect errors, gaps and changes to the
+    data, and treat nothing here as settled.
   </p>
 </aside>
 
@@ -105,12 +115,7 @@
     them here, and none could be. Everything else, the records, the drawings and the code behind
     this site, is under the MIT licence.
   </p>
-  <p>
-    Country flags from
-    <a href="https://github.com/lipis/flag-icons" target="_blank" rel="noopener noreferrer">
-      flag-icons</a
-    >, Copyright (c) 2013 Panayiotis Lipiridis, under the MIT licence.
-  </p>
+
 </footer>
 
 <style>
@@ -184,13 +189,15 @@
     border-color: var(--rule);
     pointer-events: none;
   }
+  /* Wide enough for the cartridge page to set its two tables two columns deep each; see
+     `GroupTable.svelte`. A phone gets the padding it can afford and no more. */
   main {
-    max-width: 82rem;
+    max-width: 92rem;
     margin: 0 auto;
-    padding: clamp(1.25rem, 4vw, 2.5rem);
+    padding: clamp(0.9rem, 4vw, 2.5rem);
   }
   footer {
-    max-width: 82rem;
+    max-width: 92rem;
     margin: 0 auto;
     padding: 1.5rem clamp(1.25rem, 4vw, 2.5rem) 3rem;
     border-top: 1px solid var(--rule);
@@ -216,7 +223,7 @@
   }
   .alert p {
     margin: 0;
-    max-width: 82rem;
+    max-width: 92rem;
     margin-inline: auto;
   }
   .alert-title {
@@ -225,5 +232,12 @@
     letter-spacing: 0.08em;
     font-size: 0.78rem;
     margin-bottom: 0.15rem;
+  }
+  /* Quieter than the sentence above it: not verifying a figure can hurt somebody, and an
+     unfinished dataset cannot, so the two do not shout equally loudly. */
+  .alert-alpha {
+    margin-top: 0.35rem;
+    font-size: 0.78rem;
+    opacity: 0.85;
   }
 </style>

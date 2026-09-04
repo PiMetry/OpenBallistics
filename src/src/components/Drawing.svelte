@@ -67,6 +67,7 @@
 {#if size}
   <img
     class="drawing"
+    class:technical={drawing?.style === 'technical'}
     src={url}
     {alt}
     loading={eager ? 'eager' : 'lazy'}
@@ -85,5 +86,11 @@
     display: block;
     height: auto;
     max-width: none;
+  }
+  /* Line art, made to sit on whatever this theme's background is; see `--line-art` in app.css.
+     The rendered drawings are left alone: brass reads on either ground, and the renderer's own
+     colours are the point of them. */
+  .drawing.technical {
+    filter: var(--line-art);
   }
 </style>

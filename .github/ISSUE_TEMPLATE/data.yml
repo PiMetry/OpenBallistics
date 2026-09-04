@@ -10,6 +10,10 @@ body:
         where you are reading the correct value from: a report that names its source is the most
         useful thing anyone can send.
 
+        If the record is *right* and you have checked it against a source, that is worth reporting
+        too: use **Verify a record against its source** instead, which records the check rather
+        than a fault.
+
         If you arrived here from the site, the cartridge and the page link are already filled in.
   - type: input
     id: cartridge
@@ -24,24 +28,31 @@ body:
       label: What is wrong
       description: Tick everything that applies. The fields below ask for the details.
       options:
-        - label: A dimension is wrong (a number differs from the sheet)
-        - label: A dimension is missing (the sheet publishes it, the record does not)
+        - label: A cartridge dimension is wrong (a number differs from the sheet)
+        - label: A cartridge dimension is missing (the sheet publishes it, the record does not)
+        - label: A chamber dimension is wrong (a number under Chamber mini differs from the sheet)
+        - label: A chamber dimension is missing (the sheet publishes it, the record does not)
         - label: The case drawing is wrong (rim, groove, belt, shoulder, neck or mouth drawn wrongly)
+        - label: The chamber drawing is wrong (bore, throat, commencement of rifling or headspace drawn wrongly)
         - label: A section line is wrong, missing or extra
         - label: The bullet is the wrong shape (pointed, round, flat, wadcutter…)
         - label: The bullet is the wrong size (how far it stands out, or its diameter)
         - label: The bullet's material or colour is wrong
+        - label: A published length is wrong or missing (shot cartridges, e.g. 12/70)
         - label: The name or an alternative name is wrong
         - label: The family or table is wrong (rimless, rimmed, belted, pistol, rimfire, shotshell)
         - label: The primer type or category annotation is wrong
         - label: This cartridge should not be on the site (blank, marking, shot loading, dummy…)
-        - label: A cartridge is missing (use the "Add a cartridge" form instead)
+        - label: A cartridge is missing from the site (say which, and where its sheet is, below)
         - label: Something else (say what below)
   - type: input
     id: field
     attributes:
       label: Which field
-      description: For a dimension, the C.I.P. column, e.g. `cartridge.lengths.L3` or just `L3`. Leave empty for a drawing fault.
+      description: >
+        For a dimension, the C.I.P. column and which side of the sheet it is on, e.g.
+        `cartridge.lengths.L3`, `chamber.breech.R1`, or just `L3` where only one side publishes it.
+        Leave empty for a drawing fault.
   - type: input
     id: published
     attributes:
@@ -66,7 +77,7 @@ body:
       label: Where you are reading that from
       description: >
         The single most useful part. The C.I.P. sheet for this cartridge, a revision date, a
-        measurement, a manufacturer's drawing — anything that lets the report be checked rather
+        measurement, a manufacturer's drawing - anything that lets the report be checked rather
         than taken on trust. A claim about the data has to be checkable against the source.
     validations:
       required: true

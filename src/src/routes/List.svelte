@@ -1,8 +1,8 @@
 <script lang="ts">
   import Card from '../components/Card.svelte';
   import Flag from '../components/Flag.svelte';
-  import { addCartridgeUrl } from '../lib/issue';
   import { countries, entries, families, search } from '../lib/data';
+  import { rememberStyle, storedStyle, STYLE_LABELS, STYLE_NOTES, STYLES } from '../lib/drawings';
   import { href } from '../lib/router';
   import { PX_PER_MM } from '../lib/scale';
   import {
@@ -15,6 +15,7 @@
     verificationState,
     verificationSummary,
     VERIFICATION_LABELS,
+    type DrawingStyle,
     type Entry,
     type Facet
   } from '../lib/types';
@@ -208,6 +209,26 @@
   const scale = $derived((PX_PER_MM * zoomPercent) / 100);
   const cardHeight = $derived(Math.round((78 * zoomPercent) / 100));
 
+  /**
+   * How each cartridge is drawn: as the object, or as the dimensioned drawing.
+   *
+   * Both are drawn in millimetres and both are drawn at the one scale the grid shares, so the
+   * comparison the grid exists for survives the switch -- a .22 Long Rifle's dimensioned drawing
+   * is a smaller sheet than a .50 BMG's, in the same proportion as the rounds. What changes is
+   * what the picture answers: how big is it, against where is each of C.I.P.'s symbols measured.
+   *
+   * The choice is kept with the cartridge page's, under one key, because it is a preference about
+   * how somebody reads and not about which page they are on: a reader who sets the grid to
+   * dimensioned drawings and clicks a card should land on a dimensioned drawing. See
+   * `storedStyle`. Where a cartridge has not been drawn that way its card falls back to the
+   * drawing it has, rather than going blank.
+   */
+  let style = $state<DrawingStyle>(storedStyle());
+  function setStyle(next: DrawingStyle) {
+    style = next;
+    rememberStyle(next);
+  }
+
   /** Whether anything is narrowing the list -- which is what `reset` clears, and nothing else. */
   const filtering = $derived(
     query.trim() !== '' || family !== '' || country !== '' || verification !== ''
@@ -338,9 +359,6 @@
         <button class="link" onclick={reset}>clear filters</button>
       {/if}
     </p>
-    <p class="actions">
-      <a href={addCartridgeUrl()} target="_blank" rel="noopener noreferrer">Add a cartridge</a>
-    </p>
   </div>
   <div class="views">
     <!--
@@ -351,6 +369,23 @@
       in is about the view already.
     -->
     {#if view === 'grid'}
+      <!--
+        Which drawing, beside how big. Two words rather than an icon: "visual" and "technical" are
+        what the drawings are called everywhere else on the site and in the file names they are
+        shipped under, and a pictogram for "dimensioned" would be a puzzle. It goes away in the
+        list view along with the size, for the same reason: there are no drawings there to be of.
+      -->
+      <div class="segmented styles" role="group" aria-label="Drawing style">
+        {#each STYLES as option (option)}
+          <button
+            type="button"
+            class:on={style === option}
+            aria-pressed={style === option}
+            title={STYLE_NOTES[option]}
+            onclick={() => setStyle(option)}>{STYLE_LABELS[option]}</button
+          >
+        {/each}
+      </div>
       <select
         class="size"
         bind:value={zoomPercent}
@@ -392,7 +427,7 @@
 {:else if view === 'grid'}
   <div class="grid">
     {#each shown as entry (entry.key)}
-      <Card {entry} {scale} height={cardHeight} />
+      <Card {entry} {scale} height={cardHeight} {style} />
     {/each}
   </div>
 {:else}
@@ -548,9 +583,16 @@
   }
   .views {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
     gap: 0.4rem;
+  }
+  /* Words rather than the two glyphs beside it, so its buttons are sized by what they say. */
+  .styles button {
+    flex: 0 0 auto;
+    padding: 0.4rem 0.7rem;
+    white-space: nowrap;
   }
   .size {
     padding: 0.25rem 0.4rem;
@@ -583,11 +625,7 @@
   .count {
     color: var(--ink-2);
     font-size: var(--step-0);
-    margin: 0 0 0.25rem;
-  }
-  .actions {
     margin: 0 0 1rem;
-    font-size: var(--step-0);
   }
   .summary {
     display: flex;

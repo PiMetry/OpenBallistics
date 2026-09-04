@@ -15,7 +15,7 @@
  * checkable against the sheet.
  */
 
-import type { Entry } from './types';
+import { FACET_LABELS, type Entry, type Facet } from './types';
 
 /**
  * The repository issues live in, as `owner/name`.
@@ -45,14 +45,22 @@ export function issueUrl(entry: Entry): string {
   });
 }
 
-export function addCartridgeUrl(): string {
-  return `https://github.com/${REPO}/issues/new?template=add-cartridge.yml&labels=data%2Cnew-cartridge&title=Add%3A+`;
-}
-
-export function verifyUrl(entry: Entry, target: 'cartridge' | 'bullet'): string {
-  return formUrl('verify.yml', 'verification', `Verify ${target}: ${entry.name} (${entry.key})`, {
+/**
+ * Where to send a verification of one facet of one record.
+ *
+ * One link per facet, because a verification is of a facet and not of a record: somebody who has
+ * held the chamber table against the sheet has not thereby checked the bullet, and a single
+ * "verify this cartridge" link invites a report that claims more than was done.
+ *
+ * `target` is the facet's own label in lower case, which is what the form's dropdown lists.
+ * GitHub selects a dropdown option by matching its text, so the two have to agree; renaming a
+ * facet here without renaming the option there loses the prefill silently.
+ */
+export function verifyUrl(entry: Entry, target: Facet): string {
+  const what = FACET_LABELS[target].toLowerCase();
+  return formUrl('verify.yml', 'verification', `Verify ${what}: ${entry.name} (${entry.key})`, {
     cartridge: `${entry.name} (${entry.key})`,
-    target,
+    target: what,
     page: pageUrl(entry)
   });
 }

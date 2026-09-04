@@ -3,6 +3,18 @@
   import Flag from '../components/Flag.svelte';
   import GroupTable from '../components/GroupTable.svelte';
   import { byKey, load } from '../lib/data';
+  import {
+    main,
+    offered,
+    plates,
+    rememberStyle,
+    storedStyle,
+    STYLE_LABELS,
+    STYLE_NOTES,
+    STYLES,
+    SUBJECT_LABELS,
+    SUBJECTS
+  } from '../lib/drawings';
   import { issueUrl, verifyUrl } from '../lib/issue';
   import { href } from '../lib/router';
   import { PX_PER_MM } from '../lib/scale';
@@ -30,8 +42,17 @@
   const entry = $derived(byKey(key));
   const record = $derived(load(key));
   const report = $derived(entry ? issueUrl(entry) : null);
-  const verifyCartridge = $derived(entry ? verifyUrl(entry, 'cartridge') : null);
-  const verifyBullet = $derived(entry ? verifyUrl(entry, 'bullet') : null);
+  /**
+   * One "verify this" link per facet the record actually has, in the order the strip at the top
+   * names them. A facet that cannot apply gets no link, for the same reason it gets no pill: there
+   * is no bullet on a record that dimensions none, and nothing to confirm about it.
+   */
+  const verifiable = $derived(
+    entry ? FACETS.filter((facet) => facet in entry.verified).map((facet) => ({
+      facet,
+      href: verifyUrl(entry, facet)
+    })) : []
+  );
 
   /**
    * Pixels per millimetre for the drawing at the head of the page: the CSS reference, so 100% is
@@ -50,18 +71,39 @@
    * browser so the reader who likes it larger finds it larger next time; 100% -- the cartridge at
    * its own size -- is where it opens when nothing is stored.
    */
-  const ZOOM_STEPS = [0.5, 0.75, 1, 1.25, 1.5, 2, 3];
-  const ZOOM_KEY = 'drawing-zoom';
-  function storedZoom(): number {
+  const ZOOM_STEPS: Zoom[] = ['fit', 0.5, 0.75, 1, 1.25, 1.5, 2, 3];
+  /**
+   * How big the drawing is: a multiple of life size, or `fit`, which fills the column it is in.
+   *
+   * Life size is the site's own measure and stays the default for a rendered drawing -- 100% means
+   * a cartridge the size of the cartridge, held against a ruler. It is the wrong default for a
+   * dimensioned one. Those are drawn at the size of the object too, but what a reader wants from
+   * them is the writing, and C.I.P.'s symbols are 1.6 mm high at that size: legible on paper at
+   * arm's length and not on a screen. So the two styles keep their own zoom, and a dimensioned
+   * drawing opens filling its column.
+   *
+   * `fit` is a word rather than a percentage because it is not one: it depends on how wide the
+   * window is. Both panels still share it, computed from the wider of the two, so the cartridge
+   * and the chamber stay at one scale and stay comparable -- filling each column independently
+   * would show them at two different scales and quietly break the only comparison worth making.
+   */
+  type Zoom = number | 'fit';
+
+  function zoomKey(style: DrawingStyle): string {
+    return style === 'technical' ? 'drawing-zoom-technical' : 'drawing-zoom';
+  }
+  function storedZoom(style: DrawingStyle): Zoom {
+    const fallback: Zoom = style === 'technical' ? 'fit' : 1;
     try {
-      const raw = localStorage.getItem(ZOOM_KEY);
-      const value = raw === null ? 1 : Number(raw);
-      return ZOOM_STEPS.includes(value) ? value : 1;
+      const raw = localStorage.getItem(zoomKey(style));
+      if (raw === null) return fallback;
+      const value: Zoom = raw === 'fit' ? 'fit' : Number(raw);
+      return ZOOM_STEPS.includes(value) ? value : fallback;
     } catch {
-      return 1;
+      return fallback;
     }
   }
-  let zoom = $state(storedZoom());
+  let zoom = $state<Zoom>(storedZoom(storedStyle()));
   let drawing = $state<HTMLElement>(undefined!);
   let dragging = $state(false);
   let startX = 0;
@@ -70,39 +112,55 @@
   let startScrollTop = 0;
   let pointerId: number | null = null;
 
+  /**
+   * What a drag pans.
+   *
+   * Side by side, each panel scrolls inside its own column, so a drag in the chamber must move the
+   * chamber and leave the cartridge where it is. On its own, the drawing pans the whole box, the
+   * way it did before there were two of them. Whichever of the two actually overflows is the one
+   * that can be panned, so that is what is asked.
+   */
+  function scroller(from: EventTarget | null): HTMLElement {
+    const plate = (from as HTMLElement | null)?.closest?.('.plate') as HTMLElement | null;
+    return plate && plate.scrollWidth > plate.clientWidth ? plate : drawing;
+  }
+  let panning: HTMLElement | null = null;
+
   function startDrag(event: PointerEvent) {
     if ((event.target as HTMLElement).closest('button')) return;
-    drawing.setPointerCapture(event.pointerId);
+    panning = scroller(event.target);
+    panning.setPointerCapture(event.pointerId);
     pointerId = event.pointerId;
     dragging = true;
     startX = event.clientX;
     startY = event.clientY;
-    startScrollLeft = drawing.scrollLeft;
-    startScrollTop = drawing.scrollTop;
+    startScrollLeft = panning.scrollLeft;
+    startScrollTop = panning.scrollTop;
   }
 
   function drag(event: PointerEvent) {
-    if (!dragging) return;
+    if (!dragging || !panning) return;
     const deltaX = event.clientX - startX;
     const deltaY = event.clientY - startY;
     if (Math.abs(deltaX) <= 3 && Math.abs(deltaY) <= 3) return;
     event.preventDefault();
-    drawing.scrollLeft = startScrollLeft - deltaX;
-    drawing.scrollTop = startScrollTop - deltaY;
+    panning.scrollLeft = startScrollLeft - deltaX;
+    panning.scrollTop = startScrollTop - deltaY;
   }
 
   function endDrag() {
     dragging = false;
-    if (pointerId !== null && drawing.hasPointerCapture(pointerId)) {
-      drawing.releasePointerCapture(pointerId);
+    if (panning && pointerId !== null && panning.hasPointerCapture(pointerId)) {
+      panning.releasePointerCapture(pointerId);
     }
+    panning = null;
     pointerId = null;
   }
 
-  function setZoom(value: number) {
+  function setZoom(value: Zoom) {
     zoom = value;
     try {
-      localStorage.setItem(ZOOM_KEY, String(value));
+      localStorage.setItem(zoomKey(wanted), String(value));
     } catch {
       // Storage may be unavailable; the zoom still applies for this page.
     }
@@ -112,7 +170,15 @@
     const next = ZOOM_STEPS[Math.min(ZOOM_STEPS.length - 1, Math.max(0, index + direction))];
     setZoom(next ?? 1);
   }
-  const scale = $derived(PX_PER_MM * zoom);
+
+  /**
+   * How wide one panel is, which is all `fit` needs to know.
+   *
+   * The panels are equal grid tracks, so every one of them reports the same number and they can
+   * all write to it. Zero until the first measurement, and `fit` falls back to life size until
+   * then, so the first frame is never a drawing of no width.
+   */
+  let panelWidth = $state(0);
 
   /**
    * One standard, several drawings.
@@ -131,17 +197,6 @@
    * cartridge with one drawing looks exactly as it always did. Nothing is hidden by picking:
    * both tables still list every published length, and the selection marks one of them.
    */
-  const SUBJECTS: DrawingSubject[] = ['cartridge', 'chamber'];
-  const STYLES: DrawingStyle[] = ['visual', 'technical'];
-  const SUBJECT_LABELS: Record<DrawingSubject, string> = {
-    cartridge: 'Cartridge',
-    chamber: 'Chamber'
-  };
-  const STYLE_LABELS: Record<DrawingStyle, string> = {
-    visual: 'Visual',
-    technical: 'Technical'
-  };
-
   type Hull = { l: number; marking: string | null };
 
   function hullLengths(data: Record_): Hull[] | null {
@@ -164,50 +219,13 @@
   }
 
   /**
-   * Every drawing this cartridge has.
-   *
-   * The index carries the list only where there is more than one; where there is not, the
-   * cartridge's own `<key>.svg` is the list, so that everything below has one thing to reason
-   * about instead of two.
-   */
-  function plates(entry: Entry | undefined): Plate[] {
-    if (entry?.drawings?.length) return entry.drawings;
-    if (entry?.svg) {
-      return [{ file: `${entry.key}.svg`, svg: entry.svg, subject: 'cartridge', style: 'visual' }];
-    }
-    return [];
-  }
-
-  /** The kinds actually drawn, in a fixed order: what the toggles offer, and nothing more. */
-  function offered<T extends DrawingSubject | DrawingStyle>(
-    all: T[],
-    drawn: Plate[],
-    axis: 'subject' | 'style'
-  ): T[] {
-    return all.filter((value) => drawn.some((plate) => plate[axis] === value));
-  }
-
-  /**
-   * The drawing a card in the list shows for this cartridge.
-   *
-   * The build flags it rather than the page working it out: `<key>.svg` is not always the drawing
-   * that ends up at its own length -- a drawing filed in the directory at the same length takes
-   * its place -- and what the page needs to know is the length, not the file.
-   */
-  function ownPlate(entry: Entry | undefined): Plate | null {
-    if (!entry) return null;
-    const drawn = plates(entry);
-    return drawn.find((plate) => plate.main) ?? null;
-  }
-
-  /**
    * The length the page opens at: the one the cartridge's own drawing is at, so that opening a
    * card does not change the picture the reader just clicked. With no drawing to go by, the
    * longest published length, which is the one the list already sorts and filters this cartridge
    * by.
    */
   function defaultLength(rows: Hull[], entry: Entry | undefined): string {
-    const own = ownPlate(entry);
+    const own = main(entry);
     return (own && tag(own)) ?? tag(rows.reduce((a, b) => (b.l > a.l ? b : a)))!;
   }
 
@@ -244,6 +262,12 @@
     return `${STYLE_LABELS[plate.style].toLowerCase()} ${plate.subject}${at ? ` at ${at}` : ''}`;
   }
 
+  /** How a drawing is captioned over its panel: "Cartridge · 12/70". */
+  function caption(plate: Plate): string {
+    const at = tag(plate);
+    return `${SUBJECT_LABELS[plate.subject]}${at ? ` · ${at}` : ''}`;
+  }
+
   /**
    * What is on screen, where it is not what was asked for.
    *
@@ -261,16 +285,19 @@
   }
 
   /**
-   * What goes on paper: one drawing per subject the cartridge has, at the style and length that
-   * are on screen.
+   * What to show: one panel per subject the cartridge has, at the style and length asked for.
    *
-   * The screen shows one drawing because the reader is looking at one thing and can switch. A
-   * printed sheet cannot switch, and it has a shape the screen does not: A4 portrait is tall and
-   * narrow, a cartridge and the chamber it is fired in are both long and thin, and stood upright
-   * side by side the two of them fill a column that either one alone leaves three-quarters empty.
-   * So print takes both, and `Cartridge.svelte`'s print rules stand them on end.
+   * Both at once rather than one with a switch between them. A cartridge and the chamber it is
+   * fired in are the two halves of one standard -- the tables have always shown both, Cartridge
+   * maxi beside Chamber mini -- and the interesting thing about them is the difference: the
+   * chamber is a tenth of a millimetre wider here and a tenth longer there, and that is the whole
+   * subject of the sheet. A toggle between them shows each on its own and hides exactly the
+   * comparison a reader came for.
+   *
+   * They are drawn at one scale and hung from one left edge, which is what makes the comparison
+   * work, and they pan together for the same reason.
    */
-  function forPrint(
+  function panels(
     drawn: Plate[],
     style: DrawingStyle,
     length: string | null,
@@ -295,40 +322,24 @@
   let chosen = $state<{ key: string; length: string } | null>(null);
 
   /**
-   * Which subject and style the reader last looked at, kept per browser.
+   * Which style the reader last looked at, shared with the grid; see `storedStyle`.
    *
-   * Unlike the length these are not about one cartridge: a reader comparing chambers, or reading
-   * dimensioned drawings, is doing that across the dataset and should not have to say so on every
-   * page. Where a cartridge has not been drawn that way the page falls back to what it has, and
-   * the stored preference is left alone for the next cartridge that can honour it.
+   * Unlike the length this is not about one cartridge, which is why it is not kept per cartridge
+   * and not kept per page: a reader working from dimensioned drawings is doing that across the
+   * dataset and should not have to say so twice. Where a cartridge has not been drawn that way the
+   * page falls back to what it has, and the stored preference is left alone for the next cartridge
+   * that can honour it.
+   *
+   * The subject used to be kept here too, back when the page showed one drawing and switched. It
+   * shows both now, so there is nothing to remember.
    */
-  const VIEW_KEY = 'drawing-view';
-  function storedView(): { subject: DrawingSubject; style: DrawingStyle } {
-    const fallback = { subject: 'cartridge' as DrawingSubject, style: 'visual' as DrawingStyle };
-    try {
-      const raw: unknown = JSON.parse(localStorage.getItem(VIEW_KEY) ?? 'null');
-      if (!raw || typeof raw !== 'object') return fallback;
-      const held = raw as { subject?: unknown; style?: unknown };
-      return {
-        subject: SUBJECTS.includes(held.subject as DrawingSubject)
-          ? (held.subject as DrawingSubject)
-          : fallback.subject,
-        style: STYLES.includes(held.style as DrawingStyle)
-          ? (held.style as DrawingStyle)
-          : fallback.style
-      };
-    } catch {
-      return fallback;
-    }
-  }
-  let view = $state(storedView());
-  function setView(next: Partial<{ subject: DrawingSubject; style: DrawingStyle }>) {
-    view = { ...view, ...next };
-    try {
-      localStorage.setItem(VIEW_KEY, JSON.stringify(view));
-    } catch {
-      // Storage may be unavailable; the choice still applies for this visit.
-    }
+  let wanted = $state(storedStyle());
+  function setStyle(next: DrawingStyle) {
+    wanted = next;
+    // Each style keeps its own size, so switching to the dimensioned drawing does not leave it at
+    // a life size nobody can read, nor the rendered one blown up to fill a column.
+    zoom = storedZoom(next);
+    rememberStyle(next);
   }
 </script>
 
@@ -336,21 +347,14 @@
   <p class="status">Loading {entry?.name ?? key}…</p>
 {:then data}
   {@const drawn = plates(entry)}
-  {@const subjects = offered(SUBJECTS, drawn, 'subject')}
   {@const styles = offered(STYLES, drawn, 'style')}
-  {@const subject = subjects.includes(view.subject) ? view.subject : (subjects[0] ?? 'cartridge')}
-  {@const style = styles.includes(view.style) ? view.style : (styles[0] ?? 'visual')}
+  {@const style = styles.includes(wanted) ? wanted : (styles[0] ?? 'visual')}
   {@const hulls = hullLengths(data)}
   {@const selected = hulls
     ? (chosen?.key === key ? chosen.length : defaultLength(hulls, entry))
     : null}
   {@const want = hulls?.find((row) => tag(row) === selected)?.l ?? null}
-  {@const shown = resolve(drawn, subject, style, selected, want)}
-  {@const missed =
-    shown !== null &&
-    (shown.subject !== subject ||
-      shown.style !== style ||
-      (selected !== null && tag(shown) !== null && tag(shown) !== selected))}
+  {@const shown = panels(drawn, style, selected, want)}
   <!--
     How far this record can be trusted, said before the record rather than after it.
 
@@ -442,76 +446,18 @@
     </dl>
   </header>
 
-  {#if entry}
-    <figure
-      class="drawing"
-      bind:this={drawing}
-      onpointerdown={startDrag}
-      onpointermove={drag}
-      onpointerup={endDrag}
-      onpointercancel={endDrag}
-      onlostpointercapture={endDrag}
-      class:dragging
-      role="region"
-      aria-label={`${data.name} drawing`}
-      title="Drag to inspect an oversized drawing"
-    >
-      <Drawing {entry} {scale} height={Math.round(120 * zoom)} drawing={shown} />
-      <div class="zoom" role="group" aria-label="Drawing size">
-        <button type="button" onclick={() => zoomBy(-1)} disabled={zoom === ZOOM_STEPS[0]} aria-label="Smaller">−</button>
-        <button type="button" class="reset" onclick={() => setZoom(1)} title="Reset to life size">{Math.round(zoom * 100)}%</button>
-        <button type="button" onclick={() => zoomBy(1)} disabled={zoom === ZOOM_STEPS[ZOOM_STEPS.length - 1]} aria-label="Larger">+</button>
-      </div>
-    </figure>
-
-    <!--
-      The same drawings again, for paper only: every subject this cartridge has, upright and side
-      by side. See `forPrint`. Hidden on screen, and fetched eagerly because a hidden lazy image
-      is one the browser is entitled not to have when somebody hits print.
-    -->
-    {@const printed = forPrint(drawn, style, selected, want)}
-    {#if printed.length}
-      <div class="plates" aria-hidden="true">
-        {#each printed as plate (plate.file)}
-          <figure class="plate">
-            <div class="plate-box" style={`--mm-w:${plate.svg[0]};--mm-h:${plate.svg[1]}`}>
-              <Drawing {entry} scale={PX_PER_MM} height={120} drawing={plate} eager />
-            </div>
-            <figcaption>
-              {SUBJECT_LABELS[plate.subject]}{#if tag(plate)} · {tag(plate)}{/if}
-            </figcaption>
-          </figure>
-        {/each}
-      </div>
-    {/if}
-  {/if}
-
   <!--
     What the picture is, where there is more than one picture to be. Each control appears only
     where the dataset has something to switch to, so the bar is empty for a cartridge drawn once
     and the page reads as it always did.
-  -->
-  {#if subjects.length > 1 || styles.length > 1 || hulls}
-    <div class="views">
-      {#if subjects.length > 1}
-        <div class="view subject">
-          <span class="eyebrow view-label">Show</span>
-          <div class="options" role="group" aria-label="Drawing subject">
-            {#each subjects as option (option)}
-              <button
-                type="button"
-                class="option"
-                class:on={option === subject}
-                aria-pressed={option === subject}
-                onclick={() => setView({ subject: option })}
-              >
-                <span class="option-name">{SUBJECT_LABELS[option]}</span>
-              </button>
-            {/each}
-          </div>
-        </div>
-      {/if}
 
+    Above the drawing rather than under it. It used to sit below, where it read as a caption, which
+    is fair enough for the length -- 12/70 names what you are looking at -- but wrong for the
+    style, which is a question the reader answers before looking rather than after. Paper keeps it
+    a caption either way: printed it is a title line saying which of the drawings this sheet is.
+  -->
+  {#if styles.length > 1 || hulls}
+    <div class="views">
       {#if styles.length > 1}
         <div class="view">
           <span class="eyebrow view-label">Style</span>
@@ -522,7 +468,8 @@
                 class="option"
                 class:on={option === style}
                 aria-pressed={option === style}
-                onclick={() => setView({ style: option })}
+                title={STYLE_NOTES[option]}
+                onclick={() => setStyle(option)}
               >
                 <span class="option-name">{STYLE_LABELS[option]}</span>
               </button>
@@ -552,27 +499,114 @@
         </div>
       {/if}
 
-      <!--
-        Said out loud where the picture and the pick have come apart, rather than letting a drawing
-        of one kind or one length stand in for another in silence. It disappears as the missing
-        drawings arrive.
-      -->
-      {#if missed && shown}
-        <p class="view-note">{missingNote(subject, style, selected, shown)}</p>
-      {/if}
     </div>
   {/if}
 
+  {#if entry && shown.length}
+    {@const widest = Math.max(...shown.map((plate) => plate.svg[0]))}
+    {@const tallest = Math.max(...shown.map((plate) => plate.svg[1]))}
+    {@const scale =
+      zoom === 'fit'
+        ? (panelWidth > 0 ? panelWidth / widest : PX_PER_MM)
+        : PX_PER_MM * zoom}
+    <!--
+      One figure, one scale, one scroll. The panels hang from a common left edge and pan together,
+      because the point of showing a cartridge beside its chamber is the difference between them,
+      and two boxes that scrolled independently would let a reader line up two drawings that are
+      not at the same place.
+
+      Every drawing here is in millimetres and every one is at the same millimetres-per-pixel, so
+      the chamber is the size of the chamber beside the round that goes in it, and a dimensioned
+      drawing puts its case at the size of the case. What varies between the two styles is how much
+      paper the drawing needs around the object, not how big the object is; see `unitsPerMm` in the
+      build for the four-to-one the renderer draws the dimensioned ones at, and undoing it is what
+      makes the two comparable at all.
+
+      They are stacked rather than set in two columns. Both are drawn lying down -- a cartridge is
+      three to five times longer than it is wide, and so is the chamber -- so two columns would
+      halve the length each one gets and put the two things being compared at different left
+      edges. Stacked, they share the full width of the page and the comparison is a glance down.
+      Paper sets the pair in the two columns of the tables under them, at one scale worked out
+      from the widest and tallest of the two; see the print rules.
+    -->
+    <figure
+      class="drawing"
+      bind:this={drawing}
+      onpointerdown={startDrag}
+      onpointermove={drag}
+      onpointerup={endDrag}
+      onpointercancel={endDrag}
+      onlostpointercapture={endDrag}
+      class:dragging
+      class:paired={shown.length > 1}
+      class:long={widest > 95}
+      role="region"
+      aria-label={`${data.name}, cartridge and chamber drawings`}
+      title="Drag to inspect an oversized drawing"
+    >
+      <div class="stage" style={`--mm-widest:${widest};--mm-tallest:${tallest}`}>
+        {#each shown as plate (plate.subject)}
+          {@const off =
+            plate.style !== style ||
+            (selected !== null && tag(plate) !== null && tag(plate) !== selected)}
+          <div class="plate" bind:clientWidth={panelWidth}>
+            <!--
+              Named on screen only where there are two to tell apart. On paper every drawing is
+              captioned, with its length where it has one, because the controls that said which
+              length is shown are not printed.
+            -->
+            <span class="eyebrow plate-name">{caption(plate)}</span>
+            <div class="plate-box" style={`--mm-w:${plate.svg[0]};--mm-h:${plate.svg[1]}`}>
+              <Drawing {entry} {scale} height={Math.round(scale * 32)} drawing={plate} />
+            </div>
+            <!--
+              Per panel, because the two of them can miss in different ways: a chamber drawn only
+              at 12/70 stands in for 12/89 while the cartridge beside it does not.
+            -->
+            {#if off}
+              <p class="plate-note">{missingNote(plate.subject, style, selected, plate)}</p>
+            {/if}
+          </div>
+        {/each}
+      </div>
+
+      <div class="zoom" role="group" aria-label="Drawing size">
+        <button type="button" onclick={() => zoomBy(-1)} disabled={zoom === ZOOM_STEPS[0]} aria-label="Smaller">−</button>
+        <button type="button" class="reset" onclick={() => setZoom(1)} title="Reset to life size"
+          >{zoom === 'fit' ? 'Fit' : `${Math.round(zoom * 100)}%`}</button
+        >
+        <button type="button" onclick={() => zoomBy(1)} disabled={zoom === ZOOM_STEPS[ZOOM_STEPS.length - 1]} aria-label="Larger">+</button>
+      </div>
+    </figure>
+    <!--
+      What the reader is looking at, where "life size" would be a claim too far. A dimensioned
+      drawing is at the size of the object -- that is the whole point of undoing the renderer's
+      four-to-one -- but its labels are 1.6 mm high at that size, which is upstream's own choice
+      and is small on a screen. Saying so is cheaper than second-guessing it, and the zoom beside
+      it is the answer.
+
+      Only where the reader has actually asked for that size, though. A dimensioned drawing now
+      opens at `fit`, filling its column, where the labels are perfectly readable and the sentence
+      would be describing something that is not on the screen.
+    -->
+    {#if style === 'technical' && zoom !== 'fit' && zoom <= 1}
+      <p class="figure-note">
+        Dimensioned drawings are at the size of the cartridge, so C.I.P.'s symbols are printed
+        small; zoom in to read them, or print the page.
+      </p>
+    {/if}
+  {/if}
+
   <div class="tables">
-    <div class="column">
-      <GroupTable side="cartridge" heading="Cartridge maxi" groups={data.cartridge} {selected} />
+    <GroupTable side="cartridge" heading="Cartridge maxi" groups={data.cartridge} {selected}>
       <!--
-        The bullet the drawing puts in the case mouth, under the cartridge's own dimensions, which
+        The bullet the drawing puts in the case mouth, among the cartridge's own dimensions, which
         is what it is a property of. It used to sit inside the verification box, where it read as
-        evidence for a claim about verification rather than as five more values about the round.
+        evidence for a claim about verification rather than as five more values about the round,
+        and then under the whole side, where it hung off the bottom of a column of groups.
       -->
       {#if data.annotations?.defaultBullet}
-        <section class="bullet">
+        <section class="group bullet">
           <h3>Bullet as drawn</h3>
           <dl class="bullet-data">
             {#if data.annotations.defaultBulletShape}
@@ -590,7 +624,7 @@
           </dl>
         </section>
       {/if}
-    </div>
+    </GroupTable>
     <GroupTable side="chamber" heading="Chamber mini" groups={data.chamber} {selected} />
   </div>
 
@@ -599,12 +633,18 @@
     {#if report}
       · <a href={report} target="_blank" rel="noopener noreferrer">Something look wrong?</a>
     {/if}
-    {#if verifyCartridge}
-      · <a href={verifyCartridge} target="_blank" rel="noopener noreferrer">Verify cartridge</a>
-    {/if}
-    {#if verifyBullet && entry?.svg}
-      · <a href={verifyBullet} target="_blank" rel="noopener noreferrer">Verify bullet</a>
-    {/if}
+    <!--
+      The separator is an element with its own spacing rather than a character between two tags:
+      inside an `{#each}` the whitespace at the end of a block is trimmed, and the dot ended up
+      welded to the link before it.
+    -->
+    {#each verifiable as { facet, href } (facet)}
+      <span class="sep" aria-hidden="true">·</span><a
+        {href}
+        target="_blank"
+        rel="noopener noreferrer">Verify {FACET_LABELS[facet].toLowerCase()}</a
+      >
+    {/each}
   </p>
 {:catch error}
   <p class="status error">{error.message} <a href={href.list()}>Back to all cartridges</a></p>
@@ -681,7 +721,7 @@
   }
   .drawing {
     position: relative;
-    margin: 1.5rem 0 1.25rem;
+    margin: 0.75rem 0 1.25rem;
     padding: 1.5rem 1.25rem;
     background: var(--surface);
     border: 1px solid var(--rule);
@@ -689,8 +729,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    overflow-x: auto;
-    overflow-y: auto;
+    overflow: auto;
     cursor: grab;
     scrollbar-width: thin;
     overscroll-behavior: contain;
@@ -700,23 +739,80 @@
   .drawing.dragging {
     cursor: grabbing;
   }
+  /* One drawing sits centred in its box, as it always did. */
+  .stage {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin: auto;
+    min-width: 0;
+  }
+  /* Two sit in two columns, on the same grid as the two tables below them, so that the cartridge
+     is above Cartridge maxi and the chamber above Chamber mini and the page has one set of
+     columns rather than two. It is the same `minmax(19rem, 1fr)` as `.tables`, so the pair folds
+     to a single column at the same width the tables do. */
+  .drawing.paired .stage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    align-items: start;
+    gap: 1rem 2.5rem;
+    margin: 0;
+    width: 100%;
+  }
+  .plate {
+    min-width: 0;
+  }
+  /* A drawing wider than its column pans inside that column instead of running into the one
+     beside it. One drawing still pans the whole box, which is what it did before there were two. */
+  .drawing.paired .plate {
+    overflow: auto;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+  }
+  .plate-name {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  /* One drawing needs no name on screen; the page's title is its name. Paper captions it. */
+  .drawing:not(.paired) .plate-name {
+    display: none;
+  }
+  .plate-note {
+    margin: 0.3rem 0 0;
+    font-size: 0.72rem;
+    color: var(--warn);
+  }
   .drawing :global(img),
   .drawing :global(svg) {
     flex: 0 0 auto;
-    margin-inline: auto;
     user-select: none;
     -webkit-user-drag: none;
   }
+  .drawing:not(.paired) :global(img),
+  .drawing:not(.paired) :global(svg) {
+    margin-inline: auto;
+  }
+  .drawing.paired :global(img),
+  .drawing.paired :global(svg) {
+    margin-inline: 0;
+  }
 
-  /* What the picture is, under the drawing it changes and above the tables it marks. Every choice
-     is a button rather than a menu, so the range a gauge covers is readable at a glance -- nine
-     lengths for a 12 gauge -- instead of being a list to open. */
+  /* What the picture is, above the picture it decides. Every choice is a button rather than a
+     menu, so the range a gauge covers is readable at a glance -- nine lengths for a 12 gauge --
+     instead of being a list to open. */
   .views {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0.4rem 1.4rem;
-    margin: -0.5rem 0 1.75rem;
+    margin: 1.5rem 0 0;
+  }
+  /* Under the figure, where a caption goes: it is about what was just shown, not a control. */
+  .figure-note {
+    margin: -0.75rem 0 1.5rem;
+    max-width: 62ch;
+    font-size: 0.78rem;
+    color: var(--ink-2);
   }
   .view {
     display: flex;
@@ -780,6 +876,10 @@
   }
   .error {
     color: var(--ink);
+  }
+  .sep {
+    padding: 0 0.35rem;
+    color: var(--ink-3);
   }
   .foot {
     margin-top: 2.5rem;
@@ -867,20 +967,15 @@
     color: var(--ink-3);
   }
 
-  /* The bullet, with the cartridge dimensions it belongs to. */
-  .column {
-    min-width: 0;
-  }
-  .bullet {
-    margin-top: 1.1rem;
-  }
+  /* The bullet, among the cartridge dimensions it belongs to; see the snippet passed to the
+     cartridge's own table. */
   .bullet h3 {
     font-size: var(--step-0);
     margin-bottom: 0.3rem;
   }
   .bullet-data {
     display: grid;
-    grid-template-columns: 5.5rem 1fr;
+    grid-template-columns: 5.5rem minmax(0, 1fr);
     gap: 0.15rem 0.75rem;
     margin: 0;
     font-size: var(--step-0);
@@ -893,9 +988,24 @@
     overflow-wrap: anywhere;
   }
 
-  /* Paper only; see the print rules and `forPrint`. */
-  .plates {
-    display: none;
+  /* A phone has no room for a wide frame around the drawing, and every rem of it came off the
+     drawing. */
+  @media (max-width: 40rem) {
+    .drawing {
+      padding: 1rem 0.75rem;
+    }
+    .drawing.paired .stage {
+      gap: 1rem;
+    }
+    .tables {
+      gap: 2rem;
+    }
+    .zoom button {
+      padding: 0.25rem 0.5rem;
+    }
+    .zoom .reset {
+      min-width: 3rem;
+    }
   }
 
   @media print {
@@ -921,62 +1031,100 @@
       padding: 0;
     }
 
-    /* The drawings stand up, and there are as many of them as the cartridge has subjects.
+    /* The same panels the screen shows, on one sheet.
 
-       On screen a drawing lies down: the page is a wide column and a cartridge is three to five
-       times longer than it is wide, so lying down is what fits. Paper is the other way round. A4
-       portrait gives 180 mm across and 267 mm down at these margins, and a cartridge printed
-       lengthways uses a sixth of that -- one thin band across a tall empty sheet. Stood on end,
-       and stood beside the chamber it is fired in, the two of them use the height the sheet
-       actually has, and the pair can be read against each other the way the two tables below them
-       are.
+       Nothing is duplicated for paper: one set of images serves both, which is why they are
+       already loaded when somebody hits print.
 
-       Sizes are in `mm`, which on paper is a millimetre rather than the CSS convention a screen
-       settles for, so the printed sheet holds up against a ruler. The box is the drawing's extent
-       with its sides swapped, since the drawing is turned a quarter turn inside it; both are
-       capped at `--upright-cap` and scale together, so a drawing longer than the sheet shrinks in
-       proportion instead of running off it. */
-    .drawing,
-    .view.subject {
-      display: none !important;
+       One layout for both styles. The rendered drawings used to stand upright side by side and the
+       dimensioned ones lay stacked and enlarged, which were two different sheets for one cartridge
+       and left the dimensioned one running onto a second page. Now every drawing lies the way the
+       screen lays it, in the same two columns as the tables underneath, so the cartridge is over
+       Cartridge maxi and the chamber over Chamber mini whichever style is printed; a dimensioned
+       drawing could never be turned anyway, because its labels are set horizontally.
+
+       Sizes are in `mm` throughout, which on paper is a millimetre rather than the CSS convention
+       a screen settles for. Both drawings are at one scale, worked out once from the widest and
+       tallest of the pair (`--mm-widest`, `--mm-tallest`, set on the stage): each fills its column
+       or the height budget, whichever binds first, and never more than life size and a half. A
+       cartridge too long for half a sheet -- `.long`, over 95 mm of drawing -- stacks the pair
+       across the full width instead, since at half width its symbols would be under a millimetre. */
+    .drawing {
+      display: block;
+      min-height: 0;
+      max-height: none;
+      margin: 3mm 0 4mm;
+      padding: 0;
+      overflow: visible;
+      border: 0;
+      background: transparent;
     }
-    .plates {
-      --upright-cap: 120mm;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      gap: 12mm;
-      margin: 0.5rem 0 0.75rem;
-    }
-    .plate {
+    /* `.drawing.paired .stage` is the more specific rule on screen, so the grid is restated at
+       least as specifically here or the pair keeps the screen's own tracks. */
+    .drawing .stage,
+    .drawing.paired .stage {
+      --col: 86mm;
+      --cap: 60mm;
+      --scale: min(
+        calc(var(--col) / var(--mm-widest)),
+        calc(var(--cap) / var(--mm-tallest)),
+        1.5mm
+      );
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 8mm;
+      align-items: start;
+      justify-items: start;
       margin: 0;
-      text-align: center;
+      width: 100%;
+    }
+    .drawing:not(.paired) .stage,
+    .drawing.long .stage,
+    .drawing.long.paired .stage {
+      --col: 180mm;
+      --cap: 46mm;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 3mm 0;
+      justify-items: center;
+    }
+    .plate,
+    .drawing.paired .plate {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
       break-inside: avoid;
+      /* On screen a panel is a small viewport that pans; on paper there is nothing to pan with,
+         and a clipped drawing would just be a drawing with its end cut off. */
+      overflow: visible;
+    }
+    .drawing:not(.paired) .plate,
+    .drawing.long .plate {
+      align-items: center;
+    }
+    /* Captioned even where there is only one, which the screen leaves unnamed: the controls that
+       said which style and which length are not on the sheet, so the caption is the only thing
+       that says this is the chamber at 12/70 rather than the cartridge at 12/89. */
+    .plate-name,
+    .drawing:not(.paired) .plate-name {
+      display: block;
+      margin: 0 0 1mm;
+      font-size: 0.6rem;
+      color: #000000;
+    }
+    .plate-note,
+    .figure-note {
+      display: none;
     }
     .plate-box {
-      /* The length as printed, and the width in proportion to it. */
-      --up: min(calc(var(--mm-w) * 1mm), var(--upright-cap));
-      --across: calc(var(--mm-h) / var(--mm-w) * var(--up));
-      position: relative;
-      width: var(--across);
-      height: var(--up);
+      width: calc(var(--mm-w) * var(--scale));
+      aspect-ratio: var(--mm-w) / var(--mm-h);
     }
-    /* Turned head-down, so the bullet points up the page the way a cartridge stands. The image's
-       own width runs up the sheet once it is turned, which is why the two are swapped here. */
     .plate-box :global(img),
     .plate-box :global(svg) {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: var(--up) !important;
-      height: var(--across) !important;
+      width: 100% !important;
+      height: auto !important;
       max-width: none;
-      transform: translate(-50%, -50%) rotate(-90deg);
-    }
-    .plate figcaption {
-      margin-top: 1.5mm;
-      font-size: 0.65rem;
-      color: #000000;
     }
 
     /* Off the sheet. It is a caveat about who has read the page, which belongs beside the page
@@ -985,50 +1133,40 @@
       display: none !important;
     }
 
-    /* The remaining picks read as a caption -- the style and the length this sheet is of. */
+    /* The controls are for choosing, and on paper there is nothing to choose: the sheet is of
+       the drawing it shows, and each drawing's caption names it and its length. */
     .views {
-      margin: 0 0 0.5rem;
-      justify-content: center;
-      gap: 0.2rem 0.9rem;
+      display: none !important;
+    }
+
+    .head {
+      gap: 0.5rem 2rem;
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 1.4rem;
+    }
+    .alt,
+    .meta {
       font-size: 0.7rem;
     }
-    .option:not(.on),
-    .view-note {
-      display: none;
-    }
-    /* The chosen option is a word in a caption here, not a pressed button: `.option.on` is what
-       paints it on screen, so the print rule has to be at least as specific to undo it. */
-    .option,
-    .option.on {
-      flex-direction: row;
-      gap: 0.35rem;
-      border: 0;
-      padding: 0;
-      background: transparent;
-      color: #000000;
-      font-weight: 700;
-    }
-    .option-sub {
-      color: inherit;
-      font-size: inherit;
-      font-weight: 400;
+    .meta {
+      gap: 0 0.7rem;
     }
 
     .tables {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 0.75rem;
     }
-    .bullet {
-      margin-top: 0.5rem;
-      break-inside: avoid;
-    }
     .bullet h3 {
       font-size: 0.7rem;
       margin-bottom: 0.15rem;
     }
+    /* The same label column as the dimension rows beside it, which is also what keeps
+       `pistol_round_nose` on one line in a 42 mm sub-column. */
     .bullet-data {
-      grid-template-columns: 4rem 1fr;
-      gap: 0.03rem 0.4rem;
+      grid-template-columns: 3.1rem minmax(0, 1fr);
+      gap: 0.03rem 0.35rem;
       font-size: 0.65rem;
     }
     :global(.tables h2) {
@@ -1036,18 +1174,26 @@
       padding-bottom: 0.2rem;
       margin-bottom: 0.4rem;
     }
-    :global(.tables .group + .group) {
-      margin-top: 0.45rem;
+    :global(.tables .group) {
+      margin-bottom: 0.45rem;
     }
     :global(.tables h3) {
       font-size: 0.7rem;
       margin-bottom: 0.15rem;
     }
+    /* A row is one line where it can be. Each side is two sub-columns of about 42 mm on paper, and
+       a label column of 4rem left "39.62 mm" and its "-0.2" nothing to do but wrap; the labels are
+       seven characters at most, so the value keeps its tolerance beside it.
+
+       The value track is `minmax(0, 1fr)` rather than `1fr`, whose floor is the widest line it
+       holds: a row too long for the sub-column would otherwise push the whole list over the
+       column's edge and print across the rows beside it. */
     :global(.tables dl) {
-      grid-template-columns: 4rem 1fr;
-      gap: 0.03rem 0.4rem;
+      grid-template-columns: 3.1rem minmax(0, 1fr);
+      gap: 0.03rem 0.35rem;
     }
     :global(.tables dt),
+    :global(.tables dd),
     :global(.tables table) {
       font-size: 0.65rem;
     }
@@ -1055,7 +1201,8 @@
     :global(.tables td) {
       padding: 0.1rem 0.25rem 0.1rem 0;
     }
-    :global(.tables .side),
+    /* A group stays whole; a side may break, or a long record's tables would jump to a second
+       sheet together and leave the first one two-thirds empty. */
     :global(.tables .group) {
       break-inside: avoid;
     }

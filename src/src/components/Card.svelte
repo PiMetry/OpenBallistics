@@ -1,6 +1,7 @@
 <script lang="ts">
   import Drawing from './Drawing.svelte';
   import Flag from './Flag.svelte';
+  import { card } from '../lib/drawings';
   import { href } from '../lib/router';
   import {
     FAMILY_LABELS,
@@ -8,6 +9,7 @@
     verificationState,
     verificationSummary,
     VERIFICATION_LABELS,
+    type DrawingStyle,
     type Entry
   } from '../lib/types';
 
@@ -16,8 +18,22 @@
     scale: number;
     /** Drawing canvas height in pixels; grows with the grid's zoom so a larger drawing has room. */
     height?: number;
+    /**
+     * Which way the grid is drawing its cartridges: as objects, or as dimensioned drawings. One
+     * setting for the whole grid rather than one per card, because the grid is a comparison and a
+     * page of cards drawn two different ways is not one.
+     */
+    style?: DrawingStyle;
   }
-  let { entry, scale, height = 78 }: Props = $props();
+  let { entry, scale, height = 78, style = 'visual' }: Props = $props();
+
+  /**
+   * Which drawing this card shows. Always of the cartridge and never of its chamber -- a card is a
+   * picture of the round -- and in the asked-for style where the cartridge has been drawn that
+   * way. See `card`; where it has not, this is the cartridge's own drawing, unchanged.
+   */
+  const plate = $derived(card(entry, style));
+  const dimensioned = $derived(plate?.style === 'technical');
 
   const counted = $derived(tally(entry.verified));
   // Named `level` rather than `state`: a top-level `state` would turn every `$state`
@@ -87,11 +103,12 @@
     onpointercancel={endDrag}
     onlostpointercapture={endDrag}
     class:dragging
+    class:dimensioned
     role="region"
     aria-label={`${entry.name} preview`}
     title="Drag to inspect an oversized preview"
   >
-    <Drawing {entry} {scale} {height} />
+    <Drawing {entry} {scale} {height} drawing={plate} />
   </div>
 
   <span class="titles">
@@ -175,6 +192,15 @@
   }
   .drawing.dragging {
     cursor: grabbing;
+  }
+  /* A dimensioned drawing is a sheet, not an object: it is four or five times as tall as the
+     round it draws, because the dimension lines and their labels stand off it on every side. Given
+     the same 78 px as a cartridge lying down it would be a letterbox onto the middle of itself, so
+     the box grows to the shape of what it holds and the grid's rows grow with it. */
+  .drawing.dimensioned {
+    min-height: 11rem;
+    max-height: 22rem;
+    align-items: flex-start;
   }
   .drawing :global(img),
   .drawing :global(svg) {
