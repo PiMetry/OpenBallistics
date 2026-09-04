@@ -85,7 +85,7 @@
   <!--
     What "alpha" means, rather than the word on its own. A reader who is about to cut metal needs
     to know what the label buys them, and the honest answer is: not much yet. How far any one
-    record has been read against its sheet is said on that record's page, not here.
+    record has been proofread is said on that record's page, not here.
   -->
   <p class="alert-alpha">
     <strong>This site is in development and at alpha status</strong>: it is an early, incomplete

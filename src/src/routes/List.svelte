@@ -665,10 +665,21 @@
     border-radius: 3px;
   }
 
+  /* Three cards across at most.
+  
+     `auto-fill` on its own puts as many 21rem cards in a row as fit, which on the 92rem page the
+     site now uses is four, and a fourth column takes width from the drawing on every card in the
+     grid -- the drawing being the thing a reader is scanning for. Three is the cap; below the width
+     for three the grid still falls to two and then to one on its own. */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
     gap: 1rem;
+  }
+  @media (min-width: 70rem) {
+    .grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
 
   table {

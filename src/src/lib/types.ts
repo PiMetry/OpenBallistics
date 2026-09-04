@@ -34,7 +34,7 @@ export interface Record_ {
       ogive: string;
       base: string;
       tip: string;
-      /** Whether a person has held the nose form against the drawing. */
+      /** Whether a person has proofread the nose form. */
       verified?: boolean;
     };
     implausible?: Finding[];
@@ -63,7 +63,7 @@ export interface Finding {
 }
 
 /**
- * How far a record can be trusted, in one word. `verified`: a person read it against the sheet.
+ * How far a record can be trusted, in one word. `verified`: a person proofread it.
  * `implausible`: a plausibility rule fires that nothing explains. `unverified`: nothing found
  * wrong, nobody has confirmed it. The word names the record's status, never how it was produced.
  */
@@ -117,9 +117,9 @@ export interface Drawing {
  * The five things a person can confirm about a record, in the order the site shows them.
  *
  * A record is not verified or unverified as a whole: the cartridge's numbers, the chamber's, the
- * drawing of each and the nose form of the bullet are four different readings against the source,
- * done at different times and often by different people. Reporting one word for all five is how a
- * page claims more than anybody actually checked.
+ * drawing of each and the nose form of the bullet are four different things to proofread, done at
+ * different times and often by different people. Reporting one word for all five is how a page
+ * claims more than anybody actually checked.
  */
 export const FACETS = [
   'cartridge',
@@ -138,13 +138,13 @@ export const FACET_LABELS: Record<Facet, string> = {
   bullet: 'Bullet'
 };
 
-/** What each facet means, for the reader who wants to know what was actually held against what. */
+/** What each facet means, for the reader who wants to know what a person actually proofread. */
 export const FACET_NOTES: Record<Facet, string> = {
-  cartridge: "The cartridge's published dimensions, read against the sheet by a person",
-  chamber: "The chamber's published dimensions, read against the sheet by a person",
-  cartridgeDrawing: 'The drawing of the cartridge, held against the sheet by a person',
-  chamberDrawing: 'The drawing of the chamber, held against the sheet by a person',
-  bullet: "The drawn bullet's nose form, held against the sheet's drawing by a person"
+  cartridge: "The cartridge's published dimensions, proofread by a person",
+  chamber: "The chamber's published dimensions, proofread by a person",
+  cartridgeDrawing: 'The drawing of the cartridge, proofread by a person',
+  chamberDrawing: 'The drawing of the chamber, proofread by a person',
+  bullet: "The drawn bullet's nose form, proofread by a person"
 };
 
 /**

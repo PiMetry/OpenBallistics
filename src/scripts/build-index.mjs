@@ -509,8 +509,8 @@ function shape(record) {
 /**
  * What a person has confirmed about a record, facet by facet.
  *
- * A record is not verified or unverified as a whole. Five different things can be held against the
- * source by five different readings, and they are checked at different times by different people:
+ * A record is not verified or unverified as a whole. Five different things can be proofread by
+ * five different people, at five different times:
  * the cartridge's published numbers, the chamber's, the drawing of each, and the nose form of the
  * bullet the cartridge drawing puts in the case mouth.
  *
@@ -559,7 +559,7 @@ function verifications(record, svg, drawings, ballots) {
     if (approve || reject) votes[facet] = { approve, reject };
   };
 
-  // Both sides of the sheet are always published, so both can always be read against it.
+  // Both sides of the sheet are always published, so both can always be proofread.
   cast('cartridge', notes.confidence === 'verified');
   cast('chamber', held.chamber === true);
   if (svg || drawn('cartridge')) cast('cartridgeDrawing', held.cartridgeDrawing === true);
