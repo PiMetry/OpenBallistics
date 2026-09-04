@@ -10,7 +10,8 @@
       "verified": false
     },
     "defaultBulletShape": "pointy",
-    "implausible": []
+    "implausible": [],
+    "primerType": "sr"
   },
   "cartridge": {
     "caseHead": {
