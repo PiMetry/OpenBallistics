@@ -19,6 +19,13 @@ export type Lang = 'en' | 'de';
 export const LANGS: Lang[] = ['en', 'de'];
 
 /** Each language named in itself, which is how a reader who cannot read the other one finds it. */
+/**
+ * The flag each language is shown as in the masthead (2026-09-05). A flag is a country and a
+ * language is not one, so the name stays on the hover and in the alt text; these are only the
+ * pictures most readers will look for. From the same `flag-icons` set the origins use.
+ */
+export const LANG_FLAGS: Record<Lang, string> = { en: 'gb', de: 'de' };
+
 export const LANG_LABELS: Record<Lang, string> = {
   en: 'English',
   de: 'Deutsch'

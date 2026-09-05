@@ -62,8 +62,14 @@ export function offered(all: DrawingSubject[], drawn: Drawing[]): DrawingSubject
  * dimensions are drawn over it. The dimensioned outline is the file's default face and needs no
  * fragment, which keeps a plain link to the file meaning what it always did.
  */
-export function face(style: DrawingStyle, dimensions: boolean): string {
-  if (style === 'visual') return dimensions ? '#visual-dims' : '#visual';
+export function face(style: DrawingStyle, dimensions: boolean, dark = false): string {
+  if (style === 'visual') {
+    // The dimension ink is a navy for paper. The outline faces are lightened on a dark page by a
+    // CSS filter, but a filter would turn the brass blue, so the file carries a fifth face with
+    // the ink recoloured for a dark ground (2026-09-05); see `svg_drawing.py`.
+    if (!dimensions) return '#visual';
+    return dark ? '#visual-dims-dark' : '#visual-dims';
+  }
   return dimensions ? '' : '#plain';
 }
 

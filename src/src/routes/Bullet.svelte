@@ -5,6 +5,7 @@
   import { t, type Key } from '../lib/i18n.svelte';
   import { href } from '../lib/router';
   import { PX_PER_MM } from '../lib/scale';
+  import { isDark } from '../lib/theme.svelte';
   import { familyLabel, type DrawingStyle } from '../lib/types';
 
   interface Props {
@@ -110,7 +111,7 @@
       <img
         class="plate"
         class:technical={style === 'technical'}
-        src={bulletDrawingUrl(key, face(style, dimensions))}
+        src={bulletDrawingUrl(key, face(style, dimensions, isDark()))}
         alt={`${data.manufacturer} ${data.name}, drawn to scale`}
         width={size[0] * PX_PER_MM * k}
         height={size[1] * PX_PER_MM * k}

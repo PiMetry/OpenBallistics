@@ -1,6 +1,7 @@
 <script lang="ts">
   import Silhouette from './Silhouette.svelte';
   import { extent, face } from '../lib/drawings';
+  import { isDark } from '../lib/theme.svelte';
   import type { Drawing, DrawingStyle, Entry } from '../lib/types';
 
   /**
@@ -67,8 +68,12 @@
   const size = $derived(
     drawing ? extent(drawing, dimensions) : dimensions ? (entry.sheet ?? entry.svg) : entry.svg
   );
-  const url = $derived(
+  /** The same face for paper, which is never dark. */
+  const printUrl = $derived(
     `${import.meta.env.BASE_URL}outlines/${entry.family}/${drawing ? drawing.file : `${entry.key}.svg`}${face(style, dimensions)}`
+  );
+  const url = $derived(
+    `${import.meta.env.BASE_URL}outlines/${entry.family}/${drawing ? drawing.file : `${entry.key}.svg`}${face(style, dimensions, isDark())}`
   );
   /** Named for what it shows, so a screen reader is told which of several drawings this is. */
   const alt = $derived(
@@ -83,9 +88,11 @@
 </script>
 
 {#if size}
+  {@const box = `width:${(size[0] * scale).toFixed(1)}px;--mm-w:${size[0]};--mm-h:${size[1]}`}
   <img
     class="drawing"
     class:technical={style === 'technical'}
+    class:screen-only={url !== printUrl}
     src={url}
     {alt}
     loading={eager ? 'eager' : 'lazy'}
@@ -93,8 +100,17 @@
     draggable="false"
     width={size[0] * scale}
     height={size[1] * scale}
-    style={`width:${(size[0] * scale).toFixed(1)}px;--mm-w:${size[0]};--mm-h:${size[1]}`}
+    style={box}
   />
+  {#if url !== printUrl}
+    <!--
+      Paper is white whatever the theme, so the dark face would print pale. A stylesheet cannot
+      change an image's source, and swapping it on `beforeprint` is a race against the print
+      preview; a second image, hidden until print, is not.
+    -->
+    <img class="drawing print-only" src={printUrl} {alt} loading="lazy" decoding="async"
+      draggable="false" width={size[0] * scale} height={size[1] * scale} style={box} />
+  {/if}
 {:else}
   <Silhouette shape={entry.shape} {scale} {height} label={`${entry.name} case outline`} />
 {/if}
@@ -110,5 +126,16 @@
      colours are the point of them. */
   .drawing.technical {
     filter: var(--line-art);
+  }
+  .print-only {
+    display: none !important;
+  }
+  @media print {
+    .print-only {
+      display: block !important;
+    }
+    .screen-only {
+      display: none !important;
+    }
   }
 </style>

@@ -4,47 +4,21 @@
   import Cartridge from './routes/Cartridge.svelte';
   import List from './routes/List.svelte';
   import { href, route } from './lib/router';
-  import { lang, LANG_LABELS, LANGS, setLang, t } from './lib/i18n.svelte';
+  import { lang, LANG_FLAGS, LANG_LABELS, LANGS, setLang, t } from './lib/i18n.svelte';
+  import { theme, toggleTheme } from './lib/theme.svelte';
 
   const current = $derived($route);
   const repository = import.meta.env.VITE_REPO ?? 'PiMetry/OpenBallistics';
 
-  /**
-   * Light or dark, chosen by the reader and kept per browser. `app.css` defines the palette
-   * light-first and redefines it for `[data-theme='dark']` and for the system preference where
-   * nothing is stamped on the root, so the toggle only has to stamp the root: an explicit choice
-   * wins in both directions, and with none stored the system decides.
-   */
-  type Theme = 'light' | 'dark';
-  const THEME_KEY = 'theme';
-  function storedTheme(): Theme | null {
-    try {
-      const value = localStorage.getItem(THEME_KEY);
-      return value === 'light' || value === 'dark' ? value : null;
-    } catch {
-      return null;
-    }
-  }
-  function systemTheme(): Theme {
-    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-  let theme = $state<Theme>(storedTheme() ?? systemTheme());
+  // The theme lives in `lib/theme.svelte.ts`, because the drawings read it too; this stamps it.
   $effect(() => {
-    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.theme = theme();
   });
   // And what language it is in, which `setLang` stamps when the reader switches and nothing
   // stamped on the first load of a page that remembered a choice from last time.
   $effect(() => {
     document.documentElement.lang = lang();
   });
-  function toggleTheme() {
-    theme = theme === 'dark' ? 'light' : 'dark';
-    try {
-      localStorage.setItem(THEME_KEY, theme);
-    } catch {
-      // Storage may be unavailable; the choice still applies for this visit.
-    }
-  }
 </script>
 
 <a class="skip" href="#main">{t('site.skip')}</a>
@@ -75,10 +49,10 @@
       type="button"
       class="tool"
       onclick={toggleTheme}
-      aria-pressed={theme === 'dark'}
-      title={theme === 'dark' ? t('site.toLight') : t('site.toDark')}
+      aria-pressed={theme() === 'dark'}
+      title={theme() === 'dark' ? t('site.toLight') : t('site.toDark')}
     >
-      {#if theme === 'dark'}{t('site.light')}{:else}{t('site.dark')}{/if}
+      {#if theme() === 'dark'}{t('site.light')}{:else}{t('site.dark')}{/if}
     </button>
     <!--
       Each language named in itself, so a reader who cannot read the page can still find their own.
@@ -94,8 +68,16 @@
           aria-pressed={lang() === code}
           onclick={() => setLang(code)}
           lang={code}
+          title={LANG_LABELS[code]}
+          aria-label={LANG_LABELS[code]}
         >
-          {LANG_LABELS[code]}
+          <img
+            class="lang-flag"
+            src={`${import.meta.env.BASE_URL}flags/${LANG_FLAGS[code]}.svg`}
+            alt={LANG_LABELS[code]}
+            width="20"
+            height="15"
+          />
         </button>
       {/each}
     </div>
@@ -220,11 +202,27 @@
     display: inline-flex;
     gap: 0.25rem;
   }
+  .lang {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.45rem;
+  }
+  .lang-flag {
+    display: block;
+    width: 1.25rem;
+    height: auto;
+    border: 1px solid var(--rule-strong);
+    border-radius: 1px;
+    /* The one not chosen stands back, the way the other tools do next to the current page. */
+    opacity: 0.55;
+  }
   .lang.on {
-    color: var(--accent);
     border-color: var(--accent);
     background: var(--accent-soft);
-    font-weight: 600;
+  }
+  .lang.on .lang-flag,
+  .lang:hover .lang-flag {
+    opacity: 1;
   }
   .tool[aria-current='page'] {
     color: var(--ink-3);
