@@ -15,18 +15,13 @@
     subjectLabel,
     SUBJECTS
   } from '../lib/drawings';
+  import { bulletsFor } from '../lib/bullets';
   import { issueUrl } from '../lib/issue';
   import { href } from '../lib/router';
   import { t } from '../lib/i18n.svelte';
   import { PX_PER_MM } from '../lib/scale';
   import {
-    FACETS,
-    facetLabel,
-    facetNote,
     familyLabel,
-    tally,
-    verificationState,
-    verificationLabel,
     type Drawing as Plate,
     type DrawingStyle,
     type DrawingSubject,
@@ -394,56 +389,18 @@
   {@const tallest = shown.length ? Math.max(...shown.map((plate) => extent(plate, dimensions)[1])) : 1}
   {@const drawScale = zoom === 'fit' ? fitScale(widest, tallest) : PX_PER_MM * zoom}
   <!--
-    How far this record can be trusted, said before the record rather than after it.
-
-    It sat under the drawing in a filled box, which put the loudest thing on the page between the
-    picture and the numbers and made an unverified record look alarming. Up here it is a masthead:
-    the first thing read, in the smallest voice on the page, because what it says is a caveat and
-    not a headline.
-
-    Five different things can be confirmed about a record and they are confirmed separately, by
-    different readings at different times: the cartridge's published numbers, the chamber's, the
-    drawing of each, and the nose form of the bullet. One word over all five would claim more than
-    anybody checked, so each is named and answered on its own.
-
-    Under them, where any plausibility rule fired, the check: every finding, the unexplained ones
-    first and the known exceptions with their reason, each naming both sides of the value it
-    compares so that two columns called L3 are never mistaken for one. A record can be fully
-    verified and still carry an explained finding -- that is what explaining it was for.
+    Where any plausibility rule fired, the check, said before the record rather than after it:
+    every finding, the unexplained ones first and the known exceptions with their reason, each
+    naming both sides of the value it compares so that two columns called L3 are never mistaken
+    for one. In the smallest voice on the page, because what it says is a caveat and not a
+    headline; a record can be entirely right and still carry an explained finding -- that is what
+    explaining it was for.
   -->
   {@const findings = (data.annotations?.implausible ?? []) as Finding[]}
   {@const unexplained = findings.filter((f) => !f.known)}
   {@const explained = findings.filter((f) => f.known)}
-  {@const verified = entry?.verified ?? {}}
-  {@const counted = tally(verified)}
-  {@const level = verificationState(verified)}
-  <section class="verified" aria-label={t('verify.status')}>
-    <p class="verified-line">
-      <span class="verified-count {level}">
-        {#if level === 'full'}✓ {verificationLabel('full')}
-        {:else if level === 'partial'}{t('verify.count', {
-            done: counted.done,
-            total: counted.total
-          })}
-        {:else}{verificationLabel('none')}{/if}
-      </span>
-      <span class="verified-what">{t('verify.means')}</span>
-      <!--
-        Each facet, named, with whether a person has proofread it. The verdicts are data kept with
-        the records upstream (BallisticViz `data/verifications.json`); there is nothing to vote on
-        here and nothing to file, which is why the strip has no links.
-      -->
-      <span class="facets">
-        {#each FACETS.filter((facet) => facet in verified) as facet (facet)}
-          <span class="facet" class:verified={verified[facet] === true} title={facetNote(facet)}>
-            <span class="facet-mark" aria-hidden="true">{verified[facet] ? '✓' : '·'}</span>
-            {facetLabel(facet)}
-          </span>
-        {/each}
-      </span>
-    </p>
-
-    {#if findings.length}
+  {#if findings.length}
+    <section class="caveat" aria-label={t('verify.checks')}>
       <div class="checks" class:open={unexplained.length}>
         <p class="checks-head">
           {t('verify.checks')}{#if unexplained.length} - {t('verify.unexplained', {
@@ -459,8 +416,8 @@
           {/each}
         </ul>
       </div>
-    {/if}
-  </section>
+    </section>
+  {/if}
 
   <header class="head">
     <div>
@@ -710,6 +667,28 @@
     {/if}
     <GroupTable side="chamber" heading={t('record.chamberMini')} groups={data.chamber} {selected} />
   </div>
+
+  {#if entry}
+    {@const catalogued = bulletsFor(entry)}
+    {#if catalogued.length}
+      <!--
+        The catalogue's bullets that fit this case, by diameter (see `bulletsFor`). A list and
+        not a table: the page is about the cartridge, and these are pointers to pages about
+        something else.
+      -->
+      <section class="catalogue">
+        <h2>{t('bullets.forCartridge')}</h2>
+        <ul>
+          {#each catalogued as bullet (bullet.key)}
+            <li>
+              <a href={href.bullet(bullet.key)}>{bullet.manufacturer} {bullet.name}</a>
+              <span class="muted num">{bullet.model} · {(bullet.mass / 0.06479891).toFixed(0)} gr · {bullet.diameter} mm</span>
+            </li>
+          {/each}
+        </ul>
+      </section>
+    {/if}
+  {/if}
 
   <p class="foot">
     <a href={href.list()}>{t('record.back')}</a>
@@ -964,62 +943,44 @@
     font-size: var(--step-0);
   }
   /* A masthead, not a banner. It is the first thing on the page and the quietest: what it says is
-     a caveat about everything below it, and a filled box saying "Unverified" over a page of
-     C.I.P. figures read as an error message rather than as a note about who has checked them. */
-  .verified {
+     a caveat about the figures below it, and a filled box over a page of C.I.P. figures read as
+     an error message rather than as a note. */
+  .caveat {
     margin: 0 0 1.25rem;
     padding-bottom: 0.6rem;
     border-bottom: 1px solid var(--rule);
     font-size: 0.74rem;
     color: var(--ink-3);
   }
-  .verified p {
+  .caveat p {
     margin: 0;
   }
-  .verified-line {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.2rem 0.7rem;
-  }
-  .verified-count {
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-  .verified-count.full {
-    color: var(--ok);
-  }
-  .verified-count.partial {
-    color: var(--accent);
-  }
-  .verified-what {
-    color: var(--ink-3);
-  }
-
-  /* The five, named. Muted by default and picked out only where the answer is yes, so the eye
-     lands on what has been done rather than on what has not. */
-  .facets {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.15rem 0.75rem;
-    margin-left: auto;
-  }
-  .facet {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 0.25rem;
-    white-space: nowrap;
-  }
-  .facet.verified {
-    color: var(--ok);
-  }
-  .facet-mark {
-    font-weight: 700;
-  }
-
   .checks {
-    margin-top: 0.5rem;
+    margin-top: 0;
+  }
+  .catalogue {
+    margin-top: 2rem;
+    font-size: var(--step-0);
+  }
+  .catalogue h2 {
+    font-size: var(--step-0);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin: 0 0 0.4rem;
+  }
+  .catalogue ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .catalogue li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .catalogue .muted {
+    color: var(--ink-3);
+    font-size: 0.85em;
   }
   .checks-head {
     font-size: 0.7rem;
@@ -1169,9 +1130,10 @@
       max-width: none;
       transform: translate(-50%, -50%) rotate(-90deg);
     }
-    /* Off the sheet. It is a caveat about who has read the page, which belongs beside the page
-       while you are reading it and not on the paper you carry to the machine. */
-    .verified {
+    /* Off the sheet. A caveat about the figures belongs beside the page while you are reading it,
+       and pointers to other pages not on the paper you carry to the machine. */
+    .caveat,
+    .catalogue {
       display: none !important;
     }
 

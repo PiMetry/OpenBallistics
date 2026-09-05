@@ -1,0 +1,71 @@
+{
+  "key": "nosler_53164",
+  "manufacturer": "Nosler",
+  "line": "Custom Competition",
+  "model": "53164",
+  "name": "30 Caliber 168 gr HPBT Custom Competition",
+  "calibre": ".308",
+  "diameter": 7.823,
+  "mass": 10.886,
+  "length": 30.48,
+  "base": {
+    "type": "boat_tail"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "hollow_point"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.462
+  },
+  "sources": [
+    {
+      "fields": [
+        "diameter",
+        "mass",
+        "length",
+        "ballistics.g1",
+        "base.type",
+        "tip.type",
+        "cannelure"
+      ],
+      "publisher": "Nosler",
+      "url": "https://www.nosler.com/30-caliber-168gr-hpbt-custom-competition-100ct.html",
+      "retrieved": "2026-09-05",
+      "kind": "published",
+      "note": "0.308 in, 168 gr, OAL 1.200 in, SD 0.253, BC G1 0.462; hollow point, boat tail, no cannelure."
+    }
+  ],
+  "notes": "The ogive form is not named by Nosler; tangent is assumed and is an assumption, not a source.",
+  "derived": {
+    "length": 30.48,
+    "bearing": 6.168,
+    "nose": 18.288,
+    "boatTail": 6.024,
+    "baseDiameter": 6.13,
+    "boatTailAngle": 8.0,
+    "meplat": 1.27,
+    "ogiveRadiusCalibres": 6.733,
+    "massGrains": 168.0,
+    "sectionalDensity": 0.253,
+    "assumed": [
+      "base.angle",
+      "base.diameter",
+      "base.length",
+      "bearing",
+      "construction.jacket_thickness",
+      "meplat",
+      "nose",
+      "ogive.radius_calibres",
+      "tip.cavity_depth"
+    ]
+  }
+}

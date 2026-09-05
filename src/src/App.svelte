@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Bullet from './routes/Bullet.svelte';
+  import Bullets from './routes/Bullets.svelte';
   import Cartridge from './routes/Cartridge.svelte';
   import List from './routes/List.svelte';
   import { href, route } from './lib/router';
@@ -60,8 +62,11 @@
     <span class="title">{t('site.title')}</span>
   </a>
   <nav class="tools" aria-label="Site">
-    <a class="tool" href={href.list()} aria-current={current.view === 'list' ? 'page' : undefined}
-      >{t('site.home')}</a
+    <a class="tool" href={href.list()} aria-current={current.view === 'list' || current.view === 'cartridge' ? 'page' : undefined}
+      >{t('nav.cartridges')}</a
+    >
+    <a class="tool" href={href.bullets()} aria-current={current.view === 'bullets' || current.view === 'bullet' ? 'page' : undefined}
+      >{t('nav.bullets')}</a
     >
     <a class="tool" href={`https://github.com/${repository}`} target="_blank" rel="noopener noreferrer">
       GitHub
@@ -118,6 +123,10 @@
 <main id="main">
   {#if current.view === 'cartridge'}
     <Cartridge key={current.key} />
+  {:else if current.view === 'bullet'}
+    <Bullet key={current.key} />
+  {:else if current.view === 'bullets'}
+    <Bullets />
   {:else}
     <List />
   {/if}

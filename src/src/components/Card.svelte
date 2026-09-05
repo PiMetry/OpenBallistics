@@ -6,10 +6,6 @@
   import { href } from '../lib/router';
   import {
     familyLabel,
-    tally,
-    verificationLabel,
-    verificationState,
-    verificationSummary,
     type DrawingStyle,
     type Entry
   } from '../lib/types';
@@ -20,7 +16,7 @@
     /** Drawing canvas height in pixels; grows with the grid's zoom so a larger drawing has room. */
     height?: number;
     /**
-     * Which way the grid is drawing its cartridges: as objects, or as dimensioned drawings. One
+     * Which way the grid is drawing its cartridges: as objects, or as outlines. One
      * setting for the whole grid rather than one per card, because the grid is a comparison and a
      * page of cards drawn two different ways is not one.
      */
@@ -34,12 +30,7 @@
    * down rather than choosing a different drawing.
    */
   const plate = $derived(card(entry));
-  const dimensioned = $derived(style === 'technical');
 
-  const counted = $derived(tally(entry.verified));
-  // Named `level` rather than `state`: a top-level `state` would turn every `$state`
-  // rune in this file into a store read of it.
-  const level = $derived(verificationState(entry.verified));
   let drawing: HTMLSpanElement;
   let dragging = $state(false);
   let dragged = $state(false);
@@ -104,7 +95,6 @@
     onpointercancel={endDrag}
     onlostpointercapture={endDrag}
     class:dragging
-    class:dimensioned
     role="region"
     aria-label={`${entry.name} preview`}
     title="Drag to inspect an oversized preview"
@@ -128,22 +118,7 @@
     <span class="chip">{familyLabel(entry.family)}</span>
     {#if entry.countries.length}<Flag codes={entry.countries} />{/if}
     <!--
-      How far the record can be trusted, said on every card so that the grid never reads as
-      uniformly authoritative.
-
-      Five things can be confirmed about a record and the card has room for none of them by name,
-      so it shows the count and hands the names to the hover. A count is the honest summary here:
-      "3 of 4 verified" says both that somebody has been through this record and that they have not
-      finished, which neither a tick nor the word "unverified" manages on its own.
-    -->
-    <span class="chip confidence {level}" title={verificationSummary(entry.verified)}>
-      {#if level === 'full'}✓ {verificationLabel('full')}
-      {:else if level === 'partial'}{t('verify.count', { done: counted.done, total: counted.total })}
-      {:else}{verificationLabel('none')}{/if}
-    </span>
-    <!--
-      Separate from the count, because it is a different kind of statement: not "nobody has checked
-      this" but "a rule fired on it and nothing accounts for that". Only the unexplained ones; a
+      A rule fired on this record and nothing accounts for that. Only the unexplained ones; a
       finding the dataset explains has been dealt with.
     -->
     {#if entry.warnings}
@@ -201,15 +176,6 @@
   .drawing.dragging {
     cursor: grabbing;
   }
-  /* A dimensioned drawing is a sheet, not an object: it is four or five times as tall as the
-     round it draws, because the dimension lines and their labels stand off it on every side. Given
-     the same 78 px as a cartridge lying down it would be a letterbox onto the middle of itself, so
-     the box grows to the shape of what it holds and the grid's rows grow with it. */
-  .drawing.dimensioned {
-    min-height: 11rem;
-    max-height: 22rem;
-    align-items: flex-start;
-  }
   .drawing :global(img),
   .drawing :global(svg) {
     flex: 0 0 auto;
@@ -255,23 +221,6 @@
   .chip.quiet {
     background: var(--surface-2);
     color: var(--ink-2);
-  }
-  .confidence.full {
-    color: var(--ok, #2f7a3f);
-    border-color: currentColor;
-    background: var(--ok-soft);
-  }
-  /* Partly verified is its own state and reads as one: not the green of finished, not the grey of
-     untouched. */
-  .confidence.partial {
-    color: var(--accent);
-    background: var(--accent-soft);
-    border-color: currentColor;
-  }
-  .confidence.none {
-    color: var(--ink-3);
-    background: var(--surface-2);
-    border-color: var(--rule);
   }
   .confidence.implausible {
     color: var(--warn, #8a5a00);

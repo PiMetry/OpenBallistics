@@ -71,9 +71,6 @@ export interface Finding {
  */
 export type Confidence = 'verified' | 'unverified' | 'implausible';
 
-export function confidenceLabel(confidence: Confidence): string {
-  return confidence === 'implausible' ? t('list.plausibility') : t(`verify.${confidence}`);
-}
 
 /** What a drawing is a drawing of: the cartridge, or the chamber it is fired in. */
 export type DrawingSubject = 'cartridge' | 'chamber';
@@ -115,97 +112,6 @@ export interface Drawing {
    * so that clicking a card does not change the picture that was clicked.
    */
   main?: true;
-}
-
-/**
- * The five things a person can confirm about a record, in the order the site shows them.
- *
- * A record is not verified or unverified as a whole: the cartridge's numbers, the chamber's, the
- * drawing of each and the nose form of the bullet are four different things to proofread, done at
- * different times and often by different people. Reporting one word for all five is how a page
- * claims more than anybody actually checked.
- */
-export const FACETS = [
-  'cartridge',
-  'chamber',
-  'cartridgeDrawing',
-  'chamberDrawing',
-  'bullet'
-] as const;
-export type Facet = (typeof FACETS)[number];
-
-/**
- * What a facet is called, in the reader's language.
- *
- * A function rather than the map it used to be, because the answer now depends on something that
- * changes while the page is open. The keys never do: they are the dataset's own names and the
- * words the issue forms are keyed by.
- */
-export function facetLabel(facet: Facet): string {
-  return t(`facet.${facet}`);
-}
-
-/** What each facet means, for the reader who wants to know what a person actually proofread. */
-export function facetNote(facet: Facet): string {
-  return t(`facetNote.${facet}`);
-}
-
-/**
- * What is confirmed about one record.
- *
- * **A facet that does not apply is absent, not false.** A record dimensioning no bullet has no
- * bullet to confirm, and a chamber nobody has drawn has no drawing to check; counting those as
- * unverified would leave a fully checked record reading as unfinished for ever. So the keys
- * present are the questions that can be asked of this record, and their values are the answers.
- */
-export type Verified = Partial<Record<Facet, boolean>>;
-
-/** How many of a record's applicable verifications are confirmed, out of how many there are. */
-export function tally(verified: Verified): { done: number; total: number } {
-  const answers = Object.values(verified);
-  return { done: answers.filter(Boolean).length, total: answers.length };
-}
-
-/** Where a record stands: everything confirmed, some of it, or none of it. */
-export type VerificationState = 'full' | 'partial' | 'none';
-
-export function verificationState(verified: Verified): VerificationState {
-  const { done, total } = tally(verified);
-  if (total && done === total) return 'full';
-  return done ? 'partial' : 'none';
-}
-
-export function verificationLabel(state: VerificationState): string {
-  return t(`verify.${state}`);
-}
-
-/**
- * The facets spelled out, for the hover of a badge that can only afford a number.
- *
- * Only the facets that apply are named, so a shot cartridge does not read as owing a bullet
- * verification it can never have.
- */
-export function verificationSummary(verified: Verified): string {
-  return FACETS.filter((facet) => facet in verified)
-    .map((facet) => `${facetLabel(facet)} ${verified[facet] ? t('verify.verified') : t('verify.unverified')}`)
-    .join(' · ');
-}
-
-/**
- * One number for how far a record has been checked, which is what the list sorts on.
- *
- * Each confirmed facet is worth `+1` and each one still outstanding `-1`, so a record ranks by how
- * much of it somebody has actually read rather than by how much of it exists. An unexplained
- * plausibility finding is `-2`: a figure that fails a rule with nothing to account for it is worse
- * than a figure nobody has looked at, because the site has positive reason to doubt it. A finding
- * the dataset explains costs nothing -- that is what explaining it was for.
- *
- * Facets that do not apply score nothing either way, so a shot cartridge with no bullet is not
- * punished for having no bullet.
- */
-export function verificationScore(entry: Entry): number {
-  const { done, total } = tally(entry.verified);
-  return done - (total - done) - 2 * entry.warnings;
 }
 
 /** One row of the index shipped with the app; see `scripts/build-index.mjs`. */
@@ -251,12 +157,6 @@ export interface Entry {
    * `shape` in `scripts/build-index.mjs` for what the outline does and does not include.
    */
   shape: [number, number][] | null;
-  /**
-   * What a person has confirmed about this record, facet by facet, and only for the facets that
-   * apply to it. See `Verified`; the list filters and sorts on this and the cartridge page names
-   * each one.
-   */
-  verified: Verified;
   /** Total plausibility checks that fired, including known exceptions. */
   checks: number;
   /** Findings on the record that no listed exception explains. */

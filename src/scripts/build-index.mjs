@@ -21,6 +21,9 @@ const OUTLINES = join(here, '..', 'public', 'outlines');
 const FLAG_SOURCE = join(here, '..', 'node_modules', 'flag-icons', 'flags', '4x3');
 const FLAGS = join(here, '..', 'public', 'flags');
 const OUT = join(here, '..', 'src', 'lib', 'index.generated.json');
+const BULLETS = join(ROOT, 'bullets');
+const BULLETS_SVG = join(ROOT, 'svg', 'bullets');
+const BULLETS_OUT = join(here, '..', 'src', 'lib', 'bullets.generated.json');
 const FLAGS_OUT = join(here, '..', 'src', 'lib', 'flags.generated.json');
 
 /**
@@ -460,53 +463,6 @@ function shape(record) {
   return points;
 }
 
-/**
- * What a person has confirmed about a record, facet by facet.
- *
- * A record is not verified or unverified as a whole. Five different things can be proofread by
- * five different people, at five different times:
- * the cartridge's published numbers, the chamber's, the drawing of each, and the nose form of the
- * bullet the cartridge drawing puts in the case mouth.
- *
- * **Two of them already had a home and keep it.** The cartridge's numbers are `confidence`, which
- * is a word rather than a flag because it also carries `implausible`; the bullet is
- * `defaultBullet.verified`. Restating either inside `annotations.verified` would be a second copy
- * of a fact able to disagree with the first, which is the thing this dataset avoids everywhere
- * else. So `annotations.verified` carries only the three that had nowhere to live:
- *
- * ```json
- * "verified": { "chamber": true, "cartridgeDrawing": true, "chamberDrawing": false }
- * ```
- *
- * Absent means unverified, never "does not apply". **What does not apply is left out entirely**,
- * and that is the difference the site counts on: a facet missing from the returned object is one
- * nobody can confirm because there is nothing to confirm -- a chamber drawing that has not been
- * rendered, a bullet on a record that dimensions no bullet. Counting those as unverified would
- * make a fully checked shot cartridge read as four fifths done for ever.
- *
- * The verdicts are data kept with the records upstream (BallisticViz `data/verifications.json`)
- * and merged into these annotations at build time; the site only reads them.
- */
-function verifications(record, svg, drawings) {
-  const notes = record.annotations ?? {};
-  const held = notes.verified ?? {};
-  const drawn = (subject) => (drawings ?? []).some((drawing) => drawing.subject === subject);
-
-  const verified = {};
-  const cast = (facet, verdict) => {
-    verified[facet] = verdict;
-  };
-
-  // Both sides of the sheet are always published, so both can always be proofread.
-  cast('cartridge', notes.confidence === 'verified');
-  cast('chamber', held.chamber === true);
-  if (svg || drawn('cartridge')) cast('cartridgeDrawing', held.cartridgeDrawing === true);
-  if (drawn('chamber')) cast('chamberDrawing', held.chamberDrawing === true);
-  // The nose form is a property of the bullet the record dimensions; 32 records dimension none.
-  if (notes.defaultBullet) cast('bullet', notes.defaultBullet.verified === true);
-  return { verified };
-}
-
 const entries = [];
 /**
  * Which drawing directories a record actually claimed.
@@ -561,12 +517,9 @@ for (const family of families) {
       ...(sheet && sheet !== svg ? { sheet } : {}),
       ...(shippedDrawings ? { drawings: shippedDrawings } : {}),
       shape: shape(record),
-      // What a person has proofread, facet by facet, and what only applies where it applies; see
-      // `verifications`. The list filters and sorts on these and the cartridge page names them.
-      ...verifications(record, svg, shippedDrawings),
       // How many plausibility rules fired on the record, and how many of those nothing explains.
       // From the dataset's own annotations (see cartridges/README.md); the cartridge page lists
-      // what each finding is. A record can be fully verified and still carry an explained one.
+      // what each finding is. A record can be entirely right and still carry an explained one.
       checks: (record.annotations?.implausible ?? []).length,
       warnings: (record.annotations?.implausible ?? []).filter((f) => !f.known).length
     });
@@ -591,6 +544,48 @@ for (const held of extra.keys()) {
 entries.sort((a, b) => a.name.localeCompare(b.name, 'en'));
 await mkdir(dirname(OUT), { recursive: true });
 await writeFile(OUT, JSON.stringify(entries), 'utf8');
+
+/**
+ * The bullet catalogue (`bullets/<key>.json`, from BallisticViz `data/bullets/`): one row per
+ * bullet with what the list needs -- who makes it, what it is called, its diameter, weight and
+ * length, and the two extents of its drawing -- and the drawings copied to `outlines/bullets/`.
+ * The whole record is fetched when a bullet is opened, like a cartridge's.
+ */
+const bullets = [];
+try {
+  const files = (await readdir(BULLETS)).filter((name) => name.endsWith('.json')).sort();
+  for (const file of files) {
+    const record = JSON.parse(await readFile(join(BULLETS, file), 'utf8'));
+    let size = null;
+    const svgFile = join(BULLETS_SVG, `${record.key}.svg`);
+    try {
+      size = await extent(svgFile);
+      await mkdir(join(OUTLINES, 'bullets'), { recursive: true });
+      await cp(svgFile, join(OUTLINES, 'bullets', `${record.key}.svg`));
+    } catch {
+      // A record without a drawing lists all the same.
+    }
+    bullets.push({
+      key: record.key,
+      manufacturer: record.manufacturer,
+      line: record.line ?? null,
+      model: record.model,
+      name: record.name,
+      calibre: record.calibre,
+      diameter: record.diameter,
+      mass: record.mass,
+      length: record.derived?.length ?? record.length ?? null,
+      g1: record.ballistics?.g1 ?? null,
+      g7: record.ballistics?.g7 ?? null,
+      assumed: record.derived?.assumed?.length ?? 0,
+      ...(size ? { svg: size.svg, tight: size.tight } : {})
+    });
+  }
+} catch {
+  // No catalogue yet.
+}
+await writeFile(BULLETS_OUT, JSON.stringify(bullets), 'utf8');
+console.log(`bullets: ${bullets.length} in the catalogue`);
 
 const bytes = Buffer.byteLength(JSON.stringify(entries));
 const shipped = entries.flatMap((entry) => entry.drawings ?? []);
