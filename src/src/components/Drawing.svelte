@@ -45,12 +45,22 @@
      * browser has every right not to have fetched by the time somebody prints.
      */
     eager?: boolean;
+    /**
+     * The contour alone, without its dimensions. A dimensioned drawing hides its annotation layer
+     * when loaded with the `#plain` fragment -- the file carries the switch, see `svg_header` in
+     * the renderer -- so the card in a grid, where the symbols are too small to read and only
+     * clutter the outline, shows the same file as the page, minus the layer. Only a dimensioned
+     * drawing has one; on any other the fragment is inert and is left off.
+     */
+    plain?: boolean;
   }
-  let { entry, scale, height, drawing = null, eager = false }: Props = $props();
+  let { entry, scale, height, drawing = null, eager = false, plain = false }: Props = $props();
 
   const size = $derived(drawing?.svg ?? entry.svg);
   const url = $derived(
-    `${import.meta.env.BASE_URL}outlines/${entry.family}/${drawing ? drawing.file : `${entry.key}.svg`}`
+    `${import.meta.env.BASE_URL}outlines/${entry.family}/${drawing ? drawing.file : `${entry.key}.svg`}${
+      plain && drawing?.style === 'technical' ? '#plain' : ''
+    }`
   );
   /** Named for what it shows, so a screen reader is told which of several drawings this is. */
   const alt = $derived(

@@ -116,7 +116,12 @@
     aria-label={`${entry.name} preview`}
     title="Drag to inspect an oversized preview"
   >
-    <Drawing {entry} {scale} {height} drawing={plate} />
+    <!--
+      The contour without its dimensions. At card size C.I.P.'s symbols are a millimetre high and
+      read as noise over the outline, which is the one thing a reader scanning a grid is looking
+      at; the page shows the same file with the layer on. Asked for 2026-09-05.
+    -->
+    <Drawing {entry} {scale} {height} drawing={plate} plain />
   </div>
 
   <span class="titles">
