@@ -1,0 +1,89 @@
+{
+  "key": "sierra_2200",
+  "manufacturer": "Sierra",
+  "line": "MatchKing",
+  "model": "2200",
+  "name": "30 Cal 168 gr HPBT MatchKing (classic)",
+  "calibre": ".308",
+  "diameter": 7.823,
+  "mass": 10.886,
+  "length": 30.99,
+  "base": {
+    "type": "boat_tail"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "hollow_point"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.462,
+    "note": "Sierra publishes BC by velocity band; .462 is the figure above 2600 ft/s"
+  },
+  "sources": [
+    {
+      "fields": [
+        "diameter",
+        "mass",
+        "base.type",
+        "tip.type"
+      ],
+      "publisher": "Sierra Bullets",
+      "url": "https://sierrabullets.com/30-cal-168-gr-hpbt-matchking-smk/",
+      "retrieved": "2026-09-05",
+      "kind": "published",
+      "note": "30 cal, 168 gr, HPBT. The page's specification tabs load dynamically and were not readable."
+    },
+    {
+      "fields": [
+        "length"
+      ],
+      "publisher": "JBM Ballistics bullet length list (measured)",
+      "url": "https://jbmballistics.com/downloads/lengthlist.html",
+      "retrieved": "2026-09-05",
+      "kind": "measured",
+      "note": "1.220 in ('BT Match')"
+    },
+    {
+      "fields": [
+        "ballistics.g1"
+      ],
+      "publisher": "Sierra, as quoted by retailers",
+      "url": "https://www.opticsplanet.com/sierra-2200-matchking-30-caliber-308-168-gr-hollow-point-boat-tail-hpbt-100.html",
+      "retrieved": "2026-09-05",
+      "kind": "quoted",
+      "note": "length 1.220 in nominal, BC .462 at 2600 ft/s, SD .253"
+    }
+  ],
+  "notes": "This is the classic 168 gr MatchKing the measured length belongs to. Sierra has since redesigned the #2200 -- longer boat tail, tangent ogive, closed nose, BC .527 -- and that bullet is not this record.",
+  "derived": {
+    "length": 30.99,
+    "bearing": 6.372,
+    "nose": 18.594,
+    "boatTail": 6.024,
+    "baseDiameter": 6.13,
+    "boatTailAngle": 8.0,
+    "meplat": 1.27,
+    "ogiveRadiusCalibres": 6.954,
+    "massGrains": 168.0,
+    "sectionalDensity": 0.253,
+    "assumed": [
+      "base.angle",
+      "base.diameter",
+      "base.length",
+      "bearing",
+      "construction.jacket_thickness",
+      "meplat",
+      "nose",
+      "ogive.radius_calibres",
+      "tip.cavity_depth"
+    ]
+  }
+}

@@ -1,17 +1,52 @@
 <script lang="ts">
   import Card from '../components/Card.svelte';
-  import { addCartridgeUrl } from '../lib/issue';
+  import Flag from '../components/Flag.svelte';
   import { countries, entries, families, search } from '../lib/data';
+  import { rememberStyle, storedStyle, styleLabel, styleNote, STYLES } from '../lib/drawings';
+  import { lang, t } from '../lib/i18n.svelte';
   import { href } from '../lib/router';
   import { PX_PER_MM } from '../lib/scale';
-  import { CONFIDENCE_LABELS, FAMILY_LABELS } from '../lib/types';
+  import {
+    COUNTRY_NAMES,
+    familyLabel,
+    type DrawingStyle,
+    type Entry
+  } from '../lib/types';
 
   let query = $state('');
   let family = $state('');
   let country = $state('');
-  let cartridgeVerification = $state<'' | 'verified' | 'unverified' | 'implausible'>('');
-  let bulletVerification = $state<'' | 'verified' | 'unverified'>('');
-  let sort = $state<'name' | 'family' | 'L3' | 'L6' | 'G1'>('name');
+
+  /**
+   * The plausibility filter. A check is the site doubting a figure, not a person having read it;
+   * a record can carry an explained finding and be entirely right -- that is what explaining it
+   * was for -- so "has open checks" asks about the unexplained ones only.
+   */
+  type Plausibility = '' | 'checks' | 'clean';
+  let plausibility = $state<Plausibility>('');
+
+  type Sort = 'name' | 'family' | 'L3' | 'L6' | 'G1';
+  let sort = $state<Sort>('name');
+
+  /**
+   * Which way round the sort runs.
+   *
+   * Every sort has a direction that is obviously the useful one to open on -- names from A,
+   * lengths from the shortest -- so changing the column resets the direction to that column's own
+   * default instead of carrying the last one over. The reader can then flip it.
+   */
+  const NATURAL: Record<Sort, 'asc' | 'desc'> = {
+    name: 'asc',
+    family: 'asc',
+    L3: 'asc',
+    L6: 'asc',
+    G1: 'asc'
+  };
+  let direction = $state<'asc' | 'desc'>('asc');
+  function setSort(next: Sort) {
+    sort = next;
+    direction = NATURAL[next];
+  }
 
   /**
    * Two ways of looking at the same 532 records, because they answer different questions.
@@ -43,31 +78,38 @@
     }
   });
 
+  /** Whether the column being sorted on says nothing about this record. */
+  function unpublished(entry: Entry): boolean {
+    return sort === 'L3' || sort === 'L6' || sort === 'G1' ? entry[sort] === null : false;
+  }
+
+  /** Whether a record answers what the plausibility filter is asking. */
+  function matches(entry: Entry, want: Plausibility): boolean {
+    if (want === 'checks') return entry.warnings > 0;
+    if (want === 'clean') return entry.checks === 0;
+    return true;
+  }
+
   const shown = $derived.by(() => {
     let list = entries;
     if (family) list = list.filter((entry) => entry.family === family);
-    if (country) list = list.filter((entry) => entry.country === country);
-    if (cartridgeVerification) {
-      list = list.filter((entry) =>
-        cartridgeVerification === 'implausible'
-          ? entry.checks > 0
-          : entry.checks === 0 && entry.confidence === cartridgeVerification
-      );
-    }
-    if (bulletVerification) {
-      list = list.filter((entry) =>
-        entry.svg && (bulletVerification === 'verified' ? entry.bulletVerified : !entry.bulletVerified)
-      );
-    }
+    // A joint standard answers to either of its countries: filtering for Germany finds the 9 x 18
+    // that Germany and Austria published together.
+    if (country) list = list.filter((entry) => entry.countries.includes(country));
+    if (plausibility) list = list.filter((entry) => matches(entry, plausibility));
     list = search(query, list);
 
     const sorted = [...list];
+    // Reversing rather than negating the comparison, so that the tie-break stays a tie-break: two
+    // records with the same case length are in name order either way round, and a record the sheet
+    // is silent about stays at the bottom instead of being promoted to the top by a flip.
+    const byName = (a: Entry, b: Entry) => a.name.localeCompare(b.name, 'en');
     if (sort === 'name') {
-      sorted.sort((a, b) => a.name.localeCompare(b.name, 'en'));
+      sorted.sort(byName);
     } else if (sort === 'family') {
-      sorted.sort((a, b) =>
-        (FAMILY_LABELS[a.family] ?? a.family).localeCompare(FAMILY_LABELS[b.family] ?? b.family, 'en') ||
-        a.name.localeCompare(b.name, 'en')
+      sorted.sort(
+        (a, b) =>
+          familyLabel(a.family).localeCompare(familyLabel(b.family), lang()) || byName(a, b)
       );
     } else {
       // A record with no published value for the sort column goes last rather than reading as
@@ -76,11 +118,17 @@
       sorted.sort((a, b) => {
         const x: number | null = a[column];
         const y: number | null = b[column];
-        if (x === null && y === null) return a.name.localeCompare(b.name, 'en');
+        if (x === null && y === null) return byName(a, b);
         if (x === null) return 1;
         if (y === null) return -1;
-        return x - y;
+        return x - y || byName(a, b);
       });
+    }
+    if (direction === 'desc') {
+      // The silent records were put last on purpose; they stay last.
+      const known = sorted.filter((entry) => !unpublished(entry));
+      const silent = sorted.filter((entry) => unpublished(entry));
+      return [...known.reverse(), ...silent];
     }
     return sorted;
   });
@@ -127,115 +175,189 @@
   const scale = $derived((PX_PER_MM * zoomPercent) / 100);
   const cardHeight = $derived(Math.round((78 * zoomPercent) / 100));
 
+  /**
+   * How each cartridge is drawn: as the object, or as the dimensioned drawing.
+   *
+   * Both are drawn in millimetres and both are drawn at the one scale the grid shares, so the
+   * comparison the grid exists for survives the switch -- a .22 Long Rifle's dimensioned drawing
+   * is a smaller sheet than a .50 BMG's, in the same proportion as the rounds. What changes is
+   * what the picture answers: how big is it, against where is each of C.I.P.'s symbols measured.
+   *
+   * The choice is kept with the cartridge page's, under one key, because it is a preference about
+   * how somebody reads and not about which page they are on: a reader who sets the grid to
+   * dimensioned drawings and clicks a card should land on a dimensioned drawing. See
+   * `storedStyle`. Where a cartridge has not been drawn that way its card falls back to the
+   * drawing it has, rather than going blank.
+   */
+  let style = $state<DrawingStyle>(storedStyle());
+  function setStyle(next: DrawingStyle) {
+    style = next;
+    rememberStyle(next);
+  }
+
+  /** Whether anything is narrowing the list -- which is what `reset` clears, and nothing else. */
+  const filtering = $derived(
+    query.trim() !== '' || family !== '' || country !== '' || plausibility !== ''
+  );
+
   function reset() {
     query = '';
     family = '';
     country = '';
-    cartridgeVerification = '';
-    bulletVerification = '';
+    plausibility = '';
   }
 </script>
 
+<!--
+  Two kinds of control, and the bar says which is which by where it puts them.
+
+  On the left, what is shown: family, country, plausibility. On the right, how it is shown: the
+  order, the size of a drawing, and -- in the row below -- grid or list. They used to sit in one
+  row of five equal columns, which made Size as wide as Plausibility and read as though picking
+  100% narrowed the results. Only the left-hand three change what comes back, and only those are
+  what "clear filters" clears.
+
+  A control holding something other than its default is marked, because with the filters spread
+  across a bar the reason a list is short should never be somewhere you have to go looking.
+-->
 <div class="controls">
   <label class="search">
-    <span class="eyebrow">Search</span>
+    <span class="eyebrow">{t('list.search')}</span>
     <input
       type="search"
       bind:value={query}
-      placeholder="308, 7.62 x 51, 9 mm Luger…"
+      placeholder={t('list.searchHint')}
       autocomplete="off"
     />
   </label>
 
-  <label>
-    <span class="eyebrow">Family</span>
-    <select bind:value={family}>
-      <option value="">All families</option>
-      {#each families as name (name)}
-        <option value={name}>{FAMILY_LABELS[name] ?? name}</option>
-      {/each}
-    </select>
-  </label>
+  <div class="cluster">
+    <label class="wide">
+      <span class="eyebrow">{t('list.family')}</span>
+      <select bind:value={family} class:on={family !== ''}>
+        <option value="">{t('list.allFamilies')}</option>
+        {#each families as name (name)}
+          <option value={name}>{familyLabel(name)}</option>
+        {/each}
+      </select>
+    </label>
 
-  <label>
-    <span class="eyebrow">Country</span>
-    <select bind:value={country}>
-      <option value="">All countries</option>
-      {#each countries as code (code)}
-        <option value={code}>{code}</option>
-      {/each}
-    </select>
-  </label>
+    <label class="wide">
+      <span class="eyebrow">{t('list.country')}</span>
+      <select bind:value={country} class:on={country !== ''}>
+        <option value="">{t('list.all')}</option>
+        {#each countries as code (code)}
+          <option value={code}>{COUNTRY_NAMES[code] ?? code}</option>
+        {/each}
+      </select>
+    </label>
 
-  <label>
-    <span class="eyebrow">Cartridge</span>
-    <select bind:value={cartridgeVerification}>
-      <option value="">Any verification</option>
-      <option value="verified">Verified</option>
-      <option value="unverified">Unverified</option>
-      <option value="implausible">Check</option>
-    </select>
-  </label>
+    <label class="widest">
+      <span class="eyebrow">{t('list.plausibility')}</span>
+      <select bind:value={plausibility} class:on={plausibility !== ''}>
+        <option value="">{t('list.any')}</option>
+        <option value="checks">{t('list.hasChecks')}</option>
+        <option value="clean">{t('list.noChecks')}</option>
+      </select>
+    </label>
+  </div>
 
-  <label>
-    <span class="eyebrow">Bullet</span>
-    <select bind:value={bulletVerification}>
-      <option value="">Any verification</option>
-      <option value="verified">Verified</option>
-      <option value="unverified">Unverified</option>
-    </select>
-  </label>
-
-  <label>
-    <span class="eyebrow">Sort</span>
-    <select bind:value={sort}>
-      <option value="name">Name</option>
-      <option value="family">Family</option>
-      <option value="L3">Case length</option>
-      <option value="L6">Overall length</option>
-      <option value="G1">Bullet diameter</option>
-    </select>
-  </label>
-
-  <label>
-    <span class="eyebrow">Size</span>
-    <select bind:value={zoomPercent}>
-      {#each ZOOMS as percent (percent)}
-        <option value={percent}>{percent}%</option>
-      {/each}
-    </select>
-  </label>
-
+  <div class="cluster presentation">
+    <label class="wide">
+      <span class="eyebrow">{t('list.sort')}</span>
+      <span class="sort-row">
+        <select value={sort} onchange={(event) => setSort(event.currentTarget.value as Sort)}>
+          <option value="name">{t('list.sortName')}</option>
+          <option value="family">{t('list.sortFamily')}</option>
+          <option value="L3">{t('list.sortCaseLength')}</option>
+          <option value="L6">{t('list.sortOverallLength')}</option>
+          <option value="G1">Bullet diameter</option>
+        </select>
+        <button
+          type="button"
+          class="direction"
+          onclick={() => (direction = direction === 'asc' ? 'desc' : 'asc')}
+          aria-label={direction === 'asc' ? 'Sorted ascending' : 'Sorted descending'}
+          title={direction === 'asc'
+            ? 'Ascending - click for descending'
+            : 'Descending - click for ascending'}
+        >
+          <span aria-hidden="true">{direction === 'asc' ? '↑' : '↓'}</span>
+        </button>
+      </span>
+    </label>
+  </div>
 </div>
 
 <div class="summary">
   <div>
     <p class="count">
-      <strong class="num">{shown.length}</strong> of {entries.length} cartridges
-      {#if shown.length !== entries.length}
+      {@html t('list.count', {
+        shown: `<strong class="num">${shown.length}</strong>`,
+        total: entries.length
+      })}
+      <!--
+        Offered whenever a filter is set, not whenever the count has changed. A search that happens
+        to match everything is still a search somebody has to clear, and it used to hide its own
+        way out.
+      -->
+      {#if filtering}
         <button class="link" onclick={reset}>clear filters</button>
       {/if}
     </p>
-    <p class="actions">
-      <a href={addCartridgeUrl()} target="_blank" rel="noopener noreferrer">Add a cartridge</a>
-    </p>
   </div>
-  <div class="views" role="group" aria-label="View">
-    <div class="segmented">
+  <div class="views">
+    <!--
+      How big the drawings are, beside the control that decides whether there are any. It sat in
+      the filter bar, where it was one of five look-alike selects and read as though it narrowed
+      the results; here it is plainly part of the view, and it goes away in the list view, which
+      has no drawings for it to size. No label: the percentages say what it is, and the row it is
+      in is about the view already.
+    -->
+    {#if view === 'grid'}
+      <!--
+        Which drawing, beside how big. Two words rather than an icon: "visual" and "technical" are
+        what the drawings are called everywhere else on the site and in the file names they are
+        shipped under, and a pictogram for "dimensioned" would be a puzzle. It goes away in the
+        list view along with the size, for the same reason: there are no drawings there to be of.
+      -->
+      <div class="segmented styles" role="group" aria-label={t('list.style')}>
+        {#each STYLES as option (option)}
+          <button
+            type="button"
+            class:on={style === option}
+            aria-pressed={style === option}
+            title={styleNote(option)}
+            onclick={() => setStyle(option)}>{styleLabel(option)}</button
+          >
+        {/each}
+      </div>
+      <select
+        class="size"
+        bind:value={zoomPercent}
+        aria-label={t('list.scale')}
+        title={t('list.scaleNote')}
+      >
+        {#each ZOOMS as percent (percent)}
+          <option value={percent}>{percent}%</option>
+        {/each}
+      </select>
+    {/if}
+    <div class="segmented" role="group" aria-label={t('list.view')}>
       <button
         type="button"
         class:on={view === 'grid'}
         aria-pressed={view === 'grid'}
-        aria-label="Grid view"
-        title="Grid view"
+        aria-label={t('list.gridView')}
+        title={t('list.gridView')}
         onclick={() => (view = 'grid')}><span aria-hidden="true">▦</span></button
       >
       <button
         type="button"
         class:on={view === 'list'}
         aria-pressed={view === 'list'}
-        aria-label="List view"
-        title="List view"
+        aria-label={t('list.listView')}
+        title={t('list.listView')}
         onclick={() => (view = 'list')}><span aria-hidden="true">☷</span></button
       >
     </div>
@@ -244,14 +366,17 @@
 
 {#if shown.length === 0}
   <p class="empty">
-    Nothing matches. The tables use C.I.P.'s own spelling, <code>308 Win.</code>,
-    <code>9 mm Luger</code>, <code>7,62 x 39</code>, and the search also reads the alternative
-    names each sheet lists.
+    {t('list.emptyLead')}
+    {@html t('list.emptyBody', {
+      a: '<code>308 Win.</code>',
+      b: '<code>9 mm Luger</code>',
+      c: '<code>7,62 x 39</code>'
+    })}
   </p>
 {:else if view === 'grid'}
   <div class="grid">
     {#each shown as entry (entry.key)}
-      <Card {entry} {scale} height={cardHeight} />
+      <Card {entry} {scale} height={cardHeight} {style} />
     {/each}
   </div>
 {:else}
@@ -262,7 +387,7 @@
           <th>Name</th>
           <th>Family</th>
           <th>Origin</th>
-          <th>Verification</th>
+          <th>{t('list.plausibility')}</th>
         </tr>
       </thead>
       <tbody>
@@ -281,32 +406,14 @@
                 <span class="alt">{entry.alt.join(' · ')}</span>
               {/if}
             </td>
-            <td class="muted">{FAMILY_LABELS[entry.family] ?? entry.family}</td>
-            <td class="num muted">{entry.country ?? '-'}</td>
+            <td class="muted">{familyLabel(entry.family)}</td>
+            <td class="muted"><Flag codes={entry.countries} fallback="-" /></td>
             <td>
-              <span class="verifications">
-                <span
-                  class="verification {entry.checks ? 'implausible' : entry.confidence}"
-                  title={entry.checks
-                    ? `${entry.checks} check${entry.checks === 1 ? '' : 's'} found; see the cartridge page`
-                    : entry.confidence === 'verified'
-                      ? 'Confirmed by a person'
-                      : 'Not yet confirmed by a person'}
-                >
-                  {#if entry.checks}Cartridge {CONFIDENCE_LABELS.implausible} ({entry.checks})
-                  {:else}Cartridge {CONFIDENCE_LABELS[entry.confidence]}{/if}
+              {#if entry.warnings}
+                <span class="warning" title={t('verify.checkNote', { count: entry.warnings })}>
+                  ⚠ {entry.warnings}
                 </span>
-                {#if entry.svg}
-                  <span
-                    class="verification {entry.bulletVerified ? 'verified' : 'unverified'}"
-                    title={entry.bulletVerified
-                      ? 'The bullet type has been confirmed against the drawing by a person'
-                      : 'The bullet type is a default, not yet confirmed by a person'}
-                  >
-                    Bullet {entry.bulletVerified ? 'verified' : 'unverified'}
-                  </span>
-                {/if}
-              </span>
+              {/if}
             </td>
           </tr>
         {/each}
@@ -317,10 +424,10 @@
 
 <style>
   .controls {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-    gap: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
     align-items: end;
+    gap: 0.75rem 2.25rem;
     margin-bottom: 1.1rem;
   }
   label {
@@ -329,18 +436,92 @@
     gap: 0.2rem;
   }
   .search {
-    grid-column: 1 / -1;
-    justify-self: stretch;
+    flex: 1 1 100%;
   }
   .search input {
     width: 100%;
   }
-  .controls > label:not(.search) select {
+
+  /* Each control is as wide as what it has to hold. Equal columns made Size, which never says more
+     than "100%", as wide as Plausibility, whose longest option is three words. They still grow to
+     share a wide bar and collapse to one per row on a narrow one. */
+  .cluster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 0.6rem;
+    min-width: 0;
+  }
+  /* The sort sits at the far right of the bar, against the edge the count and the view controls
+     line up on below it, so the page has one axis: what is shown on the left, how it is shown on
+     the right. Below the width where the two clusters share a line it goes back to the left --
+     pushed right on a line of its own it hangs in mid-air. */
+  .cluster.presentation {
+    margin-left: auto;
+  }
+  @media (max-width: 56rem) {
+    .cluster.presentation {
+      margin-left: 0;
+    }
+  }
+  .cluster label {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .cluster select {
     width: 100%;
+  }
+  .wide {
+    flex-basis: 10.5rem;
+  }
+  .widest {
+    flex-basis: 13rem;
+  }
+  /* A control holding something other than its default, so that a short list always shows why. */
+  .cluster select.on {
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .sort-row {
+    display: flex;
+    gap: 0.3rem;
+  }
+  .sort-row select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .direction {
+    flex: 0 0 auto;
+    background: var(--surface);
+    border: 1px solid var(--rule-strong);
+    border-radius: var(--radius);
+    color: var(--ink-2);
+    padding: 0.4rem 0.6rem;
+    line-height: 1;
+  }
+  .direction:hover {
+    border-color: var(--accent);
+    color: var(--accent);
   }
   .views {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: flex-end;
+    gap: 0.4rem;
+  }
+  /* Words rather than the two glyphs beside it, so its buttons are sized by what they say. */
+  .styles button {
+    flex: 0 0 auto;
+    padding: 0.4rem 0.7rem;
+    white-space: nowrap;
+  }
+  .size {
+    padding: 0.25rem 0.4rem;
+    font-size: var(--step-0);
+    color: var(--ink-2);
   }
   .segmented {
     display: inline-flex;
@@ -368,11 +549,7 @@
   .count {
     color: var(--ink-2);
     font-size: var(--step-0);
-    margin: 0 0 0.25rem;
-  }
-  .actions {
     margin: 0 0 1rem;
-    font-size: var(--step-0);
   }
   .summary {
     display: flex;
@@ -393,7 +570,7 @@
     color: var(--ink-2);
     max-width: 46ch;
   }
-  code {
+  :global(.empty code) {
     font-family: var(--mono);
     font-size: 0.85em;
     background: var(--surface-2);
@@ -401,10 +578,21 @@
     border-radius: 3px;
   }
 
+  /* Three cards across at most.
+  
+     `auto-fill` on its own puts as many 21rem cards in a row as fit, which on the 92rem page the
+     site now uses is four, and a fourth column takes width from the drawing on every card in the
+     grid -- the drawing being the thing a reader is scanning for. Three is the cap; below the width
+     for three the grid still falls to two and then to one on its own. */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
     gap: 1rem;
+  }
+  @media (min-width: 70rem) {
+    .grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
 
   table {
@@ -440,33 +628,16 @@
   .muted {
     color: var(--ink-2);
   }
-  .verifications {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-  }
-  .verification {
+  .warning {
     display: inline-block;
     padding: 0.1rem 0.45rem;
-    border: 1px solid var(--rule);
+    border: 1px solid currentColor;
     border-radius: 999px;
     font-size: 0.68rem;
     line-height: 1.35;
     white-space: nowrap;
-  }
-  .verification.verified {
-    color: var(--ok);
-    border-color: currentColor;
-    background: var(--ok-soft);
-  }
-  .verification.unverified {
-    color: var(--ink-3);
-    background: var(--surface-2);
-  }
-  .verification.implausible {
     color: var(--warn);
     background: var(--warn-soft);
-    border-color: currentColor;
   }
   .alt {
     display: block;

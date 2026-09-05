@@ -1,3 +1,5 @@
+import { t } from './i18n.svelte';
+
 /**
  * The sheet's own layout: which groups appear on which side, in which order, and the order of the
  * fields inside each one.
@@ -42,32 +44,18 @@ const FIELD_ORDER: Record<string, string[]> = {
 };
 
 /** Group order per side, and the heading the sheet gives each one. */
-const GROUP_ORDER: Record<'cartridge' | 'chamber', [string, string][]> = {
-  cartridge: [
-    ['lengths', 'Lengths'],
-    ['dimensions', 'Dimensions'],
-    ['caseHead', 'Case Head'],
-    ['powderChamber', 'Powder Chamber'],
-    ['junctionCone', 'Junction Cone'],
-    ['collar', 'Collar'],
-    ['projectile', 'Projectile'],
-    ['pressures', 'Pressures (Energies)'],
-    ['misc', 'Miscellaneous Dimensions']
-  ],
-  chamber: [
-    ['lengths', 'Lengths'],
-    ['dimensions', 'Dimensions'],
-    ['breech', 'Breech'],
-    ['powderChamber', 'Powder Chamber'],
-    ['junctionCone', 'Junction Cone'],
-    ['collar', 'Collar'],
-    ['chamberLengths', 'Chamber Lengths'],
-    ['rifling', 'Commencement of Rifling'],
-    ['headspace', 'Headspace'],
-    ['barrel', 'Barrel'],
-    ['grooves', 'Grooves']
-  ]
+/** Group order per side. The heading each one gets is `groupTitle`, in the reader's language. */
+const GROUP_ORDER: Record<'cartridge' | 'chamber', string[]> = {
+  cartridge: ['lengths', 'dimensions', 'caseHead', 'powderChamber', 'junctionCone', 'collar', 'projectile', 'pressures', 'misc'],
+  chamber: ['lengths', 'dimensions', 'breech', 'powderChamber', 'junctionCone', 'collar', 'chamberLengths', 'rifling', 'headspace', 'barrel', 'grooves']
 };
+
+const GROUPS = new Set([...GROUP_ORDER.cartridge, ...GROUP_ORDER.chamber]);
+
+/** What a group of figures is called. A group the dataset grows keeps its own name. */
+export function groupTitle(name: string): string {
+  return GROUPS.has(name) ? t(`group.${name}`) : name;
+}
 
 /** How a field is written on the sheet, where that differs from its JSON name. */
 export const FIELD_LABELS: Record<string, string> = {
@@ -111,13 +99,10 @@ export function orderedGroups(
   side: 'cartridge' | 'chamber',
   record: Record<string, unknown>
 ): [string, string][] {
-  const known = GROUP_ORDER[side].filter(([name]) => name in record);
-  const placed = new Set(known.map(([name]) => name));
-  const rest = Object.keys(record)
-    .filter((name) => !placed.has(name))
-    .sort()
-    .map((name) => [name, name] as [string, string]);
-  return [...known, ...rest];
+  const known = GROUP_ORDER[side].filter((name) => name in record);
+  const placed = new Set(known);
+  const rest = Object.keys(record).filter((name) => !placed.has(name)).sort();
+  return [...known, ...rest].map((name) => [name, groupTitle(name)] as [string, string]);
 }
 
 /** The columns of a repeating group, in the order the tables print them, unnamed ones last. */

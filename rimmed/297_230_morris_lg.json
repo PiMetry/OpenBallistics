@@ -13,7 +13,8 @@
         "rule": "missing_dimension",
         "values": {}
       }
-    ]
+    ],
+    "primerType": "sr"
   },
   "cartridge": {
     "caseHead": {

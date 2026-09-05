@@ -5,9 +5,9 @@
  * repository's own published records, copied into `public/` at build time. The list is therefore
  * instant and works offline once loaded.
  *
- * The copy is not quite byte-for-byte: `scripts/vendor-records.mjs` drops the fields this site does
- * not show. Nothing is *added* and no value is changed, so a dimension on the page is the dimension
- * in `cartridges/` -- but the file is a working copy and `cartridges/` is the published record.
+ * The records are the dataset at the repository root, served as they are (see `scripts/records.mjs`
+ * and the `records` plugin in `vite.config.ts`); the ones `scope.json` names are left out. Nothing
+ * is *added* and no value is changed, so a dimension on the page is the dimension in the record.
  */
 
 import indexData from './index.generated.json';
@@ -17,8 +17,9 @@ export const entries: Entry[] = indexData as Entry[];
 
 export const families: string[] = [...new Set(entries.map((entry) => entry.family))].sort();
 
+/** Every origin named in the dataset, each once, including both halves of a joint standard. */
 export const countries: string[] = [
-  ...new Set(entries.map((entry) => entry.country).filter((c): c is string => Boolean(c)))
+  ...new Set(entries.flatMap((entry) => entry.countries))
 ].sort();
 
 const cache = new Map<string, Promise<Record_>>();

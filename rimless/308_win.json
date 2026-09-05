@@ -13,6 +13,7 @@
       "tip": "open_meplat",
       "verified": false
     },
+    "defaultBulletShape": "pointy",
     "implausible": [],
     "primerType": "lr"
   },

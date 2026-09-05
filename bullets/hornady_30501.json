@@ -1,0 +1,90 @@
+{
+  "key": "hornady_30501",
+  "manufacturer": "Hornady",
+  "line": "Match",
+  "model": "30501",
+  "name": "30 Cal .308 168 gr BTHP Match",
+  "calibre": ".308",
+  "diameter": 7.82,
+  "mass": 10.886,
+  "length": 31.29,
+  "base": {
+    "type": "boat_tail"
+  },
+  "ogive": {
+    "form": "secant"
+  },
+  "tip": {
+    "type": "hollow_point"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.45,
+    "note": "Hornady's catalogue figure; not on the product page, quoted by retailers"
+  },
+  "sources": [
+    {
+      "fields": [
+        "diameter",
+        "mass",
+        "ogive.form",
+        "base.type",
+        "tip.type",
+        "construction"
+      ],
+      "publisher": "Hornady Manufacturing",
+      "url": "https://www.hornady.com/bullets/rifle/30-cal-.308-168-gr-bthp-match-1800",
+      "retrieved": "2026-09-05",
+      "kind": "published",
+      "note": ".308 in, 168 gr; 'Secant Ogive Profile', boat tail, AMP jacket, swaged lead core. No length or BC on the page."
+    },
+    {
+      "fields": [
+        "length"
+      ],
+      "publisher": "JBM Ballistics bullet length list (measured; Litz)",
+      "url": "https://jbmballistics.com/downloads/lengthlist.html",
+      "retrieved": "2026-09-05",
+      "kind": "measured",
+      "note": "1.232 in"
+    },
+    {
+      "fields": [
+        "ballistics.g1"
+      ],
+      "publisher": "Hornady, as quoted by retailers",
+      "url": "https://bulletcentral.com/hornady-bullets-30-cal-308-168-gr-bthp-match-30501-qty-100/",
+      "retrieved": "2026-09-05",
+      "kind": "quoted",
+      "note": "BC .450 (G1), SD .253"
+    }
+  ],
+  "derived": {
+    "length": 31.29,
+    "bearing": 8.059,
+    "nose": 17.209,
+    "boatTail": 6.021,
+    "baseDiameter": 6.127,
+    "boatTailAngle": 8.0,
+    "meplat": 1.27,
+    "ogiveRadiusCalibres": 10.894,
+    "massGrains": 168.0,
+    "sectionalDensity": 0.253,
+    "assumed": [
+      "base.angle",
+      "base.diameter",
+      "base.length",
+      "bearing",
+      "construction.jacket_thickness",
+      "meplat",
+      "nose",
+      "ogive.radius_calibres",
+      "tip.cavity_depth"
+    ]
+  }
+}

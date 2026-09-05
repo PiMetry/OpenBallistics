@@ -1,15 +1,36 @@
 <script lang="ts">
   import Drawing from './Drawing.svelte';
+  import Flag from './Flag.svelte';
+  import { card } from '../lib/drawings';
+  import { t } from '../lib/i18n.svelte';
   import { href } from '../lib/router';
-  import { CONFIDENCE_LABELS, FAMILY_LABELS, type Entry } from '../lib/types';
+  import {
+    familyLabel,
+    type DrawingStyle,
+    type Entry
+  } from '../lib/types';
 
   interface Props {
     entry: Entry;
     scale: number;
     /** Drawing canvas height in pixels; grows with the grid's zoom so a larger drawing has room. */
     height?: number;
+    /**
+     * Which way the grid is drawing its cartridges: as objects, or as outlines. One
+     * setting for the whole grid rather than one per card, because the grid is a comparison and a
+     * page of cards drawn two different ways is not one.
+     */
+    style?: DrawingStyle;
   }
-  let { entry, scale, height = 78 }: Props = $props();
+  let { entry, scale, height = 78, style = 'visual' }: Props = $props();
+
+  /**
+   * Which drawing this card shows: the cartridge's own, never its chamber -- a card is a picture of
+   * the round. The style is a face of that one file (see `Drawing`), so the grid's setting is passed
+   * down rather than choosing a different drawing.
+   */
+  const plate = $derived(card(entry));
+
   let drawing: HTMLSpanElement;
   let dragging = $state(false);
   let dragged = $state(false);
@@ -78,7 +99,12 @@
     aria-label={`${entry.name} preview`}
     title="Drag to inspect an oversized preview"
   >
-    <Drawing {entry} {scale} {height} />
+    <!--
+      Never with the dimensions. At card size C.I.P.'s symbols are a millimetre high and read as
+      noise over the outline, which is the one thing a reader scanning a grid is looking at; the page
+      shows the same file with the layer on. Asked for 2026-09-05.
+    -->
+    <Drawing {entry} {scale} {height} drawing={plate} {style} dimensions={false} />
   </div>
 
   <span class="titles">
@@ -89,35 +115,20 @@
   </span>
 
   <span class="chips">
-    <span class="chip">{FAMILY_LABELS[entry.family] ?? entry.family}</span>
-    {#if entry.country}<span class="chip quiet num">{entry.country}</span>{/if}
+    <span class="chip">{familyLabel(entry.family)}</span>
+    {#if entry.countries.length}<Flag codes={entry.countries} />{/if}
     <!--
-      How far the numbers can be trusted, said on every card so that the grid never reads as
-      uniformly authoritative: a verified record earns a tick, an unverified one says so quietly,
-      and a record with a plausibility finding nothing explains carries a small warning with the
-      count. The cartridge page lists what the finding is.
+      A rule fired on this record and nothing accounts for that. Only the unexplained ones; a
+      finding the dataset explains has been dealt with.
     -->
-    <span
-      class="chip confidence {entry.checks ? 'implausible' : entry.confidence}"
-      title={entry.checks
-        ? `${entry.checks} check${entry.checks === 1 ? '' : 's'} found; see the cartridge page`
-        : entry.confidence === 'verified'
-          ? 'Confirmed by a person'
-          : 'Not yet confirmed by a person'}
-    >
-      {#if entry.checks}⚠ Cartridge {CONFIDENCE_LABELS.implausible} ({entry.checks})
-      {:else if entry.confidence === 'verified'}✓ Cartridge {CONFIDENCE_LABELS.verified}
-      {:else}Cartridge {CONFIDENCE_LABELS.unverified}{/if}
-    </span>
-    <!-- The second verification, for the drawn bullet's nose form rather than the numbers. -->
-    {#if entry.svg}
+    {#if entry.warnings}
       <span
-        class="chip confidence {entry.bulletVerified ? 'verified' : 'unverified'}"
-        title={entry.bulletVerified
-          ? 'The bullet type has been confirmed against the drawing by a person'
-          : 'The bullet type is a default, not yet confirmed by a person'}
+        class="chip confidence implausible"
+        title={t('verify.checkNote', { count: entry.warnings })}
       >
-        {#if entry.bulletVerified}✓ Bullet verified{:else}Bullet unverified{/if}
+        ⚠ {entry.warnings === 1
+          ? t('verify.checkChip', { count: entry.warnings })
+          : t('verify.checkChipPlural', { count: entry.warnings })}
       </span>
     {/if}
   </span>
@@ -196,6 +207,7 @@
   .chips {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 0.3rem;
   }
   .chip {
@@ -209,16 +221,6 @@
   .chip.quiet {
     background: var(--surface-2);
     color: var(--ink-2);
-  }
-  .confidence.verified {
-    color: var(--ok, #2f7a3f);
-    border-color: currentColor;
-    background: var(--ok-soft);
-  }
-  .confidence.unverified {
-    color: var(--ink-3);
-    background: var(--surface-2);
-    border-color: var(--rule);
   }
   .confidence.implausible {
     color: var(--warn, #8a5a00);

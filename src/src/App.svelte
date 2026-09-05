@@ -1,45 +1,27 @@
 <script lang="ts">
+  import Bullet from './routes/Bullet.svelte';
+  import Bullets from './routes/Bullets.svelte';
   import Cartridge from './routes/Cartridge.svelte';
   import List from './routes/List.svelte';
   import { href, route } from './lib/router';
+  import { lang, LANG_FLAGS, LANG_LABELS, LANGS, setLang, t } from './lib/i18n.svelte';
+  import { theme, toggleTheme } from './lib/theme.svelte';
 
   const current = $derived($route);
   const repository = import.meta.env.VITE_REPO ?? 'PiMetry/OpenBallistics';
 
-  /**
-   * Light or dark, chosen by the reader and kept per browser. `app.css` defines the palette
-   * light-first and redefines it for `[data-theme='dark']` and for the system preference where
-   * nothing is stamped on the root, so the toggle only has to stamp the root: an explicit choice
-   * wins in both directions, and with none stored the system decides.
-   */
-  type Theme = 'light' | 'dark';
-  const THEME_KEY = 'theme';
-  function storedTheme(): Theme | null {
-    try {
-      const value = localStorage.getItem(THEME_KEY);
-      return value === 'light' || value === 'dark' ? value : null;
-    } catch {
-      return null;
-    }
-  }
-  function systemTheme(): Theme {
-    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-  let theme = $state<Theme>(storedTheme() ?? systemTheme());
+  // The theme lives in `lib/theme.svelte.ts`, because the drawings read it too; this stamps it.
   $effect(() => {
-    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.theme = theme();
   });
-  function toggleTheme() {
-    theme = theme === 'dark' ? 'light' : 'dark';
-    try {
-      localStorage.setItem(THEME_KEY, theme);
-    } catch {
-      // Storage may be unavailable; the choice still applies for this visit.
-    }
-  }
+  // And what language it is in, which `setLang` stamps when the reader switches and nothing
+  // stamped on the first load of a page that remembered a choice from last time.
+  $effect(() => {
+    document.documentElement.lang = lang();
+  });
 </script>
 
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">{t('site.skip')}</a>
 
 <header class="bar">
   <!--
@@ -51,10 +33,15 @@
   -->
   <a class="brand" href={href.list()}>
     <span class="mark">OB</span>
-    <span class="title">Cartridge &amp; chamber dimensions</span>
+    <span class="title">{t('site.title')}</span>
   </a>
   <nav class="tools" aria-label="Site">
-    <a class="tool" href={href.list()} aria-current={current.view === 'list' ? 'page' : undefined}>Home</a>
+    <a class="tool" href={href.list()} aria-current={current.view === 'list' || current.view === 'cartridge' ? 'page' : undefined}
+      >{t('nav.cartridges')}</a
+    >
+    <a class="tool" href={href.bullets()} aria-current={current.view === 'bullets' || current.view === 'bullet' ? 'page' : undefined}
+      >{t('nav.bullets')}</a
+    >
     <a class="tool" href={`https://github.com/${repository}`} target="_blank" rel="noopener noreferrer">
       GitHub
     </a>
@@ -62,11 +49,38 @@
       type="button"
       class="tool"
       onclick={toggleTheme}
-      aria-pressed={theme === 'dark'}
-      title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-pressed={theme() === 'dark'}
+      title={theme() === 'dark' ? t('site.toLight') : t('site.toDark')}
     >
-      {#if theme === 'dark'}☀ Light{:else}☾ Dark{/if}
+      {#if theme() === 'dark'}{t('site.light')}{:else}{t('site.dark')}{/if}
     </button>
+    <!--
+      Each language named in itself, so a reader who cannot read the page can still find their own.
+      A pair of buttons rather than a select: there are two, and a select would hide one of them
+      behind a click to save nothing.
+    -->
+    <div class="langs" role="group" aria-label={t('site.language')}>
+      {#each LANGS as code (code)}
+        <button
+          type="button"
+          class="tool lang"
+          class:on={lang() === code}
+          aria-pressed={lang() === code}
+          onclick={() => setLang(code)}
+          lang={code}
+          title={LANG_LABELS[code]}
+          aria-label={LANG_LABELS[code]}
+        >
+          <img
+            class="lang-flag"
+            src={`${import.meta.env.BASE_URL}flags/${LANG_FLAGS[code]}.svg`}
+            alt={LANG_LABELS[code]}
+            width="20"
+            height="15"
+          />
+        </button>
+      {/each}
+    </div>
   </nav>
 </header>
 
@@ -76,35 +90,46 @@
   using a number, so it is the first thing on the page.
 -->
 <aside class="alert" role="alert">
-  <p class="alert-title">Reference only</p>
-  <p>
-    Verify every figure against the official C.I.P. tables before machining a chamber, cutting a
-    reamer, or loading ammunition. These pages are a convenience for reading published dimensions
-    and are not a substitute for the standard.
+  <p class="alert-title">{t('alert.title')}</p>
+  <p>{t('alert.body')}</p>
+  <!--
+    What "alpha" means, rather than the word on its own. A reader who is about to cut metal needs
+    to know what the label buys them, and the honest answer is: not much yet. How far any one
+    record has been proofread is said on that record's page, not here.
+  -->
+  <p class="alert-alpha">
+    <strong>{t('alert.alphaLead')}</strong>{t('alert.alphaBody')}
   </p>
 </aside>
 
 <main id="main">
   {#if current.view === 'cartridge'}
     <Cartridge key={current.key} />
+  {:else if current.view === 'bullet'}
+    <Bullet key={current.key} />
+  {:else if current.view === 'bullets'}
+    <Bullets />
   {:else}
     <List />
   {/if}
 </main>
 
 <footer>
+  <!--
+    One sentence in the dictionary, with the three parts that carry their own emphasis passed into
+    it: word order moves between languages and a sentence glued together in the markup can only
+    ever have English's.
+  -->
   <p>
-    Dimensions are specified by the <strong>Permanent International Commission for the Proof of
-    Small Arms (C.I.P.)</strong> and published in its <em>Tables of Dimensions of Cartridges and
-    Chambers</em>. C.I.P. is the authority for these values.
-    <strong>This site is independent and is not affiliated with, endorsed by, or published by
-    C.I.P.</strong>
+    {@html
+      t('footer.source', {
+        authority: `<strong>${t('footer.authority')}</strong>`,
+        tables: `<em>${t('footer.tables')}</em>`,
+        independent: `<strong>${t('footer.independent')}</strong>`
+      })}
   </p>
-  <p>
-    The dimensions themselves are technical facts and nobody's property; no rights are claimed over
-    them here, and none could be. Everything else, the records, the drawings and the code behind
-    this site, is under the MIT licence.
-  </p>
+  <p>{t('footer.licence')}</p>
+
 </footer>
 
 <style>
@@ -173,18 +198,46 @@
     border-color: var(--accent);
     text-decoration: none;
   }
+  .langs {
+    display: inline-flex;
+    gap: 0.25rem;
+  }
+  .lang {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.45rem;
+  }
+  .lang-flag {
+    display: block;
+    width: 1.25rem;
+    height: auto;
+    border: 1px solid var(--rule-strong);
+    border-radius: 1px;
+    /* The one not chosen stands back, the way the other tools do next to the current page. */
+    opacity: 0.55;
+  }
+  .lang.on {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .lang.on .lang-flag,
+  .lang:hover .lang-flag {
+    opacity: 1;
+  }
   .tool[aria-current='page'] {
     color: var(--ink-3);
     border-color: var(--rule);
     pointer-events: none;
   }
+  /* Wide enough for the cartridge page to set its two tables two columns deep each; see
+     `GroupTable.svelte`. A phone gets the padding it can afford and no more. */
   main {
-    max-width: 82rem;
+    max-width: 92rem;
     margin: 0 auto;
-    padding: clamp(1.25rem, 4vw, 2.5rem);
+    padding: clamp(0.9rem, 4vw, 2.5rem);
   }
   footer {
-    max-width: 82rem;
+    max-width: 92rem;
     margin: 0 auto;
     padding: 1.5rem clamp(1.25rem, 4vw, 2.5rem) 3rem;
     border-top: 1px solid var(--rule);
@@ -198,7 +251,7 @@
   footer p:last-child {
     margin-bottom: 0;
   }
-  footer strong {
+  :global(footer strong) {
     color: var(--ink);
   }
   .alert {
@@ -210,7 +263,7 @@
   }
   .alert p {
     margin: 0;
-    max-width: 82rem;
+    max-width: 92rem;
     margin-inline: auto;
   }
   .alert-title {
@@ -219,5 +272,12 @@
     letter-spacing: 0.08em;
     font-size: 0.78rem;
     margin-bottom: 0.15rem;
+  }
+  /* Quieter than the sentence above it: not verifying a figure can hurt somebody, and an
+     unfinished dataset cannot, so the two do not shout equally loudly. */
+  .alert-alpha {
+    margin-top: 0.35rem;
+    font-size: 0.78rem;
+    opacity: 0.85;
   }
 </style>

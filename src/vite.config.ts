@@ -30,7 +30,8 @@ function records(): Plugin {
       server.middlewares.use((req, res, next) => {
         const url = (req.url ?? '').split('?')[0];
         const match = url.match(/^\/([a-z]+)\/([A-Za-z0-9_.-]+\.json)$/);
-        if (!match || !FAMILIES.includes(match[1]) || excluded(match[2])) return next();
+        // The bullet catalogue is served like a family: its own directory at the root.
+        if (!match || !(FAMILIES.includes(match[1]) || match[1] === 'bullets') || excluded(match[2])) return next();
         const file = join(root, match[1], match[2]);
         if (!existsSync(file) || !statSync(file).isFile()) return next();
         res.setHeader('Content-Type', 'application/json');
@@ -38,7 +39,16 @@ function records(): Plugin {
       });
     },
     closeBundle() {
-      for (const family of FAMILIES) {
+      // The notices travel with the thing they are notices for. The built site serves other
+      // people's files -- the flags, and Svelte's runtime inside the bundle -- and the MIT licence
+      // asks that its notice be included with the copies, which a file in the repository alone
+      // does not do for somebody who only ever sees the deployed page.
+      const notices = join(root, 'THIRD-PARTY.md');
+      if (existsSync(notices)) {
+        mkdirSync(join(app, 'dist'), { recursive: true });
+        copyFileSync(notices, join(app, 'dist', 'THIRD-PARTY.md'));
+      }
+      for (const family of [...FAMILIES, 'bullets']) {
         const source = join(root, family);
         if (!existsSync(source)) continue;
         const target = join(app, 'dist', family);
