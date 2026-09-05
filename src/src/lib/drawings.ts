@@ -38,19 +38,38 @@ export function plates(entry: Entry | undefined): Drawing[] {
   if (entry?.drawings?.length) return entry.drawings;
   if (entry?.svg) {
     return [
-      { file: `${entry.key}.svg`, svg: entry.svg, subject: 'cartridge', style: 'visual', main: true }
+      {
+        file: `${entry.key}.svg`,
+        svg: entry.sheet ?? entry.svg,
+        tight: entry.svg,
+        subject: 'cartridge',
+        main: true
+      }
     ];
   }
   return [];
 }
 
-/** The kinds actually drawn, in a fixed order: what a toggle may offer, and nothing more. */
-export function offered<T extends DrawingSubject | DrawingStyle>(
-  all: T[],
-  drawn: Drawing[],
-  axis: 'subject' | 'style'
-): T[] {
-  return all.filter((value) => drawn.some((plate) => plate[axis] === value));
+/** The subjects actually drawn, in a fixed order: what a toggle may offer, and nothing more. */
+export function offered(all: DrawingSubject[], drawn: Drawing[]): DrawingSubject[] {
+  return all.filter((value) => drawn.some((plate) => plate.subject === value));
+}
+
+/**
+ * Which face of a drawing to ask the file for.
+ *
+ * One file carries four (2026-09-05; see `Drawing`): the fragment picks the style and whether the
+ * dimensions are drawn over it. The dimensioned outline is the file's default face and needs no
+ * fragment, which keeps a plain link to the file meaning what it always did.
+ */
+export function face(style: DrawingStyle, dimensions: boolean): string {
+  if (style === 'visual') return dimensions ? '#visual-dims' : '#visual';
+  return dimensions ? '' : '#plain';
+}
+
+/** The extent a face is shown at: the whole page with dimensions, the object alone without. */
+export function extent(plate: Drawing, dimensions: boolean): [number, number] {
+  return dimensions ? plate.svg : plate.tight;
 }
 
 /**
@@ -64,26 +83,14 @@ export function main(entry: Entry | undefined): Drawing | null {
 }
 
 /**
- * The one drawing a card shows, in the style the grid is set to.
+ * The one drawing a card shows: the cartridge's own, at its own length.
  *
  * The card's job is a picture of the cartridge, so the subject is never in question here -- a
- * chamber on a card would be a picture of a barrel under the name of a round. What can be in
- * question is the style, and the length: the technical drawing wanted is the one at the length the
- * card already shows, so that switching the grid to dimensioned drawings changes what is drawn and
- * not which member of a gauge is drawn.
- *
- * Falls back to the cartridge's own drawing where nothing has been dimensioned, which is what a
- * card showed before there was anything to choose between.
+ * chamber on a card would be a picture of a barrel under the name of a round. The style is not a
+ * question of which drawing either, since one file carries both; the grid picks the face.
  */
-export function card(entry: Entry, style: DrawingStyle): Drawing | null {
-  const own = main(entry);
-  if (style === 'visual') return own;
-  const drawn = plates(entry).filter(
-    (plate) => plate.subject === 'cartridge' && plate.style === style
-  );
-  if (!drawn.length) return own;
-  const at = drawn.find((plate) => plate.l === own?.l);
-  return at ?? drawn[0] ?? own;
+export function card(entry: Entry): Drawing | null {
+  return main(entry);
 }
 
 /**

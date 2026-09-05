@@ -24,20 +24,32 @@ const OUT = join(here, '..', 'src', 'lib', 'index.generated.json');
 const FLAGS_OUT = join(here, '..', 'src', 'lib', 'flags.generated.json');
 
 /**
- * The size of a drawing in its own units, read off its root element.
+ * The size of a drawing, in millimetres, read off the file: the whole page and the object alone.
  *
  * The drawings are rendered upstream by BallisticViz and vendored into the repository's `svg/`
- * directory. Each one carries its own extent there -- `width` and `height` matching the viewBox --
- * so a page laying several out at one scale can size them without loading them first.
+ * directory. Each carries four faces in one file (2026-09-05; see `svg_drawing` there): the root's
+ * `width` and `height` are the page in real millimetres, its `viewBox` the same page in the
+ * renderer's units, and a `<view id="visual">` names the box the faces without dimensions crop to.
+ * So the page's size is read straight off the root, the scale is the ratio of the two, and the
+ * object's size is that view's box divided by the scale. A page laying several drawings out at one
+ * scale can size them without loading them first, and nothing here has to know how many units the
+ * renderer draws to the millimetre any more.
  *
- * Its own units, not millimetres: the cartridge is drawn at 1:1 and everything else at 4:1. See
- * `unitsPerMm`, which is where that becomes a millimetre again, and why it has to.
+ * Returns `{ svg, tight }`, both `[width, height]` in millimetres; `tight` falls back to the page
+ * for a file with no view, so an older drawing still lays out.
  */
 async function extent(file) {
-  const head = (await readFile(file, 'utf8')).slice(0, 400);
-  const w = /width="([\d.]+)"/.exec(head);
-  const h = /height="([\d.]+)"/.exec(head);
-  return w && h ? [Number(w[1]), Number(h[1])] : null;
+  const head = (await readFile(file, 'utf8')).slice(0, 1200);
+  const w = /<svg [^>]*width="([\d.]+)"/.exec(head);
+  const h = /<svg [^>]*height="([\d.]+)"/.exec(head);
+  const box = /<svg [^>]*viewBox="([\d.\- ]+)"/.exec(head);
+  if (!w || !h) return null;
+  const svg = [Number(w[1]), Number(h[1])];
+  const view = /<view id="visual" viewBox="([\d.\- ]+)"/.exec(head);
+  if (!box || !view) return { svg, tight: svg };
+  const unitsPerMm = Number(box[1].split(/\s+/)[2]) / svg[0];
+  const [, , tw, th] = view[1].split(/\s+/).map(Number);
+  return { svg, tight: [tw / unitsPerMm, th / unitsPerMm] };
 }
 
 /**
@@ -87,12 +99,12 @@ async function drawings() {
         continue;
       }
       if (!item.name.endsWith('.svg')) continue;
-      const svg = await extent(join(dir, item.name));
-      if (!svg) continue;
+      const size = await extent(join(dir, item.name));
+      if (!size) continue;
       await mkdir(dirname(join(OUTLINES, family, key, relative)), { recursive: true });
       await cp(join(dir, item.name), join(OUTLINES, family, key, relative));
       // Kept as a path under the family, which is how a page addresses either kind.
-      found.push({ file: `${key}/${relative}`, tokens: tokens(relative), svg });
+      found.push({ file: `${key}/${relative}`, tokens: tokens(relative), ...size });
     }
     return found;
   }
@@ -112,11 +124,11 @@ async function drawings() {
       }
       if (!item.name.endsWith('.svg')) continue;
       const source = join(SVG, family, item.name);
-      const svg = await extent(source);
-      if (!svg) continue;
+      const size = await extent(source);
+      if (!size) continue;
       await mkdir(join(OUTLINES, family), { recursive: true });
       await cp(source, join(OUTLINES, family, item.name));
-      sizes.set(`${family}/${item.name.slice(0, -4)}`, svg);
+      sizes.set(`${family}/${item.name.slice(0, -4)}`, size);
     }
   }
   return { sizes, extra };
@@ -221,34 +233,27 @@ function tokens(path) {
   return slug(path.replace(/\.svg$/, '')).split('_').filter(Boolean);
 }
 
-/** The words that name an axis. Everything else in a path names the length. */
+/** The word that names the subject. Everything else in a path names the length. */
 const SUBJECTS = new Map([
   ['cartridge', 'cartridge'],
   ['chamber', 'chamber']
-]);
-const STYLES = new Map([
-  ['visual', 'visual'],
-  ['technical', 'technical'],
-  ['tech', 'technical']
 ]);
 
 /**
  * What a drawing is, read off the words in its path.
  *
- * The defaults are what every drawing shipped so far is -- the cartridge, drawn visually, which is
- * the word the renderer titles them with -- so a file that says nothing is that, and `12_70.svg`
- * still means what it meant before there was anything else for it to mean.
+ * The default is the cartridge, so a file that says nothing is that, and `12_70.svg` still means
+ * what it meant before there was anything else for it to mean. There is no style axis any more:
+ * one file carries both styles and the page picks (2026-09-05).
  */
 function kind(words) {
   let subject = 'cartridge';
-  let style = 'visual';
   const rest = [];
   for (const word of words) {
     if (SUBJECTS.has(word)) subject = SUBJECTS.get(word);
-    else if (STYLES.has(word)) style = STYLES.get(word);
     else rest.push(word);
   }
-  return { subject, style, name: rest.join('_') };
+  return { subject, name: rest.join('_') };
 }
 
 /**
@@ -268,68 +273,21 @@ function kind(words) {
 const DRAWING_MARGIN = 1.4;
 
 /**
- * How many of a drawing's own units make a millimetre.
+ * A drawing's object box against the case it is a drawing of.
  *
- * The renderer draws the cartridge itself at 1:1 -- `<key>.svg` is 71.92 units across for a
- * 308 Win. 71.12 mm long -- and everything else at 4:1. A chamber is sectioned out of a barrel
- * and a dimensioned drawing carries extension lines, arrowheads and 6.4-unit labels around the
- * geometry; neither has room to say what it has to say at the size of the object.
- *
- * Measured rather than assumed: the technical drawing of every one of the 512 cartridges that
- * publishes an L3 is four units per millimetre of it to three decimal places, and a chamber's
- * visual and technical drawings are the same geometry as each other to within a hundredth of a
- * unit. `checkScale` says so out loud if that ever stops being true.
- *
- * It matters because the app draws in millimetres and nothing else. Taken at face value a .308's
- * chamber is 322 mm of barrel standing beside the 72 mm round it holds, and the sheet that comes
- * off the printer is wrong by a factor of four.
+ * The file says its own size in millimetres, so there is nothing to convert; what is worth
+ * checking is that the object is about the size of the case -- a cartridge's tight box is the hull
+ * plus a margin, a chamber's the barrel section it is cut from -- because a drawing ten times its
+ * case is a drawing with the wrong scale on its root, and the sheet that comes off the printer
+ * would be wrong by the same factor.
  */
-function unitsPerMm(subject, style) {
-  return subject === 'cartridge' && style === 'visual' ? 1 : 4;
-}
-
-/** A drawing's extent as real millimetres, whatever units it happens to be drawn in. */
-function millimetres(svg, subject, style) {
-  const units = unitsPerMm(subject, style);
-  return units === 1 ? svg : [svg[0] / units, svg[1] / units];
-}
-
-/**
- * One placed drawing's extent in millimetres, checked against the case it is a drawing of.
- *
- * Against its own length where it has one: a 12/35 is a drawing of 35 mm of hull and not of the
- * 89 mm the 12 gauge also publishes, and holding every drawing of a shot cartridge against the
- * longest of them would report eight of the nine.
- */
-function measured(record, what) {
-  const mm = millimetres(what.found.svg, what.subject, what.style);
-  checkScale(record, what.found.file, mm, what.subject, what.style, what.row?.l ?? length(record));
-  return mm;
-}
-
-/**
- * Whether a drawing came out a plausible size for the cartridge it is of.
- *
- * The conversion above is a convention, and one the renderer could change upstream without this
- * repository hearing about it. So every converted drawing is held against the one thing true of
- * all of them: a drawing is longer than the case it draws, and not by very much more, whether the
- * extra length is a bullet, a barrel or a row of dimension lines. Across the 2134 shipped the
- * ratio runs from 1.0 to 2.6, the wide end being a chamber of a very short case -- a .22 CB Cap
- * is 6.9 mm of hull in 34 mm of barrel. A change of unit would move every one of them by four and
- * put the whole dataset outside this band at once, which is the point.
- *
- * The two that are outside it today are a real fault and not a unit: `45_60_win` renders with a
- * dimension leader shooting off the canvas, and its drawing is 12 times the length of its case.
- * Reported rather than silently shipped at a size nobody checked.
- */
-function checkScale(record, file, mm, subject, style, l) {
+function checkScale(record, file, tight, subject, l) {
   if (!l) return;
-  const ratio = mm[0] / l;
+  const ratio = tight[0] / l;
   if (ratio >= 0.9 && ratio <= 6) return;
   console.warn(
-    `  ${record.family}/${record.key}: ${file} is ${mm[0].toFixed(1)} mm across for a` +
-      ` ${l} mm case -- ${ratio.toFixed(1)}x, so ${style} ${subject} is either no longer drawn at` +
-      ` ${unitsPerMm(subject, style)} units per millimetre, or is not drawn right`
+    `  ${record.family}/${record.key}: ${file} is ${tight[0].toFixed(1)} mm across for a` +
+      ` ${l} mm case -- ${ratio.toFixed(1)}x, so the ${subject} drawing is not sized right`
   );
 }
 
@@ -361,8 +319,8 @@ function cartridgeDrawings(record, files, single) {
   const many = rows.length > 1;
 
   const taken = new Set();
-  const free = (what, row) => !taken.has(`${what.subject}|${what.style}|${row.index}`);
-  const claim = (what, row) => taken.add(`${what.subject}|${what.style}|${row.index}`);
+  const free = (what, row) => !taken.has(`${what.subject}|${row.index}`);
+  const claim = (what, row) => taken.add(`${what.subject}|${row.index}`);
 
   const placed = [];
   const unnamed = [];
@@ -384,7 +342,7 @@ function cartridgeDrawings(record, files, single) {
     }
   }
 
-  const own = single ? { subject: 'cartridge', style: 'visual', name: '', found: single } : null;
+  const own = single ? { subject: 'cartridge', name: '', found: single } : null;
   for (const what of [...unnamed, ...(own ? [own] : [])]) {
     // A cartridge published at one length is drawn at it without anybody having to say so.
     if (!rows.length) {
@@ -398,17 +356,19 @@ function cartridgeDrawings(record, files, single) {
       }
       continue;
     }
-    const measurable = what.subject === 'cartridge' && what.style === 'visual';
+    // A cartridge drawing's object box is the hull plus a margin, so its width says its length; a
+    // chamber's is the barrel section and says nothing about which hull it was cut for.
+    const measurable = what.subject === 'cartridge';
     const fits = measurable
-      ? rows.filter((row) => free(what, row) && row.l <= what.found.svg[0])
+      ? rows.filter((row) => free(what, row) && row.l <= what.found.tight[0])
       : [];
     const row = fits.length ? fits.reduce((a, b) => (b.l > a.l ? b : a)) : null;
-    if (row && what.found.svg[0] - row.l <= DRAWING_MARGIN) {
+    if (row && what.found.tight[0] - row.l <= DRAWING_MARGIN) {
       claim(what, row);
       placed.push({ ...what, row });
     } else if (what !== own) {
       console.warn(
-        `  ${record.family}/${record.key}: ${what.found.file} is a ${what.style} ${what.subject}` +
+        `  ${record.family}/${record.key}: ${what.found.file} is a ${what.subject}` +
           ' drawing at no length this record publishes'
       );
     }
@@ -417,32 +377,27 @@ function cartridgeDrawings(record, files, single) {
   // The length the cartridge's own drawing is at, whether or not it is the drawing filed there.
   // Worked out from its width the same way, but without claiming: a directory drawing of the same
   // length displaces the file, and the page still has to know which length the card is showing.
-  const fits = single ? rows.filter((row) => row.l <= single.svg[0]) : [];
+  const fits = single ? rows.filter((row) => row.l <= single.tight[0]) : [];
   const at = fits.length ? fits.reduce((a, b) => (b.l > a.l ? b : a)) : null;
-  const mainRow = at && single.svg[0] - at.l <= DRAWING_MARGIN ? at : null;
+  const mainRow = at && single.tight[0] - at.l <= DRAWING_MARGIN ? at : null;
   const isMain = (what) =>
-    what.subject === 'cartridge' &&
-    what.style === 'visual' &&
-    (mainRow ? what.row?.index === mainRow.index : !many);
+    what.subject === 'cartridge' && (mainRow ? what.row?.index === mainRow.index : !many);
 
-  const order = { cartridge: 0, chamber: 1, visual: 0, technical: 1 };
-  const out = placed.map((what) => ({
-    file: what.found.file,
-    // In millimetres, whatever the drawing was drawn in; see `unitsPerMm`. Everything downstream
-    // -- the shared scale of the grid, the pair on the cartridge page, the printed sheet -- is in
-    // millimetres, so this is the one place the renderer's units are allowed to exist.
-    svg: measured(record, what),
-    subject: what.subject,
-    style: what.style,
-    ...(what.row ? { l: what.row.l, marking: what.row.marking } : {}),
-    ...(isMain(what) ? { main: true } : {})
-  }));
-  out.sort(
-    (a, b) =>
-      order[a.subject] - order[b.subject] ||
-      order[a.style] - order[b.style] ||
-      (a.l ?? 0) - (b.l ?? 0)
-  );
+  const order = { cartridge: 0, chamber: 1 };
+  const out = placed.map((what) => {
+    checkScale(record, what.found.file, what.found.tight, what.subject, what.row?.l ?? length(record));
+    return {
+      file: what.found.file,
+      // Both in millimetres, read off the file; see `extent`. Everything downstream -- the shared
+      // scale of the grid, the pair on the cartridge page, the printed sheet -- is in millimetres.
+      svg: what.found.svg,
+      tight: what.found.tight,
+      subject: what.subject,
+      ...(what.row ? { l: what.row.l, marking: what.row.marking } : {}),
+      ...(isMain(what) ? { main: true } : {})
+    };
+  });
+  out.sort((a, b) => order[a.subject] - order[b.subject] || (a.l ?? 0) - (b.l ?? 0));
   // One drawing of one kind is what `svg` already says. The list earns its place in the index
   // where there is a choice to make: another kind, or a length to pick between.
   return out.length > 1 || (out.length === 1 && many) ? out : null;
@@ -571,7 +526,11 @@ for (const family of families) {
     }
     const record = JSON.parse(await readFile(join(RECORDS, family, file), 'utf8'));
     const cartridge = record.cartridge ?? {};
-    const svg = sizes.get(`${record.family}/${record.key}`) ?? null;
+    const size = sizes.get(`${record.family}/${record.key}`) ?? null;
+    // The card's extent is the object alone, as it always was; the whole page comes along as
+    // `sheet` for the faces that show the dimensions. Both in millimetres, off the file.
+    const svg = size?.tight ?? null;
+    const sheet = size?.svg ?? null;
     // Every drawing shipped for this cartridge -- of the cartridge or of its chamber, visual or
     // technical, at each published hull length where it has several. See `cartridgeDrawings`;
     // absent from the index wherever there is only the one drawing to show.
@@ -580,7 +539,7 @@ for (const family of families) {
     const shippedDrawings = cartridgeDrawings(
       record,
       extra.get(held),
-      svg ? { file: `${record.key}.svg`, tokens: [], svg } : null
+      size ? { file: `${record.key}.svg`, tokens: [], ...size } : null
     );
     entries.push({
       key: record.key,
@@ -599,6 +558,7 @@ for (const family of families) {
       // The size of the drawing shipped for this cartridge, in millimetres, or null where there is
       // none. `shape` is the fallback the card draws itself; see below for what it does not carry.
       svg,
+      ...(sheet && sheet !== svg ? { sheet } : {}),
       ...(shippedDrawings ? { drawings: shippedDrawings } : {}),
       shape: shape(record),
       // What a person has proofread, facet by facet, and what only applies where it applies; see
@@ -636,7 +596,7 @@ const bytes = Buffer.byteLength(JSON.stringify(entries));
 const shipped = entries.flatMap((entry) => entry.drawings ?? []);
 const kinds = new Map();
 for (const drawing of shipped) {
-  const name = `${drawing.style} ${drawing.subject}`;
+  const name = drawing.subject;
   kinds.set(name, (kinds.get(name) ?? 0) + 1);
 }
 console.log(

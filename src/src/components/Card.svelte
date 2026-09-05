@@ -29,12 +29,12 @@
   let { entry, scale, height = 78, style = 'visual' }: Props = $props();
 
   /**
-   * Which drawing this card shows. Always of the cartridge and never of its chamber -- a card is a
-   * picture of the round -- and in the asked-for style where the cartridge has been drawn that
-   * way. See `card`; where it has not, this is the cartridge's own drawing, unchanged.
+   * Which drawing this card shows: the cartridge's own, never its chamber -- a card is a picture of
+   * the round. The style is a face of that one file (see `Drawing`), so the grid's setting is passed
+   * down rather than choosing a different drawing.
    */
-  const plate = $derived(card(entry, style));
-  const dimensioned = $derived(plate?.style === 'technical');
+  const plate = $derived(card(entry));
+  const dimensioned = $derived(style === 'technical');
 
   const counted = $derived(tally(entry.verified));
   // Named `level` rather than `state`: a top-level `state` would turn every `$state`
@@ -110,11 +110,11 @@
     title="Drag to inspect an oversized preview"
   >
     <!--
-      The contour without its dimensions. At card size C.I.P.'s symbols are a millimetre high and
-      read as noise over the outline, which is the one thing a reader scanning a grid is looking
-      at; the page shows the same file with the layer on. Asked for 2026-09-05.
+      Never with the dimensions. At card size C.I.P.'s symbols are a millimetre high and read as
+      noise over the outline, which is the one thing a reader scanning a grid is looking at; the page
+      shows the same file with the layer on. Asked for 2026-09-05.
     -->
-    <Drawing {entry} {scale} {height} drawing={plate} plain />
+    <Drawing {entry} {scale} {height} drawing={plate} {style} dimensions={false} />
   </div>
 
   <span class="titles">

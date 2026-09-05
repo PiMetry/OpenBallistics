@@ -5,7 +5,7 @@
   import { byKey, load } from '../lib/data';
   import {
     main,
-    offered,
+    extent,
     plates,
     rememberStyle,
     storedStyle,
@@ -238,34 +238,31 @@
    * because a kind may be drawn at some lengths and not at others.
    *
    * Preference runs subject first: a reader looking at chambers wants a chamber, and a cartridge
-   * is not a near miss for one. Then the length, then the style. Where the asked-for length is
-   * undrawn the nearest drawn one wins, which on a shot cartridge is the closest thing to the
-   * cartridge in hand. Whatever comes back, `Cartridge.svelte` says out loud when it is not what
-   * was asked for rather than letting one drawing stand in for another in silence.
+   * is not a near miss for one. Then the length. Where the asked-for length is undrawn the nearest
+   * drawn one wins, which on a shot cartridge is the closest thing to the cartridge in hand.
+   * Whatever comes back, `Cartridge.svelte` says out loud when it is not what was asked for rather
+   * than letting one drawing stand in for another in silence. The style is not in the running: one
+   * file carries both (2026-09-05), so a style is never missing.
    */
   function resolve(
     drawn: Plate[],
     subject: DrawingSubject,
-    style: DrawingStyle,
     length: string | null,
     want: number | null
   ): Plate | null {
     if (!drawn.length) return null;
     const miss = (plate: Plate) =>
       (plate.subject === subject ? 0 : 100) +
-      (length !== null && tag(plate) !== null && tag(plate) !== length ? 10 : 0) +
-      (plate.style === style ? 0 : 1);
+      (length !== null && tag(plate) !== null && tag(plate) !== length ? 10 : 0);
     const distance = (plate: Plate) =>
       want !== null && plate.l !== undefined ? Math.abs(plate.l - want) : 0;
     return [...drawn].sort((a, b) => miss(a) - miss(b) || distance(a) - distance(b))[0] ?? null;
   }
 
-  /** How a drawing is named in a sentence: "technical chamber at 12/70". */
+  /** How a drawing is named in a sentence: "chamber at 12/70". */
   function describe(plate: Plate): string {
     const at = tag(plate);
-    return `${styleLabel(plate.style).toLowerCase()} ${subjectLabel(plate.subject).toLowerCase()}${
-      at ? t('draw.at', { length: at }) : ''
-    }`;
+    return `${subjectLabel(plate.subject).toLowerCase()}${at ? t('draw.at', { length: at }) : ''}`;
   }
 
 
@@ -276,15 +273,9 @@
    * Written here rather than in the markup so that the sentence is one string: a `{#if}` around a
    * clause is a place for a space to go missing, and this one is read as prose.
    */
-  function missingNote(
-    subject: DrawingSubject,
-    style: DrawingStyle,
-    length: string | null,
-    plate: Plate
-  ): string {
-    const asked = `${styleLabel(style).toLowerCase()} ${subjectLabel(subject).toLowerCase()}`;
+  function missingNote(subject: DrawingSubject, length: string | null, plate: Plate): string {
     return t('draw.missing', {
-      asked,
+      asked: subjectLabel(subject).toLowerCase(),
       at: length ? t('draw.at', { length }) : '',
       shown: describe(plate)
     });
@@ -303,16 +294,11 @@
    * They are drawn at one scale and hung from one left edge, which is what makes the comparison
    * work, and they pan together for the same reason.
    */
-  function panels(
-    drawn: Plate[],
-    style: DrawingStyle,
-    length: string | null,
-    want: number | null
-  ): Plate[] {
+  function panels(drawn: Plate[], length: string | null, want: number | null): Plate[] {
     const out: Plate[] = [];
     for (const subject of SUBJECTS) {
       if (!drawn.some((plate) => plate.subject === subject)) continue;
-      const plate = resolve(drawn, subject, style, length, want);
+      const plate = resolve(drawn, subject, length, want);
       if (plate) out.push(plate);
     }
     return out;
@@ -347,6 +333,31 @@
     zoom = storedZoom(next);
     rememberStyle(next);
   }
+
+  /**
+   * Whether the dimensions are drawn over the picture.
+   *
+   * Its own switch since 2026-09-05, when one file began to carry both styles with and without
+   * their dimensions: the rendered cartridge can now wear C.I.P.'s symbols too, which nothing
+   * offered before. On by default -- the numbers are what the page is for -- and kept per browser.
+   */
+  const DIMENSIONS_KEY = 'drawing-dimensions';
+  function storedDimensions(): boolean {
+    try {
+      return localStorage.getItem(DIMENSIONS_KEY) !== 'off';
+    } catch {
+      return true;
+    }
+  }
+  let dimensions = $state(storedDimensions());
+  function setDimensions(next: boolean) {
+    dimensions = next;
+    try {
+      localStorage.setItem(DIMENSIONS_KEY, next ? 'on' : 'off');
+    } catch {
+      // The choice still applies for this page.
+    }
+  }
 </script>
 
 <svelte:window bind:innerHeight={viewportHeight} />
@@ -355,21 +366,21 @@
   <p class="status">{t('record.loading', { name: entry?.name ?? key })}</p>
 {:then data}
   {@const drawn = plates(entry)}
-  {@const styles = offered(STYLES, drawn, 'style')}
-  {@const style = styles.includes(wanted) ? wanted : (styles[0] ?? 'visual')}
+  {@const styles = drawn.length ? STYLES : []}
+  {@const style = wanted}
   {@const hulls = hullLengths(data)}
   {@const selected = hulls
     ? (chosen?.key === key ? chosen.length : defaultLength(hulls, entry))
     : null}
   {@const want = hulls?.find((row) => tag(row) === selected)?.l ?? null}
-  {@const shown = panels(drawn, style, selected, want)}
+  {@const shown = panels(drawn, selected, want)}
   <!--
     One scale for every drawing on the page, from the widest and the tallest of them. The point of
     showing a cartridge and the chamber it is fired in is the tenth of a millimetre between them,
     and sizing each to its own row would show them at two scales and quietly destroy it.
   -->
-  {@const widest = shown.length ? Math.max(...shown.map((plate) => plate.svg[0])) : 1}
-  {@const tallest = shown.length ? Math.max(...shown.map((plate) => plate.svg[1])) : 1}
+  {@const widest = shown.length ? Math.max(...shown.map((plate) => extent(plate, dimensions)[0])) : 1}
+  {@const tallest = shown.length ? Math.max(...shown.map((plate) => extent(plate, dimensions)[1])) : 1}
   {@const drawScale = zoom === 'fit' ? fitScale(widest, tallest) : PX_PER_MM * zoom}
   <!--
     How far this record can be trusted, said before the record rather than after it.
@@ -487,7 +498,7 @@
       {#if styles.length > 1}
         <div class="view">
           <span class="eyebrow view-label">{t('draw.style')}</span>
-          <div class="options" role="group" aria-label="Drawing style">
+          <div class="options" role="group" aria-label={t('draw.style')}>
             {#each styles as option (option)}
               <button
                 type="button"
@@ -498,6 +509,26 @@
                 onclick={() => setStyle(option)}
               >
                 <span class="option-name">{styleLabel(option)}</span>
+              </button>
+            {/each}
+          </div>
+        </div>
+        <!--
+          Dimensions on or off, for either style. A face of the same file, so nothing is fetched
+          twice and the two styles cannot disagree about where the shoulder is.
+        -->
+        <div class="view">
+          <span class="eyebrow view-label">{t('draw.dimensions')}</span>
+          <div class="options" role="group" aria-label={t('draw.dimensions')}>
+            {#each [true, false] as option (option)}
+              <button
+                type="button"
+                class="option"
+                class:on={option === dimensions}
+                aria-pressed={option === dimensions}
+                onclick={() => setDimensions(option)}
+              >
+                <span class="option-name">{option ? t('draw.dimensionsOn') : t('draw.dimensionsOff')}</span>
               </button>
             {/each}
           </div>
@@ -583,9 +614,8 @@
       at, and undoing it is what makes the two comparable at all.
     -->
     {#if plate && entry}
-      {@const off =
-        plate.style !== style ||
-        (selected !== null && tag(plate) !== null && tag(plate) !== selected)}
+      {@const off = selected !== null && tag(plate) !== null && tag(plate) !== selected}
+      {@const mm = extent(plate, dimensions)}
       <figure
         class="drawing"
         onpointerdown={startDrag}
@@ -601,7 +631,7 @@
         <div class="plate" bind:clientWidth={panelWidth}>
           <div
             class="plate-box"
-            style={`--mm-w:${plate.svg[0]};--mm-h:${plate.svg[1]};--px:${drawScale}`}
+            style={`--mm-w:${mm[0]};--mm-h:${mm[1]};--px:${drawScale}`}
           >
             <!--
               Fetched at once rather than when it scrolls into view. There are two drawings on this
@@ -615,6 +645,8 @@
               scale={drawScale}
               height={Math.round(drawScale * 32)}
               drawing={plate}
+              {style}
+              {dimensions}
               eager
             />
           </div>
@@ -624,7 +656,7 @@
           12/70 stands in for 12/89 while the cartridge beside it does not.
         -->
         {#if off}
-          <p class="plate-note">{missingNote(plate.subject, style, selected, plate)}</p>
+          <p class="plate-note">{missingNote(plate.subject, selected, plate)}</p>
         {/if}
       </figure>
     {:else}

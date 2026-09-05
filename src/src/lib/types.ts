@@ -79,21 +79,25 @@ export function confidenceLabel(confidence: Confidence): string {
 export type DrawingSubject = 'cartridge' | 'chamber';
 
 /**
- * How it is drawn. `visual` is the rendered object, which every drawing shipped so far is -- the
- * renderer titles them `<name> - visual`. `technical` is the dimensioned drawing: the same
- * geometry answering what the numbers are rather than what the thing looks like.
+ * How a drawing is shown. `visual` is the rendered object, `technical` the outlined one: the same
+ * geometry answering what the thing looks like or what its numbers are. A face of the one file,
+ * not a file (2026-09-05); either can carry the dimensions, see `Drawing`.
  */
 export type DrawingStyle = 'visual' | 'technical';
 
 /**
  * One drawing shipped for a cartridge, and what it is a drawing of.
  *
- * `file` is its path under `outlines/<family>/`. `svg` is its extent in millimetres,
- * `[width, height]`, the same as `Entry.svg` -- real millimetres, not the units it was drawn in:
- * the renderer draws the cartridge at 1:1 and the chamber and both dimensioned drawings at 4:1,
- * and `unitsPerMm` in the build is where that is undone. Everything on this site is laid out in
- * millimetres and at one millimetres-per-pixel, so a value here that was not one would put a
- * chamber beside its cartridge at four times the size of the round that goes in it.
+ * `file` is its path under `outlines/<family>/`. One file carries four faces (2026-09-05): the
+ * coloured rendering and the dimensioned outline, each with or without the dimensions, chosen by
+ * the fragment the page appends -- `#visual`, `#visual-dims`, `#plain`, or none for the
+ * dimensioned outline. So a drawing has no style of its own any more; the page has.
+ *
+ * Two extents, both in real millimetres, read off the file by the build: `svg` is the whole page,
+ * which the faces with dimensions show, and `tight` is the object alone, which the faces without
+ * them crop to. The page lays everything out in millimetres and at one millimetres-per-pixel, and
+ * needs the right box for the face it is showing or a card is padded with a dimension margin it
+ * is not drawing.
  *
  * `l` and `marking` are set only on a shot cartridge, where the gauge names a family and the hull
  * length names a member of it -- a 12 gauge is drawn at each of nine, from 12/35 to 12/89.
@@ -101,8 +105,8 @@ export type DrawingStyle = 'visual' | 'technical';
 export interface Drawing {
   file: string;
   svg: [number, number];
+  tight: [number, number];
   subject: DrawingSubject;
-  style: DrawingStyle;
   l?: number;
   marking?: string | null;
   /**
@@ -225,6 +229,11 @@ export interface Entry {
    * grid of them share one scale.
    */
   svg: [number, number] | null;
+  /**
+   * The whole page of the cartridge's own drawing, in millimetres, where `svg` is the object
+   * alone: the faces with dimensions show the page. See `Drawing`.
+   */
+  sheet?: [number, number];
   /**
    * Every drawing shipped for this cartridge, where there is more than the one -- of the cartridge
    * or of its chamber, visual or technical, and at each published hull length where it has

@@ -1,6 +1,7 @@
 <script lang="ts">
   import Silhouette from './Silhouette.svelte';
-  import type { Drawing, Entry } from '../lib/types';
+  import { extent, face } from '../lib/drawings';
+  import type { Drawing, DrawingStyle, Entry } from '../lib/types';
 
   /**
    * The cartridge as a picture.
@@ -46,21 +47,28 @@
      */
     eager?: boolean;
     /**
-     * The contour alone, without its dimensions. A dimensioned drawing hides its annotation layer
-     * when loaded with the `#plain` fragment -- the file carries the switch, see `svg_header` in
-     * the renderer -- so the card in a grid, where the symbols are too small to read and only
-     * clutter the outline, shows the same file as the page, minus the layer. Only a dimensioned
-     * drawing has one; on any other the fragment is inert and is left off.
+     * Which face of the file: rendered or outlined, and with the dimensions drawn over it or not.
+     * One file carries all four (see `Drawing`); the fragment picks, and the extent the picture is
+     * laid out at follows the face -- the whole page with dimensions, the object alone without.
      */
-    plain?: boolean;
+    style?: DrawingStyle;
+    dimensions?: boolean;
   }
-  let { entry, scale, height, drawing = null, eager = false, plain = false }: Props = $props();
+  let {
+    entry,
+    scale,
+    height,
+    drawing = null,
+    eager = false,
+    style = 'visual',
+    dimensions = false
+  }: Props = $props();
 
-  const size = $derived(drawing?.svg ?? entry.svg);
+  const size = $derived(
+    drawing ? extent(drawing, dimensions) : dimensions ? (entry.sheet ?? entry.svg) : entry.svg
+  );
   const url = $derived(
-    `${import.meta.env.BASE_URL}outlines/${entry.family}/${drawing ? drawing.file : `${entry.key}.svg`}${
-      plain && drawing?.style === 'technical' ? '#plain' : ''
-    }`
+    `${import.meta.env.BASE_URL}outlines/${entry.family}/${drawing ? drawing.file : `${entry.key}.svg`}${face(style, dimensions)}`
   );
   /** Named for what it shows, so a screen reader is told which of several drawings this is. */
   const alt = $derived(
@@ -68,7 +76,7 @@
       entry.name,
       drawing?.marking ? ` in ${drawing.marking}` : '',
       drawing?.subject === 'chamber' ? ' chamber' : '',
-      drawing?.style === 'technical' ? ', technical drawing' : '',
+      style === 'technical' ? ', technical drawing' : '',
       ', drawn to scale'
     ].join('')
   );
@@ -77,7 +85,7 @@
 {#if size}
   <img
     class="drawing"
-    class:technical={drawing?.style === 'technical'}
+    class:technical={style === 'technical'}
     src={url}
     {alt}
     loading={eager ? 'eager' : 'lazy'}
