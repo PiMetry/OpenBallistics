@@ -83,7 +83,8 @@
     return style === 'technical' ? 'drawing-zoom-technical' : 'drawing-zoom';
   }
   function storedZoom(style: DrawingStyle): Zoom {
-    const fallback: Zoom = style === 'technical' ? 'fit' : 1;
+    // Both styles open at `fit`, which is life size wherever life size fits; see `fitScale`.
+    const fallback: Zoom = 'fit';
     try {
       const raw = localStorage.getItem(zoomKey(style));
       if (raw === null) return fallback;
@@ -179,9 +180,19 @@
    * window, and the pair still shares one scale.
    */
   let viewportHeight = $state(900);
+  /**
+   * `fit`: life size, unless life size does not fit, and then as large as does.
+   *
+   * Asked for 2026-09-05. Life size is the site's own measure -- 100% means a cartridge the size of
+   * the cartridge -- and it is what a drawing should open at whenever the column can hold it. It
+   * used to fill the column instead, which blew a 9 mm Luger up to fill a screen and made "fit" a
+   * different size on every window. Now fit never enlarges: it is 100% with room to spare, and the
+   * largest whole drawing that fits when there is not, bounded by the column's width and a little
+   * under two thirds of the window's height. The pair still shares one scale.
+   */
   function fitScale(widest: number, tallest: number): number {
     if (!panelWidth) return PX_PER_MM;
-    return Math.min(panelWidth / tallest, (viewportHeight * 0.62) / widest);
+    return Math.min(PX_PER_MM, panelWidth / tallest, (viewportHeight * 0.62) / widest);
   }
 
   /**
@@ -496,8 +507,12 @@
   {#if styles.length > 1 || hulls || shown.length}
     <div class="views">
       {#if styles.length > 1}
+        <!--
+          Three toggles, no labels (asked for 2026-09-05): the two styles, of which one is always
+          down, and the dimensions, which are on or off for either. All faces of one file, so
+          nothing is fetched twice and the two styles cannot disagree about where the shoulder is.
+        -->
         <div class="view">
-          <span class="eyebrow view-label">{t('draw.style')}</span>
           <div class="options" role="group" aria-label={t('draw.style')}>
             {#each styles as option (option)}
               <button
@@ -512,25 +527,16 @@
               </button>
             {/each}
           </div>
-        </div>
-        <!--
-          Dimensions on or off, for either style. A face of the same file, so nothing is fetched
-          twice and the two styles cannot disagree about where the shoulder is.
-        -->
-        <div class="view">
-          <span class="eyebrow view-label">{t('draw.dimensions')}</span>
           <div class="options" role="group" aria-label={t('draw.dimensions')}>
-            {#each [true, false] as option (option)}
-              <button
-                type="button"
-                class="option"
-                class:on={option === dimensions}
-                aria-pressed={option === dimensions}
-                onclick={() => setDimensions(option)}
-              >
-                <span class="option-name">{option ? t('draw.dimensionsOn') : t('draw.dimensionsOff')}</span>
-              </button>
-            {/each}
+            <button
+              type="button"
+              class="option"
+              class:on={dimensions}
+              aria-pressed={dimensions}
+              onclick={() => setDimensions(!dimensions)}
+            >
+              <span class="option-name">{t('draw.dimensions')}</span>
+            </button>
           </div>
         </div>
       {/if}
