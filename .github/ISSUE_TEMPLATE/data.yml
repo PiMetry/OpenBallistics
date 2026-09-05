@@ -10,10 +10,6 @@ body:
         where you are reading the correct value from: a report that names its source is the most
         useful thing anyone can send.
 
-        If the record is *right* and you have checked it against a source, that is worth reporting
-        too: use **Verify a record against its source** instead, which records the check rather
-        than a fault.
-
         If you arrived here from the site, the cartridge and the page link are already filled in.
   - type: input
     id: cartridge

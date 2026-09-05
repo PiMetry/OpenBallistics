@@ -5,8 +5,11 @@ Cartridge and chamber dimensions from the **C.I.P. Tables of Dimensions of Cartr
 
 ## Verification
 
-Nothing here is verified by being published. Five separate things can be confirmed against the
-source, by five different readings:
+Nothing here is verified by being published. Five separate things can be proofread by a person,
+and each is recorded on its own. The verdicts are data: they are kept upstream in BallisticViz,
+in `data/verifications.json`, merged into each record when the dataset is built, and carried
+here in the fields below. There is nothing to vote on and no issue to file; a wrong figure is
+reported with the *Something is wrong with this cartridge* form.
 
 | Facet              | Where it lives                        |
 | ------------------ | ------------------------------------- |

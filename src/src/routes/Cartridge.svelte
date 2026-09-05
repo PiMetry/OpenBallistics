@@ -15,18 +15,14 @@
     subjectLabel,
     SUBJECTS
   } from '../lib/drawings';
-  import { issueUrl, verifyUrl } from '../lib/issue';
+  import { issueUrl } from '../lib/issue';
   import { href } from '../lib/router';
-  import { inSentence, t } from '../lib/i18n.svelte';
+  import { t } from '../lib/i18n.svelte';
   import { PX_PER_MM } from '../lib/scale';
   import {
     FACETS,
     facetLabel,
     facetNote,
-    facetState,
-    facetSummary,
-    net,
-    VERIFY_THRESHOLD,
     familyLabel,
     tally,
     verificationState,
@@ -47,17 +43,6 @@
   const entry = $derived(byKey(key));
   const record = $derived(load(key));
   const report = $derived(entry ? issueUrl(entry) : null);
-  /**
-   * One "verify this" link per facet the record actually has, in the order the strip at the top
-   * names them. A facet that cannot apply gets no link, for the same reason it gets no pill: there
-   * is no bullet on a record that dimensions none, and nothing to confirm about it.
-   */
-  const verifiable = $derived(
-    entry ? FACETS.filter((facet) => facet in entry.verified).map((facet) => ({
-      facet,
-      href: verifyUrl(entry, facet)
-    })) : []
-  );
 
   /**
    * Pixels per millimetre for the drawing at the head of the page: the CSS reference, so 100% is
@@ -408,7 +393,6 @@
   {@const unexplained = findings.filter((f) => !f.known)}
   {@const explained = findings.filter((f) => f.known)}
   {@const verified = entry?.verified ?? {}}
-  {@const votes = entry?.votes ?? {}}
   {@const counted = tally(verified)}
   {@const level = verificationState(verified)}
   <section class="verified" aria-label={t('verify.status')}>
@@ -423,30 +407,15 @@
       </span>
       <span class="verified-what">{t('verify.means')}</span>
       <!--
-        Each facet with how its vote stands, which is what a count could never say. Three readings
-        in agreement settle a facet; a reader who finds a fault costs it one, so `2 of 3 agreed`
-        and `disputed` are different states and neither is "unverified". The mark carries the
-        state for a glance, the number is only printed where there is a number to print, and the
-        hover says what the facet means and what the tally is.
+        Each facet, named, with whether a person has proofread it. The verdicts are data kept with
+        the records upstream (BallisticViz `data/verifications.json`); there is nothing to vote on
+        here and nothing to file, which is why the strip has no links.
       -->
       <span class="facets">
         {#each FACETS.filter((facet) => facet in verified) as facet (facet)}
-          {@const settled = verified[facet] === true}
-          {@const cast = votes[facet]}
-          {@const state = facetState(settled, cast)}
-          <span
-            class="facet {state}"
-            title={`${facetNote(facet)} - ${facetSummary(settled, cast)}`}
-          >
-            <span class="facet-mark" aria-hidden="true"
-              >{state === 'verified' ? '✓' : state === 'disputed' ? '!' : '·'}</span
-            >
+          <span class="facet" class:verified={verified[facet] === true} title={facetNote(facet)}>
+            <span class="facet-mark" aria-hidden="true">{verified[facet] ? '✓' : '·'}</span>
             {facetLabel(facet)}
-            {#if !settled && net(cast) > 0}
-              <span class="facet-vote num">{net(cast)}/{VERIFY_THRESHOLD}</span>
-            {:else if cast && cast.reject > 0}
-              <span class="facet-vote num">{cast.approve}-{cast.reject}</span>
-            {/if}
           </span>
         {/each}
       </span>
@@ -709,18 +678,6 @@
     {#if report}
       · <a href={report} target="_blank" rel="noopener noreferrer">{t('record.report')}</a>
     {/if}
-    <!--
-      The separator is an element with its own spacing rather than a character between two tags:
-      inside an `{#each}` the whitespace at the end of a block is trimmed, and the dot ended up
-      welded to the link before it.
-    -->
-    {#each verifiable as { facet, href } (facet)}
-      <span class="sep" aria-hidden="true">·</span><a
-        {href}
-        target="_blank"
-        rel="noopener noreferrer">{t('record.verifyFacet', { facet: inSentence(facetLabel(facet)) })}</a
-      >
-    {/each}
   </p>
 {:catch error}
   <p class="status error">{error.message} <a href={href.list()}>Back to all cartridges</a></p>
@@ -1018,19 +975,6 @@
   }
   .facet.verified {
     color: var(--ok);
-  }
-  /* A reading that found a fault is not a facet nobody has read: it is the one state on the strip
-     that asks the reader for something, so it is the one that is allowed to be loud. */
-  .facet.disputed {
-    color: var(--alert);
-  }
-  /* Part way there. Coloured like a link rather than like a verdict, because it is neither. */
-  .facet.reading {
-    color: var(--accent);
-  }
-  .facet-vote {
-    font-size: 0.9em;
-    opacity: 0.85;
   }
   .facet-mark {
     font-weight: 700;

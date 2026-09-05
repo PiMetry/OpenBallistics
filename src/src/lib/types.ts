@@ -156,57 +156,6 @@ export function facetNote(facet: Facet): string {
  */
 export type Verified = Partial<Record<Facet, boolean>>;
 
-/**
- * How many people have read one facet, and which way they found it.
- *
- * **A score, not a count** (decided 2026-09-04). A facet used to be settled by three people
- * filing an issue about it, and an issue that said the record was wrong counted exactly as much as
- * one that said it was right. Now a reading is an approval or a rejection, and what settles a
- * facet is approvals *less* rejections reaching `VERIFY_THRESHOLD`: a reader who finds a fault
- * does not merely fail to confirm it, they cost it an approval, and a fourth reader has to agree
- * before the site marks it.
- *
- * The tally is not the verdict. Whether a facet is settled travels in the record itself, written
- * upstream from the votes; this is the arithmetic behind that, and it is absent for every facet
- * nobody has voted on -- which is all of them until the first vote lands. See `verifications` in
- * `scripts/build-index.mjs` for why the two come from different places.
- */
-export interface Tally {
-  approve: number;
-  reject: number;
-}
-export type Votes = Partial<Record<Facet, Tally>>;
-
-/** Approvals less rejections: what has to reach `VERIFY_THRESHOLD` for a facet to be marked. */
-export function net(tally: Tally | undefined): number {
-  return tally ? tally.approve - tally.reject : 0;
-}
-
-/**
- * How many readers in agreement settle a facet.
- *
- * Three, as it has been since the site had a vote at all; the change is what a disagreeing reader
- * now does to the arithmetic. Stated here as well as in `promote-verifications.mjs` because the
- * page says "2 of 3" while the vote is still short, and a page that names a different number from
- * the one the promotion actually uses would be lying quietly.
- */
-export const VERIFY_THRESHOLD = 3;
-
-/**
- * Where one facet stands, in a word.
- *
- * `disputed` is the state the count could not express: somebody has read this and found it wrong,
- * which is not the same as nobody having read it. It is worth its own word on the page because it
- * is the one state that asks the reader for something -- another reading.
- */
-export type FacetState = 'verified' | 'disputed' | 'reading' | 'unread';
-
-export function facetState(settled: boolean, tally?: Tally): FacetState {
-  if (settled) return 'verified';
-  if (tally && tally.reject > 0) return 'disputed';
-  return net(tally) > 0 ? 'reading' : 'unread';
-}
-
 /** How many of a record's applicable verifications are confirmed, out of how many there are. */
 export function tally(verified: Verified): { done: number; total: number } {
   const answers = Object.values(verified);
@@ -232,61 +181,27 @@ export function verificationLabel(state: VerificationState): string {
  * Only the facets that apply are named, so a shot cartridge does not read as owing a bullet
  * verification it can never have.
  */
-export function verificationSummary(verified: Verified, votes: Votes = {}): string {
+export function verificationSummary(verified: Verified): string {
   return FACETS.filter((facet) => facet in verified)
-    .map((facet) => `${facetLabel(facet)} ${facetSummary(verified[facet] === true, votes[facet])}`)
+    .map((facet) => `${facetLabel(facet)} ${verified[facet] ? t('verify.verified') : t('verify.unverified')}`)
     .join(' · ');
-}
-
-/**
- * One facet in a few words: the verdict where there is one, and otherwise how the vote stands.
- *
- * "Unverified" was the only thing the page could say about anything unsettled, which flattened a
- * facet two readers have approved, one a reader has rejected, and one nobody has opened into the
- * same word. Each of those asks the reader for something different.
- */
-export function facetSummary(settled: boolean, tally?: Tally): string {
-  switch (facetState(settled, tally)) {
-    case 'verified':
-      return tally ? `verified, ${tally.approve} for and ${tally.reject} against` : 'verified';
-    case 'disputed':
-      return `disputed, ${tally!.approve} for and ${tally!.reject} against`;
-    case 'reading':
-      return `${net(tally)} of ${VERIFY_THRESHOLD} agreed`;
-    default:
-      return 'unverified';
-  }
 }
 
 /**
  * One number for how far a record has been checked, which is what the list sorts on.
  *
- * A confirmed facet is worth `+1` and one nobody has opened `-1`, so a record ranks by how much of
- * it somebody has actually read rather than by how much of it exists. An unexplained plausibility
- * finding is `-2`: a figure that fails a rule with nothing to account for it is worse than a
- * figure nobody has looked at, because the site has positive reason to doubt it. A finding the
- * dataset explains costs nothing -- that is what explaining it was for.
- *
- * Between those two ends sits the vote (2026-09-04). A facet two readers have approved is not yet
- * verified but is further along than one nobody has touched, and it earns the fraction of the way
- * it has come. A facet somebody has rejected goes the other way, below silence and no lower than
- * an unexplained finding: a reader saying a figure is wrong is the same weight of doubt as a rule
- * saying so.
+ * Each confirmed facet is worth `+1` and each one still outstanding `-1`, so a record ranks by how
+ * much of it somebody has actually read rather than by how much of it exists. An unexplained
+ * plausibility finding is `-2`: a figure that fails a rule with nothing to account for it is worse
+ * than a figure nobody has looked at, because the site has positive reason to doubt it. A finding
+ * the dataset explains costs nothing -- that is what explaining it was for.
  *
  * Facets that do not apply score nothing either way, so a shot cartridge with no bullet is not
  * punished for having no bullet.
  */
 export function verificationScore(entry: Entry): number {
-  const votes = entry.votes ?? {};
-  const points = (facet: Facet): number => {
-    if (entry.verified[facet]) return 1;
-    const score = net(votes[facet]);
-    if (score >= VERIFY_THRESHOLD) return 1;
-    if (score > 0) return score / VERIFY_THRESHOLD - 1;
-    return Math.max(-2, -1 + score / VERIFY_THRESHOLD);
-  };
-  const facets = FACETS.filter((facet) => facet in entry.verified);
-  return facets.reduce((sum, facet) => sum + points(facet), 0) - 2 * entry.warnings;
+  const { done, total } = tally(entry.verified);
+  return done - (total - done) - 2 * entry.warnings;
 }
 
 /** One row of the index shipped with the app; see `scripts/build-index.mjs`. */
@@ -333,14 +248,6 @@ export interface Entry {
    * each one.
    */
   verified: Verified;
-  /**
-   * How the vote stands on each facet anybody has voted on; see `Votes`.
-   *
-   * Absent where nobody has, which is the whole dataset until the first vote lands -- a tally of
-   * two zeros on five facets of 526 records would be 91 KB of nothing in an index every visitor
-   * downloads.
-   */
-  votes?: Votes;
   /** Total plausibility checks that fired, including known exceptions. */
   checks: number;
   /** Findings on the record that no listed exception explains. */

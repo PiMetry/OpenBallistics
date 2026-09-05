@@ -7,7 +7,6 @@
   import {
     familyLabel,
     tally,
-    type Facet,
     verificationLabel,
     verificationState,
     verificationSummary,
@@ -41,12 +40,6 @@
   // Named `level` rather than `state`: a top-level `state` would turn every `$state`
   // rune in this file into a store read of it.
   const level = $derived(verificationState(entry.verified));
-  /** How many facets a reader has read and found wrong; see the chip beside the count. */
-  const disputed = $derived(
-    Object.entries(entry.votes ?? {}).filter(
-      ([facet, tally]) => tally.reject > 0 && !entry.verified[facet as Facet]
-    ).length
-  );
   let drawing: HTMLSpanElement;
   let dragging = $state(false);
   let dragged = $state(false);
@@ -143,21 +136,11 @@
       "3 of 4 verified" says both that somebody has been through this record and that they have not
       finished, which neither a tick nor the word "unverified" manages on its own.
     -->
-    <span class="chip confidence {level}" title={verificationSummary(entry.verified, entry.votes)}>
+    <span class="chip confidence {level}" title={verificationSummary(entry.verified)}>
       {#if level === 'full'}✓ {verificationLabel('full')}
       {:else if level === 'partial'}{t('verify.count', { done: counted.done, total: counted.total })}
       {:else}{verificationLabel('none')}{/if}
     </span>
-    <!--
-      A reading that found a fault, which the count above cannot show: it counts what is settled,
-      and a disputed facet is settled as much as an unread one, which is to say not at all. The
-      card says so in a word and the hover names which facet; the cartridge page shows the vote.
-    -->
-    {#if disputed}
-      <span class="chip confidence disputed" title={verificationSummary(entry.verified, entry.votes)}>
-        {t('verify.disputedCount', { count: disputed })}
-      </span>
-    {/if}
     <!--
       Separate from the count, because it is a different kind of statement: not "nobody has checked
       this" but "a rule fired on it and nothing accounts for that". Only the unexplained ones; a
@@ -289,14 +272,6 @@
     color: var(--ink-3);
     background: var(--surface-2);
     border-color: var(--rule);
-  }
-  /* A reader has looked and disagreed. Coloured like a plausibility finding rather than like
-     an unread facet, because both are positive reason to doubt the record rather than an absence
-     of anybody's attention. */
-  .confidence.disputed {
-    color: var(--alert);
-    background: var(--alert-soft);
-    border-color: currentColor;
   }
   .confidence.implausible {
     color: var(--warn, #8a5a00);

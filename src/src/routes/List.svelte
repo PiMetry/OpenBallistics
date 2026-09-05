@@ -46,7 +46,6 @@
     | 'none'
     | 'checks'
     | 'clean'
-    | 'disputed'
     | `is:${Facet}`
     | `not:${Facet}`;
   let verification = $state<Verification>('');
@@ -116,13 +115,6 @@
   function matches(entry: Entry, want: Verification): boolean {
     if (want === 'checks') return entry.warnings > 0;
     if (want === 'clean') return entry.checks === 0;
-    // A reader has read one of its facets and said it is wrong. Its own question rather than a
-    // shade of "not verified": those are records where somebody is telling the site something.
-    if (want === 'disputed') {
-      return Object.entries(entry.votes ?? {}).some(
-        ([facet, tally]) => tally.reject > 0 && !entry.verified[facet as Facet]
-      );
-    }
     if (want.startsWith('is:')) return entry.verified[want.slice(3) as Facet] === true;
     if (want.startsWith('not:')) return entry.verified[want.slice(4) as Facet] === false;
     return verificationState(entry.verified) === want;
@@ -319,9 +311,6 @@
               >{t('list.unverifiedFacet', { facet: facetLabel(facet) })}</option
             >
           {/each}
-        </optgroup>
-        <optgroup label="Disagreement">
-          <option value="disputed">A reader found a fault</option>
         </optgroup>
         <optgroup label="Plausibility">
           <option value="checks">Has open checks</option>
