@@ -1,0 +1,116 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.65,
+      "R1": 17.0,
+      "RTol": -0.25,
+      "beta": 45.0,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 11.35,
+      "H2": 11.33
+    },
+    "junctionCone": {
+      "S": 66.62,
+      "alpha": {
+        "degrees": 89.0,
+        "minutes": 45.0,
+        "seconds": 32.0
+      }
+    },
+    "lengths": {
+      "L1": 59.73,
+      "L2": 60.92,
+      "L3": 73.66,
+      "L6": 95.25
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 14.99,
+      "P2": 13.72
+    },
+    "pressures": {
+      "EE": 7270.0,
+      "M": 25.0,
+      "PE": 4060.0,
+      "PK": 3738.0,
+      "Pmax": 3250.0
+    },
+    "projectile": {
+      "G1": 10.57,
+      "L3PlusG": 81.28
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.36,
+      "Z": 10.57
+    },
+    "breech": {
+      "R": 1.67,
+      "R1": 17.2
+    },
+    "collar": {
+      "H1": 11.38,
+      "H2": 11.35
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 86.61,
+      "b": 3.6,
+      "u": 420.0
+    },
+    "junctionCone": {
+      "S": 66.65,
+      "alpha": {
+        "degrees": 89.0,
+        "minutes": 30.0,
+        "seconds": 59.0
+      }
+    },
+    "lengths": {
+      "L1": 59.72,
+      "L2": 60.91,
+      "L3": 73.96
+    },
+    "powderChamber": {
+      "P1": 15.02,
+      "P2": 13.74
+    },
+    "rifling": {
+      "G": 7.62,
+      "G1": 10.59,
+      "alpha1": 90.0,
+      "h": 0.38,
+      "i": {
+        "degrees": 0.0,
+        "minutes": 54.0,
+        "seconds": 36.0
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimmed",
+  "key": "416_rigby_n_2",
+  "name": "416 Rigby N°2",
+  "pressureMethod": "Transducer",
+  "published": "2018-05-16",
+  "tab": "II"
+}

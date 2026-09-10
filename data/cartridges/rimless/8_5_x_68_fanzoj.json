@@ -1,0 +1,132 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.5,
+      "E1": 11.2,
+      "R": 1.4,
+      "R1": 13.0,
+      "beta": 45.0,
+      "delta": {
+        "degrees": 43.0,
+        "minutes": 42.0,
+        "seconds": 0.0
+      },
+      "eMin": 1.0,
+      "f": 0.3
+    },
+    "collar": {
+      "H1": 9.45,
+      "H2": 9.45
+    },
+    "junctionCone": {
+      "S": 76.6,
+      "alpha": {
+        "degrees": 29.0,
+        "minutes": 6.0,
+        "seconds": 26.0
+      },
+      "r1Min": 0.5,
+      "r2": 3.0
+    },
+    "lengths": {
+      "L1": 53.2,
+      "L1Tol": -0.2,
+      "L2": 58.4,
+      "L2Tol": -0.2,
+      "L3": 67.5,
+      "L6": 87.0
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.3,
+      "P2": 12.15,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 5975.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
+    },
+    "projectile": {
+      "G1": 8.59,
+      "L3PlusG": 73.7
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.38,
+      "Z": 8.59
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 13.05
+    },
+    "collar": {
+      "H1": 9.49,
+      "H2": 9.49
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 56.95,
+      "b": 2.79,
+      "u": 254.0
+    },
+    "junctionCone": {
+      "S": 76.59,
+      "alpha": {
+        "degrees": 29.0,
+        "minutes": 6.0,
+        "seconds": 40.0
+      },
+      "r1Max": 0.5,
+      "r2": 3.0
+    },
+    "lengths": {
+      "L1": 53.14,
+      "L2": 58.32,
+      "L3": 67.8
+    },
+    "powderChamber": {
+      "E": 3.5,
+      "P1": 13.33,
+      "P2": 12.18
+    },
+    "rifling": {
+      "G": 6.2,
+      "G1": 8.6,
+      "alpha1": 90.0,
+      "h": 0.45,
+      "i": {
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
+      },
+      "s": 2.0
+    }
+  },
+  "country": "DE",
+  "family": "rimless",
+  "key": "8_5_x_68_fanzoj",
+  "name": "8,5 x 68 Fanzoj",
+  "pressureMethod": "Transducer",
+  "published": "2012-05-30",
+  "tab": "I"
+}

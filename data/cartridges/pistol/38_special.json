@@ -1,0 +1,100 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "verified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sp",
+    "publishedCapacity": {
+      "grH2O": 23.4,
+      "source": "wiki",
+      "url": "https://en.wikipedia.org/"
+    }
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.5,
+      "R1": 11.18,
+      "RTol": -0.25,
+      "beta": 35.0,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 9.63
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 29.34,
+      "L6": 39.37
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 9.63
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 1950.0,
+      "PK": 1725.0,
+      "Pmax": 1500.0
+    },
+    "projectile": {
+      "G1": 9.12,
+      "L3PlusG": 43.06
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.79,
+      "Z": 9.02
+    },
+    "breech": {
+      "R": 1.5,
+      "R1": 11.28
+    },
+    "collar": {
+      "H2": 9.65
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 62.55,
+      "b": 2.67,
+      "u": 476.0
+    },
+    "junctionCone": {},
+    "lengths": {
+      "L3": 29.54
+    },
+    "powderChamber": {
+      "P1": 9.68
+    },
+    "rifling": {
+      "G": 13.72,
+      "G1": 9.09,
+      "alpha1": 13.0,
+      "h": 2.46,
+      "i": {
+        "degrees": 4.0,
+        "minutes": 45.0,
+        "seconds": 0.0
+      },
+      "s": 11.91
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "38_special",
+  "name": "38 Special",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2000-06-07",
+  "tab": "IV"
+}

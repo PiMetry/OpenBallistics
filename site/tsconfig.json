@@ -1,0 +1,26 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "checkJs": false,
+    "isolatedModules": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUncheckedIndexedAccess": true,
+    "baseUrl": ".",
+    "paths": {
+      "$lib": ["./src/lib"],
+      "$lib/*": ["./src/lib/*"],
+      "@lib/*": ["../lib/*"],
+      // The libraries live outside this directory, so TypeScript walking up from `../lib` never
+      // reaches `site/node_modules`. Their test files import vitest; point it at the one install.
+      "vitest": ["./node_modules/vitest"],
+      "vitest/*": ["./node_modules/vitest/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.svelte", "scripts/**/*.mjs", "../lib/**/*.ts"]
+}

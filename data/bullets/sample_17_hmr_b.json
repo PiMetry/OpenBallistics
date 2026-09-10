@@ -1,0 +1,53 @@
+{
+  "key": "sample_17_hmr_b",
+  "sample": true,
+  "sampleFor": "17_hmr",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-B",
+  "name": ".17 HMR — Sample B",
+  "calibre": ".17 HMR",
+  "diameter": 4.38,
+  "mass": 1.6806,
+  "length": 14.016,
+  "bearing": 6.3072,
+  "nose": 7.7088,
+  "meplat": 0.657,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.25,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 14.016,
+    "bearing": 6.3072,
+    "nose": 7.7088,
+    "boatTail": 0,
+    "baseDiameter": 4.38,
+    "boatTailAngle": null,
+    "meplat": 0.657,
+    "ogiveRadiusCalibres": 3.8567,
+    "massGrains": 25.9356,
+    "sectionalDensity": 0.1246,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

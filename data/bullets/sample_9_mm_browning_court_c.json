@@ -1,0 +1,53 @@
+{
+  "key": "sample_9_mm_browning_court_c",
+  "sample": true,
+  "sampleFor": "9_mm_browning_court",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-C",
+  "name": ".380 ACP — Sample C",
+  "calibre": ".380 ACP",
+  "diameter": 9.04,
+  "mass": 9.7517,
+  "length": 17.8992,
+  "bearing": 8.0546,
+  "nose": 9.8446,
+  "meplat": 1.356,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "elliptical"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.275,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 17.8992,
+    "bearing": 8.0546,
+    "nose": 9.8446,
+    "boatTail": 0,
+    "baseDiameter": 9.04,
+    "boatTailAngle": null,
+    "meplat": 1.356,
+    "ogiveRadiusCalibres": 1.6077,
+    "massGrains": 150.4917,
+    "sectionalDensity": 0.1697,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

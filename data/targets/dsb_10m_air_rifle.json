@@ -1,0 +1,76 @@
+{
+  "id": "dsb_10m_air_rifle",
+  "name": "DSB 10 m Gewehr",
+  "distanceM": 10,
+  "rings": [
+    {
+      "score": 10,
+      "diameterMm": 0.5
+    },
+    {
+      "score": 9,
+      "diameterMm": 5.5
+    },
+    {
+      "score": 8,
+      "diameterMm": 10.5
+    },
+    {
+      "score": 7,
+      "diameterMm": 15.5
+    },
+    {
+      "score": 6,
+      "diameterMm": 20.5
+    },
+    {
+      "score": 5,
+      "diameterMm": 25.5
+    },
+    {
+      "score": 4,
+      "diameterMm": 30.5
+    },
+    {
+      "score": 3,
+      "diameterMm": 35.5
+    },
+    {
+      "score": 2,
+      "diameterMm": 40.5
+    },
+    {
+      "score": 1,
+      "diameterMm": 45.5
+    }
+  ],
+  "blackMm": 30.5,
+  "tenIsWhiteDot": true,
+  "cardMm": {
+    "width": 80,
+    "height": 80
+  },
+  "source": {
+    "body": "DSB",
+    "rulebook": "Sportordnung",
+    "edition": "01.01.2027",
+    "effectiveFrom": "2027-01-01",
+    "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+    "retrieved": "2026-09-08",
+    "transcription": "text-layer",
+    "rule": "0.20, Scheibe Nr. 1, PDF pp. 80, 81"
+  },
+  "ruleSources": [
+    {
+      "body": "DSB",
+      "rulebook": "Sportordnung",
+      "edition": "01.01.2027",
+      "effectiveFrom": "2027-01-01",
+      "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "rule": "0.11.3, PDF p. 57"
+    }
+  ],
+  "note": "The inner ten requires the white dot to be completely removed (0.20, PDF p. 81). It is not evaluated as an ordinary inner ring."
+}

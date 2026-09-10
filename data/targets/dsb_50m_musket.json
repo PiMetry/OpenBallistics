@@ -1,0 +1,60 @@
+{
+  "id": "dsb_50m_musket",
+  "name": "DSB 50 m Muskete",
+  "distanceM": 50,
+  "rings": [
+    {
+      "score": 10,
+      "diameterMm": 80
+    },
+    {
+      "score": 9,
+      "diameterMm": 160
+    },
+    {
+      "score": 8,
+      "diameterMm": 240
+    },
+    {
+      "score": 7,
+      "diameterMm": 320
+    },
+    {
+      "score": 6,
+      "diameterMm": 400
+    },
+    {
+      "score": 5,
+      "diameterMm": 480
+    }
+  ],
+  "blackMm": 400,
+  "cardMm": {
+    "width": 550,
+    "height": 550
+  },
+  "source": {
+    "body": "DSB",
+    "rulebook": "Sportordnung",
+    "edition": "01.01.2027",
+    "effectiveFrom": "2027-01-01",
+    "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+    "retrieved": "2026-09-08",
+    "transcription": "text-layer",
+    "rule": "0.20, Scheibe Nr. 6, PDF pp. 80, 84"
+  },
+  "scoringMethod": "centre",
+  "ruleSources": [
+    {
+      "body": "DSB",
+      "rulebook": "Sportordnung",
+      "edition": "01.01.2027",
+      "effectiveFrom": "2027-01-01",
+      "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "rule": "7.7.5, PDF p. 346"
+    }
+  ],
+  "note": "The rulebook permits 520-550 x 550 mm; this diagram uses 550 x 550 mm. Scores are determined by the hole centre."
+}

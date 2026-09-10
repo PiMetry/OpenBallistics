@@ -1,0 +1,88 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.09,
+      "R1": 10.41,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H2": 8.31
+    },
+    "lengths": {
+      "L3": 28.45,
+      "L6": 40.64
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 9.02
+    },
+    "pressures": {
+      "EE": 680.0,
+      "M": 17.5,
+      "PE": 1375.0,
+      "PK": 1265.0,
+      "Pmax": 1100.0
+    },
+    "projectile": {
+      "G1": 8.2,
+      "L3PlusG": 35.2
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.9,
+      "Z": 8.18
+    },
+    "breech": {
+      "R": 1.12,
+      "R1": 10.54
+    },
+    "collar": {
+      "H2": 8.33
+    },
+    "grooves": {
+      "Q": 49.02,
+      "u": 508.0
+    },
+    "lengths": {
+      "L3": 28.7
+    },
+    "powderChamber": {
+      "P1": 9.04
+    },
+    "rifling": {
+      "G": 6.75,
+      "G1": 8.25,
+      "alpha1": 180.0,
+      "i": {
+        "degrees": 1.0,
+        "minutes": 29.0,
+        "seconds": 6.0
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "310_cadet_rifle",
+  "name": "310 Cadet Rifle",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15",
+  "tab": "II"
+}

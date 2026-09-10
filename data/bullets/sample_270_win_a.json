@@ -1,0 +1,53 @@
+{
+  "key": "sample_270_win_a",
+  "sample": true,
+  "sampleFor": "270_win",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-A",
+  "name": ".270 Winchester — Sample A",
+  "calibre": ".270 Winchester",
+  "diameter": 7.06,
+  "mass": 6.3341,
+  "length": 20.3328,
+  "bearing": 9.1498,
+  "nose": 11.183,
+  "meplat": 1.059,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.225,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 20.3328,
+    "bearing": 9.1498,
+    "nose": 11.182999999999998,
+    "boatTail": 0,
+    "baseDiameter": 7.06,
+    "boatTailAngle": null,
+    "meplat": 1.059,
+    "ogiveRadiusCalibres": 3.1643,
+    "massGrains": 97.7501,
+    "sectionalDensity": 0.1807,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

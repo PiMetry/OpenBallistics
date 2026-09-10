@@ -1,0 +1,93 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_fmj_truncated",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.77,
+      "E1": 8.79,
+      "R": 1.27,
+      "R1": 9.96,
+      "beta": 45.0,
+      "delta": 35.0,
+      "eMin": 0.89,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 11.03
+    },
+    "lengths": {
+      "L3": 22.0,
+      "L3Tol": -0.25,
+      "L6": 29.25
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 11.05
+    },
+    "pressures": {
+      "M": 10.5,
+      "PE": 2925.0,
+      "PK": 2588.0,
+      "Pmax": 2250.0
+    },
+    "projectile": {
+      "G1": 10.41,
+      "L3PlusG": 29.06
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.13,
+      "Z": 10.39
+    },
+    "breech": {
+      "R": 2.54,
+      "R1": 11.11
+    },
+    "collar": {
+      "H2": 11.05
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 82.17,
+      "b": 2.0,
+      "u": 360.0
+    },
+    "lengths": {
+      "L3": 22.02
+    },
+    "powderChamber": {
+      "E": 5.08,
+      "P1": 11.1
+    },
+    "rifling": {
+      "G": 7.06,
+      "G1": 10.44,
+      "alpha1": 180.0,
+      "i": 2.0,
+      "s": 2.62
+    }
+  },
+  "country": "IL",
+  "family": "pistol",
+  "key": "41_act_exp",
+  "name": "41 ACT EXP",
+  "pressureMethod": "Transducer",
+  "published": "1986-12-03",
+  "revised": "2000-06-07",
+  "tab": "IV"
+}

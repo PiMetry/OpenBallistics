@@ -1,0 +1,96 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.77,
+      "E1": 10.39,
+      "R": 1.37,
+      "R1": 12.01,
+      "beta": 45.0,
+      "delta": 40.0,
+      "eMin": 1.02,
+      "f": 0.86
+    },
+    "collar": {
+      "H2": 12.19
+    },
+    "lengths": {
+      "L3": 43.18,
+      "L3Tol": -0.25,
+      "L6": 57.4
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 12.7
+    },
+    "pressures": {
+      "EE": 3950.0,
+      "M": 25.0,
+      "PE": 3375.0,
+      "PK": 3105.0,
+      "Pmax": 2700.0
+    },
+    "projectile": {
+      "G1": 11.49,
+      "L3PlusG": 51.47
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.23,
+      "Z": 11.43
+    },
+    "breech": {
+      "R1": 12.79
+    },
+    "collar": {
+      "H2": 12.22
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 101.35,
+      "b": 3.76,
+      "u": 609.6
+    },
+    "lengths": {
+      "L3": 43.18
+    },
+    "powderChamber": {
+      "E": 3.77,
+      "P1": 12.75
+    },
+    "rifling": {
+      "G": 8.29,
+      "G1": 11.51,
+      "alpha1": 180.0,
+      "i": {
+        "degrees": 2.0,
+        "minutes": 30.0,
+        "seconds": 0.0
+      },
+      "s": 5.08
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "450_bushmaster",
+  "name": "450 Bushmaster",
+  "pressureMethod": "Transducer",
+  "published": "2010-05-26",
+  "tab": "I"
+}

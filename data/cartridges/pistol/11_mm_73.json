@@ -1,0 +1,113 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.projectile.G1",
+          "chamber.barrel.Z"
+        ],
+        "kind": "approximate",
+        "known": true,
+        "message": "the bullet differs from the groove diameter by 0.40 mm (G1 = 11.6, Z = 11.2); within 0.1 mm is manufacture",
+        "rule": "bullet_matches_grooves",
+        "values": {
+          "G1": 11.6,
+          "Z": 11.2
+        },
+        "why": "printed so: G1 11.60 against Z 11.20, the 1873 French service revolver's lead bullet sized to its chamber mouth"
+      }
+    ],
+    "primerType": "lp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.0,
+      "R1": 12.7,
+      "RTol": -0.25,
+      "beta": 45.0,
+      "f": 0.4
+    },
+    "collar": {
+      "H2": 11.65
+    },
+    "lengths": {
+      "L3": 17.65,
+      "L6": 29.65
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 11.85
+    },
+    "pressures": {
+      "M": 9.5,
+      "PE": 1495.0,
+      "PK": 1323.0,
+      "Pmax": 1150.0
+    },
+    "projectile": {
+      "G1": 11.6,
+      "L3PlusG": 39.83
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.8,
+      "Z": 11.2
+    },
+    "breech": {
+      "R": 1.0,
+      "R1": 13.2
+    },
+    "collar": {
+      "H2": 11.8
+    },
+    "grooves": {
+      "N": 4.0,
+      "Q": 95.14,
+      "b": 4.3,
+      "u": 350.0
+    },
+    "lengths": {
+      "L3": 18.0
+    },
+    "powderChamber": {
+      "P1": 12.0
+    },
+    "rifling": {
+      "G": 22.18,
+      "G1": 11.4,
+      "alpha1": {
+        "degrees": 11.0,
+        "minutes": 25.0,
+        "seconds": 15.0
+      },
+      "h": 2.0,
+      "i": {
+        "degrees": 1.0,
+        "minutes": 1.0,
+        "seconds": 23.0
+      },
+      "s": 5.38
+    }
+  },
+  "country": "FR",
+  "family": "pistol",
+  "key": "11_mm_73",
+  "name": "11 mm 73",
+  "pressureMethod": "Transducer",
+  "published": "2002-01-22",
+  "revised": "2013-05-22",
+  "tab": "IV"
+}

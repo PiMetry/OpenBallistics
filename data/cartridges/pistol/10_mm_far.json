@@ -1,0 +1,93 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_fmj_truncated",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.64,
+      "E1": 8.85,
+      "R": 1.4,
+      "R1": 10.85,
+      "beta": 45.0,
+      "delta": 45.0,
+      "eMin": 1.25
+    },
+    "collar": {
+      "H2": 10.7
+    },
+    "lengths": {
+      "L3": 24.15,
+      "L3Tol": -0.25,
+      "L6": 32.2
+    },
+    "misc": {
+      "Fe": 0.3
+    },
+    "powderChamber": {
+      "P1": 10.83
+    },
+    "pressures": {
+      "M": 12.5,
+      "PE": 2925.0,
+      "PK": 2590.0,
+      "Pmax": 2250.0
+    },
+    "projectile": {
+      "G1": 10.17,
+      "L3PlusG": 32.98
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.91,
+      "Z": 10.17
+    },
+    "breech": {
+      "R1": 10.88
+    },
+    "collar": {
+      "H2": 10.77
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 79.55,
+      "b": 3.05,
+      "u": 406.0
+    },
+    "lengths": {
+      "L3": 24.15
+    },
+    "powderChamber": {
+      "E": 5.08,
+      "P1": 10.86
+    },
+    "rifling": {
+      "G": 8.83,
+      "G1": 10.19,
+      "alpha1": 180.0,
+      "i": {
+        "degrees": 0.0,
+        "minutes": 54.0,
+        "seconds": 29.0
+      }
+    }
+  },
+  "country": "IT",
+  "family": "pistol",
+  "key": "10_mm_far",
+  "name": "10 mm FAR",
+  "pressureMethod": "Transducer",
+  "published": "2000-09-15",
+  "tab": "IV"
+}

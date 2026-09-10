@@ -1,0 +1,3734 @@
+{
+ "generated": "2026-09-08",
+ "totals": {
+  "files": 151,
+  "lines": 25173,
+  "frameworkFree": 75,
+  "frameworkCoupled": 44,
+  "cycles": 0
+ },
+ "cycles": [],
+ "files": [
+  {
+   "file": "site/src/routes/Designer.svelte",
+   "ext": ".svelte",
+   "lines": 1307,
+   "exports": [],
+   "imports": [
+    "../components/PageHeader.svelte",
+    "../lib/bullets",
+    "../lib/i18n.svelte",
+    "../lib/issue",
+    "../lib/router",
+    "@lib/core",
+    "@lib/designer",
+    "@lib/geom",
+    "@lib/render2d",
+    "@lib/shapes2d"
+   ],
+   "localImports": [
+    "../components/PageHeader.svelte",
+    "../lib/bullets",
+    "../lib/i18n.svelte",
+    "../lib/issue",
+    "../lib/router"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/i18n.svelte.ts",
+   "ext": ".ts",
+   "lines": 1196,
+   "exports": [
+    "Key",
+    "LANGS",
+    "LANG_LABELS",
+    "Lang",
+    "inSentence",
+    "lang",
+    "setLang",
+    "t"
+   ],
+   "imports": [
+    "./workflows.messages"
+   ],
+   "localImports": [
+    "./workflows.messages"
+   ],
+   "usesSvelte": false,
+   "usesRunes": true,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 30
+  },
+  {
+   "file": "site/src/routes/Cartridge.svelte",
+   "ext": ".svelte",
+   "lines": 1049,
+   "exports": [],
+   "imports": [
+    "../components/Drawing.svelte",
+    "../components/Flag.svelte",
+    "../components/GroupTable.svelte",
+    "../lib/bullets",
+    "../lib/data",
+    "../lib/drawings",
+    "../lib/i18n.svelte",
+    "../lib/labels",
+    "../lib/router",
+    "@lib/core",
+    "@lib/core/plates"
+   ],
+   "localImports": [
+    "../components/Drawing.svelte",
+    "../components/Flag.svelte",
+    "../components/GroupTable.svelte",
+    "../lib/data",
+    "../lib/drawings",
+    "../lib/bullets",
+    "../lib/router",
+    "../lib/i18n.svelte",
+    "../lib/labels"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/render2d/technical.ts",
+   "ext": ".ts",
+   "lines": 803,
+   "exports": [
+    "ANNOTATIONS_CLASS",
+    "AngleMark",
+    "Callout",
+    "ChamberRecordFacts",
+    "DELTA_ARC_MM",
+    "Dimension",
+    "INK_SYMBOL",
+    "INK_WARNING",
+    "PAGE_MARGIN_MM",
+    "annotate",
+    "bulletDimensions",
+    "chamberAngles",
+    "chamberCallouts",
+    "chamberDimensions",
+    "chamberRecordFacts",
+    "dimension",
+    "metallicAngles",
+    "metallicCallouts",
+    "metallicDimensions",
+    "pageMargins",
+    "shotshellDimensions"
+   ],
+   "imports": [
+    "../geom/profile",
+    "../geom/svg",
+    "../shapes2d/bullet",
+    "../shapes2d/case",
+    "../shapes2d/chamber",
+    "../shapes2d/shotshell"
+   ],
+   "localImports": [
+    "../shapes2d/bullet",
+    "../shapes2d/case",
+    "../shapes2d/chamber",
+    "../geom/profile",
+    "../geom/svg",
+    "../shapes2d/shotshell"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 4
+  },
+  {
+   "file": "lib/designer/index.ts",
+   "ext": ".ts",
+   "lines": 800,
+   "exports": [
+    "Axis",
+    "Built",
+    "Homography",
+    "Inputs",
+    "Measurements",
+    "Px",
+    "Ruler",
+    "Scale",
+    "applyHomography",
+    "axisFrom",
+    "buildBullet",
+    "composeHomography",
+    "defaultRadiusCalibres",
+    "fitCircle",
+    "fitLine",
+    "homographyFrom",
+    "inputsFrom",
+    "invertHomography",
+    "measure",
+    "mergeEdges",
+    "noseOf",
+    "orderCorners",
+    "proposeTrace",
+    "recordFrom",
+    "recordFromInputs",
+    "rectificationPlan",
+    "refitAxis",
+    "scaleFrom",
+    "toProfile",
+    "warpPixels",
+    "warpedBounds"
+   ],
+   "imports": [
+    "../shapes2d",
+    "./cartridge",
+    "@lib/geom",
+    "@lib/shapes2d"
+   ],
+   "localImports": [
+    "../shapes2d",
+    "./cartridge"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/routes/Trajectory.svelte",
+   "ext": ".svelte",
+   "lines": 758,
+   "exports": [],
+   "imports": [
+    "../components/PageHeader.svelte",
+    "../lib/bullets",
+    "../lib/i18n.svelte",
+    "../lib/prefs",
+    "../lib/records.svelte",
+    "../lib/router",
+    "@lib/ballistics",
+    "@lib/optics",
+    "@lib/userdata"
+   ],
+   "localImports": [
+    "../components/PageHeader.svelte",
+    "../lib/bullets",
+    "../lib/i18n.svelte",
+    "../lib/router",
+    "../lib/records.svelte",
+    "../lib/prefs"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/routes/List.svelte",
+   "ext": ".svelte",
+   "lines": 583,
+   "exports": [],
+   "imports": [
+    "../components/AddAction.svelte",
+    "../components/Card.svelte",
+    "../components/Flag.svelte",
+    "../components/PageHeader.svelte",
+    "../components/ResultsSummary.svelte",
+    "../components/SearchPanel.svelte",
+    "../lib/data",
+    "../lib/drawings",
+    "../lib/i18n.svelte",
+    "../lib/labels",
+    "../lib/router",
+    "@lib/core",
+    "svelte"
+   ],
+   "localImports": [
+    "../components/SearchPanel.svelte",
+    "../components/ResultsSummary.svelte",
+    "../components/AddAction.svelte",
+    "../components/PageHeader.svelte",
+    "../components/Card.svelte",
+    "../components/Flag.svelte",
+    "../lib/data",
+    "../lib/drawings",
+    "../lib/i18n.svelte",
+    "../lib/router",
+    "../lib/labels"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/routes/CartridgeDesigner.svelte",
+   "ext": ".svelte",
+   "lines": 525,
+   "exports": [],
+   "imports": [
+    "../components/PageHeader.svelte",
+    "../lib/data",
+    "../lib/fieldsets",
+    "../lib/i18n.svelte",
+    "../lib/records.svelte",
+    "../lib/router",
+    "@lib/core",
+    "@lib/designer",
+    "@lib/geometry",
+    "@lib/render2d",
+    "@lib/shapes2d",
+    "@lib/userdata"
+   ],
+   "localImports": [
+    "../components/PageHeader.svelte",
+    "../lib/router",
+    "../lib/data",
+    "../lib/fieldsets",
+    "../lib/i18n.svelte",
+    "../lib/records.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/shapes2d/case.ts",
+   "ext": ".ts",
+   "lines": 509,
+   "exports": [
+    "BODY_WALL_MAX_FRACTION",
+    "CartridgeRecord",
+    "FLOOR_FILLET_FRACTION",
+    "GRAINS_H2O_PER_MM3",
+    "MetallicCase",
+    "MissingDimensionError",
+    "PRIMER_POCKET_CLEARANCE_MM",
+    "TAPER_CRIMP_DIAMETER_REDUCTION_MM",
+    "WEB_TAPER_CALIBRES",
+    "WEB_TAPER_FACTOR",
+    "adaptMetallic",
+    "caseOuterProfile"
+   ],
+   "imports": [
+    "../geom/profile"
+   ],
+   "localImports": [
+    "../geom/profile"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 11
+  },
+  {
+   "file": "lib/shapes2d/bullet.ts",
+   "ext": ".ts",
+   "lines": 459,
+   "exports": [
+    "BOAT_TAIL_ANGLE_DEG",
+    "BOAT_TAIL_LENGTH_CALIBRES",
+    "BaseType",
+    "Bullet",
+    "BulletCategory",
+    "HOLLOW_BASE_DEPTH_CALIBRES",
+    "HOLLOW_POINT_DEPTH_CALIBRES",
+    "JACKET_THICKNESS_CALIBRES",
+    "JacketType",
+    "MATERIAL_HEX",
+    "MATERIAL_HEX_OF",
+    "MEPLAT_TOOLING_MM",
+    "Material",
+    "OgiveType",
+    "RT_OVER_R",
+    "SHANK_FRACTION",
+    "TipType",
+    "arcRadius",
+    "bulletOuterProfile",
+    "checkSeating",
+    "darken",
+    "defaultBullet",
+    "exposedProfile",
+    "shiftBullet",
+    "surfaceMaterial"
+   ],
+   "imports": [
+    "../geom/profile",
+    "./case"
+   ],
+   "localImports": [
+    "./case",
+    "../geom/profile"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 9
+  },
+  {
+   "file": "lib/geom/svg.ts",
+   "ext": ".ts",
+   "lines": 456,
+   "exports": [
+    "ANNOTATION_STROKE_MM",
+    "Frame",
+    "OUTLINE_STROKE_MM",
+    "Viewport",
+    "bulletOutlinePath",
+    "clipPathDef",
+    "fmt",
+    "fullSectionPath",
+    "insetStrokePath",
+    "num",
+    "offsetInward",
+    "pathOf",
+    "sectionLines",
+    "svgHeader",
+    "viewportFor"
+   ],
+   "imports": [
+    "./profile"
+   ],
+   "localImports": [
+    "./profile"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 8
+  },
+  {
+   "file": "site/src/routes/Bullet.svelte",
+   "ext": ".svelte",
+   "lines": 408,
+   "exports": [],
+   "imports": [
+    "../lib/bullets",
+    "../lib/data",
+    "../lib/drawings",
+    "../lib/i18n.svelte",
+    "../lib/labels",
+    "../lib/router",
+    "@lib/core",
+    "@lib/render2d"
+   ],
+   "localImports": [
+    "../lib/bullets",
+    "../lib/data",
+    "../lib/drawings",
+    "../lib/i18n.svelte",
+    "../lib/router",
+    "../lib/labels"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/interior/interior.test.ts",
+   "ext": ".ts",
+   "lines": 404,
+   "exports": [],
+   "imports": [
+    "./index",
+    "vitest"
+   ],
+   "localImports": [
+    "./index"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/components/LiveCartridge.svelte",
+   "ext": ".svelte",
+   "lines": 395,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte",
+    "./LiveChamber.svelte",
+    "./LiveDrawing.svelte",
+    "@lib/core",
+    "@lib/data",
+    "@lib/geom",
+    "@lib/geometry",
+    "@lib/measure2d",
+    "@lib/shapes2d"
+   ],
+   "localImports": [
+    "./LiveChamber.svelte",
+    "./LiveDrawing.svelte",
+    "../lib/i18n.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/render2d/drawing.ts",
+   "ext": ".ts",
+   "lines": 381,
+   "exports": [
+    "LiveOptions",
+    "compose",
+    "composeLive",
+    "liveChamberDrawing",
+    "liveDrawing",
+    "renderChamberDrawingSvg",
+    "renderDrawingSvg",
+    "renderTechnicalSvg"
+   ],
+   "imports": [
+    "../geom/profile",
+    "../geom/svg",
+    "../shapes2d/bullet",
+    "../shapes2d/case",
+    "../shapes2d/chamber",
+    "../shapes2d/shotshell",
+    "./render",
+    "./technical"
+   ],
+   "localImports": [
+    "../shapes2d/bullet",
+    "../shapes2d/case",
+    "../shapes2d/chamber",
+    "../geom/profile",
+    "../geom/svg",
+    "./render",
+    "../shapes2d/shotshell",
+    "./technical"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "site/src/App.svelte",
+   "ext": ".svelte",
+   "lines": 372,
+   "exports": [],
+   "imports": [
+    "./components/PageLoadError.svelte",
+    "./components/ReportLink.svelte",
+    "./lib/i18n.svelte",
+    "./lib/records.svelte",
+    "./lib/repository",
+    "./lib/router",
+    "./lib/theme.svelte",
+    "./routes/List.svelte",
+    "svelte"
+   ],
+   "localImports": [
+    "./routes/List.svelte",
+    "./components/ReportLink.svelte",
+    "./components/PageLoadError.svelte",
+    "./lib/router",
+    "./lib/records.svelte",
+    "./lib/i18n.svelte",
+    "./lib/theme.svelte",
+    "./lib/repository"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/ballistics/trajectory.ts",
+   "ext": ".ts",
+   "lines": 368,
+   "exports": [
+    "Bullet",
+    "DEFAULT_STEP_S",
+    "EARTH_RATE",
+    "G",
+    "Shot",
+    "SolverRefusal",
+    "TRANSONIC_MACH",
+    "Trajectory",
+    "TrajectoryPoint",
+    "Wind",
+    "solve"
+   ],
+   "imports": [
+    "./atmosphere",
+    "./drag"
+   ],
+   "localImports": [
+    "./atmosphere",
+    "./drag"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 9
+  },
+  {
+   "file": "lib/targets/targets.test.ts",
+   "ext": ".ts",
+   "lines": 366,
+   "exports": [],
+   "imports": [
+    "./draw",
+    "./dsb",
+    "./issf",
+    "./nra",
+    "./score",
+    "./types",
+    "vitest"
+   ],
+   "localImports": [
+    "./issf",
+    "./dsb",
+    "./nra",
+    "./types",
+    "./score",
+    "./draw"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/ballistics/ballistics.test.ts",
+   "ext": ".ts",
+   "lines": 360,
+   "exports": [],
+   "imports": [
+    "./atmosphere",
+    "./drag",
+    "./dragTables",
+    "./stability",
+    "./trajectory",
+    "vitest"
+   ],
+   "localImports": [
+    "./dragTables",
+    "./drag",
+    "./atmosphere",
+    "./trajectory",
+    "./stability"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/render2d/render.ts",
+   "ext": ".ts",
+   "lines": 325,
+   "exports": [
+    "MATERIAL_HEX_OF",
+    "STEEL_HEX",
+    "darken",
+    "fitParts",
+    "metallicParts",
+    "outlineParts",
+    "renderChamberVisualSvg",
+    "renderVisualSvg",
+    "sectionParts",
+    "steelBoundary",
+    "steelSectionPath"
+   ],
+   "imports": [
+    "../geom/profile",
+    "../geom/svg",
+    "../shapes2d/bullet",
+    "../shapes2d/case"
+   ],
+   "localImports": [
+    "../shapes2d/bullet",
+    "../shapes2d/case",
+    "../geom/profile",
+    "../geom/svg"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 4
+  },
+  {
+   "file": "lib/interior/solve.ts",
+   "ext": ".ts",
+   "lines": 304,
+   "exports": [
+    "DEFAULT_STEP_S",
+    "NOT_A_PRESSURE_TEST",
+    "SolveOptions",
+    "chemicalEnergyJ",
+    "closedVesselPressure",
+    "solve"
+   ],
+   "imports": [
+    "./formFunction",
+    "./types"
+   ],
+   "localImports": [
+    "./formFunction",
+    "./types"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/components/GroupTable.svelte",
+   "ext": ".svelte",
+   "lines": 282,
+   "exports": [],
+   "imports": [
+    "../lib/fields",
+    "@lib/core",
+    "svelte"
+   ],
+   "localImports": [
+    "../lib/fields"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/render2d/bulletDrawing.ts",
+   "ext": ".ts",
+   "lines": 280,
+   "exports": [
+    "BulletRecordLike",
+    "bulletFromRecord",
+    "liveBulletDrawing",
+    "renderBulletDrawingSvg"
+   ],
+   "imports": [
+    "../geom/profile",
+    "../geom/svg",
+    "../shapes2d/bullet",
+    "./drawing",
+    "./render",
+    "./technical"
+   ],
+   "localImports": [
+    "../shapes2d/bullet",
+    "./drawing",
+    "../geom/profile",
+    "../geom/svg",
+    "./render",
+    "./technical"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/lib/records.svelte.ts",
+   "ext": ".ts",
+   "lines": 260,
+   "exports": [
+    "ImportPreview",
+    "exportAll",
+    "load",
+    "preview",
+    "remove",
+    "removeCartridge",
+    "removeReticle",
+    "removeTargetFace",
+    "save",
+    "saveCartridge",
+    "saveReticle",
+    "saveTargetFace",
+    "state"
+   ],
+   "imports": [
+    "./idb",
+    "@lib/userdata"
+   ],
+   "localImports": [
+    "./idb"
+   ],
+   "usesSvelte": false,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 9
+  },
+  {
+   "file": "lib/shapes2d/shotshell.ts",
+   "ext": ".ts",
+   "lines": 260,
+   "exports": [
+    "ShotshellCase",
+    "ShotshellRecord",
+    "adaptShotshell",
+    "hullOuterProfile",
+    "isShotshell",
+    "renderShotshellVisualSvg",
+    "shotshellMaterialBoundaries",
+    "shotshellParts"
+   ],
+   "imports": [
+    "../geom/profile",
+    "../geom/svg",
+    "./bullet",
+    "./case"
+   ],
+   "localImports": [
+    "./bullet",
+    "./case",
+    "../geom/profile",
+    "../geom/svg"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 5
+  },
+  {
+   "file": "lib/targets/nra.ts",
+   "ext": ".ts",
+   "lines": 258,
+   "exports": [
+    "NRA_A21_200YD",
+    "NRA_A23_50YD",
+    "NRA_A25_100YD",
+    "NRA_A26_50M",
+    "NRA_A27_50YD",
+    "NRA_A31_50YD",
+    "NRA_A33_100YD",
+    "NRA_A50_50M",
+    "NRA_A51_50YD",
+    "NRA_A7_75FT",
+    "NRA_FACES"
+   ],
+   "imports": [
+    "./types"
+   ],
+   "localImports": [
+    "./types"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/userdata/userdata.test.ts",
+   "ext": ".ts",
+   "lines": 246,
+   "exports": [],
+   "imports": [
+    "./store",
+    "./transfer",
+    "./types",
+    "vitest"
+   ],
+   "localImports": [
+    "./types",
+    "./transfer",
+    "./store"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/optics/optics.test.ts",
+   "ext": ".ts",
+   "lines": 243,
+   "exports": [],
+   "imports": [
+    "../ballistics",
+    "./angles",
+    "./comeup",
+    "./reticle",
+    "./turret",
+    "vitest"
+   ],
+   "localImports": [
+    "./angles",
+    "./turret",
+    "./reticle",
+    "./comeup",
+    "../ballistics"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/designer/cartridge.ts",
+   "ext": ".ts",
+   "lines": 242,
+   "exports": [
+    "CartridgeDraft",
+    "Derived",
+    "DesignedCartridge",
+    "DraftCheck",
+    "FieldPath",
+    "FieldState",
+    "checkDraft",
+    "derivedOf",
+    "designed",
+    "draftFrom",
+    "emptyDraft",
+    "isAngle",
+    "pathsOf",
+    "setField",
+    "stateOf",
+    "toRecord"
+   ],
+   "imports": [
+    "../core/types",
+    "../geometry",
+    "../measure2d/interior",
+    "../shapes2d/case"
+   ],
+   "localImports": [
+    "../core/types",
+    "../shapes2d/case",
+    "../measure2d/interior",
+    "../geometry"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/lib/workflows.messages.ts",
+   "ext": ".ts",
+   "lines": 227,
+   "exports": [
+    "workflowDe",
+    "workflowEn"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/routes/Rifles.svelte",
+   "ext": ".svelte",
+   "lines": 224,
+   "exports": [],
+   "imports": [
+    "../components/AddAction.svelte",
+    "../components/PageHeader.svelte",
+    "../components/QuantityInput.svelte",
+    "../lib/data",
+    "../lib/i18n.svelte",
+    "../lib/records.svelte",
+    "../lib/router",
+    "../lib/units",
+    "../lib/units.svelte",
+    "@lib/userdata"
+   ],
+   "localImports": [
+    "../components/AddAction.svelte",
+    "../components/PageHeader.svelte",
+    "../lib/data",
+    "../lib/i18n.svelte",
+    "../lib/router",
+    "../lib/records.svelte",
+    "../components/QuantityInput.svelte",
+    "../lib/units.svelte",
+    "../lib/units"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/designer/cartridge.test.ts",
+   "ext": ".ts",
+   "lines": 223,
+   "exports": [],
+   "imports": [
+    "../core/types",
+    "../geometry",
+    "../shapes2d/case",
+    "./cartridge",
+    "node:fs",
+    "node:path",
+    "vitest"
+   ],
+   "localImports": [
+    "../geometry",
+    "../shapes2d/case",
+    "../core/types",
+    "./cartridge"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/measure2d/interior.ts",
+   "ext": ".ts",
+   "lines": 214,
+   "exports": [
+    "GRAINS_H2O_PER_MM3",
+    "caseInnerProfile",
+    "fillLevel",
+    "radiusAt",
+    "revolvedVolume",
+    "usableVolume"
+   ],
+   "imports": [
+    "../geom/profile",
+    "../shapes2d/bullet",
+    "../shapes2d/case"
+   ],
+   "localImports": [
+    "../shapes2d/bullet",
+    "../shapes2d/case",
+    "../geom/profile"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 4
+  },
+  {
+   "file": "site/src/components/Card.svelte",
+   "ext": ".svelte",
+   "lines": 208,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte",
+    "../lib/labels",
+    "../lib/router",
+    "./Drawing.svelte",
+    "./Flag.svelte",
+    "@lib/core"
+   ],
+   "localImports": [
+    "./Drawing.svelte",
+    "./Flag.svelte",
+    "../lib/i18n.svelte",
+    "../lib/router",
+    "../lib/labels"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/core/types.ts",
+   "ext": ".ts",
+   "lines": 205,
+   "exports": [
+    "Angle",
+    "COUNTRY_NAMES",
+    "Drawing",
+    "DrawingStyle",
+    "DrawingSubject",
+    "Entry",
+    "FAMILIES",
+    "Finding",
+    "Group",
+    "GroupList",
+    "Record_",
+    "Value"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 7
+  },
+  {
+   "file": "lib/interior/formFunction.ts",
+   "ext": ".ts",
+   "lines": 204,
+   "exports": [
+    "CONSTANT_SURFACE",
+    "FormFunction",
+    "checkFormFunction",
+    "degressive",
+    "parametric",
+    "piecewiseLinear",
+    "tabulated",
+    "tubular"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/ballistics/pointBlank.ts",
+   "ext": ".ts",
+   "lines": 201,
+   "exports": [
+    "GEE_TOLERANCE_M",
+    "PointBlank",
+    "pointBlankZero"
+   ],
+   "imports": [
+    "./trajectory"
+   ],
+   "localImports": [
+    "./trajectory"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/userdata/types.ts",
+   "ext": ".ts",
+   "lines": 198,
+   "exports": [
+    "Barrel",
+    "CartridgeRef",
+    "ClickUnit",
+    "Gun",
+    "GunKind",
+    "Rifle",
+    "Scope",
+    "Source",
+    "SourceKind",
+    "Sourced",
+    "StoredCartridge",
+    "StoredReticle",
+    "StoredTargetFace",
+    "TwistHand",
+    "USER_DATA_FORMAT",
+    "USER_DATA_VERSION",
+    "UserData",
+    "emptyUserData"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 4
+  },
+  {
+   "file": "lib/designer/designer.test.ts",
+   "ext": ".ts",
+   "lines": 196,
+   "exports": [],
+   "imports": [
+    "./index",
+    "@lib/geometry",
+    "@lib/shapes2d",
+    "node:fs",
+    "node:path",
+    "node:url",
+    "vitest"
+   ],
+   "localImports": [
+    "./index"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/ballistics/truing.ts",
+   "ext": ".ts",
+   "lines": 190,
+   "exports": [
+    "Observation",
+    "Truing",
+    "trueBallisticCoefficient",
+    "trueMuzzleVelocity",
+    "trueShot"
+   ],
+   "imports": [
+    "./trajectory"
+   ],
+   "localImports": [
+    "./trajectory"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/shapes2d/chamber.ts",
+   "ext": ".ts",
+   "lines": 190,
+   "exports": [
+    "BORE_STUB_MM",
+    "Chamber",
+    "adaptChamber",
+    "chamberBoreProfile",
+    "leadeRun"
+   ],
+   "imports": [
+    "../geom/profile",
+    "./case"
+   ],
+   "localImports": [
+    "./case",
+    "../geom/profile"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 5
+  },
+  {
+   "file": "lib/ballistics/dragTables.ts",
+   "ext": ".ts",
+   "lines": 189,
+   "exports": [
+    "DragTable",
+    "G1_TABLE",
+    "G7_TABLE"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "lib/optics/reticleDrawing.ts",
+   "ext": ".ts",
+   "lines": 189,
+   "exports": [
+    "Hold",
+    "ReticleDrawingOptions",
+    "angleAtMark",
+    "holdIn",
+    "markPositionFor",
+    "reticleSvg"
+   ],
+   "imports": [
+    "./angles",
+    "./reticle",
+    "./reticleMarks"
+   ],
+   "localImports": [
+    "./angles",
+    "./reticleMarks",
+    "./reticle"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/optics/reticleMarks.ts",
+   "ext": ".ts",
+   "lines": 186,
+   "exports": [
+    "Mark",
+    "PATTERNS",
+    "PatternName",
+    "PatternOptions",
+    "crosshair",
+    "dotGrid",
+    "duplex",
+    "extentOf",
+    "hashGrid"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "site/src/routes/Bullets.svelte",
+   "ext": ".svelte",
+   "lines": 182,
+   "exports": [],
+   "imports": [
+    "../components/AddAction.svelte",
+    "../components/PageHeader.svelte",
+    "../components/ResultsSummary.svelte",
+    "../components/SearchPanel.svelte",
+    "../lib/bullets",
+    "../lib/i18n.svelte",
+    "../lib/router",
+    "@lib/core",
+    "@lib/render2d",
+    "svelte"
+   ],
+   "localImports": [
+    "../components/SearchPanel.svelte",
+    "../components/ResultsSummary.svelte",
+    "../components/AddAction.svelte",
+    "../components/PageHeader.svelte",
+    "../lib/bullets",
+    "../lib/i18n.svelte",
+    "../lib/router"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/records.test.ts",
+   "ext": ".ts",
+   "lines": 176,
+   "exports": [],
+   "imports": [
+    "./records.svelte",
+    "vitest"
+   ],
+   "localImports": [
+    "./records.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/core/plates.test.ts",
+   "ext": ".ts",
+   "lines": 174,
+   "exports": [],
+   "imports": [
+    "./plates",
+    "./types",
+    "node:fs",
+    "node:path",
+    "node:url",
+    "vitest"
+   ],
+   "localImports": [
+    "./plates",
+    "./types"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": true,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/userdata/transfer.ts",
+   "ext": ".ts",
+   "lines": 173,
+   "exports": [
+    "MergeAction",
+    "MergeRow",
+    "Mergeable",
+    "ParseResult",
+    "applyMerge",
+    "parse",
+    "planMerge",
+    "serialise"
+   ],
+   "imports": [
+    "./types",
+    "./validate"
+   ],
+   "localImports": [
+    "./types",
+    "./validate"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/routes/Targets.svelte",
+   "ext": ".svelte",
+   "lines": 172,
+   "exports": [],
+   "imports": [
+    "../components/AddAction.svelte",
+    "../components/PageHeader.svelte",
+    "../lib/download",
+    "../lib/i18n.svelte",
+    "../lib/prefs",
+    "../lib/records.svelte",
+    "../lib/router",
+    "../lib/target-catalogue",
+    "@lib/targets"
+   ],
+   "localImports": [
+    "../components/AddAction.svelte",
+    "../components/PageHeader.svelte",
+    "../lib/i18n.svelte",
+    "../lib/records.svelte",
+    "../lib/prefs",
+    "../lib/router",
+    "../lib/target-catalogue",
+    "../lib/download"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/ballistics/coriolis.test.ts",
+   "ext": ".ts",
+   "lines": 172,
+   "exports": [],
+   "imports": [
+    "./atmosphere",
+    "./trajectory",
+    "vitest"
+   ],
+   "localImports": [
+    "./atmosphere",
+    "./trajectory"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/components/LiveChamber.svelte",
+   "ext": ".svelte",
+   "lines": 170,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte",
+    "@lib/core",
+    "@lib/geom",
+    "@lib/geometry",
+    "@lib/measure2d",
+    "@lib/render2d/render",
+    "@lib/shapes2d"
+   ],
+   "localImports": [
+    "../lib/i18n.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/ballistics/truing.test.ts",
+   "ext": ".ts",
+   "lines": 169,
+   "exports": [],
+   "imports": [
+    "./atmosphere",
+    "./trajectory",
+    "./truing",
+    "vitest"
+   ],
+   "localImports": [
+    "./atmosphere",
+    "./trajectory",
+    "./truing"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/ballistics/pointBlank.test.ts",
+   "ext": ".ts",
+   "lines": 164,
+   "exports": [],
+   "imports": [
+    "./atmosphere",
+    "./pointBlank",
+    "./trajectory",
+    "vitest"
+   ],
+   "localImports": [
+    "./atmosphere",
+    "./trajectory",
+    "./pointBlank"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/boundaries.test.ts",
+   "ext": ".ts",
+   "lines": 162,
+   "exports": [],
+   "imports": [
+    "node:fs",
+    "node:path",
+    "vitest"
+   ],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": true,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/routes/TargetDesigner.svelte",
+   "ext": ".svelte",
+   "lines": 162,
+   "exports": [],
+   "imports": [
+    "../components/PageHeader.svelte",
+    "../lib/download",
+    "../lib/i18n.svelte",
+    "../lib/prefs",
+    "../lib/records.svelte",
+    "../lib/router",
+    "../lib/target-catalogue",
+    "@lib/targets",
+    "@lib/userdata"
+   ],
+   "localImports": [
+    "../components/PageHeader.svelte",
+    "../lib/i18n.svelte",
+    "../lib/router",
+    "../lib/records.svelte",
+    "../lib/prefs",
+    "../lib/download",
+    "../lib/target-catalogue"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/targets/score.ts",
+   "ext": ".ts",
+   "lines": 156,
+   "exports": [
+    "GroupStats",
+    "ScoredShot",
+    "Shot",
+    "groupAngle",
+    "onCard",
+    "scoreGroup",
+    "scoreShot",
+    "scoringRadiusMm"
+   ],
+   "imports": [
+    "./types"
+   ],
+   "localImports": [
+    "./types"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 4
+  },
+  {
+   "file": "lib/geom/profile.ts",
+   "ext": ".ts",
+   "lines": 155,
+   "exports": [
+    "ARC_SEGMENTS",
+    "Angle",
+    "EPSILON",
+    "Point",
+    "Profile",
+    "ProfileError",
+    "applyFillet",
+    "arcTo",
+    "lineTo",
+    "radians",
+    "toDegrees",
+    "truncateBehind",
+    "truncateForward"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 14
+  },
+  {
+   "file": "lib/optics/reticleDrawing.test.ts",
+   "ext": ".ts",
+   "lines": 155,
+   "exports": [],
+   "imports": [
+    "./angles",
+    "./reticle",
+    "./reticleDrawing",
+    "./reticleMarks",
+    "vitest"
+   ],
+   "localImports": [
+    "./angles",
+    "./reticle",
+    "./reticleMarks",
+    "./reticleDrawing"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/components/TargetPhoto.svelte",
+   "ext": ".svelte",
+   "lines": 154,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte",
+    "../lib/target-image",
+    "@lib/targets",
+    "svelte"
+   ],
+   "localImports": [
+    "../lib/i18n.svelte",
+    "../lib/target-image"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/measure2d/fit.ts",
+   "ext": ".ts",
+   "lines": 146,
+   "exports": [
+    "Region",
+    "bearingOverrun",
+    "clearances",
+    "jumpToLands",
+    "loadedSilhouette",
+    "tightest"
+   ],
+   "imports": [
+    "../geom/profile",
+    "../shapes2d/bullet",
+    "../shapes2d/chamber",
+    "./interior"
+   ],
+   "localImports": [
+    "../shapes2d/bullet",
+    "../shapes2d/chamber",
+    "./interior",
+    "../geom/profile"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/optics/comeup.ts",
+   "ext": ".ts",
+   "lines": 143,
+   "exports": [
+    "ComeUpOptions",
+    "ComeUpRow",
+    "ComeUpTable",
+    "comeUpTable",
+    "elevationIn"
+   ],
+   "imports": [
+    "../ballistics/stability",
+    "../ballistics/trajectory",
+    "./angles",
+    "./turret"
+   ],
+   "localImports": [
+    "../ballistics/stability",
+    "../ballistics/trajectory",
+    "./angles",
+    "./turret"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/interior/types.ts",
+   "ext": ".ts",
+   "lines": 134,
+   "exports": [
+    "Chamber",
+    "InteriorPoint",
+    "InteriorRefusal",
+    "InteriorResult",
+    "Load",
+    "Projectile",
+    "Propellant"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/lib/idb.ts",
+   "ext": ".ts",
+   "lines": 131,
+   "exports": [
+    "STORES",
+    "StoreName",
+    "indexedStore",
+    "openDatabase",
+    "replaceRecords"
+   ],
+   "imports": [
+    "@lib/userdata"
+   ],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/targets/issf.ts",
+   "ext": ".ts",
+   "lines": 128,
+   "exports": [
+    "ISSF_10M_AIR_PISTOL",
+    "ISSF_10M_AIR_RIFLE",
+    "ISSF_25M_PRECISION",
+    "ISSF_25M_RAPID_FIRE",
+    "ISSF_300M_RIFLE",
+    "ISSF_50M_RIFLE",
+    "ISSF_FACES"
+   ],
+   "imports": [
+    "./types"
+   ],
+   "localImports": [
+    "./types"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/components/LiveShotshell.svelte",
+   "ext": ".svelte",
+   "lines": 127,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte",
+    "@lib/core",
+    "@lib/render2d",
+    "@lib/shapes2d"
+   ],
+   "localImports": [
+    "../lib/i18n.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/render2d/drawing.test.ts",
+   "ext": ".ts",
+   "lines": 126,
+   "exports": [],
+   "imports": [
+    "../geom/svg",
+    "../geometry/index",
+    "../measure2d",
+    "../shapes2d",
+    "../shapes2d/shotshell",
+    "../testing/fixtures",
+    "./drawing",
+    "./render",
+    "./technical",
+    "node:fs",
+    "node:path",
+    "vitest"
+   ],
+   "localImports": [
+    "./drawing",
+    "../geometry/index",
+    "../measure2d",
+    "../shapes2d",
+    "../geom/svg",
+    "./render",
+    "../shapes2d/shotshell",
+    "./technical",
+    "../testing/fixtures"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/targets/draw.ts",
+   "ext": ".ts",
+   "lines": 122,
+   "exports": [
+    "TargetDrawingOptions",
+    "targetSvg"
+   ],
+   "imports": [
+    "./score",
+    "./types"
+   ],
+   "localImports": [
+    "./types",
+    "./score"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "site/src/components/Drawing.svelte",
+   "ext": ".svelte",
+   "lines": 120,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte",
+    "../lib/live",
+    "./Silhouette.svelte",
+    "@lib/core"
+   ],
+   "localImports": [
+    "./Silhouette.svelte",
+    "../lib/live",
+    "../lib/i18n.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/routes/MyData.svelte",
+   "ext": ".svelte",
+   "lines": 118,
+   "exports": [],
+   "imports": [
+    "../components/GlobalSettings.svelte",
+    "../components/PageHeader.svelte",
+    "../lib/i18n.svelte",
+    "../lib/records.svelte",
+    "../lib/router"
+   ],
+   "localImports": [
+    "../components/PageHeader.svelte",
+    "../components/GlobalSettings.svelte",
+    "../lib/records.svelte",
+    "../lib/i18n.svelte",
+    "../lib/router"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/ballistics/atmosphere.ts",
+   "ext": ".ts",
+   "lines": 118,
+   "exports": [
+    "Atmosphere",
+    "STANDARD_METRO",
+    "STANDARD_SEA_LEVEL",
+    "density",
+    "densityAltitude",
+    "saturationVapourPressure",
+    "speedOfSound",
+    "standardAtmosphere"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 7
+  },
+  {
+   "file": "lib/ballistics/validation.test.ts",
+   "ext": ".ts",
+   "lines": 117,
+   "exports": [],
+   "imports": [
+    "./atmosphere",
+    "./trajectory",
+    "vitest"
+   ],
+   "localImports": [
+    "./atmosphere",
+    "./trajectory"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/core/plates.ts",
+   "ext": ".ts",
+   "lines": 116,
+   "exports": [
+    "Hull",
+    "defaultLength",
+    "fitScale",
+    "hullLengths",
+    "panels",
+    "resolve",
+    "tag"
+   ],
+   "imports": [
+    "./drawings",
+    "./types"
+   ],
+   "localImports": [
+    "./drawings",
+    "./types"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/geometry/geometry.test.ts",
+   "ext": ".ts",
+   "lines": 116,
+   "exports": [],
+   "imports": [
+    "../geom/profile",
+    "../measure2d/interior",
+    "../shapes2d",
+    "../shapes2d/shotshell",
+    "./index",
+    "node:fs",
+    "node:path",
+    "node:url",
+    "vitest"
+   ],
+   "localImports": [
+    "../shapes2d",
+    "./index",
+    "../measure2d/interior",
+    "../geom/profile",
+    "../shapes2d/shotshell"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/bullets.ts",
+   "ext": ".ts",
+   "lines": 113,
+   "exports": [
+    "BulletEntry",
+    "BulletRecord",
+    "CALIBRE_TOLERANCE_MM",
+    "Source",
+    "bulletByKey",
+    "bullets",
+    "bulletsFor",
+    "cartridgesFor",
+    "loadBullet"
+   ],
+   "imports": [
+    "./bullets.generated.json",
+    "@lib/core"
+   ],
+   "localImports": [
+    "./bullets.generated.json"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 7
+  },
+  {
+   "file": "lib/ballistics/stability.ts",
+   "ext": ".ts",
+   "lines": 112,
+   "exports": [
+    "Barrel",
+    "StabilityInput",
+    "TwistHand",
+    "aerodynamicJump",
+    "millerStability",
+    "spinDrift"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "lib/data/powders.ts",
+   "ext": ".ts",
+   "lines": 112,
+   "exports": [
+    "FILL",
+    "POWDERS",
+    "Powder",
+    "chargeVolumeMm3"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/components/LiveDrawing.svelte",
+   "ext": ".svelte",
+   "lines": 110,
+   "exports": [],
+   "imports": [
+    "@lib/core",
+    "@lib/geom",
+    "@lib/geometry",
+    "@lib/render2d/render",
+    "@lib/render2d/technical",
+    "@lib/shapes2d"
+   ],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/lib/live.ts",
+   "ext": ".ts",
+   "lines": 105,
+   "exports": [
+    "Live",
+    "liveFor"
+   ],
+   "imports": [
+    "./data",
+    "@lib/core",
+    "@lib/geometry",
+    "@lib/render2d",
+    "@lib/shapes2d"
+   ],
+   "localImports": [
+    "./data"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/core/fields.ts",
+   "ext": ".ts",
+   "lines": 105,
+   "exports": [
+    "FIELD_LABELS",
+    "FIELD_UNITS",
+    "GROUP_ORDER",
+    "orderedColumns",
+    "orderedFields"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/lib/prefs.test.ts",
+   "ext": ".ts",
+   "lines": 104,
+   "exports": [],
+   "imports": [
+    "./prefs",
+    "vitest"
+   ],
+   "localImports": [
+    "./prefs"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": true,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/ballistics/drag.ts",
+   "ext": ".ts",
+   "lines": 103,
+   "exports": [
+    "BC_SI_PER_CUSTOMARY",
+    "BallisticCoefficient",
+    "DragModel",
+    "G1",
+    "G7",
+    "dragDeceleration",
+    "modelFor",
+    "tableDrag"
+   ],
+   "imports": [
+    "./dragTables"
+   ],
+   "localImports": [
+    "./dragTables"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "site/src/lib/data.ts",
+   "ext": ".ts",
+   "lines": 94,
+   "exports": [
+    "Sort",
+    "byKey",
+    "countries",
+    "entries",
+    "families",
+    "load",
+    "search",
+    "sortEntries"
+   ],
+   "imports": [
+    "./index.generated.json",
+    "@lib/core"
+   ],
+   "localImports": [
+    "./index.generated.json"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 10
+  },
+  {
+   "file": "site/src/lib/fieldsets.test.ts",
+   "ext": ".ts",
+   "lines": 91,
+   "exports": [],
+   "imports": [
+    "./fieldsets",
+    "vitest"
+   ],
+   "localImports": [
+    "./fieldsets"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/core/drawings.ts",
+   "ext": ".ts",
+   "lines": 91,
+   "exports": [
+    "STYLES",
+    "SUBJECTS",
+    "card",
+    "extent",
+    "face",
+    "main",
+    "offered",
+    "plates"
+   ],
+   "imports": [
+    "./types"
+   ],
+   "localImports": [
+    "./types"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/targets/types.ts",
+   "ext": ".ts",
+   "lines": 89,
+   "exports": [
+    "FaceSource",
+    "Ring",
+    "TargetFace",
+    "outerDiameterMm",
+    "ringsInward"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 9
+  },
+  {
+   "file": "lib/optics/reticle.ts",
+   "ext": ".ts",
+   "lines": 88,
+   "exports": [
+    "FocalPlane",
+    "Reticle",
+    "ReticleRefusal",
+    "observedSubtension",
+    "rangeFromReticle"
+   ],
+   "imports": [
+    "./angles"
+   ],
+   "localImports": [
+    "./angles"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 4
+  },
+  {
+   "file": "site/src/components/Silhouette.svelte",
+   "ext": ".svelte",
+   "lines": 86,
+   "exports": [],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/components/Flag.svelte",
+   "ext": ".svelte",
+   "lines": 84,
+   "exports": [],
+   "imports": [
+    "../lib/flags.generated.json",
+    "@lib/core"
+   ],
+   "localImports": [
+    "../lib/flags.generated.json"
+   ],
+   "usesSvelte": false,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "site/src/lib/data.test.ts",
+   "ext": ".ts",
+   "lines": 84,
+   "exports": [],
+   "imports": [
+    "./data",
+    "@lib/core",
+    "vitest"
+   ],
+   "localImports": [
+    "./data"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/userdata/store.ts",
+   "ext": ".ts",
+   "lines": 80,
+   "exports": [
+    "RifleStore",
+    "Store",
+    "memoryStore",
+    "newId",
+    "saveRifle"
+   ],
+   "imports": [
+    "./types"
+   ],
+   "localImports": [
+    "./types"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/lib/router.ts",
+   "ext": ".ts",
+   "lines": 75,
+   "exports": [
+    "Route",
+    "href",
+    "parse",
+    "route"
+   ],
+   "imports": [
+    "svelte/store"
+   ],
+   "localImports": [],
+   "usesSvelte": true,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 17
+  },
+  {
+   "file": "lib/userdata/validate.ts",
+   "ext": ".ts",
+   "lines": 72,
+   "exports": [
+    "validateSections"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/lib/fieldsets.ts",
+   "ext": ".ts",
+   "lines": 69,
+   "exports": [
+    "FamilyFields",
+    "FieldSets",
+    "designableFamilies",
+    "fieldSets",
+    "fieldsFor",
+    "isAngleField",
+    "shareOf",
+    "splitPath"
+   ],
+   "imports": [
+    "./fieldsets.generated.json"
+   ],
+   "localImports": [
+    "./fieldsets.generated.json"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/components/QuantityInput.svelte",
+   "ext": ".svelte",
+   "lines": 68,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte",
+    "../lib/units"
+   ],
+   "localImports": [
+    "../lib/i18n.svelte",
+    "../lib/units"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/routes/TargetScoring.svelte",
+   "ext": ".svelte",
+   "lines": 68,
+   "exports": [],
+   "imports": [
+    "../components/PageHeader.svelte",
+    "../components/TargetPhoto.svelte",
+    "../lib/data",
+    "../lib/i18n.svelte",
+    "../lib/records.svelte",
+    "../lib/router",
+    "../lib/shot-input",
+    "../lib/target-catalogue",
+    "@lib/targets"
+   ],
+   "localImports": [
+    "../components/PageHeader.svelte",
+    "../lib/i18n.svelte",
+    "../lib/router",
+    "../lib/data",
+    "../lib/records.svelte",
+    "../lib/target-catalogue",
+    "../lib/shot-input",
+    "../components/TargetPhoto.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/geometry/index.ts",
+   "ext": ".ts",
+   "lines": 66,
+   "exports": [
+    "Profiles",
+    "bulletFor",
+    "profilesFor"
+   ],
+   "imports": [
+    "../geom/profile",
+    "../shapes2d/bullet",
+    "../shapes2d/case",
+    "../shapes2d/chamber"
+   ],
+   "localImports": [
+    "../shapes2d/case",
+    "../shapes2d/bullet",
+    "../shapes2d/chamber",
+    "../geom/profile"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 5
+  },
+  {
+   "file": "lib/optics/turret.ts",
+   "ext": ".ts",
+   "lines": 63,
+   "exports": [
+    "Dial",
+    "Turret",
+    "clicksFor",
+    "residualAt",
+    "unitsMatch"
+   ],
+   "imports": [
+    "./angles"
+   ],
+   "localImports": [
+    "./angles"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "site/src/lib/issue.ts",
+   "ext": ".ts",
+   "lines": 59,
+   "exports": [
+    "bulletIssueUrl",
+    "formUrl",
+    "issueUrl",
+    "newBulletUrl",
+    "pageIssueUrl"
+   ],
+   "imports": [
+    "./bullets",
+    "./repository",
+    "@lib/core"
+   ],
+   "localImports": [
+    "./bullets",
+    "./repository"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "site/src/lib/prefs.ts",
+   "ext": ".ts",
+   "lines": 58,
+   "exports": [
+    "clearPref",
+    "readNumberPref",
+    "readPref",
+    "writePref"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 5
+  },
+  {
+   "file": "lib/optics/angles.ts",
+   "ext": ".ts",
+   "lines": 56,
+   "exports": [
+    "AngularUnit",
+    "MOA",
+    "MRAD",
+    "angleSubtended",
+    "fromAngularUnit",
+    "radiansPer",
+    "subtension",
+    "toAngularUnit"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 7
+  },
+  {
+   "file": "site/src/components/GlobalSettings.svelte",
+   "ext": ".svelte",
+   "lines": 55,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte",
+    "../lib/theme.svelte",
+    "../lib/units",
+    "../lib/units.svelte"
+   ],
+   "localImports": [
+    "../lib/i18n.svelte",
+    "../lib/theme.svelte",
+    "../lib/units.svelte",
+    "../lib/units"
+   ],
+   "usesSvelte": true,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/lib/drawings.ts",
+   "ext": ".ts",
+   "lines": 55,
+   "exports": [
+    "rememberStyle",
+    "storedStyle",
+    "styleLabel",
+    "styleNote",
+    "subjectLabel"
+   ],
+   "imports": [
+    "./i18n.svelte",
+    "@lib/core",
+    "@lib/core/drawings"
+   ],
+   "localImports": [
+    "./i18n.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": false,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "site/src/lib/target-image.ts",
+   "ext": ".ts",
+   "lines": 52,
+   "exports": [
+    "Calibration",
+    "PixelPoint",
+    "calibrate",
+    "pixelToShot",
+    "suggestHoles"
+   ],
+   "imports": [
+    "@lib/targets"
+   ],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/render2d/render.test.ts",
+   "ext": ".ts",
+   "lines": 51,
+   "exports": [],
+   "imports": [
+    "../geom",
+    "../geom/svg",
+    "../geometry/index",
+    "../shapes2d",
+    "../testing/fixtures",
+    "./render",
+    "node:fs",
+    "node:path",
+    "vitest"
+   ],
+   "localImports": [
+    "../geom",
+    "../geometry/index",
+    "../shapes2d",
+    "../geom/svg",
+    "./render",
+    "../testing/fixtures"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/target-catalogue.test.ts",
+   "ext": ".ts",
+   "lines": 50,
+   "exports": [],
+   "imports": [
+    "./target-catalogue",
+    "@lib/targets",
+    "@lib/userdata",
+    "vitest"
+   ],
+   "localImports": [
+    "./target-catalogue"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/target-image.test.ts",
+   "ext": ".ts",
+   "lines": 48,
+   "exports": [],
+   "imports": [
+    "./target-image",
+    "@lib/targets",
+    "vitest"
+   ],
+   "localImports": [
+    "./target-image"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/theme.svelte.ts",
+   "ext": ".ts",
+   "lines": 48,
+   "exports": [
+    "Theme",
+    "isDark",
+    "theme",
+    "toggleTheme"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": true,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/testing/fixtures.ts",
+   "ext": ".ts",
+   "lines": 48,
+   "exports": [
+    "BULLET_DRAWINGS",
+    "CARTRIDGES",
+    "DATA",
+    "ROOT",
+    "SAMPLES",
+    "compare"
+   ],
+   "imports": [
+    "node:path",
+    "node:url",
+    "vitest"
+   ],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "lib/core/format.ts",
+   "ext": ".ts",
+   "lines": 46,
+   "exports": [
+    "formatValue",
+    "toleranceFor",
+    "twistInInches"
+   ],
+   "imports": [
+    "./types"
+   ],
+   "localImports": [
+    "./types"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/targets/bds.test.ts",
+   "ext": ".ts",
+   "lines": 45,
+   "exports": [],
+   "imports": [
+    "./bds",
+    "./draw",
+    "./score",
+    "vitest"
+   ],
+   "localImports": [
+    "./bds",
+    "./draw",
+    "./score"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/issue.test.ts",
+   "ext": ".ts",
+   "lines": 43,
+   "exports": [],
+   "imports": [
+    "./bullets",
+    "./data",
+    "./issue",
+    "vitest"
+   ],
+   "localImports": [
+    "./issue",
+    "./data",
+    "./bullets"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/router.test.ts",
+   "ext": ".ts",
+   "lines": 43,
+   "exports": [],
+   "imports": [
+    "vitest"
+   ],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/targets/record.ts",
+   "ext": ".ts",
+   "lines": 41,
+   "exports": [
+    "TargetGeometry",
+    "isTargetGeometry",
+    "parseTargetGeometry"
+   ],
+   "imports": [
+    "./types"
+   ],
+   "localImports": [
+    "./types"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/lib/idb.test.ts",
+   "ext": ".ts",
+   "lines": 40,
+   "exports": [],
+   "imports": [
+    "./idb",
+    "vitest"
+   ],
+   "localImports": [
+    "./idb"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/components/SearchPanel.svelte",
+   "ext": ".svelte",
+   "lines": 38,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte",
+    "svelte"
+   ],
+   "localImports": [
+    "../lib/i18n.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/routes/Calculator.svelte",
+   "ext": ".svelte",
+   "lines": 38,
+   "exports": [],
+   "imports": [
+    "../components/LiveCartridge.svelte",
+    "../components/LiveShotshell.svelte",
+    "../components/PageHeader.svelte",
+    "../components/PageLoadError.svelte",
+    "../lib/data",
+    "../lib/i18n.svelte",
+    "../lib/router",
+    "@lib/shapes2d"
+   ],
+   "localImports": [
+    "../components/PageHeader.svelte",
+    "../lib/data",
+    "../lib/router",
+    "../lib/i18n.svelte",
+    "../components/LiveCartridge.svelte",
+    "../components/LiveShotshell.svelte",
+    "../components/PageLoadError.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/targets/record.test.ts",
+   "ext": ".ts",
+   "lines": 36,
+   "exports": [],
+   "imports": [
+    "./bds",
+    "./dsb",
+    "./record",
+    "vitest"
+   ],
+   "localImports": [
+    "./record",
+    "./bds",
+    "./dsb"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/main.ts",
+   "ext": ".ts",
+   "lines": 33,
+   "exports": [],
+   "imports": [
+    "./App.svelte",
+    "./app.css",
+    "@fontsource/ibm-plex-mono/latin-400.css",
+    "@fontsource/ibm-plex-mono/latin-500.css",
+    "@fontsource/ibm-plex-mono/latin-600.css",
+    "@fontsource/ibm-plex-mono/latin-700.css",
+    "@fontsource/ibm-plex-sans/latin-400.css",
+    "@fontsource/ibm-plex-sans/latin-500.css",
+    "@fontsource/ibm-plex-sans/latin-600.css",
+    "@fontsource/ibm-plex-sans/latin-700.css",
+    "svelte"
+   ],
+   "localImports": [
+    "./App.svelte",
+    "./app.css"
+   ],
+   "usesSvelte": true,
+   "usesRunes": false,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/components/PageHeader.svelte",
+   "ext": ".svelte",
+   "lines": 32,
+   "exports": [],
+   "imports": [
+    "svelte"
+   ],
+   "localImports": [],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 12
+  },
+  {
+   "file": "lib/render2d/bulletDrawing.test.ts",
+   "ext": ".ts",
+   "lines": 30,
+   "exports": [],
+   "imports": [
+    "../testing/fixtures",
+    "./bulletDrawing",
+    "node:fs",
+    "node:path",
+    "vitest"
+   ],
+   "localImports": [
+    "./bulletDrawing",
+    "../testing/fixtures"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/components/PageLoadError.svelte",
+   "ext": ".svelte",
+   "lines": 29,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte"
+   ],
+   "localImports": [
+    "../lib/i18n.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/lib/fields.ts",
+   "ext": ".ts",
+   "lines": 28,
+   "exports": [
+    "groupTitle",
+    "orderedGroups"
+   ],
+   "imports": [
+    "./i18n.svelte",
+    "@lib/core/fields"
+   ],
+   "localImports": [
+    "./i18n.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/targets/bds.ts",
+   "ext": ".ts",
+   "lines": 28,
+   "exports": [
+    "BDS_100M",
+    "BDS_100M_RIFLE",
+    "BDS_100M_ZF",
+    "BDS_25M_HANDGUN",
+    "BDS_25M_INTERVAL",
+    "BDS_25M_PRECISION",
+    "BDS_300M_PG",
+    "BDS_300M_RIFLE",
+    "BDS_300M_ZF",
+    "BDS_50M_PG",
+    "BDS_50M_RIFLE",
+    "BDS_50M_ZF",
+    "BDS_FACES"
+   ],
+   "imports": [
+    "../../data/targets/bds_100m.json",
+    "../../data/targets/bds_100m_rifle.json",
+    "../../data/targets/bds_100m_zf.json",
+    "../../data/targets/bds_25m_handgun.json",
+    "../../data/targets/bds_25m_interval.json",
+    "../../data/targets/bds_25m_precision.json",
+    "../../data/targets/bds_300m_pg.json",
+    "../../data/targets/bds_300m_rifle.json",
+    "../../data/targets/bds_300m_zf.json",
+    "../../data/targets/bds_50m_pg.json",
+    "../../data/targets/bds_50m_rifle.json",
+    "../../data/targets/bds_50m_zf.json",
+    "./types"
+   ],
+   "localImports": [
+    "./types",
+    "../../data/targets/bds_100m.json",
+    "../../data/targets/bds_50m_zf.json",
+    "../../data/targets/bds_100m_zf.json",
+    "../../data/targets/bds_300m_zf.json",
+    "../../data/targets/bds_25m_handgun.json",
+    "../../data/targets/bds_50m_pg.json",
+    "../../data/targets/bds_300m_pg.json",
+    "../../data/targets/bds_25m_precision.json",
+    "../../data/targets/bds_25m_interval.json",
+    "../../data/targets/bds_50m_rifle.json",
+    "../../data/targets/bds_100m_rifle.json",
+    "../../data/targets/bds_300m_rifle.json"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "lib/targets/dsb.ts",
+   "ext": ".ts",
+   "lines": 28,
+   "exports": [
+    "DSB_100M_ORDNANCE",
+    "DSB_100M_RIFLE",
+    "DSB_10M_AIR_PISTOL",
+    "DSB_10M_AIR_RIFLE",
+    "DSB_10M_RAPID_FIRE",
+    "DSB_15M_RIFLE",
+    "DSB_25M_PRECISION",
+    "DSB_25M_RAPID_FIRE",
+    "DSB_300M_RIFLE",
+    "DSB_50M_MUSKET",
+    "DSB_50M_PISTOL",
+    "DSB_50M_RIFLE",
+    "DSB_FACES"
+   ],
+   "imports": [
+    "../../data/targets/dsb_100m_ordnance.json",
+    "../../data/targets/dsb_100m_rifle.json",
+    "../../data/targets/dsb_10m_air_pistol.json",
+    "../../data/targets/dsb_10m_air_rifle.json",
+    "../../data/targets/dsb_10m_rapid_fire.json",
+    "../../data/targets/dsb_15m_rifle.json",
+    "../../data/targets/dsb_25m_precision.json",
+    "../../data/targets/dsb_25m_rapid_fire.json",
+    "../../data/targets/dsb_300m_rifle.json",
+    "../../data/targets/dsb_50m_musket.json",
+    "../../data/targets/dsb_50m_pistol.json",
+    "../../data/targets/dsb_50m_rifle.json",
+    "./types"
+   ],
+   "localImports": [
+    "./types",
+    "../../data/targets/dsb_10m_air_rifle.json",
+    "../../data/targets/dsb_15m_rifle.json",
+    "../../data/targets/dsb_50m_rifle.json",
+    "../../data/targets/dsb_100m_rifle.json",
+    "../../data/targets/dsb_100m_ordnance.json",
+    "../../data/targets/dsb_25m_precision.json",
+    "../../data/targets/dsb_50m_pistol.json",
+    "../../data/targets/dsb_300m_rifle.json",
+    "../../data/targets/dsb_50m_musket.json",
+    "../../data/targets/dsb_10m_air_pistol.json",
+    "../../data/targets/dsb_10m_rapid_fire.json",
+    "../../data/targets/dsb_25m_rapid_fire.json"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 3
+  },
+  {
+   "file": "site/src/components/ResultsSummary.svelte",
+   "ext": ".svelte",
+   "lines": 23,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte",
+    "svelte"
+   ],
+   "localImports": [
+    "../lib/i18n.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/lib/units.test.ts",
+   "ext": ".ts",
+   "lines": 23,
+   "exports": [],
+   "imports": [
+    "./units",
+    "vitest"
+   ],
+   "localImports": [
+    "./units"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/units.ts",
+   "ext": ".ts",
+   "lines": 22,
+   "exports": [
+    "Quantity",
+    "UNITS",
+    "Unit",
+    "UnitSystem",
+    "defaultUnit",
+    "displayNumber",
+    "fromCanonical",
+    "parseQuantity",
+    "toCanonical"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 5
+  },
+  {
+   "file": "site/src/routes/Preview.svelte",
+   "ext": ".svelte",
+   "lines": 22,
+   "exports": [],
+   "imports": [
+    "../components/PageHeader.svelte",
+    "../lib/i18n.svelte",
+    "../lib/router"
+   ],
+   "localImports": [
+    "../components/PageHeader.svelte",
+    "../lib/router",
+    "../lib/i18n.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/labels.ts",
+   "ext": ".ts",
+   "lines": 21,
+   "exports": [
+    "familyLabel"
+   ],
+   "imports": [
+    "./i18n.svelte",
+    "@lib/core/types"
+   ],
+   "localImports": [
+    "./i18n.svelte"
+   ],
+   "usesSvelte": true,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 4
+  },
+  {
+   "file": "site/src/lib/shot-input.ts",
+   "ext": ".ts",
+   "lines": 21,
+   "exports": [
+    "parseShots"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/lib/live.test.ts",
+   "ext": ".ts",
+   "lines": 19,
+   "exports": [],
+   "imports": [
+    "@lib/core",
+    "vitest"
+   ],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "lib/core/scale.ts",
+   "ext": ".ts",
+   "lines": 19,
+   "exports": [
+    "PX_PER_MM"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/components/ReportLink.svelte",
+   "ext": ".svelte",
+   "lines": 16,
+   "exports": [],
+   "imports": [
+    "../lib/i18n.svelte",
+    "../lib/issue",
+    "../lib/router"
+   ],
+   "localImports": [
+    "../lib/issue",
+    "../lib/i18n.svelte",
+    "../lib/router"
+   ],
+   "usesSvelte": true,
+   "usesRunes": true,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/ballistics/index.ts",
+   "ext": ".ts",
+   "lines": 16,
+   "exports": [],
+   "imports": [
+    "./atmosphere",
+    "./drag",
+    "./dragTables",
+    "./pointBlank",
+    "./stability",
+    "./trajectory",
+    "./truing"
+   ],
+   "localImports": [
+    "./dragTables",
+    "./drag",
+    "./atmosphere",
+    "./trajectory",
+    "./stability",
+    "./truing",
+    "./pointBlank"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/lib/shot-input.test.ts",
+   "ext": ".ts",
+   "lines": 15,
+   "exports": [],
+   "imports": [
+    "./shot-input",
+    "vitest"
+   ],
+   "localImports": [
+    "./shot-input"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": true,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/units.svelte.ts",
+   "ext": ".ts",
+   "lines": 15,
+   "exports": [
+    "barrelUnit",
+    "setBarrelUnit",
+    "setUnitSystem",
+    "unitSystem"
+   ],
+   "imports": [
+    "./prefs",
+    "./units"
+   ],
+   "localImports": [
+    "./prefs",
+    "./units"
+   ],
+   "usesSvelte": false,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/optics/index.ts",
+   "ext": ".ts",
+   "lines": 15,
+   "exports": [],
+   "imports": [
+    "./angles",
+    "./comeup",
+    "./reticle",
+    "./reticleDrawing",
+    "./reticleMarks",
+    "./turret"
+   ],
+   "localImports": [
+    "./angles",
+    "./turret",
+    "./reticle",
+    "./reticleMarks",
+    "./reticleDrawing",
+    "./comeup"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/targets/index.ts",
+   "ext": ".ts",
+   "lines": 15,
+   "exports": [],
+   "imports": [
+    "./bds",
+    "./draw",
+    "./dsb",
+    "./issf",
+    "./nra",
+    "./record",
+    "./score",
+    "./types"
+   ],
+   "localImports": [
+    "./types",
+    "./issf",
+    "./dsb",
+    "./nra",
+    "./bds",
+    "./score",
+    "./draw",
+    "./record"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/components/AddAction.svelte",
+   "ext": ".svelte",
+   "lines": 14,
+   "exports": [],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": true,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 4
+  },
+  {
+   "file": "lib/interior/index.ts",
+   "ext": ".ts",
+   "lines": 13,
+   "exports": [],
+   "imports": [
+    "./formFunction",
+    "./solve",
+    "./types"
+   ],
+   "localImports": [
+    "./types",
+    "./formFunction",
+    "./solve"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/render2d/index.ts",
+   "ext": ".ts",
+   "lines": 13,
+   "exports": [],
+   "imports": [
+    "./bulletDrawing",
+    "./drawing",
+    "./technical"
+   ],
+   "localImports": [
+    "./technical",
+    "./drawing",
+    "./bulletDrawing"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/core/index.ts",
+   "ext": ".ts",
+   "lines": 11,
+   "exports": [],
+   "imports": [
+    "./drawings",
+    "./fields",
+    "./format",
+    "./plates",
+    "./scale",
+    "./types"
+   ],
+   "localImports": [
+    "./types",
+    "./scale",
+    "./drawings",
+    "./fields",
+    "./plates",
+    "./format"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "site/src/lib/target-catalogue.ts",
+   "ext": ".ts",
+   "lines": 10,
+   "exports": [
+    "TARGET_FACES",
+    "asTargetFace"
+   ],
+   "imports": [
+    "@lib/targets",
+    "@lib/userdata"
+   ],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 4
+  },
+  {
+   "file": "lib/shapes2d/index.ts",
+   "ext": ".ts",
+   "lines": 10,
+   "exports": [],
+   "imports": [
+    "./bullet",
+    "./case",
+    "./chamber",
+    "./shotshell"
+   ],
+   "localImports": [
+    "./case",
+    "./bullet",
+    "./chamber",
+    "./shotshell"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 4
+  },
+  {
+   "file": "site/src/lib/download.ts",
+   "ext": ".ts",
+   "lines": 9,
+   "exports": [
+    "downloadJson"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": true,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "lib/userdata/index.ts",
+   "ext": ".ts",
+   "lines": 9,
+   "exports": [],
+   "imports": [
+    "./store",
+    "./transfer",
+    "./types"
+   ],
+   "localImports": [
+    "./types",
+    "./transfer",
+    "./store"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/data/index.ts",
+   "ext": ".ts",
+   "lines": 8,
+   "exports": [],
+   "imports": [
+    "./powders"
+   ],
+   "localImports": [
+    "./powders"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  },
+  {
+   "file": "lib/geom/index.ts",
+   "ext": ".ts",
+   "lines": 8,
+   "exports": [],
+   "imports": [
+    "./profile",
+    "./svg"
+   ],
+   "localImports": [
+    "./profile",
+    "./svg"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "lib/measure2d/index.ts",
+   "ext": ".ts",
+   "lines": 8,
+   "exports": [],
+   "imports": [
+    "./fit",
+    "./interior"
+   ],
+   "localImports": [
+    "./interior",
+    "./fit"
+   ],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 1
+  },
+  {
+   "file": "site/src/lib/repository.ts",
+   "ext": ".ts",
+   "lines": 4,
+   "exports": [
+    "REPOSITORY",
+    "REPOSITORY_URL"
+   ],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 2
+  },
+  {
+   "file": "site/src/vite-env.d.ts",
+   "ext": ".ts",
+   "lines": 3,
+   "exports": [],
+   "imports": [],
+   "localImports": [],
+   "usesSvelte": false,
+   "usesRunes": false,
+   "usesDom": false,
+   "isTest": false,
+   "inbound": 0
+  }
+ ]
+}

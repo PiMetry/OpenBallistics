@@ -1,0 +1,97 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.49,
+      "E1": 8.64,
+      "R": 1.27,
+      "R1": 9.91,
+      "RTol": -0.25,
+      "delta": {
+        "degrees": 3.0,
+        "minutes": 44.0,
+        "seconds": 24.0
+      }
+    },
+    "collar": {
+      "H2": 8.81
+    },
+    "lengths": {
+      "L3": 32.77,
+      "L6": 47.75
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 8.93
+    },
+    "pressures": {
+      "EE": 1080.0,
+      "M": 17.5,
+      "PE": 1940.0,
+      "PK": 1783.0,
+      "Pmax": 1550.0
+    },
+    "projectile": {
+      "G1": 8.18,
+      "L3PlusG": 42.22
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 8.0,
+      "Z": 8.13
+    },
+    "breech": {
+      "R": 1.27,
+      "R1": 10.41
+    },
+    "collar": {
+      "H2": 8.88
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 51.26,
+      "b": 2.51,
+      "u": 406.0
+    },
+    "lengths": {
+      "L3": 33.6
+    },
+    "powderChamber": {
+      "P1": 9.05
+    },
+    "rifling": {
+      "G": 9.45,
+      "G1": 8.19,
+      "alpha1": 180.0,
+      "i": {
+        "degrees": 0.0,
+        "minutes": 34.0,
+        "seconds": 32.0
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "32_win_sl",
+  "name": "32 Win. SL",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15",
+  "tab": "II"
+}

@@ -1,0 +1,53 @@
+{
+  "key": "sample_40_s_w_c",
+  "sample": true,
+  "sampleFor": "40_s_w",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-C",
+  "name": ".40 S&W — Sample C",
+  "calibre": ".40 S&W",
+  "diameter": 10.17,
+  "mass": 13.8847,
+  "length": 20.1366,
+  "bearing": 9.0615,
+  "nose": 11.0751,
+  "meplat": 1.5255,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "elliptical"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.275,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 20.1366,
+    "bearing": 9.0615,
+    "nose": 11.0751,
+    "boatTail": 0,
+    "baseDiameter": 10.17,
+    "boatTailAngle": null,
+    "meplat": 1.5255,
+    "ogiveRadiusCalibres": 1.6077,
+    "massGrains": 214.2737,
+    "sectionalDensity": 0.1909,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

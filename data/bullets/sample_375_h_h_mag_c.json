@@ -1,0 +1,53 @@
+{
+  "key": "sample_375_h_h_mag_c",
+  "sample": true,
+  "sampleFor": "375_h_h_mag",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-C",
+  "name": ".375 H&H Magnum — Sample C",
+  "calibre": ".375 H&H Magnum",
+  "diameter": 9.55,
+  "mass": 19.1616,
+  "length": 33.616,
+  "bearing": 15.1272,
+  "nose": 18.4888,
+  "meplat": 1.4325,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.275,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 33.616,
+    "bearing": 15.1272,
+    "nose": 18.488799999999998,
+    "boatTail": 0,
+    "baseDiameter": 9.55,
+    "boatTailAngle": null,
+    "meplat": 1.4325,
+    "ogiveRadiusCalibres": 4.622,
+    "massGrains": 295.7087,
+    "sectionalDensity": 0.2988,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "key": "sample_300_win_mag_c",
+  "sample": true,
+  "sampleFor": "300_win_mag",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-C",
+  "name": ".300 Winchester Magnum — Sample C",
+  "calibre": ".300 Winchester Magnum",
+  "diameter": 7.85,
+  "mass": 10.6422,
+  "length": 27.632,
+  "bearing": 12.4344,
+  "nose": 15.1976,
+  "meplat": 1.1775,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.275,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 27.632,
+    "bearing": 12.4344,
+    "nose": 15.197600000000001,
+    "boatTail": 0,
+    "baseDiameter": 7.85,
+    "boatTailAngle": null,
+    "meplat": 1.1775,
+    "ogiveRadiusCalibres": 4.622,
+    "massGrains": 164.2342,
+    "sectionalDensity": 0.2456,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

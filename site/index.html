@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore cartridge and chamber dimensions, bullet records and target specifications with Open Ballistics. An independent, open-source reference using C.I.P. data."
+    />
+    <title>Cartridge &amp; chamber dimensions | Open Ballistics</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Open Ballistics" />
+    <meta property="og:title" content="Cartridge &amp; chamber dimensions | Open Ballistics" />
+    <meta property="og:description" content="Explore cartridge and chamber dimensions, bullet records and target specifications. An independent, open-source reference using C.I.P. data." />
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#101012" media="(prefers-color-scheme: dark)" />
+    <script>
+      // Apply a saved appearance before the stylesheet paints the page.
+      try {
+        const theme = localStorage.getItem('theme');
+        document.documentElement.dataset.theme = theme === 'light' || theme === 'dark' ? theme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      } catch { /* The system theme still works when storage is unavailable. */ }
+    </script>
+    <!--
+      The icon, named so the browser stops asking the domain root for `/favicon.ico` and logging
+      the 404 it gets - which is the one browser error this site put in the console.
+    -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!--
+      No `<link>` to fonts.googleapis.com. The faces are bundled by `src/main.ts`; see the note
+      there. A stylesheet on a third party's origin is render-blocking twice over - connection
+      then stylesheet then font file - and it told that third party who was reading the page.
+    -->
+  </head>
+  <body>
+    <noscript>
+      <h1>Open Ballistics</h1>
+      <p>Browse cartridge and chamber dimensions, bullet records and target specifications. Enable JavaScript to use the interactive catalogue and tools.</p>
+      <p>The reference data and documentation are also available in the <a href="https://github.com/PiMetry/OpenBallistics">Open Ballistics repository</a>.</p>
+    </noscript>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

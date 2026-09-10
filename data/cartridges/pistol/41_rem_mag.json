@@ -1,0 +1,89 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_fmj_truncated",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lpm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.5,
+      "R1": 12.5,
+      "RTol": -0.25,
+      "beta": 35.0,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 11.02
+    },
+    "lengths": {
+      "L3": 32.77,
+      "L6": 40.39
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 11.05
+    },
+    "pressures": {
+      "M": 17.5,
+      "PE": 3900.0,
+      "PK": 3450.0,
+      "Pmax": 3000.0
+    },
+    "projectile": {
+      "G1": 10.41,
+      "L3PlusG": 46.6
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.13,
+      "Z": 10.39
+    },
+    "breech": {
+      "R": 1.52,
+      "R1": 12.62
+    },
+    "collar": {
+      "H2": 11.05
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 82.71,
+      "b": 2.68,
+      "u": 476.3
+    },
+    "lengths": {
+      "L3": 33.32
+    },
+    "powderChamber": {
+      "P1": 11.1
+    },
+    "rifling": {
+      "G": 13.83,
+      "G1": 10.44,
+      "alpha1": 25.0,
+      "h": 1.38,
+      "i": 5.0,
+      "s": 12.06
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "41_rem_mag",
+  "name": "41 Rem. Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1986-12-14",
+  "revised": "2000-06-07",
+  "tab": "IV"
+}

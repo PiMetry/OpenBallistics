@@ -1,0 +1,59 @@
+{
+  "id": "dsb_10m_rapid_fire",
+  "name": "DSB 10 m Pistole Schnellfeuerteil",
+  "distanceM": 10,
+  "rings": [
+    {
+      "score": 10,
+      "diameterMm": 22
+    },
+    {
+      "score": 9,
+      "diameterMm": 48.5
+    },
+    {
+      "score": 8,
+      "diameterMm": 75
+    },
+    {
+      "score": 7,
+      "diameterMm": 101.5
+    },
+    {
+      "score": 6,
+      "diameterMm": 128
+    },
+    {
+      "score": 5,
+      "diameterMm": 154.5
+    }
+  ],
+  "innerTenMm": 11,
+  "blackMm": 154.5,
+  "cardMm": {
+    "width": 170,
+    "height": 170
+  },
+  "source": {
+    "body": "DSB",
+    "rulebook": "Sportordnung",
+    "edition": "01.01.2027",
+    "effectiveFrom": "2027-01-01",
+    "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+    "retrieved": "2026-09-08",
+    "transcription": "text-layer",
+    "rule": "0.20, Scheibe Nr. 8, PDF pp. 80, 85"
+  },
+  "ruleSources": [
+    {
+      "body": "DSB",
+      "rulebook": "Sportordnung",
+      "edition": "01.01.2027",
+      "effectiveFrom": "2027-01-01",
+      "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "rule": "0.11.3, PDF p. 57"
+    }
+  ]
+}

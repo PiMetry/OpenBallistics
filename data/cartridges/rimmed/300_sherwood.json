@@ -1,0 +1,88 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sp"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.27,
+      "R1": 9.52,
+      "RTol": -0.25
+    },
+    "collar": {
+      "H2": 8.08
+    },
+    "lengths": {
+      "L3": 39.37,
+      "L6": 51.82
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 8.13
+    },
+    "pressures": {
+      "EE": 930.0,
+      "M": 25.0,
+      "PE": 1750.0,
+      "PK": 1610.0,
+      "Pmax": 1400.0
+    },
+    "projectile": {
+      "G1": 7.62,
+      "L3PlusG": 43.81
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.4,
+      "Z": 7.62
+    },
+    "breech": {
+      "R": 1.3,
+      "R1": 9.65
+    },
+    "collar": {
+      "H2": 8.1
+    },
+    "grooves": {
+      "Q": 43.01,
+      "u": 508.0
+    },
+    "lengths": {
+      "L3": 39.62
+    },
+    "powderChamber": {
+      "P1": 8.15
+    },
+    "rifling": {
+      "G": 4.44,
+      "G1": 7.62,
+      "alpha1": 180.0,
+      "i": {
+        "degrees": 1.0,
+        "minutes": 25.0,
+        "seconds": 9.0
+      }
+    }
+  },
+  "country": "GB",
+  "family": "rimmed",
+  "key": "300_sherwood",
+  "name": "300 Sherwood",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15",
+  "tab": "II"
+}

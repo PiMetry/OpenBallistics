@@ -1,0 +1,53 @@
+{
+  "key": "sample_7_62_x_39_c",
+  "sample": true,
+  "sampleFor": "7_62_x_39",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-C",
+  "name": "7.62 x 39 — Sample C",
+  "calibre": "7.62 x 39",
+  "diameter": 7.92,
+  "mass": 10.9294,
+  "length": 27.8784,
+  "bearing": 12.5453,
+  "nose": 15.3331,
+  "meplat": 1.188,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.275,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 27.8784,
+    "bearing": 12.5453,
+    "nose": 15.3331,
+    "boatTail": 0,
+    "baseDiameter": 7.92,
+    "boatTailAngle": null,
+    "meplat": 1.188,
+    "ogiveRadiusCalibres": 4.622,
+    "massGrains": 168.6664,
+    "sectionalDensity": 0.2478,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

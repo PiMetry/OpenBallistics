@@ -1,0 +1,53 @@
+{
+  "key": "sample_243_win_b",
+  "sample": true,
+  "sampleFor": "243_win",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-B",
+  "name": ".243 Winchester — Sample B",
+  "calibre": ".243 Winchester",
+  "diameter": 6.17,
+  "mass": 4.6977,
+  "length": 19.744,
+  "bearing": 8.8848,
+  "nose": 10.8592,
+  "meplat": 0.9255,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.25,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 19.744,
+    "bearing": 8.8848,
+    "nose": 10.8592,
+    "boatTail": 0,
+    "baseDiameter": 6.17,
+    "boatTailAngle": null,
+    "meplat": 0.9255,
+    "ogiveRadiusCalibres": 3.8567,
+    "massGrains": 72.4966,
+    "sectionalDensity": 0.1755,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

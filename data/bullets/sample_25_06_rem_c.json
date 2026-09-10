@@ -1,0 +1,53 @@
+{
+  "key": "sample_25_06_rem_c",
+  "sample": true,
+  "sampleFor": "25_06_rem",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-C",
+  "name": ".25-06 Remington — Sample C",
+  "calibre": ".25-06 Remington",
+  "diameter": 6.54,
+  "mass": 6.154,
+  "length": 23.0208,
+  "bearing": 10.3594,
+  "nose": 12.6614,
+  "meplat": 0.981,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.275,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 23.0208,
+    "bearing": 10.3594,
+    "nose": 12.6614,
+    "boatTail": 0,
+    "baseDiameter": 6.54,
+    "boatTailAngle": null,
+    "meplat": 0.981,
+    "ogiveRadiusCalibres": 4.622,
+    "massGrains": 94.9707,
+    "sectionalDensity": 0.2046,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

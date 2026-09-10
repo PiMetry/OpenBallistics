@@ -1,0 +1,53 @@
+{
+  "key": "sample_223_rem_b",
+  "sample": true,
+  "sampleFor": "223_rem",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-B",
+  "name": ".223 Remington — Sample B",
+  "calibre": ".223 Remington",
+  "diameter": 5.7,
+  "mass": 3.7039,
+  "length": 18.24,
+  "bearing": 8.208,
+  "nose": 10.032,
+  "meplat": 0.855,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.25,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 18.24,
+    "bearing": 8.208,
+    "nose": 10.031999999999998,
+    "boatTail": 0,
+    "baseDiameter": 5.7,
+    "boatTailAngle": null,
+    "meplat": 0.855,
+    "ogiveRadiusCalibres": 3.8567,
+    "massGrains": 57.1599,
+    "sectionalDensity": 0.1621,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

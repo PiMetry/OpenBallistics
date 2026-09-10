@@ -1,0 +1,98 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_flat_nose",
+      "ogive": "conical",
+      "tip": "flat",
+      "verified": false
+    },
+    "defaultBulletShape": "flat",
+    "implausible": [],
+    "primerType": "lr",
+    "publishedCapacity": {
+      "grH2O": 69.0,
+      "source": "kwk",
+      "url": "http://kwk.us/cases.html"
+    }
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 2.5,
+      "E1": 11.43,
+      "R": 1.6,
+      "R1": 13.06,
+      "RTol": -0.25,
+      "beta": 35.0,
+      "delta": 45.0,
+      "eMin": 0.64,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 11.51
+    },
+    "lengths": {
+      "L3": 56.52,
+      "L6": 65.28
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.95
+    },
+    "pressures": {
+      "EE": 3287.0,
+      "M": 25.0,
+      "PE": 4440.0,
+      "PK": 4083.0,
+      "Pmax": 3550.0
+    },
+    "projectile": {
+      "G1": 10.93,
+      "L3PlusG": 58.1
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.77,
+      "Z": 10.92
+    },
+    "breech": {
+      "R": 1.6,
+      "R1": 13.31
+    },
+    "collar": {
+      "H2": 11.54
+    },
+    "grooves": {
+      "N": 12.0,
+      "Q": 92.52,
+      "b": 1.57,
+      "u": 965.0
+    },
+    "lengths": {
+      "L3": 56.9
+    },
+    "powderChamber": {
+      "P1": 11.98
+    },
+    "rifling": {
+      "G": 1.58,
+      "G1": 11.0,
+      "alpha1": 90.0,
+      "h": 0.27,
+      "i": 5.0
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "444_marlin",
+  "name": "444 Marlin",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15",
+  "tab": "II"
+}

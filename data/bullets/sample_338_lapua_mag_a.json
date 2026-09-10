@@ -1,0 +1,53 @@
+{
+  "key": "sample_338_lapua_mag_a",
+  "sample": true,
+  "sampleFor": "338_lapua_mag",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-A",
+  "name": ".338 Lapua Magnum — Sample A",
+  "calibre": ".338 Lapua Magnum",
+  "diameter": 8.61,
+  "mass": 11.489,
+  "length": 24.7968,
+  "bearing": 11.1586,
+  "nose": 13.6382,
+  "meplat": 1.2915,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.225,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 24.7968,
+    "bearing": 11.1586,
+    "nose": 13.638200000000001,
+    "boatTail": 0,
+    "baseDiameter": 8.61,
+    "boatTailAngle": null,
+    "meplat": 1.2915,
+    "ogiveRadiusCalibres": 3.1643,
+    "massGrains": 177.3024,
+    "sectionalDensity": 0.2204,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

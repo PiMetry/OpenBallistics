@@ -1,0 +1,46 @@
+# JavaScript dependencies and build output, at any project level.
+node_modules/
+dist/
+.svelte-kit/
+.vite/
+.cache/
+*.tsbuildinfo
+
+# Test coverage and browser test output.
+coverage/
+.nyc_output/
+playwright-report/
+playwright/.cache/
+test-results/
+
+# Local overrides, scratch scripts and isolated browser profiles.
+*.local
+*.local.*
+*.log
+*.tmp
+*.temp
+
+# Environment secrets. Keep shareable configuration examples trackable.
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.template
+!.env.*.template
+
+# Editor state. Shared VS Code project configuration remains trackable.
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# Operating system metadata.
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,53 @@
+{
+  "key": "sample_22_long_rifle_a",
+  "sample": true,
+  "sampleFor": "22_long_rifle",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-A",
+  "name": ".22 LR — Sample A",
+  "calibre": ".22 LR",
+  "diameter": 5.72,
+  "mass": 2.0212,
+  "length": 9.2664,
+  "bearing": 4.1699,
+  "nose": 5.0965,
+  "meplat": 0.858,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "elliptical"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.225,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 9.2664,
+    "bearing": 4.1699,
+    "nose": 5.096500000000001,
+    "boatTail": 0,
+    "baseDiameter": 5.72,
+    "boatTailAngle": null,
+    "meplat": 0.858,
+    "ogiveRadiusCalibres": 1.1465,
+    "massGrains": 31.1919,
+    "sectionalDensity": 0.0879,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

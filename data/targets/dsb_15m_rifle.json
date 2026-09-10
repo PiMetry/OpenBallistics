@@ -1,0 +1,74 @@
+{
+  "id": "dsb_15m_rifle",
+  "name": "DSB 15 m Gewehr",
+  "distanceM": 15,
+  "rings": [
+    {
+      "score": 10,
+      "diameterMm": 4.5
+    },
+    {
+      "score": 9,
+      "diameterMm": 13.5
+    },
+    {
+      "score": 8,
+      "diameterMm": 22.5
+    },
+    {
+      "score": 7,
+      "diameterMm": 31.5
+    },
+    {
+      "score": 6,
+      "diameterMm": 40.5
+    },
+    {
+      "score": 5,
+      "diameterMm": 49.5
+    },
+    {
+      "score": 4,
+      "diameterMm": 58.5
+    },
+    {
+      "score": 3,
+      "diameterMm": 67.5
+    },
+    {
+      "score": 2,
+      "diameterMm": 76.5
+    },
+    {
+      "score": 1,
+      "diameterMm": 85.5
+    }
+  ],
+  "blackMm": 40.5,
+  "cardMm": {
+    "width": 120,
+    "height": 120
+  },
+  "source": {
+    "body": "DSB",
+    "rulebook": "Sportordnung",
+    "edition": "01.01.2027",
+    "effectiveFrom": "2027-01-01",
+    "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+    "retrieved": "2026-09-08",
+    "transcription": "text-layer",
+    "rule": "0.20, Scheibe Nr. 2, PDF pp. 80, 82"
+  },
+  "ruleSources": [
+    {
+      "body": "DSB",
+      "rulebook": "Sportordnung",
+      "edition": "01.01.2027",
+      "effectiveFrom": "2027-01-01",
+      "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "rule": "0.11.3, PDF p. 57"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.lengths.L3",
+          "chamber.lengths.L3"
+        ],
+        "kind": "exceptional",
+        "known": true,
+        "message": "cartridge L3 = 38.1 is more than chamber L3 = 38, but a chamber is at least as long as the case it takes",
+        "rule": "chamber_accepts_case",
+        "values": {
+          "cartridge.lengths.L3": 38.1,
+          "chamber.lengths.L3": 38.0
+        },
+        "why": "printed so: case L3 38.10 against chamber L3 38.00; read 2026-09-06"
+      }
+    ],
+    "primerType": "lr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 4.3,
+      "E1": 10.31,
+      "R": 1.52,
+      "R1": 11.68,
+      "RTol": -0.25,
+      "beta": 35.0,
+      "delta": 7.0,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 10.99
+    },
+    "lengths": {
+      "L3": 38.1,
+      "L6": 50.93
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 11.0
+    },
+    "pressures": {
+      "EE": 2655.0,
+      "M": 25.0,
+      "PE": 3060.0,
+      "PK": 2818.0,
+      "Pmax": 2450.0
+    },
+    "projectile": {
+      "G1": 10.34,
+      "L3PlusG": 48.8
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 10.16,
+      "Z": 10.33
+    },
+    "breech": {
+      "R": 1.52,
+      "R1": 11.91
+    },
+    "collar": {
+      "H2": 11.05
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 82.73,
+      "b": 3.19,
+      "u": 406.0
+    },
+    "lengths": {
+      "L3": 38.0
+    },
+    "powderChamber": {
+      "P1": 11.13
+    },
+    "rifling": {
+      "G": 10.7,
+      "G1": 10.38,
+      "alpha1": 30.0,
+      "h": 1.25,
+      "i": {
+        "degrees": 0.0,
+        "minutes": 40.0,
+        "seconds": 0.0
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "401_win_sl",
+  "name": "401 Win. SL",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15",
+  "tab": "II"
+}

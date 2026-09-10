@@ -1,0 +1,86 @@
+{
+  "id": "bds_100m",
+  "name": "BDS 100 m - Z 1",
+  "distanceM": 100,
+  "rings": [
+    {
+      "score": 10,
+      "diameterMm": 34
+    },
+    {
+      "score": 9,
+      "diameterMm": 68
+    },
+    {
+      "score": 8,
+      "diameterMm": 102
+    },
+    {
+      "score": 7,
+      "diameterMm": 136
+    },
+    {
+      "score": 6,
+      "diameterMm": 170
+    },
+    {
+      "score": 5,
+      "diameterMm": 204
+    },
+    {
+      "score": 4,
+      "diameterMm": 238
+    },
+    {
+      "score": 3,
+      "diameterMm": 272
+    },
+    {
+      "score": 2,
+      "diameterMm": 306
+    },
+    {
+      "score": 1,
+      "diameterMm": 340
+    }
+  ],
+  "innerTenMm": 17,
+  "blackMm": 204,
+  "distancesM": [
+    50,
+    100
+  ],
+  "ruleSources": [
+    {
+      "body": "BDS",
+      "rulebook": "Sporthandbuch, Teil A",
+      "edition": "June 2026, BVA 30.06.2026",
+      "rule": "A 9.02, PDF p. 22",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "url": "https://www.bdsnet.de/ressourcen/downloads/2026_06_shb_a_final_x.pdf"
+    },
+    {
+      "body": "BDS",
+      "rulebook": "Sporthandbuch, Teil L",
+      "edition": "July 2026, BVA 30.06.2026",
+      "rule": "L 2.01 / L 2.02, PDF pp. 8-16",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "url": "https://www.bdsnet.de/ressourcen/downloads/2026_07_shb_l_final_x.pdf"
+    }
+  ],
+  "cardMm": {
+    "width": 395,
+    "height": 395
+  },
+  "source": {
+    "body": "BDS",
+    "rulebook": "Sporthandbuch, Zielscheiben",
+    "edition": "30.06.2025",
+    "url": "https://www.bdsnet.de/ressourcen/downloads/2025_06_30_shb_z_2025-klein.pdf",
+    "retrieved": "2026-09-08",
+    "transcription": "text-layer",
+    "rule": "Z 1"
+  }
+}

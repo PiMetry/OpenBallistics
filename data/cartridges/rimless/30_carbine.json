@@ -1,0 +1,102 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "sr",
+    "publishedCapacity": {
+      "grH2O": 21.0,
+      "source": "kwk",
+      "url": "http://kwk.us/cases.html"
+    }
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 2.9,
+      "E1": 7.87,
+      "R": 1.27,
+      "R1": 9.14,
+      "beta": 35.0,
+      "delta": 37.0,
+      "eMin": 0.84,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 8.53
+    },
+    "lengths": {
+      "L3": 32.77,
+      "L3Tol": -0.25,
+      "L6": 42.67
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 9.06
+    },
+    "pressures": {
+      "EE": 1375.0,
+      "M": 17.5,
+      "PE": 4000.0,
+      "PK": 3680.0,
+      "Pmax": 3200.0
+    },
+    "projectile": {
+      "G1": 7.85,
+      "L3PlusG": 36.68
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 7.62,
+      "Z": 7.82
+    },
+    "breech": {
+      "R": 1.27,
+      "R1": 9.4
+    },
+    "collar": {
+      "H2": 8.6
+    },
+    "grooves": {
+      "N": 4.0,
+      "Q": 47.4,
+      "b": 4.24,
+      "u": 508.0
+    },
+    "lengths": {
+      "L3": 32.77
+    },
+    "powderChamber": {
+      "E": 2.9,
+      "P1": 9.15
+    },
+    "rifling": {
+      "G": 3.91,
+      "G1": 7.96,
+      "alpha1": 180.0,
+      "i": {
+        "degrees": 2.0,
+        "minutes": 29.0,
+        "seconds": 26.0
+      }
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "30_carbine",
+  "name": "30 Carbine",
+  "pressureMethod": "Transducer",
+  "published": "1984-06-14",
+  "revised": "2002-05-15",
+  "tab": "I"
+}

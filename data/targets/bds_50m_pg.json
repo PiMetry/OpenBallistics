@@ -1,0 +1,64 @@
+{
+  "id": "bds_50m_pg",
+  "name": "BDS 50 m PG - Z 18 (one bull)",
+  "distanceM": 50,
+  "rings": [
+    {
+      "score": 10,
+      "diameterMm": 6.35
+    },
+    {
+      "score": 9,
+      "diameterMm": 12.7
+    },
+    {
+      "score": 8,
+      "diameterMm": 19.05
+    },
+    {
+      "score": 7,
+      "diameterMm": 25.4
+    },
+    {
+      "score": 6,
+      "diameterMm": 31.75
+    },
+    {
+      "score": 5,
+      "diameterMm": 38.1
+    }
+  ],
+  "innerTenMm": 0.792,
+  "blackMm": 38.1,
+  "whiteCentreMm": 25.4,
+  "source": {
+    "body": "BDS",
+    "rulebook": "Sporthandbuch, Zielscheiben",
+    "edition": "30.06.2025",
+    "url": "https://www.bdsnet.de/ressourcen/downloads/2025_06_30_shb_z_2025-klein.pdf",
+    "retrieved": "2026-09-08",
+    "transcription": "text-layer",
+    "rule": "Z 18"
+  },
+  "ruleSources": [
+    {
+      "body": "BDS",
+      "rulebook": "Sporthandbuch, Teil A",
+      "edition": "June 2026, BVA 30.06.2026",
+      "rule": "A 9.02, PDF p. 22",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "url": "https://www.bdsnet.de/ressourcen/downloads/2026_06_shb_a_final_x.pdf"
+    },
+    {
+      "body": "BDS",
+      "rulebook": "Sporthandbuch, Teil L",
+      "edition": "July 2026, BVA 30.06.2026",
+      "rule": "L 1.21 / L 2.01, PDF pp. 7, 10-11",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "url": "https://www.bdsnet.de/ressourcen/downloads/2026_07_shb_l_final_x.pdf"
+    }
+  ],
+  "note": "One scoring bull from the 450 x 365 mm sheet. Calibrate and score one bull at a time."
+}

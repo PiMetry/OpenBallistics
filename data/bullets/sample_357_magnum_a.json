@@ -1,0 +1,53 @@
+{
+  "key": "sample_357_magnum_a",
+  "sample": true,
+  "sampleFor": "357_magnum",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-A",
+  "name": ".357 Magnum — Sample A",
+  "calibre": ".357 Magnum",
+  "diameter": 9.12,
+  "mass": 8.1923,
+  "length": 14.7744,
+  "bearing": 6.6485,
+  "nose": 8.1259,
+  "meplat": 1.368,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "elliptical"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.225,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 14.7744,
+    "bearing": 6.6485,
+    "nose": 8.1259,
+    "boatTail": 0,
+    "baseDiameter": 9.12,
+    "boatTailAngle": null,
+    "meplat": 1.368,
+    "ogiveRadiusCalibres": 1.1465,
+    "massGrains": 126.4265,
+    "sectionalDensity": 0.1401,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

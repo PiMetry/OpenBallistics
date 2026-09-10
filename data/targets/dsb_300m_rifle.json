@@ -1,0 +1,76 @@
+{
+  "id": "dsb_300m_rifle",
+  "name": "DSB 300 m Gewehr",
+  "distanceM": 300,
+  "rings": [
+    {
+      "score": 10,
+      "diameterMm": 100
+    },
+    {
+      "score": 9,
+      "diameterMm": 200
+    },
+    {
+      "score": 8,
+      "diameterMm": 300
+    },
+    {
+      "score": 7,
+      "diameterMm": 400
+    },
+    {
+      "score": 6,
+      "diameterMm": 500
+    },
+    {
+      "score": 5,
+      "diameterMm": 600
+    },
+    {
+      "score": 4,
+      "diameterMm": 700
+    },
+    {
+      "score": 3,
+      "diameterMm": 800
+    },
+    {
+      "score": 2,
+      "diameterMm": 900
+    },
+    {
+      "score": 1,
+      "diameterMm": 1000
+    }
+  ],
+  "innerTenMm": 50,
+  "blackMm": 600,
+  "cardMm": {
+    "width": 1020,
+    "height": 1220
+  },
+  "source": {
+    "body": "DSB",
+    "rulebook": "Sportordnung",
+    "edition": "01.01.2027",
+    "effectiveFrom": "2027-01-01",
+    "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+    "retrieved": "2026-09-08",
+    "transcription": "text-layer",
+    "rule": "0.20, Scheibe Nr. 5, PDF pp. 80, 83"
+  },
+  "ruleSources": [
+    {
+      "body": "DSB",
+      "rulebook": "Sportordnung",
+      "edition": "01.01.2027",
+      "effectiveFrom": "2027-01-01",
+      "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "rule": "0.11.3, PDF p. 57"
+    }
+  ],
+  "note": "Ordinary ring-touch scoring. Vorderladerfreigewehr uses the same face with centre scoring under 7.7.5."
+}

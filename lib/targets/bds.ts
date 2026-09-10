@@ -1,0 +1,27 @@
+import type { TargetFace } from './types';
+import BDS_100M_RECORD from '../../data/targets/bds_100m.json';
+import BDS_50M_ZF_RECORD from '../../data/targets/bds_50m_zf.json';
+import BDS_100M_ZF_RECORD from '../../data/targets/bds_100m_zf.json';
+import BDS_300M_ZF_RECORD from '../../data/targets/bds_300m_zf.json';
+import BDS_25M_HANDGUN_RECORD from '../../data/targets/bds_25m_handgun.json';
+import BDS_50M_PG_RECORD from '../../data/targets/bds_50m_pg.json';
+import BDS_300M_PG_RECORD from '../../data/targets/bds_300m_pg.json';
+import BDS_25M_PRECISION_RECORD from '../../data/targets/bds_25m_precision.json';
+import BDS_25M_INTERVAL_RECORD from '../../data/targets/bds_25m_interval.json';
+import BDS_50M_RIFLE_RECORD from '../../data/targets/bds_50m_rifle.json';
+import BDS_100M_RIFLE_RECORD from '../../data/targets/bds_100m_rifle.json';
+import BDS_300M_RIFLE_RECORD from '../../data/targets/bds_300m_rifle.json';
+
+export const BDS_100M = BDS_100M_RECORD as TargetFace;
+export const BDS_50M_ZF = BDS_50M_ZF_RECORD as TargetFace;
+export const BDS_100M_ZF = BDS_100M_ZF_RECORD as TargetFace;
+export const BDS_300M_ZF = BDS_300M_ZF_RECORD as TargetFace;
+export const BDS_25M_HANDGUN = BDS_25M_HANDGUN_RECORD as TargetFace;
+export const BDS_50M_PG = BDS_50M_PG_RECORD as TargetFace;
+export const BDS_300M_PG = BDS_300M_PG_RECORD as TargetFace;
+export const BDS_25M_PRECISION = BDS_25M_PRECISION_RECORD as TargetFace;
+export const BDS_25M_INTERVAL = BDS_25M_INTERVAL_RECORD as TargetFace;
+export const BDS_50M_RIFLE = BDS_50M_RIFLE_RECORD as TargetFace;
+export const BDS_100M_RIFLE = BDS_100M_RIFLE_RECORD as TargetFace;
+export const BDS_300M_RIFLE = BDS_300M_RIFLE_RECORD as TargetFace;
+export const BDS_FACES: TargetFace[] = [BDS_25M_HANDGUN, BDS_25M_PRECISION, BDS_50M_ZF, BDS_50M_PG, BDS_100M, BDS_100M_ZF, BDS_300M_ZF, BDS_300M_PG, BDS_25M_INTERVAL, BDS_50M_RIFLE, BDS_100M_RIFLE, BDS_300M_RIFLE];

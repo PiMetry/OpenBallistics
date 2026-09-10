@@ -1,0 +1,120 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "R": 1.4,
+      "R1": 10.9,
+      "RTol": -0.25,
+      "beta": 45.0,
+      "f": 0.5
+    },
+    "collar": {
+      "H1": 6.48,
+      "H2": 6.48
+    },
+    "junctionCone": {
+      "S": 50.87,
+      "alpha": {
+        "degrees": 45.0,
+        "minutes": 58.0,
+        "seconds": 38.0
+      },
+      "r1Min": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 40.26,
+      "L2": 43.23,
+      "L3": 50.0,
+      "L6": 61.0
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 9.59,
+      "P2": 9.0
+    },
+    "pressures": {
+      "EE": 1950.0,
+      "M": 25.0,
+      "PE": 4250.0,
+      "PK": 3910.0,
+      "Pmax": 3400.0
+    },
+    "projectile": {
+      "G1": 5.7,
+      "L3PlusG": 51.8
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.56,
+      "Z": 5.69
+    },
+    "breech": {
+      "R": 1.4,
+      "R1": 10.93
+    },
+    "collar": {
+      "H1": 6.53,
+      "H2": 6.51
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 25.08,
+      "b": 2.0,
+      "u": 350.0
+    },
+    "junctionCone": {
+      "S": 50.92,
+      "alpha": {
+        "degrees": 45.0,
+        "minutes": 55.0,
+        "seconds": 40.0
+      },
+      "r1Max": 0.5,
+      "r2": 0.5
+    },
+    "lengths": {
+      "L1": 40.26,
+      "L2": 43.21,
+      "L3": 50.3
+    },
+    "powderChamber": {
+      "P1": 9.62,
+      "P2": 9.03
+    },
+    "rifling": {
+      "G": 1.8,
+      "G1": 5.74,
+      "alpha1": 180.0,
+      "i": {
+        "degrees": 2.0,
+        "minutes": 51.0,
+        "seconds": 45.0
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimmed",
+  "key": "5_6_x_50_r_mag",
+  "name": "5,6 x 50 R Mag.",
+  "pressureMethod": "Transducer",
+  "published": "1998-02-20",
+  "revised": "2002-05-15",
+  "tab": "II"
+}

@@ -1,0 +1,53 @@
+{
+  "key": "sample_6_5_creedmoor_b",
+  "sample": true,
+  "sampleFor": "6_5_creedmoor",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-B",
+  "name": "6.5 Creedmoor — Sample B",
+  "calibre": "6.5 Creedmoor",
+  "diameter": 6.72,
+  "mass": 6.0693,
+  "length": 21.504,
+  "bearing": 9.6768,
+  "nose": 11.8272,
+  "meplat": 1.008,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.25,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 21.504,
+    "bearing": 9.6768,
+    "nose": 11.827200000000001,
+    "boatTail": 0,
+    "baseDiameter": 6.72,
+    "boatTailAngle": null,
+    "meplat": 1.008,
+    "ogiveRadiusCalibres": 3.8567,
+    "massGrains": 93.6636,
+    "sectionalDensity": 0.1912,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "key": "sample_9_mm_luger_b",
+  "sample": true,
+  "sampleFor": "9_mm_luger",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-B",
+  "name": "9 mm Luger — Sample B",
+  "calibre": "9 mm Luger",
+  "diameter": 9.03,
+  "mass": 8.8358,
+  "length": 16.254,
+  "bearing": 7.3143,
+  "nose": 8.9397,
+  "meplat": 1.3545,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "elliptical"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.25,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 16.254,
+    "bearing": 7.3143,
+    "nose": 8.939700000000002,
+    "boatTail": 0,
+    "baseDiameter": 9.03,
+    "boatTailAngle": null,
+    "meplat": 1.3545,
+    "ogiveRadiusCalibres": 1.3656,
+    "massGrains": 136.3572,
+    "sectionalDensity": 0.1541,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

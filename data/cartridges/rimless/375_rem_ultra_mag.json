@@ -1,0 +1,117 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [],
+    "primerType": "lrm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.75,
+      "E1": 12.07,
+      "R": 1.27,
+      "R1": 13.56,
+      "beta": 35.0,
+      "delta": 32.0,
+      "eMin": 0.94,
+      "f": 0.31
+    },
+    "collar": {
+      "H1": 10.29,
+      "H2": 10.29
+    },
+    "junctionCone": {
+      "S": 72.18,
+      "alpha": 60.0,
+      "r1Min": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 60.64,
+      "L1Tol": -0.2,
+      "L2": 63.28,
+      "L2Tol": -0.2,
+      "L3": 72.39,
+      "L6": 91.44
+    },
+    "misc": {
+      "Fe": 0.1,
+      "deltaL": 0.1
+    },
+    "powderChamber": {
+      "P1": 13.99,
+      "P2": 13.33,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 7350.0,
+      "M": 25.0,
+      "PE": 5500.0,
+      "PK": 5060.0,
+      "Pmax": 4400.0
+    },
+    "projectile": {
+      "G1": 9.55,
+      "L3PlusG": 84.38
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 9.3,
+      "Z": 9.55
+    },
+    "breech": {
+      "R1": 14.05
+    },
+    "collar": {
+      "H1": 10.34,
+      "H2": 10.31
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 70.16,
+      "b": 2.92,
+      "u": 304.8
+    },
+    "junctionCone": {
+      "S": 72.08,
+      "alpha": 60.0,
+      "r1Max": 0.76,
+      "r2": 3.18
+    },
+    "lengths": {
+      "L1": 60.51,
+      "L2": 63.13,
+      "L3": 72.64
+    },
+    "powderChamber": {
+      "E": 3.75,
+      "P1": 14.02,
+      "P2": 13.36
+    },
+    "rifling": {
+      "G": 11.99,
+      "G1": 9.55,
+      "alpha1": 90.0,
+      "h": 0.38,
+      "i": 1.0,
+      "s": 4.83
+    }
+  },
+  "country": "US",
+  "family": "rimless",
+  "key": "375_rem_ultra_mag",
+  "name": "375 Rem. Ultra Mag.",
+  "pressureMethod": "Transducer",
+  "published": "2002-01-22",
+  "revised": "2007-06-20",
+  "tab": "I"
+}

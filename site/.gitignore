@@ -1,0 +1,8 @@
+# Search indexes generated from the JSON datasets.
+/src/lib/index.generated.json
+/src/lib/flags.generated.json
+/src/lib/bullets.generated.json
+/src/lib/fieldsets.generated.json
+
+# Country flags copied from the installed flag-icons package during preparation.
+/public/flags/

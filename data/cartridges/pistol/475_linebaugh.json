@@ -1,0 +1,106 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "pistol_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.caseHead.E1",
+          "cartridge.caseHead.E",
+          "cartridge.caseHead.delta"
+        ],
+        "kind": "unplaced",
+        "known": true,
+        "message": "an extractor groove is published (E1 = 11.65) with neither E nor delta to place it on the head; the case is drawn without it",
+        "rule": "groove_is_placed",
+        "values": {
+          "E1": 11.65
+        },
+        "why": "printed so: E1 11.65 with neither E nor δ; the sheet draws the groove's diameter under the rim and does not place it"
+      }
+    ],
+    "primerType": "lpm"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E1": 11.65,
+      "R": 1.78,
+      "R1": 13.77,
+      "RTol": -0.25,
+      "beta": 45.0,
+      "f": 0.38
+    },
+    "collar": {
+      "H2": 12.8
+    },
+    "lengths": {
+      "L3": 35.16,
+      "L6": 44.43
+    },
+    "misc": {
+      "Fe": 0.25
+    },
+    "powderChamber": {
+      "P1": 12.8
+    },
+    "pressures": {
+      "M": 17.5,
+      "PE": 4485.0,
+      "PK": 3968.0,
+      "Pmax": 3450.0
+    },
+    "projectile": {
+      "G1": 12.08,
+      "L3PlusG": 46.58
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 11.81,
+      "Z": 12.07
+    },
+    "breech": {
+      "R": 1.8,
+      "R1": 13.87
+    },
+    "collar": {
+      "H2": 12.81
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 112.78,
+      "b": 4.06,
+      "u": 457.0
+    },
+    "lengths": {
+      "L3": 35.74
+    },
+    "powderChamber": {
+      "P1": 12.86
+    },
+    "rifling": {
+      "G": 11.42,
+      "G1": 12.08,
+      "alpha1": 10.0,
+      "h": 4.17,
+      "i": 5.0,
+      "s": 9.88
+    }
+  },
+  "country": "US",
+  "family": "pistol",
+  "key": "475_linebaugh",
+  "name": "475 LINEBAUGH",
+  "pressureMethod": "Transducer",
+  "published": "2003-02-17",
+  "revised": "2004-09-27",
+  "tab": "IV"
+}

@@ -1,0 +1,53 @@
+{
+  "key": "sample_45_70_govt_c",
+  "sample": true,
+  "sampleFor": "45_70_govt",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-C",
+  "name": ".45-70 Government — Sample C",
+  "calibre": ".45-70 Government",
+  "diameter": 11.63,
+  "mass": 20.7641,
+  "length": 23.0274,
+  "bearing": 10.3623,
+  "nose": 12.6651,
+  "meplat": 1.7445,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "elliptical"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.275,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 23.0274,
+    "bearing": 10.3623,
+    "nose": 12.6651,
+    "boatTail": 0,
+    "baseDiameter": 11.63,
+    "boatTailAngle": null,
+    "meplat": 1.7445,
+    "ogiveRadiusCalibres": 1.6077,
+    "massGrains": 320.439,
+    "sectionalDensity": 0.2184,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

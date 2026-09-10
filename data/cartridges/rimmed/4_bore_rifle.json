@@ -1,0 +1,114 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_round_nose",
+      "ogive": "elliptical",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "rounded",
+    "implausible": [
+      {
+        "fields": [
+          "cartridge.caseHead.E1",
+          "cartridge.caseHead.E",
+          "cartridge.caseHead.delta"
+        ],
+        "kind": "unplaced",
+        "known": true,
+        "message": "an extractor groove is published (E1 = 27.8) with neither E nor delta to place it on the head; the case is drawn without it",
+        "rule": "groove_is_placed",
+        "values": {
+          "E1": 27.8
+        },
+        "why": "printed so: E1 27.80 and e min 0.50 with neither E nor δ; the sheet draws the groove's diameter under the rim and does not place it"
+      }
+    ],
+    "primerType": "209"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E1": 27.8,
+      "R": 1.5,
+      "R1": 31.3,
+      "RTol": -0.25,
+      "eMin": 0.5
+    },
+    "collar": {
+      "H2": 27.15
+    },
+    "lengths": {
+      "L3": 101.5,
+      "L6": 119.3
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 28.0
+    },
+    "pressures": {
+      "EE": 10500.0,
+      "M": 25.0,
+      "PE": 3125.0,
+      "PK": 2875.0,
+      "Pmax": 2500.0
+    },
+    "projectile": {
+      "G1": 25.4,
+      "G2": 18.0,
+      "L3PlusG": 115.1
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 24.91,
+      "Z": 25.4
+    },
+    "breech": {
+      "R": 1.55,
+      "R1": 31.3
+    },
+    "collar": {
+      "H2": 27.3
+    },
+    "grooves": {
+      "N": 8.0,
+      "Q": 500.23,
+      "b": 6.5
+    },
+    "lengths": {
+      "L3": 101.5
+    },
+    "powderChamber": {
+      "P1": 28.2
+    },
+    "rifling": {
+      "G": 13.6,
+      "G1": 25.45,
+      "alpha1": {
+        "degrees": 105.0,
+        "minutes": 46.0,
+        "seconds": 12.0
+      },
+      "h": 0.7,
+      "i": {
+        "degrees": 1.0,
+        "minutes": 30.0,
+        "seconds": 0.0
+      },
+      "s": 3.3
+    }
+  },
+  "country": "US",
+  "family": "rimmed",
+  "key": "4_bore_rifle",
+  "name": "4 Bore Rifle",
+  "pressureMethod": "Transducer",
+  "published": "1993-09-27",
+  "revised": "2002-05-15",
+  "tab": "II"
+}

@@ -1,0 +1,71 @@
+name: Something is off with this bullet
+description: A measurement, a drawing, a source or a name in the bullet catalogue that disagrees with the maker or with the bullet itself.
+title: "Bullet: "
+labels: ["bullet"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Please say what is off and, above all, where you are reading the right figure
+        from: a report that names its source is the most useful thing anyone can send.
+
+        If you arrived here from the site, the bullet and the page link are already filled in.
+  - type: input
+    id: bullet
+    attributes:
+      label: Bullet
+      description: Maker, name and key, e.g. `Berger 30 Cal 168 gr Hybrid Target (berger_30425)`.
+    validations:
+      required: true
+  - type: checkboxes
+    id: what
+    attributes:
+      label: What is off
+      description: Tick everything that applies. The fields below ask for the details.
+      options:
+        - label: A measurement is wrong (a figure differs from what the maker publishes)
+        - label: A measurement is missing (the maker publishes it, the record does not)
+        - label: A figure marked "assumed" is published somewhere (say where below)
+        - label: The drawing is the wrong shape (ogive, boat tail, meplat, tip)
+        - label: The weight, ballistic coefficient or twist is wrong
+        - label: The maker, line, part number or name is wrong
+        - label: A source is wrong, dead or does not say what the record claims
+        - label: This bullet is listed under the wrong cartridges, or a cartridge is missing
+        - label: Something else (say what below)
+  - type: input
+    id: field
+    attributes:
+      label: Which field
+      description: >
+        The symbol on the page or the record's field, e.g. `L`, `Lb`, `base.length`,
+        `ballistics.g7`. Leave empty for a drawing fault.
+  - type: input
+    id: published
+    attributes:
+      label: What the record or the drawing shows
+      description: e.g. `31.29 mm`, `a tangent ogive`, `assumed`.
+  - type: input
+    id: expected
+    attributes:
+      label: What it should be
+      description: e.g. `1.232 in`, `a secant ogive`, `5.66 mm boat tail`.
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Anything that helps, including which lot or revision of the bullet you have in hand.
+  - type: textarea
+    id: source
+    attributes:
+      label: Where you are reading that from
+      description: >
+        The single most useful part. The maker's page or reference sheet, a measured length list,
+        your own measurement with the instrument named - anything that lets the report be checked
+        rather than taken on trust.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The page you were looking at.

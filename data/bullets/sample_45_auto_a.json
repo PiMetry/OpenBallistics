@@ -1,0 +1,53 @@
+{
+  "key": "sample_45_auto_a",
+  "sample": true,
+  "sampleFor": "45_auto",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-A",
+  "name": ".45 ACP — Sample A",
+  "calibre": ".45 ACP",
+  "diameter": 11.48,
+  "mass": 16.3399,
+  "length": 18.5976,
+  "bearing": 8.3689,
+  "nose": 10.2287,
+  "meplat": 1.722,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "elliptical"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.225,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 18.5976,
+    "bearing": 8.3689,
+    "nose": 10.2287,
+    "boatTail": 0,
+    "baseDiameter": 11.48,
+    "boatTailAngle": null,
+    "meplat": 1.722,
+    "ogiveRadiusCalibres": 1.1465,
+    "massGrains": 252.1632,
+    "sectionalDensity": 0.1763,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

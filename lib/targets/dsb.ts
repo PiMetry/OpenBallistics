@@ -1,0 +1,27 @@
+import type { TargetFace } from './types';
+import DSB_10M_AIR_RIFLE_RECORD from '../../data/targets/dsb_10m_air_rifle.json';
+import DSB_15M_RIFLE_RECORD from '../../data/targets/dsb_15m_rifle.json';
+import DSB_50M_RIFLE_RECORD from '../../data/targets/dsb_50m_rifle.json';
+import DSB_100M_RIFLE_RECORD from '../../data/targets/dsb_100m_rifle.json';
+import DSB_100M_ORDNANCE_RECORD from '../../data/targets/dsb_100m_ordnance.json';
+import DSB_25M_PRECISION_RECORD from '../../data/targets/dsb_25m_precision.json';
+import DSB_50M_PISTOL_RECORD from '../../data/targets/dsb_50m_pistol.json';
+import DSB_300M_RIFLE_RECORD from '../../data/targets/dsb_300m_rifle.json';
+import DSB_50M_MUSKET_RECORD from '../../data/targets/dsb_50m_musket.json';
+import DSB_10M_AIR_PISTOL_RECORD from '../../data/targets/dsb_10m_air_pistol.json';
+import DSB_10M_RAPID_FIRE_RECORD from '../../data/targets/dsb_10m_rapid_fire.json';
+import DSB_25M_RAPID_FIRE_RECORD from '../../data/targets/dsb_25m_rapid_fire.json';
+
+export const DSB_10M_AIR_RIFLE = DSB_10M_AIR_RIFLE_RECORD as TargetFace;
+export const DSB_15M_RIFLE = DSB_15M_RIFLE_RECORD as TargetFace;
+export const DSB_50M_RIFLE = DSB_50M_RIFLE_RECORD as TargetFace;
+export const DSB_100M_RIFLE = DSB_100M_RIFLE_RECORD as TargetFace;
+export const DSB_100M_ORDNANCE = DSB_100M_ORDNANCE_RECORD as TargetFace;
+export const DSB_25M_PRECISION = DSB_25M_PRECISION_RECORD as TargetFace;
+export const DSB_50M_PISTOL = DSB_50M_PISTOL_RECORD as TargetFace;
+export const DSB_300M_RIFLE = DSB_300M_RIFLE_RECORD as TargetFace;
+export const DSB_50M_MUSKET = DSB_50M_MUSKET_RECORD as TargetFace;
+export const DSB_10M_AIR_PISTOL = DSB_10M_AIR_PISTOL_RECORD as TargetFace;
+export const DSB_10M_RAPID_FIRE = DSB_10M_RAPID_FIRE_RECORD as TargetFace;
+export const DSB_25M_RAPID_FIRE = DSB_25M_RAPID_FIRE_RECORD as TargetFace;
+export const DSB_FACES: TargetFace[] = [DSB_10M_AIR_RIFLE, DSB_10M_AIR_PISTOL, DSB_10M_RAPID_FIRE, DSB_15M_RIFLE, DSB_25M_PRECISION, DSB_25M_RAPID_FIRE, DSB_50M_RIFLE, DSB_50M_PISTOL, DSB_50M_MUSKET, DSB_100M_RIFLE, DSB_100M_ORDNANCE, DSB_300M_RIFLE];

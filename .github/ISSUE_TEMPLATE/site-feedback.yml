@@ -1,0 +1,28 @@
+name: Something looks wrong
+description: Report a problem with any page, record, drawing or workflow.
+title: "Site: "
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The page you were viewing. Links from the site fill this in.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Page context
+      description: The page name and selected catalogue record, when available. Review before submitting.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What looks wrong?
+      description: Describe what happened and what you expected. For a data correction, include the rule or source.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include your browser and device when they affect the problem.

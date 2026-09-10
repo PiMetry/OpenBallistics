@@ -1,0 +1,53 @@
+{
+  "key": "sample_7_mm_rem_mag_b",
+  "sample": true,
+  "sampleFor": "7_mm_rem_mag",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-B",
+  "name": "7 mm Remington Magnum — Sample B",
+  "calibre": "7 mm Remington Magnum",
+  "diameter": 7.23,
+  "mass": 7.5587,
+  "length": 23.136,
+  "bearing": 10.4112,
+  "nose": 12.7248,
+  "meplat": 1.0845,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.25,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 23.136,
+    "bearing": 10.4112,
+    "nose": 12.7248,
+    "boatTail": 0,
+    "baseDiameter": 7.23,
+    "boatTailAngle": null,
+    "meplat": 1.0845,
+    "ogiveRadiusCalibres": 3.8567,
+    "massGrains": 116.6486,
+    "sectionalDensity": 0.2057,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

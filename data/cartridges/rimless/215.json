@@ -1,0 +1,123 @@
+{
+  "annotations": {
+    "category": "rifle",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "boat_tail",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.2,
+      "E1": 8.6,
+      "R": 1.5,
+      "R1": 10.0,
+      "beta": 45.0,
+      "delta": 45.0,
+      "eMin": 1.0,
+      "f": 0.5
+    },
+    "collar": {
+      "H1": 6.32,
+      "H2": 6.32
+    },
+    "junctionCone": {
+      "S": 42.53,
+      "alpha": {
+        "degrees": 40.0,
+        "minutes": 30.0,
+        "seconds": 36.0
+      }
+    },
+    "lengths": {
+      "L1": 30.0,
+      "L1Tol": -0.2,
+      "L2": 33.97,
+      "L2Tol": -0.2,
+      "L3": 39.6,
+      "L6": 58.0
+    },
+    "misc": {
+      "Fe": 0.15
+    },
+    "powderChamber": {
+      "P1": 10.0,
+      "P2": 9.25,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "EE": 1505.0,
+      "M": 17.5,
+      "PE": 4750.0,
+      "PK": 4370.0,
+      "Pmax": 3800.0
+    },
+    "projectile": {
+      "G1": 5.64,
+      "L3PlusG": 44.72
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 5.4,
+      "Z": 5.6
+    },
+    "breech": {
+      "R": 1.5,
+      "R1": 10.05
+    },
+    "collar": {
+      "H1": 6.46,
+      "H2": 6.33
+    },
+    "grooves": {
+      "N": 6.0,
+      "Q": 24.01,
+      "b": 1.81,
+      "u": 214.0
+    },
+    "junctionCone": {
+      "S": 42.54,
+      "alpha": {
+        "degrees": 40.0,
+        "minutes": 29.0,
+        "seconds": 27.0
+      }
+    },
+    "lengths": {
+      "L1": 29.93,
+      "L2": 33.78,
+      "L3": 40.13
+    },
+    "powderChamber": {
+      "E": 3.83,
+      "P1": 10.0,
+      "P2": 9.3
+    },
+    "rifling": {
+      "G": 5.12,
+      "G1": 6.33,
+      "alpha1": 180.0,
+      "i": {
+        "degrees": 5.0,
+        "minutes": 11.0,
+        "seconds": 21.0
+      }
+    }
+  },
+  "country": "DE",
+  "family": "rimless",
+  "key": "215",
+  "name": "215",
+  "pressureMethod": "Transducer",
+  "published": "1992-02-27",
+  "revised": "2011-05-25",
+  "tab": "I"
+}

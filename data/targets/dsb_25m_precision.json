@@ -1,0 +1,76 @@
+{
+  "id": "dsb_25m_precision",
+  "name": "DSB 25 m Pistole Präzision",
+  "distanceM": 25,
+  "rings": [
+    {
+      "score": 10,
+      "diameterMm": 50
+    },
+    {
+      "score": 9,
+      "diameterMm": 100
+    },
+    {
+      "score": 8,
+      "diameterMm": 150
+    },
+    {
+      "score": 7,
+      "diameterMm": 200
+    },
+    {
+      "score": 6,
+      "diameterMm": 250
+    },
+    {
+      "score": 5,
+      "diameterMm": 300
+    },
+    {
+      "score": 4,
+      "diameterMm": 350
+    },
+    {
+      "score": 3,
+      "diameterMm": 400
+    },
+    {
+      "score": 2,
+      "diameterMm": 450
+    },
+    {
+      "score": 1,
+      "diameterMm": 500
+    }
+  ],
+  "innerTenMm": 25,
+  "blackMm": 200,
+  "cardMm": {
+    "width": 550,
+    "height": 550
+  },
+  "source": {
+    "body": "DSB",
+    "rulebook": "Sportordnung",
+    "edition": "01.01.2027",
+    "effectiveFrom": "2027-01-01",
+    "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+    "retrieved": "2026-09-08",
+    "transcription": "text-layer",
+    "rule": "0.20, Scheibe Nr. 4, PDF pp. 80, 83"
+  },
+  "ruleSources": [
+    {
+      "body": "DSB",
+      "rulebook": "Sportordnung",
+      "edition": "01.01.2027",
+      "effectiveFrom": "2027-01-01",
+      "url": "https://dsb.de/fileadmin/dsb/sportordnung/files/assets/common/downloads/Sportordnung_DSB_01012027.pdf?uni=089ad2d4b106c1ce5c460db31e0ab30b",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "rule": "0.11.3, PDF p. 57"
+    }
+  ],
+  "note": "The rulebook permits 520-550 x 550 mm; this diagram uses 550 x 550 mm."
+}

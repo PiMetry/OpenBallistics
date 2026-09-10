@@ -1,0 +1,92 @@
+{
+  "id": "bds_25m_handgun",
+  "name": "BDS 25 m Kurzwaffe - Z 9",
+  "distanceM": 25,
+  "rings": [
+    {
+      "score": 10,
+      "diameterMm": 50
+    },
+    {
+      "score": 9,
+      "diameterMm": 100
+    },
+    {
+      "score": 8,
+      "diameterMm": 150
+    },
+    {
+      "score": 7,
+      "diameterMm": 200
+    },
+    {
+      "score": 6,
+      "diameterMm": 250
+    },
+    {
+      "score": 5,
+      "diameterMm": 300
+    },
+    {
+      "score": 4,
+      "diameterMm": 350
+    },
+    {
+      "score": 3,
+      "diameterMm": 400
+    },
+    {
+      "score": 2,
+      "diameterMm": 450
+    },
+    {
+      "score": 1,
+      "diameterMm": 500
+    }
+  ],
+  "innerTenMm": 25,
+  "blackMm": 200,
+  "whiteCentreMm": 100,
+  "ruleSources": [
+    {
+      "body": "BDS",
+      "rulebook": "Sporthandbuch, Teil A",
+      "edition": "June 2026, BVA 30.06.2026",
+      "rule": "A 9.02, PDF p. 22",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "url": "https://www.bdsnet.de/ressourcen/downloads/2026_06_shb_a_final_x.pdf"
+    },
+    {
+      "body": "BDS",
+      "rulebook": "Sporthandbuch, Teil K",
+      "edition": "July 2026, BVA 30.06.2026",
+      "rule": "K 3.04 / K 4.04, PDF pp. 14, 17",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "url": "https://www.bdsnet.de/ressourcen/downloads/2026_07_shb_k_final_x.pdf"
+    },
+    {
+      "body": "BDS",
+      "rulebook": "Sporthandbuch, Teil L",
+      "edition": "July 2026, BVA 30.06.2026",
+      "rule": "L 7.04 / L 7.07.2, PDF pp. 41-42",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "url": "https://www.bdsnet.de/ressourcen/downloads/2026_07_shb_l_final_x.pdf"
+    }
+  ],
+  "cardMm": {
+    "width": 550,
+    "height": 550
+  },
+  "source": {
+    "body": "BDS",
+    "rulebook": "Sporthandbuch, Zielscheiben",
+    "edition": "30.06.2025",
+    "url": "https://www.bdsnet.de/ressourcen/downloads/2025_06_30_shb_z_2025-klein.pdf",
+    "retrieved": "2026-09-08",
+    "transcription": "text-layer",
+    "rule": "Z 9"
+  }
+}

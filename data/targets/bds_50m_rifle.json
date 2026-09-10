@@ -1,0 +1,82 @@
+{
+  "id": "bds_50m_rifle",
+  "name": "BDS 50 m Gewehr - Z 3",
+  "distanceM": 50,
+  "rings": [
+    {
+      "score": 10,
+      "diameterMm": 10.4
+    },
+    {
+      "score": 9,
+      "diameterMm": 26.4
+    },
+    {
+      "score": 8,
+      "diameterMm": 42.4
+    },
+    {
+      "score": 7,
+      "diameterMm": 58.4
+    },
+    {
+      "score": 6,
+      "diameterMm": 74.4
+    },
+    {
+      "score": 5,
+      "diameterMm": 90.4
+    },
+    {
+      "score": 4,
+      "diameterMm": 106.4
+    },
+    {
+      "score": 3,
+      "diameterMm": 122.4
+    },
+    {
+      "score": 2,
+      "diameterMm": 138.4
+    },
+    {
+      "score": 1,
+      "diameterMm": 154.4
+    }
+  ],
+  "innerTenMm": 5,
+  "blackMm": 112.4,
+  "cardMm": {
+    "width": 340,
+    "height": 340
+  },
+  "source": {
+    "body": "BDS",
+    "rulebook": "Sporthandbuch, Zielscheiben",
+    "edition": "30.06.2025",
+    "url": "https://www.bdsnet.de/ressourcen/downloads/2025_06_30_shb_z_2025-klein.pdf",
+    "retrieved": "2026-09-08",
+    "transcription": "text-layer",
+    "rule": "Z 3"
+  },
+  "ruleSources": [
+    {
+      "body": "BDS",
+      "rulebook": "Sporthandbuch, Teil A",
+      "edition": "June 2026, BVA 30.06.2026",
+      "rule": "A 9.02, PDF p. 22",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "url": "https://www.bdsnet.de/ressourcen/downloads/2026_06_shb_a_final_x.pdf"
+    },
+    {
+      "body": "BDS",
+      "rulebook": "Sporthandbuch, Teil L",
+      "edition": "July 2026, BVA 30.06.2026",
+      "rule": "L 2.01, PDF p. 9",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "url": "https://www.bdsnet.de/ressourcen/downloads/2026_07_shb_l_final_x.pdf"
+    }
+  ]
+}

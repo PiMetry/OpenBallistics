@@ -1,0 +1,79 @@
+{
+  "key": "lapua_gb422",
+  "manufacturer": "Lapua",
+  "line": "Scenar",
+  "model": "GB422",
+  "name": "10,85 g / 167 gr Scenar OTM",
+  "calibre": ".308",
+  "diameter": 7.83,
+  "mass": 10.85,
+  "length": 31.39,
+  "base": {
+    "type": "boat_tail"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "open_meplat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.446,
+    "g7": 0.223
+  },
+  "sources": [
+    {
+      "fields": [
+        "diameter",
+        "mass",
+        "ballistics",
+        "base.type",
+        "tip.type"
+      ],
+      "publisher": "Lapua",
+      "url": "https://www.lapua.com/product/30-scenar-bullet-gb422-1085-g-167-gr-otm/",
+      "retrieved": "2026-09-05",
+      "kind": "published",
+      "note": "7.83 mm (.308 in), 10.85 g (167 gr), Open Tip Match, boat tail; BC G1 0.446, G7 0.223. No length on the page."
+    },
+    {
+      "fields": [
+        "length"
+      ],
+      "publisher": "JBM Ballistics bullet length list (measured; Litz)",
+      "url": "https://jbmballistics.com/downloads/lengthlist.html",
+      "retrieved": "2026-09-05",
+      "kind": "measured",
+      "note": "1.236 in"
+    }
+  ],
+  "notes": "The ogive form is not named by Lapua; tangent is assumed from the Scenar's profile and is an assumption, not a source.",
+  "derived": {
+    "length": 31.39,
+    "bearing": 6.527,
+    "nose": 18.834,
+    "boatTail": 6.029,
+    "baseDiameter": 6.135,
+    "boatTailAngle": 8.0,
+    "meplat": 1.27,
+    "ogiveRadiusCalibres": 7.115,
+    "massGrains": 167.4,
+    "sectionalDensity": 0.252,
+    "assumed": [
+      "base.angle",
+      "base.diameter",
+      "base.length",
+      "bearing",
+      "construction.jacket_thickness",
+      "meplat",
+      "nose",
+      "ogive.radius_calibres"
+    ]
+  }
+}

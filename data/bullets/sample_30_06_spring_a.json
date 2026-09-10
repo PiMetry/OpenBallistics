@@ -1,0 +1,53 @@
+{
+  "key": "sample_30_06_spring_a",
+  "sample": true,
+  "sampleFor": "30_06_spring",
+  "manufacturer": "Open Ballistics",
+  "line": "Samples",
+  "model": "SAMPLE-A",
+  "name": ".30-06 Springfield — Sample A",
+  "calibre": ".30-06 Springfield",
+  "diameter": 7.85,
+  "mass": 8.7073,
+  "length": 22.608,
+  "bearing": 10.1736,
+  "nose": 12.4344,
+  "meplat": 1.1775,
+  "base": {
+    "type": "flat"
+  },
+  "ogive": {
+    "form": "tangent"
+  },
+  "tip": {
+    "type": "flat"
+  },
+  "construction": {
+    "jacket": "fmj",
+    "core": "solid_lead",
+    "jacket_material": "GILDING_METAL",
+    "core_material": "LEAD"
+  },
+  "ballistics": {
+    "g1": 0.225,
+    "note": "Synthetic demonstration coefficient; not measured or published performance."
+  },
+  "sources": [],
+  "notes": "Synthetic sample for exploring drawings and software features. Dimensions, mass, construction and ballistic values are illustrative, not specifications for a real product.",
+  "derived": {
+    "length": 22.608,
+    "bearing": 10.1736,
+    "nose": 12.4344,
+    "boatTail": 0,
+    "baseDiameter": 7.85,
+    "boatTailAngle": null,
+    "meplat": 1.1775,
+    "ogiveRadiusCalibres": 3.1643,
+    "massGrains": 134.3742,
+    "sectionalDensity": 0.201,
+    "assumed": [
+      "ogive.radius_calibres",
+      "construction.jacket_thickness"
+    ]
+  }
+}

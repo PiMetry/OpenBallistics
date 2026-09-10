@@ -1,0 +1,68 @@
+{
+  "id": "bds_25m_interval",
+  "name": "BDS 25 m Intervall - Z 20",
+  "distanceM": 25,
+  "rings": [
+    {
+      "score": 10,
+      "diameterMm": 100
+    },
+    {
+      "score": 9,
+      "diameterMm": 180
+    },
+    {
+      "score": 8,
+      "diameterMm": 260
+    },
+    {
+      "score": 7,
+      "diameterMm": 340
+    },
+    {
+      "score": 6,
+      "diameterMm": 420
+    },
+    {
+      "score": 5,
+      "diameterMm": 500
+    }
+  ],
+  "innerTenMm": 50,
+  "blackMm": 200,
+  "whiteCentreMm": 100,
+  "cardMm": {
+    "width": 550,
+    "height": 520
+  },
+  "source": {
+    "body": "BDS",
+    "rulebook": "Sporthandbuch, Zielscheiben",
+    "edition": "30.06.2025",
+    "url": "https://www.bdsnet.de/ressourcen/downloads/2025_06_30_shb_z_2025-klein.pdf",
+    "retrieved": "2026-09-08",
+    "transcription": "text-layer",
+    "rule": "Z 20"
+  },
+  "ruleSources": [
+    {
+      "body": "BDS",
+      "rulebook": "Sporthandbuch, Teil A",
+      "edition": "June 2026, BVA 30.06.2026",
+      "rule": "A 9.02, PDF p. 22",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "url": "https://www.bdsnet.de/ressourcen/downloads/2026_06_shb_a_final_x.pdf"
+    },
+    {
+      "body": "BDS",
+      "rulebook": "Sporthandbuch, Teil K",
+      "edition": "July 2026, BVA 30.06.2026",
+      "rule": "K 3.04, PDF p. 14",
+      "retrieved": "2026-09-08",
+      "transcription": "text-layer",
+      "url": "https://www.bdsnet.de/ressourcen/downloads/2026_07_shb_k_final_x.pdf"
+    }
+  ],
+  "note": "The nine ends at the white scoring line (180 mm diameter). The black aiming area is 200 mm across: its outer 10 mm belongs to the eight. The aiming colour is not a scoring boundary."
+}

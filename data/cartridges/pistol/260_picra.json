@@ -1,0 +1,133 @@
+{
+  "annotations": {
+    "category": "pistol",
+    "confidence": "unverified",
+    "defaultBullet": {
+      "base": "flat",
+      "category": "rifle_spitzer",
+      "ogive": "tangent",
+      "tip": "open_meplat",
+      "verified": false
+    },
+    "defaultBulletShape": "pointy",
+    "implausible": [],
+    "primerType": "sr"
+  },
+  "cartridge": {
+    "caseHead": {
+      "E": 3.2,
+      "E1": 9.56,
+      "R": 1.5,
+      "R1": 11.35,
+      "beta": 45.0,
+      "delta": {
+        "degrees": 50.0,
+        "minutes": 21.0,
+        "seconds": 41.0
+      },
+      "eMin": 1.0,
+      "f": 0.25
+    },
+    "collar": {
+      "H1": 7.5,
+      "H2": 7.5
+    },
+    "junctionCone": {
+      "S": 37.34,
+      "alpha": {
+        "degrees": 81.0,
+        "minutes": 43.0,
+        "seconds": 9.0
+      }
+    },
+    "lengths": {
+      "L1": 31.0,
+      "L1Tol": -0.2,
+      "L2": 33.0,
+      "L2Tol": -0.2,
+      "L3": 38.5,
+      "L6": 62.0
+    },
+    "misc": {
+      "Fe": 0.1
+    },
+    "powderChamber": {
+      "P1": 11.25,
+      "P2": 10.96,
+      "P2Tol": -0.2
+    },
+    "pressures": {
+      "M": 17.5,
+      "PE": 5070.0,
+      "PK": 4485.0,
+      "Pmax": 3900.0
+    },
+    "projectile": {
+      "G1": 6.71,
+      "L3PlusG": 49.43
+    }
+  },
+  "chamber": {
+    "barrel": {
+      "F": 6.45,
+      "Z": 6.7
+    },
+    "breech": {
+      "R": 1.5,
+      "R1": 11.4
+    },
+    "collar": {
+      "H1": 7.5,
+      "H2": 7.5
+    },
+    "grooves": {
+      "N": 4.0,
+      "Q": 34.52,
+      "b": 3.5,
+      "u": 200.0
+    },
+    "junctionCone": {
+      "S": 37.44,
+      "alpha": {
+        "degrees": 80.0,
+        "minutes": 58.0,
+        "seconds": 19.0
+      },
+      "r1Max": 0.5,
+      "r2": 1.5
+    },
+    "lengths": {
+      "L1": 31.0,
+      "L2": 33.05,
+      "L3": 39.0
+    },
+    "powderChamber": {
+      "P1": 11.3,
+      "P2": 11.0
+    },
+    "rifling": {
+      "G": 10.93,
+      "G1": 6.75,
+      "alpha1": {
+        "degrees": 89.0,
+        "minutes": 14.0,
+        "seconds": 28.0
+      },
+      "h": 0.38,
+      "i": {
+        "degrees": 1.0,
+        "minutes": 29.0,
+        "seconds": 57.0
+      },
+      "s": 5.2
+    }
+  },
+  "country": "CZ",
+  "family": "pistol",
+  "key": "260_picra",
+  "name": "260 PICRA",
+  "pressureMethod": "Transducer",
+  "published": "1999-03-15",
+  "revised": "2000-06-07",
+  "tab": "IV"
+}
