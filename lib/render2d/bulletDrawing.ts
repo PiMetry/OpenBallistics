@@ -238,6 +238,35 @@ export function renderBulletDrawingSvg(
 }
 
 /**
+ * The silhouette's radius at one station, interpolated along the segment that spans it. A profile
+ * runs base to tip, so the first point at or past `z` and the one before it bracket it.
+ */
+function silhouetteRadiusAt(profile: Profile, z: number): number {
+  let previous = profile[0]!;
+  for (const point of profile) {
+    if (point[1] >= z - EPSILON) {
+      const span = point[1] - previous[1];
+      if (span <= EPSILON) return point[0];
+      return previous[0] + ((z - previous[1]) / span) * (point[0] - previous[0]);
+    }
+    previous = point;
+  }
+  return profile[profile.length - 1]![0];
+}
+
+/**
+ * A polymer tip's insert: the nose forward of `from`, cut off square at the station its rear face
+ * sits on. That face has to meet the silhouette where it is, which on an ogive is far narrower
+ * than the shank behind it; taking the widest radius back down the bullet instead sends the insert
+ * out through the nose. Half a profile, on the axis, like every other.
+ */
+export function polymerInsertProfile(profile: Profile, from: number): Profile {
+  const forward = profile.filter(([, z]) => z > from + EPSILON);
+  if (forward.length === 0) return [];
+  return [[silhouetteRadiusAt(profile, from), from], ...forward];
+}
+
+/**
  * The tip's form, which the silhouette alone does not show: the designer's addition to the
  * catalogue drawing. A hollow point's cavity as a cut into the nose, and a polymer tip as the
  * insert it is, back from the tip by the length given; a flat or open meplat is the flat itself.
@@ -246,14 +275,13 @@ function tipMarks(bullet: Bullet, profile: Profile, view: { xy(r: number, z: num
   const tip = bullet.tip;
   if (!(tip.cavityDepth > 0) || (tip.tipType !== 'hollow_point' && tip.tipType !== 'polymer')) return '';
   const from = tip.endZ - tip.cavityDepth;
-  const nose = profile.filter(([, z]) => z >= from - EPSILON);
   const stroke = num(view.length(OUTLINE_STROKE_MM));
   const dash = outline ? ` stroke-dasharray="${view.length(0.6).toFixed(3)},${view.length(0.4).toFixed(3)}"` : '';
   const pathOf = (points: Point[]): string =>
     points.map(([r, z], i) => { const [x, y] = view.xy(r, z); return `${i ? 'L' : 'M'}${x.toFixed(4)},${y.toFixed(4)}`; }).join(' ') + ' Z';
-  if (tip.tipType === 'polymer' && nose.length >= 2) {
-    const rFrom = Math.max(...profile.filter(([, z]) => z <= from + EPSILON).map(([r]) => r).concat([nose[0]![0]]));
-    const insert: Profile = [[rFrom, from], ...nose.filter(([, z]) => z > from + EPSILON)];
+  if (tip.tipType === 'polymer') {
+    const insert = polymerInsertProfile(profile, from);
+    if (insert.length < 2) return '';
     const closed: Point[] = [...insert, ...[...insert].reverse().map(([r, z]): Point => [-r, z])];
     return `<path d="${pathOf(closed)}" fill="${outline ? 'none' : MATERIAL_HEX_OF('POLYMER_RED')}" stroke="${outline ? '#111' : darken('POLYMER_RED')}" stroke-width="${stroke}"${dash}/>`;
   }
