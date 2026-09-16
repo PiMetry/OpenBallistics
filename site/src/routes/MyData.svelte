@@ -17,9 +17,7 @@
   let message = $state('');
   let error = $state('');
   const sections = $derived([
-    { key: 'rifles', label: t('rifles.title'), count: records.state.rifles.length, url: href.rifles(), plan: preview?.ok ? preview.plan : [] },
     { key: 'cartridges', label: t('data.cartridges'), count: records.state.cartridges.length, url: href.newCartridge(), plan: preview?.ok ? preview.cartridgePlan : [] },
-    { key: 'reticles', label: t('data.reticles'), count: records.state.reticles.length, url: href.trajectory(), plan: preview?.ok ? preview.reticlePlan : [] },
     { key: 'targets', label: t('data.targets'), count: records.state.targetFaces.length, url: href.targets(), plan: preview?.ok ? preview.facePlan : [] }
   ]);
   const total = $derived(sections.reduce((n, s) => n + s.count, 0));

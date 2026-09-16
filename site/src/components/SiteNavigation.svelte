@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Button, buttonVariants } from '$lib/components/ui/button/index.js';
   import * as Sheet from '$lib/components/ui/sheet/index.js';
-  import { BookOpen, CircleDot, FolderOpen, Target, FlaskConical, Settings2, Menu, Sun, Moon, ExternalLink } from '@lucide/svelte';
+  import { BookOpen, CircleDot, Target, FlaskConical, Settings2, Menu, Sun, Moon, ExternalLink } from '@lucide/svelte';
   import { href, type Route } from '../lib/router';
   import { t } from '../lib/i18n.svelte';
   import { theme, toggleTheme } from '../lib/theme.svelte';
@@ -12,9 +12,8 @@
   const items = $derived([
     { label: t('nav.cartridges'), url: href.list(), icon: BookOpen, active: ['list', 'cartridge', 'newCartridge'].includes(current.view) },
     { label: t('nav.bullets'), url: href.bullets(), icon: CircleDot, active: ['bullets', 'bullet', 'designer'].includes(current.view) },
-    { label: t('rifles.nav'), url: href.rifles(), icon: FolderOpen, active: current.view === 'rifles' },
     { label: t('targets.nav'), url: href.targets(), icon: Target, active: ['targets', 'newTarget'].includes(current.view) },
-    { label: t('preview.nav'), url: href.preview(), icon: FlaskConical, active: ['preview', 'targetScoring', 'trajectory', 'calculator'].includes(current.view) }
+    { label: t('preview.nav'), url: href.preview(), icon: FlaskConical, active: ['preview', 'targetScoring'].includes(current.view) }
   ]);
 </script>
 

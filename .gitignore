@@ -19,6 +19,7 @@ test-results/
 *.log
 *.tmp
 *.temp
+internal/
 
 # Environment secrets. Keep shareable configuration examples trackable.
 .env

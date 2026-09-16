@@ -30,10 +30,7 @@ const LIBRARY_DIRS = [
   'designer',
   'data',
   'userdata',
-  'ballistics',
-  'optics',
   'targets',
-  'interior',
   'geometry'
 ].map((name) => resolve(MOVED, name));
 
@@ -86,18 +83,12 @@ describe('dependencies run one way', () => {
   // A module may use anything to its left and
   // nothing to its right. Checked here because the one time it was checked by hand instead, the
   // output was not read and a commit claimed an edge was gone when it was not.
-  // Two independent chains, in one list: geometry left to right, then the solver and the scope
-  // arithmetic that reads it. Listing them together also asserts the chains stay apart - nothing
-  // in `render2d` may reach for a trajectory, and `ballistics` may not reach for a turret.
   const ORDER = [
     'geom',
     'shapes2d',
     'measure2d',
     'render2d',
-    'ballistics',
-    'optics',
-    'targets',
-    'interior'
+    'targets'
   ];
 
   it.each(ORDER.map((m, i) => [m, i]))('%s imports nothing above it', (module, rank) => {

@@ -12,12 +12,9 @@ export type Route =
   | { view: 'bullets' }
   | { view: 'bullet'; key: string }
   | { view: 'designer' }
-  | { view: 'rifles' }
-  | { view: 'trajectory' }
   | { view: 'targets' }
   | { view: 'newTarget' }
   | { view: 'preview' }
-  | { view: 'calculator'; key?: string }
   | { view: 'targetScoring'; targetId?: string }
   | { view: 'myData' }
   | { view: 'newCartridge' };
@@ -37,10 +34,7 @@ export function parse(hash: string): Route {
   if (path === 'designer') return { view: 'designer' };
   const params = new URLSearchParams(hash.split('?').slice(1).join('?'));
   if (path === 'preview') return { view: 'preview' };
-  if (path === 'preview/calculator') return { view: 'calculator', key: params.get('cartridge') || undefined };
   if (path === 'targets/score') return { view: 'targetScoring', targetId: params.get('target') || undefined };
-  if (path === 'guns' || path === 'rifles') return { view: 'rifles' };
-  if (path === 'preview/trajectory' || path === 'trajectory') return { view: 'trajectory' };
   if (path === 'targets/new') return { view: 'newTarget' };
   if (path === 'targets') return { view: 'targets' };
   if (path === 'data') return { view: 'myData' };
@@ -60,10 +54,7 @@ export const href = {
   bullets: () => '#/bullets',
   bullet: (key: string) => `#/b/${encodeURIComponent(key)}`,
   designer: () => '#/designer',
-  rifles: () => '#/guns',
-  trajectory: () => '#/preview/trajectory',
   preview: () => '#/preview',
-  calculator: (key?: string) => '#/preview/calculator' + (key ? `?cartridge=${encodeURIComponent(key)}` : ''),
   targetScoring: (id?: string) => '#/targets/score' + (id ? `?target=${encodeURIComponent(id)}` : ''),
   targets: () => '#/targets',
   newTarget: () => '#/targets/new',

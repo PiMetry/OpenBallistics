@@ -3,17 +3,15 @@
   import PageHeader from '../components/PageHeader.svelte';
   import * as Card from '$lib/components/ui/card/index.js';
   import { Badge } from '$lib/components/ui/badge/index.js';
-  import { ArrowUpRight, Calculator, ChartLine, Target } from '@lucide/svelte';
+  import { ArrowUpRight, Target } from '@lucide/svelte';
   import { href } from '../lib/router';
   import { t } from '../lib/i18n.svelte';
   const tools = $derived([
-    { url: href.calculator(), title: t('preview.calculator'), description: t('preview.calculatorNote'), icon: Calculator },
-    { url: href.trajectory(), title: t('trajectory.title'), description: t('preview.trajectoryNote'), icon: ChartLine },
     { url: href.targetScoring(), title: t('photo.title'), description: t('photo.lede'), icon: Target }
   ]);
 </script>
 <PageHeader title={t('preview.title')} description={t('preview.lede')} />
-<div class="mb-8 grid gap-5 xl:grid-cols-3">
+<div class="mb-8 grid max-w-sm gap-5">
   {#each tools as tool}
     <a href={tool.url} class="group min-w-0 text-foreground no-underline hover:no-underline">
       <Card.Root class="h-full transition-shadow group-hover:ring-foreground/30">
@@ -28,5 +26,5 @@
   {/each}
 </div>
 <Panel title={t('preview.todo')}>
-  <ul class="list-disc space-y-2 pl-5 text-sm text-muted-foreground"><li>{t('preview.todo.connect')}</li><li>{t('preview.todo.photo')}</li></ul>
+  <ul class="list-disc space-y-2 pl-5 text-sm text-muted-foreground"><li>{t('preview.todo.photo')}</li></ul>
 </Panel>

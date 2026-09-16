@@ -10,12 +10,9 @@ export function pageMetadata(route: Route, t: (key: string) => string) {
     bullets: ['bullets.title', 'bullets.lede'],
     bullet: ['bullets.title', 'bullets.lede'],
     designer: ['actions.addBullet', 'designer.lede2'],
-    rifles: ['rifles.title', 'guns.lede'],
-    trajectory: ['trajectory.title', 'trajectory.lede'],
     targets: ['targets.title', 'targets.databaseLede'],
     newTarget: ['actions.addTarget', 'targetEditor.lede'],
     preview: ['preview.title', 'preview.lede'],
-    calculator: ['preview.calculator', 'preview.calculatorNote'],
     targetScoring: ['photo.title', 'photo.lede'],
     myData: ['data.title', 'data.lede'],
     newCartridge: ['actions.addCartridge', 'newCartridge.lede']

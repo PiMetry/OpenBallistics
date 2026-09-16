@@ -52,12 +52,9 @@
     | 'bullet'
     | 'bullets'
     | 'designer'
-    | 'rifles'
-    | 'trajectory'
     | 'targets'
     | 'newTarget'
     | 'preview'
-    | 'calculator'
     | 'targetScoring'
     | 'myData'
     | 'newCartridge';
@@ -69,12 +66,9 @@
     bullet: () => import('./routes/Bullet.svelte'),
     bullets: () => import('./routes/Bullets.svelte'),
     designer: () => import('./routes/Designer.svelte'),
-    rifles: () => import('./routes/Rifles.svelte'),
-    trajectory: () => import('./routes/Trajectory.svelte'),
     targets: () => import('./routes/Targets.svelte'),
     newTarget: () => import('./routes/TargetDesigner.svelte'),
     preview: () => import('./routes/Preview.svelte'),
-    calculator: () => import('./routes/Calculator.svelte'),
     targetScoring: () => import('./routes/TargetScoring.svelte'),
     myData: () => import('./routes/MyData.svelte'),
     newCartridge: () => import('./routes/CartridgeDesigner.svelte')
@@ -152,28 +146,12 @@
     {:catch}
       <PageLoadError />
     {/await}
-  {:else if current.view === 'rifles'}
-    {#await page('rifles')}
-      <p class="loading" role="status">{t('site.loading')}</p>
-    {:then Page}
-      <Page />
-    {:catch}
-      <PageLoadError />
-    {/await}
-  {:else if current.view === 'preview' || current.view === 'calculator' || current.view === 'targetScoring' || current.view === 'newTarget'}
+  {:else if current.view === 'preview' || current.view === 'targetScoring' || current.view === 'newTarget'}
     {#await page(current.view)}
       <p class="loading" role="status">{t('site.loading')}</p>
     {:then Page}
-      <Page key={current.view === 'calculator' ? current.key : undefined} targetId={current.view === 'targetScoring' ? current.targetId : undefined} />
+      <Page targetId={current.view === 'targetScoring' ? current.targetId : undefined} />
     {:catch}<PageLoadError />{/await}
-  {:else if current.view === 'trajectory'}
-    {#await page('trajectory')}
-      <p class="loading" role="status">{t('site.loading')}</p>
-    {:then Page}
-      <Page />
-    {:catch}
-      <PageLoadError />
-    {/await}
   {:else if current.view === 'targets'}
     {#await page('targets')}
       <p class="loading" role="status">{t('site.loading')}</p>

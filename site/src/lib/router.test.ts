@@ -9,16 +9,12 @@ afterAll(() => vi.unstubAllGlobals());
 
 describe('hash routes', () => {
   it('opens preview tools while preserving old deep links', () => {
-    expect(router.parse('#/guns')).toEqual({ view: 'rifles' });
-    expect(router.parse('#/trajectory')).toEqual({ view: 'trajectory' });
     expect(router.parse(router.href.preview())).toEqual({ view: 'preview' });
     for (const key of ['9_mm_luger', 'a?b/c#d']) {
-      expect(router.parse(router.href.calculator(key))).toEqual({ view: 'calculator', key });
       expect(router.parse(router.href.targetScoring(key))).toEqual({ view: 'targetScoring', targetId: key });
     }
-    expect(router.parse(router.href.calculator())).toEqual({ view: 'calculator', key: undefined });
   });
-  it.each(['#/c/%', '#/b/%E0%A4%A', '#/c/', '#/b/', '#/unknown'])(
+  it.each(['#/c/%', '#/b/%E0%A4%A', '#/c/', '#/b/', '#/unknown', '#/guns', '#/rifles'])(
     'falls back safely for %s', (hash) => expect(router.parse(hash)).toEqual({ view: 'list' })
   );
   it('round-trips encoded keys', () => {
@@ -30,9 +26,6 @@ describe('hash routes', () => {
   it('preserves the catalogue and designer routes with query strings', () => {
     expect(router.parse('#/bullets')).toEqual({ view: 'bullets' });
     expect(router.parse('#/designer?img=sample.png')).toEqual({ view: 'designer' });
-    expect(router.parse('#/rifles')).toEqual({ view: 'rifles' });
-    expect(router.parse(router.href.rifles())).toEqual({ view: 'rifles' });
-    expect(router.parse(router.href.trajectory())).toEqual({ view: 'trajectory' });
     expect(router.parse(router.href.targets())).toEqual({ view: 'targets' });
     expect(router.parse(router.href.newTarget())).toEqual({ view: 'newTarget' });
     expect(router.parse(router.href.myData())).toEqual({ view: 'myData' });
